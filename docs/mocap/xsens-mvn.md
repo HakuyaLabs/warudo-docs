@@ -6,7 +6,7 @@
 
 打开 Xsens MVN -> Options -> Network Streamer，如下图配置即可。
 
-![](</images/image (5).png>)
+![](</images/image(5).png>)
 
 <div className="hint hint-warning">
 注意，你需要 MVN Animate Plus 或者 Pro 订阅才能使用 Network Streamer 功能。

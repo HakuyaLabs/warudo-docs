@@ -101,7 +101,7 @@ Alt+Z, Alt+X, Alt+C... Alt+/
 
 打开「表情按键绑定」蓝图（创建新的蓝图也可以），从右边的侧边栏拖出「当按下键盘按键时」及「切换角色表情」两个节点；在「当按下键盘按键时」节点设置快捷键，并在「切换角色表情」节点选择角色以及刚刚创建好的表情，最后将两个节点的出口与入口相连，如下：
 
-<figure><img src="..//images/image (32).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image/image(32).png" alt="" /><figcaption></figcaption></figure>
 
 ### 我的表情切换了之后就会一直保持住。能不能只切换一段时间，过一阵子后自动切回之前的待机表情？
 

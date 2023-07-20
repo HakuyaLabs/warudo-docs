@@ -1,5 +1,5 @@
 ---
-cover: .gitbook/assets/library_hero (1).png
+cover: .gitbook/assets/library_hero(1).png
 coverY: -42.588235294117645
 ---
 

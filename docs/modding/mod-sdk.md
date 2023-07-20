@@ -38,14 +38,14 @@ Mod SDK 导出的 Mod 后缀名为 `.warudo`，放在 Warudo 数据文件夹相�
 <div className="hint hint-warning">
 如果出现错误，提示 An error occurred while resolving packages / Error adding package，点击后出现类似 `No 'git' executable was found. Please install Git on your system then restart Unity and Unity Hub.` 信息：
 
-![](</images/image (8) (1) (1).png>)\
+![](</images/image(8)(1)(1).png>)\
 \
 请到 [https://git-scm.com/download](https://git-scm.com/download) 下载安装 Git，并重启 Unity 及 Unity Hub。
 </div>
 
 确认 File -> Build Settings... -> Player Settings... -> Other Settings -> Api Compatibility Level 为 .NET Framework：
 
-<figure><img src="/images/image (6).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(6).png" alt="" /><figcaption></figcaption></figure>
 
 下载 SDK 并导入到 Unity 项目内（可以新建项目，也可以是现有项目）：
 

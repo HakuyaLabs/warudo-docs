@@ -14,7 +14,7 @@
 
 首先，我们需要创建用来作为 IK 目标的[锚点](../assets/anchor.md)。创建名为「麦克风右手」的锚点，配置如下：
 
-![](</images/image (13) (1).png>)
+![](</images/image(13)(1).png>)
 
 <div className="hint hint-info">
 这里将锚点与角色绑定，这样即使角色的姿势或位置改变了，锚点的位置仍然会与胸骨保持同样的相对位置。
@@ -26,7 +26,7 @@
 
 创建名为「麦克风右手肘」的锚点，配置如下：
 
-![](</images/image (6) (2).png>)
+![](</images/image(6)(2).png>)
 
 <div className="hint hint-info">
 与上面相似，我们将锚点绑定到角色的脊椎，这样无论角色如何移动，锚点的位置始终与脊椎保持同样的相对位置。之所以绑定脊椎而不是胸骨，是因为这个锚点距离脊椎较近；通常而言，选择距离最近的骨骼来绑定是最合适的。
@@ -34,11 +34,11 @@
 
 创建「麦克风」道具，**源**选择「内置 - 其他 -> 麦克风」，**角色配件**处配置如下：
 
-![](</images/image (8) (2).png>)
+![](</images/image(8)(2).png>)
 
 在这一步，我们可以配置角色的[右手 IK](../assets/character/#shen-ti-ik) 属性如下，来验证两个 IK 锚点的配置无误：
 
-![](</images/image (12) (1).png>)
+![](</images/image(12)(1).png>)
 
 <div className="hint hint-info">
 你的权重不需要与图中一致，因为在之后的蓝图配置中，这些权重都可以在节点上自由设置。
@@ -76,11 +76,11 @@
 
 创建一个新的蓝图（使用现有的当然也可以），放置以下节点和连接即可：
 
-<figure><img src="/images/image (10).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(10).png" alt="" /><figcaption></figcaption></figure>
 
 这里共四行节点——你可能已经猜到了，每一行节点就是对应一种状态的变换。按下从上往下第一个「触发」按钮，即可显示玫瑰并让角色举起玫瑰；第二个「触发」按钮会淡出角色双手的 IK；第三个「触发」按钮会显示麦克风并让角色把麦克风放到胸前；第四个「触发」按钮会让角色双手比耶。值得留意的是，每个「触发」按钮都会在上述逻辑之前（第二个按钮是在之后），通过[「序列」节点](advanced-nodes.md#liu-kong-zhi)，禁用覆盖手势及两个道具：
 
-<figure><img src="/images/image (9) (1).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(9)(1).png" alt="" /><figcaption></figcaption></figure>
 
 <div className="hint hint-info">
 你也可以将第二行的两个「禁用角色 IK」节点移动到最右侧「切换资源启用状态」节点右边，这样切换姿势时会保证重置左右手的 IK。副作用是，切换状态时，模型的手会抖一下……

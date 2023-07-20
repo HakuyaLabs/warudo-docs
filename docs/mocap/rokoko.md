@@ -6,11 +6,11 @@
 
 打开 Rokoko Studio -> Livestream -> 勾选 Activate 来发送数据到 Unity：
 
-<figure><img src="/images/image (9) (3).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(9)(3).png" alt="" /><figcaption></figcaption></figure>
 
 更新「Profile 名称」为 Rokoko 中人物 Profile 的名称即可：
 
-<figure><img src="/images/image (53).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(53).png" alt="" /><figcaption></figcaption></figure>
 
 <div className="hint hint-warning">
 注意，你需要 Rokoko Plus 或者 Pro 订阅才能发送动捕数据。

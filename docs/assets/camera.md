@@ -83,13 +83,13 @@ Warudo 的场景中支持最多 8 个摄像机。
 <div className="hint hint-info">
 Spout 输出到 OBS 的情况下，需要在 Spout2 Capture 属性中设置 Composite Mode 为 Premultiplied Alpha 才会有透明度：
 
-<img src="/images/image (3).png" alt="" data-size="original" />
+<img src="/images/image(3).png" alt="" data-size="original" />
 </div>
 
 <div className="hint hint-info">
 虚拟摄像头输出到 OBS 的情况下，需要在视频捕获设备属性中设置 Video Format（视频格式）为 ARGB 才会有透明度：
 
-![](</images/image (2).png>)
+![](</images/image(2).png>)
 </div>
 
 ### 基本属性

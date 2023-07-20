@@ -83,7 +83,7 @@ Warudo 原生支持导入 [VRM 格式](https://vrm.dev/en/univrm/)的角色模�
 <div className="hint hint-success">
 **IK 是什么？**IK 是 Inverse Kinematics（反向运动学）的简称，在游戏引擎以及 Warudo 中，IK 可理解为「让模型的某个身体部位试图朝向 / 够到某个空间中的位置」，无需事先由动画师制作骨骼动画。如下所示：
 
-<img src="..//images/1_VrBdTPK1tnbacoFares7Dw.gif" alt="来源：https://medium.com/unity3danimation/overview-of-inverse-kinematics-9769a43ba956" data-size="original" />
+<img src="/images/image/1_VrBdTPK1tnbacoFares7Dw.gif" alt="来源：https://medium.com/unity3danimation/overview-of-inverse-kinematics-9769a43ba956" data-size="original" />
 </div>
 
 让角色望向场景内的指定目标（例如摄像机）。
@@ -123,11 +123,11 @@ Warudo 原生支持导入 [VRM 格式](https://vrm.dev/en/univrm/)的角色模�
 
 <div>
 
-<figure><img src="..//images/Warudo_2022-10-16-06-19-19_1024x1024.png" alt="" /><figcaption><p>不设置肘部目标</p></figcaption></figure>
+<figure><img src="/images/image/Warudo_2022-10-16-06-19-19_1024x1024.png" alt="" /><figcaption><p>不设置肘部目标</p></figcaption></figure>
 
  
 
-<figure><img src="..//images/Warudo_2022-10-16-06-19-11_1024x1024.png" alt="" /><figcaption><p>设置肘部目标</p></figcaption></figure>
+<figure><img src="/images/image/Warudo_2022-10-16-06-19-11_1024x1024.png" alt="" /><figcaption><p>设置肘部目标</p></figcaption></figure>
 
 </div>
 
@@ -156,7 +156,7 @@ Warudo 原生支持导入 [VRM 格式](https://vrm.dev/en/univrm/)的角色模�
 
 可以设置**额外骨骼偏移**。肩膀两个关节的旋转角度其实意外地影响对角色性格的观感哦！
 
-![没有设置额外骨骼偏移](https://user-images.githubusercontent.com/3406505/180982590-df02732d-8a8f-450c-b867-152ee1a8a99b.png) ![设置了两侧肩膀的额外骨骼偏移：LeftShoulder: (10, 0, -10)、RightShoulder: (10, 0, 10)](https://user-images.githubusercontent.com/3406505/180982518-3f25328e-2ec9-4021-bb4e-8b4981053913.png)
+![没有设置额外骨骼偏移](https://user-images.githubusercontent.com/3406505/180982590-df02732d-8a8f-450c-b867-152ee1a8a99b.png) ![设置了两侧肩膀的额外骨骼偏移：LeftShoulder:(10, 0, -10)、RightShoulder:(10, 0, 10)](https://user-images.githubusercontent.com/3406505/180982518-3f25328e-2ec9-4021-bb4e-8b4981053913.png)
 
 ### 我想设置切换网格（衣服、配饰……）的快捷键。
 
