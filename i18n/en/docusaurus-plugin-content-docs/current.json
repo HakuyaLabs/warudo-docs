@@ -1,0 +1,38 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.advanced": {
+    "message": "advanced",
+    "description": "The label for category advanced in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.assets": {
+    "message": "assets",
+    "description": "The label for category assets in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.角色": {
+    "message": "角色",
+    "description": "The label for category 角色 in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.blueprints": {
+    "message": "blueprints",
+    "description": "The label for category blueprints in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.misc": {
+    "message": "misc",
+    "description": "The label for category misc in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.mocap": {
+    "message": "mocap",
+    "description": "The label for category mocap in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.modding": {
+    "message": "modding",
+    "description": "The label for category modding in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.tutorials": {
+    "message": "tutorials",
+    "description": "The label for category tutorials in sidebar tutorialSidebar"
+  }
+}
