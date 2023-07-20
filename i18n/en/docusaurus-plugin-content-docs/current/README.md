@@ -7,7 +7,7 @@ coverY: -34.94419306184012
 
 ## What is Warudo?
 
-Warudo is an avatar animation software specifically designed for 3D VTuber livestreaming. Import your own [environments](modding/environment-mod.md) and [props](modding/prop-mod.md), customize your avatar in-depth with [blueprints](broken-reference), and further enhance the software capabilities via [C# plugins](modding/mod-sdk.md). Feature-packed and highly flexible, Warudo is dedicated to creating the perfect livestreaming setup for your VTuber avatar.
+Warudo is an avatar animation software specifically designed for 3D VTuber livestreaming. Import your own [environments](modding/environment-mod.md) and [props](modding/prop-mod.md), customize your avatar in-depth with [blueprints](/docs/mocap/blueprints/overview), and further enhance the software capabilities via [C# plugins](modding/mod-sdk.md). Feature-packed and highly flexible, Warudo is dedicated to creating the perfect livestreaming setup for your VTuber avatar.
 
 ## Why Warudo?
 

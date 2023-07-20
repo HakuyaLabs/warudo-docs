@@ -14,14 +14,14 @@ Warudo 原生支持导入 [VRM 格式](https://vrm.dev/en/univrm/)的角色模�
 
 ### 动作捕捉
 
-详情请参考[动作捕捉方案](broken-reference)页面。
+详情请参考[动作捕捉方案](mocap/overview.md)页面。
 
-* 配置动作捕捉：选择[面部追踪](../../mocap/face-tracking.md)及[姿态追踪](../../mocap/body-tracking.md)模板，自动生成相应的资源和[蓝图](https://tiger-tang.gitbook.io/warudo/advanced/blueprints)。
+* 配置动作捕捉：选择 [面部追踪](../../mocap/face-tracking.md) 及 [姿态追踪](../../mocap/body-tracking.md) 模板，自动生成相应的资源和 [蓝图](https://tiger-tang.gitbook.io/warudo/advanced/blueprints) 。
 * 移除动作捕捉：移除此前配置动作捕捉时自动生成的资源和蓝图。
 
 ### 表情
 
-详情请参考[表情](blendshape-expression.md)子页面。
+详情请参考 [表情](blendshape-expression.md) 子页面。
 
 ### 动画
 

@@ -139,7 +139,7 @@ Many motion capture hardware, in addition to home VR, have first or third-party 
 </div>
 
 <div className="hint hint-success">
-In addition to at-home mocap options, Warudo also supports a range of [professional motion capture solutions](broken-reference)!
+In addition to at-home mocap options, Warudo also supports a range of [professional motion capture solutions](mocap/overview)!
 </div>
 
 
@@ -389,7 +389,7 @@ Two blueprints should also have been added to the blueprint list:
 <figure><img src="/images/image(68).png" alt="" /><figcaption></figcaption></figure>
 
 <div className="hint hint-info">
-Warudo's blueprints are a very powerful feature, but if you're just starting out with Warudo, you can achieve great results without touching blueprints at all. We recommend reading the [blueprint tutorial](broken-reference/) once you are familiar with the rest of Warudo's features.
+Warudo's blueprints are a very powerful feature, but if you're just starting out with Warudo, you can achieve great results without touching blueprints at all. We recommend reading the [blueprint tutorial](/docs/mocap/blueprints/overview) once you are familiar with the rest of Warudo's features.
 </div>
 
 To use RhyLive on an iOS device, open the app and tap on the menu icon in the top left corner to enter the settings. If your computer and phone are connected to the same WiFi network, enter your computer's IP in the "IP" field and turn on the "无线" (Wireless) switch. Alternatively, you can connect your device to your computer using a USB cable and turn on the "有线" (Wired) switch ([iTunes](https://www.apple.com/itunes/) required).

@@ -14,9 +14,9 @@ Can't find the data folder? Click "🚀" -> "Open Data Folder".
 
 ### Motion Capture
 
-Refer to the [motion capture section](broken-reference) for details.
+Refer to the [motion capture section](/docs/tutorials/mocap/body-tracking) for details.
 
-* Setup Motion Capture: Select the [face tracking](../../mocap/face-tracking.md) and [pose tracking ](../../mocap/body-tracking.md)template to automatically generate the mocap [blueprints](broken-reference).
+* Setup Motion Capture: Select the [face tracking](../../mocap/face-tracking.md) and [pose tracking ](../../mocap/body-tracking.md)template to automatically generate the mocap [blueprints](/docs/mocap/blueprints/overview).
 
 <div className="hint hint-info">
 Think of blueprints as programs that apply the mocap data on your avatar. Read more [here](../../advanced/blueprints-intro.md).
@@ -69,7 +69,7 @@ Using overlaying animation and the IK features below, you can pose your characte
     * Weight: The weight of the pose, that is, how much the hand should blend into the selected pose.
 
 <div className="hint hint-info">
-In the built-in [motion capture templates](broken-reference), the priority of the idle animation, overlay animations, override hand poses, and [body IK](./#body-ik) are all **lower** than motion capture.
+In the built-in [motion capture templates](mocap/overview), the priority of the idle animation, overlay animations, override hand poses, and [body IK](./#body-ik) are all **lower** than motion capture.
 
 In other words, even if you have set an override hand pose for your right hand, if you raise your right hand and it becomes tracked, the model follows your right hand's pose instead of the override hand pose.&#x20;
 </div>

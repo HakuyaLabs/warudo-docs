@@ -1,6 +1,6 @@
 # 自定义
 
-Warudo 的动作捕捉都是用[蓝图](broken-reference)实现的。在[配置角色动作捕捉](../assets/character/#dong-zuo-bu-zhuo)的时候，根据选择的方案，Warudo 会自动生成对应的蓝图。例如，选择了 iFacialMocap + MediaPipe 的方案，便会生成两张蓝图：「面部追踪 - iFacialMocap」及「姿态追踪 - MediaPipe」。
+Warudo 的动作捕捉都是用[蓝图](/docs/mocap/blueprints/overview)实现的。在[配置角色动作捕捉](../assets/character/#dong-zuo-bu-zhuo)的时候，根据选择的方案，Warudo 会自动生成对应的蓝图。例如，选择了 iFacialMocap + MediaPipe 的方案，便会生成两张蓝图：「面部追踪 - iFacialMocap」及「姿态追踪 - MediaPipe」。
 
 ## 调整平滑程度
 

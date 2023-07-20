@@ -7,7 +7,7 @@ coverY: -42.588235294117645
 
 ## Warudo 是什么？
 
-Warudo 是一款专为 VTuber 直播设计的虚拟形象动画软件，可以自由导入并使用外部 3D 素材（包括[场景](modding/environment-mod.md)、[道具](modding/prop-mod.md)等），使用[蓝图](broken-reference)深入配置你的虚拟形象，并支持[第三方 C# 插件](modding/mod-sdk.md)。丰富的功能再加上极高的可自定义性，力求为你的 3D 虚拟形象打造最理想的直播效果。
+Warudo 是一款专为 VTuber 直播设计的虚拟形象动画软件，可以自由导入并使用外部 3D 素材（包括[场景](modding/environment-mod.md)、[道具](modding/prop-mod.md)等），使用[蓝图](/docs/mocap/blueprints/overview)深入配置你的虚拟形象，并支持[第三方 C# 插件](modding/mod-sdk.md)。丰富的功能再加上极高的可自定义性，力求为你的 3D 虚拟形象打造最理想的直播效果。
 
 ## 为什么使用 Warudo？
 

@@ -27,7 +27,7 @@ Many motion capture hardware, in addition to home VR, have first or third-party 
 ## Professional
 
 * [Rokoko](rokoko.md)
-* [Xsens MVN](broken-reference)
+* [Xsens MVN](mocap/xsens-mvn)
 * Motion capture systems compatible with the [VMC protocol](https://protocol.vmc.info/english): ([Perception Neuron](https://github.com/emilianavt/VSeeFaceManual#perception-neuron-tracking), etc.): [VMC ](vmc.md)/ [iFacialMocap ](ifacialmocap.md)+ [VMC](vmc.md).
 * For the following and other options, a private Warudo build is required. Please contact [tiger@warudo.app](mailto:tiger@warudo.app) for details.
   * Motion capture systems with [VRPN ](https://github.com/vrpn/vrpn)([Chingmu](https://digi-human.com) Avatar Lite, [OptiTrack](https://optitrack.com/), etc.）

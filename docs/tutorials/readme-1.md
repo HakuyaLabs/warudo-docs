@@ -141,12 +141,12 @@ Warudo 目前支持两种模型格式：`.vrm` 以及 `.warudo`。前者是使�
 </div>
 
 <div className="hint hint-success">
-除了家用动作捕捉方案以外，Warudo 还支持众多[专业动作捕捉设备](broken-reference)。
+除了家用动作捕捉方案以外，Warudo 还支持众多[专业动作捕捉设备](/docs/tutorials/mocap/body-tracking)。
 </div>
 
 
 
-因为是教程嘛，**我们这里就以 RhyLive + RhyLive 作为例子，**但你可以到[这个页面](broken-reference)查看其它动捕方案的详细介绍、属性介绍和配置技巧。
+因为是教程嘛，**我们这里就以 RhyLive + RhyLive 作为例子，**但你可以到[这个页面](/docs/tutorials/mocap/body-tracking)查看其它动捕方案的详细介绍、属性介绍和配置技巧。
 
 选中角色资源，点击「动作捕捉」->「配置动作捕捉」：
 
@@ -391,7 +391,7 @@ BlendShape 映射的意思就是「面捕参数应该怎么应用到模型的 Bl
 <figure><img src="/images/image(6)(3).png" alt="" /><figcaption></figcaption></figure>
 
 <div className="hint hint-info">
-Warudo 的蓝图是非常强大的功能，不过，刚上手 Warudo 的话，不需要接触蓝图也可以配置出很棒的效果！建议熟悉 Warudo 其他功能后，再阅读[蓝图教程](broken-reference)。
+Warudo 的蓝图是非常强大的功能，不过，刚上手 Warudo 的话，不需要接触蓝图也可以配置出很棒的效果！建议熟悉 Warudo 其他功能后，再阅读[蓝图教程](/docs/mocap/blueprints/overview)。
 </div>
 
 iOS 设备上打开 RhyLive，左上角点击菜单图标进入设置界面。电脑和手机用的是同一个 WiFi 的话，就在 「IP」处输入电脑 IP，然后开启「无线」开关；或者也可以把设备用 USB 连上电脑，然后开启「有线」开关（需要安装 [iTunes](https://www.apple.com/itunes/)）。

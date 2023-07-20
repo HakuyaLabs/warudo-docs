@@ -11,7 +11,7 @@
 
 * [动作捕捉方案一览](mocap/overview.md)
 * [面部追踪](mocap/face-tracking.md)
-* [姿态追踪](mocap/body-tracking.md)
+* [姿态追踪](/docs/tutorials/mocap/body-tracking.md)
 * [iFacialMocap](mocap/ifacialmocap.md)
 * [MediaPipe](mocap/mediapipe.md)
 * [OpenSeeFace（Beta）](mocap/openseeface.md)
@@ -39,7 +39,7 @@
 ## 蓝图 <a href="#blueprints" id="blueprints"></a>
 
 * [蓝图是什么？](advanced/blueprints-intro.md)
-* [概览](blueprints/overview.md)
+* [概览](/docs/mocap/blueprints/overview.md)
 * [基础节点](blueprints/basic-nodes.md)
 * [进阶节点](blueprints/advanced-nodes.md)
 * [动作捕捉节点](blueprints/mocap-nodes.md)

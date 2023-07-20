@@ -1,6 +1,6 @@
 # Customization
 
-Warudo's motion capture is implemented using [blueprints](broken-reference), and they are highly customizable. When you [setup the character's motion capture](../assets/character/#motion-capture), Warudo automatically generates blueprints based on your selections. For example, if you have chosen iFacialMocap + MediaPipe, two blueprints are generated: "Face Tracking - iFacialMocap" and "Pose Tracking - MediaPipe".
+Warudo's motion capture is implemented using [blueprints](/docs/mocap/blueprints/overview), and they are highly customizable. When you [setup the character's motion capture](../assets/character/#motion-capture), Warudo automatically generates blueprints based on your selections. For example, if you have chosen iFacialMocap + MediaPipe, two blueprints are generated: "Face Tracking - iFacialMocap" and "Pose Tracking - MediaPipe".
 
 ## Adjust smoothing
 
