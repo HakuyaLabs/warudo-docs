@@ -1,6 +1,8 @@
 ---
-cover: /images/store_page_background.png
-coverY: 164.39969834087483
+cover: .gitbook/assets/library_hero(1).png
+coverY: -42.588235294117645
+sidebar_position: 20
+sidebar_label: 新手上路
 ---
 
 # 新手上路

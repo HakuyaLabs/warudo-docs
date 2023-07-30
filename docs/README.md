@@ -1,6 +1,8 @@
 ---
 cover: .gitbook/assets/library_hero(1).png
 coverY: -42.588235294117645
+sidebar_position: 10
+sidebar_label: Warudo 介绍
 ---
 
 # Warudo 介绍
