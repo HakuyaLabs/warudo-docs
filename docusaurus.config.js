@@ -28,8 +28,8 @@ const config = {
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'zh-cn',
-    locales: ['zh-cn', 'en'],
+    defaultLocale: 'zh',
+    locales: ['zh', 'en'],
   },
 
   presets: [
@@ -47,10 +47,21 @@ const config = {
     ],
   ],
 
+  themes: [
+    // ... Your other themes.
+    [
+      require.resolve("@easyops-cn/docusaurus-search-local"),
+      /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
+      ({
+        hashed: true,
+        language: ["en", "zh"],
+      }),
+    ],
+  ],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
       image: 'img/favicon.png',
       navbar: {
         title: 'Warudo',
@@ -67,11 +78,6 @@ const config = {
             sidebarId: 'tutorialSidebar',
             position: 'left',
             label: '文档',
-          },
-          {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
-            position: 'right',
           },
         ],
       },
@@ -118,6 +124,7 @@ const config = {
           //   ],
           // },
         ],
+        html: '<h2>啊？</h2>',
         copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
       },
       prism: {
