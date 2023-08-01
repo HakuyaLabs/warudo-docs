@@ -1,11 +1,24 @@
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
+:root {
+  --ifm-color-primary: #39367a;
+  --ifm-color-primary-dark: #33316e;
+  --ifm-color-primary-darker: #302e68;
+  --ifm-color-primary-darkest: #282655;
+  --ifm-color-primary-light: #3f3b86;
+  --ifm-color-primary-lighter: #423e8c;
+  --ifm-color-primary-lightest: #4a469f;
+  --ifm-navbar-background-color: rgba(255,255,255,.5);
+}
 
-/* You can override the default Infima variables here. */
-
+[data-theme='dark'] {
+  --ifm-color-primary: #c0bfe3;
+  --ifm-color-primary-dark: #a3a2d6;
+  --ifm-color-primary-darker: #9593d0;
+  --ifm-color-primary-darkest: #6a68bd;
+  --ifm-color-primary-light: #dddcf0;
+  --ifm-color-primary-lighter: #ebebf6;
+  --ifm-color-primary-lightest: #ffffff;
+  --ifm-navbar-background-color: rgba(59,56,129,.6);
+}
 
 .hint{
   padding: 16px;
@@ -33,4 +46,19 @@
 .hint-danger {
   background-color: var(--ifm-color-danger-contrast-background);
   border-color: var(--ifm-color-danger-light);
+}
+
+
+.navbar{
+  backdrop-filter: blur(10px);
+
+}
+
+.navbar-sidebar{
+  height: 100vh;
+  background: var(--ifm-background-surface-color);
+}
+
+.navbar-sidebar__backdrop{
+  height: 100vh;
 }
