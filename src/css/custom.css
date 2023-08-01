@@ -1,5 +1,5 @@
 :root {
-  --ifm-color-primary: #39367a;
+  --ifm-color-primary: #423da8;
   --ifm-color-primary-dark: #33316e;
   --ifm-color-primary-darker: #302e68;
   --ifm-color-primary-darkest: #282655;
@@ -7,6 +7,7 @@
   --ifm-color-primary-lighter: #423e8c;
   --ifm-color-primary-lightest: #4a469f;
   --ifm-navbar-background-color: rgba(255,255,255,.5);
+  --ifm-color-content: var(--ifm-color-emphasis-800);
 }
 
 [data-theme='dark'] {
@@ -18,6 +19,7 @@
   --ifm-color-primary-lighter: #ebebf6;
   --ifm-color-primary-lightest: #ffffff;
   --ifm-navbar-background-color: rgba(59,56,129,.6);
+  --ifm-color-content: var(--ifm-color-emphasis-800);
 }
 
 .hint{
@@ -61,4 +63,22 @@
 
 .navbar-sidebar__backdrop{
   height: 100vh;
+}
+
+.menu__link--active{
+  font-weight: bolder;
+}
+
+.video-box{
+  font-size: 13px;
+  color: var(--ifm-color-primary-light);
+}
+
+.video-box video{
+  max-width: 100%;
+  padding: 10px 0;
+}
+
+.figure-list{
+display: flex;
 }

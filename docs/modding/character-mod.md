@@ -1,3 +1,7 @@
+---
+sidebar_position: 20
+---
+
 # 角色 Mod
 
 Warudo 支持任意 Humanoid Rig 作为[角色](https://tira.gitbook.io/warudo/assets/character)的模型源。

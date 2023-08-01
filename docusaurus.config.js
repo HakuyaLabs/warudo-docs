@@ -68,7 +68,7 @@ const config = {
         title: 'Warudo',
         logo: {
           alt: 'Warudo',
-          src: 'img/favicon.png',
+          src: 'img/logo.webp',
         },
         items: [
           {

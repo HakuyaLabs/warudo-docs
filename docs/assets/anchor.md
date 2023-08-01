@@ -1,3 +1,7 @@
+---
+sidebar_position: 90
+---
+
 # 锚点
 
 锚点是场景空间中的某个绝对点或相对点，可作为[角色视线 IK](https://tiger-tang.gitbook.io/warudo/assets/character#shi-xian-ik) 及 [身体 IK](https://tiger-tang.gitbook.io/warudo/assets/character#shen-ti-ik) 的目标。

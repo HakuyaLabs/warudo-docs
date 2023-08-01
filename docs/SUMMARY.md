@@ -45,7 +45,7 @@ sidebar_label: 内容介绍
 ## 蓝图 <a href="#blueprints" id="blueprints"></a>
 
 * [蓝图是什么？](advanced/blueprints-intro.md)
-* [概览](/docs/mocap/blueprints/overview.md)
+* [概览](/blueprints/overview.md)
 * [基础节点](blueprints/basic-nodes.md)
 * [进阶节点](blueprints/advanced-nodes.md)
 * [动作捕捉节点](blueprints/mocap-nodes.md)

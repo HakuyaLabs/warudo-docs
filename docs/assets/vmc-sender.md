@@ -1,3 +1,7 @@
+---
+sidebar_position: 110
+---
+
 # VMC 发送器
 
 发送角色的动画数据到任何支持 [VirtualMotionCapture 协议](https://protocol.vmc.info/english)的软件！
