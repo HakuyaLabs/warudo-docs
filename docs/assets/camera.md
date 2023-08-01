@@ -36,11 +36,11 @@ Warudo 的场景中支持最多 8 个摄像机。
 
 <div>
 
-<figure><img src="/images/Warudo_2022-10-16-05-44-53_1024x1024.png" alt="" /><figcaption><p>不显示 Gizmos</p></figcaption></figure>
+<figure><img src="/images/Warudo_2022-10-16-05-44-53_1024x1024.jpg" alt="" /><figcaption><p>不显示 Gizmos</p></figcaption></figure>
 
  
 
-<figure><img src="/images/Warudo_2022-10-16-05-44-42_1024x1024.png" alt="" /><figcaption><p>显示 Gizmos，且角色资源被选中时</p></figcaption></figure>
+<figure><img src="/images/Warudo_2022-10-16-05-44-42_1024x1024.jpg" alt="" /><figcaption><p>显示 Gizmos，且角色资源被选中时</p></figcaption></figure>
 
 </div>
 
@@ -87,13 +87,13 @@ Warudo 的场景中支持最多 8 个摄像机。
 <div className="hint hint-info">
 Spout 输出到 OBS 的情况下，需要在 Spout2 Capture 属性中设置 Composite Mode 为 Premultiplied Alpha 才会有透明度：
 
-<img src="/images/image(3).png" alt="" data-size="original" />
+<img src="/images/image(3).jpg" alt="" data-size="original" />
 </div>
 
 <div className="hint hint-info">
 虚拟摄像头输出到 OBS 的情况下，需要在视频捕获设备属性中设置 Video Format（视频格式）为 ARGB 才会有透明度：
 
-![](</images/image(2).png>)
+![](</images/image(2).jpg>)
 </div>
 
 ### 基本属性
@@ -115,11 +115,11 @@ Spout 输出到 OBS 的情况下，需要在 Spout2 Capture 属性中设置 Comp
 
 <div>
 
-<figure><img src="/images/Warudo_2022-10-16-03-53-28_1024x1024.png" alt="" /><figcaption><p>不使用正交投影（透视投影）</p></figcaption></figure>
+<figure><img src="/images/Warudo_2022-10-16-03-53-28_1024x1024.jpg" alt="" /><figcaption><p>不使用正交投影（透视投影）</p></figcaption></figure>
 
  
 
-<figure><img src="/images/Warudo_2022-10-16-03-52-58_1024x1024.png" alt="" /><figcaption><p>正交投影</p></figcaption></figure>
+<figure><img src="/images/Warudo_2022-10-16-03-52-58_1024x1024.jpg" alt="" /><figcaption><p>正交投影</p></figcaption></figure>
 
 </div>
 
@@ -215,11 +215,11 @@ Spout 输出到 OBS 的情况下，需要在 Spout2 Capture 属性中设置 Comp
 
 <div>
 
-<figure><img src="/images/Warudo_2022-10-16-03-53-28_1024x1024.png" alt="" /><figcaption><p>关闭色差</p></figcaption></figure>
+<figure><img src="/images/Warudo_2022-10-16-03-53-28_1024x1024.jpg" alt="" /><figcaption><p>关闭色差</p></figcaption></figure>
 
  
 
-<figure><img src="/images/Warudo_2022-10-16-03-57-39_1024x1024.png" alt="" /><figcaption><p>开启色差</p></figcaption></figure>
+<figure><img src="/images/Warudo_2022-10-16-03-57-39_1024x1024.jpg" alt="" /><figcaption><p>开启色差</p></figcaption></figure>
 
 </div>
 
@@ -232,11 +232,11 @@ Spout 输出到 OBS 的情况下，需要在 Spout2 Capture 属性中设置 Comp
 
 <div>
 
-<figure><img src="/images/Warudo_2022-10-16-04-03-18_1024x1024.png" alt="" /><figcaption><p>关闭镜头污渍</p></figcaption></figure>
+<figure><img src="/images/Warudo_2022-10-16-04-03-18_1024x1024.jpg" alt="" /><figcaption><p>关闭镜头污渍</p></figcaption></figure>
 
  
 
-<figure><img src="/images/Warudo_2022-10-16-04-03-15_1024x1024.png" alt="" /><figcaption><p>开启镜头污渍，材质「内置 -> Dirt3」</p></figcaption></figure>
+<figure><img src="/images/Warudo_2022-10-16-04-03-15_1024x1024.jpg" alt="" /><figcaption><p>开启镜头污渍，材质「内置 -> Dirt3」</p></figcaption></figure>
 
 </div>
 
@@ -250,11 +250,11 @@ Spout 输出到 OBS 的情况下，需要在 Spout2 Capture 属性中设置 Comp
 
 <div>
 
-<figure><img src="/images/Warudo_2022-10-16-04-03-18_1024x1024.png" alt="" /><figcaption><p>关闭渐晕</p></figcaption></figure>
+<figure><img src="/images/Warudo_2022-10-16-04-03-18_1024x1024.jpg" alt="" /><figcaption><p>关闭渐晕</p></figcaption></figure>
 
  
 
-<figure><img src="/images/Warudo_2022-10-16-04-07-26_1024x1024.png" alt="" /><figcaption><p>开启渐晕</p></figcaption></figure>
+<figure><img src="/images/Warudo_2022-10-16-04-07-26_1024x1024.jpg" alt="" /><figcaption><p>开启渐晕</p></figcaption></figure>
 
 </div>
 
@@ -264,11 +264,11 @@ Spout 输出到 OBS 的情况下，需要在 Spout2 Capture 属性中设置 Comp
 
 <div>
 
-<figure><img src="/images/Warudo_2022-10-16-04-03-18_1024x1024.png" alt="" /><figcaption><p>眨眼 = 0</p></figcaption></figure>
+<figure><img src="/images/Warudo_2022-10-16-04-03-18_1024x1024.jpg" alt="" /><figcaption><p>眨眼 = 0</p></figcaption></figure>
 
  
 
-<figure><img src="/images/Warudo_2022-10-16-04-12-01_1024x1024.png" alt="" /><figcaption><p>眨眼 = 0.5</p></figcaption></figure>
+<figure><img src="/images/Warudo_2022-10-16-04-12-01_1024x1024.jpg" alt="" /><figcaption><p>眨眼 = 0.5</p></figcaption></figure>
 
 </div>
 
@@ -278,11 +278,11 @@ Spout 输出到 OBS 的情况下，需要在 Spout2 Capture 属性中设置 Comp
 
 <div>
 
-<figure><img src="/images/Warudo_2022-10-16-04-13-16_1024x1024.png" alt="" /><figcaption><p>关闭夜视</p></figcaption></figure>
+<figure><img src="/images/Warudo_2022-10-16-04-13-16_1024x1024.jpg" alt="" /><figcaption><p>关闭夜视</p></figcaption></figure>
 
  
 
-<figure><img src="/images/Warudo_2022-10-16-04-13-18_1024x1024.png" alt="" /><figcaption><p>开启夜视</p></figcaption></figure>
+<figure><img src="/images/Warudo_2022-10-16-04-13-18_1024x1024.jpg" alt="" /><figcaption><p>开启夜视</p></figcaption></figure>
 
 </div>
 
@@ -294,11 +294,11 @@ Spout 输出到 OBS 的情况下，需要在 Spout2 Capture 属性中设置 Comp
 
 <div>
 
-<figure><img src="/images/Warudo_2022-10-16-04-03-18_1024x1024.png" alt="" /><figcaption><p>关闭模糊</p></figcaption></figure>
+<figure><img src="/images/Warudo_2022-10-16-04-03-18_1024x1024.jpg" alt="" /><figcaption><p>关闭模糊</p></figcaption></figure>
 
  
 
-<figure><img src="/images/Warudo_2022-10-16-04-22-23_1024x1024.png" alt="" /><figcaption><p>开启模糊</p></figcaption></figure>
+<figure><img src="/images/Warudo_2022-10-16-04-22-23_1024x1024.jpg" alt="" /><figcaption><p>开启模糊</p></figcaption></figure>
 
 </div>
 
@@ -310,11 +310,11 @@ Spout 输出到 OBS 的情况下，需要在 Spout2 Capture 属性中设置 Comp
 
 <div>
 
-<figure><img src="/images/Warudo_2022-10-16-04-03-18_1024x1024.png" alt="" /><figcaption><p>关闭像素化</p></figcaption></figure>
+<figure><img src="/images/Warudo_2022-10-16-04-03-18_1024x1024.jpg" alt="" /><figcaption><p>关闭像素化</p></figcaption></figure>
 
  
 
-<figure><img src="/images/Warudo_2022-10-16-04-23-26_1024x1024.png" alt="" /><figcaption><p>开启像素化</p></figcaption></figure>
+<figure><img src="/images/Warudo_2022-10-16-04-23-26_1024x1024.jpg" alt="" /><figcaption><p>开启像素化</p></figcaption></figure>
 
 </div>
 

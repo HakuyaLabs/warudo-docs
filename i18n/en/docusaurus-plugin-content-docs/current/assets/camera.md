@@ -32,11 +32,11 @@ There are two ways to switch the main camera:
 
 <div>
 
-<figure><img src="/images/Warudo_2022-10-16-05-44-53_1024x1024.png" alt="" /><figcaption><p>Show Gizmos disabled</p></figcaption></figure>
+<figure><img src="/images/Warudo_2022-10-16-05-44-53_1024x1024.jpg" alt="" /><figcaption><p>Show Gizmos disabled</p></figcaption></figure>
 
  
 
-<figure><img src="/images/Warudo_2022-10-16-05-44-42_1024x1024.png" alt="" /><figcaption><p>Show Gizmos enabled, and character asset selected</p></figcaption></figure>
+<figure><img src="/images/Warudo_2022-10-16-05-44-42_1024x1024.jpg" alt="" /><figcaption><p>Show Gizmos enabled, and character asset selected</p></figcaption></figure>
 
 </div>
 
@@ -83,13 +83,13 @@ When to use Spout and when to use NDI? Simply put, use NDI if you want to output
 <div className="hint hint-info">
 When using Spout output in OBS, set the Composite Mode in the Spout2 Capture properties to Premultiplied Alpha to achieve transparency.
 
-![](</images/image(16)(3).png>)
+![](</images/image(16)(3).jpg>)
 </div>
 
 <div className="hint hint-info">
 When using virtual camera output in OBS, set the Video Format in the Video Capture Device properties to ARGB to achieve transparency.
 
-![](</images/image(33).png>)
+![](</images/image(33).jpg>)
 </div>
 
 ### Basic Properties
@@ -106,11 +106,11 @@ Even when chroma key is enabled, the [environment ](environment.md)in the scene 
 
 <div>
 
-<figure><img src="/images/Warudo_2022-10-16-03-53-28_1024x1024.png" alt="" /><figcaption><p>Orthographic Projection disabled</p></figcaption></figure>
+<figure><img src="/images/Warudo_2022-10-16-03-53-28_1024x1024.jpg" alt="" /><figcaption><p>Orthographic Projection disabled</p></figcaption></figure>
 
  
 
-<figure><img src="/images/Warudo_2022-10-16-03-52-58_1024x1024.png" alt="" /><figcaption><p>Orthographic Projection enabled</p></figcaption></figure>
+<figure><img src="/images/Warudo_2022-10-16-03-52-58_1024x1024.jpg" alt="" /><figcaption><p>Orthographic Projection enabled</p></figcaption></figure>
 
 </div>
 
@@ -201,11 +201,11 @@ Mimics the effect produced when a lens is unable to blend all colors to the same
 
 <div>
 
-<figure><img src="/images/Warudo_2022-10-16-03-53-28_1024x1024.png" alt="" /><figcaption><p>Chromatic Aberration disabled</p></figcaption></figure>
+<figure><img src="/images/Warudo_2022-10-16-03-53-28_1024x1024.jpg" alt="" /><figcaption><p>Chromatic Aberration disabled</p></figcaption></figure>
 
  
 
-<figure><img src="/images/Warudo_2022-10-16-03-57-39_1024x1024.png" alt="" /><figcaption><p>Chromatic Aberration enabled</p></figcaption></figure>
+<figure><img src="/images/Warudo_2022-10-16-03-57-39_1024x1024.jpg" alt="" /><figcaption><p>Chromatic Aberration enabled</p></figcaption></figure>
 
 </div>
 
@@ -218,11 +218,11 @@ Simulates dirt and specks on the lens.
 
 <div>
 
-<figure><img src="/images/Warudo_2022-10-16-04-03-18_1024x1024.png" alt="" /><figcaption><p>Lens Dirt disabled</p></figcaption></figure>
+<figure><img src="/images/Warudo_2022-10-16-04-03-18_1024x1024.jpg" alt="" /><figcaption><p>Lens Dirt disabled</p></figcaption></figure>
 
  
 
-<figure><img src="/images/Warudo_2022-10-16-04-03-15_1024x1024.png" alt="" /><figcaption><p>Lens Dirt enabled: Dirt3</p></figcaption></figure>
+<figure><img src="/images/Warudo_2022-10-16-04-03-15_1024x1024.jpg" alt="" /><figcaption><p>Lens Dirt enabled: Dirt3</p></figcaption></figure>
 
 </div>
 
@@ -236,11 +236,11 @@ Makes the edges of the image darker.
 
 <div>
 
-<figure><img src="/images/Warudo_2022-10-16-04-03-18_1024x1024.png" alt="" /><figcaption><p>Vignetting disabled</p></figcaption></figure>
+<figure><img src="/images/Warudo_2022-10-16-04-03-18_1024x1024.jpg" alt="" /><figcaption><p>Vignetting disabled</p></figcaption></figure>
 
  
 
-<figure><img src="/images/Warudo_2022-10-16-04-07-26_1024x1024.png" alt="" /><figcaption><p>Vignetting enabled</p></figcaption></figure>
+<figure><img src="/images/Warudo_2022-10-16-04-07-26_1024x1024.jpg" alt="" /><figcaption><p>Vignetting enabled</p></figcaption></figure>
 
 </div>
 
@@ -250,11 +250,11 @@ Makes the edges of the image darker.
 
 <div>
 
-<figure><img src="/images/Warudo_2022-10-16-04-03-18_1024x1024.png" alt="" /><figcaption><p>Blink = 0</p></figcaption></figure>
+<figure><img src="/images/Warudo_2022-10-16-04-03-18_1024x1024.jpg" alt="" /><figcaption><p>Blink = 0</p></figcaption></figure>
 
  
 
-<figure><img src="/images/Warudo_2022-10-16-04-12-01_1024x1024.png" alt="" /><figcaption><p>Blink = 0.5</p></figcaption></figure>
+<figure><img src="/images/Warudo_2022-10-16-04-12-01_1024x1024.jpg" alt="" /><figcaption><p>Blink = 0.5</p></figcaption></figure>
 
 </div>
 
@@ -264,11 +264,11 @@ Simulates the night vision goggles.
 
 <div>
 
-<figure><img src="/images/Warudo_2022-10-16-04-13-16_1024x1024.png" alt="" /><figcaption><p>Night Vision disabled</p></figcaption></figure>
+<figure><img src="/images/Warudo_2022-10-16-04-13-16_1024x1024.jpg" alt="" /><figcaption><p>Night Vision disabled</p></figcaption></figure>
 
  
 
-<figure><img src="/images/Warudo_2022-10-16-04-13-18_1024x1024.png" alt="" /><figcaption><p>Night Vision enabled</p></figcaption></figure>
+<figure><img src="/images/Warudo_2022-10-16-04-13-18_1024x1024.jpg" alt="" /><figcaption><p>Night Vision enabled</p></figcaption></figure>
 
 </div>
 
@@ -280,11 +280,11 @@ Blur the image.
 
 <div>
 
-<figure><img src="/images/Warudo_2022-10-16-04-03-18_1024x1024.png" alt="" /><figcaption><p>Blur disabled</p></figcaption></figure>
+<figure><img src="/images/Warudo_2022-10-16-04-03-18_1024x1024.jpg" alt="" /><figcaption><p>Blur disabled</p></figcaption></figure>
 
  
 
-<figure><img src="/images/Warudo_2022-10-16-04-22-23_1024x1024.png" alt="" /><figcaption><p>Blur enabled</p></figcaption></figure>
+<figure><img src="/images/Warudo_2022-10-16-04-22-23_1024x1024.jpg" alt="" /><figcaption><p>Blur enabled</p></figcaption></figure>
 
 </div>
 
@@ -296,11 +296,11 @@ Add a mosaic effect to the image!
 
 <div>
 
-<figure><img src="/images/Warudo_2022-10-16-04-03-18_1024x1024.png" alt="" /><figcaption><p>Pixelate off</p></figcaption></figure>
+<figure><img src="/images/Warudo_2022-10-16-04-03-18_1024x1024.jpg" alt="" /><figcaption><p>Pixelate off</p></figcaption></figure>
 
  
 
-<figure><img src="/images/Warudo_2022-10-16-04-23-26_1024x1024.png" alt="" /><figcaption><p>Pixelate on</p></figcaption></figure>
+<figure><img src="/images/Warudo_2022-10-16-04-23-26_1024x1024.jpg" alt="" /><figcaption><p>Pixelate on</p></figcaption></figure>
 
 </div>
 

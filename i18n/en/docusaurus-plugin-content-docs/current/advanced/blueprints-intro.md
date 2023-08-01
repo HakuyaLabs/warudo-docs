@@ -8,11 +8,11 @@ Before answering the "what", let's look at the "why" ——and that starts with 
 
 Hold on, don't leave this page just yet. The basics of a VTuber software are extremely simple; face tracking, for example, can be illustrated by a flowchart as follows:
 
-<figure><img src="/images/image(53).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(53).jpg" alt="" /><figcaption></figcaption></figure>
 
 Not too much technical jargon, right? Though, "applying face tracking data to the model" can seem a bit abstract. Let's substantiate it with a basic face tracking solution that only detects if the eyes are open or closed, and if the mouth is open or closed. Here's a flowchart that represents the process:
 
-<figure><img src="/images/image(47).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(47).jpg" alt="" /><figcaption></figcaption></figure>
 
 Still, what does it mean to "apply data on the model"? The most common approach to implementing this is by applying **blendshapes** on the model. This is how it's done:
 
@@ -24,7 +24,7 @@ As you can see, blendshapes work by **moving specific vertices** on the model me
 
 In the popular VRM format, the blendshape that corresponds to the eyes being open or closed is named `Blink`, and the one for the mouth being open or closed is named `A` (or sometimes `O` ). With this information, the flowchart can now be updated as follows:
 
-<figure><img src="/images/image(46).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(46).jpg" alt="" /><figcaption></figcaption></figure>
 
 You may still have questions about what is meant by "applying data on a blendshape". Let's use an example. In the face tracking data we received, the `eyes open/closed` data point is represented as a decimal number ranging from 0 to 1. If the value is 0, it means the eyes are tracked as open, if it's 1, the eyes are closed, and if it's 0.5, the eyes are half open. The same applies to the "mouth open/closed" data point.
 
@@ -34,7 +34,7 @@ When it comes to a blendshape of a model, a value of 0 means that vertices of th
 
 Great! The values range from 0 to 1 on both sides. With this information, the final flowchart should look like this:
 
-<figure><img src="/images/image(1)(1)(2).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(1)(1)(2).jpg" alt="" /><figcaption></figcaption></figure>
 
 Congratulations, you just made a VTuber software. 🎉
 
@@ -90,11 +90,11 @@ By now, you may have realized that even though our requirements seem simple (jus
 
 To address these issues, Warudo introduced the concept of **blueprints**. Remember the flowchart from the beginning of our journey?
 
-<figure><img src="/images/image(53).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(53).jpg" alt="" /><figcaption></figcaption></figure>
 
 In Warudo, a corresponding blueprint looks like this:
 
-<figure><img src="/images/image(30).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(30).jpg" alt="" /><figcaption></figcaption></figure>
 
 <div className="hint hint-info">
 [RhyLive](../mocap/rhylive.md) is used here, but other face tracking solutions can also be used, by simply replacing the `Get RhyLive Receiver Data` node with a different receiver node.
@@ -119,7 +119,7 @@ However, if you switch to a model that isn't compatible with ARKit, it won't mov
 
 Alright, I know I have just put an image right there, but trust me, even if I record a video, the model's face won't be animated at all. The reason is that the RhyLive receiver sends us values corresponding to ARKit's 52 blendshapes, and this model doesn't have those blendshapes, which is why it doesn't work. What can we do? Well, let's use the `mouth opened/closed` blendshape as an example and modify the blueprint a bit:
 
-<figure><img src="/images/image(56).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(56).jpg" alt="" /><figcaption></figcaption></figure>
 
 The `Set BlendShape` node is simple - it takes a list on its left input, sets a specified blendshape in the list to a specified value (or adds the blendshape to the list if it doesn't exist), and then passes the list to the right. In this case, we specify the blendshape we want to set as `あ`, which is the blendshape that makes our model's mouth open. The value we set it to comes from the `Get BlendShape` node, which retrieves the value of the `jawOpen` blendshape from the list given to it on the left - which is the `mouth opened/closed` motion capture data received by RhyLive!
 
@@ -127,7 +127,7 @@ Essentially, the blueprint means "on each frame, get the blendshapes from RhyLiv
 
 Similarly, let's do the same for `eye opened/closed`:
 
-<figure><img src="/images/image(55).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(55).jpg" alt="" /><figcaption></figcaption></figure>
 
 The above blueprint means "on each frame, get the blendshapes from RhyLive, set the value of the blendshape `あ` to the value of `jawOpen`, the value of `ウィンク2` to `eyeBlinkLeft`, and the value of `ウィンク2右` to `eyeBlinkRight`, then apply all of these values to the corresponding blendshapes of the model."
 
@@ -137,7 +137,7 @@ Let's see it in action:
 
 Nice! But it looks like I have difficulty closing my eyes. Hmm. Let's try to fix it:
 
-<figure><img src="/images/image(58).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(58).jpg" alt="" /><figcaption></figcaption></figure>
 
 The `Float Multiplication` node multiplies two values, A and B, and outputs the result to the right. In this case, it takes the value from the left node (A) and multiplies it with a value we set manually (B) which is 2. The `Float Clamp` node limits the value (A) received from the left node to a range between the mininum value (0) and the maximum value(1). This is done to prevent the blendshape from exceeding the value of 1, which, if you remember, will cause things to look weird.
 
@@ -147,7 +147,7 @@ Basically, the `eyeBlinkLeft` and `eyeBlinkRight` of the motion capture data are
 
 Let's make this more interesting. Let's say I would like to make my model smile in `^^-eyes` when I puff up my face. We just simply add two nodes:
 
-<figure><img src="/images/image(57).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(57).jpg" alt="" /><figcaption></figcaption></figure>
 
 （`笑い` is the blendshape for the `^^-eyes` on this model.）
 
@@ -157,7 +157,7 @@ Let's try it out!
 
 Huh, the eyelids look weird? Well, this is exactly the problem we mentioned earlier: the `Smile` blendshape must not be used together with the eyes-closed blendshapes! But in Warudo, we can just do this:
 
-<figure><img src="/images/image(59)(1).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(59)(1).jpg" alt="" /><figcaption></figcaption></figure>
 
 No more weird eyelids!
 
@@ -177,6 +177,6 @@ Let's revisit our concerns earlier:
 
 Everything seems to be solved! Of course, you don't have to build blueprints from scratch like above: as shown [in the Getting Started tutorial](../tutorials/readme-1.md), Warudo allows you to generate blueprints with a single click that match your model's specific setup. We showed how to map motion capture data (such as puffing your face) to a specific blendshape—but this is just one of the thousands of possibilities. For example, the following blueprint can be used to change the model's idle animation and expression when you press Alt+C.
 
-<figure><img src="/images/image(60).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(60).jpg" alt="" /><figcaption></figcaption></figure>
 
 **The best part: all of this can be done without a developer (me)!** Want something special for Halloween? Just create a keyboard shortcut that equips a pumpkin head on your avatar, along with some special effects. Want to thank your viewers for their redeems? Trigger a special facial expression or animation on your avatar when you receive a redeem. Have a MIDI controller? How about using it to control the brightness of the lighting in the scene? All of these simple logic can be implemented in Warudo's blueprints in just a few minutes. Plus, you can even create your own custom node types by developing [C# mods](../modding/mod-sdk.md) if the existing nodes don't have the functionality you need. And because Warudo's blueprints are saved with the scene files, you can easily share your setups with others by copying the scene files and the accompanying assets to another computer.

@@ -8,19 +8,19 @@ The blueprint system in Warudo is not just a novelty. Rather, it is a crucial pa
 
 To browse the blueprints in the current scene, simply click the "Blueprints" button on the left side of the configuration window. If you have just created a scene, there won't be any blueprints in it.
 
-<figure><img src="/images/image(5)(1).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(5)(1).jpg" alt="" /><figcaption></figcaption></figure>
 
 To create a blueprint, click the + icon in the lower left corner:
 
-<figure><img src="/images/image(7)(1)(3).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(7)(1)(3).jpg" alt="" /><figcaption></figcaption></figure>
 
-<figure><img src="/images/image(4)(1)(5).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(4)(1)(5).jpg" alt="" /><figcaption></figcaption></figure>
 
 Each blueprint is comprised of **nodes** and **connections**. Connections come in two types: <mark style={{color: "green"}}>**flow connections**</mark> (<mark style={{color: "green"}}>**green**</mark>) and **data connections** (**black**), while each node can have both flow and data inputs and outputs.
 
 To create a new node, simply drag the desired node from the palette (right) to the node editor (center). To create a connection, press the input/output and then drag it to another node's output/input. Here's a simple blueprint example: **when the Esc key is pressed, the main camera will shake.**
 
-<figure><img src="/images/image(2)(1)(1).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(2)(1)(1).jpg" alt="" /><figcaption></figcaption></figure>
 
 <mark style={{color: "green"}}>**Flow connections**</mark> determine the order in which the nodes are executed. In the example above, after "On Keystroke Pressed" is executed, "Shake Camera" will be executed next.
 
@@ -43,7 +43,7 @@ The blueprint can be disabled in the sidebar (left). When the blueprint is disab
 <div className="hint hint-info">
 You can determine if a flow is being executed or if data is being transmitted by checking if there's a ball rolling on the connection:
 
-![](</images/image(6)(4).png>)
+![](</images/image(6)(4).jpg>)
 </div>
 
 Let's take a look at some of the common nodes used in Warudo's blueprint system.

@@ -12,7 +12,7 @@ MediaPipe is a widely-used technology used in software such as [Webcam Motion Ca
 * Input Camera: Select the camera. **Currently, IP cameras (such as** [**DroidCam**](https://play.google.com/store/apps/details?id=com.dev47apps.droidcam\&hl=en\_US\&gl=US\&pli=1)**) are not supported.**
 * Calibrate: Calibrate the position of the hands. <mark style={{color: "orange"}}>**Calibration is recommended when using for the first time!**</mark>
 
-<figure><img src="/images/image(51).png" alt="" /><figcaption><p>During calibration, the hands should be in a relaxed posture, with fingers slightly bent if desired.</p></figcaption></figure>
+<figure><img src="/images/image(51).jpg" alt="" /><figcaption><p>During calibration, the hands should be in a relaxed posture, with fingers slightly bent if desired.</p></figcaption></figure>
 
 * Show Camera: Whether to show the camera's view.
 * Invert Hands: Whether to invert hands.
@@ -33,11 +33,11 @@ MediaPipe is a widely-used technology used in software such as [Webcam Motion Ca
 
 <div>
 
-<figure><img src="/images/image(3)(1)(2).png" alt="" /><figcaption><p>"Shoulder Rotation Correction" disabled</p></figcaption></figure>
+<figure><img src="/images/image(3)(1)(2).jpg" alt="" /><figcaption><p>"Shoulder Rotation Correction" disabled</p></figcaption></figure>
 
  
 
-<figure><img src="/images/image(20)(2)(1).png" alt="" /><figcaption><p>"Shoulder Rotation Correction" enabled</p></figcaption></figure>
+<figure><img src="/images/image(20)(2)(1).jpg" alt="" /><figcaption><p>"Shoulder Rotation Correction" enabled</p></figcaption></figure>
 
 </div>
 

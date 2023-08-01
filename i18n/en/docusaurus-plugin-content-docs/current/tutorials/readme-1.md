@@ -18,11 +18,11 @@ By default, Warudo will open the last opened scene (or the default scene if no s
 
 Click "🚀" at the bottom left -> "New Scene," enter the name for your scene, and click "OK" to create it.
 
-<figure><img src="/images/image(11).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(11).jpg" alt="" /><figcaption></figcaption></figure>
 
 Now your asset list should look like this:
 
-<figure><img src="/images/image(2)(3).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(2)(3).jpg" alt="" /><figcaption></figcaption></figure>
 
 ## Import Your Character
 
@@ -34,7 +34,7 @@ Warudo currently supports two model formats: `.vrm` and `.warudo`. The former is
 
 First, open the data folder:
 
-<figure><img src="/images/image(2).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(2).jpg" alt="" /><figcaption></figcaption></figure>
 
 Put your VRM file in the "Characters" subfolder:
 
@@ -42,7 +42,7 @@ Put your VRM file in the "Characters" subfolder:
 
 Without restarting Warudo, we return to the configuration window, select the character asset by clicking on "Character (Inactive)," and choose the desired VRM file to load from the "Source" drop-down menu.
 
-<figure><img src="/images/image(63).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(63).jpg" alt="" /><figcaption></figcaption></figure>
 
 You should now be able to see the model loaded into the scene!
 
@@ -76,15 +76,15 @@ Now you can make your model look like this:
 
 ...This doesn't look good! How can we restore the model to its original state? If you've been paying attention, you may have noticed that the values in the "Transform" section change as you drag the gizmos. For example, this is what mine looks like now:
 
-<figure><img src="/images/image(8).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(8).jpg" alt="" /><figcaption></figcaption></figure>
 
 To return to the initial state, just restore to the default values!
 
-<figure><img src="/images/image(1).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(1).jpg" alt="" /><figcaption></figcaption></figure>
 
 In addition to orbiting around the model, the camera can also be switched to a free-look mode, allowing you to fly around the scene. Select the camera asset and choose **"Free Look"** for the "Control Mode":
 
-<figure><img src="/images/image(66).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(66).jpg" alt="" /><figcaption></figcaption></figure>
 
 While <mark style={{color: "purple"}}>**holding down the right mouse button**</mark>, use the <mark style={{color: "purple"}}>**WASD**</mark> keys to move, the <mark style={{color: "purple"}}>**E**</mark> and <mark style={{color: "purple"}}>**Q**</mark> keys to move up and down, and hold down the left <mark style={{color: "purple"}}>**Shift**</mark> key to move faster. Use the <mark style={{color: "purple"}}>**middle mouse button**</mark> to pan the view.
 
@@ -148,11 +148,11 @@ As this is a tutorial, we will use RhyLive + RhyLive as an example, so you can f
 
 Select the character asset and click on "Motion Capture" -> "Setup Motion Capture":
 
-<figure><img src="/images/image(20).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(20).jpg" alt="" /><figcaption></figcaption></figure>
 
 Select "RhyLive" for the "Face Tracking Template." The options below will ask you which blendshape mapping you want to use. In most cases, the default automatic selection works best:
 
-<figure><img src="/images/image(61).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(61).jpg" alt="" /><figcaption></figcaption></figure>
 
 <div className="hint hint-success">
 <mark style={{color: "green"}}>**Tips:**</mark> What are blendshapes? A blendshape is a displacement of a number of vertices on the model mesh, like the following:
@@ -368,7 +368,7 @@ To avoid confusion, we will stick to referring blendshapes and expressions by th
 
 Similarly, choose "RhyLive" for the "Pose Tracking Template."
 
-<figure><img src="/images/image(67).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(67).jpg" alt="" /><figcaption></figcaption></figure>
 
 <div className="hint hint-info">
 If you enable "Use Keyboard" / "Use Touchpad," Warudo will procedurally generate animations of the model using the keyboard and mouse when your hands are not tracked:
@@ -378,15 +378,15 @@ If you enable "Use Keyboard" / "Use Touchpad," Warudo will procedurally generate
 
 After clicking "OK," you should see a success message:
 
-<figure><img src="/images/image(4).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(4).jpg" alt="" /><figcaption></figcaption></figure>
 
 The "RhyLive Receiver" should now appear in the asset list, which is used to receive motion capture data sent by the RhyLive App:
 
-<figure><img src="/images/image(59).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(59).jpg" alt="" /><figcaption></figcaption></figure>
 
 Two blueprints should also have been added to the blueprint list:
 
-<figure><img src="/images/image(68).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(68).jpg" alt="" /><figcaption></figcaption></figure>
 </div>
 
 <div className="hint hint-info">
@@ -395,12 +395,12 @@ Warudo's blueprints are a very powerful feature, but if you're just starting out
 
 To use RhyLive on an iOS device, open the app and tap on the menu icon in the top left corner to enter the settings. If your computer and phone are connected to the same WiFi network, enter your computer's IP in the "IP" field and turn on the "无线" (Wireless) switch. Alternatively, you can connect your device to your computer using a USB cable and turn on the "有线" (Wired) switch ([iTunes](https://www.apple.com/itunes/) required).
 
-![](</images/image(8)(2)(2).png>)
+![](</images/image(8)(2)(2).jpg>)
 
 <div className="hint hint-info">
 If you do not know your computer's IP, you can check on the configuration page of the "RhyLive Receiver".
 
-<img src="/images/image(26)(2).png" alt="" data-size="original" />
+<img src="/images/image(26)(2).jpg" alt="" data-size="original" />
 
 If multiple IPs are listed, you would need to try each one. Usually, the IP address assigned to your computer by your WiFi router starts with 192.168. For example, in the above picture, you can first try 192.168.1.2.
 </div>
@@ -427,25 +427,25 @@ Now that the upper body of the model is in motion, it's time to configure the fa
 
 Scroll down on the character's config page. Click on "Expressions" -> "Import VRM Expressions":
 
-<figure><img src="/images/image(3).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(3).jpg" alt="" /><figcaption></figcaption></figure>
 
 If everything goes well, you should see the VRM expressions have been imported:
 
-<figure><img src="/images/image(23).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(23).jpg" alt="" /><figcaption></figcaption></figure>
 
 You can expand and configure each expression in detail, such as whether to disable eye blink tracking when switching to that expression:
 
-<figure><img src="/images/image(29).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(29).jpg" alt="" /><figcaption></figcaption></figure>
 
 However, now that the expressions have been imported, how can we trigger them? Simply click on "Generate Key Binding Blueprint":
 
-<figure><img src="/images/image(69).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(69).jpg" alt="" /><figcaption></figcaption></figure>
 
-<figure><img src="/images/image(5).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(5).jpg" alt="" /><figcaption></figcaption></figure>
 
 You should notice that a new blueprint called "Expression Key Bindings" has been added to the blueprint list:
 
-<figure><img src="/images/image(13).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(13).jpg" alt="" /><figcaption></figcaption></figure>
 
 Press Alt+1, Alt+2, Alt+3... and so on to switch between expressions! Press Alt+Backspace to reset back to the natural expression.
 
@@ -455,19 +455,19 @@ Press Alt+1, Alt+2, Alt+3... and so on to switch between expressions! Press Alt+
 
 Finally, let's give our model a different pose, shall we? Scroll down to find "Animation" -> "Idle Animation":
 
-<figure><img src="/images/image(25).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(25).jpg" alt="" /><figcaption></figcaption></figure>
 
 Warudo comes with over **500** built-in idle animations (you can check them out [here](../misc/idle-animations.md))! Let's choose a cute one:
 
-<figure><img src="/images/image(19).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(19).jpg" alt="" /><figcaption></figcaption></figure>
 
 Then you have this!
 
-<figure><img src="/images/image(28)(1).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(28)(1).jpg" alt="" /><figcaption></figcaption></figure>
 
 The best part is that **Warudo's motion capture blends with the animation!** When you raise your hand for RhyLive to track, the model's hand blends into the tracked pose; when you lower your hand (and lose tracking), the model's hand blends into the idle animation pose, like the following:
 
-<figure><img src="/images/image(45).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(45).jpg" alt="" /><figcaption></figcaption></figure>
 
 ## Summary
 

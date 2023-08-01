@@ -10,19 +10,19 @@ iFacialMocap is actually very simple in its offerings and there are free alterna
 
 Open the iFacialMocap app, tap on the gear icon in the upper right corner to enter the settings interface. Tap on "Destination IP address" and enter your computer's IP address.
 
-<img src="/images/image(42).png" alt="" data-size="original" />
+<img src="/images/image(42).jpg" alt="" data-size="original" />
 
 <div className="hint hint-info">
 If you do not know your computer's IP, you can check on the configuration page of the "iFacialMocap Receiver".
 
-<img src="/images/image(21)(2)(1).png" alt="" data-size="original" />
+<img src="/images/image(21)(2)(1).jpg" alt="" data-size="original" />
 
 If multiple IPs are listed, you would need to try each one. Usually, the IP address assigned to your computer by your WiFi router starts with 192.168. For example, in the above picture, you can first try 192.168.1.2.
 </div>
 
 It's recommended to enable "Optimize for long-time streaming," which can help reduce device overheating from prolonged use.
 
-![](</images/image(2)(1)(4)(2).png>)
+![](</images/image(2)(1)(4)(2).jpg>)
 
 ## Properties
 
@@ -32,7 +32,7 @@ It's recommended to enable "Optimize for long-time streaming," which can help re
 * Head Movement Range: The range of movement for the head.
 * Head Vertical Movement: Whether or not to allow the head to move up and down.
 
-<figure><img src="/images/image(4)(3).png" alt="" /><figcaption><p>When enabled, the legs will naturally bend when the head moves down.</p></figcaption></figure>
+<figure><img src="/images/image(4)(3).jpg" alt="" /><figcaption><p>When enabled, the legs will naturally bend when the head moves down.</p></figcaption></figure>
 
 * Inverted Head Forward/Backward Movement: Whether or not to invert the forward-back movement of the head.
 * Head Rotation Range: The range of head rotation.

@@ -126,11 +126,11 @@ After
 
 <div>
 
-<figure><img src="/images/image/Warudo_2022-10-16-06-19-19_1024x1024.png" alt="" /><figcaption><p>Bend goal disabled</p></figcaption></figure>
+<figure><img src="/images/image/Warudo_2022-10-16-06-19-19_1024x1024.jpg" alt="" /><figcaption><p>Bend goal disabled</p></figcaption></figure>
 
  
 
-<figure><img src="/images/image/Warudo_2022-10-16-06-19-11_1024x1024.png" alt="" /><figcaption><p>Bend goal enabled</p></figcaption></figure>
+<figure><img src="/images/image/Warudo_2022-10-16-06-19-11_1024x1024.jpg" alt="" /><figcaption><p>Bend goal enabled</p></figcaption></figure>
 
 </div>
 
@@ -164,13 +164,13 @@ Try setting the additional bone offsets. The rotation angle of the two shoulder 
 
 To do this, create a new blueprint (or open an existing one) and setup like below:
 
-<img src="/images/image(3)(4).png" alt="" data-size="original" />
+<img src="/images/image(3)(4).jpg" alt="" data-size="original" />
 
 ### I want to set up a shortcut key for switching the idle animation.
 
 To do this, create a new blueprint (or open an existing one) and setup like below:
 
-![](</images/image(2)(3)(2).png>)
+![](</images/image(2)(3)(2).jpg>)
 
 ### I've set up my character's idle animation, but I want to make a small adjustment to the posture. / I've set up my character's idle animation, but I want to fix their hands so they don't sway with the body. / ...
 

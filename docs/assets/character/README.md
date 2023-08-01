@@ -128,11 +128,11 @@ Warudo 原生支持导入 [VRM 格式](https://vrm.dev/en/univrm/)的角色模�
 
 <div>
 
-<figure><img src="/images/image/Warudo_2022-10-16-06-19-19_1024x1024.png" alt="" /><figcaption><p>不设置肘部目标</p></figcaption></figure>
+<figure><img src="/images/image/Warudo_2022-10-16-06-19-19_1024x1024.jpg" alt="" /><figcaption><p>不设置肘部目标</p></figcaption></figure>
 
  
 
-<figure><img src="/images/image/Warudo_2022-10-16-06-19-11_1024x1024.png" alt="" /><figcaption><p>设置肘部目标</p></figcaption></figure>
+<figure><img src="/images/image/Warudo_2022-10-16-06-19-11_1024x1024.jpg" alt="" /><figcaption><p>设置肘部目标</p></figcaption></figure>
 
 </div>
 

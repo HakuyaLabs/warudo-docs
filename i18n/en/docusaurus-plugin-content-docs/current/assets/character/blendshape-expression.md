@@ -79,24 +79,24 @@ In the expression list, expand the configuration for that expression, click the 
 
 Open the "Expression Key Bindings" blueprint and locate the "On Keystroke Pressed" node. Then, modify it as needed. For example, in the original blueprint, pressing Alt+1 will activate the `Joy` expression:
 
-![](</images/image(43).png>)
+![](</images/image(43).jpg>)
 
 The following changes the keyboard shortcut to Ctrl+Shift+T.
 
-![](</images/image(5)(4).png>)
+![](</images/image(5)(4).jpg>)
 
 ### I want to create a new expression from scratch.
 
 In the expressions list, click the + button at the bottom right to add a new item. In the "Target BlendShapes", add the blendshapes that form the desired expression. For example, the following expression will activate the `笑い` BlendShape on the model when applied:
 
-![](</images/image(7)(4).png>)
+![](</images/image(7)(4).jpg>)
 
 Open the "Expression Key Bindings" blueprint (or create a new blueprint). Drag out the "On Keystroke Pressed" and "Toggle Character Expression" nodes from the sidebar. Set the keyboard shortcut on the "On Keystroke Pressed" node, and select the character and the newly created expression on the "Toggle Character Expression" node. Connect the output and input of the two nodes as shown below.
 
-![](</images/image(1)(1)(4).png>)
+![](</images/image(1)(1)(4).jpg>)
 
 ### Can I only activate an expression for a certain period of time and then automatically switch back to the previous expression after a while?
 
 To do this, enable "Is Transient" on the "Toggle BlendShape Expression" node in the blueprint to "Yes." The duration of the expression will be determined by "Exit Delay" of each BlendShape in the expression.
 
-![](</images/image(11)(1).png>)
+![](</images/image(11)(1).jpg>)
