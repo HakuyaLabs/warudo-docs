@@ -18,12 +18,12 @@ iFacialMocap
 
 To use RhyLive on an iOS device, open the app and tap on the menu icon in the top left corner to enter the settings. If your computer and phone are connected to the same WiFi network, enter your computer's IP in the "IP" field and turn on the "无线" (Wireless) switch. Alternatively, you can connect your device to your computer using a USB cable and turn on the "有线" (Wired) switch ([iTunes](https://www.apple.com/itunes/) required).
 
-![](</images/image(8)(2)(2).png>)
+![](</images/image(8)(2)(2).jpg>)
 
 <div className="hint hint-info">
 If you do not know your computer's IP, you can check on the configuration page of the "RhyLive Receiver".
 
-<img src="/images/image(26)(2).png" alt="" data-size="original" />
+<img src="/images/image(26)(2).jpg" alt="" data-size="original" />
 
 If multiple IPs are listed, you would need to try each one. Usually, the IP address assigned to your computer by your WiFi router starts with 192.168. For example, in the above picture, you can first try 192.168.1.2.
 </div>
@@ -34,7 +34,7 @@ If you use the "Wired" option, you must open the RhyLive app, connect your iPhon
 
 It is recommended to turn off "锁定弯腰" (Lock body bending) and turn on "隐藏模型" (Hide model). The former increases the range of motion of the model, while the latter helps reduce device overheating from prolonged use.
 
-![](</images/image(14)(1)(2).png>)
+![](</images/image(14)(1)(2).jpg>)
 
 ## Properties
 

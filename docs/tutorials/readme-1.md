@@ -18,11 +18,11 @@ Warudo 会默认打开最后一次打开的场景（没有场景的话会打开�
 
 点击左下角「🚀」->「创建新场景」，输入场景名称，点「确定」就可以创建啦。
 
-<figure><img src="/images/image(15).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(15).jpg" alt="" /><figcaption></figcaption></figure>
 
 创建完毕后，资源列表应该是这样的：
 
-<figure><img src="/images/image(22).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(22).jpg" alt="" /><figcaption></figcaption></figure>
 
 ## 加载角色
 
@@ -34,7 +34,7 @@ Warudo 目前支持两种模型格式：`.vrm` 以及 `.warudo`。前者是使�
 
 首先，我们打开数据文件夹：
 
-<figure><img src="/images/image(50).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(50).jpg" alt="" /><figcaption></figcaption></figure>
 
 把 VRM 文件放到 Characters 文件夹里：
 
@@ -42,7 +42,7 @@ Warudo 目前支持两种模型格式：`.vrm` 以及 `.warudo`。前者是使�
 
 无需重启 Warudo，回到我们的配置界面，点击「角色（未激活）」选中角色资源，在「源」的下拉选单选择想加载的 VRM 即可。
 
-<figure><img src="/images/image(38).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(38).jpg" alt="" /><figcaption></figcaption></figure>
 
 应该就能见到模型加载到场景中了！
 
@@ -76,21 +76,21 @@ Warudo 目前支持两种模型格式：`.vrm` 以及 `.warudo`。前者是使�
 
 ……看起来不大妙！怎么复原呢？如果你有留意的话，你会发现配置界面**「变换」**里面的值会跟着你刚才的操作而改变。比如我现在的就是这个样子：
 
-<figure><img src="/images/image(30).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(30).jpg" alt="" /><figcaption></figcaption></figure>
 
 那么要回到初始状态，设置成默认值就好了！
 
-<figure><img src="/images/image(37).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(37).jpg" alt="" /><figcaption></figcaption></figure>
 
 摄像机除了可以绕着模型转以外，还可以切换成**「自由观察」**模式，直接在场景中穿梭飞行。选中摄像机资源，然后「控制模式」选择「自由观察」：
 
-<figure><img src="/images/image(41).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(41).jpg" alt="" /><figcaption></figcaption></figure>
 
 **鼠标右键**的状态下 **WASD** 键移动，**E** 键和 **Q** 键上升和下降，按住**左 Shift** 可以加速；**鼠标中键**可以平移视角。
 
 习惯了两种摄像机操作模式后，我们回到「环绕角色」模式，然后点击**「重置摄像机变换」**让摄像机回到默认位置吧。
 
-<figure><img src="/images/image(44).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(44).jpg" alt="" /><figcaption></figcaption></figure>
 
 ## 配置动作捕捉
 
@@ -150,11 +150,11 @@ Warudo 目前支持两种模型格式：`.vrm` 以及 `.warudo`。前者是使�
 
 选中角色资源，点击「动作捕捉」->「配置动作捕捉」：
 
-<figure><img src="/images/image(39).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(39).jpg" alt="" /><figcaption></figcaption></figure>
 
 「面部追踪模板」选择 RhyLive。下面会有选项询问想要使用哪种 BlendShape 映射；绝大多数情况下使用默认自动选择即可。
 
-<figure><img src="/images/image(23).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(23).jpg" alt="" /><figcaption></figcaption></figure>
 
 <div className="hint hint-success">
 <mark style={{color: "green"}}>**科普小时间！**</mark>BlendShape 是什么？一个 BlendShape 是模型网格上若干个顶点的位移，像下面这样：
@@ -370,7 +370,7 @@ BlendShape 映射的意思就是「面捕参数应该怎么应用到模型的 Bl
 
 同样，「姿态追踪模板」选择 RhyLive。
 
-<figure><img src="/images/image(29).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(29).jpg" alt="" /><figcaption></figcaption></figure>
 
 <div className="hint hint-info">
 开启「使用键盘」和「使用触控板」的话，在不捕捉到手部的时候，会实时生成模型使用键盘和鼠标的动画：
@@ -380,15 +380,15 @@ BlendShape 映射的意思就是「面捕参数应该怎么应用到模型的 Bl
 
 点击确定后，应该可以看到成功信息：
 
-<figure><img src="/images/image(25).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(25).jpg" alt="" /><figcaption></figcaption></figure>
 
 资源列表中多出来了「RhyLive 接收器」，用来接收 RhyLive App 发送的动捕数据：
 
-<figure><img src="/images/image(4)(4).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(4)(4).jpg" alt="" /><figcaption></figcaption></figure>
 
 蓝图列表中也多出来了两个蓝图：
 
-<figure><img src="/images/image(6)(3).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(6)(3).jpg" alt="" /><figcaption></figcaption></figure>
 </div>
 
 <div className="hint hint-info">
@@ -397,12 +397,12 @@ Warudo 的蓝图是非常强大的功能，不过，刚上手 Warudo 的话，�
 
 iOS 设备上打开 RhyLive，左上角点击菜单图标进入设置界面。电脑和手机用的是同一个 WiFi 的话，就在 「IP」处输入电脑 IP，然后开启「无线」开关；或者也可以把设备用 USB 连上电脑，然后开启「有线」开关（需要安装 [iTunes](https://www.apple.com/itunes/)）。
 
-![](</images/image(8).png>)
+![](</images/image(8).jpg>)
 
 <div className="hint hint-info">
 如果不知道电脑的 IP，可以在「RhyLive 接收器」的配置页面查看：
 
-<img src="/images/image(26).png" alt="" data-size="original" />
+<img src="/images/image(26).jpg" alt="" data-size="original" />
 
 如果列出多个 IP，则需要一个一个尝试。通常来说，你的 WiFi 路由器分配给你电脑的 IP 是以 192.168. 开头的，所以以上图为例，可以先尝试 192.168.1.2。
 </div>
@@ -429,25 +429,25 @@ iOS 设备上打开 RhyLive，左上角点击菜单图标进入设置界面。�
 
 在角色资源页往下滚，就可以见到表情相关的配置。点击「导入 VRM 表情」：
 
-<figure><img src="/images/image(27).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(27).jpg" alt="" /><figcaption></figcaption></figure>
 
 没有问题的话，就能看到表情导入成功：
 
-<figure><img src="/images/image(17).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(17).jpg" alt="" /><figcaption></figcaption></figure>
 
 你可以展开并且详细配置每个表情，比如切换到该表情时，是否应该禁用眨眼追踪：
 
-<figure><img src="/images/image(7).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(7).jpg" alt="" /><figcaption></figcaption></figure>
 
 不过，表情是导入进来了，我们要怎么触发它们呢？点击「生成按键绑定蓝图」就好啦：
 
-<figure><img src="/images/image(31).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(31).jpg" alt="" /><figcaption></figcaption></figure>
 
-<figure><img src="/images/image(24).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(24).jpg" alt="" /><figcaption></figcaption></figure>
 
 注意到蓝图列表中多出来一个叫「表情按键绑定」的蓝图：
 
-<figure><img src="/images/image(1)(4).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(1)(4).jpg" alt="" /><figcaption></figcaption></figure>
 
 按 Alt+1、Alt+2、Alt+3…… 如此类推，就可以切换表情啦！按下 Alt+Backspace 即可重置表情。
 
@@ -457,19 +457,19 @@ iOS 设备上打开 RhyLive，左上角点击菜单图标进入设置界面。�
 
 最后，我们给模型换个姿势吧。往下滚可以看到「待机动画」：
 
-<figure><img src="/images/image(35).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(35).jpg" alt="" /><figcaption></figcaption></figure>
 
 Warudo 内置超过 500 个待机动画（可以到[这里](../misc/idle-animations.md)查看），我们选择一个猫猫手吧：
 
-<figure><img src="/images/image(34).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(34).jpg" alt="" /><figcaption></figcaption></figure>
 
 然后就是这样的效果啦！
 
-<figure><img src="/images/image(28).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(28).jpg" alt="" /><figcaption></figcaption></figure>
 
 最棒的是，动捕可以如常运作哦！举起手让 RhyLive 捕捉到时，就会淡入到捕捉到的姿势；放下手时，就会淡出到待机动画的姿势，像下面这样：
 
-<figure><img src="/images/image(45).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(45).jpg" alt="" /><figcaption></figcaption></figure>
 
 ## 小结
 

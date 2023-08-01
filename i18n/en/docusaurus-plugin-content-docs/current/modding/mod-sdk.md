@@ -52,14 +52,14 @@ Return to Unity and wait for the project to reload; make sure there are no error
 <div className="hint hint-warning">
 If you encounter an error with the message `An error occurred while resolving packages / Error adding package` and clicking on it reveals a message similar to `No 'git' executable was found. Please install Git on your system then restart Unity and Unity Hub`, it means that Git is not installed on your system.
 
-![](</images/image(8)(1)(1)(1).png>)\
+![](</images/image(8)(1)(1)(1).jpg>)\
 \
 To resolve this issue, you need to download Git from [https://git-scm.com/download](https://git-scm.com/download) and then restart both Unity and Unity Hub.
 </div>
 
 Confirm that the "Api Compatibility Level" in "File -> Build Settings... -> Player Settings... -> Other Settings" is set to .NET Framework.
 
-<figure><img src="/images/image(40).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(40).jpg" alt="" /><figcaption></figcaption></figure>
 
 Download the SDK and import it into your Unity project, either by creating a new project or using an existing one.
 

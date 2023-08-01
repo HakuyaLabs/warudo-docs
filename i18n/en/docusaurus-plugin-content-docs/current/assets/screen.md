@@ -4,7 +4,7 @@ Capture your desktop or a window and display it in the scene just like OBS. You 
 
 ![Curved screens!](https://user-images.githubusercontent.com/3406505/191217373-999ec1ec-e086-4e55-b6b6-48575b09d02f.png)
 
-<figure><img src="/images/image(2)(1)(4).png" alt="" /><figcaption><p>Live chat in 3D!</p></figcaption></figure>
+<figure><img src="/images/image(2)(1)(4).jpg" alt="" /><figcaption><p>Live chat in 3D!</p></figcaption></figure>
 
 ## Properties
 

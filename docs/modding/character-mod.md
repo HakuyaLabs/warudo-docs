@@ -27,7 +27,7 @@ Warudo 原生支持的组件：
 
 1. 如果模型是外部导入的（例如 FBX 模型），需要确认导入设置的 R/W Enabled 为勾选状态。
 
-![](</images/image(49).png>)
+![](</images/image(49).jpg>)
 
 2\. 模型 GameObject 上必须有 [Animator](https://docs.unity3d.com/ScriptReference/Animator.html) 组件。
 
@@ -35,7 +35,7 @@ Warudo 原生支持的组件：
 
 放置角色在场景里，确保选中了 GameObject，然后选择「Warudo」->「Setup Character...」->「Setup selected GameObject as character mod」。
 
-<img src="/images/image(47).png" alt="" data-size="original" />
+<img src="/images/image(47).jpg" alt="" data-size="original" />
 
 等待片刻后，即可看到名为 **Character** 的 Prefab 出现在 Mod 文件夹里：
 

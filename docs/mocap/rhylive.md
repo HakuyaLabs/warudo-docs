@@ -23,12 +23,12 @@ iFacialMocap
 
 iOS 设备上打开 RhyLive，左上角点击菜单图标进入设置界面。电脑和手机用的是同一个 WiFi 的话，就在 「IP」处输入电脑 IP，然后开启「无线」开关；或者也可以把设备用 USB 连上电脑，然后开启「有线」开关（需要安装 [iTunes](https://www.apple.com/itunes/)）。
 
-![](</images/image(8).png>)
+![](</images/image(8).jpg>)
 
 <div className="hint hint-info">
 如果不知道电脑的 IP，可以在「RhyLive 接收器」的配置页面查看：
 
-<img src="/images/image(26).png" alt="" data-size="original" />
+<img src="/images/image(26).jpg" alt="" data-size="original" />
 
 如果列出多个 IP，则需要一个一个尝试。通常来说，你的 WiFi 路由器分配给你电脑的 IP 是以 192.168. 开头的，所以以上图为例，可以先尝试 192.168.1.2。
 </div>
@@ -39,7 +39,7 @@ iOS 设备上打开 RhyLive，左上角点击菜单图标进入设置界面。�
 
 建议关闭「锁定弯腰」并开启「隐藏模型」。前者可以让模型的可动范围更广，后者可以有助降低长时间使用导致的设备发热。
 
-![](</images/image(14).png>)
+![](</images/image(14).jpg>)
 
 ## 属性
 

@@ -23,7 +23,7 @@ Since Warudo allows you to package C# scripts into your mod, you can add any thi
 
 1. If you have an imported model (such as a FBX model), make sure "R/W Enabled" is checked in the import settings.
 
-![](</images/image(49).png>)
+![](</images/image(49).jpg>)
 
 2\. You must put an [Animator](https://docs.unity3d.com/ScriptReference/Animator.html) on your character GameObject. If you imported a FBX or VRM, it should already have it.
 
@@ -31,7 +31,7 @@ Since Warudo allows you to package C# scripts into your mod, you can add any thi
 
 Place your character in the scene and select it. Select "Warudo" -> "Setup Character..." -> "Setup selected GameObject as character mod."
 
-<img src="/images/image(48).png" alt="" data-size="original" />
+<img src="/images/image(48).jpg" alt="" data-size="original" />
 
 Wait for a little bit, and you should see a prefab named **"Character"** is generated in the mod folder:
 

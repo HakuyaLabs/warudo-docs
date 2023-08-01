@@ -12,19 +12,19 @@ sidebar_position: 20
 
 点击配置窗口左侧的蓝图按钮即可进入蓝图页。如果你刚刚创建了一个场景，那么场景内是没有蓝图的。
 
-<figure><img src="/images/image(1)(1)(1)(1).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(1)(1)(1)(1).jpg" alt="" /><figcaption></figcaption></figure>
 
 点击左下角的 + 号即可创建蓝图：
 
-<figure><img src="/images/image(2)(1)(2)(1).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(2)(1)(2)(1).jpg" alt="" /><figcaption></figcaption></figure>
 
-<figure><img src="/images/image(5)(1)(1)(1)(1).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(5)(1)(1)(1)(1).jpg" alt="" /><figcaption></figcaption></figure>
 
 每张蓝图由**节点**以及**连接**组成。连接分为两种：<mark style={{color: "green"}}>**流程连接**</mark>（<mark style={{color: "green"}}>绿色</mark>）以及**数据连接**（黑色），而每个节点可以有流程 / 数据的入口以及流程 / 数据的出口。
 
 要创建新的节点，在控制板拖拽想要的节点到中间即可。创建连接则是按下入口 / 出口，然后拖拽到别的节点的出口 / 入口上。以下是一个简单的蓝图例子：**按下 Esc 时，主摄像机会晃动一下。**
 
-<figure><img src="/images/image(4)(1)(1).png" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(4)(1)(1).jpg" alt="" /><figcaption></figcaption></figure>
 
 <mark style={{color: "green"}}>**流程连接**</mark>决定节点执行的先后顺序。以上图为例，在「当按下键盘按键时」被执行后，「晃动摄像机」便会被执行。
 
@@ -47,7 +47,7 @@ sidebar_position: 20
 <div className="hint hint-info">
 如何判断流程是否被执行，或数据是否在传输？可以通过连接上是否有小球在滚动来判断。
 
-<img src="/images/image(6)(1)(1)(1).png" alt="" data-size="original" />
+<img src="/images/image(6)(1)(1)(1).jpg" alt="" data-size="original" />
 </div>
 
 接下来，让我们来看看蓝图有什么常用节点吧。
