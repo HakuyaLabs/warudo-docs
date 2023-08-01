@@ -1,5 +1,6 @@
 const { Client } = require('node-scp')
 const fs = require('fs')
+const path = require('path')
 require('dotenv').config()
 
 const config = {
@@ -9,6 +10,45 @@ const config = {
   password: process.env.DEPLOY_SSH_PASSWORD,
   localDir: './build',
   remoteDir: '/data/wwwroot/docs.warudo.app'
+}
+
+function joinRemote(client, ...args) {
+  if (client.remotePathSep === path.win32.sep) {
+    return path.win32.join(...args)
+  }
+  return path.posix.join(...args)
+}
+
+async function uploadDir(src, dest) {
+  try {
+    const isExist = await this.exists(dest)
+
+    if (!isExist) {
+      console.log(`mkdir: ${dest}`);
+      await this.mkdir(dest)
+    }
+
+    const dirEntries = fs.readdirSync(src, {
+      encoding: 'utf8',
+      withFileTypes: true,
+    })
+
+    for (const e of dirEntries) {
+      if (e.isDirectory()) {
+        const newSrc = path.join(src, e.name)
+        const newDst = joinRemote(this, dest, e.name)
+        console.log(`upload dir: ${newDst}`);
+        await this.uploadDir(newSrc, newDst)
+      } else if (e.isFile()) {
+        const newSrc = path.join(src, e.name)
+        const newDst = joinRemote(this, dest, e.name)
+        console.log(`upload file: ${newDst}`);
+        await this.uploadFile(newSrc, newDst)
+      }
+    }
+  } catch (error) {
+    throw error
+  }
 }
 
 async function submit() {
@@ -27,6 +67,7 @@ async function submit() {
   });
   console.log('Uploading files...')
   await scpClient.emptyDir(config.remoteDir)
+  scpClient.uploadDir = uploadDir;
   await scpClient.uploadDir(config.localDir, config.remoteDir);
   await scpClient.close();
 }catch(e) {
