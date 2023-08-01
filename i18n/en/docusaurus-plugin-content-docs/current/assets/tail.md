@@ -2,11 +2,11 @@
 
 Make your character's tail wag!
 
-{% embed url="https://user-images.githubusercontent.com/3406505/180988526-bd40ac22-fb96-49c4-8546-863e33b4f250.mp4" %}
+<div className="video-box"><video controls src="https://user-images.githubusercontent.com/3406505/180988526-bd40ac22-fb96-49c4-8546-863e33b4f250.mp4" /></div>
 
 You can also apply this asset to any hierarchical bones, such as the ears on this model!
 
-{% embed url="https://user-images.githubusercontent.com/3406505/180989631-2e13e06b-fd7e-4997-9afe-da93d8e43361.mp4" %}
+<div className="video-box"><video controls src="https://user-images.githubusercontent.com/3406505/180989631-2e13e06b-fd7e-4997-9afe-da93d8e43361.mp4" /></div>
 
 ### Properties
 

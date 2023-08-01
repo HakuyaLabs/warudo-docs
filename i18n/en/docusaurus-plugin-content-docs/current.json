@@ -34,5 +34,9 @@
   "sidebar.tutorialSidebar.category.tutorials": {
     "message": "tutorials",
     "description": "The label for category tutorials in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.教程": {
+    "message": "教程",
+    "description": "The label for category 教程 in sidebar tutorialSidebar"
   }
 }

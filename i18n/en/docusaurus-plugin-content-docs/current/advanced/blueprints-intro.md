@@ -109,7 +109,7 @@ The `Set Character Tracking BlendShapes` node is responsible for setting the val
 
 In fact, if your model is already set up to work with ARKit blendshapes (often referred to as "Perfect Sync"), then the blueprint shown above will work as is:
 
-{% embed url="https://user-images.githubusercontent.com/3406505/180726572-9ddcf9c5-0473-4cdc-b152-ef9ba93853eb.mp4" %}
+<div className="video-box"><video controls src="https://user-images.githubusercontent.com/3406505/180726572-9ddcf9c5-0473-4cdc-b152-ef9ba93853eb.mp4" /></div>
 
 Congratulations! You have successfully created a VTuber software in Warudo—this time for real, not just on paper! 🎉
 
@@ -133,7 +133,7 @@ The above blueprint means "on each frame, get the blendshapes from RhyLive, set 
 
 Let's see it in action:
 
-{% embed url="https://user-images.githubusercontent.com/3406505/180735646-3f4a6324-938f-404c-9500-1f47481ab887.mp4" %}
+<div className="video-box"><video controls src="https://user-images.githubusercontent.com/3406505/180735646-3f4a6324-938f-404c-9500-1f47481ab887.mp4" /></div>
 
 Nice! But it looks like I have difficulty closing my eyes. Hmm. Let's try to fix it:
 
@@ -143,7 +143,7 @@ The `Float Multiplication` node multiplies two values, A and B, and outputs the 
 
 Basically, the `eyeBlinkLeft` and `eyeBlinkRight` of the motion capture data are multiplied by a factor of 2, but the value is restricted to not go beyond 1. The effect is shown as follows:
 
-{% embed url="https://user-images.githubusercontent.com/3406505/180757257-c815210a-74eb-4adb-8bc8-d867bb572e44.mp4" %}
+<div className="video-box"><video controls src="https://user-images.githubusercontent.com/3406505/180757257-c815210a-74eb-4adb-8bc8-d867bb572e44.mp4" /></div>
 
 Let's make this more interesting. Let's say I would like to make my model smile in `^^-eyes` when I puff up my face. We just simply add two nodes:
 
@@ -153,7 +153,7 @@ Let's make this more interesting. Let's say I would like to make my model smile 
 
 Let's try it out!
 
-{% embed url="https://user-images.githubusercontent.com/3406505/180759207-28d1e5b5-c575-4f42-b127-afb20a2c3608.mp4" %}
+<div className="video-box"><video controls src="https://user-images.githubusercontent.com/3406505/180759207-28d1e5b5-c575-4f42-b127-afb20a2c3608.mp4" /></div>
 
 Huh, the eyelids look weird? Well, this is exactly the problem we mentioned earlier: the `Smile` blendshape must not be used together with the eyes-closed blendshapes! But in Warudo, we can just do this:
 
@@ -161,7 +161,7 @@ Huh, the eyelids look weird? Well, this is exactly the problem we mentioned earl
 
 No more weird eyelids!
 
-{% embed url="https://user-images.githubusercontent.com/3406505/180760044-f899f4df-7064-441d-bb6f-b1305899a6a4.mp4" %}
+<div className="video-box"><video controls src="https://user-images.githubusercontent.com/3406505/180760044-f899f4df-7064-441d-bb6f-b1305899a6a4.mp4" /></div>
 
 Let's revisit our concerns earlier:
 

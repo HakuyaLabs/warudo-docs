@@ -5,13 +5,13 @@ ARKit-based face and upper body tracking. Requires a [Face ID](https://support.a
 <div className="hint hint-info">
 RhyLive and iFacialMocap have similar accuracy when it comes to face tracking, but iFacialMocap is more flexible because it can track head movements, which allows the model to move more naturally. See the following comparison:
 
-{% embed url="https://user-images.githubusercontent.com/3406505/209767938-26ae5946-0fea-48f2-96c8-4d37a76eb4f4.mp4" %}
+<div className="video-box"><video controls src="https://user-images.githubusercontent.com/3406505/209767938-26ae5946-0fea-48f2-96c8-4d37a76eb4f4.mp4" />
 RhyLive
-{% endembed %}
+</div>
 
-{% embed url="https://user-images.githubusercontent.com/3406505/209767940-fd308011-2343-4f41-a33b-9da21136ab6b.mp4" %}
+<div className="video-box"><video controls src="https://user-images.githubusercontent.com/3406505/209767940-fd308011-2343-4f41-a33b-9da21136ab6b.mp4" />
 iFacialMocap
-{% endembed %}
+</div>
 </div>
 
 ## Setup

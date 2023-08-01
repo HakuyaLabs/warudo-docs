@@ -17,7 +17,7 @@ sidebar_label: 内容介绍
 
 * [动作捕捉方案一览](mocap/overview.md)
 * [面部追踪](mocap/face-tracking.md)
-* [姿态追踪](/docs/tutorials/mocap/body-tracking.md)
+* [姿态追踪](mocap/body-tracking.md)
 * [iFacialMocap](mocap/ifacialmocap.md)
 * [MediaPipe](mocap/mediapipe.md)
 * [OpenSeeFace（Beta）](mocap/openseeface.md)

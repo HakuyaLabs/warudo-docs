@@ -1,3 +1,8 @@
+---
+sidebar_position: 80
+sidebar_label: VMC
+---
+
 # VMC
 
 由外部程序发送 [VirtualMotionCapture 数据](https://protocol.vmc.info/english)到 Warudo。

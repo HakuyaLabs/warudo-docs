@@ -1,3 +1,8 @@
+---
+sidebar_position: 50
+sidebar_label: MediaPipe
+---
+
 # MediaPipe（Beta）
 
 基于摄像头的上半身动捕方案。优点是可动范围较大，手部能够前后移动；反应更为及时，可以捕捉到快速甩手、挥拳等。缺点是初次配置和校正需要一点点时间，并且稳定性相对 [RhyLive ](rhylive.md)略有不足。

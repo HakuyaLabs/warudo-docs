@@ -2,11 +2,11 @@
 
 让角色的尾巴晃动起来！
 
-{% embed url="https://user-images.githubusercontent.com/3406505/180988526-bd40ac22-fb96-49c4-8546-863e33b4f250.mp4" %}
+<div className="video-box"><video controls src="https://user-images.githubusercontent.com/3406505/180988526-bd40ac22-fb96-49c4-8546-863e33b4f250.mp4" /></div>
 
 也可以应用在任何有层级的骨骼上，比如这个模型的耳朵。~~你的下一条尾巴，又何必是尾巴~~
 
-{% embed url="https://user-images.githubusercontent.com/3406505/180989631-2e13e06b-fd7e-4997-9afe-da93d8e43361.mp4" %}
+<div className="video-box"><video controls src="https://user-images.githubusercontent.com/3406505/180989631-2e13e06b-fd7e-4997-9afe-da93d8e43361.mp4" /></div>
 
 ## 属性
 

@@ -35,9 +35,9 @@ Warudo 原生支持导入 [VRM 格式](https://vrm.dev/en/univrm/)的角色模�
 
 部分姿态追踪模板（例：MediaPipe, RhyLive）**支持将动捕数据与待机动画融合**，实现如下效果：
 
-{% embed url="https://user-images.githubusercontent.com/3406505/180953465-7b91a347-452d-4c03-b860-45dc58ec0392.mp4" %}
+<div className="video-box"><video controls src="https://user-images.githubusercontent.com/3406505/180953465-7b91a347-452d-4c03-b860-45dc58ec0392.mp4" />
 这里上半身的弯腰实际是待机动画，而头部和双手的动作则为动作捕捉。当丢失双手动捕时，双手会平滑地切回到待机动画下的状态。
-{% endembed %}
+</div>
 
 * 叠加动画：在待机动画之上叠加的动画。每一层动画可以单独设置遮罩和权重，实现身体的不同部位播放不同的动画。在列表中越靠后（下）的动画层，优先级越高。
   * 列表元素：
@@ -51,9 +51,9 @@ Warudo 原生支持导入 [VRM 格式](https://vrm.dev/en/univrm/)的角色模�
     * 遮罩下半身：快捷设置遮罩为下半身的身体部分。
     * 附加动画：附加动画（additive animation）是在现有动画的基础上进行混合，而不会取代现有动画。Warudo 内置的角色动画均为非附加动画。如果你确定选择的动画为附加动画，请设置为「是」。
 
-{% embed url="https://www.bilibili.com/video/BV1Zt4y1c7Re" %}
+<div className="video-box"><video controls src="https://www.bilibili.com/video/BV1Zt4y1c7Re" />
 叠加动画的功能演示。链接：[https://www.bilibili.com/video/BV1Zt4y1c7Re](https://www.bilibili.com/video/BV1Zt4y1c7Re)
-{% endembed %}
+</div>
 
 <div className="hint hint-success">
 善用叠加动画和以下的 IK 功能，可以让角色摆出几乎任何想要的姿势！
@@ -108,13 +108,13 @@ Warudo 原生支持导入 [VRM 格式](https://vrm.dev/en/univrm/)的角色模�
 <div className="hint hint-success">
 创建临时锚点可以方便地将模型的双手「固定」在空间的理想位置，防止出现因为动捕而双手左右飘的情况，对于一些特定姿势非常实用。
 
-{% embed url="https://user-images.githubusercontent.com/3406505/196039288-aac4e485-c9f9-4686-948e-75f783586b25.mp4" %}
+<div className="video-box"><video controls src="https://user-images.githubusercontent.com/3406505/196039288-aac4e485-c9f9-4686-948e-75f783586b25.mp4" />
 创建锚点前
-{% endembed %}
+</div>
 
-{% embed url="https://user-images.githubusercontent.com/3406505/196039290-13b91459-110d-4706-9c77-3516b1c3b175.mp4" %}
+<div className="video-box"><video controls src="https://user-images.githubusercontent.com/3406505/196039290-13b91459-110d-4706-9c77-3516b1c3b175.mp4" />
 创建锚点后
-{% endembed %}
+</div>
 </div>
 
 * 位置权重：为 0 时，身体部位保留在原本位置；为 1 时，此身体部位将被全力「拉向」目标。

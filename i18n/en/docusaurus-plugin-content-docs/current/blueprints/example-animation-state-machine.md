@@ -2,9 +2,9 @@
 
 With Warudo's [extensive character configuration options](../assets/character/), you can pose the model in almost any way you want. However, as a VTuber, you can't just adjust the options on-the-fly during a livestream! Here is a blueprint example that uses the character's [body IK](../assets/character/#body-ik) to allow the model to switch freely between four states: "default", "holding a rose", "victory sign", and "holding a microphone", while achieving a smooth transition. The best part is that these animations are procedurally generated in realtime, without the need to create animations in a 3D tool like Blender.
 
-{% embed url="https://user-images.githubusercontent.com/3406505/196837021-1697da39-8988-4a12-9277-78040e4ef4a9.mp4" %}
+<div className="video-box"><video controls src="https://user-images.githubusercontent.com/3406505/196837021-1697da39-8988-4a12-9277-78040e4ef4a9.mp4" />
 The movements of the hands in the video (except for the initial movement of the left hand through motion capture) are all achieved through IK.
-{% endembed %}
+</div>
 
 ### Preparations
 

@@ -1,3 +1,8 @@
+---
+sidebar_position: 70
+sidebar_label: RhyLive
+---
+
 # RhyLive
 
 由[域动数字 RhythMo](https://rhythmo.cn/) 研发的基于苹果 ARKit 的面捕 +上半身捕捉方案，需要一台支持[面容 ID ](https://support.apple.com/zh-cn/HT208109)的 iOS 设备，并下载 [RhyLive ](https://apps.apple.com/us/app/rhylive/)App（免费）。可以捕捉 52 个 ARKit BlendShape，头部的旋转及上半身的姿态。
@@ -5,13 +10,13 @@
 <div className="hint hint-info">
 RhyLive 和 iFacialMocap 的面捕精度仅相差在 iFacialMocap 可以捕捉头部的移动，在可动性更高之余，可以带动模型的全身更自然地移动。可以参考下面的对比：
 
-{% embed url="https://user-images.githubusercontent.com/3406505/209767938-26ae5946-0fea-48f2-96c8-4d37a76eb4f4.mp4" %}
+<div className="video-box"><video controls src="https://user-images.githubusercontent.com/3406505/209767938-26ae5946-0fea-48f2-96c8-4d37a76eb4f4.mp4" />
 RhyLive
-{% endembed %}
+</div>
 
-{% embed url="https://user-images.githubusercontent.com/3406505/209767940-fd308011-2343-4f41-a33b-9da21136ab6b.mp4" %}
+<div className="video-box"><video controls src="https://user-images.githubusercontent.com/3406505/209767940-fd308011-2343-4f41-a33b-9da21136ab6b.mp4" />
 iFacialMocap
-{% endembed %}
+</div>
 </div>
 
 ## 教程

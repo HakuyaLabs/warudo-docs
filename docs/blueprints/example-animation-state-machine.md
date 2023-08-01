@@ -2,9 +2,9 @@
 
 通过 Warudo 的[角色配置](../assets/character/)，你可以让模型摆出几乎任何想要的姿势。可是，身为 VTuber，总不能在直播中途配置吧！以下给出一个蓝图的实例，利用角色的[身体 IK](../assets/character/#shen-ti-ik)，让模型在「默认」、「举起玫瑰」、「双手比耶」和「右手拿麦克风」四种状态间自由切换，并实现流畅过渡。最棒的是：这些动画都是实时生成的，不需要在 3D 工具（例如：Blender）中事先制作。
 
-{% embed url="https://user-images.githubusercontent.com/3406505/196837021-1697da39-8988-4a12-9277-78040e4ef4a9.mp4" %}
+<div className="video-box"><video controls src="https://user-images.githubusercontent.com/3406505/196837021-1697da39-8988-4a12-9277-78040e4ef4a9.mp4" />
 视频里左右手的动作，除了一开始的左手是动捕之外，都是通过 IK 实现的。
-{% endembed %}
+</div>
 
 ### 准备工作
 

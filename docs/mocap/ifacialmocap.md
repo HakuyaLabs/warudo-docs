@@ -1,3 +1,8 @@
+---
+sidebar_position: 40
+sidebar_label: iFacialMocap
+---
+
 # iFacialMocap
 
 基于苹果 ARKit 的面捕方案，需要一台支持[面容 ID ](https://support.apple.com/zh-cn/HT208109)的 iOS 设备，并购买 [iFacialMocap](https://apps.apple.com/cn/app/id1489470545) App（国区售价 40 元）。可以捕捉 52 个 ARKit BlendShape，以及头部的旋转和移动。

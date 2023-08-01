@@ -4,9 +4,9 @@ Props are any 3D models that can be placed freely within a scene or can be attac
 
 ![Cat paws](https://user-images.githubusercontent.com/3406505/181151662-19455655-55ec-4a9f-9151-233db085c001.png)
 
-{% embed url="https://user-images.githubusercontent.com/3406505/196042139-45994180-aef4-4a9b-8208-592edc280b8d.mp4" %}
+<div className="video-box"><video controls src="https://user-images.githubusercontent.com/3406505/196042139-45994180-aef4-4a9b-8208-592edc280b8d.mp4" />
 The rose and fingertip particle effect are achieved using prop assets and character attachment settings.
-{% endembed %}
+</div>
 
 ## Properties
 

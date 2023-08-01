@@ -4,4 +4,4 @@ Download characters, props, environments, etc. on Warudo's [Steam Workshop](http
 
 <figure><img src="/images/image(9).png" alt="" /><figcaption></figcaption></figure>
 
-{% embed url="https://steamcommunity.com/app/2079740/workshop/" %}
+<div className="video-box"><video controls src="https://steamcommunity.com/app/2079740/workshop/" /></div>

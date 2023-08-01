@@ -373,7 +373,7 @@ Similarly, choose "RhyLive" for the "Pose Tracking Template."
 <div className="hint hint-info">
 If you enable "Use Keyboard" / "Use Touchpad," Warudo will procedurally generate animations of the model using the keyboard and mouse when your hands are not tracked:
 
-{% embed url="https://user-images.githubusercontent.com/3406505/209600556-6f0a33a2-ea4f-4f73-a8ce-0de691cb9e5d.mp4" %}
+<div className="video-box"><video controls src="https://user-images.githubusercontent.com/3406505/209600556-6f0a33a2-ea4f-4f73-a8ce-0de691cb9e5d.mp4" />
 </div>
 
 After clicking "OK," you should see a success message:
@@ -387,6 +387,7 @@ The "RhyLive Receiver" should now appear in the asset list, which is used to rec
 Two blueprints should also have been added to the blueprint list:
 
 <figure><img src="/images/image(68).png" alt="" /><figcaption></figcaption></figure>
+</div>
 
 <div className="hint hint-info">
 Warudo's blueprints are a very powerful feature, but if you're just starting out with Warudo, you can achieve great results without touching blueprints at all. We recommend reading the [blueprint tutorial](/docs/mocap/blueprints/overview) once you are familiar with the rest of Warudo's features.

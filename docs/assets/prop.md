@@ -4,9 +4,9 @@
 
 ![猫猫手](https://user-images.githubusercontent.com/3406505/181151662-19455655-55ec-4a9f-9151-233db085c001.png)
 
-{% embed url="https://user-images.githubusercontent.com/3406505/196042139-45994180-aef4-4a9b-8208-592edc280b8d.mp4" %}
+<div className="video-box"><video controls src="https://user-images.githubusercontent.com/3406505/196042139-45994180-aef4-4a9b-8208-592edc280b8d.mp4" />
 利用道具资源以及角色配件设置实现的玫瑰 + 指尖粒子效果。
-{% endembed %}
+</div>
 
 ## 属性
 

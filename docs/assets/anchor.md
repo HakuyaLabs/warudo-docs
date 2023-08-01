@@ -20,7 +20,7 @@
 
 ### 我想实现这种手机自拍的效果。
 
-{% embed url="https://user-images.githubusercontent.com/3406505/181163859-793e78de-3dda-4551-85f4-de6c866451ea.mp4" %}
+<div className="video-box"><video controls src="https://user-images.githubusercontent.com/3406505/181163859-793e78de-3dda-4551-85f4-de6c866451ea.mp4" /></div>
 
 这里用右手作为例子。创建锚点，把父变换设置为摄像机。将角色「身体 IK」->「右手」->「IK 变换」设置为锚点，「旋转权重」设置为 0.5。调整锚点变换的位置和旋转，直到画面看起来自然即可。
 

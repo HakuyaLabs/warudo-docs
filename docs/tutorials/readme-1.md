@@ -1,7 +1,5 @@
 ---
-cover: .gitbook/assets/library_hero(1).png
-coverY: -42.588235294117645
-sidebar_position: 20
+sidebar_position: 10
 sidebar_label: 新手上路
 ---
 
@@ -377,7 +375,7 @@ BlendShape 映射的意思就是「面捕参数应该怎么应用到模型的 Bl
 <div className="hint hint-info">
 开启「使用键盘」和「使用触控板」的话，在不捕捉到手部的时候，会实时生成模型使用键盘和鼠标的动画：
 
-{% embed url="https://user-images.githubusercontent.com/3406505/209600556-6f0a33a2-ea4f-4f73-a8ce-0de691cb9e5d.mp4" %}
+<div className="video-box"><video controls src="https://user-images.githubusercontent.com/3406505/209600556-6f0a33a2-ea4f-4f73-a8ce-0de691cb9e5d.mp4" />
 </div>
 
 点击确定后，应该可以看到成功信息：
@@ -391,6 +389,7 @@ BlendShape 映射的意思就是「面捕参数应该怎么应用到模型的 Bl
 蓝图列表中也多出来了两个蓝图：
 
 <figure><img src="/images/image(6)(3).png" alt="" /><figcaption></figcaption></figure>
+</div>
 
 <div className="hint hint-info">
 Warudo 的蓝图是非常强大的功能，不过，刚上手 Warudo 的话，不需要接触蓝图也可以配置出很棒的效果！建议熟悉 Warudo 其他功能后，再阅读[蓝图教程](/docs/mocap/blueprints/overview)。

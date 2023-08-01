@@ -1,3 +1,8 @@
+---
+sidebar_position: 60
+sidebar_label: OpenSeeFace
+---
+
 # OpenSeeFace（Beta）
 
 基于摄像头的面捕方案。可以捕捉基本 BlendShape，以及头部的旋转和移动。和 [VSeeFace ](https://www.vseeface.icu/)的面捕效果大致相仿。

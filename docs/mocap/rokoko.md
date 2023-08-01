@@ -1,3 +1,8 @@
+---
+sidebar_position: 90
+sidebar_label: Rokoko
+---
+
 # Rokoko
 
 由 [Rokoko](https://www.rokoko.com/) 发送全身动捕数据到 Warudo。

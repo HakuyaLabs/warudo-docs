@@ -1,3 +1,8 @@
+---
+sidebar_position: 10
+sidebar_label: 动作捕捉方案一览
+---
+
 # 动作捕捉方案一览
 
 Warudo 针对家用 3D 特别优化，同时也支持主流的专业动作捕捉方案。

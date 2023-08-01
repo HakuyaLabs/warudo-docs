@@ -40,9 +40,9 @@ Refer to the [expressions](blendshape-expression.md) subpage for details.
 
 Some pose tracking templates（e.g. MediaPipe, RhyLive）support blending the mocap with idle animations, achieving the following effect:
 
-{% embed url="https://user-images.githubusercontent.com/3406505/180953465-7b91a347-452d-4c03-b860-45dc58ec0392.mp4" %}
+<div className="video-box"><video controls src="https://user-images.githubusercontent.com/3406505/180953465-7b91a347-452d-4c03-b860-45dc58ec0392.mp4" />
 Here, bending of the upper body comes from the idle animation, while the head and hand movements come from mocap. When tracking of the hands is lost, the avatar's hands smoothly transitions into the idle animation.
-{% endembed %}
+</div>
 
 * Overlaying Animations: Animations overlaid on top of the idle animation. Each layer of animation can be assigned its own mask and weight, allowing different parts of the body to play different animations. The higher (lower in the list) the animation layer, the higher its priority.
   * Enabled: If set to "No", this animation layer will be ignored.&#x20;
@@ -55,9 +55,9 @@ Here, bending of the upper body comes from the idle animation, while the head an
   * Mask Lower Body: Assign lower body parts to the animation mask.
   * Additive Animation: Additive animation applies on top of the idle animation instead of replacing it. All of Warudo's built-in idle animations are non-additive, so this is only useful for [custom animations](../../modding/character-animation-mod.md).
 
-{% embed url="https://www.bilibili.com/video/BV1Zt4y1c7Re" %}
+<div className="video-box"><video controls src="https://www.bilibili.com/video/BV1Zt4y1c7Re" />
 Demo of overlapping animations. Source: [https://www.bilibili.com/video/BV1Zt4y1c7Re](https://www.bilibili.com/video/BV1Zt4y1c7Re)
-{% endembed %}
+</div>
 
 <div className="hint hint-success">
 Using overlaying animation and the IK features below, you can pose your character in almost any fashion!
@@ -111,13 +111,13 @@ Make the character's spine or limbs follow a specified target in the scene.
 <div className="hint hint-success">
 Creating a temporary anchor allows you to fix the model's hands in an ideal position, preventing the hands from drifting left and right due to head movements. This can be quite useful for some poses.
 
-{% embed url="https://user-images.githubusercontent.com/3406505/196039288-aac4e485-c9f9-4686-948e-75f783586b25.mp4" %}
+<div className="video-box"><video controls src="https://user-images.githubusercontent.com/3406505/196039288-aac4e485-c9f9-4686-948e-75f783586b25.mp4" />
 Before
-{% endembed %}
+</div>
 
-{% embed url="https://user-images.githubusercontent.com/3406505/196039290-13b91459-110d-4706-9c77-3516b1c3b175.mp4" %}
+<div className="video-box"><video controls src="https://user-images.githubusercontent.com/3406505/196039290-13b91459-110d-4706-9c77-3516b1c3b175.mp4" />
 After
-{% endembed %}
+</div>
 </div>
 
 * Position Weight: At 0, the body part stays in its original position; at 1, the body part will be fully pulled towards the target.

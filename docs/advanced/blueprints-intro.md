@@ -105,7 +105,7 @@
 
 事实上，如果你的模型已经适配了 ARKit BlendShape（即「完美同步」），以上的蓝图可以直接运作：
 
-{% embed url="https://user-images.githubusercontent.com/3406505/180726572-9ddcf9c5-0473-4cdc-b152-ef9ba93853eb.mp4" %}
+<div className="video-box"><video controls src="https://user-images.githubusercontent.com/3406505/180726572-9ddcf9c5-0473-4cdc-b152-ef9ba93853eb.mp4" /></div>
 
 恭喜你，你在 Warudo 里成功开发出了一款 VTuber 软件（这次是真的！）。🎉
 
@@ -129,7 +129,7 @@
 
 效果如下：
 
-{% embed url="https://user-images.githubusercontent.com/3406505/180735646-3f4a6324-938f-404c-9500-1f47481ab887.mp4" %}
+<div className="video-box"><video controls src="https://user-images.githubusercontent.com/3406505/180735646-3f4a6324-938f-404c-9500-1f47481ab887.mp4" /></div>
 
 好耶！可是你有没有留意到，我闭眼闭得很勉强的样子。我们来调整一下吧！
 
@@ -141,7 +141,7 @@
 
 效果如下：
 
-{% embed url="https://user-images.githubusercontent.com/3406505/180757257-c815210a-74eb-4adb-8bc8-d867bb572e44.mp4" %}
+<div className="video-box"><video controls src="https://user-images.githubusercontent.com/3406505/180757257-c815210a-74eb-4adb-8bc8-d867bb572e44.mp4" /></div>
 
 甚至还有更有意思的玩法——比如我想在我鼓起脸的时候，让模型 ^^ 眼笑起来。同理，只需要加两个节点就好了：
 
@@ -151,7 +151,7 @@
 
 效果如下：
 
-{% embed url="https://user-images.githubusercontent.com/3406505/180759207-28d1e5b5-c575-4f42-b127-afb20a2c3608.mp4" %}
+<div className="video-box"><video controls src="https://user-images.githubusercontent.com/3406505/180759207-28d1e5b5-c575-4f42-b127-afb20a2c3608.mp4" /></div>
 
 咦，怎么感觉眼皮穿模了？这正是我们之前提到的问题：`笑い` 这个 ^^ 眼 BlendShape 不能和闭眼的 `ウィンク2`/`ウィンク2右` 一起用！好在 Warudo 中，解决这个问题非常简单：
 
@@ -159,7 +159,7 @@
 
 不穿模啦！
 
-{% embed url="https://user-images.githubusercontent.com/3406505/180760044-f899f4df-7064-441d-bb6f-b1305899a6a4.mp4" %}
+<div className="video-box"><video controls src="https://user-images.githubusercontent.com/3406505/180760044-f899f4df-7064-441d-bb6f-b1305899a6a4.mp4" /></div>
 
 让我们现在回头看看之前的问题：
 

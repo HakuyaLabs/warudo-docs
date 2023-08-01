@@ -11,7 +11,7 @@
 
 * [Overview](mocap/overview.md)
 * [Face Tracking](mocap/face-tracking.md)
-* [Pose Tracking](/docs/tutorials/mocap/body-tracking.md)
+* [Pose Tracking](tutorials/mocap/body-tracking.md)
 * [iFacialMocap](mocap/ifacialmocap.md)
 * [MediaPipe](mocap/mediapipe.md)
 * [OpenSeeFace (Beta)](mocap/openseeface.md)
@@ -39,7 +39,7 @@
 ## Blueprints
 
 * [Introduction to Blueprints](advanced/blueprints-intro.md)
-* [Overview](/docs/mocap/blueprints/overview.md)
+* [Overview](mocap/blueprints/overview.md)
 * [Basic Nodes](blueprints/basic-nodes.md)
 * [Advanced Nodes](blueprints/advanced-nodes.md)
 * [Motion Capture Nodes](blueprints/mocap-nodes.md)

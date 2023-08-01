@@ -1,3 +1,8 @@
+---
+sidebar_position: 20
+sidebar_label: 面部追踪
+---
+
 # 面部追踪
 
 Warudo 目前支持 5 种面部捕捉方案。

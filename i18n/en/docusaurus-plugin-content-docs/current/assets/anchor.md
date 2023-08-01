@@ -20,7 +20,7 @@ An absolute or relative position in the scene, which can be used as the target f
 
 ### I want to achieve the effect of seemingly taking a selfie with a phone.
 
-{% embed url="https://user-images.githubusercontent.com/3406505/181163859-793e78de-3dda-4551-85f4-de6c866451ea.mp4" %}
+<div className="video-box"><video controls src="https://user-images.githubusercontent.com/3406505/181163859-793e78de-3dda-4551-85f4-de6c866451ea.mp4" /></div>
 
 Here we use the right hand as an example. Create an anchor asset, set the parent transform to the camera. Set the character's "Body IK" -> "Right Hand" -> "IK Target" to the anchor asset, and set the "Rotation Weight" to 0.5. Adjust the position and rotation of the anchor until everything looks natural.
 
