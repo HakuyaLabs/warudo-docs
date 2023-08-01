@@ -31,6 +31,7 @@ async function submit() {
   await scpClient.close();
 }catch(e) {
   console.log(e);
+  throw e;
 }
 }
 
