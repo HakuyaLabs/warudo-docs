@@ -27,3 +27,8 @@ jobs:
 
       - name: Upload production-ready build files
         run: yarn deploy:server
+        env: # Or as an environment variable
+          DEPLOY_SSH_PORT: ${{ secrets.DEPLOY_SSH_PORT }}
+          DEPLOY_SSH_USERNAME: ${{ secrets.DEPLOY_SSH_USERNAME }}
+          DEPLOY_SSH_PASSWORD: ${{ secrets.DEPLOY_SSH_PASSWORD }}
+          DEPLOY_SSH_HOST: ${{ secrets.DEPLOY_SSH_HOST }}
