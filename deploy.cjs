@@ -52,7 +52,7 @@ async function uploadDir(src, dest) {
 }
 
 async function submit() {
-  if(!await fs.existsSync('./build')) {
+  if(!await fs.existsSync(config.localDir)) {
     throw Error('Build file not exists, run `yarn build` first.')
   }
   try{
@@ -63,10 +63,12 @@ async function submit() {
     password: config.password,
     // privateKey: fs.readFileSync('./key.pem'),
     // passphrase: 'your key passphrase',
-    // debug: console.log
+    // debug: console.log,
+    compress: 'zlib'
   });
-  console.log('Uploading files...')
+  console.log('Empting remote files...')
   await scpClient.emptyDir(config.remoteDir)
+  console.log('Uploading files...')
   scpClient.uploadDir = uploadDir;
   await scpClient.uploadDir(config.localDir, config.remoteDir);
   await scpClient.close();
