@@ -1,8 +1,3 @@
----
-sidebar_position: 10
-sidebar_label: 新手上路
----
-
 # 新手上路
 
 ## 创建场景

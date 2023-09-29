@@ -34,7 +34,7 @@ Warudo 力求做到上述几种方案的平衡点：
 * **模块化配置：**角色模型、环境模型、摄像机配置甚至互动逻辑等都保存在 Warudo 的场景文件内，可一键切换不同直播场景，也方便开发 / 运营人员调试好场景后发给 VTuber 直接使用。
 * **易于拓展：**可导入[外部 3D 资源](modding/mod-sdk.md)，支持 [Steam 创意工坊](https://steamcommunity.com/app/2079740/workshop/)，兼容 [URP 渲染管线 / NiloToonURP](https://github.com/ColinLeung-NiloCat/UnityURPToonLitShaderExample)；提供 C# SDK，可自行开发或拓展功能，支持运行时热编译加载 C# 脚本调试。
 
-<div className="hint hint-info">
+:::info
 联机、直播互动等功能还在紧张地开发中，敬请期待。
-</div>
+:::
 

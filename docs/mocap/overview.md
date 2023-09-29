@@ -12,21 +12,21 @@ Warudo supports both at-home use with budget motion capture as well as professio
   * I am all for convenience or I don't have a webcam: [RhyLive](rhylive.md) + [RhyLive](rhylive.md).
   * I want my avatar to be more expressive and I have a wide-angle webcam: [iFacialMocap ](ifacialmocap.md)+ [MediaPipe](mediapipe.md).
 
-<div className="hint hint-info">
+:::info
 Is your avatar compatible with [the 52 ARKit blendshapes](https://arkit-face-blendshapes.com/) ("Perfect Sync")? ARKit-based face tracking are much more expressive, so it is highly recommended.
-</div>
+:::info
 
 * I don't have an iPhone or iPad: [OpenSeeFace](openseeface.md) + [MediaPipe](mediapipe.md).
 
-<div className="hint hint-info">
+:::info
 If you do not have an iOS device and looking to buy one but do not have much budget for it, look into a used iPhone X. It is the cheapest iOS device compatible with ARKit / Face ID.
-</div>
+:::info
 
 * I would like to use other motion capture software: [VMC ](vmc.md)/ [iFacialMocap ](ifacialmocap.md)+ [VMC](vmc.md).
 
-<div className="hint hint-success">
+:::tip
 Many motion capture hardware, in addition to home VR, have first or third-party VMC support, such as [Mocopi](https://www.sony.jp/mocopi/) and [Perception Neuron](https://github.com/emilianavt/VSeeFaceManual#perception-neuron-tracking).
-</div>
+:::info
 
 ## Professional
 

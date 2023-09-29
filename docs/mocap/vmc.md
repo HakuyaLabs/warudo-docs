@@ -12,11 +12,11 @@ The following example demonstrates how to apply VMC data to the character using 
 
 Click on the settings in the upper right corner -> General settings, make sure "OSC/VMC Protocol" -> "Send datawith OSC/VMC protocol" is checked. The default IP is the localhost IP(127.0.0.1); the default port 39539 is also the default port that Warudo's VMC receiver uses, so if you want to send the motion capture data from VSeeFace to Warudo running on the same computer, you are already done!
 
-<figure><img src="/images/image(9)(1)(2).jpg" alt="" /><figcaption></figcaption></figure>
+![](/doc-img/zh-vmc-1.webp)
 
-<div className="hint hint-warning">
+:::caution
 This function requires that all initial rotations of the bones in the model be 0, otherwise the data sent to other software may not be compatible. If your model is in [VRM format](https://vrm.dev/), then in most cases there should be no issue. However, in very rare cases, the modeler may not have checked the Enforce T-Pose option when exporting, and it can be fixed by re-exporting with this option checked.
-</div>
+:::
 
 ## Properties
 

@@ -5,9 +5,12 @@ sidebar_position: 60
 
 Capture your desktop or a window and display it in the scene just like OBS. You can also display images and even webpages!
 
-![Curved screens!](https://user-images.githubusercontent.com/3406505/191217373-999ec1ec-e086-4e55-b6b6-48575b09d02f.png)
 
-<figure><img src="/images/image(2)(1)(4).jpg" alt="" /><figcaption><p>Live chat in 3D!</p></figcaption></figure>
+![](/doc-img/zh-screen-1.webp)
+<p class="img-desc">Curved screens!</p>
+
+![](/doc-img/zh-screen-2.webp)
+<p class="img-desc">Live chat in 3D!</p>
 
 ## Properties
 

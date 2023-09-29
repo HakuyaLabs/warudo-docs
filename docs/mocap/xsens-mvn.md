@@ -10,15 +10,15 @@ Body tracking via [Xsens MVN Analyze/Animate](https://base.xsens.com/s/motion-ca
 
 Open Xsens MVN -> Options -> Network Streamer and configure as shown below.
 
-![](</images/image(9)(1)(1).jpg>)
+![](/doc-img/zh-xens-1.webp)
 
-<div className="hint hint-warning">
+:::caution
 Note: You need an MVN Animate Plus or Pro subscription to use the Network Streamer feature.
-</div>
+:::
 
-<div className="hint hint-info">
+:::info
 For more details, see the [official documentation](https://base.xsens.com/s/article/MVN-Unity-Live-Plugin?language=en\_US).
-</div>
+:::
 
 ## Properties
 

@@ -1,6 +1,5 @@
 ---
 sidebar_position: 10
-sidebar_label: Expressions
 ---
 
 
@@ -9,7 +8,7 @@ sidebar_label: Expressions
 * Import VRM Expressions: If the model is in VRM format, import all of the built-in VRM [BlendShapeClips](https://vrm.dev/en/univrm/blendshape/univrm\_blendshape.html) as expressions.
 * Generate Key Binding Blueprint: Based on the currently configured expressions, generate a blueprint for key binding.
 
-<div className="hint hint-info">
+:::info
 The maximum number of expression hotkeys that can be generated is 46, with the default hotkeys being:
 
 Alt+1, Alt+2, Alt+3... Alt+=
@@ -23,7 +22,7 @@ Alt+Z, Alt+X, Alt+C... Alt+/
 ...assuming your model really has that many expressions!
 
 **Press Alt+Backspace to reset the expressions.**
-</div>
+:::
 
 * Expressions:
   * Name: Name of the expression. Used for identification in the blueprint.
@@ -54,15 +53,15 @@ Alt+Z, Alt+X, Alt+C... Alt+/
   * Default Value: The default value of the blendshape.
 * Default Material Properties: The default material properties. This is for compatibility with VRM's [MaterialValueBinding](https://vrm.dev/en/univrm/blendshape/univrm\_blendshape.html#id3) feature.
 
-<div className="hint hint-info">
+:::info
 When importing VRM expressions, the default BlendShapeClips (i.e. Joy, Angry, Sorrow, Fun/Surprised) in the VRM model will be placed on layer 0, while the BlendShapeClips added by the modeler will be placed on layer 1, 2, 3, etc.
-</div>
+:::
 
 ## Examples
 
-<div className="hint hint-info">
+:::info
 The following examples assume that you have set up the expressions and can already switch between different expressions by pressing Alt+1, Alt+2, etc.
-</div>
+:::
 
 ### One of my expressions already closes the model's eyes, but when I blink, the model's eyes close further. It looks weird.
 
@@ -85,24 +84,24 @@ In the expression list, expand the configuration for that expression, click the 
 
 Open the "Expression Key Bindings" blueprint and locate the "On Keystroke Pressed" node. Then, modify it as needed. For example, in the original blueprint, pressing Alt+1 will activate the `Joy` expression:
 
-![](</images/image(43).jpg>)
+![](/doc-img/en-expression-1.webp)
 
 The following changes the keyboard shortcut to Ctrl+Shift+T.
 
-![](</images/image(5)(4).jpg>)
+![](/doc-img/en-expression-2.webp)
 
 ### I want to create a new expression from scratch.
 
 In the expressions list, click the + button at the bottom right to add a new item. In the "Target BlendShapes", add the blendshapes that form the desired expression. For example, the following expression will activate the `笑い` BlendShape on the model when applied:
 
-![](</images/image(7)(4).jpg>)
+![](/doc-img/en-expression-3.webp)
 
 Open the "Expression Key Bindings" blueprint (or create a new blueprint). Drag out the "On Keystroke Pressed" and "Toggle Character Expression" nodes from the sidebar. Set the keyboard shortcut on the "On Keystroke Pressed" node, and select the character and the newly created expression on the "Toggle Character Expression" node. Connect the output and input of the two nodes as shown below.
 
-![](</images/image(1)(1)(4).jpg>)
+![](/doc-img/en-expression-4.webp)
 
 ### Can I only activate an expression for a certain period of time and then automatically switch back to the previous expression after a while?
 
 To do this, enable "Is Transient" on the "Toggle BlendShape Expression" node in the blueprint to "Yes." The duration of the expression will be determined by "Exit Delay" of each BlendShape in the expression.
 
-![](</images/image(11)(1).jpg>)
+![](/doc-img/en-expression-5.webp)

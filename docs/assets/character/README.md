@@ -9,9 +9,9 @@ Warudo supports the standard [VRM ](https://vrm.dev/en/univrm/)format. If your m
 
 By default, character files should be placed in the `Characters` subfolder of Warudo's data folder.
 
-<div className="hint hint-info">
+:::info
 Can't find the data folder? Click "🚀" -> "Open Data Folder".
-</div>
+:::
 
 ## Properties
 
@@ -23,9 +23,9 @@ Refer to the [motion capture section](/docs/tutorials/mocap/body-tracking) for d
 
 * Setup Motion Capture: Select the [face tracking](../../mocap/face-tracking.md) and [pose tracking ](../../mocap/body-tracking.md)template to automatically generate the mocap [blueprints](/docs/mocap/blueprints/overview).
 
-<div className="hint hint-info">
+:::info
 Think of blueprints as programs that apply the mocap data on your avatar. Read more [here](../../advanced/blueprints-intro.md).
-</div>
+:::
 
 * Remove Motion Capture: Remove the assets and blueprints created in a previous motion capture setup.
 
@@ -39,9 +39,9 @@ Refer to the [expressions](blendshape-expression.md) subpage for details.
 * Load Animation Profile: Load an existing animation profile. Following settings will be overridden.
 * Idle Animation: The animation played by default.
 
-<div className="hint hint-success">
+:::tip
 **Warudo has over** [**500 built-in idle animations**](../../misc/idle-animations.md), be sure to try them out!
-</div>
+:::
 
 Some pose tracking templates（e.g. MediaPipe, RhyLive）support blending the mocap with idle animations, achieving the following effect:
 
@@ -60,24 +60,24 @@ Here, bending of the upper body comes from the idle animation, while the head an
   * Mask Lower Body: Assign lower body parts to the animation mask.
   * Additive Animation: Additive animation applies on top of the idle animation instead of replacing it. All of Warudo's built-in idle animations are non-additive, so this is only useful for [custom animations](../../modding/character-animation-mod.md).
 
-<div className="video-box"><video controls src="https://www.bilibili.com/video/BV1Zt4y1c7Re" />
-Demo of overlapping animations. Source: [https://www.bilibili.com/video/BV1Zt4y1c7Re](https://www.bilibili.com/video/BV1Zt4y1c7Re)
+<div className="video-box"><iframe class="bilibili-video" src="//player.bilibili.com/player.html?aid=985941728&bvid=BV1Zt4y1c7Re&cid=843191749&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+Demo of overlapping animations. Source: https://www.bilibili.com/video/BV1Zt4y1c7Re
 </div>
 
-<div className="hint hint-success">
+:::tip
 Using overlaying animation and the IK features below, you can pose your character in almost any fashion!
-</div>
+:::
 
 * Override Hand Poses: Override the pose of the model's hands, for example, making a "✌" gesture.
   * Left Hand / Right Hand：
     * Pose: The pose that this hand should make.
     * Weight: The weight of the pose, that is, how much the hand should blend into the selected pose.
 
-<div className="hint hint-info">
+:::info
 In the built-in [motion capture templates](mocap/overview), the priority of the idle animation, overlay animations, override hand poses, and [body IK](./#body-ik) are all **lower** than motion capture.
 
 In other words, even if you have set an override hand pose for your right hand, if you raise your right hand and it becomes tracked, the model follows your right hand's pose instead of the override hand pose.&#x20;
-</div>
+:::
 
 * Breathing Animation: Add breathing to the upper body.
 * Swaying Animation: Natural back-and-forth swaying of various parts of the body.
@@ -88,11 +88,12 @@ In other words, even if you have set an override hand pose for your right hand, 
 
 ### Look IK
 
-<div className="hint hint-success">
+:::tip
 **What is IK?** IK stands for Inverse Kinematics, and in game engines and Warudo, IK can be understood as "making a part of the model rotate towards, or reach a desired position", without requiring an animation made by an animator. See below:
 
-<img src="/images/image/1_VrBdTPK1tnbacoFares7Dw.gif" alt="来源：https://medium.com/unity3danimation/overview-of-inverse-kinematics-9769a43ba956" data-size="original" />
-</div>
+![](/doc-img/zh-assets-character.gif)
+<p class="img-desc">Source：https://medium.com/unity3danimation/overview-of-inverse-kinematics-9769a43ba956</p>
+:::
 
 Make the character look at a specified target in the scene (e.g. camera).
 
@@ -113,7 +114,7 @@ Make the character's spine or limbs follow a specified target in the scene.
 * Create Temporary IK Target Anchor At Current Position: Create a temporary anchor asset at the current position of this part of the body, set the IK target to this anchor, and gradually fade in the IK.
 * Remove Temporary IK Target Anchor: Remove the temporary anchor asset created for this part of the body, and gradually fade out the IK.
 
-<div className="hint hint-success">
+:::tip
 Creating a temporary anchor allows you to fix the model's hands in an ideal position, preventing the hands from drifting left and right due to head movements. This can be quite useful for some poses.
 
 <div className="video-box"><video controls src="https://user-images.githubusercontent.com/3406505/196039288-aac4e485-c9f9-4686-948e-75f783586b25.mp4" />
@@ -123,29 +124,21 @@ Before
 <div className="video-box"><video controls src="https://user-images.githubusercontent.com/3406505/196039290-13b91459-110d-4706-9c77-3516b1c3b175.mp4" />
 After
 </div>
-</div>
+:::
 
 * Position Weight: At 0, the body part stays in its original position; at 1, the body part will be fully pulled towards the target.
 * Rotation Weight: Similar to the position weight, but determines whether the rotation of the body part will also follow the target.
 * Bend Goal Target: The target that the elbow (or knee, in the case of legs) will follow.
 
-<div>
-
-<figure><img src="/images/image/Warudo_2022-10-16-06-19-19_1024x1024.jpg" alt="" /><figcaption><p>Bend goal disabled</p></figcaption></figure>
-
- 
-
-<figure><img src="/images/image/Warudo_2022-10-16-06-19-11_1024x1024.jpg" alt="" /><figcaption><p>Bend goal enabled</p></figcaption></figure>
-
-</div>
+![](/doc-img/en-assets-character-4.webp)
 
 * Bend Goal Weight: At 0, the elbow position is completely decided by the IK position; at 1, the elbow position will be fully pulled towards the bend goal target.
 
 ### Ragdoll
 
-<div className="hint hint-warning">
+:::caution
 Experimental feature. Not recommended for use.
-</div>
+:::
 
 ### Meshes
 
@@ -153,9 +146,9 @@ Toggle meshes and skinned meshes on the model.
 
 * Visible: Whether the mesh should be visible.
 
-<div className="hint hint-info">
+:::info
 Models exported by [VRoid Studio](https://vroid.com/en/studio) only have two meshes: `Body` and `Face`. More detailed models often split the character's clothes, accessories, tail, animal ears, etc. into separate meshes.
-</div>
+:::
 
 ## Examples
 
@@ -163,19 +156,19 @@ Models exported by [VRoid Studio](https://vroid.com/en/studio) only have two mes
 
 Try setting the additional bone offsets. The rotation angle of the two shoulder joints actually quite affects the perception of the character's personality!
 
-![Additional bone offsets disabled](https://user-images.githubusercontent.com/3406505/180982590-df02732d-8a8f-450c-b867-152ee1a8a99b.png) ![Additional bone offsets enabled：LeftShoulder:(10, 0, -10), RightShoulder:(10, 0, 10)](https://user-images.githubusercontent.com/3406505/180982518-3f25328e-2ec9-4021-bb4e-8b4981053913.png)
+![](/doc-img/en-assets-character-3.webp)
 
 ### **I want to set up** a shortcut key **for toggling meshes (clothing, accessories, etc.).**
 
 To do this, create a new blueprint (or open an existing one) and setup like below:
 
-<img src="/images/image(3)(4).jpg" alt="" data-size="original" />
+![](/doc-img/en-assets-character-1.webp)
 
 ### I want to set up a shortcut key for switching the idle animation.
 
 To do this, create a new blueprint (or open an existing one) and setup like below:
 
-![](</images/image(2)(3)(2).jpg>)
+![](/doc-img/en-assets-character-2.webp)
 
 ### I've set up my character's idle animation, but I want to make a small adjustment to the posture. / I've set up my character's idle animation, but I want to fix their hands so they don't sway with the body. / ...
 

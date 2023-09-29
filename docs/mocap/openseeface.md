@@ -6,9 +6,9 @@ sidebar_position: 60
 
 Webcam-based face tracking. Tracks a set of basic blendshapes, head rotation and head translation. Quality of face tracking is similar to that of [VSeeFace](https://www.vseeface.icu/).
 
-<div className="hint hint-info">
+:::info
 OpenSeeFace is the face tracking technology used in [VSeeFace](https://www.vseeface.icu/), so users familiar with VSeeFace may find it quite familiar. The overall tracking quality is also similar, although winking is not as stable as VSeeFace at the moment.
-</div>
+:::
 
 ## Properties
 
