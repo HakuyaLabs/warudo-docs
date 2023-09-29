@@ -2,6 +2,8 @@
 sidebar_position: 10
 ---
 
-# Steam 创意工坊
+# Steam Workshop
 
-<div className="video-box"><video controls src="https://steamcommunity.com/app/2079740/workshop/" /></div>
+Download characters, props, environments, etc. on Warudo's [Steam Workshop](https://steamcommunity.com/app/2079740/workshop/), and share you own creations!
+
+<a href="https://steamcommunity.com/app/2079740/workshop/"></a>

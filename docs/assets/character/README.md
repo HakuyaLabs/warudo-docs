@@ -1,180 +1,182 @@
 ---
 sidebar_position: 10
-sidebar_label: 角色
+sidebar_label: Character
 ---
 
-# 角色
+# Character
 
-Warudo 原生支持导入 [VRM 格式](https://vrm.dev/en/univrm/)的角色模型。如果你的模型格式不是 VRM（例如是 MMD 或者 VRChat 专用的模型），可以使用 [Mod SDK](https://tiger-tang.gitbook.io/warudo/advanced/sdk) 导出为 `.warudo` 格式，即可加载到 Warudo 中。
+Warudo supports the standard [VRM ](https://vrm.dev/en/univrm/)format. If your model format is not VRM (for example, it is a MMD or a VRChat model), you can use the [Mod SDK](../../modding/mod-sdk.md) to export it to `.warudo` format and load it into Warudo.
 
-默认情况下，角色文件应放在 Warudo 数据文件夹的 `Characters` 子文件夹内。
+By default, character files should be placed in the `Characters` subfolder of Warudo's data folder.
 
 <div className="hint hint-info">
-找不到数据文件夹？点击「🚀」->「打开数据文件夹」即可。
+Can't find the data folder? Click "🚀" -> "Open Data Folder".
 </div>
 
-## 属性
+## Properties
 
-* 源：模型文件的路径。
+* Source: The path to the model file.
 
-### 动作捕捉
+### Motion Capture
 
-详情请参考[动作捕捉方案](mocap/overview.md)页面。
+Refer to the [motion capture section](/docs/tutorials/mocap/body-tracking) for details.
 
-* 配置动作捕捉：选择 [面部追踪](../../mocap/face-tracking.md) 及 [姿态追踪](../../mocap/body-tracking.md) 模板，自动生成相应的资源和 [蓝图](https://tiger-tang.gitbook.io/warudo/advanced/blueprints) 。
-* 移除动作捕捉：移除此前配置动作捕捉时自动生成的资源和蓝图。
+* Setup Motion Capture: Select the [face tracking](../../mocap/face-tracking.md) and [pose tracking ](../../mocap/body-tracking.md)template to automatically generate the mocap [blueprints](/docs/mocap/blueprints/overview).
 
-### 表情
+<div className="hint hint-info">
+Think of blueprints as programs that apply the mocap data on your avatar. Read more [here](../../advanced/blueprints-intro.md).
+</div>
 
-详情请参考 [表情](blendshape-expression.md) 子页面。
+* Remove Motion Capture: Remove the assets and blueprints created in a previous motion capture setup.
 
-### 动画
+### Expressions
 
-* 保存动画预设：保存下列动画选项为预设。预设可以应用到任何场景的任何角色。
-* 加载动画预设：加载已有的动画预设。以下的动画选项将被覆盖。
-* 待机动画：模型默认播放的动画。
+Refer to the [expressions](blendshape-expression.md) subpage for details.
+
+### Animation
+
+* Save Animation Profile: Save the following settings as an animation profile. Animation profiles can be applied on any character in any scene.
+* Load Animation Profile: Load an existing animation profile. Following settings will be overridden.
+* Idle Animation: The animation played by default.
 
 <div className="hint hint-success">
-**Warudo 内置了**[**超过 500 个待机动画**](../../misc/idle-animations.md)，请务必尝试看看！
+**Warudo has over** [**500 built-in idle animations**](../../misc/idle-animations.md), be sure to try them out!
 </div>
 
-部分姿态追踪模板（例：MediaPipe, RhyLive）**支持将动捕数据与待机动画融合**，实现如下效果：
+Some pose tracking templates（e.g. MediaPipe, RhyLive）support blending the mocap with idle animations, achieving the following effect:
 
 <div className="video-box"><video controls src="https://user-images.githubusercontent.com/3406505/180953465-7b91a347-452d-4c03-b860-45dc58ec0392.mp4" />
-这里上半身的弯腰实际是待机动画，而头部和双手的动作则为动作捕捉。当丢失双手动捕时，双手会平滑地切回到待机动画下的状态。
+Here, bending of the upper body comes from the idle animation, while the head and hand movements come from mocap. When tracking of the hands is lost, the avatar's hands smoothly transitions into the idle animation.
 </div>
 
-* 叠加动画：在待机动画之上叠加的动画。每一层动画可以单独设置遮罩和权重，实现身体的不同部位播放不同的动画。在列表中越靠后（下）的动画层，优先级越高。
-  * 列表元素：
-    * 启用：设置为「否」时，此动画层将被无视。
-    * 动画：此动画层叠加的动画。
-    * 权重：叠加动画的权重，即模型根据动画移动的幅度。
-    * 速度：叠加动画的播放速度。注意 Warudo 的大部分内置角色动画为静态姿势 / 只有一帧，故此参数可能无效。
-    * 遮罩：是否开启动画遮罩。设置为「否」时，此动画将会应用到模型的全身。
-    * 遮罩身体部分：动画遮罩开启时，动画将会应用到模型的这些身体部分。
-    * 遮罩上半身：快捷设置遮罩为上半身的身体部分。
-    * 遮罩下半身：快捷设置遮罩为下半身的身体部分。
-    * 附加动画：附加动画（additive animation）是在现有动画的基础上进行混合，而不会取代现有动画。Warudo 内置的角色动画均为非附加动画。如果你确定选择的动画为附加动画，请设置为「是」。
+* Overlaying Animations: Animations overlaid on top of the idle animation. Each layer of animation can be assigned its own mask and weight, allowing different parts of the body to play different animations. The higher (lower in the list) the animation layer, the higher its priority.
+  * Enabled: If set to "No", this animation layer will be ignored.&#x20;
+  * Animation: The animation that this layer overlays onto the idle animation.
+  * Weight: The weight of the overlay animation, or the magnitude to which the model moves according to the animation.
+  * Speed: The playback speed of the overlay animation. Note that most of Warudo's built-in character animations are static poses / only have one frame, so this parameter may be useless.
+  * Mask: Whether to turn on animation masking. If set to "No", the animation will be applied to the entire model.
+  * Masked Body Parts: When animation masking is on, the animation will be applied to these parts of the model.
+  * Mask Upper Body: Assign upper body parts to the animation mask.
+  * Mask Lower Body: Assign lower body parts to the animation mask.
+  * Additive Animation: Additive animation applies on top of the idle animation instead of replacing it. All of Warudo's built-in idle animations are non-additive, so this is only useful for [custom animations](../../modding/character-animation-mod.md).
 
 <div className="video-box"><video controls src="https://www.bilibili.com/video/BV1Zt4y1c7Re" />
-叠加动画的功能演示。链接：[https://www.bilibili.com/video/BV1Zt4y1c7Re](https://www.bilibili.com/video/BV1Zt4y1c7Re)
+Demo of overlapping animations. Source: [https://www.bilibili.com/video/BV1Zt4y1c7Re](https://www.bilibili.com/video/BV1Zt4y1c7Re)
 </div>
 
 <div className="hint hint-success">
-善用叠加动画和以下的 IK 功能，可以让角色摆出几乎任何想要的姿势！
+Using overlaying animation and the IK features below, you can pose your character in almost any fashion!
 </div>
 
-* 覆盖手势：覆盖模型手部的姿势，比如摆出「✌」的手势。
-  * 左手 / 右手：
-    * 姿势：这只手要摆出的姿势。
-    * 权重：姿势的权重，即模型手部根据姿势移动的幅度。
+* Override Hand Poses: Override the pose of the model's hands, for example, making a "✌" gesture.
+  * Left Hand / Right Hand：
+    * Pose: The pose that this hand should make.
+    * Weight: The weight of the pose, that is, how much the hand should blend into the selected pose.
 
 <div className="hint hint-info">
-在内置的[动作捕捉模板](./#dong-zuo-bu-zhuo)中，待机动画、叠加动画、覆盖手势设置和[身体 IK](./#shen-ti-ik) 的优先度**均比动捕数据要低**。
+In the built-in [motion capture templates](mocap/overview), the priority of the idle animation, overlay animations, override hand poses, and [body IK](./#body-ik) are all **lower** than motion capture.
 
-也就是说，即使设置了覆盖手势，如果动捕到了左右手的数据，那么模型依然会优先采用动捕的数据；直到左右手的动捕丢失，才会平滑过渡到覆盖手势。
+In other words, even if you have set an override hand pose for your right hand, if you raise your right hand and it becomes tracked, the model follows your right hand's pose instead of the override hand pose.&#x20;
 </div>
 
-* 呼吸动画：上半身规律性的前后摆动。
-* 晃动动画：身体各部位自然的来回摇动。
-* 叠加动画过渡时长：叠加动画和覆盖手势的设置被更改时，模型过渡到新设置的时长。
-* 额外骨骼偏移：如果你想让头（或者身体的任何关节）永远往一边歪几十度，可以用这个。
-  * 列表元素：
-    * 骨骼：要偏移的骨骼。
-    * 旋转偏移：骨骼在 X、Y、Z 轴上旋转的角度。
+* Breathing Animation: Add breathing to the upper body.
+* Swaying Animation: Natural back-and-forth swaying of various parts of the body.
+* Overlay Animations Transition Time: The duration of the transition when the overlay animation and override hand pose properties are updated.
+* Additional Bone Offsets: If you want to make the head (or any joint of the body) always tilt a few degrees to one side, you can use this.
+  * Bone: The bone to offset.
+  * Rotation Offset: The angle of rotation on the X, Y, Z axes of the bone.
 
-### 视线 IK
+### Look IK
 
 <div className="hint hint-success">
-**IK 是什么？**IK 是 Inverse Kinematics（反向运动学）的简称，在游戏引擎以及 Warudo 中，IK 可理解为「让模型的某个身体部位试图朝向 / 够到某个空间中的位置」，无需事先由动画师制作骨骼动画。如下所示：
+**What is IK?** IK stands for Inverse Kinematics, and in game engines and Warudo, IK can be understood as "making a part of the model rotate towards, or reach a desired position", without requiring an animation made by an animator. See below:
 
 <img src="/images/image/1_VrBdTPK1tnbacoFares7Dw.gif" alt="来源：https://medium.com/unity3danimation/overview-of-inverse-kinematics-9769a43ba956" data-size="original" />
 </div>
 
-让角色望向场景内的指定目标（例如摄像机）。
+Make the character look at a specified target in the scene (e.g. camera).
 
-* 目标：要望向的目标。必须是场景里的实体，比如[摄像机](../camera.md)、[道具](../prop.md)、[锚点](../anchor.md)等。
-* 整体权重：为 0 时，角色望向原本方向。为 1 时，角色望向指定目标。
-* 眼睛权重：眼睛望向指定目标的权重。
-* 头部权重：头部转向指定目标的权重。
-* 身体权重：身体转向指定目标的权重。
-* 固定眼睛权重：越大，眼睛的移动范围越小。
-* 固定头部权重：越大，头部的旋转范围越小。
-* 固定身体权重：越大，身体的旋转范围越小。
+* Target: The target to look at. Must be an entity in the scene, such as a [camera](../camera.md), [prop](../prop.md), [anchor](../anchor.md), etc.
+* Overall Weight: 0 means the character looks in the original direction. 1 means the character looks at the specified target.&#x20;
+* Eye Weight: How much the eyes should be looking at the specified target.
+* Head Weight: How much the head should be turning to the specified target.
+* Body Weight: How much the body should be turning to the specified target.
+* Clamp Eye Weight: The greater it is, the smaller the range of movement of the eyes.
+* Clamp Head Weight: The greater it is, the smaller the range of rotation of the head.
+* Clamp Body Weight: The greater it is, the smaller the range of rotation of the body.
 
-### 身体 IK
+### Body IK
 
-让角色的脊椎或者四肢跟随场景内的指定目标。
+Make the character's spine or limbs follow a specified target in the scene.
 
-* IK 目标：此身体部位要跟随的目标。必须是场景里的实体，比如[摄像机](../camera.md)、[道具](../prop.md)、[锚点](../anchor.md)等。
-* （未创建临时锚点前）在当前位置创建临时 IK 目标锚点：在此身体部位的当前位置，创建一个临时的[锚点](../anchor.md)资源，把 IK 目标设置为这个锚点，并逐渐淡入 IK。
-* （创建临时锚点后）移除临时 IK 目标锚点：移除给此身体部位创建的临时锚点资源，并逐渐淡出 IK。
+* IK Target: The target that this part of the body should follow. Must be an entity in the scene, such as a [camera](../camera.md), [prop](../prop.md), [anchor](../anchor.md), etc.
+* Create Temporary IK Target Anchor At Current Position: Create a temporary anchor asset at the current position of this part of the body, set the IK target to this anchor, and gradually fade in the IK.
+* Remove Temporary IK Target Anchor: Remove the temporary anchor asset created for this part of the body, and gradually fade out the IK.
 
 <div className="hint hint-success">
-创建临时锚点可以方便地将模型的双手「固定」在空间的理想位置，防止出现因为动捕而双手左右飘的情况，对于一些特定姿势非常实用。
+Creating a temporary anchor allows you to fix the model's hands in an ideal position, preventing the hands from drifting left and right due to head movements. This can be quite useful for some poses.
 
 <div className="video-box"><video controls src="https://user-images.githubusercontent.com/3406505/196039288-aac4e485-c9f9-4686-948e-75f783586b25.mp4" />
-创建锚点前
+Before
 </div>
 
 <div className="video-box"><video controls src="https://user-images.githubusercontent.com/3406505/196039290-13b91459-110d-4706-9c77-3516b1c3b175.mp4" />
-创建锚点后
+After
 </div>
 </div>
 
-* 位置权重：为 0 时，身体部位保留在原本位置；为 1 时，此身体部位将被全力「拉向」目标。
-* 旋转权重：与位置权重类似，但决定身体部位的旋转是否也跟随目标。
-* 肘部目标：肘部（腿的话则是膝盖位置）要跟随的指定目标。
+* Position Weight: At 0, the body part stays in its original position; at 1, the body part will be fully pulled towards the target.
+* Rotation Weight: Similar to the position weight, but determines whether the rotation of the body part will also follow the target.
+* Bend Goal Target: The target that the elbow (or knee, in the case of legs) will follow.
 
 <div>
 
-<figure><img src="/images/image/Warudo_2022-10-16-06-19-19_1024x1024.jpg" alt="" /><figcaption><p>不设置肘部目标</p></figcaption></figure>
+<figure><img src="/images/image/Warudo_2022-10-16-06-19-19_1024x1024.jpg" alt="" /><figcaption><p>Bend goal disabled</p></figcaption></figure>
 
  
 
-<figure><img src="/images/image/Warudo_2022-10-16-06-19-11_1024x1024.jpg" alt="" /><figcaption><p>设置肘部目标</p></figcaption></figure>
+<figure><img src="/images/image/Warudo_2022-10-16-06-19-11_1024x1024.jpg" alt="" /><figcaption><p>Bend goal enabled</p></figcaption></figure>
 
 </div>
 
-* 肘部目标权重：为 0 时，肘部位置不设限制；为 1 时，肘部位置将被全力「拉向」肘部目标。
+* Bend Goal Weight: At 0, the elbow position is completely decided by the IK position; at 1, the elbow position will be fully pulled towards the bend goal target.
 
-### 布娃娃
+### Ragdoll
 
 <div className="hint hint-warning">
-实验功能，暂时不推荐启用。
+Experimental feature. Not recommended for use.
 </div>
 
-### 网格
+### Meshes
 
-模型的网格（Mesh）或蒙皮网格（Skinned Mesh）信息。
+Toggle meshes and skinned meshes on the model.
 
-* 列表元素：
-  * 显示：是否显示此网格。
+* Visible: Whether the mesh should be visible.
 
 <div className="hint hint-info">
-[VRoid Studio](https://vroid.com/en/studio) 导出的模型只有身体 `Body` 和脸部 `Face` 两个网格。更为精细的模型可能会将角色的衣服、配饰、尾巴、兽耳等拆分为单独的网格。
+Models exported by [VRoid Studio](https://vroid.com/en/studio) only have two meshes: `Body` and `Face`. More detailed models often split the character's clothes, accessories, tail, animal ears, etc. into separate meshes.
 </div>
 
-## 示例
+## Examples
 
-### 模型现在的姿势太阳刚了 / 太娇柔了 / 手臂陷进身体里了 / 手臂离身体太远了。
+### The model's pose is too aggressive / too soft / the arms are sinking into the body / the arms are too far away from the body.
 
-可以设置**额外骨骼偏移**。肩膀两个关节的旋转角度其实意外地影响对角色性格的观感哦！
+Try setting the additional bone offsets. The rotation angle of the two shoulder joints actually quite affects the perception of the character's personality!
 
-![没有设置额外骨骼偏移](https://user-images.githubusercontent.com/3406505/180982590-df02732d-8a8f-450c-b867-152ee1a8a99b.png) ![设置了两侧肩膀的额外骨骼偏移：LeftShoulder:(10, 0, -10)、RightShoulder:(10, 0, 10)](https://user-images.githubusercontent.com/3406505/180982518-3f25328e-2ec9-4021-bb4e-8b4981053913.png)
+![Additional bone offsets disabled](https://user-images.githubusercontent.com/3406505/180982590-df02732d-8a8f-450c-b867-152ee1a8a99b.png) ![Additional bone offsets enabled：LeftShoulder:(10, 0, -10), RightShoulder:(10, 0, 10)](https://user-images.githubusercontent.com/3406505/180982518-3f25328e-2ec9-4021-bb4e-8b4981053913.png)
 
-### 我想设置切换网格（衣服、配饰……）的快捷键。
+### **I want to set up** a shortcut key **for toggling meshes (clothing, accessories, etc.).**
 
-创建一个新蓝图（或者打开现有的蓝图），如下设置即可：
+To do this, create a new blueprint (or open an existing one) and setup like below:
 
-![](https://user-images.githubusercontent.com/3406505/180983592-a0690af4-19c1-4476-99a9-44cf2e9885b6.png)
+<img src="/images/image(3)(4).jpg" alt="" data-size="original" />
 
-### 我想设置切换待机动画的快捷键。
+### I want to set up a shortcut key for switching the idle animation.
 
-创建一个新蓝图（或者打开现有的蓝图），如下设置即可：
+To do this, create a new blueprint (or open an existing one) and setup like below:
 
-![](https://user-images.githubusercontent.com/3406505/180984078-8fa99cdd-0ef9-46c1-9c83-24f82843181f.png)
+![](</images/image(2)(3)(2).jpg>)
 
-### 我设置好了角色的待机动画，但我想微调姿势。/ 我设置好了角色的待机动画，但我想固定住双手，不会跟着身子晃动。/ ……
+### I've set up my character's idle animation, but I want to make a small adjustment to the posture. / I've set up my character's idle animation, but I want to fix their hands so they don't sway with the body. / ...
 
-可以配置**身体IK**。一个完整的例子（第一人称式自拍效果）可参见[锚点](https://tiger-tang.gitbook.io/warudo/assets/anchor)的介绍。
+You can configure body IK. An example (taking a selfie) can be found on [anchor](../anchor.md)'s page.

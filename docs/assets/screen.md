@@ -1,40 +1,39 @@
 ---
 sidebar_position: 60
 ---
+# Screen
 
-# 屏幕
+Capture your desktop or a window and display it in the scene just like OBS. You can also display images and even webpages!
 
-像 OBS 一样实时捕捉桌面或者特定窗口，在场景内显示。还可以显示图片甚至网页哦！
+![Curved screens!](https://user-images.githubusercontent.com/3406505/191217373-999ec1ec-e086-4e55-b6b6-48575b09d02f.png)
 
-![支持曲面屏！](https://user-images.githubusercontent.com/3406505/191217373-999ec1ec-e086-4e55-b6b6-48575b09d02f.png)
+<figure><img src="/images/image(2)(1)(4).jpg" alt="" /><figcaption><p>Live chat in 3D!</p></figcaption></figure>
 
-<figure><img src="/images/Z%$N2}SW5{W2N8V2P_W[HMT.png" alt="" /><figcaption><p>3D 版弹幕姬！</p></figcaption></figure>
+## Properties
 
-## 属性
+* Content Type: Display / Window / Browser / Image.
+  * Display:
+    * Display: The desktop to be displayed.
+  * Window:
+    * Window: The window to be displayed.
+  * Browser:
+    * URL: The URL of the webpage to be displayed.
+    * Reload Page: Reload the currently loaded webpage.
+    * Pixel Size: The render size of the browser in pixels.
+    * Allow Transparent Background: Allows the background of the webpage to be transparent when enabled.
+    * Custom CSS: [CSS stylesheet](https://developer.mozilla.org/en-US/docs/Web/CSS) that will be inserted into the webpage after loading.
+  * Image:
+    * Image Source: The image to be displayed. Supports JPG, PNG, GIF, and WEBP formats, and supports transparency.
 
-* 显示内容：桌面 / 窗口 / 浏览器 / 图片。
-  * 桌面：
-    * 桌面：要显示的桌面。
-  * 窗口：
-    * 窗口：要显示的窗口。
-  * 浏览器：
-    * URL：要显示的网页 URL。
-    * 刷新页面：刷新当前加载的网页。
-    * 像素大小：浏览器的渲染大小，单位为像素。
-    * 允许透明背景：开启后，将允许网页的背景为透明。
-    * 自定义 CSS：网页加载后植入的 [CSS 样式](https://developer.mozilla.org/docs/Web/CSS)。
-  * 图片：
-    * 图片源：要显示的图片。支持 JPG、PNG、GIF、WEBP 格式；支持透明度。
+### Appearance
 
-### 外观
-
-* 弯曲：屏幕是否弯曲。
-* 弯曲半径：屏幕弯曲的半径。半径越小，弯曲幅度越大。
-* 裁剪：对屏幕四个边进行裁剪。
-* 圆角半径：让屏幕的四个角变为圆角。
-* 厚度：屏幕的厚度。屏幕侧面将显示捕捉桌面 / 窗口的边缘颜色。
-* 色调：屏幕的总体色调。A（透明度）小于 1 时，屏幕将变为半透明。
-* 使用色键：是否启用色键，将屏幕中对应的颜色变为透明。
-* 色键颜色：色键的颜色。
-* 接受光照：屏幕是否受场景内光照影响。
-  * 开启时，可调整屏幕材质的平滑度、金属性及自发光参数。
+* Bend: Whether the screen is curved.
+* Bend Radius: The radius of the screen's curvature. The smaller the radius, the greater the curvature.
+* Thickness: The thickness of the screen. The side of the screen will display the edge color of the captured desktop / window.
+* Crop: Crop the four sides of the screen.
+* Corner Radius: Make the four corners of the screen rounded.
+* Tint: The overall hue of the screen. When A (alpha) is less than 1, the screen will become semi-transparent.
+* Use Chroma Key: Whether chroma key is enabled, which will make the corresponding color in the screen transparent.
+* Chroma Key Color: The color of the chroma key.
+* Receive Lighting: Whether the screen is affected by lighting in the scene.
+  * When enabled, the smoothness, metallic, and emissive parameters of the screen material can be adjusted.

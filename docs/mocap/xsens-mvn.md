@@ -1,28 +1,26 @@
 ---
 sidebar_position: 100
-sidebar_label: Xsens MVN
 ---
 
 # Xsens MVN
 
-由 [Xsens MVN Analyze/Animate](https://base.xsens.com/s/motion-capture-mvn-software?language=en\_US) 发送全身动捕数据到 Warudo。
+Body tracking via [Xsens MVN Analyze/Animate](https://base.xsens.com/s/motion-capture-mvn-software?language=en\_US).
 
-## 教程
+## Setup
 
-打开 Xsens MVN -> Options -> Network Streamer，如下图配置即可。
+Open Xsens MVN -> Options -> Network Streamer and configure as shown below.
 
-![](</images/image(5).jpg>)
+![](</images/image(9)(1)(1).jpg>)
 
 <div className="hint hint-warning">
-注意，你需要 MVN Animate Plus 或者 Pro 订阅才能使用 Network Streamer 功能。
+Note: You need an MVN Animate Plus or Pro subscription to use the Network Streamer feature.
 </div>
 
 <div className="hint hint-info">
-更多详情请参阅[官方文档](https://base.xsens.com/s/article/MVN-Unity-Live-Plugin?language=en\_US)。
+For more details, see the [official documentation](https://base.xsens.com/s/article/MVN-Unity-Live-Plugin?language=en\_US).
 </div>
 
-## 属性
+## Properties
 
-* 端口：Xsens MVN 使用的端口（见上图）。默认为 9763。
-* 演员 ID：要接收的 Xsens 演员（Actor）的 ID。默认为 1。
-
+* Port: The port used by Xsens MVN (as shown in the above picture). The default is 9763.
+* Actor ID: The ID of the Xsens Actor to receive. The default is 1.

@@ -2,23 +2,23 @@
 sidebar_position: 80
 ---
 
-# 光源
+# Light
 
-场景内的光源，目前支持平行光源和点光源。
+Directional lights and point lights!
 
 <div className="hint hint-info">
-光源资源适合用来打角色光，或对原有[环境](https://tiger-tang.gitbook.io/warudo/assets/environment)打光作调整。如果光源数量较多且位置固定，建议直接在 Unity 内设置，并用 [Warudo SDK](https://tiger-tang.gitbook.io/warudo/advanced/sdk) 导出环境。
+Light assets are great for illuminating characters or adjusting existing environmental lighting. If you have a large number of light assets in fixed positions, it is probably worthwhile to set them up directly in Unity and export the [environment ](environment.md)with the [Warudo SDK](../modding/mod-sdk.md).
 </div>
 
-## 属性
+## Properties
 
-* 颜色：光照的颜色。
-* 强度：光照的强度。
-* 是否影响角色：光照是否影响[角色](https://tiger-tang.gitbook.io/warudo/assets/character)。
-* 是否影响道具：光照是否影响[道具](https://tiger-tang.gitbook.io/warudo/assets/prop)。
-* 是否影响环境：光照是否影响[环境](https://tiger-tang.gitbook.io/warudo/assets/environment)。
+* Color: The color of the light.
+* Intensity: The intensity of the light.
+* Affect Characters: Whether the light affects characters.
+* Affect Props: Whether the light affects props.
+* Affect Environment: Whether the light affects the environment.
 
-### 阴影
+### Shadows
 
-* 强度：阴影的强度。
-* 软阴影：是否模糊阴影的边缘。
+* Intensity: The intensity of the shadow.
+* Soft Shadows: Whether to blur the edges of the shadow.

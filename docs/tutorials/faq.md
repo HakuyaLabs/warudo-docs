@@ -1,48 +1,39 @@
----
-sidebar_position: 20
-sidebar_label: 常见问题
----
+# Frequently Asked Questions
 
-# 常见问题
+## Warudo's frame rate drops dramatically when running simultaneously with other 3D applications/games (e.g., Apex Legends).
 
-## **Warudo 和其他 3D 应用程序 / 游戏（例如：Apex Legends）同时运行时，帧率会骤降。**
+This is because the other 3D application/game are using most of the GPU resources. You can run Warudo in administrator mode and turn on "Increased GPU Priority" in "Settings" -> "Core".
 
-这是因为其他 3D 应用程序 / 游戏占用了大部分 GPU 资源。可以使用管理员模式运行 Warudo，并开启「设置」->「Core」->「提高 GPU 优先级」。
+To run Warudo in administrator mode, go to your Steam library, right-click on Warudo and select "Manage" -> "Browse local files":
 
-首先在 Steam 库中找到 Warudo，右键「管理」->「浏览本地文件」：
+![](</images/image(71).jpg>)
 
-<figure><img src="/images/image(13).jpg" alt="" /><figcaption></figcaption></figure>
+Right click on Warudo.exe and click on "Properties":
 
-右键 Warudo.exe，选择「属性」：
+![](</images/image(27).jpg>)
 
-![](</images/image(4).jpg>)
+Then go to the "Compatibility" tab, check "Run this program as an administrator", and click "OK".
 
-在「兼容」标签页，勾选「以管理员身份运行此程序」，然后点击确定。
+![](</images/image(72).jpg>)
 
-![](/images/\_27MS4AQAI\_H\`L9@%5BRX$P.png)
+Open Warudo and go to "Settings" -> "Core" -> "Advanced" -> "Increase GPU Priority", then select "Yes".
 
-打开 Warudo，左下角「🚀」->「设置」->「Core」->「进阶」->「提高 GPU 优先级」选择「是」即可。
-
-<figure><img src="/images/image(2)(1).jpg" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(70).jpg" alt="" /><figcaption></figcaption></figure>
 
 <div className="hint hint-warning">
-与此相对地，这会导致其他 3D 应用程序 / 游戏的帧率下降。你可以尝试缩小 Warudo 的主窗口（注意不是最小化），或者降低 Warudo 的渲染帧率（「设置」->「Core」->「画面」->「限制帧数」），直到 Warudo 和其他 3D 应用程序 / 游戏的帧率变得可接受为止。
+Increased GPU priority for Warudo can in turn result in decreased frame rates for other 3D applications/games running simultaneously. You can try shrinking the Warudo window (not minimizing to the taskbar) or lowering the rendering frame rate in Warudo ("Settings" -> "Core" -> "Graphics" -> "Limit FPS") until the frame rate for both Warudo and other 3D applications/games becomes acceptable.
 </div>
 
 <div className="hint hint-info">
-在 Intel i9-9900k + NVIDIA RTX 2080 Ti 的配置下，以 1080p 分辨率运行 Warudo（模型以 NiloToon 渲染，使用高精度 3D [环境](../assets/environment.md)作为背景）和《艾尔登法环》（高画质），并且开启 OBS  1080p 录制，帧率稳定在 45 帧左右。
+On an Intel i9-9900k + NVIDIA RTX 2080 Ti configuration, running Warudo at 1080p resolution (with a NiloToon-rendered model and a high-precision 3D [environment ](../assets/environment.md)as the background) and playing Elden Ring at high graphics settings, with OBS recording at 1080p, the frame rate stays stable at around 45 FPS.
 </div>
 
-## 选择了动作捕捉的摄像头，但是摄像头没有开启 / 画面是黑色的。
+## I have selected a camera for motion capture, but my camera does not turn on / camera feed is black.&#x20;
 
-部分杀毒软件会禁止非白名单内的程序调用摄像头，比如[火绒](https://www.huorong.cn/)。请关闭杀毒软件的摄像头防护功能，或者将 Warudo 加入白名单。
+Some antivirus software may block programs that are not on their whitelist from accessing the camera. Please disable the camera protection function of your antivirus software, or add Warudo to the whitelist.
 
-另外需要注意，Warudo 目前不支持 IP 摄像头（比如 [DroidCam](https://play.google.com/store/apps/details?id=com.dev47apps.droidcam)）。
+Also note that Warudo currently does not support IP cameras (such as [DroidCam](https://play.google.com/store/apps/details?id=com.dev47apps.droidcam)).
 
-## 我安装了 Spout 插件，但是在 OBS 找不到 Spout 的选项。
+## I need other help!
 
-请检查你是否安装了 [PrprLive](https://store.steampowered.com/app/1279610/PrprLive/) 的透明捕捉插件。此插件是基于较旧版本的 Spout 插件开发的，功能上并无区别（只是修改了名字）。你可以直接使用 PrprLive 的捕捉来捕捉 Warudo，不过更推荐在 OBS 的插件（Plugins）文件夹中删除 prpr-library.dll，即可使用 Spout 原版插件。
-
-## **我需要其他帮助！**
-
-请加入我们的 [Discord](https://discord.gg/Df8qYYBFhH)、QQ 群（757419380），或者联系 [tiger@warudo.app](mailto:tiger@warudo.app)。
+Please join our [Discord](https://discord.gg/Df8qYYBFhH), or contact [tiger@warudo.app](mailto:tiger@warudo.app).

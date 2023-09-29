@@ -1,52 +1,48 @@
----
-sidebar_position: 20
----
+# Character Mod
 
-# 角色 Mod
-
-Warudo 支持任意 Humanoid Rig 作为[角色](https://tira.gitbook.io/warudo/assets/character)的模型源。
+Warudo can use any Unity humanoid rig as a [character](../assets/character/)'s source.
 
 <div className="hint hint-info">
-如果模型未设置成 Humanoid Rig，在 Unity 的模型导入选项设置模型的 Animation Type（动画类型）为 Humanoid，点击 Apply（应用）即可。
+If your model is not set to humanoid rig, go to the model import options in Unity and set the model's "Animation Type" to Humanoid, then click Apply.
 
 <img src="https://user-images.githubusercontent.com/3406505/181214148-1af8aea4-d1ea-43b3-9ff2-3ae2de54fd92.png" alt="" data-size="original" />
 </div>
 
-Warudo 原生支持的组件：
+Warudo is compatible with the following components:
 
-* [VRM](https://vrm.dev/en/univrm/) 的组件
+* [VRM](https://vrm.dev/en/univrm/) compnents
 * [Dynamic Bones](https://assetstore.unity.com/packages/tools/animation/dynamic-bone-16743) 1.3.2
-* [VRC PhysBones](https://docs.vrchat.com/docs/physbones)（会在运行时被转换为 Dynamic Bones）
+* [VRC PhysBones](https://docs.vrchat.com/docs/physbones) (Automatically converted to Dynamic Bones at runtime)
 * [Magica Cloth](https://assetstore.unity.com/packages/tools/physics/magica-cloth-160144) 1.12.11
 
 <div className="hint hint-success">
-由于 Warudo 支持将 C# 脚本打包进 Mod 内，你可以随意添加其他第三方组件，不过有部分[限制](https://tira.gitbook.io/warudo/advanced/mod-sdk)。
+Since Warudo allows you to package C# scripts into your mod, you can add any third-party components as you like; but be aware of certain [limitations](https://tira.gitbook.io/warudo/advanced/mod-sdk).
 </div>
 
-## 前置条件
+## Prerequisites
 
-1. 如果模型是外部导入的（例如 FBX 模型），需要确认导入设置的 R/W Enabled 为勾选状态。
+1. If you have an imported model (such as a FBX model), make sure "R/W Enabled" is checked in the import settings.
 
 ![](</images/image(49).jpg>)
 
-2\. 模型 GameObject 上必须有 [Animator](https://docs.unity3d.com/ScriptReference/Animator.html) 组件。
+2\. You must put an [Animator](https://docs.unity3d.com/ScriptReference/Animator.html) on your character GameObject. If you imported a FBX or VRM, it should already have it.
 
-## 自动配置（推荐）
+## Automatic Setup (Recommended)
 
-放置角色在场景里，确保选中了 GameObject，然后选择「Warudo」->「Setup Character...」->「Setup selected GameObject as character mod」。
+Place your character in the scene and select it. Select "Warudo" -> "Setup Character..." -> "Setup selected GameObject as character mod."
 
-<img src="/images/image(47).jpg" alt="" data-size="original" />
+<img src="/images/image(48).jpg" alt="" data-size="original" />
 
-等待片刻后，即可看到名为 **Character** 的 Prefab 出现在 Mod 文件夹里：
+Wait for a little bit, and you should see a prefab named **"Character"** is generated in the mod folder:
 
 ![](https://user-images.githubusercontent.com/3406505/181228083-83ebe786-c7d4-4e24-8021-8dddeb95505b.png)
 
-选择「Warudo」->「Build Mod」，然后将生成的 `.warudo` 文件放进 Warudo 数据文件夹的 Characters 子文件夹里即可。
+Select "Warudo" -> "Build Mod" and place the generated `.warudo` file into the Characters subfolder in the Warudo data folder.
 
-## 手动配置
+## Manual Setup
 
-如果出于某种原因，自动配置无法正常运作，你也可以命名任意角色 Prefab 为 **Character**，并确保放在 Mod 文件夹内（可以放在任意子文件夹），然后选择「Warudo」->「Build Mod」，将生成的 `.warudo` 文件放进 Warudo 数据文件夹的 Characters 子文件夹里即可。
+In case the automatic setup fails for some reason (e.g., bones become twisted), you can still create a new character mod manually by naming any character prefab as **"Character"** and placing it in the mod folder (can also be placed in a subfolder). Then, select "Warudo" -> "Build Mod" and place the generated `.warudo` file into the Characters subfolder in the Warudo data folder.
 
 <div className="hint hint-info">
-手动配置且角色使用 [Magica Cloth](https://assetstore.unity.com/packages/tools/physics/magica-cloth-160144) 的情况下，必须（导入 Unity 之前）保证模型的骨骼在 T-pose 下，关节的旋转均为 0。否则导入到 Warudo 后，Magica Cloth 将无法正常运作。
+If you do the manual setup and your character uses [Magica Cloth](https://assetstore.unity.com/packages/tools/physics/magica-cloth-160144), it is essential to ensure that the model's skeleton is in the T-pose and all bone rotations are 0 before importing it into Unity. Failure to do so will cause Magica Cloth to malfunction in Warudo.
 </div>

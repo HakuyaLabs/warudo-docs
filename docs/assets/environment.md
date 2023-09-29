@@ -2,17 +2,16 @@
 sidebar_position: 70
 ---
 
-# 环境
+# Environment
 
-即所谓的「3D 背景」。Warudo 中的环境可以是**任意** Unity 场景；只要使用 [Mod SDK](https://tiger-tang.gitbook.io/warudo/advanced/sdk) 导出为 `.warudo` 格式，即可加载到 Warudo 中。
+Often referred to as a "3D background," the environment in Warudo can be any Unity scene, as long as it is exported to `.warudo` format using the [Mod SDK](../modding/mod-sdk.md).
 
-![内置的温泉环境](https://user-images.githubusercontent.com/3406505/181154345-489cc249-a496-4971-93eb-b2e042974447.png)
+![The Onsen](https://user-images.githubusercontent.com/3406505/181154345-489cc249-a496-4971-93eb-b2e042974447.png)
 
-## 属性
+## Properties
 
-* 启用实时光源：是否启用环境内的实时光源。
+* Enable Realtime Lights: Whether to enable the realtime lighting in the environment.
 
 <div className="hint hint-warning">
-如果场景的光照看上去不太对，请尝试「🚀」->「重启场景」。
+If the lighting in the scene doesn't look quite right, try "🚀" -> "Restart Scene."
 </div>
-

@@ -1,44 +1,41 @@
 ---
 sidebar_position: 20
 ---
+# Prop
 
-# 道具
+Props are any 3D models that can be placed freely within a scene or can be attached to a character's bones to serve as accessories. Besides the built-in models, external models can be exported as `.warudo` format using the [Mod SDK](../modding/mod-sdk.md) and then loaded into Warudo.
 
-道具是场景内自由摆放的任意 3D 模型；也可以绑定在角色骨骼上，实现配饰的效果。除了自带的模型外，外部的模型可以使用 [Mod SDK](https://tiger-tang.gitbook.io/warudo/advanced/sdk) 导出为 `.warudo` 格式，即可加载到 Warudo 中。
-
-![猫猫手](https://user-images.githubusercontent.com/3406505/181151662-19455655-55ec-4a9f-9151-233db085c001.png)
+![Cat paws](https://user-images.githubusercontent.com/3406505/181151662-19455655-55ec-4a9f-9151-233db085c001.png)
 
 <div className="video-box"><video controls src="https://user-images.githubusercontent.com/3406505/196042139-45994180-aef4-4a9b-8208-592edc280b8d.mp4" />
-利用道具资源以及角色配件设置实现的玫瑰 + 指尖粒子效果。
+The rose and fingertip particle effect are achieved using prop assets and character attachment settings.
 </div>
 
-## 属性
+## Properties
 
-* 源：模型文件的路径。
+* Source: The path to the model file.
 
-### 角色配件
+### Character Attachment
 
-* 角色：设置道具绑定的角色。绑定后，道具会跟随角色移动。
-* 绑定类型：道具绑定的方式。
-  * 人体骨骼：
-    * 绑定骨骼：道具绑定的人体骨骼。
-    * （绑定骨骼为左手 / 右手时）覆盖手势：道具启用时，模型手部应该摆出的姿势。
-      * 权重：姿势的权重，即模型手部根据姿势移动的幅度。
-  * 变换路径：
-    * 绑定变换路径：道具绑定的变换在模型层级中的相对路径，用来将道具绑定在非标准 Unity Humanoid 人体骨骼（例如模型的尾巴上）。
+* Character: The character that the prop is set to attached to. Once attached, the prop will follow the character's movement.
+* Attachment Type: The way the prop is attached.
+  * Human Body Bone:
+    * Attach To Bone: Which human bone the prop is attached to.
+    * (When attached to either hand) Override Hand Pose: The pose that the model's hand should transition into when the prop is enabled.
+      * Weight: The weight of the hand pose, or the extent to which the model's hand moves according to the pose.
+  * Transform Path:
+    * Attach To Transform Path: The relative path of the transform in the model's hierarchy that the prop is attached to, used to attach the prop to a non-standard bone (e.g. the tail bone of the model).
 
-### 网格
+### Mesh
 
-* 默认 BlendShape 列表：模型默认设置的 BlendShape。
-  * 列表元素：
-    * 目标蒙皮网格：BlendShape 位于的蒙皮网格（Skinned Mesh）。
-    * BlendShape：要设置的 BlendShape。
-    * 默认值：BlendShape 的默认值。
-* 默认材质属性（实验性功能）：模型默认设置的材质属性。
-* 网格：模型的网格（Mesh）或蒙皮网格（Skinned Mesh）信息。
-  * 列表元素：
-    * 显示：是否显示此网格。
+* Default BlendShapes: The default model blendshapes.
+  * Target Skinned Mesh: The skinned mesh that the blendshape is located on.
+  * BlendShape: The blendshape to be set.
+  * Default Value: The default value of the blendshape.
+* Default Material Properties (Experimental Feature): The default material properties.
+* Meshes: The meshes and skinned meshes on the model.
+  * Visible: Whether or not the mesh is visible.&#x20;
 
 <div className="hint hint-info">
-道具的位置和旋转可以在主窗口中使用 Gizmo 进行调整。
+The position and rotation of the prop can be adjusted using the transform gizmo in the main window.
 </div>

@@ -1,38 +1,38 @@
 ---
 sidebar_position: 10
-sidebar_label: 动作捕捉方案一览
 ---
 
-# 动作捕捉方案一览
+# Overview
 
-Warudo 针对家用 3D 特别优化，同时也支持主流的专业动作捕捉方案。
+Warudo supports both at-home use with budget motion capture as well as professional use in motion capture studios.
 
-## 家用方案
+## At-Home
 
-* 我有一台 iPhone / iPad：
-  * 我更在乎易用性，或者我没有广角摄像头：[RhyLive](rhylive.md) + [RhyLive](rhylive.md)。
-  * 我更在乎表现力，并且我有广角摄像头：[iFacialMocap ](ifacialmocap.md)+ [MediaPipe](mediapipe.md)。
-
-<div className="hint hint-info">
-你的模型师是否为模型适配了 ARKit 的 52 个面捕表情（又称「完美同步」）？基于 ARKit 面捕的表情要比 OpenSeeFace 灵动得多，可以极大提升模型的表现力。
-</div>
-
-* 我没有 iPhone / iPad：[OpenSeeFace](openseeface.md) + [MediaPipe](mediapipe.md)。
+* I have an iPhone or iPad：
+  * I am all for convenience or I don't have a webcam: [RhyLive](rhylive.md) + [RhyLive](rhylive.md).
+  * I want my avatar to be more expressive and I have a wide-angle webcam: [iFacialMocap ](ifacialmocap.md)+ [MediaPipe](mediapipe.md).
 
 <div className="hint hint-info">
-如果你没有 iOS 设备的话，可以考虑入手一台二手的 iPhone X。这是最便宜又支持面容 ID 的 iOS 设备。
+Is your avatar compatible with [the 52 ARKit blendshapes](https://arkit-face-blendshapes.com/) ("Perfect Sync")? ARKit-based face tracking are much more expressive, so it is highly recommended.
 </div>
 
-* 我想使用第三方软件的动作捕捉数据（VR 等）：[VMC ](vmc.md)/ [iFacialMocap ](ifacialmocap.md)+ [VMC](vmc.md)。
+* I don't have an iPhone or iPad: [OpenSeeFace](openseeface.md) + [MediaPipe](mediapipe.md).
+
+<div className="hint hint-info">
+If you do not have an iOS device and looking to buy one but do not have much budget for it, look into a used iPhone X. It is the cheapest iOS device compatible with ARKit / Face ID.
+</div>
+
+* I would like to use other motion capture software: [VMC ](vmc.md)/ [iFacialMocap ](ifacialmocap.md)+ [VMC](vmc.md).
 
 <div className="hint hint-success">
-除了家用 VR 设备以外，许多动捕设备都有第一方或第三方的 VMC 支持，例如 [Mocopi](https://www.sony.jp/mocopi/)、[Perception Neuron](https://github.com/emilianavt/VSeeFaceManual#perception-neuron-tracking)、[Rokoko](https://twitter.com/Kana\_Fuyuko/status/1521809776354680832)，所以都可以接入 Warudo。
+Many motion capture hardware, in addition to home VR, have first or third-party VMC support, such as [Mocopi](https://www.sony.jp/mocopi/) and [Perception Neuron](https://github.com/emilianavt/VSeeFaceManual#perception-neuron-tracking).
 </div>
 
-## 专业方案
+## Professional
 
-* 兼容 [VMC 协议](https://protocol.vmc.info/english)的动捕系统（[Perception Neuron](https://github.com/emilianavt/VSeeFaceManual#perception-neuron-tracking)、[Rokoko](https://twitter.com/Kana\_Fuyuko/status/1521809776354680832) 等）：[VMC ](vmc.md)/ [iFacialMocap ](ifacialmocap.md)+ [VMC](vmc.md)。
-* [Xsens MVN](xsens-mvn.md)
-* 以下方案需要定制，详情请联系 [tiger@warudo.app](mailto:tiger@warudo.app)。
-  * 兼容 [VRPN ](https://github.com/vrpn/vrpn)的动捕系统（[青瞳视觉](https://digi-human.com) Avatar Lite、[OptiTrack ](https://optitrack.com/)等）
+* [Rokoko](rokoko.md)
+* [Xsens MVN](mocap/xsens-mvn)
+* Motion capture systems compatible with the [VMC protocol](https://protocol.vmc.info/english): ([Perception Neuron](https://github.com/emilianavt/VSeeFaceManual#perception-neuron-tracking), etc.): [VMC ](vmc.md)/ [iFacialMocap ](ifacialmocap.md)+ [VMC](vmc.md).
+* For the following and other options, a private Warudo build is required. Please contact [tiger@warudo.app](mailto:tiger@warudo.app) for details.
+  * Motion capture systems with [VRPN ](https://github.com/vrpn/vrpn)([Chingmu](https://digi-human.com) Avatar Lite, [OptiTrack](https://optitrack.com/), etc.）
   * [Manus Core](https://www.manus-meta.com/knowledge-products/manus-core)

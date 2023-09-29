@@ -2,52 +2,52 @@
 sidebar_position: 20
 ---
 
-# 概览
+# Overview
 
-**蓝图**是 Warudo 提供的灵活而强大的可视化脚本系统，让没有编程基础的人也可以使用通常仅面向程序员的概念和工具，为 VTuber 角色配置出独一无二的动画和互动效果。蓝图可以在 Warudo 的配置窗口中创建与编辑，所有更改会被实时反映在场景中。
+**Blueprints** in Warudo is a flexible and powerful visual scripting system that allows even those without programming backgrounds to utilize concepts and tools that are typically reserved for programmers, creating unique animations and interactive effects for VTuber avatars. Blueprints can be created and edited within Warudo's configuration window, and all changes are reflected in realtime in the scene.
 
 <div className="hint hint-success">
-与其他提供脚本系统的软件不同，蓝图系统并非可有可无的玩具功能，而是 Warudo 至关重要的架构核心——[Warudo 的动作捕捉逻辑便是用蓝图系统实现的](mocap-nodes.md)！这保证了蓝图系统会不断更新迭代，提供更为丰富的节点类型，让你可以排列组合出无限可能。[你也可以通过 Mod SDK 创建新的节点类型。](../modding/mod-sdk.md)
+The blueprint system in Warudo is not just a novelty. Rather, it is a crucial part of Warudo's architecture: [motion capture in Warudo is implemented completely with blueprints.](mocap-nodes.md) This ensures that the blueprint system will continue to be updated and improved, providing more and more node types for you to combine in endless ways. You can also create new node types through the [Mod SDK](../modding/mod-sdk.md).
 </div>
 
-点击配置窗口左侧的蓝图按钮即可进入蓝图页。如果你刚刚创建了一个场景，那么场景内是没有蓝图的。
+To browse the blueprints in the current scene, simply click the "Blueprints" button on the left side of the configuration window. If you have just created a scene, there won't be any blueprints in it.
 
-<figure><img src="/images/image(1)(1)(1)(1).jpg" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(5)(1).jpg" alt="" /><figcaption></figcaption></figure>
 
-点击左下角的 + 号即可创建蓝图：
+To create a blueprint, click the + icon in the lower left corner:
 
-<figure><img src="/images/image(2)(1)(2)(1).jpg" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(7)(1)(3).jpg" alt="" /><figcaption></figcaption></figure>
 
-<figure><img src="/images/image(5)(1)(1)(1)(1).jpg" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(4)(1)(5).jpg" alt="" /><figcaption></figcaption></figure>
 
-每张蓝图由**节点**以及**连接**组成。连接分为两种：<mark style={{color: "green"}}>**流程连接**</mark>（<mark style={{color: "green"}}>绿色</mark>）以及**数据连接**（黑色），而每个节点可以有流程 / 数据的入口以及流程 / 数据的出口。
+Each blueprint is comprised of **nodes** and **connections**. Connections come in two types: <mark style={{color: "green"}}>**flow connections**</mark> (<mark style={{color: "green"}}>**green**</mark>) and **data connections** (**black**), while each node can have both flow and data inputs and outputs.
 
-要创建新的节点，在控制板拖拽想要的节点到中间即可。创建连接则是按下入口 / 出口，然后拖拽到别的节点的出口 / 入口上。以下是一个简单的蓝图例子：**按下 Esc 时，主摄像机会晃动一下。**
+To create a new node, simply drag the desired node from the palette (right) to the node editor (center). To create a connection, press the input/output and then drag it to another node's output/input. Here's a simple blueprint example: **when the Esc key is pressed, the main camera will shake.**
 
-<figure><img src="/images/image(4)(1)(1).jpg" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(2)(1)(1).jpg" alt="" /><figcaption></figcaption></figure>
 
-<mark style={{color: "green"}}>**流程连接**</mark>决定节点执行的先后顺序。以上图为例，在「当按下键盘按键时」被执行后，「晃动摄像机」便会被执行。
+<mark style={{color: "green"}}>**Flow connections**</mark> determine the order in which the nodes are executed. In the example above, after "On Keystroke Pressed" is executed, "Shake Camera" will be executed next.
 
-**数据连接**负责在节点之间传送数据。一个节点被执行时，该节点的所有数据入口会被解析。以上图为例，「晃动摄像机」被执行时，由于「摄像机」数据入口连接到了「获得主摄像机 -> 摄像机」数据出口，「摄像机」将被设置为主摄像机。所以，晃动的就是主摄像机（而不是其他的摄像机）。
+**Data connections** are responsible for transmitting data between nodes. When a node is executed, all of its data inputs are evaluated. In the example above, when "Shake Camera" is executed, "Camera" will be set to the main camera because the "Camera" data input is connected to the "Get Main Camera -> Camera" data output. So it's the main camera that will shake, not any other camera.
 
-**数据连接两端的数据类型必须兼容。**以上图为例，你不可以将「获得主摄像机 -> 摄像机」（数据类型：摄像机）连接到「晃动摄像机 -> 持续时间」（数据类型：小数）。
+**Note that the data types of the two ends of a data connection must be compatible.** In the example above, you cannot connect "Get Main Camera -> Camera" (data type: camera) to "Shake Camera -> Sustain Time" (data type: float).
 
 <div className="hint hint-success">
-并不是所有的数据入口都需要连接到数据出口。以上图为例，像「持续时间」这样的数据可以直接在节点上进行设置。
+Not all data inputs require a connection to a data output. For example, data such as "Sustain Time" can be set directly on the node.
 </div>
 
 <div className="hint hint-info">
-一个流程入口可以连接到多个流程出口，但一个流程出口仅可以连接到一个流程入口。否则，就无法判断应该先执行哪个节点。
+A flow input can connect to multiple flow outputs, but a flow output can only connect to one flow input. Otherwise, it would be unclear which node should be executed first.&#x20;
 
-一个数据出口可以连接到多个数据入口，但一个数据入口仅可以连接到一个数据出口。否则，就无法判断数据应该从哪个节点传送过来。
+A data output can connect to multiple data inputs, but a data input can only connect to one data output. Otherwise, it would be unclear from which node the data should be transmitted.
 </div>
 
-蓝图可以在侧边栏中被禁用。禁用蓝图后，蓝图内的节点不会收到事件。以上图为例，如果蓝图被禁用，即使按下 Esc 键，由于「当按下键盘按键」节点不会收到事件，流程便不会被执行，摄像机也不会晃动。
+The blueprint can be disabled in the sidebar (left). When the blueprint is disabled, the nodes in the blueprint will not receive events. For example, in the above picture, even if the Esc key is pressed, the "On Keystroke Pressed" node will not receive an event and the flow will not be executed, and as a result the camera will not shake.
 
 <div className="hint hint-info">
-如何判断流程是否被执行，或数据是否在传输？可以通过连接上是否有小球在滚动来判断。
+You can determine if a flow is being executed or if data is being transmitted by checking if there's a ball rolling on the connection:
 
-<img src="/images/image(6)(1)(1)(1).jpg" alt="" data-size="original" />
+![](</images/image(6)(4).jpg>)
 </div>
 
-接下来，让我们来看看蓝图有什么常用节点吧。
+Let's take a look at some of the common nodes used in Warudo's blueprint system.

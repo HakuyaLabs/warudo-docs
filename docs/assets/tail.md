@@ -2,58 +2,59 @@
 sidebar_position: 40
 ---
 
-# 尾巴
 
-让角色的尾巴晃动起来！
+# Tail
+
+Make your character's tail wag!
 
 <div className="video-box"><video controls src="https://user-images.githubusercontent.com/3406505/180988526-bd40ac22-fb96-49c4-8546-863e33b4f250.mp4" /></div>
 
-也可以应用在任何有层级的骨骼上，比如这个模型的耳朵。~~你的下一条尾巴，又何必是尾巴~~
+You can also apply this asset to any hierarchical bones, such as the ears on this model!
 
 <div className="video-box"><video controls src="https://user-images.githubusercontent.com/3406505/180989631-2e13e06b-fd7e-4997-9afe-da93d8e43361.mp4" /></div>
 
-## 属性
+### Properties
 
-* 父资源：是谁的尾巴。
-* 路径：尾巴骨骼的路径。请在下拉菜单中选择尾巴**根部**的骨骼。
-* 重置尾巴：重置尾巴到默认状态。
+* Parent Asset: Who the tail belongs to.
+* Path: Path of the tail bone. Please select the **root bone** of the tail from the dropdown list.
+* Reset Tail: Resets the tail to its default state.
 
 <div className="hint hint-info">
-尾巴骨骼要至少有 4 个关节，晃动起来才自然哦。
+The model's tail must contain at least 4 bones to wag naturally.
 </div>
 
-### 晃动
+### Waving
 
-是否让尾巴自己晃起来。
+Allows the tail to wag on its own.
 
-* 晃动速度：尾巴晃动的速度。
-* 晃动范围：尾巴晃动的范围。
+* Waving Speed: Speed at which the tail wags.
+* Waving Range: Range of the tail's wag.
 
-### 物理
+### Physics
 
-* 滑溜程度：0 更像随风摇摆的树枝，1 更适合动物尾巴 / 触手。
-* 弯曲程度：每个关节的弯曲程度。
-* 弹力：值越大，尾巴越有弹性。
-* 反应速度：值越低，越像在水底，尾巴的运动会有阻力。
-* 旋转速度：值越低，越有慵懒的感觉，尾巴回到原位会更慢。
-* 重力：向尾巴施加的力。
+* Slithery: 0 is more like a branch swaying in the wind, 1 is more suited for an animal's tail/tentacle.
+* Curling: Bendiness of each joint.
+* Springiness: The higher the value, the more elastic the tail.
+* Reaction Speed: The lower the value, the more resistance there is to movement, like being in water.
+* Rotation Relevancy: The lower the value, the more sluggish the tail feels, and the slower it returns to its original position.
+* Gravity: Force applied to the tail.
 
-### 碰撞检测
+### Collision Detection
 
-防止尾巴穿模。目前仅支持与角色身体的碰撞检测。
+Prevents the tail from passing through other models in the scene. Currently only supports collision detection with a character's body.
 
-* 碰撞体积：尾巴的碰撞体积。调节此值，直到尾巴不再和身体相撞，但不会离身体太远。
+* Collider Radius: Collision volume of the tail. Adjust this value until the tail doesn't collide with the body but do not stay too far away from it.
 
-### IK
+### Inverse Kinematics
 
-让尾巴跟随场景内的指定目标。
+Lets the tail follow a designated target in the scene.
 
-* IK 目标：尾巴要跟随的目标。必须是场景里的实体，比如[摄像机](camera.md)、[道具](prop.md)、[锚点](anchor.md)等。
-* 权重：为 0 时，尾巴保留在原本位置；为 1 时，尾巴将被全力「拉向」目标。
-* 角度限制：尾巴每个关节最大弯曲的角度。如果尾巴不能到达目标，可能需要调大此值。
+* IK Target: Target for the tail to follow. Must be an entity in the scene, such as a [camera](camera.md), [prop](prop.md), [anchor](anchor.md), etc.
+* Weight: At 0, the tail stays in its original position; at 1, the tail is fully "pulled" towards the target.
+* Angle Limit: Maximum bend angle of each joint in the tail. If the tail cannot reach the target, you may need to increase this value.
 
-### 额外塑形
+### Additional Shaping
 
-* 旋转偏移：尾巴的旋转角度偏移。
-* 弯曲程度：尾巴每个关节的额外弯曲程度。
-* 尾巴总长度：让尾巴可以伸长变短。
+* Rotation Offset: Offset angle of the tail's rotation.
+* Curving: Additional bendiness of each joint in the tail.
+* Length Multiplier: Allows the tail to stretch and shrink.

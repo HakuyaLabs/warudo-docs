@@ -1,14 +1,13 @@
 ---
 sidebar_position: 30
-sidebar_label: 姿态追踪
 ---
 
-# 姿态追踪
+# Pose Tracking
 
-Warudo 目前支持 5 种姿态捕捉方案。
+Warudo provides 5 pose tracking solutions:
 
-* [**MediaPipe**](mediapipe.md)：基于摄像头的上半身动捕方案。优点是可动范围较大，手部能够前后移动；反应更为及时，可以捕捉到快速甩手、挥拳等。缺点是初次配置和校正需要一点点时间，并且稳定性略有不足。<mark style={{color: "green"}}>**可动性最佳。**</mark>
-* [**RhyLive**](rhylive.md)：由[域动数字 RhythMo](https://rhythmo.cn/) 研发的上半身动捕方案，需要一台支持[面容 ID ](https://support.apple.com/zh-cn/HT208109)的 iOS 设备，并下载 [RhyLive ](https://apps.apple.com/us/app/rhylive/)App（免费）。缺点是长时间使用，设备会发热严重。
-* [**VMC**](vmc.md)：由外部程序发送 [VirtualMotionCapture 数据](https://protocol.vmc.info/english)到 Warudo。比如你想使用 VR 动捕（例如：SlimeVR、Mocopi 等），就可以使用 VirtualMotionCapture 软件，发送 VMC 数据给 Warudo。
-* [**Rokoko**](rokoko.md)：由 [Rokoko Studio](https://www.rokoko.com/products/studio) 发送全身动捕数据到 Warudo。
-* [**Xsens MVN**](xsens-mvn.md)：由 [Xsens MVN Analyze/Animate](https://base.xsens.com/s/motion-capture-mvn-software?language=en\_US) 发送全身动捕数据到 Warudo。
+* [**MediaPipe**](mediapipe.md): Webcam-based upper body tracking. Advantages include a wider range of motion (e.g. forward/backward hand movements) and more responsive tracking (e.g. punches). Drawbacks include the need for some time to set up and calibrate. <mark style={{color: "green"}}>**Most expressive.**</mark>
+* [**RhyLive**](rhylive.md): Upper body tracking developed by [RhythMo](https://rhythmo.cn/). Requires a [Face ID](https://support.apple.com/en-us/HT208109)-compatible iOS device and the free [RhyLive](https://apps.apple.com/us/app/rhylive/) app.
+* [**VMC**](vmc.md): Body tracking via an external application, which sends data to Warudo via the [VirtualMotionCapture protocol](https://protocol.vmc.info/english). Compatible with all VR mocap (such as SlimeVR or Mocopi), via [VirtualMotionCapture ](https://vmc.info/)and some VMC-compatible studio mocap.
+* [**Rokoko**](rokoko.md): Body tracking via [Rokoko Studio](https://www.rokoko.com/products/studio).
+* [**Xsens MVN**](xsens-mvn.md): Body tracking via [Xsens MVN Analyze/Animate](https://base.xsens.com/s/motion-capture-mvn-software?language=en\_US).

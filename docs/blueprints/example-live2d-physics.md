@@ -2,63 +2,65 @@
 sidebar_position: 60
 ---
 
-# 示例：仿 Live2D 物理（果冻眼）
+# Example: Live2D-esque Eye Physics
 
-Live2D 中人人都有，但是 3D 模型中（几乎）人人没有的效果，就是「果冻眼」了：
+"Jiggly eyes" is an effect that is present on every Live2D model, but (almost) absent in 3D models.
 
 <div className="video-box"><video controls src="https://user-images.githubusercontent.com/3406505/196832326-e54d9982-92dc-4046-83f2-9b156bb243d4.mp4" />
-来源：[https://twitter.com/mauracoma/status/1441799850048176138](https://twitter.com/mauracoma/status/1441799850048176138)
+Source: [https://twitter.com/mauracoma/status/1441799850048176138](https://twitter.com/mauracoma/status/1441799850048176138)
 </div>
 
-给模型添加几个 BlendShape，再利用 Warudo 提供的**「Float 摆锤物理」**节点，就可以给你的 3D 模型实现果冻眼的效果啦！
+To add this effect to your 3D model, simply add a few blendshapes to your model and use the **"Float Pendulum Physics"** node provided by Warudo!
 
 <div className="video-box"><video controls src="https://user-images.githubusercontent.com/3406505/196832672-049792b0-1bbf-46ec-8ed9-7f5989eb4166.mp4" />
-由于我不是模型师，这里只拆了一层高光出来。正如 Live2D 一样，拆得越多效果越好哦！
+Because I'm not a modeler, I've only created one layer of highlight blendshapes here. Just like in Live2D, the more layers you have, the better the effect!
 </div>
 
-### 准备工作
+### Preparations
 
-首先，你需要为模型准备高光拆分出来的 BlendShape，像下面这样：
+You need to prepare blendshapes that separate the eye highlights from the eye pupil, like these:
 
 <div className="video-box"><video controls src="https://user-images.githubusercontent.com/3406505/196832935-946222b5-e9a3-4efa-b9dc-7bdd04b9a3f2.mp4" /></div>
 
-这里我使用了[頼鳥ミドリ（@yoridrill）](https://twitter.com/yoridrill)老师提供的 VRoid BlendShape 数据，可以用 HANA\_Tool 一键导入 VRoid Studio 制作的模型：
+I am using blendshape data created by [頼鳥ミドリ (@yoridrill)](https://twitter.com/yoridrill), which can be added to a VRoid model with [HANA\_Tool](https://booth.pm/en/items/2604269).
 
 <div className="video-box"><video controls src="https://note.com/yoridrill/n/nfc15a0760a26" /></div>
 
-四个 BlendShape 分别为：
+The four blendshapes are:
 
-* `Highlight_Down_L`：左边高光往下
-* `Highlight_Down_R`：右边高光往下
-* `Highlight_Rotate`：高光逆时针旋转
-* `Highlight_Scale`：高光扩大
+* `Highlight_Down_L`: Left eye highlight translating downwards
+* `Highlight_Down_R`: Right eye highlight translating downwards
+* `Highlight_Rotate`: Highlights rotating counterclockwise
+* `Highlight_Scale`: Highlights enlarging
 
-### 蓝图配置
+### Setup
 
-打开面部跟踪蓝图，找到最右边的「平滑 BlendShape 列表」及「覆盖角色 BlendShape 列表」节点。在中间插入以下节点及连接即可：
+Open the face tracking blueprint, locate the "Smooth BlendShape List" and "Set Character Tracking BlendShapes" nodes on the far right, and insert the following nodes and connections in between:
 
-<figure><img src="/images/image(5)(2).jpg" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(3)(5).jpg" alt="" /><figcaption></figcaption></figure>
 
-上方的节点是较好理解的——我们根据两只眼睛闭上的程度（`eyeBlinkLeft` 和 `eyeBlinkRight`），乘以 1.5，然后设置两个高光下移 BlendShape 的值：
+The nodes at the top are relatively straightforward to understand—we multiply the degree to which the eyes are closed (`eyeBlinkLeft` and `eyeBlinkRight`) by 1.5, and then set the values for the two highlight-lowering blendshapes.
 
-<figure><img src="/images/image(11)(1).jpg" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(1)(3).jpg" alt="" /><figcaption></figcaption></figure>
 
-下面的节点就是「果冻眼」的核心了。我们获取眼睛闭上的程度（这里只取左眼 `eyeBlinkLeft`），然后输入「Float 摆锤物理」这个神奇的节点，输出值再用来设置高光旋转和高光扩大的 BlendShape：
+The nodes at the bottom implement the "jiggly eyes." We obtain the degree to which the eyes are closed (here we only take the left eye, `eyeBlinkLeft`), then input it into the magical **"Float Pendulum Physics"** node and use the output value to set the blendshapes for rotating and enlarging the highlight:
 
-<figure><img src="/images/image(5)(1).jpg" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(64).jpg" alt="" /><figcaption></figcaption></figure>
 
-「Float 摆锤物理」节点和 [Live2D 的物理模拟](https://docs.live2d.com/en/cubism-editor-manual/physics-operation/)的原理是相同的。通过制定一个多段式的摆锤（见下），摆锤最上方节点的 X 坐标为输入值，而输出值就是摆锤最下方节点的 X 坐标。节点的**摆臂**属性规定了摆锤每一节的长度以及物理属性。
+The **"Float Pendulum Physics"** node works on the same principle as [the physics simulation of Live2D](https://docs.live2d.com/en/cubism-editor-manual/physics-operation/). By specifying a multi-segment pendulum (as shown below), the X coordinate of the top node of the pendulum is the input value, and the output value is the X coordinate of the bottom node of the pendulum. The pendulum's "Arms" property determine the length and physical properties of each segment of the pendulum.
 
-<div className="video-box"><video controls src="https://docs.live2d.com/wp-content/uploads/2021/04/20210119193349.gif" />
-来源：[https://docs.live2d.com/en/cubism-editor-manual/physical-operation-setting/](https://docs.live2d.com/en/cubism-editor-manual/physical-operation-setting/)
+<div className="video-box">
+<video controls src="https://docs.live2d.com/wp-content/uploads/2021/04/20210119193349.gif" />
+Source: [https://docs.live2d.com/en/cubism-editor-manual/physical-operation-setting/](https://docs.live2d.com/en/cubism-editor-manual/physical-operation-setting/)
 </div>
 
-你可以通过设置节点的「显示」为「是」来预览摆锤的物理效果：
+You can preview the pendulum physics by setting the "Visualize" property of the node to "Yes":
 
-<div className="video-box"><video controls src="https://user-images.githubusercontent.com/3406505/196835467-8eec329f-176f-47ba-af4e-fb4d0c4361d6.mp4" /></div>
+<div className="video-box"><video controls src="https://user-images.githubusercontent.com/3406505/196835467-8eec329f-176f-47ba-af4e-fb4d0c4361d6.mp4" />
+</div>
 
-以上的蓝图配置仅仅对应了一层高光动起来的情况——你可以使用多个「Float 摆锤物理」节点和更细致的高光 BlendShape 来实现更精致的果冻眼效果！
+The blueprint above only implements the movement of one layer of highlights; however, multiple "Float Pendulum Physics" nodes and more layers of highlight blendshapes can be used to produce a more sophisticated jiggly eye effect.
 
 <div className="hint hint-success">
-当然了，「Float 摆锤物理」节点的作用并不只局限于此。你能想到的常见 Live2D 物理效果，几乎都可以移植到 Warudo——不过有些物理效果是否更适合用 3D 原生的方式实现（比如头发的物理效果），就是另一个话题啦。
+Keep in mind that the "Float Pendulum Physics" node is not limited to just creating jiggly eyes. Most common physical effects seen in Live2D can be achieved in Warudo as well. However, some physical effects may be better suited to be implemented using native 3D methods, such as hair physics—which is a different topic altogether!
 </div>

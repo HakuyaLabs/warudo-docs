@@ -2,320 +2,310 @@
 sidebar_position: 50
 ---
 
-# 摄像机
+# Camera
 
-摄像机就是……摄像机！
+Cameras are... well, cameras!
 
-## 多摄像机
+## Multiple Cameras
 
-Warudo 的场景中支持最多 8 个摄像机。
+Warudo's supports up to 8 cameras in a single scene.
 
-![使用 Spout 和 NDI 输出功能，可以在 OBS 中实现同屏多镜头的效果](https://user-images.githubusercontent.com/3406505/181742333-40660636-1947-46eb-b1be-7f8a19c2274f.png)
+![Using the Spout and NDI output features, you can achieve a multi-camera setup in OBS.](https://user-images.githubusercontent.com/3406505/181742333-40660636-1947-46eb-b1be-7f8a19c2274f.png)
 
-## 主摄像机
+## Main Camera
 
-「主摄像机」指的是在主窗口渲染，可以用键盘和鼠标控制的摄像机。
+The "Main Camera" refers to the camera that is rendered in the main window and can be controlled using the keyboard and mouse.
 
-有两种方式可以切换主摄像机：
+There are two ways to switch the main camera:
 
-1. 主窗口对焦时，按 Tab / Ctrl+Tab 即可将主摄像机切换到场景中下一个 / 上一个摄像机；
-2. 在配置窗口点击任意摄像机左边的图标，即可设置该摄像机为主摄像机。
+1. When the main window is focused, press Tab / Ctrl Tab to switch the main camera to the next / previous camera in the scene;
+2. In the configuration window, click the icon on the left side of any camera to set that camera as the main camera.
 
-## 属性
+## Properties
 
-### 控制
+### Controls
 
-* 控制模式：
-  * 无：摄像机固定在原位。
-  * 自由观察：仿 Unity 编辑器内的摄像机，按下鼠标右键时使用 WASD 移动、E 和 Q 键上升和下降，Shift 键加速。鼠标中键平移视角。
-  * 环绕角色：让摄像机环绕角色。按下鼠标左键或右键旋转视角，鼠标滚轮拉远拉近视角，鼠标中键平移视角。
-* 控制灵敏度：摄像机移动 / 旋转的速度。
-* 聚焦角色：控制模式为「环绕角色」时的聚焦角色，同时也是「景深」->「聚焦角色」选项开启时的聚焦角色。
-* 跟随角色速度：控制模式为「环绕角色」时镜头跟随角色的速度。
-* 显示 Gizmos：是否显示各类控制实体的 Gizmos。
+* Control Mode:
+  * None: Camera is fixed in place.
+  * Free Look: Similar to the camera in the Unity Editor, when right-clicking the mouse, use WASD to move, E and Q to ascend and descend, and Shift to speed up. Use the middle mouse button to pan the view.
+  * Orbit Character: Camera orbits around the character. Left or right mouse click to rotate the view, use the mouse wheel to zoom in and out, and the middle mouse button to pan the view.
+* Control Sensitivity: Speed of camera movement.
+* Focus Character: The character the camera will focus on when "Control Mode" is set to "Orbit Character". It is also the character the camera will focus on when "Depth of Field" -> "Focus Character" is enabled.
+* Follow Character Speed: Speed of camera following character when "Control Mode" is set to "Orbit Character".
+* Show Gizmos: Whether to display the transform gizmos.
 
 <div>
 
-<figure><img src="/images/Warudo_2022-10-16-05-44-53_1024x1024.jpg" alt="" /><figcaption><p>不显示 Gizmos</p></figcaption></figure>
+<figure><img src="/images/Warudo_2022-10-16-05-44-53_1024x1024.jpg" alt="" /><figcaption><p>Show Gizmos disabled</p></figcaption></figure>
 
  
 
-<figure><img src="/images/Warudo_2022-10-16-05-44-42_1024x1024.jpg" alt="" /><figcaption><p>显示 Gizmos，且角色资源被选中时</p></figcaption></figure>
+<figure><img src="/images/Warudo_2022-10-16-05-44-42_1024x1024.jpg" alt="" /><figcaption><p>Show Gizmos enabled, and character asset selected</p></figcaption></figure>
 
 </div>
 
 <div className="hint hint-success">
-可以在主界面按 **G 键**随时开启 / 关闭主摄像机的 Gizmo。
+You can turn on/off the main camera's gizmos at any time by pressing the **G key** when the main window is focused.
 </div>
 
 <div className="hint hint-info">
-显而易见地，如果你需要在直播中使用 Warudo，建议在开播前关掉 Gizmos。
+If you need to use Warudo during a livestream, it is recommended to turn off the gizmos before starting the stream.
 
-当然，更好的办法是——创建另一个观众视角专属的摄像机，并使用 NDI 或 Spout 直接推流到直播软件（例如 OBS）。这样，你可以在直播中继续使用主窗口对场景进行微调，而不需要担心影响直播的观感。
+A better solution would be to create a dedicated camera view for the audience which outputs to a livestreaming software like OBS using NDI or Spout. This way, you can continue to make adjustments to the scene using the main window without worrying about affecting the viewing experience.
 </div>
 
-* 重置摄像机变换：重置摄像机的位置和旋转到默认位置。
+* Reset Camera Transform: Reset the camera's position and rotation to default.
 
-### 输出
+### Output
 
-* Spout 输出：用 [Spout](https://github.com/leadedge/Spout2) 推送画面到本机上的 Spout 接收程序。
-* Spout 输出名称：接收侧看到的 Spout 输出的名称。
+* Spout Output: Sends a video stream to a [Spout](https://github.com/leadedge/Spout2) receiver on the same machine.
+* Spout Output Name: The name of the Spout output.
 
 <div className="hint hint-info">
-以 [OBS](https://obsproject.com/) 为例，安装 [obs-spout2-plugin](https://github.com/Off-World-Live/obs-spout2-plugin/releases) 后，在 OBS 中添加 Spout2 Capture 源即可。
+To use Spout output in [OBS](https://obsproject.com/), install the [obs-spout2-plugin](https://github.com/Off-World-Live/obs-spout2-plugin/releases) and add a Spout2 Capture source.
 </div>
 
-* NDI 输出：用 [NDI](https://www.ndi.tv) 推送画面到局域网内其他主机上的 NDI 接收程序。
-* NDI 输出名称：接收侧看到的 NDI 输出的名称。
+* NDI Output: Sends a video stream to an [NDI](https://www.ndi.tv) receiver on another machine within the same network.
+* NDI Output Name: The name of the NDI output.
 
 <div className="hint hint-info">
-以 [OBS](https://obsproject.com/) 为例，安装 [obs-ndi](https://github.com/Palakis/obs-ndi) 后，在 OBS 中添加 NDI™ Source 源即可。
+To use NDI output in [OBS](https://obsproject.com/), install the [obs-ndi](https://github.com/Palakis/obs-ndi) plugin and add an NDI™ Source.
 </div>
 
 <div className="hint hint-info">
-什么时候用 Spout、什么时候用 NDI？简单来说，如果想将画面推送到局域网下的另一台设备，就使用 NDI；如果只是推送到同一台 PC 上的其他程序（例如 OBS），推荐使用资源占用和延迟都更低的 Spout。
+When to use Spout and when to use NDI? Simply put, use NDI if you want to output the screen to another device within the same network and use Spout if you only want to output the screen to another program on the same PC (such as OBS). Spout is recommended for its lower resource usage and latency.
 </div>
 
-* 虚拟摄像头输出：推送画面到 Warudo 的内置虚拟摄像头。
-* 镜像虚拟摄像头输出：是否左右翻转虚拟摄像头输出的画面。
-* 截图：截图并保存到数据文件夹的 Screenshots 子文件夹下。
+* Virtual Camera Output: Outputs the video to a Warudo virtual camera.
+* Mirror Virtual Camera Output: Whether to flip the virtual camera output horizontally.
+* Screenshot: Takes a screenshot and saves it in the Screenshots subfolder in the data folder.
 
 <div className="hint hint-success">
-**Spout 输出、NDI 输出、虚拟摄像头输出、截图均支持透明度！**只需要开启色键（见下），并将色键颜色的 alpha 值设置为 0 即可。
+**Spout output, NDI output, virtual camera output, and screenshots all support transparency!** Simply enable the chroma key (see below) and set the alpha value of the chroma key color to 0.
 </div>
 
 <div className="hint hint-info">
-Spout 输出到 OBS 的情况下，需要在 Spout2 Capture 属性中设置 Composite Mode 为 Premultiplied Alpha 才会有透明度：
+When using Spout output in OBS, set the Composite Mode in the Spout2 Capture properties to Premultiplied Alpha to achieve transparency.
 
-<img src="/images/image(3).jpg" alt="" data-size="original" />
+![](</images/image(16)(3).jpg>)
 </div>
 
 <div className="hint hint-info">
-虚拟摄像头输出到 OBS 的情况下，需要在视频捕获设备属性中设置 Video Format（视频格式）为 ARGB 才会有透明度：
+When using virtual camera output in OBS, set the Video Format in the Video Capture Device properties to ARGB to achieve transparency.
 
-![](</images/image(2).jpg>)
+![](</images/image(33).jpg>)
 </div>
 
-### 基本属性
+### Basic Properties
 
-* 使用色键：是否不显示天空盒，而是显示固定颜色。
+* Use Chroma Key: Whether to show a solid color instead of the skybox.&#x20;
 
 <div className="hint hint-warning">
-使用色键时，场景中的[环境](https://tiger-tang.gitbook.io/warudo/assets/environment)仍会显示。
+Even when chroma key is enabled, the [environment ](environment.md)in the scene will still be visible.&#x20;
 </div>
 
-* 色键颜色：「使用色键」选项开启时，背景显示的固定颜色。
-
-<div className="hint hint-success">
-色键颜色的 A（透明度）小于 1 时，背景将变为半透明；设置为 0 时，背景将完全透明。此时 **Spout 输出、NDI 输出、虚拟摄像头输出、截图**都会保留透明度。
-</div>
-
-* 视场角：摄像机的视场角。
-* 正交投影：是否使用正交投影。
+* Chroma Key Color: The solid color displayed as the background when "Use Chroma Key" is enabled.
+* Field of View: The field of view of the camera.
+* Orthographic Projection: Whether to use orthographic projection.
 
 <div>
 
-<figure><img src="/images/Warudo_2022-10-16-03-53-28_1024x1024.jpg" alt="" /><figcaption><p>不使用正交投影（透视投影）</p></figcaption></figure>
+<figure><img src="/images/Warudo_2022-10-16-03-53-28_1024x1024.jpg" alt="" /><figcaption><p>Orthographic Projection disabled</p></figcaption></figure>
 
  
 
-<figure><img src="/images/Warudo_2022-10-16-03-52-58_1024x1024.jpg" alt="" /><figcaption><p>正交投影</p></figcaption></figure>
+<figure><img src="/images/Warudo_2022-10-16-03-52-58_1024x1024.jpg" alt="" /><figcaption><p>Orthographic Projection enabled</p></figcaption></figure>
 
 </div>
 
-### 手持运镜效果
+### Handheld Movement
 
-* 强度：手持运镜效果移动的范围。
-* 速度：手持运镜效果移动的速度。
+* Intensity: The range of movement for the handheld camera effect.
+* Speed: The speed of movement for the handheld camera effect.
 
-### 色调映射和颜色分级
+### Tonemapping & Color Grading
 
-* LUT 材质：通过调整画面的颜色营造想要的氛围感。
+* LUT Texture: Adjust the colors of the scene with a LUT texture to create the desired vibes.
 
-![不使用 LUT 材质](https://user-images.githubusercontent.com/3406505/181156909-7c5b0f96-3860-463b-be97-98e57c954a7f.png) ![使用 LUT 材质：Sunset](https://user-images.githubusercontent.com/3406505/181157012-7bc1bc20-eb6d-43f3-ab9e-c3ef5cceb040.png)
+![Without LUT Texture](https://user-images.githubusercontent.com/3406505/181156909-7c5b0f96-3860-463b-be97-98e57c954a7f.png) ![LUT Texture: Sunset](https://user-images.githubusercontent.com/3406505/181157012-7bc1bc20-eb6d-43f3-ab9e-c3ef5cceb040.png)
 
 <div className="hint hint-success">
-**Warudo 内置 200+ 种 LUT 材质**，为你的场景选一个试试吧！合适的 LUT 材质可以大幅提升画面效果。
+**Warudo has over 200 built-in LUT textures** that you can choose from. Try picking the right one for your environment to give off great vibes!
 </div>
 
-* LUT 强度：LUT 材质对画面影响的强度。
-* 自然饱和度：画面颜色的饱和度。
-* 对比度：画面颜色的对比度。
-* 亮度：画面颜色的亮度。
-* 色调：叠加在画面上的额外颜色。
+* LUT Intensity: The strength of the LUT texture's effect on the image.
+* Vibrance: The saturation of the image's colors.
+* Contrast: The contrast of the image's colors.
+* Brightness: The brightness of the image's colors.
+* Tint: An additional tint that is overlayed onto the image.
 
-### 泛光
+### Bloom
 
-让画面的亮部散发出光晕的效果。
+The bloom effect creates a halo effect around the bright parts of the image.
 
-![关闭泛光](https://user-images.githubusercontent.com/3406505/181158305-ca083489-4675-40e9-834b-36c93c8f96da.png) ![开启泛光](https://user-images.githubusercontent.com/3406505/181158391-f57f4892-a7ff-4260-9092-dd68f3aac031.png)
+![Bloom disabled](https://user-images.githubusercontent.com/3406505/181158305-ca083489-4675-40e9-834b-36c93c8f96da.png) ![Bloom enabled](https://user-images.githubusercontent.com/3406505/181158391-f57f4892-a7ff-4260-9092-dd68f3aac031.png)
 
-* 强度：光晕的强度。
-* 阈值：阈值越低，画面上没有那么亮的地方也会散发出光晕。
-* 色调：光晕的颜色。
-* 距离衰减：光晕的强度随距离衰减的程度。
-* 靠近摄像机衰减距离：在此距离内的物体，亮部产生的光晕会衰减。
-* 高质量：是否提高泛光的渲染质量。
+* Strength: The intensity of the bloom effect.
+* Threshold: The lower the threshold, the more areas that are not as bright in the image will also emit a bloom effect.
+* Tone: The color of the bloom effect.
+* Depth Attenuation: The degree to which the intensity of the bloom effect decreases with distance.
+* Near Attenuation Distance: The bloom effect produced by bright parts of objects within this distance will be attenuated.
+* High Quality: Whether to improve the rendering quality of the bloom effect at cost of performance.
 
-### 环境光遮蔽
+### Ambient Occlusion
 
-给画面添加更多阴影，（大多数情况下）可以让视觉效果更真实。
+Adds more shadow to the scene for a more realistic visual effect (in most cases).
 
-![关闭环境光遮蔽](https://user-images.githubusercontent.com/3406505/181158774-0153a616-a795-44c7-b14c-539706f57e92.png) ![开启环境光遮蔽](https://user-images.githubusercontent.com/3406505/181158813-13a921a2-12ec-4da8-b860-a97fe78d3e22.png)
+![Ambient Occlusion disabled](https://user-images.githubusercontent.com/3406505/181158774-0153a616-a795-44c7-b14c-539706f57e92.png) ![Ambient Occlusion enabled](https://user-images.githubusercontent.com/3406505/181158813-13a921a2-12ec-4da8-b860-a97fe78d3e22.png)
 
 <div className="hint hint-info">
-对于二次元的脸型（尤其脸部网格并非平坦的情况下），并不推荐开启环境光遮蔽。
+For anime models (especially when the face mesh is not completely flat), enabling ambient occlusion is not recommended.
 
 <img src="https://user-images.githubusercontent.com/3406505/181159458-8df6b8bd-757f-4e40-afc8-525deb79371c.png" alt="关闭环境光遮蔽" data-size="original" /><img src="https://user-images.githubusercontent.com/3406505/181159488-09be23c0-6be6-48e8-bba8-0d46b6122765.png" alt="开启环境光遮蔽" data-size="original" />
 </div>
 
-* 半径：阴影的半径。
-* 最大半径像素：阴影采样的最大像素。如果你的角色阴影看起来很怪，可以把此值适当调低。
-* 强度：阴影的强度。
-* 颜色：阴影的颜色。
-* 高质量：是否提高环境光遮蔽的渲染质量。
+* Radius: The radius of the shadow.
+* Max Radius Pixels: The maximum pixels for shadow sampling. If your character shadow looks strange, try to adjust this value.
+* Intensity: The intensity of the shadow.
+* Color: The color of the shadow.
+* High Quality: Whether to improve the rendering quality of the ambient occlusion at cost of performance.
 
-### 变形镜头光晕
+### Anamorphic Flares
 
-模仿变形镜头的横向/竖向光晕效果。
+Provides the horizontal/vertical flare effect of a distorted lens.
 
-![关闭变形镜头光晕](https://user-images.githubusercontent.com/3406505/181159870-b8a72b86-fcd8-42f1-a27b-f90f32d4eab5.png) ![开启变形镜头光晕](https://user-images.githubusercontent.com/3406505/181159892-1a9a2b03-fc38-458c-b660-d2b57c10b101.png)
+![Anamorphic Flares disabled](https://user-images.githubusercontent.com/3406505/181159870-b8a72b86-fcd8-42f1-a27b-f90f32d4eab5.png) ![Anamorphic Flares enabled](https://user-images.githubusercontent.com/3406505/181159892-1a9a2b03-fc38-458c-b660-d2b57c10b101.png)
 
-* 强度：光晕的强度。
-* 阈值：阈值越低，画面上没有那么亮的地方也会散发出光晕。
-* 色调：光晕的颜色。
-* 扩散：光晕溢出的程度。
-* 垂直光晕：光是否竖向溢出。
-* 高质量：是否提高变形镜头光晕的渲染质量。
+* Intensity: The intensity of the flares.
+* Threshold: The lower the threshold, the more areas that are not as bright in the image will emit flares.
+* Tint: The color of the flares.
+* Spread: The extent to which the flares overflow.
+* Vertical Flares: Whether the light overflows vertically instead of horizontally.
+* High Quality: Whether to improve the rendering quality of the anamorphic flares at cost of performance.
 
-### 景深
+### Depth Of Field
 
-让远处的物体变得模糊。
+Blur objects that are not in focus.
 
-![关闭景深](https://user-images.githubusercontent.com/3406505/181161085-01e2e620-fcb7-421b-8cec-2824fdc1ab1f.png) ![开启景深，关闭散景效果](https://user-images.githubusercontent.com/3406505/181161099-7ada6b35-90a5-445f-98e1-701d385253d3.png) ![开启景深和散景效果](https://user-images.githubusercontent.com/3406505/181161123-f27921b4-f6b3-46e0-9fdd-8276d7013725.png)
+![Depth Of Field disabled](https://user-images.githubusercontent.com/3406505/181161085-01e2e620-fcb7-421b-8cec-2824fdc1ab1f.png) ![Depth Of Field enabled, Bokeh Effect disabled](https://user-images.githubusercontent.com/3406505/181161099-7ada6b35-90a5-445f-98e1-701d385253d3.png) ![Depth Of Field and Bokeh Effect enabled](https://user-images.githubusercontent.com/3406505/181161123-f27921b4-f6b3-46e0-9fdd-8276d7013725.png)
 
-* 聚焦角色：是否自动聚焦在「控制」->「聚焦角色」选择的角色上。
-* 对焦距离：焦点和摄像头的距离。
-* 对焦速度：当焦点物体距离产生变化导致失焦时，重新对焦的速度。
-* 焦距：越大，不在景深内的物体越模糊。
-* 光圈：越大，不在景深内的物体越模糊。
+* Focus Character: Whether the camera should automatically focus on the character selected in "Controls" -> "Focus Character".
+* Focusing Distance: The distance between the focus and the camera.
+* Focusing Speed: The speed at which the focus will be re-acquired when the focus object changes distance and becomes out of focus.
+* Focal Length: The larger the value, the blurrier the objects outside the depth of field will be.
+* Aperture: The larger the value, the blurrier the objects outside the depth of field will be.
+* Bokeh Effect: The spread of color on objects outside the depth of field.
+* Bokeh Effect Threshold: The threshold for the bokeh effect.
+* Bokeh Effect Strength: The strength of the bokeh effect.
+* High Quality: Whether to improve the rendering quality of the depth of field at cost of performance.
 
-<div className="hint hint-info">
-作者本人也没搞懂焦距和光圈的区别。请专业摄影师指教……
-</div>
+### Chromatic Aberration
 
-* 散景效果：落在景深以外的画面，颜色扩散的效果。
-* 散景效果阈值：散景效果的阈值。
-* 散景效果强度：散景效果的强度。
-* 高质量：是否提高景深的渲染质量。
-
-### 色差
-
-模仿镜头无法将所有颜色融合到同一点时产生的效果。
+Mimics the effect produced when a lens is unable to blend all colors to the same point.
 
 <div>
 
-<figure><img src="/images/Warudo_2022-10-16-03-53-28_1024x1024.jpg" alt="" /><figcaption><p>关闭色差</p></figcaption></figure>
+<figure><img src="/images/Warudo_2022-10-16-03-53-28_1024x1024.jpg" alt="" /><figcaption><p>Chromatic Aberration disabled</p></figcaption></figure>
 
  
 
-<figure><img src="/images/Warudo_2022-10-16-03-57-39_1024x1024.jpg" alt="" /><figcaption><p>开启色差</p></figcaption></figure>
+<figure><img src="/images/Warudo_2022-10-16-03-57-39_1024x1024.jpg" alt="" /><figcaption><p>Chromatic Aberration enabled</p></figcaption></figure>
 
 </div>
 
-* 强度：色差的强度。
-* 平滑：越高，色差和原本颜色的过渡越平滑。
+* Intensity: The strength of the chromatic aberration.
+* Smoothing: The higher the value, the smoother the transition between the chromatic aberration and the original color.
 
-### 镜头污渍
+### Lens Dirt
 
-模仿镜头上的污渍 / 光斑。
+Simulates dirt and specks on the lens.
 
 <div>
 
-<figure><img src="/images/Warudo_2022-10-16-04-03-18_1024x1024.jpg" alt="" /><figcaption><p>关闭镜头污渍</p></figcaption></figure>
+<figure><img src="/images/Warudo_2022-10-16-04-03-18_1024x1024.jpg" alt="" /><figcaption><p>Lens Dirt disabled</p></figcaption></figure>
 
  
 
-<figure><img src="/images/Warudo_2022-10-16-04-03-15_1024x1024.jpg" alt="" /><figcaption><p>开启镜头污渍，材质「内置 -> Dirt3」</p></figcaption></figure>
+<figure><img src="/images/Warudo_2022-10-16-04-03-15_1024x1024.jpg" alt="" /><figcaption><p>Lens Dirt enabled: Dirt3</p></figcaption></figure>
 
 </div>
 
-* 材质：镜头污渍 / 光斑的材质。
-* 强度：镜头污渍的强度。
-* 阈值：越低，在明亮的地方显示越明显。
+* Texture: The texture of the lens dirt and specks.
+* Intensity: The strength of the lens dirt.
+* Threshold: The lower the value, the more noticeable it is in bright areas.
 
-### 渐晕
+### Vignetting
 
-使画面的边缘变暗。
+Makes the edges of the image darker.
 
 <div>
 
-<figure><img src="/images/Warudo_2022-10-16-04-03-18_1024x1024.jpg" alt="" /><figcaption><p>关闭渐晕</p></figcaption></figure>
+<figure><img src="/images/Warudo_2022-10-16-04-03-18_1024x1024.jpg" alt="" /><figcaption><p>Vignetting disabled</p></figcaption></figure>
 
  
 
-<figure><img src="/images/Warudo_2022-10-16-04-07-26_1024x1024.jpg" alt="" /><figcaption><p>开启渐晕</p></figcaption></figure>
+<figure><img src="/images/Warudo_2022-10-16-04-07-26_1024x1024.jpg" alt="" /><figcaption><p>Vignetting enabled</p></figcaption></figure>
 
 </div>
 
-* 颜色：叠加在画面边缘的颜色。
-* 淡出：越高，渐晕颜色叠加范围越大。
-* 眨眼：模拟第一人称游戏中常见的眨眼效果。
+* Color: The vignette color.
+* Fade Out: The higher the value, the larger the area of the vignette.
+* Blink: Simulates the blinking effect commonly seen in first-person games.
 
 <div>
 
-<figure><img src="/images/Warudo_2022-10-16-04-03-18_1024x1024.jpg" alt="" /><figcaption><p>眨眼 = 0</p></figcaption></figure>
+<figure><img src="/images/Warudo_2022-10-16-04-03-18_1024x1024.jpg" alt="" /><figcaption><p>Blink = 0</p></figcaption></figure>
 
  
 
-<figure><img src="/images/Warudo_2022-10-16-04-12-01_1024x1024.jpg" alt="" /><figcaption><p>眨眼 = 0.5</p></figcaption></figure>
+<figure><img src="/images/Warudo_2022-10-16-04-12-01_1024x1024.jpg" alt="" /><figcaption><p>Blink = 0.5</p></figcaption></figure>
 
 </div>
 
-### 夜视
+### Night Vision
 
-模拟夜视镜效果。
+Simulates the night vision goggles.
 
 <div>
 
-<figure><img src="/images/Warudo_2022-10-16-04-13-16_1024x1024.jpg" alt="" /><figcaption><p>关闭夜视</p></figcaption></figure>
+<figure><img src="/images/Warudo_2022-10-16-04-13-16_1024x1024.jpg" alt="" /><figcaption><p>Night Vision disabled</p></figcaption></figure>
 
  
 
-<figure><img src="/images/Warudo_2022-10-16-04-13-18_1024x1024.jpg" alt="" /><figcaption><p>开启夜视</p></figcaption></figure>
+<figure><img src="/images/Warudo_2022-10-16-04-13-18_1024x1024.jpg" alt="" /><figcaption><p>Night Vision enabled</p></figcaption></figure>
 
 </div>
 
-* 颜色：夜视镜的颜色。
+* Color: The color of the night vision.
 
-### 模糊
+### Blur
 
-让画面变得模糊。
+Blur the image.
 
 <div>
 
-<figure><img src="/images/Warudo_2022-10-16-04-03-18_1024x1024.jpg" alt="" /><figcaption><p>关闭模糊</p></figcaption></figure>
+<figure><img src="/images/Warudo_2022-10-16-04-03-18_1024x1024.jpg" alt="" /><figcaption><p>Blur disabled</p></figcaption></figure>
 
  
 
-<figure><img src="/images/Warudo_2022-10-16-04-22-23_1024x1024.jpg" alt="" /><figcaption><p>开启模糊</p></figcaption></figure>
+<figure><img src="/images/Warudo_2022-10-16-04-22-23_1024x1024.jpg" alt="" /><figcaption><p>Blur enabled</p></figcaption></figure>
 
 </div>
 
-* 强度：模糊的强度。
+* Intensity: The strength of the blur.
 
-### 像素化
+### Pixelate
 
-给画面打上马赛克！
+Add a mosaic effect to the image!
 
 <div>
 
-<figure><img src="/images/Warudo_2022-10-16-04-03-18_1024x1024.jpg" alt="" /><figcaption><p>关闭像素化</p></figcaption></figure>
+<figure><img src="/images/Warudo_2022-10-16-04-03-18_1024x1024.jpg" alt="" /><figcaption><p>Pixelate off</p></figcaption></figure>
 
  
 
-<figure><img src="/images/Warudo_2022-10-16-04-23-26_1024x1024.jpg" alt="" /><figcaption><p>开启像素化</p></figcaption></figure>
+<figure><img src="/images/Warudo_2022-10-16-04-23-26_1024x1024.jpg" alt="" /><figcaption><p>Pixelate on</p></figcaption></figure>
 
 </div>
 
-* 强度：像素化的强度。
+* Intensity: The strength of the pixelation.

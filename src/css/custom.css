@@ -72,13 +72,37 @@
 .video-box{
   font-size: 13px;
   color: var(--ifm-color-primary-light);
+  margin: 1em 0;
 }
 
 .video-box video{
   max-width: 100%;
   padding: 10px 0;
+  padding: 0;
+  margin: 0;
+}
+
+.video-box p{
+  font-size: 13px;
+  margin: 0;
+  color: var(--ifm-color-primary-light);
+}
+
+.video-box .bilibili-video{
+  width: 100%;
+  height: 300px;
+  margin: 1em 0;
+  display: block;
 }
 
 .figure-list{
 display: flex;
+}
+
+.img-desc{
+  font-size: 13px;
+  display: block;
+  margin-top: -1em;
+  margin-bottom: 1em;
+  color: var(--ifm-color-primary-light);
 }
