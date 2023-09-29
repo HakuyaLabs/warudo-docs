@@ -6,12 +6,13 @@ sidebar_position: 70
 
 Often referred to as a "3D background," the environment in Warudo can be any Unity scene, as long as it is exported to `.warudo` format using the [Mod SDK](../modding/mod-sdk.md).
 
-![The Onsen](https://user-images.githubusercontent.com/3406505/181154345-489cc249-a496-4971-93eb-b2e042974447.png)
+![](/doc-img/zh-environment-1.webp)
+<p class="img-desc">The Onsen</p>
 
 ## Properties
 
 * Enable Realtime Lights: Whether to enable the realtime lighting in the environment.
 
-<div className="hint hint-warning">
+:::caution
 If the lighting in the scene doesn't look quite right, try "🚀" -> "Restart Scene."
-</div>
+:::

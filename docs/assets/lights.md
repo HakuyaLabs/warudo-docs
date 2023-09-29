@@ -6,9 +6,9 @@ sidebar_position: 80
 
 Directional lights and point lights!
 
-<div className="hint hint-info">
+:::info
 Light assets are great for illuminating characters or adjusting existing environmental lighting. If you have a large number of light assets in fixed positions, it is probably worthwhile to set them up directly in Unity and export the [environment ](environment.md)with the [Warudo SDK](../modding/mod-sdk.md).
-</div>
+:::
 
 ## Properties
 

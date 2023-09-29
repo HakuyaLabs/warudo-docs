@@ -10,19 +10,19 @@ Face & body tracking via [Rokoko](https://www.rokoko.com/).
 
 Open Rokoko Studio -> Livestream -> Activate streaming to Unity:
 
-<figure><img src="/images/image(18)(1).jpg" alt="" /><figcaption></figcaption></figure>
+![](/doc-img/zh-rokoko-1.webp)
 
 Then, update Profile Name to the Rokoko actor whose motion capture data you would like to receive:
 
-<figure><img src="/images/image(2)(2).jpg" alt="" /><figcaption></figcaption></figure>
+![](/doc-img/zh-rokoko-2.webp)
 
-<div className="hint hint-warning">
+:::caution
 Note: You need a Rokoko Plus or Pro subscription to stream to Unity.
-</div>
+:::
 
-<div className="hint hint-info">
+:::info
 For more details, see the [official documentation](https://support.rokoko.com/hc/en-us/articles/4410471183633-Getting-Started-Streaming-to-Unity).
-</div>
+:::
 
 ## Properties
 

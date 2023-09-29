@@ -2,11 +2,11 @@
 
 让角色的尾巴晃动起来！
 
-<div className="video-box"><video controls src="/zh/doc-img/zh-tail-1.mp4" /></div>
+<div className="video-box"><video controls loop src="/zh/doc-img/zh-tail-1.mp4" /></div>
 
 也可以应用在任何有层级的骨骼上，比如这个模型的耳朵。~~你的下一条尾巴，又何必是尾巴~~
 
-<div className="video-box"><video controls src="/zh/doc-img/zh-tail-2.mp4" /></div>
+<div className="video-box"><video controls loop src="/zh/doc-img/zh-tail-2.mp4" /></div>
 
 ## 属性
 

@@ -7,11 +7,12 @@ sidebar_position: 40
 
 Make your character's tail wag!
 
-<div className="video-box"><video controls src="https://user-images.githubusercontent.com/3406505/180988526-bd40ac22-fb96-49c4-8546-863e33b4f250.mp4" /></div>
+
+<div className="video-box"><video controls loop src="/doc-img/zh-tail-1.mp4" /></div>
 
 You can also apply this asset to any hierarchical bones, such as the ears on this model!
 
-<div className="video-box"><video controls src="https://user-images.githubusercontent.com/3406505/180989631-2e13e06b-fd7e-4997-9afe-da93d8e43361.mp4" /></div>
+<div className="video-box"><video controls loop src="/doc-img/zh-tail-2.mp4" /></div>
 
 ### Properties
 
@@ -19,9 +20,9 @@ You can also apply this asset to any hierarchical bones, such as the ears on thi
 * Path: Path of the tail bone. Please select the **root bone** of the tail from the dropdown list.
 * Reset Tail: Resets the tail to its default state.
 
-<div className="hint hint-info">
+:::info
 The model's tail must contain at least 4 bones to wag naturally.
-</div>
+:::
 
 ### Waving
 

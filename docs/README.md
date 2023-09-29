@@ -1,6 +1,5 @@
 ---
-cover: .gitbook/assets/library_hero.png
-coverY: -34.94419306184012
+sidebar_position: 10
 ---
 
 # Introduction to Warudo
@@ -34,6 +33,6 @@ Warudo aims to strike a balance between the different VTuber software options by
 * **Modular scene management:** Stay organized and efficient with Warudo's modular configuration, allowing you to switch between different live streaming scenes with ease. Character models, environment models, camera setups, and interactivity logic are all saved in Warudo's scene file, making it convenient for developers and character artists to set up and provide pre-configured scenes for VTubers to use.
 * **Customizable and expandable:** Take your virtual avatar to the next level with Warudo's expandability features, including support for [importing external 3D assets](modding/mod-sdk.md), compatibility with the [Steam Workshop](misc/steam-chuang-yi-gong-fang.md), and the [Unity URP rendering pipeline](https://github.com/ColinLeung-NiloCat/UnityURPToonLitShaderExample). A C# SDK is also provided for custom development, with support for hot recompiling and debugging of C# scripts at runtime.
 
-<div className="hint hint-info">
+:::info
 Stay tuned as Warudo is actively working on developing new features, including collab and livestream interactions!
-</div>
+:::

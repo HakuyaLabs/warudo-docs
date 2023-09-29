@@ -24,16 +24,17 @@ An absolute or relative position in the scene, which can be used as the target f
 
 ### I want to achieve the effect of seemingly taking a selfie with a phone.
 
-<div className="video-box"><video controls src="https://user-images.githubusercontent.com/3406505/181163859-793e78de-3dda-4551-85f4-de6c866451ea.mp4" /></div>
+<div className="video-box"><video controls loop src="/doc-img/zh-anchor-1.mp4" /></div>
 
 Here we use the right hand as an example. Create an anchor asset, set the parent transform to the camera. Set the character's "Body IK" -> "Right Hand" -> "IK Target" to the anchor asset, and set the "Rotation Weight" to 0.5. Adjust the position and rotation of the anchor until everything looks natural.
 
-![The transform values used in the demo](https://user-images.githubusercontent.com/3406505/181164261-8ce9dbc6-f0c2-4b3f-aecf-b0e6a42c3aea.png)
+![The transform values used in the demo](/doc-img/zh-anchor-1.webp)
+<p class="img-desc">The transform values used in the demo</p>
 
-<div className="hint hint-info">
+:::info
 If the anchor is too close to the camera or behind it, you may not be able to use the transform gizmo. In this case, you can temporarily increase the camera's field of view until the anchor is in view, adjust the position of the anchor, and then return the field of view to its original setting.
-</div>
+:::
 
-<div className="hint hint-info">
+:::info
 To make finer adjustments to the camera, try reducing "Controls" -> "Control Sensitivity" in the camera's configuration.
-</div>
+:::

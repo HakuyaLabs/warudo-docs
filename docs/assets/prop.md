@@ -5,10 +5,12 @@ sidebar_position: 20
 
 Props are any 3D models that can be placed freely within a scene or can be attached to a character's bones to serve as accessories. Besides the built-in models, external models can be exported as `.warudo` format using the [Mod SDK](../modding/mod-sdk.md) and then loaded into Warudo.
 
-![Cat paws](https://user-images.githubusercontent.com/3406505/181151662-19455655-55ec-4a9f-9151-233db085c001.png)
+![](/doc-img/zh-prop-1.webp)
+<p class="img-desc">Cat paws</p>
 
-<div className="video-box"><video controls src="https://user-images.githubusercontent.com/3406505/196042139-45994180-aef4-4a9b-8208-592edc280b8d.mp4" />
-The rose and fingertip particle effect are achieved using prop assets and character attachment settings.
+
+<div className="video-box"><video controls src="/doc-img/zh-prop-1.mp4" />
+<p>The rose and fingertip particle effect are achieved using prop assets and character attachment settings.</p>
 </div>
 
 ## Properties
@@ -36,6 +38,6 @@ The rose and fingertip particle effect are achieved using prop assets and charac
 * Meshes: The meshes and skinned meshes on the model.
   * Visible: Whether or not the mesh is visible.&#x20;
 
-<div className="hint hint-info">
+:::info
 The position and rotation of the prop can be adjusted using the transform gizmo in the main window.
-</div>
+:::
