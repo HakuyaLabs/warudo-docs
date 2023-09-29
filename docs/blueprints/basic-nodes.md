@@ -2,115 +2,114 @@
 sidebar_position: 30
 ---
 
-# 基础节点
+# Basic Nodes
 
-### 事件
+### Events
 
-每一张蓝图都可以用一句话来概括：「如果发生 X，那么发生 Y」。事件节点便是蓝图中「如果发生 X」的部分。
+Each blueprint can be summarized as "if X happens, then Y will occur". Event nodes are the part of the blueprint that represents "if X happens."
 
-**「当按下键盘按键时」**节点会在按下指定的按键时触发流程出口。以下蓝图会在按下 Alt + Q 键时，切换角色的待机动画：
-
-![](</images/image(3)(3)(1).jpg>)
-
-**「当松开键盘按键时」**节点同理，会在松开指定按键时触发流程出口。
-
-**「当蓝图被启用时」**节点和**「当蓝图被禁用时」**节点会在启用蓝图后 / 禁用蓝图前触发流程出口。
-
-**「当 Update 时」**节点和**「当 LateUpdate 时」**节点会在每一帧触发流程出口；后者的触发时间稍晚。以下蓝图会将 RhyLive 接收器收到的 BlendShape 数据持续应用到模型上：
-
-![](</images/image(1)(1)(1).jpg>)
-
-**「当 FixedUpdate 时」**节点会在物理演算（每 1 / 90 秒）之前触发流程出口。
-
-<div className="hint hint-info">
-Update、LateUpdate 和 FixedUpdate 为 Unity 中的[事件执行顺序](https://docs.unity3d.com/Manual/ExecutionOrder.html)。在蓝图列表中越靠下的蓝图，会越后收到 Update / LateUpdate / FixedUpdate 事件。
-</div>
-
-### 角色
-
-角色节点属于蓝图中「那么发生 Y」的部分。
-
-<div className="hint hint-info">
-由于角色节点的数量较多，以下仅举例说明自定义时常用的节点。与动作捕捉相关节点的说明，请参看[这篇文档](mocap-nodes.md)。
-</div>
-
-**「播放角色待机动画」**节点会切换角色的待机动画到指定动画。以下节点会在按下 Alt + Q 键时切换待机动画到猫猫手：
-
-![](</images/image(14)(1).jpg>)
-
-<div className="hint hint-success">
-**缓动函数**可以调整数值变化的速度。例如 Linear 会让值线性变化，而 OutCubic 会让值一开始变化较大，快到终点之前慢下来。详情可参考 [https://easings.net](https://easings.net/)。
-</div>
-
-**「播放角色单次动画」**节点会在角色上播放指定动画，播放完毕后回到之前的状态。以下节点会在按下 Alt + Q 键时播放大笑的附加动画：
-
-![](</images/image(1)(1)(3).jpg>)
-
-**「切换临时角色 IK 目标锚点」**节点会启用 / 禁用角色的[临时角色 IK 目标锚点](../assets/character/#shen-ti-ik)，即把角色的脊椎或四肢固定（或尽量固定）在空间中当前的位置。以下蓝图会在按下 Alt + Q 键时锁定角色的双手在当前所在位置，再次按下后即可撤销固定：
-
-****![](</images/image(6)(2)(1).jpg>)****
-
-**「切换角色网格」**节点会启用 / 禁用角色模型上的特定[网格](../assets/character/#wang-ge)。以下节点会在按下 Alt + Q 键时切换角色外套的显示：
-
-![](</images/image(23)(1).jpg>)
-
-**「加载角色动画预设」**节点会加载预先保存的[角色动画设置](../assets/character/#dong-hua)。以下节点会在按下 Alt + Q 键时加载名为 cat 的动画预设：
+The **"On Keystroke Pressed"** node triggers its flow output when the specified key is pressed. The following blueprint will switch the character's idle animation when pressed Alt+Q:
 
 ![](</images/image(4)(2).jpg>)
 
-**「启用角色 IK」**节点会淡入角色脊椎 / 四肢的 IK 属性到指定的设置。以下蓝图会在按下 Alt + Q 键时让角色的右手移动到指定的 IK 目标：
+The **"On Keystroke Released"** node works similarly; it triggers the flow outlet when the specified key is released.
 
-![](</images/image(20)(1).jpg>)
+The **"On Enable Blueprint"** and **"On Disable Blueprint"** nodes trigger the flow output when the blueprint is enabled or disabled respectively.
 
-**「禁用角色 IK」**节点会淡出角色脊椎 / 四肢的 IK，并在淡出完毕后禁用 IK。
+The **"On Update"** and **"On LateUpdate"** nodes trigger the flow output in each frame. The latter triggers the flow output slightly later. The following blueprint continuously applies BlendShape data received by the RhyLive receiver to the model:
 
-**「启用角色覆盖手势」**节点会设置角色的[覆盖手势](../assets/character/#dong-hua)。以下蓝图会在按下 Alt + Q 键时让角色双手比耶：
+![](</images/image(21).jpg>)
 
-![](</images/image(5)(1)(1)(1).jpg>)
+The **"On FixedUpdate"** node triggers the flow output before game physics is updated (every 1/90 seconds).
 
-**「禁用角色覆盖手势」**节点会撤销角色的覆盖手势。
+<div className="hint hint-info">
+Update, LateUpdate and FixedUpdate are [event execution orders](https://docs.unity3d.com/Manual/ExecutionOrder.html) in Unity. The blueprints lower in the blueprint list will receive the Update / LateUpdate / FixedUpdate events later.
+</div>
 
-### 摄像机
+### Character
 
-和角色节点类似，摄像机节点也属于蓝图中「那么发生 Y」的部分。
+Character nodes belong to the "then Y will occur" category.
 
-**「切换主摄像机」**节点会切换主窗口渲染及控制的摄像机。以下蓝图会在按下 Alt + 2 键时切换主摄像机到摄像机 2：
+<div className="hint hint-info">
+The number of character nodes is quite extensive, so only frequently used nodes during customizing will be listed below. For information on nodes related to motion capture, please refer to this [page](mocap-nodes.md).
+</div>
 
-![](</images/image(2)(2)(1).jpg>)
+The **"Play Character Idle Animation"** node allows you to switch the character's idle animation to the specified one. The following blueprint will switch the character's idle animation when pressed Alt+Q:
 
-**「摄像机聚焦角色」**节点会开启摄像机的景深并逐渐聚焦到指定角色。以下蓝图会在按下 Alt + F 键时聚焦主摄像机到角色上：
+![](</images/image(4)(2).jpg>)
+
+<div className="hint hint-success">
+Easing functions adjust the speed at which a value changes. For example, `Linear` will cause the value to change linearly, while `OutCubic` will cause the value to start changing rapidly and slow down before reaching the end. For more information, see [https://easings.net](https://easings.net/).
+</div>
+
+The **"Play Character One Shot Animation"** node will play a specified animation on the character and return to the previous state after the animation has finished playing. The following blueprint will play an additive laugh animation when pressed Alt+Q:
+
+![](</images/image(7)(1).jpg>)
+
+The **"Toggle Temporary Character IK Target Anchor"** node will enable or disable the temporary character IK target anchor for the character, meaning it fixes the spine or limbs of the character to the current position in space. For example, when the Alt+Q keys are pressed, the following blueprint locks the character's hands in place and pressing the keys again will undo the fix:
+
+![](</images/image(8)(2)(3).jpg>)
+
+The **"Toggle Character Meshes"** node will enable or disable specific [meshes](../assets/character/#meshes) on the character model. The following blueprint will hide or show the character's jacket when the Alt+Q keys are pressed:
 
 ![](</images/image(15)(1).jpg>)
 
-**「晃动摄像机」**节点会摇晃或颤动摄像机的位置和旋转。以下蓝图会在按下 Alt + F 键时晃动主摄像机：
+The **"Load Character Animation Profile"** node will load a previously saved [animation profile](../assets/character/#animation) for a character. The following blueprint will load an animation profile named "cat" when the Alt+Q keys are pressed:
 
-![](</images/image(17)(1).jpg>)
+![](</images/image(3)(1).jpg>)
 
-**「设置摄像机…」**等节点会设置摄像机的相应属性。
+The **"Enable Character IK"** node gradually fades in the IK properties of the character's spine and limbs to the specified settings. The following blueprint will move the character's right hand to a designated IK target when the Alt + Q keys are pressed:
 
-### 资源
+![](</images/image(17).jpg>)
 
-和角色节点类似，资源节点也属于蓝图中「那么发生 Y」的部分。
+The **"Disable Character IK"** node fades out the IK properties of the character's spine or limbs, and then disables the IK once the fade-out is complete.
 
-**「切换资源启用状态」**节点会启用 / 禁用指定的资源。以下蓝图会在按下 Alt + R 键时让角色摆出手拿玫瑰的姿势（玫瑰为[道具](../assets/prop.md)资源，事先配置[绑定](../assets/prop.md#jiao-se-pei-jian)在角色右手）：
+The **"Enable Character Override Hand Pose"** node sets the character's override hand pose. The following blueprint will have the character give a V sign with both hands when the Alt+Q keys are pressed:
 
-![](</images/image(21)(1).jpg>)
+![](</images/image(11)(3).jpg>)
 
-**「设置资源属性」**节点是最通用的节点之一，可以用来设置任何资源的指定属性。以下蓝图会在按下 Alt + T 键键时让角色望向玫瑰（设置角色的视线 IK 目标为玫瑰）：
+The **"Disable Character Override Hand Pose"** node will undo the character's override hand pose.
 
-![](</images/image(18)(1).jpg>)
+### Cinematography
 
-对于 Float（小数）和 Color（颜色）的属性，还可以指定过渡时间和缓动函数：
+Similar to character nodes, cinematography nodes belong to the "then Y will occur" category.
 
-![](</images/image(10)(2).jpg>)
+The **"Switch Main Camera"** node switches the main window's camera. The following blueprint will switch the main camera to Camera 2 when the Alt+2 keys are pressed:
+
+![](</images/image(10).jpg>)
+
+The **"Focus Camera on Character"** node enables depth of field on the camera and gradually focuses it on the designated character. The following blueprint will focus the main camera on the character when the Alt+F keys are pressed:
+
+![](</images/image(19)(1).jpg>)
+
+The **"Shake Camera"** node will jitter the position and rotation of the camera. The following blueprint will shake the main camera when the Alt+F keys are pressed:
+
+![](</images/image(12)(3).jpg>)
+
+The **"Set Camera..."** nodes allow you to adjust various properties of the camera, such as field of view, aspect ratio, and more.
+
+### Asset
+
+Similarly, asset nodes belong to the "then Y will occur" category.
+
+The **"Toggle Asset Enabled"** node enables or disables the specified asset. The following blueprint, for example, allows the character to hold a rose in their right hand (the rose being a [prop asset](../assets/prop.md) that is previously set up and [bound](../assets/prop.md#character-attachment) to the character's right hand) when the Alt+R keys are pressed:
+
+![](</images/image(9)(1).jpg>)
+
+The **"Set Asset Property"** node is one of the most versatile nodes and can be used to set a specific property of any asset. The following blueprint will have the character look at the rose (setting the character's look IK target to the rose) when the Alt+T keys are pressed:
+
+![](</images/image(13)(3).jpg>)
+
+For float and color properties, you can also specify a transition time and easing function:
+
+![](</images/image(20)(1)(1).jpg>)
 
 <div className="hint hint-warning">
-你可能会意识到，很多节点都可以用「设置资源属性」节点来代替。比如，「设置摄像机亮度」节点和「设置资源属性 -> 数据路径：Brightness（亮度）」节点的效果是一样的。
+You might have noticed that many nodes can be replaced by the "Set Asset Property" node. For example, the "Set Camera Brightness" node and the "Set Asset Property" node with data path set to "Brightness" have the same effect.
 
-不过，我们推荐尽可能不使用「设置资源属性」节点，除非实在没有替代的节点。这是因为「设置资源属性」节点的性能消耗**远大于**直接设置属性的节点。如果节点是按键后触发，那么对性能的影响是较难察觉的；但如果配合「当 Update 时」等每帧执行的节点使用，可能会使帧数骤降。
+However, we recommend avoiding the use of the "Set Asset Property" node as much as possible, unless there is no alternative. This is because the performance overhead of the "Set Asset Property" node is **much greater** than directly setting the property with a predefined node. If the node is triggered by a key press, the impact on performance is negligible; but if used with nodes that execute every frame such as "On Update", the frame rate may significantly decrease.
 </div>
 
-**「触发资源扳机」**节点可以触发任何资源页显示的按钮（扳机）。以下蓝图会在按下 Print Screen 键时截图：
+The **"Invoke Asset Trigger"** node can invoke any buttons (triggers) displayed on an asset's config page. The following blueprint will take a screenshot when the Print Screen key is pressed:
 
-![](</images/image(16)(2).jpg>)
-
+![](</images/image(14)(1).jpg>)

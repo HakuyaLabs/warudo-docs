@@ -2,22 +2,22 @@
 sidebar_position: 110
 ---
 
-# VMC 发送器
+# VMC Sender
 
-发送角色的动画数据到任何支持 [VirtualMotionCapture 协议](https://protocol.vmc.info/english)的软件！
+Send the animation data of a character to any software that supports the [VirtualMotionCapture protocol](https://protocol.vmc.info/english)!
 
 <div className="hint hint-success">
-可以在[这里](https://protocol.vmc.info/Reference)查看兼容的程序列表。
+A list of compatible programs can be found [here](https://protocol.vmc.info/Reference).
 </div>
 
-## 属性
+## Properties
 
-* IP 地址：要发送数据到哪个 IP。
-* 端口：要发送数据到哪个端口。
-* 角色：选择要发送动画数据的角色。
-* 发送到 VirtualMotionCapture：是否正在发送到 [VirtualMotionCapture](https://akira.works/VirtualMotionCapture-en/)（这里指的是同名软件，非 VMC 协议）。由于 VirtualMotionCapture 解析动画数据时的 Bug，必须启用此选项。
-  * 校准中（VirtualMotionCapture）：在 VirtualMotionCapture 内 T-Pose 校准时，请启用此选项；结束后禁用即可。
+* IP Address: To which IP address the data will be sent.
+* Port: To which port the data will be sent.
+* Character: Select the character whose animation data will be sent.
+* Send to VirtualMotionCapture: Whether data is being sent to [VirtualMotionCapture](https://akira.works/VirtualMotionCapture-en/) (the software with the same name, not the VMC protocol). This option must be enabled due to a bug in VirtualMotionCapture when parsing animation data.
+  * Calibrating (VirtualMotionCapture): Enable this option during T-Pose calibration in VirtualMotionCapture; disable it after.
 
 <div className="hint hint-warning">
-此功能要求模型所有关节的初始旋转皆为 0，否则发送到其他软件的数据可能无法兼容。如果你的模型是 [VRM 格式](https://vrm.dev/)，那么绝大多数情况下是没有问题的——极少数情况是模型师导出时没有勾选 Enforce T-Pose 选项，重新导出即可。
+This function requires that all initial rotations of the bones in the model be 0, otherwise the data sent to other software may not be compatible. If your model is in [VRM format](https://vrm.dev/), then in most cases there should be no issue. However, in very rare cases, the modeler may not have checked the Enforce T-Pose option when exporting, and it can be fixed by re-exporting with this option checked.
 </div>

@@ -2,142 +2,144 @@
 sidebar_position: 50
 ---
 
-# 动作捕捉节点
+# Motion Capture Nodes
 
-在这篇文档中，我们不再一一介绍每个节点，而是讲解基于 RhyLive 的动作捕捉是怎样用蓝图实现的。
+On this page, we will not go over each motion capture node in detail, but instead discuss how motion capture using [RhyLive ](../mocap/rhylive.md)is implemented using blueprints.
 
 <div className="hint hint-warning">
-建议对蓝图的运作有一定了解后再阅读此篇文档。
+It is recommended to have a basic understanding of how blueprints work before you proceed.
 </div>
 
-### **面部追踪**
+### Face Tracking
 
-基于 RhyLive 的面部追踪蓝图如下（使用标准 VRM BlendShape）：
+The blueprint for RhyLive face tracking is as follows (using the VRM blendshape mapping):
 
 <div className="hint hint-info">
-其他两个 RhyLive 面部追踪模板（使用 ARKit 面部 BlendShape 和使用 MMD BlendShape）的工作原理是类似的（甚至更简单），在此不再赘述。
+The other blendshape mappings (e.g. ARKit, MikuMikuDance) work similar, if not simpler, thus will not be discussed here.
 </div>
 
-<figure><img src="/images/image(1).jpg" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(8)(2)(4).jpg" alt="" /><figcaption></figcaption></figure>
 
-我们已经在[「蓝图是什么？」](../advanced/blueprints-intro.md)文档中介绍过面部追踪的基本原理。这张蓝图虽然看似复杂，但核心的逻辑用一句话就可以表达：「获取 RhyLive 接收器得到的 BlendShape 列表，进行一系列数据处理，最后应用到模型上。」我们跟着数据流动的方向，先来看看蓝图最左边的部分吧：
+The basic principle of Warudo's face tracking has already been introduced in ["Introduction to Blueprints."](../advanced/blueprints-intro.md) Although the RhyLive face tracking blueprint appears to be complex, the core logic can be expressed in one sentence: _"Receive the BlendShape list from the RhyLive receiver, perform a series of data processing, and finally apply it to the model."_ Let's follow the flow of data and start with the leftmost part of the blueprint.
 
-![](</images/image(3)(1)(2).jpg>)
+![](</images/image(2)(4).jpg>)
 
-可以看到，[「切换 BlendShape 列表」节点](advanced-nodes.md#qie-huan)会根据 RhyLive 接收器「追踪中」的信号，选择动捕数据或空白的 BlendShape 列表输出。这可以防止动捕信号丢失时，模型表情「卡住」的现象。
+The [**"Switch BlendShape List"**](advanced-nodes.md#switches) node selects either the captured motion data or an empty blendshape list based on the signal of RhyLive receiver being "Tracked". This prevents the model's expression from becoming stuck if the motion capture signal is lost.
 
 <div className="hint hint-info">
-如果我们觉得模型表情「卡住」更有意思呢？只需要删除「空 BlendShape 列表」节点，然后将「获取 RhyLive 接收器数据 -> BlendShape 列表」连接到「切换 BlendShape 列表 -> 条件为假」就可以了。
+What if we actually prefer the model's expression to be stuck when tracking is lost? We can simply remove the "Empty BlendShape List" node and connect "Get RhyLive Receiver Data -> BlendShape List" to "Switch BlendShape List -> If False."
 </div>
 
-往右看，我们可以看到虽然蓝图看上去错综复杂，不过流向右边的数据其实仅是原本的 BlendShape 列表（来自左边）设置了 6 个 BlendShape（上面的「设置 BlendShape」节点）：Blink\_L、Blink\_R、A、O、I、U。比如 U 的值直接采用了 `mouthPucker`（ARKit 面捕中嘟嘴的数据）的值；A 的值是 `jawOpen * 1.2 - mouthFunnel`，等等。
+Looking further to the right, we can see that although the blueprint appears to be complicated, the data flowing to the right is actually just the original blendshape list (from the left) with 6 VRM blendshapes set (by the **"Set BlendShape"** nodes): `Blink_L`, `Blink_R`, `A`, `O`, `I`, `U`. For example, the value of `U` is directly taken from `mouthPucker` (an ARKit mouth blendshape); `A`'s value is `jawOpen * 1.2 - mouthFunnel`, and so on.
 
 <div className="hint hint-info">
-为什么需要设置 A、O、I、U 的值呢？因为 RhyLive 的面捕数据是 [52 个 ARKit BlendShape 的值](https://arkit-face-blendshapes.com/)，但是我们的模型只有 VRM 的 BlendShape（A、I、E、O、U、Blink……）。因此，我们需要想办法从前者计算出后者的值。
+The reason why we need to set values for A, O, I, and U is because the facial tracking data from RhyLive consists of [52 ARKit blendshapes](https://arkit-face-blendshapes.com/), but our model only has VRM blendshapes (A, I, E, O, U, Blink, etc.). So we need to find a way to calculate the values of the latter from the former.
 
-为什么是 `jawOpen` 乘以 1.2，不是 1.3、1.4？为什么要减去 `mouthFunnel` 的值？其实，模板里的公式都是经验推导出来的，如果试出效果更好的公式，欢迎与大家分享哦。
+Why is `jawOpen` multiplied by 1.2 instead of 1.3 or 1.4? Why do we subtract `mouthFunnel`? In fact, these formulas are completely heuristic (i.e., based on the developer's experience). For best results, feel free to play around and customize!
 </div>
 
-<figure><img src="/images/image(9).jpg" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(4)(1).jpg" alt="" /><figcaption></figcaption></figure>
 
-接下来，我们希望对口型的 BlendShape 值作出一定约束。在这里，「约束 BlendShape」的作用是，**受约束 BlendShape 列表**中的每个 BlendShape 的值，必须小于等于 1 减去**约束 BlendShape** 的值。以最后一个节点为例，如果 BlendShape 列表中 U 的值为 0.7，那么 I、A、U 的值将被限制在 0.3 或以下。这样可以防止多个嘴型的 BlendShape 叠加在一起，出现穿模的现象；而「约束 BlendShape」节点的先后顺序则决定了嘴型的优先级（在这里，U 的优先级最高）：
+The **"Constrain BlendShape"** node restricts the value of each BlendShape in the "Constrained BlendShapes" list such that they must be less than or equal to 1 minus the value of the "Constraint BlendShape." (Tricky, I know.)
 
-<figure><img src="/images/image(8)(1).jpg" alt="" /><figcaption></figcaption></figure>
+For example, in the last node, if the value of `U` in the BlendShape list is 0.7, then the values of `I`, `A`, and `O` will be limited to 0.3 or less. This prevents multiple mouth blendshapes from stacking on top of each other, resulting in the model looking really weird. The order of the "Constrain BlendShape" nodes determines the priority of the mouth shapes (in this case, `U` has the highest priority).
 
-在蓝图的最后，我们对 BlendShape 列表中的数据作平滑处理（使表情动画看起来更为流畅），然后覆盖掉模型中相应的 BlendShape 的值：
+![](</images/image(64)(1).jpg>)
 
-![](/images/image.png)
+Finally, at the end of the blueprint, we smooth the data in the blendshape list (to make the facial animations appear smoother), and then apply the blendshapes onto the model:
 
-你可能会问：「使用 VRM BlendShape Proxy」这个选项是什么？我们熟知的 VRM 模型格式上的 A、I、E、O、U、Blink\_L、Blink\_R 并不是模型上的 BlendShape 名称，而是 VRM 内部的 BlendShapeClip 名称；每个 BlendShapeClip 内部对应的才是模型上实际 BlendShape 的值，如下所示：
+![](</images/image(7).jpg>)
 
-![](</images/image(6)(1)(1).jpg>)
+What is this **"Use VRM BlendShape Proxy"** property, you may ask? Well, the well-known `A`, `I`, `E`, `O`, `U`, `Blink_L`, and `Blink_R` blendshapes on the VRM model format are not the names of the blendshapes on the model, but rather the names of VRM's [BlendShapeClips](https://vrm.dev/en/univrm/blendshape/univrm\_blendshape.html). Each VRM BlendShapeClip internally corresponds to one or more blendshape values, as shown below:
 
-但是，Warudo 并不依赖于 VRM 的 BlendShapeClip 或 BlendShapeProxy，而是直接对模型上的 BlendShape 进行操作。所以，我们便需要「使用 VRM BlendShape Proxy」节点帮我们作这一转换。用以上的蓝图和模型为例，Blink\_L BlendShape 会被映射到 VRM 的 Blink\_L BlendShapeClip 上，也即模型的 `Fcl_EYE_Close_L` BlendShape。
+![](</images/image(63)(1).jpg>)
 
-### **姿态追踪**
+However, Warudo does not directly work with VRM's BlendShapeClips (not every model is a VRM model!), but instead manipulates the blendshapes on the model. Therefore, we need to turn on **"Use VRM BlendShape Proxy"** to help us make this conversion. With the above blueprint and model as an example, the `Blink_L` blendshape would be mapped to the VRM's `Blink_L` BlendShapeClip, which is the `Fcl_EYE_Close_L` blendshape on the model.
 
-基于 RhyLive 的上半身姿态追踪蓝图如下：
+### Pose Tracking
 
-<figure><img src="/images/image(7)(3).jpg" alt="" /><figcaption></figcaption></figure>
+The blueprint for RhyLive upper body pose tracking is as follows:
 
-不用担心，并没有看上去那么复杂啦！首先，仅看流程走向的话，我们可以看出这个蓝图会在每一帧覆盖角色的骨骼信息和左右手的 IK 权重：
+<figure><img src="/images/image(62).jpg" alt="" /><figcaption></figcaption></figure>
 
-<figure><img src="/images/image(10)(1).jpg" alt="" /><figcaption></figcaption></figure>
+This blueprint may look complicated, but don't worry! If we just look at the flow, we can see that this blueprint will essentially override the character's bone rotations and hand IK weights on every frame.
 
-骨骼信息指的是什么呢？一个角色的模型上有若干个关节，而每个关节的初始**相对**位置和旋转都是 (0, 0, 0)。所谓的让模型摆出某个 pose，其实就是设置每个关节的相对位置和旋转：
+<figure><img src="/images/image(12).jpg" alt="" /><figcaption></figcaption></figure>
 
-<figure><img src="/images/image(2)(3).jpg" alt="" /><figcaption><p>来源：<a href="https://blenderartists.org/t/apply-relative-rotation-from-one-armature-to-another/1194354">https://blenderartists.org/t/apply-relative-rotation-from-one-armature-to-another/1194354</a></p></figcaption></figure>
+What are "bone rotations," really? A character model has several joints, and the initial position and rotation of each joint in a character's model is (0, 0, 0). To make the model take a certain pose, we need to set the **relative** position and rotation of each joint.
 
-Warudo 支持一切 Unity 兼容的人形模型（即 [Humanoid Rig](https://docs.unity3d.com/2021.3/Documentation/Manual/UsingHumanoidChars.html)），而标准的人形模型共有 [54 个关节](https://docs.unity3d.com/ScriptReference/HumanBodyBones.html)。也就是说，无论你使用怎样的动捕硬件和软件，只要可以将输出的动捕数据转换（或合并）为 54 个旋转矢量，就可以让模型按照动捕数据动起来了。以下，我们把这 54 个旋转矢量称为**（角色）骨骼旋转**。
+<figure><img src="/images/image(2)(3)(1).jpg" alt="" /><figcaption><p>来源：<a href="https://blenderartists.org/t/apply-relative-rotation-from-one-armature-to-another/1194354">https://blenderartists.org/t/apply-relative-rotation-from-one-armature-to-another/1194354</a></p></figcaption></figure>
+
+Warudo supports any Unity-compatible [humanoid rig](https://docs.unity3d.com/2021.3/Documentation/Manual/UsingHumanoidChars.html), and standard humanoid models have [54 joints](https://docs.unity3d.com/ScriptReference/HumanBodyBones.html). That means, no matter what motion capture setup you have, as long as the output motion capture data can be converted (or merged) into 54 rotation vectors, the model can be animated with them. Below, we refer to these 54 rotation vectors as **(character) bone rotations**.
 
 <div className="hint hint-info">
-为什么在这个蓝图中没有操控骨骼位置呢？首先，除了人体的根关节（臀部）以外，除非想像《海贼王》的路飞那样伸长手臂，不然每个关节的**相对**位置应该是不变的。
+Why is there no control over the character's bone positions in this blueprint? To start, with the exception of the root joint (hips), the **relative** position of each joint should remain unchanged unless you want to stretch your arm like in One Piece.
 
-这里的相对位置指的是子关节在父关节的参照系的位置。我们以手臂为例：
+The relative position refers to the position of a child joint in the reference frame of the parent joint. For example, let's look at the arm:
 
-![](</images/image(4)(1)(3).jpg>)
+<img src="/images/image(24)(1)(1)(1)(1).jpg" alt="" data-size="original" />
 
-![](</images/image(3)(3).jpg>)
+<img src="/images/image(3)(3)(1).jpg" alt="" data-size="original" />
 
-可以看到，即使手臂摆出了不同的姿势，每个子关节**相对**于父关节的位置，都是沿着父关节的 Y 轴（绿轴）平移一段距离，而这段距离的长度是不会变的（除非想做拉长手臂的效果）。
+As you can see, even though the arm takes different poses, the position of each child joint **relative** to the parent joint is always translated along the parent's Y axis (green axis) by a fixed distance, which does not change unless you want to stretch your arm.
 
-通常情况下，唯一会覆盖的骨骼位置是臀部（Hips），因为臀部是角色的根骨骼，移动臀部的相对位置即移动角色在世界中的绝对位置。但 RhyLive 只提供上半身动捕，所以不会移动角色的位置，这就是此蓝图中没有操控角色骨骼位置的原因。像是 [VMC ](../mocap/vmc.md)或 [Rokoko ](../mocap/rokoko.md)等全身动捕的蓝图就会通过「覆盖角色骨骼位置」节点来操控角色骨骼位置。
+Typically, the only bone position that is overridden is the hips, as it is the root bone of the character and moving its relative position will move the character's absolute position in the world. However, RhyLive only provides upper body tracking, so it won't move the character's position, which is why there is no control over the character's bone positions in this blueprint. Blueprints for full-body motion capture such as [VMC](../mocap/vmc.md) or [Rokoko](../mocap/rokoko.md), however, will control the character's bone positions through the "Override Character Bone Positions" node.
 </div>
 
-我们来看看骨骼旋转的数据传递。可以看到，「覆盖角色骨骼」和「覆盖角色骨骼偏移」节点会接收<mark style={{color: "red"}}>**骨骼旋转**</mark>和<mark style={{color:"orange"}}>**骨骼旋转偏移**</mark>两组数据。这两组数据的源头都是 RhyLive 接收器，可是它们之间有什么区别呢？<mark style={{color: "blue"}}>**骨骼旋转权重**</mark>又是什么呢？我们先来看看前两者吧：
+Now let's take a look at how bone rotations are passed. As you can see, we have "Override Character Bones" and "Override Character Bone Rotation Offsets" nodes that receive two sets of data: <mark style={{color: "red"}}>**bone rotations**</mark> and <mark style={{color: "orange"}}>**bone rotation offsets**</mark>. Both of these data sets originate from the RhyLive receiver, but what is the difference between them? And what are the <mark style={{color: "blue"}}>**bone rotation weights**</mark>? Well, Let's start with the first two:
 
-<figure><img src="/images/image(54).jpg" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(1)(1)(1).jpg" alt="" /><figcaption></figcaption></figure>
 
-在以上的蓝图中，我们看到，RhyLive 输出的动捕数据被分为了两部分：一部分只有脸部、头部、骨盆的数据，一部分只有双臂与双手（左右臂、左右手手指）的数据。前者被当作<mark style={{color:"orange"}}>**骨骼旋转偏移**</mark>传进了节点里；这部分的动捕数据会<mark style={{color:"orange"}}>**始终应用在模型上**</mark>**。**后者被当作<mark style={{color: "red"}}>**覆盖骨骼旋转**</mark>传进了节点里，而这部分动捕数据是否被应用在模型上，则<mark style={{color: "red"}}>**取决于**</mark><mark style={{color: "blue"}}>**覆盖骨骼旋转权重**</mark><mark style={{color: "red"}}>**的值**</mark>**。**
+In the above, we see that the motion capture data output by RhyLive is divided into two parts: one part has only data from the face, head, and pelvis, and the other part has only data from the two arms & hands (left and right arms, left and right hand fingers). The former is passed as <mark style={{color: "orange"}}>**bone rotation offsets**</mark>, and this part of the mocap data is <mark style={{color: "orange"}}>**always applied to the model**</mark>. The latter is passed into the node as <mark style={{color: "red"}}>**bone rotations**</mark>, and whether this part of the motion capture data is applied to the model <mark style={{color: "red"}}>**depends on the value of the**</mark> <mark style={{color: "blue"}}>**bone rotation weights**</mark>.
 
 <div className="hint hint-info">
-你可能还注意到了「平滑旋转列表」这个节点。和「平滑 BlendShape 列表」一样，这个节点的作用便是让输入数据变得平滑，让角色动起来更为自然。
+You may have also noticed the **"Smooth Rotation List"** node. Similar to the "Smooth BlendShapes List" node, this node's purpose is to make the input data smoother, making the character's movements more natural.
 </div>
 
 <div className="hint hint-info">
-更严谨的表述：<mark style={{color: "red"}}>**骨骼旋转**</mark>是 54 个旋转矢量；<mark style={{color:"orange"}}>**骨骼旋转偏移**</mark>也是 54 个旋转矢量。<mark style={{color: "blue"}}>**骨骼旋转权重**</mark>则是 54 个 0 到 1 之间的小数。我们先假设<mark style={{color:"orange"}}>**骨骼旋转偏移**</mark>全部为 0。那么，<mark style={{color: "blue"}}>**骨骼旋转权重**</mark>全部为 1 时，模型的姿势和<mark style={{color: "red"}}>**骨骼旋转**</mark>（即动捕数据）一致；<mark style={{color: "blue"}}>**骨骼旋转权重**</mark>全部为 0 时，模型的姿势保持[动画设置](../assets/character/#dong-hua)的姿势。<mark style={{color:"orange"}}>**骨骼旋转偏移**</mark>是在这之上，对每个关节的旋转进行的微调。
+In a more precise manner, the <mark style={{color: "red"}}>**bone rotations**</mark> consist of 54 rotation vectors, the <mark style={{color: "orange"}}>**bone rotation offsets**</mark> also consist of 54 rotation vectors, and the <mark style={{color: "blue"}}>**bone rotation weight**</mark> consist of 54 decimal numbers between 0 and 1. Let's assume that <mark style={{color: "orange"}}>**bone rotation offsets**</mark> are all 0. Then, when <mark style={{color: "blue"}}>**bone rotation weights**</mark> are all 1, the pose of the model is consistent with the <mark style={{color: "red"}}>**bone rotations**</mark>, i.e., motion capture data; when <mark style={{color: "blue"}}>**bone rotation weights**</mark> are all 0, the pose of the model remains the [animation pose](../assets/character/#animation). The <mark style={{color: "orange"}}>**bone rotation offsets**</mark> are rotations additively added to each joint.
 
-用公式来表达，每个关节 i 的最终旋转为：
+Formulated, the final rotation of each joint i is:
 
-`FinalBoneRotations[i] =`<mark style={{color: "red"}}>**`BoneRotations`**</mark>`[i] *`<mark style={{color: "blue"}}>**`BoneRotationWeights`**</mark>`[i] + OriginalBoneRotations[i] *(1 -`<mark style={{color: "blue"}}>**`BoneRotationWeights`**</mark>`[i]) +`<mark style={{color:"orange"}}>**`BoneRotationOffsets`**</mark>`[i]`
+`FinalBoneRotations[i] =`<mark style={{color: "red"}}>**`BoneRotations`**</mark>`[i] *`<mark style={{color: "blue"}}>**`BoneRotationWeights`**</mark>`[i] + OriginalBoneRotations[i] *(1 -`<mark style={{color: "blue"}}>**`BoneRotationWeights`**</mark>`[i]) +`<mark style={{color: "orange"}}>**`BoneRotationOffsets`**</mark>`[i]`
 
-其中，OriginalBoneRotations 是[动画设置](../assets/character/#dong-hua)给出的骨骼旋转数据。
+where OriginalBoneRotations are the bone rotation data given by the [character animation settings](../assets/character/#animation).
 </div>
 
-让我们回想一下 Warudo 的最大卖点之一吧：可以实现动捕 + 动画的完美融合，即在捕捉到左右手的动作时让模型采用中之人的动作，而失去捕捉时，模型平滑过渡到[动画设置](../assets/character/#dong-hua)的动作。你或许猜到了：这正是利用调整<mark style={{color: "blue"}}>**骨骼旋转权重**</mark>的值来实现的：
+One of Warudo's biggest selling points is its ability to perfectly blend motion capture with animation. That means that when the hands are tracked, the model's hands will follow those of the user, but when the tracking is lost, the model will smoothly transition to the [animation pose](../assets/character/#animation). You may have guessed it: this is achieved by adjusting the values of the <mark style={{color: "blue"}}>**bone rotation weights**</mark>.
 
-<figure><img src="/images/image(7)(1).jpg" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(61)(1).jpg" alt="" /><figcaption></figcaption></figure>
 
-就这么看有点复杂，我们不妨倒过来看：<mark style={{color: "blue"}}>**覆盖骨骼旋转权重**</mark>的数据来源自[「切换 Float 列表」节点](advanced-nodes.md#qie-huan)。当 RhyLive 接收器给出「追踪中」的信号时，<mark style={{color: "blue"}}>**覆盖骨骼旋转权重**</mark>的数据会来自于「构建角色骨骼权重」节点；否则，<mark style={{color: "blue"}}>**覆盖骨骼旋转权重**</mark>即为最小角色骨骼权重（也就是 54 个 0），也就是最终骨骼旋转会完全采用动画的数据了。
+Looks too complicated? Well, let's read it from right to left. Essentially, the "Switch Float List" node is responsible for determining the value of the <mark style={{color: "blue"}}>**bone rotation weights**</mark>. When the RhyLive receiver signals that it's tracking, the data for the <mark style={{color: "blue"}}>**bone rotation weights**</mark> comes from the **"Construct Character Bone Weights"** node. Otherwise, the <mark style={{color: "blue"}}>**bone rotation weights**</mark> are set to the minimum character bone weights (all 54 values are set to 0), meaning that the final bone rotations will completely follow the animation pose.
 
-「构建角色骨骼权重」节点的数据又是怎么给出的呢？可以看到，左臂和左手手指的权重来自于上面的[「切换 Float」节点](advanced-nodes.md#qie-huan)，这个节点等同于将 RhyLive 接收器给出的「左手追踪中」布尔值（真 / 假）信号转换为 1 或者 0，并且在信号转变时在 0 和 1 之间过渡。右臂和右手手指的权重同理。也就是说，当收到左 / 右手动捕信号的时候，<mark style={{color: "blue"}}>**覆盖骨骼旋转权重**</mark>中左 / 右手的权重会逐渐过渡到 1（模型左右手跟随动捕）；当丢失信号的时候，权重逐渐过渡到 0（模型左右手跟随动画）。
+So, what data do the **"Construct Character Bone Weights"** node provide? Again, tracing to the left, we see its output is determined by the [**"Switch Float"**](advanced-nodes.md#switches) nodes. These nodes take the Boolean signals from the RhyLive receiver indicating whether the left or right hand is being tracked, and convert them into either a 1 or a 0. When the left or right hand is being tracked, the corresponding weight in the <mark style={{color: "blue"}}>**bone rotation weights**</mark> will gradually transition to 1 (the model's left or right hand follows the motion capture data). When the tracking signal is lost, the weight gradually transitions to 0 (the model's left or right hand follows the animation).
 
-深呼一口气，我们的蓝图只剩下最后一部分了！不过，你或许已经能看出个大概……
+Take a deep breath, we're almost done with our blueprint! But by now, you might have a good idea of what's left...
 
-<figure><img src="/images/image(26)(1).jpg" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(15).jpg" alt="" /><figcaption></figcaption></figure>
 
-两个「Float 相减」的输出值即为 1 减去左 / 右手的覆盖旋转权重，被用作「覆盖角色肢体 IK 位置 / 旋转权重」节点的位置 / 旋转权重输入。简单来说，就是**「左右手正在动捕的时候，不要应用左右手 IK」**的意思啦。
+The two "Float Subtraction" nodes output 1 minus the left/right hand's <mark style={{color: "blue"}}>**bone rotation weights**</mark>, which are used as inputs for the **"Override Character Limb IK Position / Rotation Weight"** nodes. In simpler terms, this means that the IK for the left/right hand will not be applied when the hands are tracked.
 
 <div className="hint hint-info">
-「相对于配置权重」中的配置权重指的是[角色资源中对应的 IK 权重](../assets/character/#shen-ti-ik)。
+The "Configured Weight" in "Relative To Configured Weight" refers to the [corresponding IK weight in the character asset](../assets/character/#body-ik).
 </div>
 
-### 小结
+### Conclusion
 
-如果你完全理解了以上的内容，你就是名副其实的 Warudo 蓝图专家了！🎉 现在你理解了基于 RhyLive 的动作捕捉是怎样 100% 用蓝图系统实现的，你可以：
+Congratulations! If you have fully understood the contents above, you are a true expert in Warudo blueprints. 🎉 Now that you understand how RhyLive-based motion capture is 100% implemented using the blueprint system, you can:
 
-* 微调动作捕捉的效果，比如调整「平滑…」节点来调节数据平滑的程度。
-* 自定义面捕映射，比如中之人鼓起脸（`cheekPuff`）时，淡入到生气的 BlendShape。
-* 研究[「RhyLive + 键盘 + 触控板」姿态捕捉模板](../assets/character/#dong-zuo-bu-zhuo)是怎么实现的。
-* 利用「获取 VMC 接收器数据」节点，将 VMC 数据与 RhyLive 数据融合在一起（比如使用 VMC 来 8  点 / 10 点捕捉，再用 RhyLive 进行 ARKit 面捕和手指的捕捉）。
-* 有别的动捕硬件或软件，但是数据并不是 VMC 格式？利用 [Mod SDK](../modding/mod-sdk.md) 创建与「获取 RhyLive 接收器数据」类似的节点类型，然后整合到蓝图里吧。
+* Fine-tune the motion capture, such as adjusting the "Smooth..." nodes to control the smoothness of the animation.
+* Customize blendshape mapping, such as activating an angry blendshape when you puff up your cheeks (`cheekPuff`).
+* Study how the pose tracking templates with [keyboard / trackpad](../assets/jian-pan-chu-kong-ban.md) are implemented.
+* Integrate VMC data with RhyLive data by using the "Get VMC Receiver Data" node (for example, use VMC for 8-point/10-point full body tracking and RhyLive for ARKit face tracking and finger tracking).
+* Have a different motion capture setup, but the data is not in VMC format? Use the [Mod SDK](../modding/mod-sdk.md) to create a node type similar to "Get RhyLive Receiver Data" and integrate it into the Blueprint.
 
-### 其他
+### Appendix
 
-**「偏移角色变换」**节点用来偏移角色的变换（即空间中的位置、旋转、比例），但不影响角色资源页设置的变换。通常用来应用 VMC 的动捕数据：
+The **"Offset Character Transform"** node is used to temporarily offset the character's transform, which includes its position, rotation, and scale in space, without affecting the "Transform" property set on the character's config page. It is typically used to apply character locomotion:
 
-![](</images/image(22)(1).jpg>)
+![](</images/image(20)(1).jpg>)
 
-**「偏移角色骨骼旋转列表」**节点可以偏移指定骨骼的旋转。以下蓝图会在按下 Z 键时让角色的头逐渐向左扭转 30 度，松开后逐渐复原：
+The **"Offset Character Bone Rotation List"** node allows for offsetting the rotation(s) of specified bone(s). The following blueprint will gradually turn the character's head 30 degrees to the left when the Z key is pressed, and gradually return to its original position when released:
 
-![](</images/image(2)(1)(4).jpg>)
+![](</images/image(13)(2).jpg>)

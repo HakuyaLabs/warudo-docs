@@ -1,39 +1,39 @@
 ---
 sidebar_position: 60
-sidebar_label: OpenSeeFace
 ---
 
-# OpenSeeFace（Beta）
+# OpenSeeFace (Beta)
 
-基于摄像头的面捕方案。可以捕捉基本 BlendShape，以及头部的旋转和移动。和 [VSeeFace ](https://www.vseeface.icu/)的面捕效果大致相仿。
+Webcam-based face tracking. Tracks a set of basic blendshapes, head rotation and head translation. Quality of face tracking is similar to that of [VSeeFace](https://www.vseeface.icu/).
 
 <div className="hint hint-info">
-OpenSeeFace 是 [VSeeFace](https://www.vseeface.icu/) 使用的面部识别技术，所以熟悉 VSeeFace 的用户可能会觉得非常亲切。大体上的捕捉效果也比较相似，不过单眼眨眼暂时没有 VSeeFace 稳定。
+OpenSeeFace is the face tracking technology used in [VSeeFace](https://www.vseeface.icu/), so users familiar with VSeeFace may find it quite familiar. The overall tracking quality is also similar, although winking is not as stable as VSeeFace at the moment.
 </div>
 
-## 属性
+## Properties
 
-* 角色：选择面捕要应用到的角色。
-* 输入摄像头：选择摄像头。**目前不支持 IP 摄像头（例如** [**DroidCam**](https://play.google.com/store/apps/details?id=com.dev47apps.droidcam\&hl=en\_US\&gl=US\&pli=1)**）。**
-* 校正：校正头部的位置和旋转，让角色望向正前方。
-* 头部移动范围：头部上下左右前后的移动范围。
-* 头部旋转范围：头部旋转的幅度。
-* 眼睛移动幅度：眼睛移动的幅度。X 是水平幅度，Y 是垂直幅度。
-* 强制同时眨眼：是否左右眼同时眨眼。如果眨眼不太稳定，建议开启。&#x20;
+* Character: Select the character to apply face tracking to.
+* Input Camera: Select the camera. **Currently, IP cameras (such as** [**DroidCam**](https://play.google.com/store/apps/details?id=com.dev47apps.droidcam\&hl=en\_US\&gl=US\&pli=1)**) are not supported.**
+* Calibrate: Correct the position and rotation of the head to face forward.
+* Head Movement Range: The range of head movement up, down, left, right, and forward.&#x20;
+* Head Rotation Range: The range of rotation for the head.
+* Head Rotation Offset: The offset of rotation for the head.
+* Head Vertical Movement: Whether or not to allow the head to move up and down.
+* Eye Movement Intensity: The intensity of eye movement. X is the horizontal intensity, Y is the vertical intensity.
+* Linked Eye Blinking: Whether to force blinking both eyes at the same time. Recommended if you notice blink tracking is not very stable.
 
-### 进阶
+### Advanced
 
-* 眼睛眨眼偏移：如果眼睛太难闭上，可以 +0.1 直到合适为止。如果眼睛太容易闭上就 -0.1。
-* 睁大眼（EyeWideLeft / EyeWideRight）灵敏度：**需要模型适配 ARKit BlendShape。**调大此值，可以让睁大眼 BlendShape（EyeWideLeft / EyeWideRight）变得更容易触发。
-* 眉毛移动灵敏度：**需要模型适配 ARKit BlendShape。**调大此值，可以让眉毛相关的 BlendShape 变得更容易触发。
-* 歪嘴（MouthLeft / MouthRight）灵敏度：**需要模型适配 ARKit BlendShape。**调大此值，可以让歪嘴的 BlendShape（MouthLeft / MouthRight）变得更容易触发。
-* 嘴巴张开阈值：如果嘴巴太容易张开，可以 +0.1 直到合适为止。如果太难张开就 -0.1。
-* 张嘴（JawOpen）灵敏度：调大此值，可以让张嘴的 BlendShape（JawOpen，或 VRM 的 A）变得更容易触发。
-* O嘴（MouthFunnel）灵敏度：调大此值，可以让O嘴的 BlendShape（MouthFunnel，或 VRM 的 O）变得更容易触发。
-* 微笑（MouthSmileLeft / MouthSmileRight）灵敏度：**需要模型适配 ARKit BlendShape。**调大此值，可以让微笑的 BlendShape（MouthSmileLeft / MouthSmileRight）变得更容易触发。
-* 身体移动幅度：随着头部的移动，身体自然移动的幅度。
+* Eye Blinking Offset: If you find the model's eyes are not fully closing, add 0.1 to the value until fit. Otherwise, subtract 0.1 from the value.&#x20;
+* Eye Wide Sensitivity: **Requires ARKit blendshapes to be present on the model.** Increasing this value makes the EyeWideLeft/EyeWideRight blendshapes easier to trigger.
+* Eyebrow Movement Sensitivity: **Requires ARKit blendshapes to be present on the model.** Increasing this value makes the eyebrow-related blendshapes easier to trigger.
+* Mouth Left Right Sensitivity: **Requires ARKit blendshapes to be present on the model.** Increasing this value makes the MouthLeft/MouthRight blendshapes easier to trigger.
+* Mouth Open Threshold: If you find the model's mouth opens too easily, add 0.1 to the value until fit. Otherwise, subtract 0.1 from the value.
+* Mouth Open Sensitivity: Increasing this value makes the JawOpen blendshape (or the "A" VRM animation clip) easier to trigger.
+* Mouth Funnel Sensitivity: Increasing this value makes the MouthFunnel blendshape (or the "O" VRM animation clip)  easier to trigger.
+* Mouth Smile Sensitivity: **Requires ARKit blendshapes to be present on the model.** Increasing this value makes the MouthSmileLeft/MouthSmileRight blendshapes easier to trigger.
+* Body Movement Intensity: The range of natural body movement that follows head movement.
 
-## 提示
+## Tips
 
-* OpenSeeFace 启动后，需要大概十几秒的时间内部校正，期间模型的嘴巴眼睛可能会乱动，这是正常现象。
-
+* After OpenSeeFace tracker is started, it takes 10-15 seconds for internal calibration. During this time, the model's mouth and eyes may move randomly, which is normal.

@@ -1,33 +1,39 @@
----
-sidebar_position: 30
----
+# Environment Mod
 
-# 环境 Mod
+Warudo can use any Unity [scene](https://docs.unity3d.com/Manual/CreatingScenes.html) as an [environment](../assets/environment.md)'s source.
 
-Warudo 支持任意 Unity [场景](https://docs.unity3d.com/Manual/CreatingScenes.html)作为[环境](https://tira.gitbook.io/warudo/assets/environment)源。
+## Prerequisites
 
-## 前置条件
+Due to Unity's [limitations](https://docs.unity3d.com/Manual/LightmappingDirectional.html), you must confirm "(Lightmapping) Directional Mode" is set to "Directional" for your scene's lighting settings:
 
-由于 Unity 的[限制](https://docs.unity3d.com/Manual/LightmappingDirectional.html)，场景的 Lighting 设置中，**Directional Mode** 必须为 **Directional**，如下图所示：
+![](</images/image(18)(2).jpg>)
 
-![](</images/image(18).jpg>)
-
-否则场景的光照可能会出现错误。
+Otherwise, the lighting in the scene may be incorrect.
 
 <div className="hint hint-info">
-如果场景本身已经烘培了 Lightmap，切换 Directional Mode 之后，需要点击 Generate Lighting 重新烘培 Directional Lightmap。
+If the scene already has lightmaps baked, after switching the lightmapping directional mode, you need to click "Generate Lighting" to rebake the lightmaps.
 </div>
 
 <div className="hint hint-info">
-你也可以使用 [Bakery](https://assetstore.unity.com/packages/tools/level-design/bakery-gpu-lightmapper-122218) 等第三方 Lightmapper，只要确保烘培的 Lightmap 是 Directional 即可。以 Bakery 为例，[可以设置 Directional Mode 为 Baked Normal Maps。](https://geom.io/bakery/wiki/index.php?title=Manual#Directional\_mode)
+You can also use third-party lightmappers like [Bakery](https://assetstore.unity.com/packages/tools/level-design/bakery-gpu-lightmapper-122218), as long as the lightmaps baked are directional. For example, in Bakery, [you can set the Directional Mode to "Baked Normal Maps."](https://geom.io/bakery/wiki/index.php?title=Manual#Directional\_mode)
 </div>
 
-## 步骤
+## Setup
 
-打开想要导出的 Unity 场景，在一个新 GameObject 或任何现有 GameObject 上放置 `EnvironmentSettings` 脚本，点击 `Copy from current environment settings` 按钮。
+Open the Unity scene you want to export and place the `EnvironmentSettings` script (included with Mod SDK) on a new GameObject or any existing GameObject. Click the `Copy from current environment settings` button.
 
-<div className="hint hint-info">
-如果不放置 `EnvironmentSettings` 脚本，那么天空盒、阴影颜色等渲染设置将不会导出到环境 Mod 里，请务必留意。
+<div className="hint hint-warning">
+If you do not place the `EnvironmentSettings` script, rendering settings such as the skybox and shadow color will not be exported to the environment mod.
 </div>
 
-命名场景为 **Environment**，并确保场景放在 Mod 文件夹内（可以放在任意子文件夹），选择「Warudo」->「Build Mod」，然后将生成的 `.warudo` 文件放进 Warudo 数据文件夹的 Environments 子文件夹里即可。
+Name the scene **"Environment"** and make sure the scene is placed in the mpd folder (can be placed in any subfolder). Select "Warudo" -> "Build Mod," and place the generated `.warudo` file into the "Environments" subfolder in the Warudo data folder.
+
+## FAQ
+
+Q: My Unity scene in Warudo doesn't look like the one in my editor.
+
+A: Check if your scene has prefabs with unapplied changes, like these.
+
+![](</images/image(73).jpg>)
+
+Try to apply the changes. If you still see the vertical lines (which means the changes could not be fully applied), right click on them and select "Prefab -> Unpack Completely" to unpack the prefabs, and export the mod again.

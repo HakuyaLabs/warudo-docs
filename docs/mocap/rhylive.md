@@ -1,14 +1,13 @@
 ---
 sidebar_position: 70
-sidebar_label: RhyLive
 ---
 
 # RhyLive
 
-由[域动数字 RhythMo](https://rhythmo.cn/) 研发的基于苹果 ARKit 的面捕 +上半身捕捉方案，需要一台支持[面容 ID ](https://support.apple.com/zh-cn/HT208109)的 iOS 设备，并下载 [RhyLive ](https://apps.apple.com/us/app/rhylive/)App（免费）。可以捕捉 52 个 ARKit BlendShape，头部的旋转及上半身的姿态。
+ARKit-based face and upper body tracking. Requires a [Face ID](https://support.apple.com/en-us/HT208109)-compatible iOS device and the free [RhyLive](https://apps.apple.com/us/app/rhylive/) app. Tracks 52 ARKit blendshapes, head rotation, and hand movements.
 
 <div className="hint hint-info">
-RhyLive 和 iFacialMocap 的面捕精度仅相差在 iFacialMocap 可以捕捉头部的移动，在可动性更高之余，可以带动模型的全身更自然地移动。可以参考下面的对比：
+RhyLive and iFacialMocap have similar accuracy when it comes to face tracking, but iFacialMocap is more flexible because it can track head movements, which allows the model to move more naturally. See the following comparison:
 
 <div className="video-box"><video controls src="https://user-images.githubusercontent.com/3406505/209767938-26ae5946-0fea-48f2-96c8-4d37a76eb4f4.mp4" />
 RhyLive
@@ -19,35 +18,36 @@ iFacialMocap
 </div>
 </div>
 
-## 教程
+## Setup
 
-iOS 设备上打开 RhyLive，左上角点击菜单图标进入设置界面。电脑和手机用的是同一个 WiFi 的话，就在 「IP」处输入电脑 IP，然后开启「无线」开关；或者也可以把设备用 USB 连上电脑，然后开启「有线」开关（需要安装 [iTunes](https://www.apple.com/itunes/)）。
+To use RhyLive on an iOS device, open the app and tap on the menu icon in the top left corner to enter the settings. If your computer and phone are connected to the same WiFi network, enter your computer's IP in the "IP" field and turn on the "无线" (Wireless) switch. Alternatively, you can connect your device to your computer using a USB cable and turn on the "有线" (Wired) switch ([iTunes](https://www.apple.com/itunes/) required).
 
-![](</images/image(8).jpg>)
+![](</images/image(8)(2)(2).jpg>)
 
 <div className="hint hint-info">
-如果不知道电脑的 IP，可以在「RhyLive 接收器」的配置页面查看：
+If you do not know your computer's IP, you can check on the configuration page of the "RhyLive Receiver".
 
-<img src="/images/image(26).jpg" alt="" data-size="original" />
+<img src="/images/image(26)(2).jpg" alt="" data-size="original" />
 
-如果列出多个 IP，则需要一个一个尝试。通常来说，你的 WiFi 路由器分配给你电脑的 IP 是以 192.168. 开头的，所以以上图为例，可以先尝试 192.168.1.2。
+If multiple IPs are listed, you would need to try each one. Usually, the IP address assigned to your computer by your WiFi router starts with 192.168. For example, in the above picture, you can first try 192.168.1.2.
 </div>
 
 <div className="hint hint-info">
-如果你使用「有线」选项，你必须在打开 Warudo 之前，在 iPhone 打开 RhyLive，并通过 USB 线连接到电脑。
+If you use the "Wired" option, you must open the RhyLive app, connect your iPhone to your PC before launching Warudo.
 </div>
 
-建议关闭「锁定弯腰」并开启「隐藏模型」。前者可以让模型的可动范围更广，后者可以有助降低长时间使用导致的设备发热。
+It is recommended to turn off "锁定弯腰" (Lock body bending) and turn on "隐藏模型" (Hide model). The former increases the range of motion of the model, while the latter helps reduce device overheating from prolonged use.
 
-![](</images/image(14).jpg>)
+![](</images/image(14)(1)(2).jpg>)
 
-## 属性
+## Properties
 
-* 端口：Warudo 接收数据使用的端口。可以在 RhyLive -> 设置 -> 端口 修改。
-* 校正：校正头部的位置和旋转，让角色望向正前方。
-* 身体移动范围：身体移动的幅度。
-* 眼睛眨眼灵敏度：眼睛眨眼的灵敏度。
-* 眼睛移动幅度：眼睛移动的幅度。
-* 眨眼灵敏度：眨眼的灵敏度。
-* 限制挤眼程度：如果你的模型适配了 ARKit BlendShape（即「完美同步」），根据模型师的偏好，你的模型眼睛可能无法完全闭起来（或者闭过头）。这种情况可以试着切换此选项。
-* 使用 BlendShape 控制眼睛：**需要模型适配 ARKit BlendShape。**不使用骨骼而是使用眼睛移动 BlendShape（EyeLookInLeft、EyeLookInRight、EyeLookOutLeft、EyeLookOutRight）来控制角色眼睛的移动。如果你的模型没有眼睛骨骼，则需要开启此选项。
+* Character: Select the character to apply tracking to.
+* Port: The port used by Warudo to receive data. You can change it in RhyLive -> Settings -> Port.
+* Calibrate: Correct the position and rotation of the head to face forward.
+* Head Rotation Offset: The offset of head rotation.
+* Body Movement Intensity: The range of body movement.
+* Eye Movement Intensity: The range of eye movement.
+* Eye Blink Sensitivity: The sensitivity of the eye blinking.
+* Limit Eye Squint: If your model is compatible with ARKit blendshapes, the eyes of your model may not be able to completely close (or close too much) based on the preferences of the modeler. In this case, try toggling this option.
+* Use BlendShapes For Eye Movement: **Requires ARKit blendshapes to be present on the model.** Controls the movement of the character's eyes using eye movement blendshapes (EyeLookInLeft, EyeLookInRight, EyeLookOutLeft, EyeLookOutRight) instead of the eye bones. If your model does not have eye bones, enable this option.

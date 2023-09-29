@@ -1,33 +1,33 @@
 ---
 sidebar_position: 90
-sidebar_label: Rokoko
 ---
 
 # Rokoko
 
-由 [Rokoko](https://www.rokoko.com/) 发送全身动捕数据到 Warudo。
+Face & body tracking via [Rokoko](https://www.rokoko.com/).
 
 ## Setup
 
-打开 Rokoko Studio -> Livestream -> 勾选 Activate 来发送数据到 Unity：
+Open Rokoko Studio -> Livestream -> Activate streaming to Unity:
 
-<figure><img src="/images/image(9)(3).jpg" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(18)(1).jpg" alt="" /><figcaption></figcaption></figure>
 
-更新「Profile 名称」为 Rokoko 中人物 Profile 的名称即可：
+Then, update Profile Name to the Rokoko actor whose motion capture data you would like to receive:
 
-<figure><img src="/images/image(53).jpg" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(2)(2).jpg" alt="" /><figcaption></figcaption></figure>
 
 <div className="hint hint-warning">
-注意，你需要 Rokoko Plus 或者 Pro 订阅才能发送动捕数据。
+Note: You need a Rokoko Plus or Pro subscription to stream to Unity.
 </div>
 
 <div className="hint hint-info">
-更多详情请参阅[官方文档](https://support.rokoko.com/hc/en-us/articles/4410471183633-Getting-Started-Streaming-to-Unity)。
+For more details, see the [official documentation](https://support.rokoko.com/hc/en-us/articles/4410471183633-Getting-Started-Streaming-to-Unity).
 </div>
 
-## 属性
+## Properties
 
-* 端口：Rokoko Studio 使用的端口。默认为 14043。
-* Profile 名称：要接受的 Rokoko 人物 Profile 名称。&#x20;
-* 根据 Studio Actor 调整臀部高度：是否根据 Studio Actor 调整臀部高度。
-
+* Port: The port used by Rokoko Studio. The default is 14043.
+* Profile Name: The name of the Rokoko Actor to receive.
+* Eye Blink Sensitivity: The sensitivity of the eye blinking.
+* Eye Movement Intensity: The range of eye movement.
+* Adjust Hip Height Based On Studio Actor: Whether to adjust hip height based on studio actor.

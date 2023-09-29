@@ -2,92 +2,94 @@
 sidebar_position: 70
 ---
 
-# 示例：热键切换角色动画 / 道具
+# Example: Hotkey Switch Between Animations / Props
 
-通过 Warudo 的[角色配置](../assets/character/)，你可以让模型摆出几乎任何想要的姿势。可是，身为 VTuber，总不能在直播中途配置吧！以下给出一个蓝图的实例，利用角色的[身体 IK](../assets/character/#shen-ti-ik)，让模型在「默认」、「举起玫瑰」、「双手比耶」和「右手拿麦克风」四种状态间自由切换，并实现流畅过渡。最棒的是：这些动画都是实时生成的，不需要在 3D 工具（例如：Blender）中事先制作。
+With Warudo's [extensive character configuration options](../assets/character/), you can pose the model in almost any way you want. However, as a VTuber, you can't just adjust the options on-the-fly during a livestream! Here is a blueprint example that uses the character's [body IK](../assets/character/#body-ik) to allow the model to switch freely between four states: "default", "holding a rose", "victory sign", and "holding a microphone", while achieving a smooth transition. The best part is that these animations are procedurally generated in realtime, without the need to create animations in a 3D tool like Blender.
 
 <div className="video-box"><video controls src="https://user-images.githubusercontent.com/3406505/196837021-1697da39-8988-4a12-9277-78040e4ef4a9.mp4" />
-视频里左右手的动作，除了一开始的左手是动捕之外，都是通过 IK 实现的。
+The movements of the hands in the video (except for the initial movement of the left hand through motion capture) are all achieved through IK.
 </div>
 
-### 准备工作
+### Preparations
 
 <div className="hint hint-info">
-还不清楚 IK 是什么？先看一下[身体 IK](../assets/character/#shen-ti-ik) 的说明吧！
+Not familiar with IK? Check out the[ instructions for body IK](../assets/character/#body-ik)!
 </div>
 
-首先，我们需要创建用来作为 IK 目标的[锚点](../assets/anchor.md)。创建名为「麦克风右手」的锚点，配置如下：
+First, we need to create an [anchor](../assets/anchor.md) that will serve as the IK target. Create an anchor called "Microphone Right Hand" and configure it as follows:
 
-![](</images/image(13)(1).jpg>)
+![](</images/image(5)(5).jpg>)
 
 <div className="hint hint-info">
-这里将锚点与角色绑定，这样即使角色的姿势或位置改变了，锚点的位置仍然会与胸骨保持同样的相对位置。
+This binds the anchor to the character so that even if the character's posture or position changes, the anchor's position will still maintain the same relative position to the character's chest.
 </div>
 
-放到合适的位置：
+Place the anchor in a suitable location:
 
 ![](/images/Warudo\_2022-10-19-19-06-05\_1024x1024.jpg)
 
-创建名为「麦克风右手肘」的锚点，配置如下：
+Create another anchor named "Microphone Right Elbow", with the following configuration:
 
-![](</images/image(6)(2).jpg>)
-
-<div className="hint hint-info">
-与上面相似，我们将锚点绑定到角色的脊椎，这样无论角色如何移动，锚点的位置始终与脊椎保持同样的相对位置。之所以绑定脊椎而不是胸骨，是因为这个锚点距离脊椎较近；通常而言，选择距离最近的骨骼来绑定是最合适的。
-</div>
-
-创建「麦克风」道具，**源**选择「内置 - 其他 -> 麦克风」，**角色配件**处配置如下：
-
-![](</images/image(8)(2).jpg>)
-
-在这一步，我们可以配置角色的[右手 IK](../assets/character/#shen-ti-ik) 属性如下，来验证两个 IK 锚点的配置无误：
-
-![](</images/image(12)(1).jpg>)
+![](</images/image(65).jpg>)
 
 <div className="hint hint-info">
-你的权重不需要与图中一致，因为在之后的蓝图配置中，这些权重都可以在节点上自由设置。
+Similarly, we bind the anchor to the character's spine so that the anchor's position always maintains the same relative position to the spine, regardless of how the character moves. The reason why we bind to the spine instead of the chest is because the anchor is closer to the spine. Generally speaking, it is most appropriate to bind to the closest bone.
 </div>
 
-开启麦克风道具的显示，调整两个锚点以及麦克风道具的位置，直到看起来自然为止：
+Create a "Microphone" prop, select the source as "Built-In - Miscellaneous -> Microphone", and configure the character attachment section as follows:
+
+![](</images/image(2)(1).jpg>)
+
+At this step, we can configure the [IK properties of the character's right hand](../assets/character/#body-ik) as follows to verify that the two IK anchors are properly configured:
+
+![](</images/image(9)(3).jpg>)
+
+<div className="hint hint-info">
+You do not need to match the config to the ones above, as these weights will be overridden by the nodes in the blueprint created below anyway.
+</div>
+
+Next, you can enable the microphone prop and adjust the position of both anchors and the microphone prop until it looks natural.
 
 ![](/images/Warudo\_2022-10-19-19-20-44\_1024x1024.jpg)
 
-创建「比耶左手」「比耶右手」「比耶左手肘」「比耶右手肘」「玫瑰右手」锚点，还有「玫瑰」道具。以下仅展示每个锚点的位置，锚点的属性配置与上面类似，**绑定骨骼**选锚点最近的骨骼即可；玫瑰道具的属性配置也与麦克风类似，只不过覆盖手势我换成了「拿着物品 2」：
+Next, create the "V-sign Left Hand", "V-sign Right Hand", "V-sign Left Elbow", "V-sign Right Elbow", "Rose Right Hand" anchors, as well as a rose prop. The following only shows the position of each anchor; the anchor configurations are similar to the above and can be bound to the bone nearest to the anchor; the properties of the rose prop are also similar to the microphone, except that the override hand pose has been changed to "Hold 2".
 
-<div class="figure-list">
+<div>
 
-<figure><img src="/images/Warudo_2022-10-19-19-06-24_1024x1024.jpg" alt="" /><figcaption><p>比耶左手</p></figcaption></figure>
-
- 
-
-<figure><img src="/images/Warudo_2022-10-19-19-06-21_1024x1024.jpg" alt="" /><figcaption><p>比耶右手</p></figcaption></figure>
+<figure><img src="/images/Warudo_2022-10-19-19-06-24_1024x1024.jpg" alt="" /><figcaption><p>V-sign Left Hand</p></figcaption></figure>
 
  
 
-<figure><img src="/images/Warudo_2022-10-19-19-06-28_1024x1024.jpg" alt="" /><figcaption><p>比耶左手肘</p></figcaption></figure>
+<figure><img src="/images/Warudo_2022-10-19-19-06-21_1024x1024.jpg" alt="" /><figcaption><p>V-sign Right Hand</p></figcaption></figure>
 
  
 
-<figure><img src="/images/Warudo_2022-10-19-19-06-27_1024x1024.jpg" alt="" /><figcaption><p>比耶右手肘</p></figcaption></figure>
+<figure><img src="/images/Warudo_2022-10-19-19-06-28_1024x1024.jpg" alt="" /><figcaption><p>V-sign Left Elbow</p></figcaption></figure>
 
  
 
-<figure><img src="/images/Warudo_2022-10-19-19-06-33_1024x1024.jpg" alt="" /><figcaption><p>玫瑰右手</p></figcaption></figure>
+<figure><img src="/images/Warudo_2022-10-19-19-06-27_1024x1024.jpg" alt="" /><figcaption><p>V-sign Right Hand</p></figcaption></figure>
+
+ 
+
+<figure><img src="/images/Warudo_2022-10-19-19-06-33_1024x1024.jpg" alt="" /><figcaption><p>Rose Right Hand</p></figcaption></figure>
 
 </div>
 
-### 蓝图配置
+### Setup
 
-创建一个新的蓝图（使用现有的当然也可以），放置以下节点和连接即可：
+Create a new blueprint (or you can use an existing one), and add the following nodes and connections:
 
-<figure><img src="/images/image(10).jpg" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(8)(2).jpg" alt="" /><figcaption></figcaption></figure>
 
-这里共四行节点——你可能已经猜到了，每一行节点就是对应一种状态的变换。按下从上往下第一个「触发」按钮，即可显示玫瑰并让角色举起玫瑰；第二个「触发」按钮会淡出角色双手的 IK；第三个「触发」按钮会显示麦克风并让角色把麦克风放到胸前；第四个「触发」按钮会让角色双手比耶。值得留意的是，每个「触发」按钮都会在上述逻辑之前（第二个按钮是在之后），通过[「序列」节点](advanced-nodes.md#liu-kong-zhi)，禁用覆盖手势及两个道具：
+This consists of four lines of nodes, and you may have guessed it, each line of nodes corresponds to the transformation of one state. By clicking the first "Trigger" button (from top to bottom), you can show the rose and make the character lift it up. The second "Trigger" button will fade out the character's IK with both hands. The third "Trigger" button will display the microphone and put it in front of the chest. The fourth "Trigger" button will make the character give V-signs with both hands. It's worth noting that for each "Trigger" button, before the corresponding logic is executed (the second button being after), the "Sequence" node disables the override hand pose and two props through the ["Sequence"](advanced-nodes.md#flow-control) node.
 
-<figure><img src="/images/image(9)(1).jpg" alt="" /><figcaption></figcaption></figure>
+<figure><img src="/images/image(6).jpg" alt="" /><figcaption></figcaption></figure>
 
 <div className="hint hint-info">
-你也可以将第二行的两个「禁用角色 IK」节点移动到最右侧「切换资源启用状态」节点右边，这样切换姿势时会保证重置左右手的 IK。副作用是，切换状态时，模型的手会抖一下……
+You can also move the two "Disable Character IK" nodes in the second row to the right of the "Toggle Asset Enabled" node, this way the IK for both hands will be reset when switching poses. The downside is that the model's hands may twitch when switching states.
 </div>
 
-以上使用「触发流程」节点仅是举例，在实际使用中，可以替换成[「当按下键盘按键时」节点](basic-nodes.md#shi-jian)来用热键切换角色的动画状态。另外，用同样的方法，你还可以用热键[切换角色的待机动画](basic-nodes.md#jiao-se)！
+Using the "Trigger Flow" node is just an example, in actual use, you can replace it with the "When Keyboard Key is Pressed" node to switch the character's animation state using hotkeys. Additionally, using the same method, you can also switch the character's idle animation using hotkeys!
+
+Using the "Trigger Flow" node is just one example and in practical use, you can replace it with a ["On Keystroke Pressed"](basic-nodes.md#events) node to switch the character's animation state with hotkeys. Additionally, you can use the same method to [switch the character's idle animation with hotkeys](basic-nodes.md#character) as well!

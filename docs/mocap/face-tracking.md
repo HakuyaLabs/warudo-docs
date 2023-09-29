@@ -1,18 +1,17 @@
 ---
 sidebar_position: 20
-sidebar_label: 面部追踪
 ---
 
-# 面部追踪
+# Face Tracking
 
-Warudo 目前支持 5 种面部捕捉方案。
+Warudo provides 5 face tracking solutions:
 
-* [**OpenSeeFace（Beta）**](openseeface.md)：基于摄像头的面捕方案。可以捕捉基本 BlendShape，以及头部的旋转和移动。和 [VSeeFace ](https://www.vseeface.icu/)的面捕效果大致相仿。
-* [**iFacialMocap**](ifacialmocap.md)：基于苹果 ARKit 的面捕方案，需要一台支持[面容 ID ](https://support.apple.com/zh-cn/HT208109)的 iOS 设备，并购买 [iFacialMocap](https://apps.apple.com/cn/app/id1489470545) App（国区售价 40 元）。可以捕捉 52 个 ARKit BlendShape，以及头部的旋转和移动。<mark style={{color: "green"}}>**精度和可动性最佳。**</mark>
-* [**RhyLive**](rhylive.md)：基于苹果 ARKit 的面捕方案，需要一台支持[面容 ID ](https://support.apple.com/zh-cn/HT208109)的 iOS 设备，并下载 [RhyLive ](https://apps.apple.com/us/app/rhylive/)App（免费）。可以捕捉 52 个 ARKit BlendShape，但仅捕捉头部的旋转。<mark style={{color: "green"}}>**精度最佳。**</mark>
-* [**VMC**](vmc.md)：由外部程序发送 [VirtualMotionCapture 数据](https://protocol.vmc.info/english)到 Warudo。一般较少使用 VMC 发送面捕数据。
-* [**Rokoko**](rokoko.md)：由 [Rokoko Studio](https://www.rokoko.com/products/studio) 发送面捕数据到 Warudo。
+* [**OpenSeeFace (Beta)**](openseeface.md): Webcam-based face tracking. Tracks a set of basic blendshapes, head rotation and head translation. Quality of face tracking is similar to that of [VSeeFace](https://www.vseeface.icu/).
+* [**iFacialMocap**](ifacialmocap.md): ARKit-based face tracking. Requires a [Face ID](https://support.apple.com/en-us/HT208109)-compatible iOS device and the $5.99 [iFacialMocap](https://apps.apple.com/us/app/id1489470545) app. Tracks 52 ARKit blendshapes, head rotation and head translation. <mark style={{color: "green"}}>**Most accurate and expressive.**</mark>
+* [**RhyLive**](rhylive.md): ARKit-based face tracking. Requires a [Face ID](https://support.apple.com/en-us/HT208109)-compatible iOS device and the free [RhyLive](https://apps.apple.com/us/app/rhylive/) app. Tracks 52 ARKit blendshapes and head rotation. <mark style={{color: "green"}}>**Most accurate.**</mark>
+* [**VMC**](vmc.md): Face tracking via an external application, which sends data to Warudo via the [VirtualMotionCapture protocol](https://protocol.vmc.info/english). VMC is typically not used for face tracking data.
+* [**Rokoko**](rokoko.md): Face tracking via [Rokoko Studio](https://www.rokoko.com/products/studio).
 
-开发中的面部捕捉方案：
+Upcoming face tracking solutions in development:
 
-* **NVIDIA Maxine**：基于摄像头的面捕方案，需要 NVIDIA RTX 系列（或者其他图灵架构）显卡。可以捕捉 51 个 ARKit BlendShape。
+* **NVIDIA Maxine:** Webcam-based face tracking. Requires a NVIDIA RTX series graphics card (or any Turing GPU). Tracks 51 ARKit blendshapes.
