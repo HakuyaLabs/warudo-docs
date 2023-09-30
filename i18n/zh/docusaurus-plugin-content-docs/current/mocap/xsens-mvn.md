@@ -1,3 +1,7 @@
+---
+sidebar_position: 100
+---
+
 # Xsens MVN
 
 由 [Xsens MVN Analyze/Animate](https://base.xsens.com/s/motion-capture-mvn-software?language=en\_US) 发送全身动捕数据到 Warudo。

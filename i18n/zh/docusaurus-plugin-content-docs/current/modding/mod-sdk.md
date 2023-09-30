@@ -1,3 +1,7 @@
+---
+sidebar_position: 10
+---
+
 # Mod SDK
 
 你可以使用 Unity + Warudo Mod SDK 制作 Mod，包括[角色](https://tira.gitbook.io/warudo/advanced/character-mod)、[角色动画](https://tira.gitbook.io/warudo/advanced/character-animation-mod)、[道具](https://tira.gitbook.io/warudo/advanced/prop-mod)、[环境](https://tira.gitbook.io/warudo/advanced/environment-mod)等，甚至可以编写 C# 插件，给 Warudo 添加新的资源类型和蓝图节点类型。
@@ -38,18 +42,23 @@ Mod SDK 导出的 Mod 后缀名为 `.warudo`，放在 Warudo 数据文件夹相�
 :::caution
 如果出现错误，提示 An error occurred while resolving packages / Error adding package，点击后出现类似 `No 'git' executable was found. Please install Git on your system then restart Unity and Unity Hub.` 信息：
 
-![](</images/image(8)(1)(1).jpg>)\
-\
+![](/doc-img/en-mod-sdk-1.webp)
+
 请到 [https://git-scm.com/download](https://git-scm.com/download) 下载安装 Git，并重启 Unity 及 Unity Hub。
 :::
 
 确认 File -> Build Settings... -> Player Settings... -> Other Settings -> Api Compatibility Level 为 .NET Framework：
 
-<figure><img src="/images/image(6).jpg" alt="" /><figcaption></figcaption></figure>
+![](/doc-img/en-mod-sdk-2.webp)
 
 下载 SDK 并导入到 Unity 项目内（可以新建项目，也可以是现有项目）：
 
-{% file src="/images/WarudoSDK 0.9.0.unitypackage" %}
+<a href="/sdk/WarudoSDK-0.10.0.unitypackage" target="_blank">
+<div className="file-box">
+<p>
+WarudoSDK-0.10.0.unitypackage
+</p></div>
+</a>
 
 :::caution
 如果是导入到**现有 Unity 项目**内，且你的项目内已经安装以下任意组件：
@@ -76,15 +85,15 @@ Mod SDK 导出的 Mod 后缀名为 `.warudo`，放在 Warudo 数据文件夹相�
 
 要创建一个新的 Mod，菜单栏选择「Warudo」->「New Mod」：
 
-![](https://user-images.githubusercontent.com/3406505/181208455-9ab46a52-4edd-401c-807e-2d2d6ae24eec.png)
+![](/doc-img/en-mod-sdk-3.webp)
 
 在 Mod Name 处给你的 Mod 起个名，再点击「Create Mod!」即可：
 
-![](https://user-images.githubusercontent.com/3406505/181208739-8916bccd-a669-4f48-aa41-3baf61670ef4.png)
+![](/doc-img/en-mod-sdk-4.webp)
 
 你应该能看到 Assets 文件夹下创建了 Mod 数据文件夹：
 
-![](https://user-images.githubusercontent.com/3406505/181209065-a63e4ba1-005a-45d3-853c-3aa4013f66a5.png)
+![](/doc-img/en-mod-sdk-5.webp)
 
 这样就可以开始制作 Mod 了！
 

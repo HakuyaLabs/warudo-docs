@@ -1,3 +1,7 @@
+---
+sidebar_position: 20
+---
+
 # 常见问题
 
 ## **Warudo 和其他 3D 应用程序 / 游戏（例如：Apex Legends）同时运行时，帧率会骤降。**

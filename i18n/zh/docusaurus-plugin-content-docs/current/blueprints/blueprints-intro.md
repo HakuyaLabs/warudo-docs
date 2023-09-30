@@ -1,3 +1,7 @@
+---
+sidebar_position: 10
+---
+
 # 蓝图是什么？
 
 作为 Warudo 最独特的功能之一，**蓝图**到底是什么呢？
@@ -19,9 +23,9 @@
 ![来源：https://developpaper.com/unity-realizes-facial-expression-transition-and-switching-animation-tutorial-through-blendshape/](https://user-images.githubusercontent.com/3406505/180678152-daf3ff76-1ab8-4add-b0c9-b28d0676fec3.gif)
 <p class="img-desc">来源：https://developpaper.com/unity-realizes-facial-expression-transition-and-switching-animation-tutorial-through-blendshape/</p>
 
-<div className="hint hint-info">
+:::info
 可以看到，BlendShape 的原理是**位移模型网格的若干个顶点**。[HANA\_Tool](https://kuniyan.booth.pm/items/2604269) 给 VRoid 模型自动生成 52 个 ARKit BlendShape（又被称作「完美同步」）的原理，正是因为同版本 VRoid Studio 导出的 VRM 模型，脸部网格的顶点数量和排列是完全一致的，因此一个模型的 BlendShape 可以直接套用在另一个模型上。其他软件制作的模型就只能手工制作 BlendShape 了。
-</div>
+:::
 
 主流的 [VRM 格式](https://store.steampowered.com/app/2079120/Warudo/)中，对应「眼睛睁闭」的 BlendShape 名称是 Blink，「嘴巴张合」则是 A（O 也可以），所以流程图又可以变成这样：
 
@@ -48,14 +52,16 @@
 
 这些假设是否一定成立呢？
 
-* _模型已经适配了 VRM 格式，因此有 Blink 和 A 两个 BlendShape。_\
-  \
+* _模型已经适配了 VRM 格式，因此有 Blink 和 A 两个 BlendShape。_
+
   显然，如果你的模型没有适配 VRM（比如是 VRChat 用的模型，又或者是 MMD 直接转换而来），那么这两个 BlendShape 是不存在的。
-* _动捕数据的值，应该等同于其对应 BlendShape 的值。_\
-  \
+
+* _动捕数据的值，应该等同于其对应 BlendShape 的值。_
+
   动捕数据不一定总是正确的（尤其是家用的动捕方案），以「睁眼闭眼」举例，如果你的眼睛本来就比较小，可能会一直被识别为半睁眼状态；明明闭眼了，模型却闭不上眼的情况也很常见。这是因为我们假设了对于所有人来说，只要闭上眼，动捕数据就应该是 1；只要张开眼，动捕数据就应该是 0。而实际的情况每个人都不同，比如有可能对于你来说，闭上眼，动捕数据是 0.7 左右，张开眼，动捕数据是 0.2 左右。
-* _如果中之人眨眼的话，Blink 的 BlendShape 就应该为 1；如果中之人张嘴的话，A 的 BlendShape 就应该为 1。_\
-  \
+
+* _如果中之人眨眼的话，Blink 的 BlendShape 就应该为 1；如果中之人张嘴的话，A 的 BlendShape 就应该为 1。_
+
   乍一看，这不是理所当然的吗？还真不一定。比如，假设我现在让模型做出了 ^^ 的表情：
 
 ![可爱捏](https://user-images.githubusercontent.com/3406505/180691970-c9ce152a-ef04-4e60-a014-4d6bb29105c1.png)
@@ -70,18 +76,25 @@
 
 那，怎么办呢？我们看看以往都是怎么做的……
 
-* _模型不一定适配 VRM 格式，所以没有 Blink 和 A 两个 BlendShape。_\
-  \
-  **市面软件：**不解决，模型适配 VRM，请。\
+* _模型不一定适配 VRM 格式，所以没有 Blink 和 A 两个 BlendShape。_
+
+  **市面软件：**不解决，模型适配 VRM，请。
+
   **自研：**反正代码是自己写的，代码里把 `Blink` 改成正确的 BlendShape 就行了（比如 MMD 就是`まばたき`）。
-* _动捕数据的值，不一定等同于其对应 BlendShape 的值。_\
-  \
-  **市面软件：**给特定 BlendShape 添加灵敏度调整（例：[VSeeFace](https://www.vseeface.icu/) 可以调节眨眼灵敏度、[RhyLive（Windows 客户端）](https://rhythmo.cn/rhylive/)可以调节每个 ARKit BlendShape 的灵敏度），但「灵敏度」仅是简单的乘数，可以让眼睛更容易合上，却无法解决眼睛睁不开的问题。市面上暂时没有 3D 软件能做到 [VTube Studio](https://denchisoft.com/) 这样的线性映射：\
-  ![image](https://user-images.githubusercontent.com/3406505/180693648-8c2408db-8cb7-410e-ab6b-403a99ff4205.png)\
+
+* _动捕数据的值，不一定等同于其对应 BlendShape 的值。_
+
+  **市面软件：**给特定 BlendShape 添加灵敏度调整（例：[VSeeFace](https://www.vseeface.icu/) 可以调节眨眼灵敏度、[RhyLive（Windows 客户端）](https://rhythmo.cn/rhylive/)可以调节每个 ARKit BlendShape 的灵敏度），但「灵敏度」仅是简单的乘数，可以让眼睛更容易合上，却无法解决眼睛睁不开的问题。市面上暂时没有 3D 软件能做到 [VTube Studio](https://denchisoft.com/) 这样的线性映射：
+
+  ![](/doc-img/en-blueprints-intro-7.webp)
+  
   **自研：**反正代码是自己写的，根据中之人手动适配好正确的数值即可。
-* _部分 BlendShape 需要约束其他 BlendShape 的值，例如 ^^ BlendShape 被激活时，Blink BlendShape 的值应该等于 0。_\
-  \
-  **市面软件：**给特定 BlendShape 添加播放表情时的约束（例：[Luppet](https://luppet.appspot.com/) 可以设置播放某表情时是否允许眨眼），但市面上的 3D 软件仅适配了 VRM 所定义的 BlendShape 的约束——毕竟 VRM 本身定义的 BlendShape 就不多——而其他的 BlendShape 就不支持了（比如 ARKit）。\
+
+   
+* _部分 BlendShape 需要约束其他 BlendShape 的值，例如 ^^ BlendShape 被激活时，Blink BlendShape 的值应该等于 0。_
+
+  **市面软件：**给特定 BlendShape 添加播放表情时的约束（例：[Luppet](https://luppet.appspot.com/) 可以设置播放某表情时是否允许眨眼），但市面上的 3D 软件仅适配了 VRM 所定义的 BlendShape 的约束——毕竟 VRM 本身定义的 BlendShape 就不多——而其他的 BlendShape 就不支持了（比如 ARKit）。
+
   **自研：**和传统软件类似，不过反正代码是自己写的，根据模型适配好约束即可。
 
 现在你或许已经意识到了，即便我们的需求看上去很简单（只是捕捉眼睛和嘴巴！），想要适配所有情况还是有点难度的。市面上 3D VTuber 软件的限制性都很大，而自研虽然看似能解决一切问题，但绝大多数自研项目不会考虑自定义性，仅为单个模型和中之人做适配，即使是简单的需求变化（比如动捕灵敏度）也需要程序侧来迭代和构建新版本，更别说更为复杂的需求了（比如更换场景、角色配件、礼物效果等）。当然，自研本身的技术门槛也是让不少 VTuber 望而却步的原因之一。
@@ -102,7 +115,7 @@
 
 让我们来解释一下发生了什么。每个蓝图中有若干个**节点**，比如上面的蓝图里面就有三个。每种节点有若干个**端口**，相同颜色的端口之间可以互相连接。
 
-* <b style={{color: "green"}}>**绿色的端口**</b>：决定节点执行的先后顺序。在上图中，「当 Update 时」执行后，「更新角色 BlendShape 列表」便会执行。
+* <b style={{color: "green"}}>绿色的端口</b>：决定节点执行的先后顺序。在上图中，「当 Update 时」执行后，「更新角色 BlendShape 列表」便会执行。
 * **黑色的端口**：在节点之间传送数据。在上图中，黑色的连接线负责把「获取 RhyLive 接收器数据」节点的「BlendShape 列表」，传给「更新角色 BlendShape 列表」的「BlendShape 列表」。
 
 「更新角色 BlendShape 列表」节点所负责的，就是把模型的 BlendShape 的值设置为输入的值。比如左边给它的 BlendShape 列表是 `X=0.55, Y=0.75`，那么模型的 X BlendShape 就会设置成 0.55，Y BlendShape 就会设置为 0.75。而「当 Update 时」这个节点，会在每一帧被自动执行。也就是说，用文字来解释的话，以上蓝图的意思就是「每一帧获取 RhyLive 接收器收到的 BlendShape，全部应用在模型对应的 BlendShape 上」。
@@ -167,14 +180,16 @@
 
 让我们现在回头看看之前的问题：
 
-* _模型不一定适配 VRM 格式，所以没有 Blink 和 A 两个 BlendShape。_\
-  \
+* _模型不一定适配 VRM 格式，所以没有 Blink 和 A 两个 BlendShape。_
+
   **Warudo：**不强制 BlendShape 名称，有什么用什么。
-* _动捕数据的值，不一定等同于其对应 BlendShape 的值。_\
-  \
+
+* _动捕数据的值，不一定等同于其对应 BlendShape 的值。_
+  
   **Warudo：**没事，可以对动捕数据自由操作。
-* _部分 BlendShape 需要约束其他 BlendShape 的值，例如 ^^ BlendShape 被激活时，Blink BlendShape 的值应该等于 0。_\
-  \
+
+* _部分 BlendShape 需要约束其他 BlendShape 的值，例如 ^^ BlendShape 被激活时，Blink BlendShape 的值应该等于 0。_
+
   **Warudo：**拖一个「约束 BlendShape」节点解决。
 
 似乎都解决了！当然啦，你不需要像上面一样，从 0 到 1 创建蓝图——在[新手上路](https://tiger-tang.gitbook.io/warudo/)的教程里，我们已经使用过 Warudo 自带的动捕 & 面捕蓝图生成工具，一键生成匹配模型信息的蓝图了。我们还演示了怎么把毫不相关的动捕数据（鼓脸）映射到指定的 BlendShape（`^^`）上——这当然只是蓝图万千可能性中的其中一种，比如，下面的蓝图就可以实现按下 Alt + C 时，切换模型的待机动作和表情：

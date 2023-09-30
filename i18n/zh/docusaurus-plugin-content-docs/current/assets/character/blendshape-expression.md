@@ -1,3 +1,8 @@
+---
+sidebar_position: 10
+---
+
+
 # 表情
 
 * 导入 VRM 表情：如果模型是 VRM 格式，导入模型内置的所有 VRM [BlendShapeClip ](https://vrm.dev/en/univrm/blendshape/univrm\_blendshape.html)作为表情。

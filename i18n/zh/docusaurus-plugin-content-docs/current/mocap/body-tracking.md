@@ -1,3 +1,8 @@
+---
+sidebar_position: 30
+---
+
+
 # 姿态追踪
 
 Warudo 目前支持 5 种姿态捕捉方案。

@@ -1,3 +1,7 @@
+---
+sidebar_position: 10
+---
+
 # 角色
 
 Warudo 原生支持导入 [VRM 格式](https://vrm.dev/en/univrm/)的角色模型。如果你的模型格式不是 VRM（例如是 MMD 或者 VRChat 专用的模型），可以使用 [Mod SDK](https://tiger-tang.gitbook.io/warudo/advanced/sdk) 导出为 `.warudo` 格式，即可加载到 Warudo 中。

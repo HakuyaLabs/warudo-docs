@@ -61,18 +61,23 @@ Return to Unity and wait for the project to reload; make sure there are no error
 :::caution
 If you encounter an error with the message `An error occurred while resolving packages / Error adding package` and clicking on it reveals a message similar to `No 'git' executable was found. Please install Git on your system then restart Unity and Unity Hub`, it means that Git is not installed on your system.
 
-![](</images/image(8)(1)(1)(1).jpg>)\
-\
+![](/doc-img/en-mod-sdk-1.webp)
+
 To resolve this issue, you need to download Git from [https://git-scm.com/download](https://git-scm.com/download) and then restart both Unity and Unity Hub.
 :::
 
 Confirm that the "Api Compatibility Level" in "File -> Build Settings... -> Player Settings... -> Other Settings" is set to .NET Framework.
 
-<figure><img src="/images/image(40).jpg" alt="" /><figcaption></figcaption></figure>
+![](/doc-img/en-mod-sdk-2.webp)
 
 Download the SDK and import it into your Unity project, either by creating a new project or using an existing one.
 
-{% file src="/images/WarudoSDK 0.10.0.unitypackage" %}
+<a href="/sdk/WarudoSDK-0.10.0.unitypackage" target="_blank">
+<div className="file-box">
+<p>
+WarudoSDK-0.10.0.unitypackage
+</p></div>
+</a>
 
 :::caution
 If you are importing into an **existing** project, and you have any of the following installed:
@@ -103,15 +108,15 @@ If you see some errors, keep in mind that some "errors" are really just warnings
 
 To create a new Mod, go to the menu bar and select "Warudo" -> "New Mod":
 
-![](https://user-images.githubusercontent.com/3406505/181208455-9ab46a52-4edd-401c-807e-2d2d6ae24eec.png)
+![](/doc-img/en-mod-sdk-3.webp)
 
 Give your mod a name, and click "Create Mod!" to create it:
 
-![](https://user-images.githubusercontent.com/3406505/181208739-8916bccd-a669-4f48-aa41-3baf61670ef4.png)
+![](/doc-img/en-mod-sdk-4.webp)
 
 You should be able to see that a folder for your mod has been created under the Assets folder:
 
-![](https://user-images.githubusercontent.com/3406505/181209065-a63e4ba1-005a-45d3-853c-3aa4013f66a5.png)
+![](/doc-img/en-mod-sdk-5.webp)
 
 Now you can start creating mods! How does a [prop mod](prop-mod.md) sound?
 

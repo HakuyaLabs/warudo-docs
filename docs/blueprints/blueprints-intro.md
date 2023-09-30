@@ -53,19 +53,17 @@ Here comes the problem—our flowchart made some key assumptions:
 
 Are these assumptions necessarily valid?
 
-* <i style={{color: "#423da8"}}>The model has been adapted to the VRM format, so there are two blendshapes named `Blink` and `A`.</i>
+* _The model has been adapted to the VRM format, so there are two blendshapes named `Blink` and `A`._
 
-*  Obviously, if your model hasn't been adapted to the VRM format (for example, it's a VRChat model or directly converted from a MMD model), then these two blendshapes won't be present.
+  Obviously, if your model hasn't been adapted to the VRM format (for example, it's a VRChat model or directly converted from a MMD model), then these two blendshapes won't be present.
 
-<br />
+* _The value of a face tracking data point matches the value of its corresponding blendshape all the time._
 
-* <i style={{color: "#423da8"}}>The value of a face tracking data point matches the value of its corresponding blendshape all the time.</i>
-*  We assumed that when a person closes their eyes, the `eyes opened/closed` data should be 1, and when they open their eyes, the `eyes opened/closed` data should be 0. However, this is not always the case. Keep in mind that the results of motion capture can be unreliable, especially for consumer-grade motion capture systems. For instance, if you have small eyes, the system may recognize them as only partially open even though you keep your eyes wide open. So instead of a range of 0-1, the actual range for you could be 0.2-0.7.
+  We assumed that when a person closes their eyes, the `eyes opened/closed` data should be 1, and when they open their eyes, the `eyes opened/closed` data should be 0. However, this is not always the case. Keep in mind that the results of motion capture can be unreliable, especially for consumer-grade motion capture systems. For instance, if you have small eyes, the system may recognize them as only partially open even though you keep your eyes wide open. So instead of a range of 0-1, the actual range for you could be 0.2-0.7.
 
-<br />
-
-* <i style={{color: "#423da8"}}>The `Blink` blendshape should be set to 1 when the person blinks, and the `A` blendshape should be set to 1 when the person opens their mouth.</i>
-* Isn't this always true? Not necessarily. Suppose my model has activated the `Smile` expression:
+* _The `Blink` blendshape should be set to 1 when the person blinks, and the `A` blendshape should be set to 1 when the person opens their mouth._
+  
+  Isn't this always true? Not necessarily. Suppose my model has activated the `Smile` expression:
 
 ![Cute!](/doc-img/en-blueprints-intro-5.webp)
 <p class="img-desc">Cute!</p>
@@ -81,24 +79,28 @@ The reason is straightforward: the `Blink` blendshape pulls down the model's upp
 
 So, what can we do? Let's take a look at how it's been handled in the past...
 
-<br />
 
-* <i style={{color: "#423da8"}}>It's possible that the models haven't been adapted to the VRM format, meaning that there won't be `Blink` and `A` blendshapes present.</i>
-* **Most software:** Adapt your model to the VRM format please. Non-VRM models are simply unsupported.\
-* **Self-developed/In-house:** Since the devs wrote and own the code, they can simply modify it to use the correct blendshape instead of `Blink`. For example, if using an MMD model, you could replace `Blink` with `まばたき`.
+* _It's possible that the models haven't been adapted to the VRM format, meaning that there won't be `Blink` and `A` blendshapes present._
 
-<br />
+  **Most software:** Adapt your model to the VRM format please. Non-VRM models are simply unsupported.
 
-* <i style={{color: "#423da8"}}>It's possible that the value of the motion capture data should not match the value of its corresponding blendshape.</i>
-* **Most software:** There are tools that allow for sensitivity adjustments to specific blendshapes, such as [VSeeFace](https://www.vseeface.icu/), which can adjust the blink sensitivity, or [RhyLive (Windows)](https://rhythmo.cn/rhylive/) which allows for adjustments to the sensitivity of each ARKit blendshape. However, these adjustments are usually simple multipliers that make it easier to trigger a blendshape (e.g., closing the eyes). Even a simple linear mapping from mocap data to blendshape values like [VTube Studio](https://denchisoft.com/) is unsupported in most 3D VTuber software:
+  **Self-developed/In-house:** Since the devs wrote and own the code, they can simply modify it to use the correct blendshape instead of `Blink`. For example, if using an MMD model, you could replace `Blink` with `まばたき`.
+
+
+* _It's possible that the value of the motion capture data should not match the value of its corresponding blendshape._
+
+  **Most software:** There are tools that allow for sensitivity adjustments to specific blendshapes, such as [VSeeFace](https://www.vseeface.icu/), which can adjust the blink sensitivity, or [RhyLive (Windows)](https://rhythmo.cn/rhylive/) which allows for adjustments to the sensitivity of each ARKit blendshape. However, these adjustments are usually simple multipliers that make it easier to trigger a blendshape (e.g., closing the eyes). Even a simple linear mapping from mocap data to blendshape values like [VTube Studio](https://denchisoft.com/) is unsupported in most 3D VTuber software:
+
   ![](/doc-img/en-blueprints-intro-7.webp)
-* **Self-developed/In-house:** Since the devs wrote and own the code, they can manually adjust the values to correct for any discrepancies. They need to do this for every user though.
 
-<br />
+  **Self-developed/In-house:** Since the devs wrote and own the code, they can manually adjust the values to correct for any discrepancies. They need to do this for every user though.
 
-* <i style={{color: "#423da8"}}>The values of certain blendshapes may need to be constrained based on the activation of other blendshapes. For instance, when the `Smile` blendshape is activated, the value of the `Blink` blendshape should be constantly 0, even if the_ user _blinks their eyes._</i>
-* **Most software:** There are tools that allow for constraints to be added to specific blendshapes when activating an expression, such as [Luppet](https://luppet.appspot.com/), which allows you to control whether or not blinking is allowed. However, most software only supports constraining blendshapes defined by VRM; other blendshapes are often unsupported, which can be a problem for custom models that often have many of them.\
-*  **Self-developed/In-house:** Again, since the devs wrote and own the code, they can manually adjust the values to correct for any discrepancies. They really should have come up with some automation like a config UI at this point though.
+
+* _The values of certain blendshapes may need to be constrained based on the activation of other blendshapes. For instance, when the `Smile` blendshape is activated, the value of the `Blink` blendshape should be constantly 0, even if the_ user _blinks their eyes.__
+
+  **Most software:** There are tools that allow for constraints to be added to specific blendshapes when activating an expression, such as [Luppet](https://luppet.appspot.com/), which allows you to control whether or not blinking is allowed. However, most software only supports constraining blendshapes defined by VRM; other blendshapes are often unsupported, which can be a problem for custom models that often have many of them.
+
+  **Self-developed/In-house:** Again, since the devs wrote and own the code, they can manually adjust the values to correct for any discrepancies. They really should have come up with some automation like a config UI at this point though.
 
 By now, you may have realized that even though our requirements seem simple (just tracking the eyes and mouth!), adapting to all scenarios is still challenging. Most publicly available 3D VTuber software has significant limitations in this area; while an in-house solution seems like it could solve all problems, the vast majority of self-developed projects do not consider customization and are only adapted for a single model and user. Thus, even simple changes in requirements, such as adjusting motion capture sensitivity, require updates to the program. And more complex requirements, such as changing scenes, character accessories, or adding special effects, add even more complexity. The technical demands of building a VTuber software from scratch are also a significant obstacle for many VTubers aspiring to stream in 3D.
 
@@ -181,19 +183,19 @@ No more weird eyelids!
 
 Let's revisit our concerns earlier:
 
-* <i style={{color: "#423da8"}}>It's possible that the models haven't been adapted to the VRM format, meaning that there won't be `Blink` and `A` blendshapes present.</i>
-*  **Warudo:** Doesn't force you to stick to specific blendshape names. Just use what's available on your model.
+* _It's possible that the models haven't been adapted to the VRM format, meaning that there won't be `Blink` and `A` blendshapes present._
 
-<br />
+  **Warudo:** Doesn't force you to stick to specific blendshape names. Just use what's available on your model.
 
-* <i style={{color: "#423da8"}}>It's possible that the value of the motion capture data should not match the value of its corresponding blendshape.</i>
-*  **Warudo:** You have the freedom to manipulate the motion capture data as you please!
 
-<br />
+* _It's possible that the value of the motion capture data should not match the value of its corresponding blendshape._
 
-* <i style={{color: "#423da8"}}>The values of certain blendshapes may need to be constrained based on the activation of other blendshapes. For instance, when the `Smile` blendshape is activated, the value of the `Blink` blendshape should be constantly 0, even if the_ user _blinks their eyes.</i>
+  **Warudo:** You have the freedom to manipulate the motion capture data as you please!
 
-*  **Warudo:** Simply add a `Constraint BlendShape` node.
+
+* _The values of certain blendshapes may need to be constrained based on the activation of other blendshapes. For instance, when the `Smile` blendshape is activated, the value of the `Blink` blendshape should be constantly 0, even if the_ user _blinks their eyes._
+
+  **Warudo:** Simply add a `Constraint BlendShape` node.
 
 Everything seems to be solved! Of course, you don't have to build blueprints from scratch like above: as shown [in the Getting Started tutorial](../tutorials/readme-1.md), Warudo allows you to generate blueprints with a single click that match your model's specific setup. We showed how to map motion capture data (such as puffing your face) to a specific blendshape—but this is just one of the thousands of possibilities. For example, the following blueprint can be used to change the model's idle animation and expression when you press Alt+C.
 
