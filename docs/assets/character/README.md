@@ -23,7 +23,7 @@ Refer to the [motion capture section](/docs/tutorials/mocap/body-tracking) for d
 * Setup Motion Capture: Select the [face tracking](../../mocap/face-tracking.md) and [pose tracking ](../../mocap/body-tracking.md)template to automatically generate the mocap [blueprints](/docs/mocap/blueprints/overview).
 
 :::info
-Think of blueprints as programs that apply the mocap data on your avatar. Read more [here](../../advanced/blueprints-intro.md).
+Think of blueprints as programs that apply the mocap data on your avatar. Read more [here](../../blueprints/blueprints-intro.md).
 :::
 
 * Remove Motion Capture: Remove the assets and blueprints created in a previous motion capture setup.
