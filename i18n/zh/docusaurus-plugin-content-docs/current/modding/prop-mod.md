@@ -1,7 +1,3 @@
----
-sidebar_position: 40
----
-
 # 道具 Mod
 
 Warudo 支持任意 Unity [Prefab](https://docs.unity3d.com/Manual/Prefabs.html) 作为[道具](https://tira.gitbook.io/warudo/assets/prop)的模型源。

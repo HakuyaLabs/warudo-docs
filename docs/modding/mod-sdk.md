@@ -1,3 +1,7 @@
+---
+sidebar_position: 10
+---
+
 # Mod SDK
 
 By using Unity + Warudo Mod SDK, you can create mods including [characters](character-mod.md), [character animations](character-animation-mod.md), [props](prop-mod.md), [environments](environment-mod.md), and even [write C# plugins](#user-content-fn-1)[^1] to add new resource types and blueprint node types to Warudo.
@@ -12,19 +16,24 @@ First, make sure you have installed [Unity 2021.3.18f1](https://unity.com/).
 
 Download the following project and extract the contents anywhere, say `C:\WarudoModding`.
 
-{% file src="/images/Warudo SDK 0.10.0 Mod Project.zip" %}
+<a href="/sdk/Warudo-SDK-0.10.0-Mod-Project.zip" target="_blank">
+<div className="file-box">
+<p>
+Warudo-SDK-0.10.0-Mod-Project.zip
+</p></div>
+</a>
 
 In Unity Hub, click on **"Open"** and select the mod project folder (such as `C:\WarudoModding`). Then wait for Unity to launch the project.
 
-<div className="hint hint-info">
+:::info
 When you open the mod project for the first time, Unity can take 5-10 minutes to download dependencies and set up the project.
-</div>
+:::
 
 Check the console for any errors. If there are none, you are all set! Now you may [create your first mod.](mod-sdk.md#creating-your-first-mod)
 
-<div className="hint hint-success">
+:::tip
 If you see some errors, keep in mind that some "errors" are really just warnings that can be cleared. Try click on "Clear" to see if these errors can be removed.
-</div>
+:::
 
 ### **Option 2: Manually import Mod SDK into your project**
 
@@ -49,13 +58,13 @@ After opening the Unity project, open the `Packages/manifest.json` file under yo
 
 Return to Unity and wait for the project to reload; make sure there are no errors.
 
-<div className="hint hint-warning">
+:::caution
 If you encounter an error with the message `An error occurred while resolving packages / Error adding package` and clicking on it reveals a message similar to `No 'git' executable was found. Please install Git on your system then restart Unity and Unity Hub`, it means that Git is not installed on your system.
 
 ![](</images/image(8)(1)(1)(1).jpg>)\
 \
 To resolve this issue, you need to download Git from [https://git-scm.com/download](https://git-scm.com/download) and then restart both Unity and Unity Hub.
-</div>
+:::
 
 Confirm that the "Api Compatibility Level" in "File -> Build Settings... -> Player Settings... -> Other Settings" is set to .NET Framework.
 
@@ -65,7 +74,7 @@ Download the SDK and import it into your Unity project, either by creating a new
 
 {% file src="/images/WarudoSDK 0.10.0.unitypackage" %}
 
-<div className="hint hint-warning">
+:::caution
 If you are importing into an **existing** project, and you have any of the following installed:
 
 * [Animancer](https://assetstore.unity.com/packages/tools/animation/animancer-pro-116514)
@@ -82,13 +91,13 @@ Please uncheck the corresponding folders from import, or your components will be
 * `Plugins/MagicaCloth`
 * `Plugins/RootMotion/PuppetMaster`
 
-</div>
+:::
 
 Check the console for any errors. If there are none, you are all set! Now you may [create your first mod.](mod-sdk.md#creating-your-first-mod)
 
-<div className="hint hint-success">
+:::tip
 If you see some errors, keep in mind that some "errors" are really just warnings that can be cleared. Try click on "Clear" to see if these errors can be removed.
-</div>
+:::
 
 ## Creating Your First Mod
 

@@ -1,7 +1,3 @@
----
-sidebar_position: 30
----
-
 # 环境 Mod
 
 Warudo 支持任意 Unity [场景](https://docs.unity3d.com/Manual/CreatingScenes.html)作为[环境](https://tira.gitbook.io/warudo/assets/environment)源。
@@ -10,7 +6,7 @@ Warudo 支持任意 Unity [场景](https://docs.unity3d.com/Manual/CreatingScene
 
 由于 Unity 的[限制](https://docs.unity3d.com/Manual/LightmappingDirectional.html)，场景的 Lighting 设置中，**Directional Mode** 必须为 **Directional**，如下图所示：
 
-![](/images/environment-mod-setting.webp)
+![](/doc-img/en-environment-mod-1.webp)
 
 否则场景的光照可能会出现错误。
 

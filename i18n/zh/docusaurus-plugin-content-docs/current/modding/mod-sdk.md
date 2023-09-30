@@ -1,7 +1,3 @@
----
-sidebar_position: 10
----
-
 # Mod SDK
 
 你可以使用 Unity + Warudo Mod SDK 制作 Mod，包括[角色](https://tira.gitbook.io/warudo/advanced/character-mod)、[角色动画](https://tira.gitbook.io/warudo/advanced/character-animation-mod)、[道具](https://tira.gitbook.io/warudo/advanced/prop-mod)、[环境](https://tira.gitbook.io/warudo/advanced/environment-mod)等，甚至可以编写 C# 插件，给 Warudo 添加新的资源类型和蓝图节点类型。
