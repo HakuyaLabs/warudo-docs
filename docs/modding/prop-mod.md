@@ -1,3 +1,7 @@
+---
+sidebar_position: 40
+---
+
 # Prop Mod
 
 Warudo can use any Unity [prefab](https://docs.unity3d.com/Manual/Prefabs.html) as a [prop](../assets/environment.md)'s source.
