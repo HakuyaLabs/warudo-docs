@@ -1,0 +1,56 @@
+.in-app-page{
+
+  .container{
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .main{
+    padding: 5%;
+    background-color: var(--ifm-color-emphasis-100);
+    
+    h1{
+      font-size: 48px;
+      margin-bottom: 40px;
+    }
+    .navbar__search{
+      --doc-sidebar-width: 100%;
+      margin-left: 0;
+      >span{
+        width: 100%;
+      }
+      .searchHint_node_modules-\@easyops-cn-docusaurus-search-local-dist-client-client-theme-SearchBar-SearchBar-module{
+        display: none;
+      }
+      .navbar__search-input{
+        width: 100%;
+        background-color: var(--ifm-color-emphasis-300);
+        padding: 6px 0.5rem 6px 2.25rem;
+        height: 3em;
+      }
+   }
+  }
+  .sug{
+    margin-top: 60px;
+    .sug-list{
+      display: flex;
+      justify-content: space-between;
+      .item{
+        width: 48%;
+        background-color: var(--ifm-color-emphasis-200);
+        padding: 16px 20px;
+        border-radius: 10px;
+        cursor: pointer;
+        h3{
+          font-weight: normal;
+          margin-bottom: .4em;
+        }
+        p{
+          margin: 0;
+          opacity: .7;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
