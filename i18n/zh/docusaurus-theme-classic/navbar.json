@@ -1,13 +1,13 @@
 {
   "title": {
-    "message": "Warudo Document",
+    "message": "Warudo 文档",
     "description": "The title in the navbar"
   },
   "logo.alt": {
-    "message": "My Site Logo",
+    "message": "Warudo 文档",
     "description": "The alt text of navbar logo"
   },
-  "item.label.文档": {
+  "item.label.Document": {
     "message": "文档",
     "description": "Navbar item with label 文档"
   },
@@ -15,7 +15,7 @@
     "message": "GitHub",
     "description": "Navbar item with label GitHub"
   },
-  "item.label.主页": {
+  "item.label.Home Page": {
     "message": "主页",
     "description": "Navbar item with label 主页"
   }

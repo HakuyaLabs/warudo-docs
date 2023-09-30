@@ -29,7 +29,7 @@ const config = {
   // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['zh', 'en'],
+    locales: ['en', 'zh'],
   },
 
   presets: [
@@ -79,11 +79,11 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: '文档',
+            label: 'Document',
           },
           {
             position: 'left',
-            label: '主页',
+            label: 'Home Page',
             href: 'https://warudo.app/',
             target: '_blank',
           },
