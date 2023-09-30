@@ -1,3 +1,7 @@
+---
+sidebar_position: 50
+---
+
 # 角色动画 Mod
 
 Warudo 支持导入 Unity 的 [AnimationClip](https://docs.unity3d.com/ScriptReference/AnimationClip.html)，目前可作为[角色待机动画](https://tira.gitbook.io/warudo/assets/character)使用。

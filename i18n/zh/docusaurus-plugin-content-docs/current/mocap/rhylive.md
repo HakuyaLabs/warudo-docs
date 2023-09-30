@@ -1,3 +1,7 @@
+---
+sidebar_position: 70
+---
+
 # RhyLive
 
 由[域动数字 RhythMo](https://rhythmo.cn/) 研发的基于苹果 ARKit 的面捕 +上半身捕捉方案，需要一台支持[面容 ID ](https://support.apple.com/zh-cn/HT208109)的 iOS 设备，并下载 [RhyLive ](https://apps.apple.com/us/app/rhylive/)App（免费）。可以捕捉 52 个 ARKit BlendShape，头部的旋转及上半身的姿态。

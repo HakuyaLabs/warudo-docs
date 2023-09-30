@@ -1,3 +1,7 @@
+---
+sidebar_position: 20
+---
+
 # 道具
 
 道具是场景内自由摆放的任意 3D 模型；也可以绑定在角色骨骼上，实现配饰的效果。除了自带的模型外，外部的模型可以使用 [Mod SDK](https://tiger-tang.gitbook.io/warudo/advanced/sdk) 导出为 `.warudo` 格式，即可加载到 Warudo 中。

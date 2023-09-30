@@ -1,9 +1,13 @@
+---
+sidebar_position: 60
+---
+
 # 示例：仿 Live2D 物理（果冻眼）
 
 Live2D 中人人都有，但是 3D 模型中（几乎）人人没有的效果，就是「果冻眼」了：
 
 <div className="video-box"><video loop controls src="https://user-images.githubusercontent.com/3406505/196832326-e54d9982-92dc-4046-83f2-9b156bb243d4.mp4" />
-<p>来源：https://twitter.com/mauracoma/status/1441799850048176138</p>
+<p>来源：<a href="https://twitter.com/mauracoma/status/1441799850048176138" target="_blank">https://twitter.com/mauracoma/status/1441799850048176138</a></p>
 </div>
 
 给模型添加几个 BlendShape，再利用 Warudo 提供的**「Float 摆锤物理」**节点，就可以给你的 3D 模型实现果冻眼的效果啦！
@@ -51,7 +55,7 @@ Live2D 中人人都有，但是 3D 模型中（几乎）人人没有的效果，
 「Float 摆锤物理」节点和 [Live2D 的物理模拟](https://docs.live2d.com/en/cubism-editor-manual/physics-operation/)的原理是相同的。通过制定一个多段式的摆锤（见下），摆锤最上方节点的 X 坐标为输入值，而输出值就是摆锤最下方节点的 X 坐标。节点的**摆臂**属性规定了摆锤每一节的长度以及物理属性。
 
 <div className="video-box"><video loop controls src="/zh/doc-img/zh-blueprint-example-live2d-physics-video-4.mp4" />
-<p>来源：https://docs.live2d.com/en/cubism-editor-manual/physical-operation-setting/</p>
+<p>来源：<a href="https://docs.live2d.com/en/cubism-editor-manual/physical-operation-setting/" target="_blank">https://docs.live2d.com/en/cubism-editor-manual/physical-operation-setting/</a></p>
 </div>
 
 你可以通过设置节点的「显示」为「是」来预览摆锤的物理效果：

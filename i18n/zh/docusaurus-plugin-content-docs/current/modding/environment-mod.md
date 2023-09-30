@@ -1,3 +1,7 @@
+---
+sidebar_position: 30
+---
+
 # 环境 Mod
 
 Warudo 支持任意 Unity [场景](https://docs.unity3d.com/Manual/CreatingScenes.html)作为[环境](https://tira.gitbook.io/warudo/assets/environment)源。

@@ -1,3 +1,7 @@
+---
+sidebar_position: 50
+---
+
 # 动作捕捉节点
 
 在这篇文档中，我们不再一一介绍每个节点，而是讲解基于 RhyLive 的动作捕捉是怎样用蓝图实现的。
@@ -16,7 +20,7 @@
 
 ![](/doc-img/zh-blueprint-mocap-node-1.webp)
 
-我们已经在[「蓝图是什么？」](../advanced/blueprints-intro.md)文档中介绍过面部追踪的基本原理。这张蓝图虽然看似复杂，但核心的逻辑用一句话就可以表达：「获取 RhyLive 接收器得到的 BlendShape 列表，进行一系列数据处理，最后应用到模型上。」我们跟着数据流动的方向，先来看看蓝图最左边的部分吧：
+我们已经在[「蓝图是什么？」](../blueprints/blueprints-intro.md)文档中介绍过面部追踪的基本原理。这张蓝图虽然看似复杂，但核心的逻辑用一句话就可以表达：「获取 RhyLive 接收器得到的 BlendShape 列表，进行一系列数据处理，最后应用到模型上。」我们跟着数据流动的方向，先来看看蓝图最左边的部分吧：
 
 ![](/doc-img/zh-blueprint-mocap-node-2.webp)
 
