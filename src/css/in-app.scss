@@ -34,21 +34,24 @@
     margin-top: 60px;
     .sug-list{
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      margin: 0 -10px;
       .item{
-        width: 48%;
         background-color: var(--ifm-color-emphasis-200);
         padding: 16px 20px;
         border-radius: 10px;
+        margin: 10px;
         cursor: pointer;
+        transition: .3s all;
         h3{
           font-weight: normal;
-          margin-bottom: .4em;
-        }
-        p{
           margin: 0;
-          opacity: .7;
-          font-size: 14px;
+          font-size: 15px;
+        }
+        &:hover{
+          background-color: var(--ifm-color-primary);
+          color: var(--ifm-font-color-base-inverse);
         }
       }
     }
