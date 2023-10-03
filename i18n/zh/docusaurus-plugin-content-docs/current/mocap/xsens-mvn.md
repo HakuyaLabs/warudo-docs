@@ -10,7 +10,7 @@ sidebar_position: 100
 
 打开 Xsens MVN -> Options -> Network Streamer，如下图配置即可。
 
-![](/doc-img/zh-xens-1.webp)
+![](pathname:///doc-img/zh-xens-1.webp)
 
 :::caution
 注意，你需要 MVN Animate Plus 或者 Pro 订阅才能使用 Network Streamer 功能。

@@ -11,7 +11,7 @@ Cameras are... well, cameras!
 Warudo's supports up to 8 cameras in a single scene.
 
 
-![](/doc-img/en-camera-1.webp)
+![](pathname:///doc-img/en-camera-1.webp)
 <p class="img-desc">Using the Spout and NDI output features, you can achieve a multi-camera setup in OBS.</p>
 
 ## Main Camera
@@ -36,7 +36,7 @@ There are two ways to switch the main camera:
 * Follow Character Speed: Speed of camera following character when "Control Mode" is set to "Orbit Character".
 * Show Gizmos: Whether to display the transform gizmos.
 
-![](/doc-img/en-camera-2.webp)
+![](pathname:///doc-img/en-camera-2.webp)
 
 :::tip
 You can turn on/off the main camera's gizmos at any time by pressing the **G key** when the main window is focused.
@@ -81,13 +81,13 @@ When to use Spout and when to use NDI? Simply put, use NDI if you want to output
 :::info
 When using Spout output in OBS, set the Composite Mode in the Spout2 Capture properties to Premultiplied Alpha to achieve transparency.
 
-![](/doc-img/en-camera-3.webp)
+![](pathname:///doc-img/en-camera-3.webp)
 :::
 
 :::info
 When using virtual camera output in OBS, set the Video Format in the Video Capture Device properties to ARGB to achieve transparency.
 
-![](/doc-img/en-camera-4.webp)
+![](pathname:///doc-img/en-camera-4.webp)
 :::
 
 ### Basic Properties
@@ -102,7 +102,7 @@ Even when chroma key is enabled, the [environment ](environment.md)in the scene 
 * Field of View: The field of view of the camera.
 * Orthographic Projection: Whether to use orthographic projection.
 
-![](/doc-img/en-camera-5.webp)
+![](pathname:///doc-img/en-camera-5.webp)
 
 ### Handheld Movement
 
@@ -114,7 +114,7 @@ Even when chroma key is enabled, the [environment ](environment.md)in the scene 
 * LUT Texture: Adjust the colors of the scene with a LUT texture to create the desired vibes.
 
 
-![](/doc-img/en-camera-6.webp)
+![](pathname:///doc-img/en-camera-6.webp)
 
 :::tip
 **Warudo has over 200 built-in LUT textures** that you can choose from. Try picking the right one for your environment to give off great vibes!
@@ -130,7 +130,7 @@ Even when chroma key is enabled, the [environment ](environment.md)in the scene 
 
 The bloom effect creates a halo effect around the bright parts of the image.
 
-![](/doc-img/en-camera-7.webp)
+![](pathname:///doc-img/en-camera-7.webp)
 
 * Strength: The intensity of the bloom effect.
 * Threshold: The lower the threshold, the more areas that are not as bright in the image will also emit a bloom effect.
@@ -144,13 +144,13 @@ The bloom effect creates a halo effect around the bright parts of the image.
 Adds more shadow to the scene for a more realistic visual effect (in most cases).
 
 
-![](/doc-img/en-camera-8.webp)
+![](pathname:///doc-img/en-camera-8.webp)
 
 :::info
 For anime models (especially when the face mesh is not completely flat), enabling ambient occlusion is not recommended.
 
 
-![](/doc-img/en-camera-9.webp)
+![](pathname:///doc-img/en-camera-9.webp)
 :::
 
 * Radius: The radius of the shadow.
@@ -164,7 +164,7 @@ For anime models (especially when the face mesh is not completely flat), enablin
 Provides the horizontal/vertical flare effect of a distorted lens.
 
 
-![](/doc-img/en-camera-10.webp)
+![](pathname:///doc-img/en-camera-10.webp)
 
 * Intensity: The intensity of the flares.
 * Threshold: The lower the threshold, the more areas that are not as bright in the image will emit flares.
@@ -177,7 +177,7 @@ Provides the horizontal/vertical flare effect of a distorted lens.
 
 Blur objects that are not in focus.
 
-![](/doc-img/en-camera-11.webp)
+![](pathname:///doc-img/en-camera-11.webp)
 
 * Focus Character: Whether the camera should automatically focus on the character selected in "Controls" -> "Focus Character".
 * Focusing Distance: The distance between the focus and the camera.
@@ -193,7 +193,7 @@ Blur objects that are not in focus.
 
 Mimics the effect produced when a lens is unable to blend all colors to the same point.
 
-![](/doc-img/en-camera-12.webp)
+![](pathname:///doc-img/en-camera-12.webp)
 
 * Intensity: The strength of the chromatic aberration.
 * Smoothing: The higher the value, the smoother the transition between the chromatic aberration and the original color.
@@ -203,7 +203,7 @@ Mimics the effect produced when a lens is unable to blend all colors to the same
 Simulates dirt and specks on the lens.
 
 
-![](/doc-img/en-camera-13.webp)
+![](pathname:///doc-img/en-camera-13.webp)
 
 * Texture: The texture of the lens dirt and specks.
 * Intensity: The strength of the lens dirt.
@@ -213,21 +213,21 @@ Simulates dirt and specks on the lens.
 
 Makes the edges of the image darker.
 
-![](/doc-img/en-camera-14.webp)
+![](pathname:///doc-img/en-camera-14.webp)
 
 * Color: The vignette color.
 * Fade Out: The higher the value, the larger the area of the vignette.
 * Blink: Simulates the blinking effect commonly seen in first-person games.
 
 
-![](/doc-img/en-camera-15.webp)
+![](pathname:///doc-img/en-camera-15.webp)
 
 ### Night Vision
 
 Simulates the night vision goggles.
 
 
-![](/doc-img/en-camera-16.webp)
+![](pathname:///doc-img/en-camera-16.webp)
 
 * Color: The color of the night vision.
 
@@ -236,7 +236,7 @@ Simulates the night vision goggles.
 Blur the image.
 
 
-![](/doc-img/en-camera-17.webp)
+![](pathname:///doc-img/en-camera-17.webp)
 
 * Intensity: The strength of the blur.
 
@@ -245,6 +245,6 @@ Blur the image.
 Add a mosaic effect to the image!
 
 
-![](/doc-img/en-camera-18.webp)
+![](pathname:///doc-img/en-camera-18.webp)
 
 * Intensity: The strength of the pixelation.

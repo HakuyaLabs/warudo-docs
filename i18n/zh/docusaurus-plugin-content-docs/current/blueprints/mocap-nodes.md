@@ -18,11 +18,11 @@ sidebar_position: 50
 其他两个 RhyLive 面部追踪模板（使用 ARKit 面部 BlendShape 和使用 MMD BlendShape）的工作原理是类似的（甚至更简单），在此不再赘述。
 :::
 
-![](/doc-img/zh-blueprint-mocap-node-1.webp)
+![](pathname:///doc-img/zh-blueprint-mocap-node-1.webp)
 
 我们已经在[「蓝图是什么？」](../blueprints/blueprints-intro.md)文档中介绍过面部追踪的基本原理。这张蓝图虽然看似复杂，但核心的逻辑用一句话就可以表达：「获取 RhyLive 接收器得到的 BlendShape 列表，进行一系列数据处理，最后应用到模型上。」我们跟着数据流动的方向，先来看看蓝图最左边的部分吧：
 
-![](/doc-img/zh-blueprint-mocap-node-2.webp)
+![](pathname:///doc-img/zh-blueprint-mocap-node-2.webp)
 
 可以看到，[「切换 BlendShape 列表」节点](advanced-nodes.md#qie-huan)会根据 RhyLive 接收器「追踪中」的信号，选择动捕数据或空白的 BlendShape 列表输出。这可以防止动捕信号丢失时，模型表情「卡住」的现象。
 
@@ -38,19 +38,19 @@ sidebar_position: 50
 为什么是 `jawOpen` 乘以 1.2，不是 1.3、1.4？为什么要减去 `mouthFunnel` 的值？其实，模板里的公式都是经验推导出来的，如果试出效果更好的公式，欢迎与大家分享哦。
 :::
 
-![](/doc-img/zh-blueprint-mocap-node-3.webp)
+![](pathname:///doc-img/zh-blueprint-mocap-node-3.webp)
 
 接下来，我们希望对口型的 BlendShape 值作出一定约束。在这里，「约束 BlendShape」的作用是，**受约束 BlendShape 列表**中的每个 BlendShape 的值，必须小于等于 1 减去**约束 BlendShape** 的值。以最后一个节点为例，如果 BlendShape 列表中 U 的值为 0.7，那么 I、A、U 的值将被限制在 0.3 或以下。这样可以防止多个嘴型的 BlendShape 叠加在一起，出现穿模的现象；而「约束 BlendShape」节点的先后顺序则决定了嘴型的优先级（在这里，U 的优先级最高）：
 
-![](/doc-img/zh-blueprint-mocap-node-4.webp)
+![](pathname:///doc-img/zh-blueprint-mocap-node-4.webp)
 
 在蓝图的最后，我们对 BlendShape 列表中的数据作平滑处理（使表情动画看起来更为流畅），然后覆盖掉模型中相应的 BlendShape 的值：
 
-![](/doc-img/zh-blueprint-mocap-node-5.webp)
+![](pathname:///doc-img/zh-blueprint-mocap-node-5.webp)
 
 你可能会问：「使用 VRM BlendShape Proxy」这个选项是什么？我们熟知的 VRM 模型格式上的 A、I、E、O、U、Blink\_L、Blink\_R 并不是模型上的 BlendShape 名称，而是 VRM 内部的 BlendShapeClip 名称；每个 BlendShapeClip 内部对应的才是模型上实际 BlendShape 的值，如下所示：
 
-![](/doc-img/zh-blueprint-mocap-node-6.webp)
+![](pathname:///doc-img/zh-blueprint-mocap-node-6.webp)
 
 但是，Warudo 并不依赖于 VRM 的 BlendShapeClip 或 BlendShapeProxy，而是直接对模型上的 BlendShape 进行操作。所以，我们便需要「使用 VRM BlendShape Proxy」节点帮我们作这一转换。用以上的蓝图和模型为例，Blink\_L BlendShape 会被映射到 VRM 的 Blink\_L BlendShapeClip 上，也即模型的 `Fcl_EYE_Close_L` BlendShape。
 
@@ -58,16 +58,16 @@ sidebar_position: 50
 
 基于 RhyLive 的上半身姿态追踪蓝图如下：
 
-![](/doc-img/zh-blueprint-mocap-node-7.webp)
+![](pathname:///doc-img/zh-blueprint-mocap-node-7.webp)
 
 不用担心，并没有看上去那么复杂啦！首先，仅看流程走向的话，我们可以看出这个蓝图会在每一帧覆盖角色的骨骼信息和左右手的 IK 权重：
 
-![](/doc-img/zh-blueprint-mocap-node-8.webp)
+![](pathname:///doc-img/zh-blueprint-mocap-node-8.webp)
 
 骨骼信息指的是什么呢？一个角色的模型上有若干个关节，而每个关节的初始**相对**位置和旋转都是 (0, 0, 0)。所谓的让模型摆出某个 pose，其实就是设置每个关节的相对位置和旋转：
 
 
-![](/doc-img/zh-blueprint-mocap-node-9.webp)
+![](pathname:///doc-img/zh-blueprint-mocap-node-9.webp)
 <p class="img-desc">来源：<a href="https://blenderartists.org/t/apply-relative-rotation-from-one-armature-to-another/1194354">https://blenderartists.org/t/apply-relative-rotation-from-one-armature-to-another/1194354</a></p>
 
 Warudo 支持一切 Unity 兼容的人形模型（即 [Humanoid Rig](https://docs.unity3d.com/2021.3/Documentation/Manual/UsingHumanoidChars.html)），而标准的人形模型共有 [54 个关节](https://docs.unity3d.com/ScriptReference/HumanBodyBones.html)。也就是说，无论你使用怎样的动捕硬件和软件，只要可以将输出的动捕数据转换（或合并）为 54 个旋转矢量，就可以让模型按照动捕数据动起来了。以下，我们把这 54 个旋转矢量称为**（角色）骨骼旋转**。
@@ -77,9 +77,9 @@ Warudo 支持一切 Unity 兼容的人形模型（即 [Humanoid Rig](https://doc
 
 这里的相对位置指的是子关节在父关节的参照系的位置。我们以手臂为例：
 
-![](/doc-img/zh-blueprint-mocap-node-10.webp)
+![](pathname:///doc-img/zh-blueprint-mocap-node-10.webp)
 
-![](/doc-img/zh-blueprint-mocap-node-11.webp)
+![](pathname:///doc-img/zh-blueprint-mocap-node-11.webp)
 
 可以看到，即使手臂摆出了不同的姿势，每个子关节**相对**于父关节的位置，都是沿着父关节的 Y 轴（绿轴）平移一段距离，而这段距离的长度是不会变的（除非想做拉长手臂的效果）。
 
@@ -88,7 +88,7 @@ Warudo 支持一切 Unity 兼容的人形模型（即 [Humanoid Rig](https://doc
 
 我们来看看骨骼旋转的数据传递。可以看到，「覆盖角色骨骼」和「覆盖角色骨骼偏移」节点会接收<b style={{color: "red"}}>骨骼旋转</b>和<b style={{color:"orange"}}>骨骼旋转偏移</b>两组数据。这两组数据的源头都是 RhyLive 接收器，可是它们之间有什么区别呢？<b style={{color: "blue"}}>骨骼旋转权重</b>又是什么呢？我们先来看看前两者吧：
 
-![](/doc-img/zh-blueprint-mocap-node-12.webp)
+![](pathname:///doc-img/zh-blueprint-mocap-node-12.webp)
 
 在以上的蓝图中，我们看到，RhyLive 输出的动捕数据被分为了两部分：一部分只有脸部、头部、骨盆的数据，一部分只有双臂与双手（左右臂、左右手手指）的数据。前者被当作<b style={{color:"orange"}}>骨骼旋转偏移</b>传进了节点里；这部分的动捕数据会<b style={{color:"orange"}}>始终应用在模型上</b>。**后者被当作<b style={{color: "red"}}>覆盖骨骼旋转</b>传进了节点里，而这部分动捕数据是否被应用在模型上，则<b style={{color: "red"}}>取决于</b><b style={{color: "blue"}}>覆盖骨骼旋转权重</b><b style={{color: "red"}}>的值</b>。**
 
@@ -108,7 +108,7 @@ FinalBoneRotations[i] = <b style={{color: "red"}}>BoneRotations</b>[i] * <b styl
 
 让我们回想一下 Warudo 的最大卖点之一吧：可以实现动捕 + 动画的完美融合，即在捕捉到左右手的动作时让模型采用中之人的动作，而失去捕捉时，模型平滑过渡到[动画设置](../assets/character/#dong-hua)的动作。你或许猜到了：这正是利用调整<b style={{color: "blue"}}>骨骼旋转权重</b>的值来实现的：
 
-![](/doc-img/zh-blueprint-mocap-node-13.webp)
+![](pathname:///doc-img/zh-blueprint-mocap-node-13.webp)
 
 就这么看有点复杂，我们不妨倒过来看：<b style={{color: "blue"}}>覆盖骨骼旋转权重</b>的数据来源自[「切换 Float 列表」节点](advanced-nodes.md#qie-huan)。当 RhyLive 接收器给出「追踪中」的信号时，<b style={{color: "blue"}}>覆盖骨骼旋转权重</b>的数据会来自于「构建角色骨骼权重」节点；否则，<b style={{color: "blue"}}>覆盖骨骼旋转权重</b>即为最小角色骨骼权重（也就是 54 个 0），也就是最终骨骼旋转会完全采用动画的数据了。
 
@@ -116,7 +116,7 @@ FinalBoneRotations[i] = <b style={{color: "red"}}>BoneRotations</b>[i] * <b styl
 
 深呼一口气，我们的蓝图只剩下最后一部分了！不过，你或许已经能看出个大概……
 
-![](/doc-img/zh-blueprint-mocap-node-14.webp)
+![](pathname:///doc-img/zh-blueprint-mocap-node-14.webp)
 
 两个「Float 相减」的输出值即为 1 减去左 / 右手的覆盖旋转权重，被用作「覆盖角色肢体 IK 位置 / 旋转权重」节点的位置 / 旋转权重输入。简单来说，就是**「左右手正在动捕的时候，不要应用左右手 IK」**的意思啦。
 
@@ -138,8 +138,8 @@ FinalBoneRotations[i] = <b style={{color: "red"}}>BoneRotations</b>[i] * <b styl
 
 **「偏移角色变换」**节点用来偏移角色的变换（即空间中的位置、旋转、比例），但不影响角色资源页设置的变换。通常用来应用 VMC 的动捕数据：
 
-![](/doc-img/zh-blueprint-mocap-node-15.webp)
+![](pathname:///doc-img/zh-blueprint-mocap-node-15.webp)
 
 **「偏移角色骨骼旋转列表」**节点可以偏移指定骨骼的旋转。以下蓝图会在按下 Z 键时让角色的头逐渐向左扭转 30 度，松开后逐渐复原：
 
-![](/doc-img/zh-blueprint-mocap-node-16.webp)
+![](pathname:///doc-img/zh-blueprint-mocap-node-16.webp)

@@ -6,7 +6,7 @@ sidebar_position: 70
 
 Often referred to as a "3D background," the environment in Warudo can be any Unity scene, as long as it is exported to `.warudo` format using the [Mod SDK](../modding/mod-sdk.md).
 
-![](/doc-img/zh-environment-1.webp)
+![](pathname:///doc-img/zh-environment-1.webp)
 <p class="img-desc">The Onsen</p>
 
 ## Properties

@@ -10,7 +10,7 @@ Warudo can use any Unity [scene](https://docs.unity3d.com/Manual/CreatingScenes.
 
 Due to Unity's [limitations](https://docs.unity3d.com/Manual/LightmappingDirectional.html), you must confirm "(Lightmapping) Directional Mode" is set to "Directional" for your scene's lighting settings:
 
-![](/doc-img/en-environment-mod-1.webp)
+![](pathname:///doc-img/en-environment-mod-1.webp)
 
 Otherwise, the lighting in the scene may be incorrect.
 
@@ -38,6 +38,6 @@ Q: My Unity scene in Warudo doesn't look like the one in my editor.
 
 A: Check if your scene has prefabs with unapplied changes, like these.
 
-![](/doc-img/en-environment-mod-2.webp)
+![](pathname:///doc-img/en-environment-mod-2.webp)
 
 Try to apply the changes. If you still see the vertical lines (which means the changes could not be fully applied), right click on them and select "Prefab -> Unpack Completely" to unpack the prefabs, and export the mod again.

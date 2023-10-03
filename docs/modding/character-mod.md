@@ -9,7 +9,7 @@ Warudo can use any Unity humanoid rig as a [character](../assets/character/)'s s
 :::info
 If your model is not set to humanoid rig, go to the model import options in Unity and set the model's "Animation Type" to Humanoid, then click Apply.
 
-![](/doc-img/en-character-mod-1.webp)
+![](pathname:///doc-img/en-character-mod-1.webp)
 :::
 
 Warudo is compatible with the following components:
@@ -27,7 +27,7 @@ Since Warudo allows you to package C# scripts into your mod, you can add any thi
 
 1. If you have an imported model (such as a FBX model), make sure "R/W Enabled" is checked in the import settings.
 
-![](/doc-img/en-character-mod-2.webp)
+![](pathname:///doc-img/en-character-mod-2.webp)
 
 2\. You must put an [Animator](https://docs.unity3d.com/ScriptReference/Animator.html) on your character GameObject. If you imported a FBX or VRM, it should already have it.
 
@@ -35,11 +35,11 @@ Since Warudo allows you to package C# scripts into your mod, you can add any thi
 
 Place your character in the scene and select it. Select "Warudo" -> "Setup Character..." -> "Setup selected GameObject as character mod."
 
-![](/doc-img/en-character-mod-3.webp)
+![](pathname:///doc-img/en-character-mod-3.webp)
 
 Wait for a little bit, and you should see a prefab named **"Character"** is generated in the mod folder:
 
-![](/doc-img/en-character-mod-4.webp)
+![](pathname:///doc-img/en-character-mod-4.webp)
 
 Select "Warudo" -> "Build Mod" and place the generated `.warudo` file into the Characters subfolder in the Warudo data folder.
 

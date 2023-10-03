@@ -16,7 +16,7 @@ MediaPipe is a widely-used technology used in software such as [Webcam Motion Ca
 * Input Camera: Select the camera. **Currently, IP cameras (such as** [**DroidCam**](https://play.google.com/store/apps/details?id=com.dev47apps.droidcam\&hl=en\_US\&gl=US\&pli=1)**) are not supported.**
 * Calibrate: Calibrate the position of the hands. <b style={{color: "orange"}}>**Calibration is recommended when using for the first time!**</b>
 
-![](/doc-img/zh-mediapipe-1.webp)
+![](pathname:///doc-img/zh-mediapipe-1.webp)
 <p class="img-desc">During calibration, the hands should be in a relaxed posture, with fingers slightly bent if desired.</p>
 
 * Show Camera: Whether to show the camera's view.
@@ -38,11 +38,11 @@ MediaPipe is a widely-used technology used in software such as [Webcam Motion Ca
 
 <div>
 
-![](/doc-img/zh-mediapipe-2.webp)
+![](pathname:///doc-img/zh-mediapipe-2.webp)
 <p class="img-desc">"Shoulder Rotation Correction" disabled</p>
 
 
- ![](/doc-img/zh-mediapipe-3.webp)
+ ![](pathname:///doc-img/zh-mediapipe-3.webp)
 <p class="img-desc">启用「肩膀旋转校正」</p>
 </div>
 

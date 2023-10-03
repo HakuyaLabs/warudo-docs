@@ -13,9 +13,11 @@ export default function AppPage() {
   if (i18n.currentLocale == 'zh') { }
 
   const tagListZH = [
-    { title: '摄像机', description: '查看摄像机文档，在Warudo里进行有趣的光影创作。'},
-    { title: '蓝图', description: '了解蓝图文档，创建强大的自定义Vtuber功能。'},
+    'Camera',
+    'Keyboard/TrackPad'
   ]
+
+  const tagListEN = ['Camera', '']
 
   return (
     <Layout

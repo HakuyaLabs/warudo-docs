@@ -15,19 +15,19 @@ iFacialMocap 提供的功能其实非常简单，并且有同类免费 App（例
 
 iOS 设备上打开 iFacialMocap，右上角点击齿轮图标进入设置界面。点击「Destination IP address」，输入电脑的 IP 地址。
 
-![](/doc-img/zh-ifacialmocap-1.webp)
+![](pathname:///doc-img/zh-ifacialmocap-1.webp)
 
 :::info
 如果不知道电脑的 IP，可以在「iFacialMocap 接收器」的配置页面查看：
 
-![](/doc-img/zh-ifacialmocap-2.webp)
+![](pathname:///doc-img/zh-ifacialmocap-2.webp)
 
 如果列出多个 IP，则需要一个一个尝试。通常来说，你的 WiFi 路由器分配给你电脑的 IP 是以 192.168. 开头的，所以以上图为例，可以先尝试 192.168.1.2。
 :::
 
 建议开启「Optimize for long-time streaming」，可以有助降低长时间使用导致的设备发热。
 
-![](/doc-img/zh-ifacialmocap-3.webp)
+![](pathname:///doc-img/zh-ifacialmocap-3.webp)
 
 ## 属性
 
@@ -37,7 +37,7 @@ iOS 设备上打开 iFacialMocap，右上角点击齿轮图标进入设置界面
 * 头部移动范围：头部上下左右前后的移动范围。
 * 允许头部上下移动：是否允许头部上下的移动。
 
-![](/doc-img/zh-ifacialmocap-4.webp)
+![](pathname:///doc-img/zh-ifacialmocap-4.webp)
 <p class="img-desc">开启后，头向下移动时，腿会自然地弯曲。</p>
 
 * 反转头部前后移动：是否反转头部前后的移动。

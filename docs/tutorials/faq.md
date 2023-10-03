@@ -11,19 +11,19 @@ This is because the other 3D application/game are using most of the GPU resource
 
 To run Warudo in administrator mode, go to your Steam library, right-click on Warudo and select "Manage" -> "Browse local files":
 
-![](/doc-img/zh-faq-1.webp)
+![](pathname:///doc-img/zh-faq-1.webp)
 
 Right click on Warudo.exe and click on "Properties":
 
-![](/doc-img/zh-faq-2.webp)
+![](pathname:///doc-img/zh-faq-2.webp)
 
 Then go to the "Compatibility" tab, check "Run this program as an administrator", and click "OK".
 
-![](/doc-img/zh-faq-3.webp)
+![](pathname:///doc-img/zh-faq-3.webp)
 
 Open Warudo and go to "Settings" -> "Core" -> "Advanced" -> "Increase GPU Priority", then select "Yes".
 
-![](/doc-img/zh-faq-4.webp)
+![](pathname:///doc-img/zh-faq-4.webp)
 
 :::caution
 Increased GPU priority for Warudo can in turn result in decreased frame rates for other 3D applications/games running simultaneously. You can try shrinking the Warudo window (not minimizing to the taskbar) or lowering the rendering frame rate in Warudo ("Settings" -> "Core" -> "Graphics" -> "Limit FPS") until the frame rate for both Warudo and other 3D applications/games becomes acceptable.

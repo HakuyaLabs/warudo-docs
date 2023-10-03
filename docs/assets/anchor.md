@@ -28,7 +28,7 @@ An absolute or relative position in the scene, which can be used as the target f
 
 Here we use the right hand as an example. Create an anchor asset, set the parent transform to the camera. Set the character's "Body IK" -> "Right Hand" -> "IK Target" to the anchor asset, and set the "Rotation Weight" to 0.5. Adjust the position and rotation of the anchor until everything looks natural.
 
-![The transform values used in the demo](/doc-img/zh-anchor-1.webp)
+![](/doc-img/zh-anchor-1.webp)
 <p class="img-desc">The transform values used in the demo</p>
 
 :::info

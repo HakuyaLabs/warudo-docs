@@ -10,7 +10,7 @@ Body tracking via [Xsens MVN Analyze/Animate](https://base.xsens.com/s/motion-ca
 
 Open Xsens MVN -> Options -> Network Streamer and configure as shown below.
 
-![](/doc-img/zh-xens-1.webp)
+![](pathname:///doc-img/zh-xens-1.webp)
 
 :::caution
 Note: You need an MVN Animate Plus or Pro subscription to use the Network Streamer feature.

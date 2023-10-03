@@ -6,7 +6,7 @@ sidebar_position: 20
 
 道具是场景内自由摆放的任意 3D 模型；也可以绑定在角色骨骼上，实现配饰的效果。除了自带的模型外，外部的模型可以使用 [Mod SDK](https://tiger-tang.gitbook.io/warudo/advanced/sdk) 导出为 `.warudo` 格式，即可加载到 Warudo 中。
 
-![](/doc-img/zh-prop-1.webp)
+![](pathname:///doc-img/zh-prop-1.webp)
 <p class="img-desc">猫猫手</p>
 
 <div className="video-box"><video controls src="/zh/doc-img/zh-prop-1.mp4" />

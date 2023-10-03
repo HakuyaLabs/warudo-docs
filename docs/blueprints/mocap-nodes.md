@@ -18,11 +18,11 @@ The blueprint for RhyLive face tracking is as follows (using the VRM blendshape 
 The other blendshape mappings (e.g. ARKit, MikuMikuDance) work similar, if not simpler, thus will not be discussed here.
 :::
 
-![](/doc-img/en-blueprint-mocap-node-1.webp)
+![](pathname:///doc-img/en-blueprint-mocap-node-1.webp)
 
 The basic principle of Warudo's face tracking has already been introduced in ["Introduction to Blueprints."](../advanced/blueprints-intro.md) Although the RhyLive face tracking blueprint appears to be complex, the core logic can be expressed in one sentence: _"Receive the BlendShape list from the RhyLive receiver, perform a series of data processing, and finally apply it to the model."_ Let's follow the flow of data and start with the leftmost part of the blueprint.
 
-![](/doc-img/en-blueprint-mocap-node-2.webp)
+![](pathname:///doc-img/en-blueprint-mocap-node-2.webp)
 
 The [**"Switch BlendShape List"**](advanced-nodes.md#switches) node selects either the captured motion data or an empty blendshape list based on the signal of RhyLive receiver being "Tracked". This prevents the model's expression from becoming stuck if the motion capture signal is lost.
 
@@ -38,21 +38,21 @@ The reason why we need to set values for A, O, I, and U is because the facial tr
 Why is `jawOpen` multiplied by 1.2 instead of 1.3 or 1.4? Why do we subtract `mouthFunnel`? In fact, these formulas are completely heuristic (i.e., based on the developer's experience). For best results, feel free to play around and customize!
 :::
 
-![](/doc-img/en-blueprint-mocap-node-3.webp)
+![](pathname:///doc-img/en-blueprint-mocap-node-3.webp)
 
 The **"Constrain BlendShape"** node restricts the value of each BlendShape in the "Constrained BlendShapes" list such that they must be less than or equal to 1 minus the value of the "Constraint BlendShape." (Tricky, I know.)
 
 For example, in the last node, if the value of `U` in the BlendShape list is 0.7, then the values of `I`, `A`, and `O` will be limited to 0.3 or less. This prevents multiple mouth blendshapes from stacking on top of each other, resulting in the model looking really weird. The order of the "Constrain BlendShape" nodes determines the priority of the mouth shapes (in this case, `U` has the highest priority).
 
-![](/doc-img/en-blueprint-mocap-node-4.webp)
+![](pathname:///doc-img/en-blueprint-mocap-node-4.webp)
 
 Finally, at the end of the blueprint, we smooth the data in the blendshape list (to make the facial animations appear smoother), and then apply the blendshapes onto the model:
 
-![](/doc-img/en-blueprint-mocap-node-5.webp)
+![](pathname:///doc-img/en-blueprint-mocap-node-5.webp)
 
 What is this **"Use VRM BlendShape Proxy"** property, you may ask? Well, the well-known `A`, `I`, `E`, `O`, `U`, `Blink_L`, and `Blink_R` blendshapes on the VRM model format are not the names of the blendshapes on the model, but rather the names of VRM's [BlendShapeClips](https://vrm.dev/en/univrm/blendshape/univrm\_blendshape.html). Each VRM BlendShapeClip internally corresponds to one or more blendshape values, as shown below:
 
-![](/doc-img/en-blueprint-mocap-node-6.webp)
+![](pathname:///doc-img/en-blueprint-mocap-node-6.webp)
 
 However, Warudo does not directly work with VRM's BlendShapeClips (not every model is a VRM model!), but instead manipulates the blendshapes on the model. Therefore, we need to turn on **"Use VRM BlendShape Proxy"** to help us make this conversion. With the above blueprint and model as an example, the `Blink_L` blendshape would be mapped to the VRM's `Blink_L` BlendShapeClip, which is the `Fcl_EYE_Close_L` blendshape on the model.
 
@@ -60,15 +60,15 @@ However, Warudo does not directly work with VRM's BlendShapeClips (not every mod
 
 The blueprint for RhyLive upper body pose tracking is as follows:
 
-![](/doc-img/en-blueprint-mocap-node-7.webp)
+![](pathname:///doc-img/en-blueprint-mocap-node-7.webp)
 
 This blueprint may look complicated, but don't worry! If we just look at the flow, we can see that this blueprint will essentially override the character's bone rotations and hand IK weights on every frame.
 
-![](/doc-img/en-blueprint-mocap-node-8.webp)
+![](pathname:///doc-img/en-blueprint-mocap-node-8.webp)
 
 What are "bone rotations," really? A character model has several joints, and the initial position and rotation of each joint in a character's model is (0, 0, 0). To make the model take a certain pose, we need to set the **relative** position and rotation of each joint.
 
-![](/doc-img/en-blueprint-mocap-node-9.webp)
+![](pathname:///doc-img/en-blueprint-mocap-node-9.webp)
 <p class="img-desc">来源：<a href="https://blenderartists.org/t/apply-relative-rotation-from-one-armature-to-another/1194354">https://blenderartists.org/t/apply-relative-rotation-from-one-armature-to-another/1194354</a></p>
 
 Warudo supports any Unity-compatible [humanoid rig](https://docs.unity3d.com/2021.3/Documentation/Manual/UsingHumanoidChars.html), and standard humanoid models have [54 joints](https://docs.unity3d.com/ScriptReference/HumanBodyBones.html). That means, no matter what motion capture setup you have, as long as the output motion capture data can be converted (or merged) into 54 rotation vectors, the model can be animated with them. Below, we refer to these 54 rotation vectors as **(character) bone rotations**.
@@ -78,9 +78,9 @@ Why is there no control over the character's bone positions in this blueprint? T
 
 The relative position refers to the position of a child joint in the reference frame of the parent joint. For example, let's look at the arm:
 
-![](/doc-img/en-blueprint-mocap-node-10.webp)
+![](pathname:///doc-img/en-blueprint-mocap-node-10.webp)
 
-![](/doc-img/en-blueprint-mocap-node-11.webp)
+![](pathname:///doc-img/en-blueprint-mocap-node-11.webp)
 
 As you can see, even though the arm takes different poses, the position of each child joint **relative** to the parent joint is always translated along the parent's Y axis (green axis) by a fixed distance, which does not change unless you want to stretch your arm.
 
@@ -89,7 +89,7 @@ Typically, the only bone position that is overridden is the hips, as it is the r
 
 Now let's take a look at how bone rotations are passed. As you can see, we have "Override Character Bones" and "Override Character Bone Rotation Offsets" nodes that receive two sets of data: <b style={{color: "red"}}>bone rotations</b> and <b style={{color: "orange"}}>bone rotation offsets</b>. Both of these data sets originate from the RhyLive receiver, but what is the difference between them? And what are the <b style={{color: "blue"}}>bone rotation weights</b>? Well, Let's start with the first two:
 
-![](/doc-img/en-blueprint-mocap-node-12.webp)
+![](pathname:///doc-img/en-blueprint-mocap-node-12.webp)
 
 In the above, we see that the motion capture data output by RhyLive is divided into two parts: one part has only data from the face, head, and pelvis, and the other part has only data from the two arms & hands (left and right arms, left and right hand fingers). The former is passed as <b style={{color: "orange"}}>bone rotation offsets</b>, and this part of the mocap data is <b style={{color: "orange"}}>always applied to the model</b>. The latter is passed into the node as <b style={{color: "red"}}>bone rotations</b>, and whether this part of the motion capture data is applied to the model <b style={{color: "red"}}>depends on the value of the</b> <b style={{color: "blue"}}>bone rotation weights</b>.
 
@@ -109,7 +109,7 @@ where OriginalBoneRotations are the bone rotation data given by the [character a
 
 One of Warudo's biggest selling points is its ability to perfectly blend motion capture with animation. That means that when the hands are tracked, the model's hands will follow those of the user, but when the tracking is lost, the model will smoothly transition to the [animation pose](../assets/character/#animation). You may have guessed it: this is achieved by adjusting the values of the <b style={{color: "blue"}}>bone rotation weights</b>.
 
-![](/doc-img/en-blueprint-mocap-node-13.webp)
+![](pathname:///doc-img/en-blueprint-mocap-node-13.webp)
 
 Looks too complicated? Well, let's read it from right to left. Essentially, the "Switch Float List" node is responsible for determining the value of the <b style={{color: "blue"}}>bone rotation weights</b>. When the RhyLive receiver signals that it's tracking, the data for the <b style={{color: "blue"}}>bone rotation weights</b> comes from the **"Construct Character Bone Weights"** node. Otherwise, the <b style={{color: "blue"}}>bone rotation weights</b> are set to the minimum character bone weights (all 54 values are set to 0), meaning that the final bone rotations will completely follow the animation pose.
 
@@ -117,7 +117,7 @@ So, what data do the **"Construct Character Bone Weights"** node provide? Again,
 
 Take a deep breath, we're almost done with our blueprint! But by now, you might have a good idea of what's left...
 
-![](/doc-img/en-blueprint-mocap-node-14.webp)
+![](pathname:///doc-img/en-blueprint-mocap-node-14.webp)
 
 The two "Float Subtraction" nodes output 1 minus the left/right hand's <b style={{color: "blue"}}>bone rotation weights</b>, which are used as inputs for the **"Override Character Limb IK Position / Rotation Weight"** nodes. In simpler terms, this means that the IK for the left/right hand will not be applied when the hands are tracked.
 
@@ -139,8 +139,8 @@ Congratulations! If you have fully understood the contents above, you are a true
 
 The **"Offset Character Transform"** node is used to temporarily offset the character's transform, which includes its position, rotation, and scale in space, without affecting the "Transform" property set on the character's config page. It is typically used to apply character locomotion:
 
-![](/doc-img/en-blueprint-mocap-node-15.webp)
+![](pathname:///doc-img/en-blueprint-mocap-node-15.webp)
 
 The **"Offset Character Bone Rotation List"** node allows for offsetting the rotation(s) of specified bone(s). The following blueprint will gradually turn the character's head 30 degrees to the left when the Z key is pressed, and gradually return to its original position when released:
 
-![](/doc-img/en-blueprint-mocap-node-16.webp)
+![](pathname:///doc-img/en-blueprint-mocap-node-16.webp)
