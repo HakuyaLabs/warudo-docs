@@ -10,19 +10,19 @@ sidebar_position: 20
 
 首先在 Steam 库中找到 Warudo，右键「管理」->「浏览本地文件」：
 
-![](/doc-img/zh-faq-1.webp)
+![](pathname:///doc-img/zh-faq-1.webp)
 
 右键 Warudo.exe，选择「属性」：
 
-![](/doc-img/zh-faq-2.webp)
+![](pathname:///doc-img/zh-faq-2.webp)
 
 在「兼容」标签页，勾选「以管理员身份运行此程序」，然后点击确定。
 
-![](/doc-img/zh-faq-3.webp)
+![](pathname:///doc-img/zh-faq-3.webp)
 
 打开 Warudo，左下角「🚀」->「设置」->「Core」->「进阶」->「提高 GPU 优先级」选择「是」即可。
 
-![](/doc-img/zh-faq-4.webp)
+![](pathname:///doc-img/zh-faq-4.webp)
 
 :::caution
 与此相对地，这会导致其他 3D 应用程序 / 游戏的帧率下降。你可以尝试缩小 Warudo 的主窗口（注意不是最小化），或者降低 Warudo 的渲染帧率（「设置」->「Core」->「画面」->「限制帧数」），直到 Warudo 和其他 3D 应用程序 / 游戏的帧率变得可接受为止。

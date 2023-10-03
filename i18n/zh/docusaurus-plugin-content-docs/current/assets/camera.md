@@ -10,7 +10,7 @@ sidebar_position: 50
 
 Warudo 的场景中支持最多 8 个摄像机。
 
-![](/doc-img/zh-camera-1.webp)
+![](pathname:///doc-img/zh-camera-1.webp)
 <p class="img-desc">使用 Spout 和 NDI 输出功能，可以在 OBS 中实现同屏多镜头的效果</p>
 
 ## 主摄像机
@@ -35,7 +35,7 @@ Warudo 的场景中支持最多 8 个摄像机。
 * 跟随角色速度：控制模式为「环绕角色」时镜头跟随角色的速度。
 * 显示 Gizmos：是否显示各类控制实体的 Gizmos。
 
-![](/doc-img/zh-camera-2.webp)
+![](pathname:///doc-img/zh-camera-2.webp)
 
 ::tip
 可以在主界面按 **G 键**随时开启 / 关闭主摄像机的 Gizmo。
@@ -80,13 +80,13 @@ Warudo 的场景中支持最多 8 个摄像机。
 :::info
 Spout 输出到 OBS 的情况下，需要在 Spout2 Capture 属性中设置 Composite Mode 为 Premultiplied Alpha 才会有透明度：
 
-![](/doc-img/zh-camera-4.webp)
+![](pathname:///doc-img/zh-camera-4.webp)
 :::
 
 :::info
 虚拟摄像头输出到 OBS 的情况下，需要在视频捕获设备属性中设置 Video Format（视频格式）为 ARGB 才会有透明度：
 
-![](/doc-img/zh-camera-5.webp)
+![](pathname:///doc-img/zh-camera-5.webp)
 :::
 
 ### 基本属性
@@ -106,7 +106,7 @@ Spout 输出到 OBS 的情况下，需要在 Spout2 Capture 属性中设置 Comp
 * 视场角：摄像机的视场角。
 * 正交投影：是否使用正交投影。
 
-![](/doc-img/zh-camera-6.webp)
+![](pathname:///doc-img/zh-camera-6.webp)
 
 ### 手持运镜效果
 
@@ -117,7 +117,7 @@ Spout 输出到 OBS 的情况下，需要在 Spout2 Capture 属性中设置 Comp
 
 * LUT 材质：通过调整画面的颜色营造想要的氛围感。
 
-![](/doc-img/zh-camera-7.webp)
+![](pathname:///doc-img/zh-camera-7.webp)
 
 :::tip
 **Warudo 内置 200+ 种 LUT 材质**，为你的场景选一个试试吧！合适的 LUT 材质可以大幅提升画面效果。
@@ -133,7 +133,7 @@ Spout 输出到 OBS 的情况下，需要在 Spout2 Capture 属性中设置 Comp
 
 让画面的亮部散发出光晕的效果。
 
-![](/doc-img/zh-camera-8.webp)
+![](pathname:///doc-img/zh-camera-8.webp)
 
 * 强度：光晕的强度。
 * 阈值：阈值越低，画面上没有那么亮的地方也会散发出光晕。
@@ -146,12 +146,12 @@ Spout 输出到 OBS 的情况下，需要在 Spout2 Capture 属性中设置 Comp
 
 给画面添加更多阴影，（大多数情况下）可以让视觉效果更真实。
 
-![](/doc-img/zh-camera-9.webp)
+![](pathname:///doc-img/zh-camera-9.webp)
 
 :::info
 对于二次元的脸型（尤其脸部网格并非平坦的情况下），并不推荐开启环境光遮蔽。
 
-![](/doc-img/zh-camera-10.webp)
+![](pathname:///doc-img/zh-camera-10.webp)
 :::
 
 * 半径：阴影的半径。
@@ -164,7 +164,7 @@ Spout 输出到 OBS 的情况下，需要在 Spout2 Capture 属性中设置 Comp
 
 模仿变形镜头的横向/竖向光晕效果。
 
-![](/doc-img/zh-camera-11.webp)
+![](pathname:///doc-img/zh-camera-11.webp)
 
 * 强度：光晕的强度。
 * 阈值：阈值越低，画面上没有那么亮的地方也会散发出光晕。
@@ -177,7 +177,7 @@ Spout 输出到 OBS 的情况下，需要在 Spout2 Capture 属性中设置 Comp
 
 让远处的物体变得模糊。
 
-![](/doc-img/zh-camera-12.webp)
+![](pathname:///doc-img/zh-camera-12.webp)
 
 * 聚焦角色：是否自动聚焦在「控制」->「聚焦角色」选择的角色上。
 * 对焦距离：焦点和摄像头的距离。
@@ -198,7 +198,7 @@ Spout 输出到 OBS 的情况下，需要在 Spout2 Capture 属性中设置 Comp
 
 模仿镜头无法将所有颜色融合到同一点时产生的效果。
 
-![](/doc-img/zh-camera-13.webp)
+![](pathname:///doc-img/zh-camera-13.webp)
 
 * 强度：色差的强度。
 * 平滑：越高，色差和原本颜色的过渡越平滑。
@@ -207,7 +207,7 @@ Spout 输出到 OBS 的情况下，需要在 Spout2 Capture 属性中设置 Comp
 
 模仿镜头上的污渍 / 光斑。
 
-![](/doc-img/zh-camera-14.webp)
+![](pathname:///doc-img/zh-camera-14.webp)
 
 * 材质：镜头污渍 / 光斑的材质。
 * 强度：镜头污渍的强度。
@@ -217,19 +217,19 @@ Spout 输出到 OBS 的情况下，需要在 Spout2 Capture 属性中设置 Comp
 
 使画面的边缘变暗。
 
-![](/doc-img/zh-camera-15.webp)
+![](pathname:///doc-img/zh-camera-15.webp)
 
 * 颜色：叠加在画面边缘的颜色。
 * 淡出：越高，渐晕颜色叠加范围越大。
 * 眨眼：模拟第一人称游戏中常见的眨眼效果。
 
-![](/doc-img/zh-camera-16.webp)
+![](pathname:///doc-img/zh-camera-16.webp)
 
 ### 夜视
 
 模拟夜视镜效果。
 
-![](/doc-img/zh-camera-17.webp)
+![](pathname:///doc-img/zh-camera-17.webp)
 
 * 颜色：夜视镜的颜色。
 
@@ -237,7 +237,7 @@ Spout 输出到 OBS 的情况下，需要在 Spout2 Capture 属性中设置 Comp
 
 让画面变得模糊。
 
-![](/doc-img/zh-camera-18.webp)
+![](pathname:///doc-img/zh-camera-18.webp)
 
 * 强度：模糊的强度。
 
@@ -245,6 +245,6 @@ Spout 输出到 OBS 的情况下，需要在 Spout2 Capture 属性中设置 Comp
 
 给画面打上马赛克！
 
-![](/doc-img/zh-camera-19.webp)
+![](pathname:///doc-img/zh-camera-19.webp)
 
 * 强度：像素化的强度。

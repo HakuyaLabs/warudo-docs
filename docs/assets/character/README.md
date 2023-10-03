@@ -90,7 +90,7 @@ In other words, even if you have set an override hand pose for your right hand, 
 :::tip
 **What is IK?** IK stands for Inverse Kinematics, and in game engines and Warudo, IK can be understood as "making a part of the model rotate towards, or reach a desired position", without requiring an animation made by an animator. See below:
 
-![](/doc-img/zh-assets-character.gif)
+![](pathname:///doc-img/zh-assets-character.gif)
 <p class="img-desc">Source：https://medium.com/unity3danimation/overview-of-inverse-kinematics-9769a43ba956</p>
 :::
 
@@ -129,7 +129,7 @@ After
 * Rotation Weight: Similar to the position weight, but determines whether the rotation of the body part will also follow the target.
 * Bend Goal Target: The target that the elbow (or knee, in the case of legs) will follow.
 
-![](/doc-img/en-assets-character-4.webp)
+![](pathname:///doc-img/en-assets-character-4.webp)
 
 * Bend Goal Weight: At 0, the elbow position is completely decided by the IK position; at 1, the elbow position will be fully pulled towards the bend goal target.
 
@@ -155,19 +155,19 @@ Models exported by [VRoid Studio](https://vroid.com/en/studio) only have two mes
 
 Try setting the additional bone offsets. The rotation angle of the two shoulder joints actually quite affects the perception of the character's personality!
 
-![](/doc-img/en-assets-character-3.webp)
+![](pathname:///doc-img/en-assets-character-3.webp)
 
 ### **I want to set up** a shortcut key **for toggling meshes (clothing, accessories, etc.).**
 
 To do this, create a new blueprint (or open an existing one) and setup like below:
 
-![](/doc-img/en-assets-character-1.webp)
+![](pathname:///doc-img/en-assets-character-1.webp)
 
 ### I want to set up a shortcut key for switching the idle animation.
 
 To do this, create a new blueprint (or open an existing one) and setup like below:
 
-![](/doc-img/en-assets-character-2.webp)
+![](pathname:///doc-img/en-assets-character-2.webp)
 
 ### I've set up my character's idle animation, but I want to make a small adjustment to the posture. / I've set up my character's idle animation, but I want to fix their hands so they don't sway with the body. / ...
 

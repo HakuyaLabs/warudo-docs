@@ -42,15 +42,15 @@ The four blendshapes are:
 
 Open the face tracking blueprint, locate the "Smooth BlendShape List" and "Set Character Tracking BlendShapes" nodes on the far right, and insert the following nodes and connections in between:
 
-![](/doc-img/en-blueprint-example-live2d-physics-1.webp)
+![](pathname:///doc-img/en-blueprint-example-live2d-physics-1.webp)
 
 The nodes at the top are relatively straightforward to understand—we multiply the degree to which the eyes are closed (`eyeBlinkLeft` and `eyeBlinkRight`) by 1.5, and then set the values for the two highlight-lowering blendshapes.
 
-![](/doc-img/en-blueprint-example-live2d-physics-2.webp)
+![](pathname:///doc-img/en-blueprint-example-live2d-physics-2.webp)
 
 The nodes at the bottom implement the "jiggly eyes." We obtain the degree to which the eyes are closed (here we only take the left eye, `eyeBlinkLeft`), then input it into the magical **"Float Pendulum Physics"** node and use the output value to set the blendshapes for rotating and enlarging the highlight:
 
-![](/doc-img/en-blueprint-example-live2d-physics-3.webp)
+![](pathname:///doc-img/en-blueprint-example-live2d-physics-3.webp)
 
 The **"Float Pendulum Physics"** node works on the same principle as [the physics simulation of Live2D](https://docs.live2d.com/en/cubism-editor-manual/physics-operation/). By specifying a multi-segment pendulum (as shown below), the X coordinate of the top node of the pendulum is the input value, and the output value is the X coordinate of the bottom node of the pendulum. The pendulum's "Arms" property determine the length and physical properties of each segment of the pendulum.
 

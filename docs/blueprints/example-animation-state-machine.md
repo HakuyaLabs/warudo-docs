@@ -18,7 +18,7 @@ Not familiar with IK? Check out the[ instructions for body IK](../assets/charact
 
 First, we need to create an [anchor](../assets/anchor.md) that will serve as the IK target. Create an anchor called "Microphone Right Hand" and configure it as follows:
 
-![](/doc-img/en-blueprint-example-animation-state-machine-1.webp)
+![](pathname:///doc-img/en-blueprint-example-animation-state-machine-1.webp)
 
 :::info
 This binds the anchor to the character so that even if the character's posture or position changes, the anchor's position will still maintain the same relative position to the character's chest.
@@ -26,11 +26,11 @@ This binds the anchor to the character so that even if the character's posture o
 
 Place the anchor in a suitable location:
 
-![](/doc-img/en-blueprint-example-animation-state-machine-2.webp)
+![](pathname:///doc-img/en-blueprint-example-animation-state-machine-2.webp)
 
 Create another anchor named "Microphone Right Elbow", with the following configuration:
 
-![](/doc-img/en-blueprint-example-animation-state-machine-3.webp)
+![](pathname:///doc-img/en-blueprint-example-animation-state-machine-3.webp)
 
 :::info
 Similarly, we bind the anchor to the character's spine so that the anchor's position always maintains the same relative position to the spine, regardless of how the character moves. The reason why we bind to the spine instead of the chest is because the anchor is closer to the spine. Generally speaking, it is most appropriate to bind to the closest bone.
@@ -38,11 +38,11 @@ Similarly, we bind the anchor to the character's spine so that the anchor's posi
 
 Create a "Microphone" prop, select the source as "Built-In - Miscellaneous -> Microphone", and configure the character attachment section as follows:
 
-![](/doc-img/en-blueprint-example-animation-state-machine-4.webp)
+![](pathname:///doc-img/en-blueprint-example-animation-state-machine-4.webp)
 
 At this step, we can configure the [IK properties of the character's right hand](../assets/character/#body-ik) as follows to verify that the two IK anchors are properly configured:
 
-![](/doc-img/en-blueprint-example-animation-state-machine-5.webp)
+![](pathname:///doc-img/en-blueprint-example-animation-state-machine-5.webp)
 
 :::info
 You do not need to match the config to the ones above, as these weights will be overridden by the nodes in the blueprint created below anyway.
@@ -50,21 +50,21 @@ You do not need to match the config to the ones above, as these weights will be 
 
 Next, you can enable the microphone prop and adjust the position of both anchors and the microphone prop until it looks natural.
 
-![](/doc-img/en-blueprint-example-animation-state-machine-6.webp)
+![](pathname:///doc-img/en-blueprint-example-animation-state-machine-6.webp)
 
 Next, create the "V-sign Left Hand", "V-sign Right Hand", "V-sign Left Elbow", "V-sign Right Elbow", "Rose Right Hand" anchors, as well as a rose prop. The following only shows the position of each anchor; the anchor configurations are similar to the above and can be bound to the bone nearest to the anchor; the properties of the rose prop are also similar to the microphone, except that the override hand pose has been changed to "Hold 2".
 
-![](/doc-img/en-blueprint-example-animation-state-machine-7.webp)
+![](pathname:///doc-img/en-blueprint-example-animation-state-machine-7.webp)
 
 ### Setup
 
 Create a new blueprint (or you can use an existing one), and add the following nodes and connections:
 
-![](/doc-img/en-blueprint-example-animation-state-machine-8.webp)
+![](pathname:///doc-img/en-blueprint-example-animation-state-machine-8.webp)
 
 This consists of four lines of nodes, and you may have guessed it, each line of nodes corresponds to the transformation of one state. By clicking the first "Trigger" button (from top to bottom), you can show the rose and make the character lift it up. The second "Trigger" button will fade out the character's IK with both hands. The third "Trigger" button will display the microphone and put it in front of the chest. The fourth "Trigger" button will make the character give V-signs with both hands. It's worth noting that for each "Trigger" button, before the corresponding logic is executed (the second button being after), the "Sequence" node disables the override hand pose and two props through the ["Sequence"](advanced-nodes.md#flow-control) node.
 
-![](/doc-img/en-blueprint-example-animation-state-machine-9.webp)
+![](pathname:///doc-img/en-blueprint-example-animation-state-machine-9.webp)
 
 :::info
 You can also move the two "Disable Character IK" nodes in the second row to the right of the "Toggle Asset Enabled" node, this way the IK for both hands will be reset when switching poses. The downside is that the model's hands may twitch when switching states.

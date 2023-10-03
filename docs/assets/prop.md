@@ -5,7 +5,7 @@ sidebar_position: 20
 
 Props are any 3D models that can be placed freely within a scene or can be attached to a character's bones to serve as accessories. Besides the built-in models, external models can be exported as `.warudo` format using the [Mod SDK](../modding/mod-sdk.md) and then loaded into Warudo.
 
-![](/doc-img/zh-prop-1.webp)
+![](pathname:///doc-img/zh-prop-1.webp)
 <p class="img-desc">Cat paws</p>
 
 

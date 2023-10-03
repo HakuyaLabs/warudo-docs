@@ -18,11 +18,11 @@ By default, Warudo will open the last opened scene (or the default scene if no s
 
 Click "🚀" at the bottom left -> "New Scene," enter the name for your scene, and click "OK" to create it.
 
-![](/doc-img/en-tutorials-1.webp)
+![](pathname:///doc-img/en-tutorials-1.webp)
 
 Now your asset list should look like this:
 
-![](/doc-img/en-tutorials-2.webp)
+![](pathname:///doc-img/en-tutorials-2.webp)
 
 ## Import Your Character
 
@@ -34,37 +34,37 @@ Warudo currently supports two model formats: `.vrm` and `.warudo`. The former is
 
 First, open the data folder:
 
-![](/doc-img/en-tutorials-3.webp)
+![](pathname:///doc-img/en-tutorials-3.webp)
 
 Put your VRM file in the "Characters" subfolder:
 
-![](/doc-img/en-tutorials-4.webp)
+![](pathname:///doc-img/en-tutorials-4.webp)
 
 Without restarting Warudo, we return to the configuration window, select the character asset by clicking on "Character (Inactive)," and choose the desired VRM file to load from the "Source" drop-down menu.
 
-![](/doc-img/en-tutorials-5.webp)
+![](pathname:///doc-img/en-tutorials-5.webp)
 
 You should now be able to see the model loaded into the scene!
 
-![](/doc-img/en-tutorials-6.webp)
+![](pathname:///doc-img/en-tutorials-6.webp)
 
 ## Basic Controls
 
 Let's take a moment to admire the newly loaded model. By default, the camera mode is set to **"Orbit Character"**, which means the camera will rotate around the character. You can use the <b style={{color: "purple"}}>**left or right mouse button**</b> to rotate the view, the <b style={{color: "purple"}}>**mouse wheel**</b> to zoom in or out, and the <b style={{color: "purple"}}>**middle mouse button**</b> to pan the view. Try moving the camera to this angle:
 
-![](/doc-img/en-tutorials-7.webp)
+![](pathname:///doc-img/en-tutorials-7.webp)
 
 If "Character" is still selected in the asset list, you will see a **translation gizmo** under the model's feet that can be used to move the model. Its usage is intuitive - simply drag and move it around, like this:
 
-![](/doc-img/en-tutorials-8.webp)
+![](pathname:///doc-img/en-tutorials-8.webp)
 
 You can switch to the **rotation gizmo** by pressing the <b style={{color: "purple"}}>**E**</b> key (and, by the way, switch back to the translation gizmo by pressing <b style={{color: "purple"}}>**W**</b>).
 
-![](/doc-img/en-tutorials-9.webp)
+![](pathname:///doc-img/en-tutorials-9.webp)
 
 Press <b style={{color: "purple"}}>**R**</b> to switch to the **scale gizmo**:
 
-![](/doc-img/en-tutorials-10.webp)
+![](pathname:///doc-img/en-tutorials-10.webp)
 
 :::tip
 You can press <b style={{color: "purple"}}>**G**</b> at anytime to toggle the visibility of gizmos for the main camera.
@@ -72,25 +72,25 @@ You can press <b style={{color: "purple"}}>**G**</b> at anytime to toggle the vi
 
 Now you can make your model look like this:
 
-![](/doc-img/en-tutorials-11.webp)
+![](pathname:///doc-img/en-tutorials-11.webp)
 
 ...This doesn't look good! How can we restore the model to its original state? If you've been paying attention, you may have noticed that the values in the "Transform" section change as you drag the gizmos. For example, this is what mine looks like now:
 
-![](/doc-img/en-tutorials-12.webp)
+![](pathname:///doc-img/en-tutorials-12.webp)
 
 To return to the initial state, just restore to the default values!
 
-![](/doc-img/en-tutorials-13.webp)
+![](pathname:///doc-img/en-tutorials-13.webp)
 
 In addition to orbiting around the model, the camera can also be switched to a free-look mode, allowing you to fly around the scene. Select the camera asset and choose **"Free Look"** for the "Control Mode":
 
-![](/doc-img/en-tutorials-14.webp)
+![](pathname:///doc-img/en-tutorials-14.webp)
 
 While <b style={{color: "purple"}}>**holding down the right mouse button**</b>, use the <b style={{color: "purple"}}>**WASD**</b> keys to move, the <b style={{color: "purple"}}>**E**</b> and <b style={{color: "purple"}}>**Q**</b> keys to move up and down, and hold down the left <b style={{color: "purple"}}>**Shift**</b> key to move faster. Use the <b style={{color: "purple"}}>**middle mouse button**</b> to pan the view.
 
 After you've gotten used to the two camera modes, switch back to "Orbit Character" mode and click **"Reset Camera Transform"** to return the camera to its default position.
 
-![](/doc-img/en-tutorials-15.webp)
+![](pathname:///doc-img/en-tutorials-15.webp)
 
 ## Setting Up Motion Capture
 
@@ -148,21 +148,21 @@ As this is a tutorial, we will use RhyLive + RhyLive as an example, so you can f
 
 Select the character asset and click on "Motion Capture" -> "Setup Motion Capture":
 
-![](/doc-img/en-tutorials-16.webp)
+![](pathname:///doc-img/en-tutorials-16.webp)
 
 Select "RhyLive" for the "Face Tracking Template." The options below will ask you which blendshape mapping you want to use. In most cases, the default automatic selection works best:
 
-![](/doc-img/en-tutorials-17.webp)
+![](pathname:///doc-img/en-tutorials-17.webp)
 
 :::tip
 <b style={{color: "green"}}>**Tips:**</b> What are blendshapes? A blendshape is a displacement of a number of vertices on the model mesh, like the following:
 
-![](/doc-img/zh-tutorials-18.gif)
+![](pathname:///doc-img/zh-tutorials-18.gif)
 <p class="img-desc">ref: https://developpaper.com/unity-realizes-facial-expression-transition-and-switching-animation-tutorial-through-blendshape/</p>
 
 A blendshape's value is between 0 and 1. When the value is 0, the vertices do not move. When the value is 1, the vertices move to the target position, as shown below:
 
-![](/doc-img/zh-tutorials-19.gif)
+![](pathname:///doc-img/zh-tutorials-19.gif)
 <p class="img-desc">Note that BlendShape in Unity takes values from 0-100, but in Warudo (and most 3D tools) BlendShape takes values from 0-1. ref: https://developpaper.com/unity-realizes-facial-expression-transition-and-switching-animation-tutorial-through-blendshape/</p>
 
 The list of blendshapes on a model is entirely up to the modeler (and the modeling tool). Below are a few lists of common blendshapes (for reference only; your model may have more or fewer blendshapes):
@@ -364,13 +364,13 @@ In the above image, "BlendShape Mapping" refers to "how the face tracking parame
 :::caution
 You may have heard others refer to blendshapes as "expressions." However, in Warudo, expressions are the states of several blendshapes on the character. For example, the "crying" expression shown below is a specific combination of five blendshape values:
 
-![](/doc-img/zh-tutorials-20.webp)
+![](pathname:///doc-img/zh-tutorials-20.webp)
 To avoid confusion, we will stick to referring blendshapes and expressions by their respective names.
 :::
 
 Similarly, choose "RhyLive" for the "Pose Tracking Template."
 
-![](/doc-img/en-tutorials-18.webp)
+![](pathname:///doc-img/en-tutorials-18.webp)
 
 :::info
 If you enable "Use Keyboard" / "Use Touchpad," Warudo will procedurally generate animations of the model using the keyboard and mouse when your hands are not tracked:
@@ -380,15 +380,15 @@ If you enable "Use Keyboard" / "Use Touchpad," Warudo will procedurally generate
 
 After clicking "OK," you should see a success message:
 
-![](/doc-img/en-tutorials-19.webp)
+![](pathname:///doc-img/en-tutorials-19.webp)
 
 The "RhyLive Receiver" should now appear in the asset list, which is used to receive motion capture data sent by the RhyLive App:
 
-![](/doc-img/en-tutorials-20.webp)
+![](pathname:///doc-img/en-tutorials-20.webp)
 
 Two blueprints should also have been added to the blueprint list:
 
-![](/doc-img/en-tutorials-21.webp)
+![](pathname:///doc-img/en-tutorials-21.webp)
 :::
 
 :::info
@@ -397,12 +397,12 @@ Warudo's blueprints are a very powerful feature, but if you're just starting out
 
 To use RhyLive on an iOS device, open the app and tap on the menu icon in the top left corner to enter the settings. If your computer and phone are connected to the same WiFi network, enter your computer's IP in the "IP" field and turn on the "无线" (Wireless) switch. Alternatively, you can connect your device to your computer using a USB cable and turn on the "有线" (Wired) switch ([iTunes](https://www.apple.com/itunes/) required).
 
-![](/doc-img/en-tutorials-22.webp)
+![](pathname:///doc-img/en-tutorials-22.webp)
 
 :::info
 If you do not know your computer's IP, you can check on the configuration page of the "RhyLive Receiver".
 
-![](/doc-img/en-tutorials-23.webp)
+![](pathname:///doc-img/en-tutorials-23.webp)
 
 If multiple IPs are listed, you would need to try each one. Usually, the IP address assigned to your computer by your WiFi router starts with 192.168. For example, in the above picture, you can first try 192.168.1.2.
 :::
@@ -417,7 +417,7 @@ It is recommended to turn off "锁定弯腰" (Lock body bending) and turn on "�
 
 You should now see the model in motion!
 
-![](/doc-img/en-tutorials-24.webp)
+![](pathname:///doc-img/en-tutorials-24.webp)
 
 :::info
 If the model's pose doesn't look quite right, select the "RhyLive Receiver" and click "Calibrate" to correct it.
@@ -429,48 +429,48 @@ Now that the upper body of the model is in motion, it's time to configure the fa
 
 Scroll down on the character's config page. Click on "Expressions" -> "Import VRM Expressions":
 
-![](/doc-img/en-tutorials-25.webp)
+![](pathname:///doc-img/en-tutorials-25.webp)
 
 If everything goes well, you should see the VRM expressions have been imported:
 
-![](/doc-img/en-tutorials-26.webp)
+![](pathname:///doc-img/en-tutorials-26.webp)
 
 You can expand and configure each expression in detail, such as whether to disable eye blink tracking when switching to that expression:
 
-![](/doc-img/en-tutorials-27.webp)
+![](pathname:///doc-img/en-tutorials-27.webp)
 
 However, now that the expressions have been imported, how can we trigger them? Simply click on "Generate Key Binding Blueprint":
 
-![](/doc-img/en-tutorials-28.webp)
+![](pathname:///doc-img/en-tutorials-28.webp)
 
-![](/doc-img/en-tutorials-29.webp)
+![](pathname:///doc-img/en-tutorials-29.webp)
 
 You should notice that a new blueprint called "Expression Key Bindings" has been added to the blueprint list:
 
-![](/doc-img/en-tutorials-30.webp)
+![](pathname:///doc-img/en-tutorials-30.webp)
 
 Press Alt+1, Alt+2, Alt+3... and so on to switch between expressions! Press Alt+Backspace to reset back to the natural expression.
 
-![](/doc-img/en-tutorials-31.webp)
+![](pathname:///doc-img/en-tutorials-31.webp)
 <p class="img-desc">T_T</p>
 
 ## Change Idle Animation
 
 Finally, let's give our model a different pose, shall we? Scroll down to find "Animation" -> "Idle Animation":
 
-![](/doc-img/en-tutorials-32.webp)
+![](pathname:///doc-img/en-tutorials-32.webp)
 
 Warudo comes with over **500** built-in idle animations (you can check them out [here](../misc/idle-animations.md))! Let's choose a cute one:
 
-![](/doc-img/en-tutorials-33.webp)
+![](pathname:///doc-img/en-tutorials-33.webp)
 
 Then you have this!
 
-![](/doc-img/en-tutorials-34.webp)
+![](pathname:///doc-img/en-tutorials-34.webp)
 
 The best part is that **Warudo's motion capture blends with the animation!** When you raise your hand for RhyLive to track, the model's hand blends into the tracked pose; when you lower your hand (and lose tracking), the model's hand blends into the idle animation pose, like the following:
 
-![](/doc-img/en-tutorials-35.webp)
+![](pathname:///doc-img/en-tutorials-35.webp)
 
 ## Summary
 

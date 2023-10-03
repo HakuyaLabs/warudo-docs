@@ -6,10 +6,10 @@ sidebar_position: 60
 
 像 OBS 一样实时捕捉桌面或者特定窗口，在场景内显示。还可以显示图片甚至网页哦！
 
-![](/doc-img/zh-screen-1.webp)
+![](pathname:///doc-img/zh-screen-1.webp)
 <p class="img-desc">支持曲面屏！</p>
 
-![](/doc-img/zh-screen-2.webp)
+![](pathname:///doc-img/zh-screen-2.webp)
 <p class="img-desc">3D 版弹幕姬！</p>
 
 

@@ -10,7 +10,7 @@ Warudo's motion capture is implemented using [blueprints](/docs/mocap/blueprints
 
 If you find your tracking has frame drops or is way too "smooth" thus unable to track fast movements, you may adjust the smoothing parameter in the mocap blueprint. All motion capture blueprints contain one or more nodes to smooth the data. For example, the following is the default iFacialMocap face tracking blueprint:
 
-![](/doc-img/zh-custom-1.webp)
+![](pathname:///doc-img/zh-custom-1.webp)
 
 The "Smooth Rotation List" node corresponds to the smoothing of the character's bone rotations, while the "Smooth Position" node corresponds to the smoothing of the character's root position. You can adjust the "Smooth Time" property on these nodes to make the tracking smoother or more responsive.
 

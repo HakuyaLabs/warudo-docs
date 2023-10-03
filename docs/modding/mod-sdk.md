@@ -61,14 +61,14 @@ Return to Unity and wait for the project to reload; make sure there are no error
 :::caution
 If you encounter an error with the message `An error occurred while resolving packages / Error adding package` and clicking on it reveals a message similar to `No 'git' executable was found. Please install Git on your system then restart Unity and Unity Hub`, it means that Git is not installed on your system.
 
-![](/doc-img/en-mod-sdk-1.webp)
+![](pathname:///doc-img/en-mod-sdk-1.webp)
 
 To resolve this issue, you need to download Git from [https://git-scm.com/download](https://git-scm.com/download) and then restart both Unity and Unity Hub.
 :::
 
 Confirm that the "Api Compatibility Level" in "File -> Build Settings... -> Player Settings... -> Other Settings" is set to .NET Framework.
 
-![](/doc-img/en-mod-sdk-2.webp)
+![](pathname:///doc-img/en-mod-sdk-2.webp)
 
 Download the SDK and import it into your Unity project, either by creating a new project or using an existing one.
 
@@ -108,15 +108,15 @@ If you see some errors, keep in mind that some "errors" are really just warnings
 
 To create a new Mod, go to the menu bar and select "Warudo" -> "New Mod":
 
-![](/doc-img/en-mod-sdk-3.webp)
+![](pathname:///doc-img/en-mod-sdk-3.webp)
 
 Give your mod a name, and click "Create Mod!" to create it:
 
-![](/doc-img/en-mod-sdk-4.webp)
+![](pathname:///doc-img/en-mod-sdk-4.webp)
 
 You should be able to see that a folder for your mod has been created under the Assets folder:
 
-![](/doc-img/en-mod-sdk-5.webp)
+![](pathname:///doc-img/en-mod-sdk-5.webp)
 
 Now you can start creating mods! How does a [prop mod](prop-mod.md) sound?
 

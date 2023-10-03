@@ -92,24 +92,24 @@ Alt+Z, Alt+X, Alt+C... Alt+/
 
 打开「表情按键绑定」蓝图，找到对应的「当按下键盘按键时」节点，按需要修改即可。例如，下图中，按下 Alt+2 会应用 Joy 表情：
 
-![](/doc-img/zh-expression-1.webp)
+![](pathname:///doc-img/zh-expression-1.webp)
 
 如下修改左边节点的输入，即可把快捷键设置为 Ctrl+Shift+T：
 
-![](/doc-img/zh-expression-2.webp)
+![](pathname:///doc-img/zh-expression-2.webp)
 
 ### 我想创建新的表情。
 
 在表情列表，点击右下角的 + 号新增列表元素。在「目标 BlendShape 列表」逐项添加表情对应的 BlendShape 即可。例如，以下表情在应用后，会激活模型上名为 `笑い` 的 BlendShape：
 
-![](/doc-img/zh-expression-3.webp)
+![](pathname:///doc-img/zh-expression-3.webp)
 
 打开「表情按键绑定」蓝图（创建新的蓝图也可以），从右边的侧边栏拖出「当按下键盘按键时」及「切换角色表情」两个节点；在「当按下键盘按键时」节点设置快捷键，并在「切换角色表情」节点选择角色以及刚刚创建好的表情，最后将两个节点的出口与入口相连，如下：
 
-![](/doc-img/zh-expression-4.webp)
+![](pathname:///doc-img/zh-expression-4.webp)
 
 ### 我的表情切换了之后就会一直保持住。能不能只切换一段时间，过一阵子后自动切回之前的待机表情？
 
 把蓝图中「切换 BlendShape 表情」节点的「临时」设置为是即可。表情显示的时长将由表情里每个 BlendShape 的淡出延迟决定。
 
-![](/doc-img/zh-expression-5.webp)
+![](pathname:///doc-img/zh-expression-5.webp)
