@@ -5,477 +5,395 @@ sidebar_position: 10
 
 # Getting Started
 
-## Creating a Scene
+## Basic Setup
 
-Let's get started! First, we need to create a **scene** in Warudo. The concept of a scene is similar to that of a scene in [OBS](https://obsproject.com/) or a game engine. It is basically a configuration file that can be switched at any time.
+First, when you open Warudo, you should see two windows: the **main window** and the **editor window**.
 
-A Warudo scene consists of two things: assets and blueprints.
+![](pathname:///doc-img/en-getting-started-1.png)
+<p class="img-desc">Main window.</p>
 
-* **Assets:** Assets are basically **objects** in the scene, e.g., a character, a camera, a motion capture tracker, etc.
-* **Blueprints:** Blueprints are used to create custom **behaviors**, e.g., "press X to activate expression Y and pose Z," or, "when receive redeem X, throw item Y at character," etc.
+![](pathname:///doc-img/en-getting-started-2.png)
+<p class="img-desc">Editor window.</p>
 
-By default, Warudo will open the last opened scene (or the default scene if no scenes have been created). To make things easier, let's create a new scene!
+The editor is used to configure your character, environment, etc., while the main window is where everything is in action. You can close the editor window at anytime and reopen it by pressing **Esc** while the main window is focused.
 
-Click "🚀" at the bottom left -> "New Scene," enter the name for your scene, and click "OK" to create it.
+Time to dive in! Click on **Basic Setup → Get Started**.
 
-![](pathname:///doc-img/en-tutorials-1.webp)
+![](pathname:///doc-img/en-getting-started-3.png)
+<p class="img-desc">Basic setup window.</p>
 
-Now your asset list should look like this:
+Click on **Open Characters Folder**, and you should see a folder named "Characters" in the file explorer. This is where you put your character models.
 
-![](pathname:///doc-img/en-tutorials-2.webp)
-
-## Import Your Character
-
-Now let's import your character model into the scene. Your model is most likely in [VRM format](https://vrm.dev/), so let's see how we can load that into Warudo.
-
-:::tip
-Warudo currently supports two model formats: `.vrm` and `.warudo`. The former is a standard avatar format exported by software like [VRoid Studio](https://vroid.com/en/studio), while the latter is Warudo's own format and supports virtually any Unity-compatible character model. Read more [here](../modding/character-mod.md).
-:::
-
-First, open the data folder:
-
-![](pathname:///doc-img/en-tutorials-3.webp)
-
-Put your VRM file in the "Characters" subfolder:
-
-![](pathname:///doc-img/en-tutorials-4.webp)
-
-Without restarting Warudo, we return to the configuration window, select the character asset by clicking on "Character (Inactive)," and choose the desired VRM file to load from the "Source" drop-down menu.
-
-![](pathname:///doc-img/en-tutorials-5.webp)
-
-You should now be able to see the model loaded into the scene!
-
-![](pathname:///doc-img/en-tutorials-6.webp)
-
-## Basic Controls
-
-Let's take a moment to admire the newly loaded model. By default, the camera mode is set to **"Orbit Character"**, which means the camera will rotate around the character. You can use the <b style={{color: "purple"}}>**left or right mouse button**</b> to rotate the view, the <b style={{color: "purple"}}>**mouse wheel**</b> to zoom in or out, and the <b style={{color: "purple"}}>**middle mouse button**</b> to pan the view. Try moving the camera to this angle:
-
-![](pathname:///doc-img/en-tutorials-7.webp)
-
-If "Character" is still selected in the asset list, you will see a **translation gizmo** under the model's feet that can be used to move the model. Its usage is intuitive - simply drag and move it around, like this:
-
-![](pathname:///doc-img/en-tutorials-8.webp)
-
-You can switch to the **rotation gizmo** by pressing the <b style={{color: "purple"}}>**E**</b> key (and, by the way, switch back to the translation gizmo by pressing <b style={{color: "purple"}}>**W**</b>).
-
-![](pathname:///doc-img/en-tutorials-9.webp)
-
-Press <b style={{color: "purple"}}>**R**</b> to switch to the **scale gizmo**:
-
-![](pathname:///doc-img/en-tutorials-10.webp)
-
-:::tip
-You can press <b style={{color: "purple"}}>**G**</b> at anytime to toggle the visibility of gizmos for the main camera.
-:::
-
-Now you can make your model look like this:
-
-![](pathname:///doc-img/en-tutorials-11.webp)
-
-...This doesn't look good! How can we restore the model to its original state? If you've been paying attention, you may have noticed that the values in the "Transform" section change as you drag the gizmos. For example, this is what mine looks like now:
-
-![](pathname:///doc-img/en-tutorials-12.webp)
-
-To return to the initial state, just restore to the default values!
-
-![](pathname:///doc-img/en-tutorials-13.webp)
-
-In addition to orbiting around the model, the camera can also be switched to a free-look mode, allowing you to fly around the scene. Select the camera asset and choose **"Free Look"** for the "Control Mode":
-
-![](pathname:///doc-img/en-tutorials-14.webp)
-
-While <b style={{color: "purple"}}>**holding down the right mouse button**</b>, use the <b style={{color: "purple"}}>**WASD**</b> keys to move, the <b style={{color: "purple"}}>**E**</b> and <b style={{color: "purple"}}>**Q**</b> keys to move up and down, and hold down the left <b style={{color: "purple"}}>**Shift**</b> key to move faster. Use the <b style={{color: "purple"}}>**middle mouse button**</b> to pan the view.
-
-After you've gotten used to the two camera modes, switch back to "Orbit Character" mode and click **"Reset Camera Transform"** to return the camera to its default position.
-
-![](pathname:///doc-img/en-tutorials-15.webp)
-
-## Setting Up Motion Capture
-
-It's finally time to get the model moving! Let's take a look at what motion capture solutions Warudo supports out-of-the-box.
-
-#### Face Tracking
-
-* [**OpenSeeFace (Beta)**](../mocap/openseeface.md): Webcam-based face tracking. Tracks a set of basic blendshapes, head rotation and head translation. Quality of face tracking is similar to that of [VSeeFace](https://www.vseeface.icu/).
-* [**iFacialMocap**](../mocap/ifacialmocap.md): ARKit-based face tracking. Requires a [Face ID](https://support.apple.com/en-us/HT208109)-compatible iOS device and the $5.99 [iFacialMocap](https://apps.apple.com/us/app/id1489470545) app. Tracks 52 ARKit blendshapes, head rotation and head translation. <b style={{color: "green"}}>**Most accurate and expressive.**</b>
-* [**RhyLive**](../mocap/rhylive.md): ARKit-based face tracking. Requires a [Face ID](https://support.apple.com/en-us/HT208109)-compatible iOS device and the free [RhyLive](https://apps.apple.com/us/app/rhylive/) app. Tracks 52 ARKit blendshapes and head rotation. <b style={{color: "green"}}>**Most accurate.**</b>
-* [**VMC**](../mocap/vmc.md): Face tracking via an external application, which sends data to Warudo via the [VirtualMotionCapture protocol](https://protocol.vmc.info/english). VMC is typically not used for face tracking data.
-* [**Rokoko**](../mocap/rokoko.md): Face tracking via [Rokoko Studio](https://www.rokoko.com/products/studio).
-
-#### Pose Tracking
-
-* [**MediaPipe**](../mocap/mediapipe.md): Webcam-based upper body tracking. Advantages include a wider range of motion (e.g. forward/backward hand movements) and more responsive tracking (e.g. punches). Drawbacks include the need for some time to set up and calibrate. <b style={{color: "green"}}>**Most expressive.**</b>
-* [**RhyLive**](../mocap/rhylive.md): Upper body tracking developed by [RhythMo](https://rhythmo.cn/). Requires a [Face ID](https://support.apple.com/en-us/HT208109)-compatible iOS device and the free [RhyLive](https://apps.apple.com/us/app/rhylive/) app.
-* [**VMC**](../mocap/vmc.md): Body tracking via an external application, which sends data to Warudo via the [VirtualMotionCapture protocol](https://protocol.vmc.info/english). Compatible with all VR mocap (such as SlimeVR or Mocopi), via [VirtualMotionCapture ](https://vmc.info/)and some VMC-compatible studio mocap.
-* [**Rokoko**](../mocap/rokoko.md): Body tracking via [Rokoko Studio](https://www.rokoko.com/products/studio).
-* [**Xsens MVN**](../mocap/xsens-mvn.md): Body tracking via [Xsens MVN Analyze/Animate](https://base.xsens.com/s/motion-capture-mvn-software?language=en\_US).
-
-Alright, I hear you asking: "So which should I choose?!
-
-——Just follow the steps below!
-
-
-
-* I have an iPhone or iPad：
-  * I am all for convenience or I don't have a webcam: [RhyLive](../mocap/rhylive.md) + [RhyLive](../mocap/rhylive.md).
-  * I want my avatar to be more expressive and I have a wide-angle webcam: [iFacialMocap ](../mocap/ifacialmocap.md)+ [MediaPipe](../mocap/mediapipe.md).
+Warudo supports two model formats: `.vrm` and `.warudo`. The former is a standard avatar format exported by software like [VRoid Studio](https://vroid.com/en/studio), while the latter is Warudo's own format and supports virtually any Unity-compatible character model ([details](../modding/character-mod.md)). For now, let's just put a `.vrm` file in the "Characters" folder.
 
 :::info
-Is your avatar compatible with [the 52 ARKit blendshapes](https://arkit-face-blendshapes.com/) ("Perfect Sync")? ARKit-based face tracking are much more expressive, so it is highly recommended.
+**Q:** Does Warudo support `.vsfavatar` models?
+
+**A:** No, Warudo does not support `.vsfavatar` models. However, if you have access to the Unity source files that are used to create the `.vsfavatar` model, creating a `.warudo` model is very easy; both `.vsfavatar` and `.warudo` are exported from Unity. Please follow the [modding guide](../modding/character-mod.md) for more details.
 :::
 
-* I don't have an iPhone or iPad: [OpenSeeFace](../mocap/openseeface.md) + [MediaPipe](../mocap/mediapipe.md).
+Now, go back to Warudo and open the dropdown. You should see your character's name in the list. Select it, and you should see your character loaded into the scene!
+
+![](pathname:///doc-img/en-getting-started-4.png)
+<p class="img-desc">Character loaded into the scene.</p>
+
+Let's click **OK** to move on to the next step. Here, you are asked if you would like Warudo to recommend a motion capture setup for you. If you select "Yes," Warudo asks you a few questions to decide what face tracking and pose tracking solutions to use. For example, if you have an iPhone and a webcam, and you don't have Leap Motion and full-body tracking hardware, Warudo will recommend using [iFacialMocap](../mocap/ifacialmocap.md) (an iPhone app) for face tracking and [MediaPipe](../mocap/mediapipe.md) (a built-in tracking that uses your webcam) for hand tracking. If you select "No," then you will have to manually select what face tracking and pose tracking solutions to use.
+
+If you are a first-time user, we recommend selecting "Yes" to let Warudo recommend a motion capture setup for you. Click **OK**, and select the options that best describe your setup, and click **OK** again.
+
+![](pathname:///doc-img/en-getting-started-5.png)
+<p class="img-desc">Configure motion capture.</p>
+
+![](pathname:///doc-img/en-getting-started-6.png)
+<p class="img-desc">Answer a few questions.</p>
+
+In the next screen, you are asked to confirm the face tracking and pose tracking solutions that Warudo has selected for you:
+
+![](pathname:///doc-img/en-getting-started-7.png)
+![](pathname:///doc-img/en-getting-started-8.png)
+<p class="img-desc">Confirm motion capture setup.</p>
 
 :::info
-If you do not have an iOS device and looking to buy one but do not have much budget for it, look into a used iPhone X. It is the cheapest iOS device compatible with ARKit / Face ID.
+If you want to set up a secondary tracking, you can use the **Secondary Pose Tracking** option; this is helpful if you are using VR trackers/Mocopi for primary tracking and would like to use [MediaPipe](../mocap/mediapipe.md) or [Leap Motion Controller](../mocap/leap-motion.md) or [StretchSense Gloves](../mocap/stretchsense.md) for added-on finger tracking.
 :::
 
-* I would like to use other motion capture software: [VMC ](../mocap/vmc.md)/ [iFacialMocap ](../mocap/ifacialmocap.md)+ [VMC](../mocap/vmc.md).
+Click **OK** to move on to the next step. If your model contains expressions, Warudo can help you import them and assign hotkeys to them. Select **Yes** and click **OK** to continue.
 
-:::tip
-Many motion capture hardware, in addition to home VR, have first or third-party VMC support, such as [Mocopi](https://www.sony.jp/mocopi/) and [Perception Neuron](https://github.com/emilianavt/VSeeFaceManual#perception-neuron-tracking).
-:::
+![](pathname:///doc-img/en-getting-started-9.png)
+<p class="img-desc">Import expressions.</p>
 
-:::tip
-In addition to at-home mocap options, Warudo also supports a range of [professional motion capture solutions](mocap/overview)!
-:::
+A popup window will appear which contains a list of expressions just imported along with their hotkeys. Don't worry, you can change the hotkeys later. Click **OK** to continue.
 
+![](pathname:///doc-img/en-getting-started-10.png)
+<p class="img-desc">Confirm expression hotkeys.</p>
 
+Finally, you are asked to select a background for your VTubing scene. You can go with a transparent background or the default skybox, but Warudo comes with a few nice backgrounds for you to use (they are called **Environments**). Let's select **Yes** and choose the **VR Room** environment. Click **OK** to complete the setup.
 
-As this is a tutorial, we will use RhyLive + RhyLive as an example, so you can follow along if you have an iPhone. However, feel free to visit the [Motion Capture section](../mocap/overview.md) in the documentation to learn about other motion capture solutions supported by Warudo.
+![](pathname:///doc-img/en-getting-started-11.png)
+<p class="img-desc">Select an environment.</p>
 
-Select the character asset and click on "Motion Capture" -> "Setup Motion Capture":
+Your main window should now look like this:
 
-![](pathname:///doc-img/en-tutorials-16.webp)
+![](pathname:///doc-img/en-getting-started-12.png)
+<p class="img-desc">Scene after setup.</p>
 
-Select "RhyLive" for the "Face Tracking Template." The options below will ask you which blendshape mapping you want to use. In most cases, the default automatic selection works best:
+If you have already connected your tracking software/hardware——in my case, I have opened the iFacialMocap app on my iPhone——then you should see your character moving already!
 
-![](pathname:///doc-img/en-tutorials-17.webp)
+![](pathname:///doc-img/en-getting-started-13.png)
+<p class="img-desc">Character in motion.</p>
 
-:::tip
-<b style={{color: "green"}}>**Tips:**</b> What are blendshapes? A blendshape is a displacement of a number of vertices on the model mesh, like the following:
+Let's move on to learning some basic controls!
 
-![](pathname:///doc-img/zh-tutorials-18.gif)
-<p class="img-desc">ref: https://developpaper.com/unity-realizes-facial-expression-transition-and-switching-animation-tutorial-through-blendshape/</p>
+## Scene Controls
 
-A blendshape's value is between 0 and 1. When the value is 0, the vertices do not move. When the value is 1, the vertices move to the target position, as shown below:
+Let's take a moment to admire your character model. By default, the scene camera is set to **Orbit Character** mode, which means the camera always rotates around the character. You can use **Mouse LMB/RMB** to rotate the view, **Mouse Wheel** to zoom in or out, and **Mouse MMB** to pan the view. Try moving the camera to this angle:
 
-![](pathname:///doc-img/zh-tutorials-19.gif)
-<p class="img-desc">Note that BlendShape in Unity takes values from 0-100, but in Warudo (and most 3D tools) BlendShape takes values from 0-1. ref: https://developpaper.com/unity-realizes-facial-expression-transition-and-switching-animation-tutorial-through-blendshape/</p>
+![](pathname:///doc-img/en-getting-started-14.png)
+<p class="img-desc">Camera orbiting around the character.</p>
 
-The list of blendshapes on a model is entirely up to the modeler (and the modeling tool). Below are a few lists of common blendshapes (for reference only; your model may have more or fewer blendshapes):
+Now let's learn how to move the character. In the editor window, click on **Character** to select the character asset.
 
-<details>
+![](pathname:///doc-img/en-getting-started-15.png)
+<p class="img-desc">Select the character asset.</p>
 
-<summary>VRoid Studio models</summary>
+You should see a **translation gizmo** under the model's feet that can be used to move the model. Simply drag on an axis to move along that axis. Here I moved the model next to the bed:
 
-* Fcl\_ALL\_Neutral
-* Fcl\_ALL\_Angry
-* Fcl\_ALL\_Fun
-* Fcl\_ALL\_Joy
-* Fcl\_ALL\_Sorrow
-* Fcl\_ALL\_Surprised
-* Fcl\_BRW\_Angry
-* Fcl\_BRW\_Fun
-* Fcl\_BRW\_Joy
-* Fcl\_BRW\_Sorrow
-* Fcl\_BRW\_Surprised
-* Fcl\_EYE\_Natural
-* Fcl\_EYE\_Angry
-* Fcl\_EYE\_Close
-* Fcl\_EYE\_Close\_R
-* Fcl\_EYE\_Close\_L
-* Fcl\_EYE\_Fun
-* Fcl\_EYE\_Joy
-* Fcl\_EYE\_Joy\_R
-* Fcl\_EYE\_Joy\_L
-* Fcl\_EYE\_Sorrow
-* Fcl\_EYE\_Surprised
-* Fcl\_EYE\_Spread
-* Fcl\_EYE\_Iris\_Hide
-* Fcl\_EYE\_Highlight\_Hide
-* Fcl\_MTH\_Close
-* Fcl\_MTH\_Up
-* Fcl\_MTH\_Down
-* Fcl\_MTH\_Angry
-* Fcl\_MTH\_Small
-* Fcl\_MTH\_Large
-* Fcl\_MTH\_Neutral
-* Fcl\_MTH\_Fun
-* Fcl\_MTH\_Joy
-* Fcl\_MTH\_Sorrow
-* Fcl\_MTH\_Surprised
-* Fcl\_MTH\_SkinFung
-* Fcl\_MTH\_SkinFung\_R
-* Fcl\_MTH\_SkinFung\_L
-* Fcl\_MTH\_A
-* Fcl\_MTH\_I
-* Fcl\_MTH\_U
-* Fcl\_MTH\_E
-* Fcl\_MTH\_O
-* Fcl\_HA\_Hide
-* Fcl\_HA\_Fung1
-* Fcl\_HA\_Fung1\_Low
-* Fcl\_HA\_Fung1\_Up
-* Fcl\_HA\_Fung2
-* Fcl\_HA\_Fung2\_Low
-* Fcl\_HA\_Fung2\_Up
-* Fcl\_HA\_Fung3
-* Fcl\_HA\_Fung3\_Up
-* Fcl\_HA\_Fung3\_Low
-* Fcl\_HA\_Short
-* Fcl\_HA\_Short\_Up
-* Fcl\_HA\_Short\_Low
-
-</details>
-
-<details>
-
-<summary>MMD models</summary>
-
-* 真面目
-* 困る
-* にこり
-* 怒り
-* 上
-* 下
-* まばたき
-* 笑い
-* ウィンク
-* ウィンク２
-* ウィンク右
-* ｳｨﾝｸ２右
-* はぅ
-* なごみ
-* びっくり
-* じと目
-* なぬ！
-* 瞳小
-* 瞳縦
-* 瞳縦潰れ
-* びっくり
-* への字
-* 恐ろしい子！
-* カメラ目
-* はちゅ目
-* 星目
-* はぁと
-* 涙
-* 猫目
-* 瞳全消し
-* あ
-* い
-* う
-* お
-* ▲
-* ∧
-* ω
-* ω□
-* はんっ！
-* ぺろっ
-* えー
-* にやり
-* ぎゃーす
-* がーん
-* ギギギ,
-* あ２
-* ああ
-* いい
-* おお
-* 青ざめ
-* д
-* 八重歯左
-* 八重歯右
-* ワ
-* 口角上げ
-* 口角下げ
-* 口横広げ
-* 口横狭め
-* 頬染め
-* 照れ
-* 赤面
-
-</details>
-
-<details>
-
-<summary>ARKit-compatible (Perfect Sync) models</summary>
-
-* eyeBlinkLeft
-* eyeLookDownLeft
-* eyeLookInLeft
-* eyeLookOutLeft
-* eyeLookUpLeft
-* eyeSquintLeft
-* eyeWideLeft
-* eyeBlinkRight
-* eyeLookDownRight
-* eyeLookInRight
-* eyeLookOutRight
-* eyeLookUpRight
-* eyeSquintRight
-* eyeWideRight
-* jawForward
-* jawLeft
-* jawRight
-* jawOpen
-* mouthClose
-* mouthFunnel
-* mouthPucker
-* mouthLeft
-* mouthRight
-* mouthSmileLeft
-* mouthSmileRight
-* mouthFrownLeft
-* mouthFrownRight
-* mouthDimpleLeft
-* mouthDimpleRight
-* mouthStretchLeft
-* mouthStretchRight
-* mouthRollLower
-* mouthRollUpper
-* mouthShrugLower
-* mouthShrugUpper
-* mouthPressLeft
-* mouthPressRight
-* mouthLowerDownLeft
-* mouthLowerDownRight
-* mouthUpperUpLeft
-* mouthUpperUpRight
-* browDownLeft
-* browDownRight
-* browInnerUp
-* browOuterUpLeft
-* browOuterUpRight
-* cheekPuff
-* cheekSquintLeft
-* cheekSquintRight
-* noseSneerLeft
-* noseSneerRight
-* tongueOut
-
-</details>
-
-In the above image, "BlendShape Mapping" refers to "how the face tracking parameters should be applied to the model's blendshapes," so it's necessary to select which set of blendshapes the model have.
-:::
-
-:::caution
-You may have heard others refer to blendshapes as "expressions." However, in Warudo, expressions are the states of several blendshapes on the character. For example, the "crying" expression shown below is a specific combination of five blendshape values:
-
-![](pathname:///doc-img/zh-tutorials-20.webp)
-To avoid confusion, we will stick to referring blendshapes and expressions by their respective names.
-:::
-
-Similarly, choose "RhyLive" for the "Pose Tracking Template."
-
-![](pathname:///doc-img/en-tutorials-18.webp)
+![](pathname:///doc-img/en-getting-started-16.png)
+<p class="img-desc">Move the model.</p>
 
 :::info
-If you enable "Use Keyboard" / "Use Touchpad," Warudo will procedurally generate animations of the model using the keyboard and mouse when your hands are not tracked:
-
-<div className="video-box"><video controls src="/doc-img/zh-tutorials-video1.mp4" />
-</div>
-
-After clicking "OK," you should see a success message:
-
-![](pathname:///doc-img/en-tutorials-19.webp)
-
-The "RhyLive Receiver" should now appear in the asset list, which is used to receive motion capture data sent by the RhyLive App:
-
-![](pathname:///doc-img/en-tutorials-20.webp)
-
-Two blueprints should also have been added to the blueprint list:
-
-![](pathname:///doc-img/en-tutorials-21.webp)
+Can't see the gizmo? Try use **Mouse MMB** to pan the view.
 :::
+
+You can switch to the **rotation gizmo** by pressing **E** (and, by the way, switch back to the translation gizmo by pressing **W**). Let's rotate the model a bit:
+
+![](pathname:///doc-img/en-getting-started-17.png)
+<p class="img-desc">Rotate the model.</p>
+
+Press **R** to switch to the **scale gizmo**. Usually you don't want to scale your character, but Let's make the model wider just for fun:
+
+![](pathname:///doc-img/en-getting-started-18.png)
+<p class="img-desc">Scale the model.</p>
+
+That doesn't look good! How can we restore the scale? If you've been paying attention, you may have noticed that the values in the **Transform** section change as you drag the gizmos. For example, this is what mine looks like now:
+
+![](pathname:///doc-img/en-getting-started-19.png)
+<p class="img-desc">Transform values.</p>
+
+To return to the initial scale, just set the **Scale** values to **1**, or click on the **Reset** button that appears when you hover over the **Scale** values:
+
+![](pathname:///doc-img/en-getting-started-20.png)
+<p class="img-desc">Reset scale.</p>
+
+That's much better!
+
+![](pathname:///doc-img/en-getting-started-21.png)
+<p class="img-desc">Back to normal.</p>
+
+In addition to orbiting around the model, the camera can also be switched to a free-look mode, allowing the camera to fly through the scene. Select the **Camera** asset and choose **Free Look** for the **Control Mode**:
+
+![](pathname:///doc-img/en-getting-started-22.png)
+<p class="img-desc">Switch to free-look mode.</p>
+
+While **holding down Mouse RMB**, use **WASD** to move, **E** and **Q** to move up and down, and hold **Left Shift** to move faster. Use **Mouse MMB** to pan the view.
+
+After you've gotten used to the two camera modes, switch back to **Orbit Character** mode and click **Reset Camera Transform** to return the camera to its default position.
+
+![](pathname:///doc-img/en-getting-started-24.png)
+<p class="img-desc">Reset camera transform.</p>
+
+![](pathname:///doc-img/en-getting-started-23.png)
+<p class="img-desc">Back to default camera position.</p>
+
+## Assets Page
+
+Now you have a basic sense of how to move the character and the camera, let's take a look at the editor!
+
+By default, you are at the **Assets** page. An **asset** is essentially anything that is "in the scene," such as a character, a camera, a prop, a motion capture tracker, etc.
+
+You can click on an asset to select it. For example, click on the **Directional Light** asset to select it and adjust its color:
+
+![](pathname:///doc-img/en-getting-started-25.png)
+<p class="img-desc">Select the directional light and adjust its color.</p>
+
+Spooky!
+
+![](pathname:///doc-img/en-getting-started-26.png)
+<p class="img-desc">Light color set to red.</p>
+
+A motion capture tracker is also an asset. For example, since I have selected **iFacialMocap** as my face tracking solution, I have a **iFacialMocap Receiver** asset in my scene. I can click on it to select it and click the **Calibrate iFacialMocap** button to calibrate my face tracking:
+
+![](pathname:///doc-img/en-getting-started-27.png)
+<p class="img-desc">Calibrate iFacialMocap.</p>
+
+Since we are already here, how about we try to add a new asset? Click on **Add Asset** and select **Prop**:
+
+![](pathname:///doc-img/en-getting-started-28.png)
+<p class="img-desc">Add asset.</p>
+
+![](pathname:///doc-img/en-getting-started-29.png)
+<p class="img-desc">Select "Prop".</p>
+
+The prop asset is added to the scene, but we haven't selected a model yet! Let's click on the **Preview Gallery** button next to the **Source** dropdown menu:
+
+![](pathname:///doc-img/en-getting-started-30.png)
+<p class="img-desc">Preview gallery.</p>
+
+Let's select the **Microphone** prop. Then, click **X** (or anywhere outside the popup) to close the preview gallery:
+
+![](pathname:///doc-img/en-getting-started-31.png)
+<p class="img-desc">Select the microphone prop.</p>
+
+Hmm, where is our microphone? Zoom out a bit, and you should see it... sunk into the ground!
+
+![](pathname:///doc-img/en-getting-started-32.png)
+<p class="img-desc">Oh noes.</p>
+
+That's not good! We want to attach it to our character's hand. In the **Transform Attachment** section, click on the **Attach To** dropdown menu and select **Character**:
+
+![](pathname:///doc-img/en-getting-started-33.png)
+<p class="img-desc">Attach to character.</p>
+
+The microphone is now attached to the character's hand! Now we can use the transform gizmo to adjust the attachment position:
+
+![](pathname:///doc-img/en-getting-started-34.png)
+<p class="img-desc">Microphone attached to character's hand.</p>
+
+![](pathname:///doc-img/en-getting-started-35.png)
+<p class="img-desc">Adjust attachment position.</p>
+
+If you have set up full-body tracking or hand tracking, you should be able to see your microphone moving with your hand!
+
+![](pathname:///doc-img/en-getting-started-36.png)
+<p class="img-desc">Microphone moving with hand.</p>
+
+As you can see, each type of asset comes with many options. For example, you can change **Attach To Bone** to attach the microphone to the character's left hand instead, or change **Override Hand Pose** to make the character hold the microphone with a different hand pose:
+
+![](pathname:///doc-img/en-getting-started-37.png)
+<p class="img-desc">Adjust prop options.</p>
+
+The character asset is also highly customizable. For example, our character has stood next to the bed for a while. Let's make them sit on the bed! Click on the **Character** asset to select it, and click on the **Preview Gallery** button next to the **Idle Animation** dropdown menu:
+
+![](pathname:///doc-img/en-getting-started-42.png)
+<p class="img-desc">Select a character idle animation.</p>
+
+![](pathname:///doc-img/en-getting-started-41.png)
+<p class="img-desc">Select the "Sitting" idle animation.</p>
+
+Comfy!
+
+![](pathname:///doc-img/en-getting-started-43.png)
+<p class="img-desc">Character sitting on the bed.</p>
+
+The best part is that **Warudo's motion capture blends seamlessly with the idle animations**! For example, if you raise your hand, the character will still raise their hand while sitting:
+
+![](pathname:///doc-img/en-getting-started-55.png)
+<p class="img-desc">Character raises hand while sitting.</p>
+
 
 :::info
-Warudo's blueprints are a very powerful feature, but if you're just starting out with Warudo, you can achieve great results without touching blueprints at all. We recommend reading the [blueprint tutorial](/docs/mocap/blueprints/overview) once you are familiar with the rest of Warudo's features.
+**Q:** Help! There are so many options in Warudo, and I don't know what they do!
+
+**A:** It is easy to feel overwhelmed, but don't worry, you don't need to understand all of them. Many options are for advanced users and are not necessary for day-to-day usage.
+
+If you are new to Warudo, just play around with the options and see what they do. You can always reset the options to their default values by clicking the **Reset** button when hovering on them. The later sections of this handbook will explore each type of asset and their options in detail with examples.
 :::
 
-To use RhyLive on an iOS device, open the app and tap on the menu icon in the top left corner to enter the settings. If your computer and phone are connected to the same WiFi network, enter your computer's IP in the "IP" field and turn on the "无线" (Wireless) switch. Alternatively, you can connect your device to your computer using a USB cable and turn on the "有线" (Wired) switch ([iTunes](https://www.apple.com/itunes/) required).
+Let's now try to add a **Screen** asset. Click on **Add Asset** and select **Screen**:
 
-![](pathname:///doc-img/en-tutorials-22.webp)
+![](pathname:///doc-img/en-getting-started-38.png)
+<p class="img-desc">Add screen asset.</p>
+
+The screen asset is used to display images and videos, but it can also capture your windows/monitors just like OBS Studio! In the following example, I have selected **Window** for the **Content Type** option and **Warudo Editor** for the **Window** option, and moved the screen to behind the character:
+
+![](pathname:///doc-img/en-getting-started-39.png)
+<p class="img-desc">Screen usage example.</p>
 
 :::info
-If you do not know your computer's IP, you can check on the configuration page of the "RhyLive Receiver".
-
-![](pathname:///doc-img/en-tutorials-23.webp)
-
-If multiple IPs are listed, you would need to try each one. Usually, the IP address assigned to your computer by your WiFi router starts with 192.168. For example, in the above picture, you can first try 192.168.1.2.
+If the screen is too bright, you can adjust the **Tint** option to a gray color to make it darker.
 :::
+
+## Blueprints Page
+
+Now you are familiar with assets, let's take a look at the **Blueprints** page. Click on the sigma icon to switch to the blueprints page:
+
+![](pathname:///doc-img/en-getting-started-40.png)
+<p class="img-desc">Switch to blueprints page.</p>
+
+But what is a blueprint? Essentially, blueprints are "what should happen when something happens." For example, "when I press the **Space** key, the character should wave their hand." Or, "when I receive a Twitch redeem, a prop should be thrown at my character."
+
+Our scene already has a few blueprints. For example, the **Expression Key Bindings** blueprint implements the hotkeys for switching between expressions. Let's click on it to select it:
+
+![](pathname:///doc-img/en-getting-started-44.png)
+<p class="img-desc">Select the expression key bindings blueprint.</p>
+
+Use **Mouse Wheel** to zoom in and out, and **Mouse LMB** to pan the view. Pan to the right until you see these two nodes:
+
+![](pathname:///doc-img/en-getting-started-45.png)
+<p class="img-desc">Zoom out and pan to the right.</p>
+
+The two nodes right here are essentially saying: "when **Alt+1** is pressed, the character asset **Character** should switch to the **Joy** expression." Let's try it out! Press **Alt+1** on your keyboard, and you should see your character switch to the **Joy** expression:
+
+![](pathname:///doc-img/en-getting-started-46.png)
+<p class="img-desc">Character switches to the "Joy" expression.</p>
+
+Similarly, the two nodes below are saying: "when **Alt+Backspace** is pressed, the character asset **Character** should exit all expressions." Press **Alt+Backspace** to try it out.
+
+![](pathname:///doc-img/en-getting-started-47.png)
+<p class="img-desc">Character exits all expressions.</p>
+
+Let's go back to the two nodes that switch to the **Joy** expression. You can change the hotkey by changing the **Keystroke** option and other options; for example, in the following, I have changed the hotkey to **Ctrl+Shift+Q**:
+
+![](pathname:///doc-img/en-getting-started-48.png)
+<p class="img-desc">Change hotkey.</p>
+
+You can also make more things happen when the hotkey is pressed. For example, let's play a sound as well! Type **play sound** in the search bar and drag the **Play Sound** node to the right of the **Toggle Character Expression** node:
+
+![](pathname:///doc-img/en-getting-started-49.png)
+<p class="img-desc">Locate the "Play Sound" node.</p>
+
+Click on the green dot next to the **Exit** output of the **Toggle Character Expression** node and drag it to the green dot next to the **Enter** input of the **Play Sound** node:
+
+![](pathname:///doc-img/en-getting-started-50.png)
+<p class="img-desc">Drag the "Play Sound" node to the right of the "Toggle Character Expression" node.</p>
+
+This connects the two nodes together. Now, click on the **Source** dropdown menu and select a sound effect you like. I have selected the **Punch Light 01** sound effect.
+
+![](pathname:///doc-img/en-getting-started-51.png)
+<p class="img-desc">Select a sound effect.</p>
 
 :::info
-If you use the "Wired" option, you must open the RhyLive app, connect your iPhone to your PC before launching Warudo.
+You can click **Open Sounds Folder** and put in your own sound effects!
 :::
 
-:::tip
-It is recommended to turn off "锁定弯腰" (Lock body bending) and turn on "隐藏模型" (Hide model). The former increases the range of motion of the model, while the latter helps reduce device overheating from prolonged use.
-:::
+Now, when you press **Ctrl+Shift+Q** (or the hotkey you assigned), your character should switch to the **Joy** expression, and a sound effect should play.
 
-You should now see the model in motion!
+Let's implement something new. For example, let's play an emote animation on the character when we press **Space**. Pan to an empty area and try to add the following nodes yourself and connect them together as shown. Select the character asset in the **Character** dropdown menu, and select **Energetic** for the **Animation** option:
 
-![](pathname:///doc-img/en-tutorials-24.webp)
+![](pathname:///doc-img/en-getting-started-52.png)
+<p class="img-desc">Add nodes to play an emote animation.</p>
+
+If your character is currently sitting, you may want to mask the animation to only play on the upper body. To do so, click on **Mask Upper Body** on the **Play Character One Shot Overlay Animation** node:
+
+![](pathname:///doc-img/en-getting-started-53.png)
+<p class="img-desc">Mask the animation to only play on the upper body.</p>
+
+Now, when you press **Space**, your character should play the **Energetic** emote animation!
+
+![](pathname:///doc-img/en-getting-started-54.png)
+<p class="img-desc">Character plays the "Energetic" emote animation.</p>
+
+
+That's our brief introduction to blueprints! Hopefully it offers you a glimpse of what blueprints can do. Warudo's blueprint system is a very powerful feature, but even without touching it, you can already do a lot of things with Warudo. Once you are familiar with the rest of Warudo's features, we recommend reading the [blueprint tutorial](/docs/blueprints/overview) to learn more about blueprints.
+
+## Interaction Setup
+
+VTubing isn't fun if you can't interact with your viewers! Warudo offers a wide range of interaction features, but the quickest way to get started is to use our onboarding assistant. Select the **Onboarding Assistant** asset, and click on **Interaction Setup → Get Started**:
+
+![](pathname:///doc-img/en-getting-started-58.png)
+<p class="img-desc">Interaction setup.</p>
+
+You will be asked to select a streaming platform:
+
+![](pathname:///doc-img/en-getting-started-59.png)
+<p class="img-desc">Select a streaming platform.</p>
+
+Follow the instructions to set up the streaming platform integration. For example, in the following, I am setting the **Launching Liquid** interaction to trigger when I receive a Twitch redeem called "Water":
+
+![](pathname:///doc-img/en-getting-started-60.png)
+<p class="img-desc">Set up integration.</p>
+
+When you are done, you will notice a new blueprint has been added to the blueprints page. Remember what we said about blueprints? They are "what should happen when something happens." In this case, the blueprint should contain the logic for launching liquid at our character when we receive a Twitch redeem called "Water." Click on the blueprint to select it, and locate the **Launch Liquid At Character** node:
+
+![](pathname:///doc-img/en-getting-started-61.png)
+<p class="img-desc">A new blueprint has been added.</p>
+
+![](pathname:///doc-img/en-getting-started-62.png)
+<p class="img-desc">Locate the "Launch Liquid At Character" node.</p>
+
+The nodes above are essentially saying: "when we receive a Twitch redeem, if the redeem title is 'Water', then launch liquid at the character asset 'Character'." You can click the "Enter" button on the **Launch Liquid At Character** node to test it out:
+
+![](pathname:///doc-img/en-getting-started-63.png)
+<p class="img-desc">Test the interaction.</p>
+
+![](pathname:///doc-img/en-getting-started-64.png)
+<p class="img-desc">It works!</p>
+
+## Outputting to OBS Studio / Streamlabs
+
+It's time to put Warudo into your favorite streaming software! There are four ways to do so:
+
+* **Virtual camera:** Warudo can output as a virtual camera. This is useful for collab streams on [VDO.Ninja](https://vdo.ninja/) or you want to use your VTubing avatar on Discord/Zoom. To use this method, go to **Settings → Output** and enable **Virtual Camera Output**.
+* **NDI:** Warudo can output as an [NDI](https://ndi.video/) source. To use this method, go to **Settings → Output** and enable **NDI Output**. Note that audio output is not supported.
+* **Spout:** Warudo can output as a [Spout](https://spout.zeal.co/) source. To use this method, go to **Settings → Output** and enable **Spout Output**. **This is by default already enabled.**
+* **Window/Game capture:** You can also use window/game capture in OBS Studio or Streamlabs to capture the Warudo window. We do not recommend this method, as it takes up significantly more CPU/GPU resources than the other methods.
+
+We recommend using the **Spout** method, as it has zero latency and best performance. To set up:
+
+* **OBS Studio:** Install the [**Spout2 Plugin for OBS Studio**](https://github.com/Off-World-Live/obs-spout2-plugin) first, then add a **Spout2 Capture** source, and select **Warudo** as the sender.
+* **Streamlabs:** Add a **Spout2** source, and select **Warudo** as the sender.
+
+![](pathname:///doc-img/en-getting-started-65.png)
+<p class="img-desc">Spout output to OBS Studio.</p>
+
+## Saving and Loading Scenes
+
+Now that you have set up your scene, remember to save it! Unlike other software, Warudo does not automatically save your scene, so that you can experiment with different settings without worrying about messing up your scene. Click on the Warudo icon, and select **Save Scene**:
+
+![](pathname:///doc-img/en-getting-started-56.png)
+<p class="img-desc">Save scene.</p>
+
+You can also save the scene as a new file by selecting **Save Scene As**. To load a scene, select **Open Scene**.
+
+![](pathname:///doc-img/en-getting-started-57.png)
+<p class="img-desc">Open scene.</p>
+
+Finally, you can use **Reload Scene** and **Restart Scene** to reload and restart the scene respectively. **Reload Scene** resets the scene state and abandons all changes made to the scene since the last save, while **Restart Scene** only resets the scene state but keeps the changes made to the scene.
 
 :::info
-If the model's pose doesn't look quite right, select the "RhyLive Receiver" and click "Calibrate" to correct it.
+"Resetting the scene state" means resetting physics, temporary objects, etc. in the scene. For example, if you have somehow spawned 1,000 thrown props in the scene, using **Reload Scene** or **Restart Scene** will remove all of them, since they are not part of the scene file.
 :::
-
-## Setting Up Expressions
-
-Now that the upper body of the model is in motion, it's time to configure the face expressions!
-
-Scroll down on the character's config page. Click on "Expressions" -> "Import VRM Expressions":
-
-![](pathname:///doc-img/en-tutorials-25.webp)
-
-If everything goes well, you should see the VRM expressions have been imported:
-
-![](pathname:///doc-img/en-tutorials-26.webp)
-
-You can expand and configure each expression in detail, such as whether to disable eye blink tracking when switching to that expression:
-
-![](pathname:///doc-img/en-tutorials-27.webp)
-
-However, now that the expressions have been imported, how can we trigger them? Simply click on "Generate Key Binding Blueprint":
-
-![](pathname:///doc-img/en-tutorials-28.webp)
-
-![](pathname:///doc-img/en-tutorials-29.webp)
-
-You should notice that a new blueprint called "Expression Key Bindings" has been added to the blueprint list:
-
-![](pathname:///doc-img/en-tutorials-30.webp)
-
-Press Alt+1, Alt+2, Alt+3... and so on to switch between expressions! Press Alt+Backspace to reset back to the natural expression.
-
-![](pathname:///doc-img/en-tutorials-31.webp)
-<p class="img-desc">T_T</p>
-
-## Change Idle Animation
-
-Finally, let's give our model a different pose, shall we? Scroll down to find "Animation" -> "Idle Animation":
-
-![](pathname:///doc-img/en-tutorials-32.webp)
-
-Warudo comes with over **500** built-in idle animations (you can check them out [here](../misc/idle-animations.md))! Let's choose a cute one:
-
-![](pathname:///doc-img/en-tutorials-33.webp)
-
-Then you have this!
-
-![](pathname:///doc-img/en-tutorials-34.webp)
-
-The best part is that **Warudo's motion capture blends with the animation!** When you raise your hand for RhyLive to track, the model's hand blends into the tracked pose; when you lower your hand (and lose tracking), the model's hand blends into the idle animation pose, like the following:
-
-![](pathname:///doc-img/en-tutorials-35.webp)
 
 ## Summary
 
-At this point, you have used Warudo to make your model move and have learned how to switch between expressions and idle animations! However, this is just the tip of the iceberg in terms of Warudo's capabilities...
-
-:::info
-Remember to use "🚀" -> "Save Scene" to save the scene from time to time!
-:::
+Congratulations! You have now learned the basics of Warudo. We recommend reading the rest of the handbook to learn more about Warudo's features. If you have any questions, please join our [Discord](https://discord.gg/warudo), and we will be happy to help you out!

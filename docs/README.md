@@ -6,33 +6,38 @@ sidebar_position: 10
 
 ## What is Warudo?
 
-Warudo is an avatar animation software specifically designed for 3D VTuber livestreaming. Import your own [environments](modding/environment-mod.md) and [props](modding/prop-mod.md), customize your avatar in-depth with [blueprints](/docs/mocap/blueprints/overview), and further enhance the software capabilities via [C# plugins](modding/mod-sdk.md). Feature-packed and highly flexible, Warudo is dedicated to creating the perfect livestreaming setup for your VTuber avatar.
+Warudo is an avatar animation software specifically designed for 3D VTuber livestreaming. Import your own [environments](modding/environment-mod.md) and [props](modding/prop-mod.md), customize your avatar in-depth with [blueprints](/docs/mocap/blueprints/overview), and further enhance the software capabilities via [C# plugins](modding/mod-sdk.md). Feature-packed and highly flexible, Warudo is everything you need to take your 3D VTubing to the next level.
 
 ## Why Warudo?
 
-Existing 3D livestreaming solutions fall into four categories:
+Warudo is a comprehensive, feature-packed 3D VTubing software designed for both casual and professional users. It offers support for [a wide variety of motion capture systems](mocap/overview.md), so you can both stream at home or at a professional mocap studio. It also offers a wide range of features, including posing your character with 500+ idle animations, integration with livestreaming platforms, a node-based visual scripting system, and many more.
 
-* Simple and user-friendly software such as [Luppet](https://luppet.appspot.com/) and [VSeeFace](https://www.vseeface.icu/):
-  * Pros: Easy to use and accessible.
-  * Cons: Limited in features and customization options. Despite VSeeFace providing an SDK for developers, there are still many things that can't be done with the software, even technically it would only "require a few lines of code."
-* Self-developed/in-house software:
-  * Pros: Tailored to fit a VTuber's specific needs. As long as there is enough development support, any desired features can be added.
-  * Cons: Building a custom solution from scratch is expensive and time-consuming. Even small modifications require the programmer's time and effort and often a rebuild of the entire project.
-* VTuber software for specific use cases, such as [VRoom](https://ojousamaya.booth.pm/items/3949561) and [Keyboard Stuvio](https://booth.pm/ja/items/2956377):
-  * Pros: Offers unique features, such as Keyboard Stuvio, which motion captures live piano performances through a webcam.
-  * Cons: Besides the special features, the rest of the software is lacking in functionality due to developers not having the time or desire to recreate every wheel from scratch. The quality of the rendering can also vary from one software to another.
-* [VRChat](https://hello.vrchat.com/):
-  * Pros: Multiplayer features. And [you can have fun playing in VR!](https://www.bilibili.com/video/BV1HW4y1q7aP)
-  * Cons: Requires additional hardware and software support for eye tracking and lipsync. Also, the VTuber must be wearing a VR headset and holding controllers, which limits the livestreaming content to VR.
+Warudo is also extremely customizable. It provides a Mod SDK for importing any Unity-compatible 3D assets, and a C# scripting SDK for those inclined to develop custom features, making it versatile for both users and developers.
 
-Warudo aims to strike a balance between the different VTuber software options by offering:
+Here are just a few cool examples from the Warudo community:
 
-* **Effortless motion capture at home:** Achieve face and upper body motion capture with [just an iPhone](mocap/rhylive.md) or [webcam](mocap/mediapipe.md)! Warudo also includes [over 500 idle animations](misc/idle-animations.md) and [character IK](assets/character/#body-ik), allowing you to pose your avatar in a variety of ways, even without a motion capture suit.
-* **Rich feature set:** Experience a wealth of features with Warudo, including [seamless integration of motion capture and animation](assets/character/#animation), [multiple camera support](assets/camera.md#multiple-cameras), [fully customizable blendshape mapping](blueprints/mocap-nodes.md), and an [advanced expression system](assets/character/blendshape-expression.md). Customize your virtual avatar's animation to make it look more natural and expressive with a range of rich configuration options.
-* **Intuitive configuration:** Easily create and control your virtual avatar with Warudo's simple and intuitive configuration interface, which can even be accessed remotely on other devices. Detailed usage instructions and configuration examples for common scenarios are also provided to make your experience as smooth as possible.
-* **Modular scene management:** Stay organized and efficient with Warudo's modular configuration, allowing you to switch between different live streaming scenes with ease. Character models, environment models, camera setups, and interactivity logic are all saved in Warudo's scene file, making it convenient for developers and character artists to set up and provide pre-configured scenes for VTubers to use.
-* **Customizable and expandable:** Take your virtual avatar to the next level with Warudo's expandability features, including support for [importing external 3D assets](modding/mod-sdk.md), compatibility with the [Steam Workshop](misc/steam-chuang-yi-gong-fang.md), and the [Unity URP rendering pipeline](https://github.com/ColinLeung-NiloCat/UnityURPToonLitShaderExample). A C# SDK is also provided for custom development, with support for hot recompiling and debugging of C# scripts at runtime.
+- [Interactive health bar](https://twitter.com/FelineEntity/status/1688245064328179712/) (Community plugin)
+- [In-scene camera transition](https://twitter.com/CaelesArkay/status/1695941921422606532/) (Blueprint example)
+- [Live2D-inspired arm swaying](https://twitter.com/hakuyalabs/status/1705754833838281181/) (Blueprint example)
+- [3D lyrics for VTuber concerts](https://twitter.com/lucas_VTuber/status/1714576354983952486/) (Screen feature showcase)
 
-:::info
-Stay tuned as Warudo is actively working on developing new features, including collab and livestream interactions!
-:::
+## Is Warudo free?
+
+For non-streaming activities, Warudo can be used for **free**. For example, testing your model, taking screenshots and posing to social media, etc.
+
+(Streaming content pre-recorded in Warudo is considered a streaming activity.)
+
+For streaming activities, Warudo can be used for **free** if and only if:
+
+* the copyrights of your VTubing persona are exclusively yours, and you possess ownership of your accounts on social/livestreaming platforms;
+* there are no contractual obligations requiring you to stream for X hours per week, unless such a contract is directly in agreement with a major livestreaming platform (e.g., Twitch, YouTube).
+
+If you are not sure, please contact us at [info@warudo.app](mailto:info@warudo.app).
+
+## I am a corporate VTuber. How can I use Warudo?
+
+You can evaluate and test the Steam version of Warudo for as long as you like. However, if you wish to use Warudo in your streams, you or your company must purchase [Warudo Pro](pro.md).
+
+## I have other questions!
+
+Please contact us at [info@warudo.app](mailto:info@warudo.app), or join our [Discord](https://discord.gg/warudo).

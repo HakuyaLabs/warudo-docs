@@ -1,10 +1,10 @@
 {
   "title": {
-    "message": "Warudo 文档",
+    "message": "Warudo 手册",
     "description": "The title in the navbar"
   },
   "logo.alt": {
-    "message": "Warudo 文档",
+    "message": "Warudo 手册",
     "description": "The alt text of navbar logo"
   },
   "item.label.Document": {

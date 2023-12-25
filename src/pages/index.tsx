@@ -20,7 +20,7 @@ function HomepageHeader() {
           <Link
             className="button button--secondary button--lg"
             to="/docs">
-            Warudo 文档
+            Warudo 手冊
           </Link>
         </div>
       </div>
