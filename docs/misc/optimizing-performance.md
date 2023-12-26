@@ -1,9 +1,8 @@
 ---
-sidebar_position: 20
+sidebar_position: 10
 ---
 
-
-# Frequently Asked Questions
+# Optimizing Performance
 
 ## Warudo's frame rate drops dramatically when running simultaneously with other 3D applications/games (e.g., Apex Legends).
 
@@ -32,13 +31,3 @@ Increased GPU priority for Warudo can in turn result in decreased frame rates fo
 :::info
 On an Intel i9-9900k + NVIDIA RTX 2080 Ti configuration, running Warudo at 1080p resolution (with a NiloToon-rendered model and a high-precision 3D [environment ](../assets/environment.md)as the background) and playing Elden Ring at high graphics settings, with OBS recording at 1080p, the frame rate stays stable at around 45 FPS.
 :::
-
-## I have selected a camera for motion capture, but my camera does not turn on / camera feed is black.&#x20;
-
-Some antivirus software may block programs that are not on their whitelist from accessing the camera. Please disable the camera protection function of your antivirus software, or add Warudo to the whitelist.
-
-Also note that Warudo currently does not support IP cameras (such as [DroidCam](https://play.google.com/store/apps/details?id=com.dev47apps.droidcam)).
-
-## I need other help!
-
-Please join our [Discord](https://discord.gg/Df8qYYBFhH), or contact [tiger@warudo.app](mailto:tiger@warudo.app).

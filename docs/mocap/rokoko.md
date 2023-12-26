@@ -8,11 +8,11 @@ Face & body tracking via [Rokoko](https://www.rokoko.com/).
 
 ## Setup
 
-Open Rokoko Studio -> Livestream -> Activate streaming to Unity:
+Open Rokoko Studio and enable **Livestream -> Activate streaming to Unity**:
 
 ![](pathname:///doc-img/zh-rokoko-1.webp)
 
-Then, update Profile Name to the Rokoko actor whose motion capture data you would like to receive:
+Then, update **Profile Name** in the **Rokoko Receiver** asset to the Rokoko actor whose motion capture data you would like to receive:
 
 ![](pathname:///doc-img/zh-rokoko-2.webp)
 
@@ -24,10 +24,14 @@ Note: You need a Rokoko Plus or Pro subscription to stream to Unity.
 For more details, see the [official documentation](https://support.rokoko.com/hc/en-us/articles/4410471183633-Getting-Started-Streaming-to-Unity).
 :::
 
-## Properties
+## Calibration
 
-* Port: The port used by Rokoko Studio. The default is 14043.
-* Profile Name: The name of the Rokoko Actor to receive.
-* Eye Blink Sensitivity: The sensitivity of the eye blinking.
-* Eye Movement Intensity: The range of eye movement.
-* Adjust Hip Height Based On Studio Actor: Whether to adjust hip height based on studio actor.
+Calibration of Rokoko hardware is done in Rokoko Studio.
+
+## Frequently Asked Questions
+
+Please refer to [Overview](overview#FAQ) and [Customizing Pose Tracking](pose-tracking#FAQ) for common questions.
+
+### My tracking drifts over time.
+
+This is a common issue with inertial motion capture systems, which drift over time due to accumulated errors. To reduce the drift, make sure there are no magnetic or electrical interference near the tracking sensors.

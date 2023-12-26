@@ -1,5 +1,5 @@
 ---
-sidebar_position: 70
+sidebar_position: 61
 ---
 
 # RhyLive
@@ -24,12 +24,12 @@ To use RhyLive on an iOS device, open the app and tap on the menu icon in the to
 
 ![](pathname:///doc-img/zh-rhylive-1.webp)
 
-:::info
-If you do not know your computer's IP, you can check on the configuration page of the "RhyLive Receiver".
+:::tip
+If you do not know your computer's IP, you can check on the configuration page of the **RhyLive Receiver** asset.
 
-![](pathname:///doc-img/zh-rhylive-2.webp)
+![](pathname:///doc-img/en-ifacialmocap-1.png)
 
-If multiple IPs are listed, you would need to try each one. Usually, the IP address assigned to your computer by your WiFi router starts with 192.168. For example, in the above picture, you can first try 192.168.1.2.
+If multiple IPs are listed, you would need to try each one. Usually, the IP address assigned to your computer by your WiFi router starts with `192.168`. For example, in the above picture, you can first try `192.168.1.151`.
 :::
 
 :::info
@@ -40,14 +40,24 @@ It is recommended to turn off "锁定弯腰" (Lock body bending) and turn on "�
 
 ![](pathname:///doc-img/zh-rhylive-3.webp)
 
-## Properties
+## Calibration
 
-* Character: Select the character to apply tracking to.
-* Port: The port used by Warudo to receive data. You can change it in RhyLive -> Settings -> Port.
-* Calibrate: Correct the position and rotation of the head to face forward.
-* Head Rotation Offset: The offset of head rotation.
-* Body Movement Intensity: The range of body movement.
-* Eye Movement Intensity: The range of eye movement.
-* Eye Blink Sensitivity: The sensitivity of the eye blinking.
-* Limit Eye Squint: If your model is compatible with ARKit blendshapes, the eyes of your model may not be able to completely close (or close too much) based on the preferences of the modeler. In this case, try toggling this option.
-* Use BlendShapes For Eye Movement: **Requires ARKit blendshapes to be present on the model.** Controls the movement of the character's eyes using eye movement blendshapes (EyeLookInLeft, EyeLookInRight, EyeLookOutLeft, EyeLookOutRight) instead of the eye bones. If your model does not have eye bones, enable this option.
+You can calibrate RhyLive's tracking by:
+* clicking **Character → Motion Capture → Quick Calibration → Calibrate RhyLive**, or
+* clicking **Calibrate** in the **RhyLive Receiver** asset.
+
+During calibration, you should look straight ahead and keep your head still. After calibration, you can move your head freely.
+
+## Frequently Asked Questions
+
+Please refer to [Overview](overview#FAQ) and [Customizing Face Tracking](face-tracking#FAQ) for common questions.
+
+### I am using the "Wired" option and connected my iPhone to my computer via USB, but my character is not moving.
+
+Make sure [iTunes for Windows](https://support.apple.com/en-us/HT210384) is installed on your computer. If you have iTunes installed from Microsoft Store, you may need to uninstall it and install the version from Apple's website.
+
+Alternatively, you can try using the "Wireless" option instead.
+
+### I am using the "Wireless" option and make sure my computer and iPhone are connected to the same WiFi network, but my character is not moving.
+
+Please try to toggle off and on the "无线" (Wireless) switch in the RhyLive app, or restart the app.
