@@ -1,39 +1,55 @@
 ---
-sidebar_position: 60
+sidebar_position: 51
 ---
 
-# OpenSeeFace (Beta)
+# OpenSeeFace
 
 Webcam-based face tracking. Tracks a set of basic blendshapes, head rotation and head translation. Quality of face tracking is similar to that of [VSeeFace](https://www.vseeface.icu/).
 
 :::info
-OpenSeeFace is the face tracking technology used in [VSeeFace](https://www.vseeface.icu/), so users familiar with VSeeFace may find it quite familiar. The overall tracking quality is also similar, although winking is not as stable as VSeeFace at the moment.
+OpenSeeFace is the face tracking technology used in [VSeeFace](https://www.vseeface.icu/), so users familiar with VSeeFace may find it quite familiar.
 :::
 
-## Properties
+:::caution
+We generally recommend using [MediaPipe](./mediapipe.md) for face tracking instead, which tracks more blendshapes and has better tracking quality. OpenSeeFace is mainly provided for users who cannot use MediaPipe for some reason.
+:::
 
-* Character: Select the character to apply face tracking to.
-* Input Camera: Select the camera. **Currently, IP cameras (such as** [**DroidCam**](https://play.google.com/store/apps/details?id=com.dev47apps.droidcam\&hl=en\_US\&gl=US\&pli=1)**) are not supported.**
-* Calibrate: Correct the position and rotation of the head to face forward.
-* Head Movement Range: The range of head movement up, down, left, right, and forward.&#x20;
-* Head Rotation Range: The range of rotation for the head.
-* Head Rotation Offset: The offset of rotation for the head.
-* Head Vertical Movement: Whether or not to allow the head to move up and down.
-* Eye Movement Intensity: The intensity of eye movement. X is the horizontal intensity, Y is the vertical intensity.
-* Linked Eye Blinking: Whether to force blinking both eyes at the same time. Recommended if you notice blink tracking is not very stable.
+## Setup
 
-### Advanced
+OpenSeeFace is built into Warudo, so you do not need to install any additional software.
 
-* Eye Blinking Offset: If you find the model's eyes are not fully closing, add 0.1 to the value until fit. Otherwise, subtract 0.1 from the value.&#x20;
-* Eye Wide Sensitivity: **Requires ARKit blendshapes to be present on the model.** Increasing this value makes the EyeWideLeft/EyeWideRight blendshapes easier to trigger.
-* Eyebrow Movement Sensitivity: **Requires ARKit blendshapes to be present on the model.** Increasing this value makes the eyebrow-related blendshapes easier to trigger.
-* Mouth Left Right Sensitivity: **Requires ARKit blendshapes to be present on the model.** Increasing this value makes the MouthLeft/MouthRight blendshapes easier to trigger.
-* Mouth Open Threshold: If you find the model's mouth opens too easily, add 0.1 to the value until fit. Otherwise, subtract 0.1 from the value.
-* Mouth Open Sensitivity: Increasing this value makes the JawOpen blendshape (or the "A" VRM animation clip) easier to trigger.
-* Mouth Funnel Sensitivity: Increasing this value makes the MouthFunnel blendshape (or the "O" VRM animation clip)  easier to trigger.
-* Mouth Smile Sensitivity: **Requires ARKit blendshapes to be present on the model.** Increasing this value makes the MouthSmileLeft/MouthSmileRight blendshapes easier to trigger.
-* Body Movement Intensity: The range of natural body movement that follows head movement.
+:::tip
+After OpenSeeFace tracker is started, it takes 10-15 seconds for internal calibration. During this time, the model's mouth and eyes may move randomly, which is normal.
+:::
 
-## Tips
+## Calibration
 
-* After OpenSeeFace tracker is started, it takes 10-15 seconds for internal calibration. During this time, the model's mouth and eyes may move randomly, which is normal.
+You can calibrate OpenSeeFace's tracking by:
+* clicking **Character → Motion Capture → Quick Calibration → Calibrate OpenSeeFace**, or
+* clicking **Calibrate** in the **OpenSeeFace Tracker** asset.
+
+During calibration, you should look straight ahead and keep your head still. After calibration, you can move your head freely.
+
+## Options
+
+* **Eye Blinking Offset**: If you find the model's eyes are not fully closing, add 0.1 to the value until fit. Otherwise, subtract 0.1 from the value.&#x20;
+* **Eye Wide Sensitivity**: **Requires ARKit blendshapes to be present on the model.** Increasing this value makes the EyeWideLeft/EyeWideRight blendshapes easier to trigger.
+* **Eyebrow Movement Sensitivity**: **Requires ARKit blendshapes to be present on the model.** Increasing this value makes the eyebrow-related blendshapes easier to trigger.
+* **Mouth Left Right Sensitivity**: **Requires ARKit blendshapes to be present on the model.** Increasing this value makes the MouthLeft/MouthRight blendshapes easier to trigger.
+* **Mouth Open Threshold**: If you find the model's mouth opens too easily, add 0.1 to the value until fit. Otherwise, subtract 0.1 from the value.
+* **Mouth Open Sensitivity**: Increasing this value makes the JawOpen blendshape (or the "A" VRM animation clip) easier to trigger.
+* **Mouth Funnel Sensitivity**: Increasing this value makes the MouthFunnel blendshape (or the "O" VRM animation clip)  easier to trigger.
+* **Mouth Smile Sensitivity**: **Requires ARKit blendshapes to be present on the model.** Increasing this value makes the MouthSmileLeft/MouthSmileRight blendshapes easier to trigger.
+* **Body Movement Intensity**: The range of natural body movement that follows head movement.
+
+## Frequently Asked Questions {#FAQ}
+
+Please refer to [Overview](overview#FAQ) and [Customizing Face Tracking](face-tracking#FAQ) for common questions.
+
+### An empty console window keeps popping up when I use OpenSeeFace, and my tracking is not working.
+
+This is caused by a bug in Windows. To fix it, search **Terminal** in the Start Menu and open it. Click on the down arrow icon and select **Settings**. Select **Windows Console Host** for **Default terminal application** and click **Save**. Then, restart Warudo.
+
+### I can see the OpenSeeFace tracker window, but my tracking is not working.
+
+Some antivirus software may block Warudo from accessing the camera. Please disable the camera protection function of your antivirus software, or add Warudo to the whitelist.

@@ -22,7 +22,7 @@ Time to dive in! Click on **Basic Setup → Get Started**.
 ![](pathname:///doc-img/en-getting-started-3.png)
 <p class="img-desc">Basic setup window.</p>
 
-Click on **Open Characters Folder**, and you should see a folder named "Characters" in the file explorer. This is where you put your character models.
+Click on **Open Characters Folder**, and you should see a folder named "Characters" opened in the file explorer. This is where you put your character models.
 
 Warudo supports two model formats: `.vrm` and `.warudo`. The former is a standard avatar format exported by software like [VRoid Studio](https://vroid.com/en/studio), while the latter is Warudo's own format and supports virtually any Unity-compatible character model ([details](../modding/character-mod.md)). For now, let's just put a `.vrm` file in the "Characters" folder.
 
@@ -37,7 +37,7 @@ Now, go back to Warudo and open the dropdown. You should see your character's na
 ![](pathname:///doc-img/en-getting-started-4.png)
 <p class="img-desc">Character loaded into the scene.</p>
 
-Let's click **OK** to move on to the next step. Here, you are asked if you would like Warudo to recommend a motion capture setup for you. If you select "Yes," Warudo asks you a few questions to decide what face tracking and pose tracking solutions to use. For example, if you have an iPhone and a webcam, and you don't have Leap Motion and full-body tracking hardware, Warudo will recommend using [iFacialMocap](../mocap/ifacialmocap.md) (an iPhone app) for face tracking and [MediaPipe](../mocap/mediapipe.md) (a built-in tracking that uses your webcam) for hand tracking. If you select "No," then you will have to manually select what face tracking and pose tracking solutions to use.
+Let's click **OK** to move on to the next step. Here, you are asked if you would like Warudo to recommend a motion capture setup for you. If you select "Yes," Warudo asks you a few questions to decide what face tracking and pose tracking solutions to use. For example, if you have an iPhone and a webcam, and you don't have a Leap Motion Controller or full-body tracking hardware, Warudo will recommend using [iFacialMocap](../mocap/ifacialmocap.md) (an iPhone app) for face tracking and [MediaPipe](../mocap/mediapipe.md) (a built-in tracking that uses your webcam) for hand tracking. If you select "No," then you will have to manually select what face tracking and pose tracking solutions to use.
 
 If you are a first-time user, we recommend selecting "Yes" to let Warudo recommend a motion capture setup for you. Click **OK**, and select the options that best describe your setup, and click **OK** again.
 
@@ -53,7 +53,7 @@ In the next screen, you are asked to confirm the face tracking and pose tracking
 ![](pathname:///doc-img/en-getting-started-8.png)
 <p class="img-desc">Confirm motion capture setup.</p>
 
-:::info
+:::tip
 If you want to set up a secondary tracking, you can use the **Secondary Pose Tracking** option; this is helpful if you are using VR trackers/Mocopi for primary tracking and would like to use [MediaPipe](../mocap/mediapipe.md) or [Leap Motion Controller](../mocap/leap-motion.md) or [StretchSense Gloves](../mocap/stretchsense.md) for added-on finger tracking.
 :::
 
@@ -101,7 +101,7 @@ You should see a **translation gizmo** under the model's feet that can be used t
 ![](pathname:///doc-img/en-getting-started-16.png)
 <p class="img-desc">Move the model.</p>
 
-:::info
+:::tip
 Can't see the gizmo? Try use **Mouse MMB** to pan the view.
 :::
 
@@ -130,6 +130,12 @@ That's much better!
 ![](pathname:///doc-img/en-getting-started-21.png)
 <p class="img-desc">Back to normal.</p>
 
+:::tip
+You can also switch between different gizmos in the editor.
+
+![](pathname:///doc-img/en-getting-started-66.png)
+:::
+
 In addition to orbiting around the model, the camera can also be switched to a free-look mode, allowing the camera to fly through the scene. Select the **Camera** asset and choose **Free Look** for the **Control Mode**:
 
 ![](pathname:///doc-img/en-getting-started-22.png)
@@ -145,11 +151,11 @@ After you've gotten used to the two camera modes, switch back to **Orbit Charact
 ![](pathname:///doc-img/en-getting-started-23.png)
 <p class="img-desc">Back to default camera position.</p>
 
-## Assets Page
+## Assets Tab
 
 Now you have a basic sense of how to move the character and the camera, let's take a look at the editor!
 
-By default, you are at the **Assets** page. An **asset** is essentially anything that is "in the scene," such as a character, a camera, a prop, a motion capture tracker, etc.
+By default, you are at the **Assets** tab. An **asset** is essentially anything that is "in the scene," such as a character, a camera, a prop, a motion capture tracker, etc.
 
 You can click on an asset to select it. For example, click on the **Directional Light** asset to select it and adjust its color:
 
@@ -161,7 +167,7 @@ Spooky!
 ![](pathname:///doc-img/en-getting-started-26.png)
 <p class="img-desc">Light color set to red.</p>
 
-A motion capture tracker is also an asset. For example, since I have selected **iFacialMocap** as my face tracking solution, I have a **iFacialMocap Receiver** asset in my scene. I can click on it to select it and click the **Calibrate iFacialMocap** button to calibrate my face tracking:
+A motion capture tracker is also an asset. For example, since I have selected **iFacialMocap** as my face tracking solution, I have a **iFacialMocap Receiver** asset in my scene. I can click on it to select it and click the **Calibrate** button to calibrate my face tracking:
 
 ![](pathname:///doc-img/en-getting-started-27.png)
 <p class="img-desc">Calibrate iFacialMocap.</p>
@@ -239,7 +245,7 @@ The best part is that **Warudo's motion capture blends seamlessly with the idle 
 If you are new to Warudo, just play around with the options and see what they do. You can always reset the options to their default values by clicking the **Reset** button when hovering on them. The later sections of this handbook will explore each type of asset and their options in detail with examples.
 :::
 
-Let's now try to add a **Screen** asset. Click on **Add Asset** and select **Screen**:
+Finally, let's try to add a **Screen** asset. Click on **Add Asset** and select **Screen**:
 
 ![](pathname:///doc-img/en-getting-started-38.png)
 <p class="img-desc">Add screen asset.</p>
@@ -249,16 +255,16 @@ The screen asset is used to display images and videos, but it can also capture y
 ![](pathname:///doc-img/en-getting-started-39.png)
 <p class="img-desc">Screen usage example.</p>
 
-:::info
+:::tip
 If the screen is too bright, you can adjust the **Tint** option to a gray color to make it darker.
 :::
 
-## Blueprints Page
+## Blueprints Tab
 
-Now you are familiar with assets, let's take a look at the **Blueprints** page. Click on the sigma icon to switch to the blueprints page:
+Now you are familiar with assets, let's take a look at the **Blueprints** tab. Click on the sigma icon to switch to the blueprints tab:
 
 ![](pathname:///doc-img/en-getting-started-40.png)
-<p class="img-desc">Switch to blueprints page.</p>
+<p class="img-desc">Switch to the blueprints tab.</p>
 
 But what is a blueprint? Essentially, blueprints are "what should happen when something happens." For example, "when I press the **Space** key, the character should wave their hand." Or, "when I receive a Twitch redeem, a prop should be thrown at my character."
 
@@ -287,7 +293,7 @@ Let's go back to the two nodes that switch to the **Joy** expression. You can ch
 ![](pathname:///doc-img/en-getting-started-48.png)
 <p class="img-desc">Change hotkey.</p>
 
-You can also make more things happen when the hotkey is pressed. For example, let's play a sound as well! Type **play sound** in the search bar and drag the **Play Sound** node to the right of the **Toggle Character Expression** node:
+You can also make more things happen when the hotkey is pressed. How about playing a sound effect? Type **play sound** in the search bar and drag the **Play Sound** node to the right of the **Toggle Character Expression** node:
 
 ![](pathname:///doc-img/en-getting-started-49.png)
 <p class="img-desc">Locate the "Play Sound" node.</p>
@@ -302,11 +308,11 @@ This connects the two nodes together. Now, click on the **Source** dropdown menu
 ![](pathname:///doc-img/en-getting-started-51.png)
 <p class="img-desc">Select a sound effect.</p>
 
-:::info
+:::tip
 You can click **Open Sounds Folder** and put in your own sound effects!
 :::
 
-Now, when you press **Ctrl+Shift+Q** (or the hotkey you assigned), your character should switch to the **Joy** expression, and a sound effect should play.
+Now, when you press **Ctrl+Shift+Q** (or the hotkey you assigned), your character should switch to the **Joy** expression, and you should hear a sound effect!
 
 Let's implement something new. For example, let's play an emote animation on the character when we press **Space**. Pan to an empty area and try to add the following nodes yourself and connect them together as shown. Select the character asset in the **Character** dropdown menu, and select **Energetic** for the **Animation** option:
 
@@ -324,7 +330,15 @@ Now, when you press **Space**, your character should play the **Energetic** emot
 <p class="img-desc">Character plays the "Energetic" emote animation.</p>
 
 
-That's our brief introduction to blueprints! Hopefully it offers you a glimpse of what blueprints can do. Warudo's blueprint system is a very powerful feature, but even without touching it, you can already do a lot of things with Warudo. Once you are familiar with the rest of Warudo's features, we recommend reading the [blueprint tutorial](/docs/blueprints/overview) to learn more about blueprints.
+That's our brief introduction to blueprints! Hopefully it offers you a glimpse of what blueprints can do. Blueprints are a very powerful feature, but even without touching them at all, you can still do a lot of things with Warudo. Once you are familiar with the rest of the features, we recommend reading the [blueprint tutorial](/docs/blueprints/overview) to learn more about blueprints.
+
+:::tip
+You can use **Mouse RMB** to drag a selection box to select multiple nodes. To remove a node, select it and press **Delete**.
+:::
+
+:::info
+You may have noticed there is a blueprint for face tracking and a blueprint for pose tracking. These blueprints were automatically generated by the onboarding assistant and can be customized to your liking. For beginners though, they could look intimidating, so we recommend leaving them alone for now.
+:::
 
 ## Interaction Setup
 
@@ -343,7 +357,7 @@ Follow the instructions to set up the streaming platform integration. For exampl
 ![](pathname:///doc-img/en-getting-started-60.png)
 <p class="img-desc">Set up integration.</p>
 
-When you are done, you will notice a new blueprint has been added to the blueprints page. Remember what we said about blueprints? They are "what should happen when something happens." In this case, the blueprint should contain the logic for launching liquid at our character when we receive a Twitch redeem called "Water." Click on the blueprint to select it, and locate the **Launch Liquid At Character** node:
+When you are done, you will notice a new blueprint has been added to the blueprints tab. Remember what we said about blueprints? They are "what should happen when something happens." In this case, the blueprint should contain the logic for launching liquid at our character when we receive a Twitch redeem called "Water." Click on the blueprint to select it, and locate the **Launch Liquid At Character** node:
 
 ![](pathname:///doc-img/en-getting-started-61.png)
 <p class="img-desc">A new blueprint has been added.</p>
@@ -351,7 +365,7 @@ When you are done, you will notice a new blueprint has been added to the bluepri
 ![](pathname:///doc-img/en-getting-started-62.png)
 <p class="img-desc">Locate the "Launch Liquid At Character" node.</p>
 
-The nodes above are essentially saying: "when we receive a Twitch redeem, if the redeem title is 'Water', then launch liquid at the character asset 'Character'." You can click the "Enter" button on the **Launch Liquid At Character** node to test it out:
+Indeed, the nodes above are essentially saying: "when we receive a Twitch redeem, if the redeem title is 'Water', then launch liquid at the character asset 'Character'." You can click the "Enter" button on the **Launch Liquid At Character** node to test it out:
 
 ![](pathname:///doc-img/en-getting-started-63.png)
 <p class="img-desc">Test the interaction.</p>
@@ -368,13 +382,17 @@ It's time to put Warudo into your favorite streaming software! There are four wa
 * **Spout:** Warudo can output as a [Spout](https://spout.zeal.co/) source. To use this method, go to **Settings → Output** and enable **Spout Output**. **This is by default already enabled.**
 * **Window/Game capture:** You can also use window/game capture in OBS Studio or Streamlabs to capture the Warudo window. We do not recommend this method, as it takes up significantly more CPU/GPU resources than the other methods.
 
-We recommend using the **Spout** method, as it has zero latency and best performance. To set up:
+We recommend using the **Spout** method, as it has zero latency and best performance. Furthermore, it hides the transform gizmos, so you can move/rotate characters or props during a stream without showing the gizmos to the audience! To set up Spout output, follow these steps:
 
 * **OBS Studio:** Install the [**Spout2 Plugin for OBS Studio**](https://github.com/Off-World-Live/obs-spout2-plugin) first, then add a **Spout2 Capture** source, and select **Warudo** as the sender.
 * **Streamlabs:** Add a **Spout2** source, and select **Warudo** as the sender.
 
 ![](pathname:///doc-img/en-getting-started-65.png)
 <p class="img-desc">Spout output to OBS Studio.</p>
+
+:::tip
+All output methods support transparency output. To enable transparent background, simply go to the camera asset and enable **Output → Transparent Background**.
+:::
 
 ## Saving and Loading Scenes
 

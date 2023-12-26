@@ -8,9 +8,11 @@ Body tracking via [Xsens MVN Analyze/Animate](https://base.xsens.com/s/motion-ca
 
 ## Setup
 
-Open Xsens MVN -> Options -> Network Streamer and configure as shown below.
+Open **Xsens MVN -> Options -> Network Streamer** and configure as shown below.
 
 ![](pathname:///doc-img/zh-xens-1.webp)
+
+Then, update **Actor ID** in the **Xsens MVN Receiver** asset to the Xsens Actor whose motion capture data you would like to receive. The default is 1.
 
 :::caution
 Note: You need an MVN Animate Plus or Pro subscription to use the Network Streamer feature.
@@ -20,7 +22,14 @@ Note: You need an MVN Animate Plus or Pro subscription to use the Network Stream
 For more details, see the [official documentation](https://base.xsens.com/s/article/MVN-Unity-Live-Plugin?language=en\_US).
 :::
 
-## Properties
+## Calibration
 
-* Port: The port used by Xsens MVN (as shown in the above picture). The default is 9763.
-* Actor ID: The ID of the Xsens Actor to receive. The default is 1.
+Calibration of Xsens hardware is done in Xsens MVN.
+
+## Frequently Asked Questions
+
+Please refer to [Overview](overview#FAQ) and [Customizing Pose Tracking](pose-tracking#FAQ) for common questions.
+
+### My tracking drifts over time.
+
+This is a common issue with inertial motion capture systems, which drift over time due to accumulated errors. To reduce the drift, make sure there are no magnetic or electrical interference near the tracking sensors.

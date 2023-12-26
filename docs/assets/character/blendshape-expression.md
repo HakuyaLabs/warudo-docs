@@ -79,29 +79,3 @@ In the expression list, expand the configuration for that expression, and adjust
 ### My model has an e.g. heart-shaped eye blendshape. I want to display this blendshape when activating a certain expression.
 
 In the expression list, expand the configuration for that expression, click the + button at the bottom right of the "Target BlendShapes", select the heart-shaped eye blendshape from the dropdown list, and set the target value to 1. The other properties can be adjusted as desired, or you can keep the defaults.
-
-### I want to change the default key bindings.
-
-Open the "Expression Key Bindings" blueprint and locate the "On Keystroke Pressed" node. Then, modify it as needed. For example, in the original blueprint, pressing Alt+1 will activate the `Joy` expression:
-
-![](pathname:///doc-img/en-expression-1.webp)
-
-The following changes the keyboard shortcut to Ctrl+Shift+T.
-
-![](pathname:///doc-img/en-expression-2.webp)
-
-### I want to create a new expression from scratch.
-
-In the expressions list, click the + button at the bottom right to add a new item. In the "Target BlendShapes", add the blendshapes that form the desired expression. For example, the following expression will activate the `笑い` BlendShape on the model when applied:
-
-![](pathname:///doc-img/en-expression-3.webp)
-
-Open the "Expression Key Bindings" blueprint (or create a new blueprint). Drag out the "On Keystroke Pressed" and "Toggle Character Expression" nodes from the sidebar. Set the keyboard shortcut on the "On Keystroke Pressed" node, and select the character and the newly created expression on the "Toggle Character Expression" node. Connect the output and input of the two nodes as shown below.
-
-![](pathname:///doc-img/en-expression-4.webp)
-
-### Can I only activate an expression for a certain period of time and then automatically switch back to the previous expression after a while?
-
-To do this, enable "Is Transient" on the "Toggle BlendShape Expression" node in the blueprint to "Yes." The duration of the expression will be determined by "Exit Delay" of each BlendShape in the expression.
-
-![](pathname:///doc-img/en-expression-5.webp)
