@@ -12,11 +12,11 @@ The NiloToon volume adds NiloToon-specific post processing effects to the scene.
 
 <div style={{display: 'flex', justifyContent: 'space-between', gap: '1rem'}}>
 <div>
-<img src="/doc-img/en-nilotoon-off.png" style={{'padding-bottom': '10px'}} />
+<img src="/doc-img/en-nilotoon-off.png"  />
 <p class="img-desc">NiloToon volume disabled.</p>
 </div>
 <div>
-<img src="/doc-img/en-nilotoon-on.png" style={{'padding-bottom': '10px'}} />
+<img src="/doc-img/en-nilotoon-on.png"  />
 <p class="img-desc">NiloToon volume enabled.</p>
 </div>
 </div>
@@ -33,11 +33,11 @@ Adds an anime-style gradient to the camera view.
 
 <div style={{display: 'flex', justifyContent: 'space-between', gap: '1rem'}}>
 <div>
-<img src="/doc-img/en-nilotoon-off.png" style={{'padding-bottom': '10px'}} />
+<img src="/doc-img/en-nilotoon-off.png"  />
 <p class="img-desc">Anime disabled.</p>
 </div>
 <div>
-<img src="/doc-img/en-nilotoon-anime.png" style={{'padding-bottom': '10px'}} />
+<img src="/doc-img/en-nilotoon-anime.png"  />
 <p class="img-desc">Anime enabled.</p>
 </div>
 </div>
@@ -48,11 +48,11 @@ Bloom is a post processing effect that makes bright areas of the scene "glow." Y
 
 <div style={{display: 'flex', justifyContent: 'space-between', gap: '1rem'}}>
 <div>
-<img src="/doc-img/en-nilotoon-off.png" style={{'padding-bottom': '10px'}} />
+<img src="/doc-img/en-nilotoon-off.png"  />
 <p class="img-desc">Bloom disabled.</p>
 </div>
 <div>
-<img src="/doc-img/en-nilotoon-bloom.png" style={{'padding-bottom': '10px'}} />
+<img src="/doc-img/en-nilotoon-bloom.png"  />
 <p class="img-desc">Bloom enabled.</p>
 </div>
 </div>
@@ -63,11 +63,11 @@ Overrides the NiloToon rendering settings for the character so that the renderin
 
 <div style={{display: 'flex', justifyContent: 'space-between', gap: '1rem'}}>
 <div>
-<img src="/doc-img/en-nilotoon-off.png" style={{'padding-bottom': '10px'}} />
+<img src="/doc-img/en-nilotoon-off.png"  />
 <p class="img-desc">Character rendering override disabled.</p>
 </div>
 <div>
-<img src="/doc-img/en-nilotoon-character.png" style={{'padding-bottom': '10px'}} />
+<img src="/doc-img/en-nilotoon-character.png"  />
 <p class="img-desc">Character rendering override enabled.</p>
 </div>
 </div>
@@ -78,11 +78,11 @@ Overrides the NiloToon shadow settings for the character.
 
 <div style={{display: 'flex', justifyContent: 'space-between', gap: '1rem'}}>
 <div>
-<img src="/doc-img/en-nilotoon-off.png" style={{'padding-bottom': '10px'}} />
+<img src="/doc-img/en-nilotoon-off.png"  />
 <p class="img-desc">Shadow override disabled.</p>
 </div>
 <div>
-<img src="/doc-img/en-nilotoon-shadow.png" style={{'padding-bottom': '10px'}} />
+<img src="/doc-img/en-nilotoon-shadow.png"  />
 <p class="img-desc">Shadow override enabled.</p>
 </div>
 </div>

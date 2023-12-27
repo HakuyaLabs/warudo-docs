@@ -70,11 +70,11 @@ Another useful parameter is **Field Of View**, which controls how wide can the c
 
 <div style={{display: 'flex', justifyContent: 'space-between', gap: '1rem'}}>
 <div>
-<img src="/doc-img/en-camera-ortho-off.webp" style={{'padding-bottom': '10px'}} />
+<img src="/doc-img/en-camera-ortho-off.webp"  />
 <p class="img-desc">Orthographic projection disabled.</p>
 </div>
 <div>
-<img src="/doc-img/en-camera-ortho-on.png" style={{'padding-bottom': '10px'}} />
+<img src="/doc-img/en-camera-ortho-on.png"  />
 <p class="img-desc">Orthographic projection enabled.</p>
 </div>
 </div>
@@ -95,11 +95,11 @@ Setting a **LUT Texture** can completely change the atmosphere of the scene.
 
 <div style={{display: 'flex', justifyContent: 'space-between', gap: '1rem'}}>
 <div>
-<img src="/doc-img/en-camera-lut-off.png" style={{'padding-bottom': '10px'}} />
+<img src="/doc-img/en-camera-lut-off.png"  />
 <p class="img-desc">LUT disabled.</p>
 </div>
 <div>
-<img src="/doc-img/en-camera-lut-on.png" style={{'padding-bottom': '10px'}} />
+<img src="/doc-img/en-camera-lut-on.png"  />
 <p class="img-desc">LUT enabled.</p>
 </div>
 </div>
@@ -122,11 +122,11 @@ The bloom effect creates a halo effect around the bright parts of the image. The
 
 <div style={{display: 'flex', justifyContent: 'space-between', gap: '1rem'}}>
 <div>
-<img src="/doc-img/en-camera-bloom-off.png" style={{'padding-bottom': '10px'}} />
+<img src="/doc-img/en-camera-bloom-off.png"  />
 <p class="img-desc">Bloom disabled.</p>
 </div>
 <div>
-<img src="/doc-img/en-camera-bloom-on.png" style={{'padding-bottom': '10px'}} />
+<img src="/doc-img/en-camera-bloom-on.png"  />
 <p class="img-desc">Bloom enabled.</p>
 </div>
 </div>
@@ -137,11 +137,11 @@ Adds more shadow to the scene for a more realistic look. The **Radius** controls
 
 <div style={{display: 'flex', justifyContent: 'space-between', gap: '1rem'}}>
 <div>
-<img src="/doc-img/en-camera-ssao-off.png" style={{'padding-bottom': '10px'}} />
+<img src="/doc-img/en-camera-ssao-off.png"  />
 <p class="img-desc">Ambient occlusion disabled.</p>
 </div>
 <div>
-<img src="/doc-img/en-camera-ssao-on.png" style={{'padding-bottom': '10px'}} />
+<img src="/doc-img/en-camera-ssao-on.png"  />
 <p class="img-desc">Ambient occlusion enabled.</p>
 </div>
 </div>
@@ -156,11 +156,11 @@ Provides the horizontal/vertical flare effect of a distorted lens. The **Intensi
 
 <div style={{display: 'flex', justifyContent: 'space-between', gap: '1rem'}}>
 <div>
-<img src="/doc-img/en-camera-flare-off.png" style={{'padding-bottom': '10px'}} />
+<img src="/doc-img/en-camera-flare-off.png"  />
 <p class="img-desc">Anamorphic flares disabled.</p>
 </div>
 <div>
-<img src="/doc-img/en-camera-flare-on.png" style={{'padding-bottom': '10px'}} />
+<img src="/doc-img/en-camera-flare-on.png"  />
 <p class="img-desc">Anamorphic flares enabled.</p>
 </div>
 </div>
@@ -171,15 +171,15 @@ Blur objects that are not in focus. You can either set a specific **Focus Distan
 
 <div style={{display: 'flex', justifyContent: 'space-between', gap: '1rem'}}>
 <div>
-<img src="/doc-img/en-camera-dof-off.png" style={{'padding-bottom': '10px'}} />
+<img src="/doc-img/en-camera-dof-off.png"  />
 <p class="img-desc">Depth of field disabled.</p>
 </div>
 <div>
-<img src="/doc-img/en-camera-dof-bokeh-off.png" style={{'padding-bottom': '10px'}} />
+<img src="/doc-img/en-camera-dof-bokeh-off.png"  />
 <p class="img-desc">Depth of field with bokeh disabled.</p>
 </div>
 <div>
-<img src="/doc-img/en-camera-dof-on.png" style={{'padding-bottom': '10px'}} />
+<img src="/doc-img/en-camera-dof-on.png"  />
 <p class="img-desc">Depth of field with bokeh enabled.</p>
 </div>
 </div>
@@ -190,11 +190,11 @@ Mimics the effect produced when a lens is unable to blend all colors to the same
 
 <div style={{display: 'flex', justifyContent: 'space-between', gap: '1rem'}}>
 <div>
-<img src="/doc-img/en-camera-color-abb-off.webp" style={{'padding-bottom': '10px'}} />
+<img src="/doc-img/en-camera-color-abb-off.webp"  />
 <p class="img-desc">Chromatic aberration disabled.</p>
 </div>
 <div>
-<img src="/doc-img/en-camera-color-abb-on.png" style={{'padding-bottom': '10px'}} />
+<img src="/doc-img/en-camera-color-abb-on.png"  />
 <p class="img-desc">Chromatic aberration enabled.</p>
 </div>
 </div>
@@ -205,11 +205,11 @@ Simulates dirt and specks on the lens. You need to select a **Texture** for the 
 
 <div style={{display: 'flex', justifyContent: 'space-between', gap: '1rem'}}>
 <div>
-<img src="/doc-img/en-camera-lens-dirt-off.webp" style={{'padding-bottom': '10px'}} />
+<img src="/doc-img/en-camera-lens-dirt-off.webp"  />
 <p class="img-desc">Lens dirt disabled.</p>
 </div>
 <div>
-<img src="/doc-img/en-camera-lens-dirt-on.png" style={{'padding-bottom': '10px'}} />
+<img src="/doc-img/en-camera-lens-dirt-on.png"  />
 <p class="img-desc">Lens dirt enabled.</p>
 </div>
 </div>
@@ -220,15 +220,15 @@ Makes the edges of the image darker.
 
 <div style={{display: 'flex', justifyContent: 'space-between', gap: '1rem'}}>
 <div>
-<img src="/doc-img/en-camera-vignette-off.webp" style={{'padding-bottom': '10px'}} />
+<img src="/doc-img/en-camera-vignette-off.webp"  />
 <p class="img-desc">Vignetting disabled.</p>
 </div>
 <div>
-<img src="/doc-img/en-camera-vignette-on.webp" style={{'padding-bottom': '10px'}} />
+<img src="/doc-img/en-camera-vignette-on.webp"  />
 <p class="img-desc">Vignetting enabled.</p>
 </div>
 <div>
-<img src="/doc-img/en-camera-vignette-blink.png" style={{'padding-bottom': '10px'}} />
+<img src="/doc-img/en-camera-vignette-blink.png"  />
 <p class="img-desc">Vignetting enabled with blink.</p>
 </div>
 </div>
@@ -239,11 +239,11 @@ Simulates the night vision goggles.
 
 <div style={{display: 'flex', justifyContent: 'space-between', gap: '1rem'}}>
 <div>
-<img src="/doc-img/en-camera-nightvision-off.png" style={{'padding-bottom': '10px'}} />
+<img src="/doc-img/en-camera-nightvision-off.png"  />
 <p class="img-desc">Night vision disabled.</p>
 </div>
 <div>
-<img src="/doc-img/en-camera-nightvision-on.webp" style={{'padding-bottom': '10px'}} />
+<img src="/doc-img/en-camera-nightvision-on.webp"  />
 <p class="img-desc">Night vision enabled.</p>
 </div>
 </div>
@@ -254,11 +254,11 @@ Blur the image.
 
 <div style={{display: 'flex', justifyContent: 'space-between', gap: '1rem'}}>
 <div>
-<img src="/doc-img/en-camera-blur-off.webp" style={{'padding-bottom': '10px'}} />
+<img src="/doc-img/en-camera-blur-off.webp"  />
 <p class="img-desc">Blur disabled.</p>
 </div>
 <div>
-<img src="/doc-img/en-camera-blur-on.webp" style={{'padding-bottom': '10px'}} />
+<img src="/doc-img/en-camera-blur-on.webp"  />
 <p class="img-desc">Blur enabled.</p>
 </div>
 </div>
@@ -269,11 +269,11 @@ Add a mosaic effect to the image!
 
 <div style={{display: 'flex', justifyContent: 'space-between', gap: '1rem'}}>
 <div>
-<img src="/doc-img/en-camera-pixelate-off.webp" style={{'padding-bottom': '10px'}} />
+<img src="/doc-img/en-camera-pixelate-off.webp"  />
 <p class="img-desc">Pixelate disabled.</p>
 </div>
 <div>
-<img src="/doc-img/en-camera-pixelate-on.png" style={{'padding-bottom': '10px'}} />
+<img src="/doc-img/en-camera-pixelate-on.png"  />
 <p class="img-desc">Pixelate enabled.</p>
 </div>
 </div>

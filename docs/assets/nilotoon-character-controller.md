@@ -12,7 +12,7 @@ The NiloToon character controller allows you to adjust NiloToon settings on a ch
 
 <div style={{display: 'flex', justifyContent: 'space-between', gap: '1rem'}}>
 <div>
-<img src="/doc-img/en-nilotoon-char-color.png" style={{'padding-bottom': '10px'}} />
+<img src="/doc-img/en-nilotoon-char-color.png"  />
 <p class="img-desc">Coloring character in black and white.</p>
 </div>
 <div style={{width: '73%'}} className="video-box"><video controls loop src="/doc-img/en-nilotoon-char-dissolve.mp4" />

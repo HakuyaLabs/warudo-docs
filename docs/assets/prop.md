@@ -7,7 +7,7 @@ A prop is a 3D model that can be placed freely within a scene or attached to a c
 
 <div style={{display: 'flex', justifyContent: 'space-between', gap: '1rem'}}>
 <div style={{width: '48%'}}>
-<img src="/doc-img/zh-prop-1.webp" style={{'padding-bottom': '10px'}} />
+<img src="/doc-img/zh-prop-1.webp"  />
 <p class="img-desc">Cat paws</p>
 </div>
 

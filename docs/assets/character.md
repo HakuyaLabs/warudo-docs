@@ -159,11 +159,11 @@ The **Bend Goal Target** and **Bend Goal Weight** options can be used to control
 
 <div style={{display: 'flex', justifyContent: 'space-between', gap: '1rem'}}>
 <div>
-<img src="/doc-img/en-character-8.png" style={{'padding-bottom': '10px'}} />
+<img src="/doc-img/en-character-8.png"  />
 <p class="img-desc">Bend goal disabled.</p>
 </div>
 <div>
-<img src="/doc-img/en-character-9.png" style={{'padding-bottom': '10px'}} />
+<img src="/doc-img/en-character-9.png"  />
 <p class="img-desc">Bend goal enabled</p>
 </div>
 </div>
@@ -206,11 +206,11 @@ Try setting **Animation → Additional Bone Offsets**. The rotation angle of the
 
 <div style={{display: 'flex', justifyContent: 'space-between', gap: '1rem'}}>
 <div>
-<img src="/doc-img/en-character-10.png" style={{'padding-bottom': '10px'}} />
+<img src="/doc-img/en-character-10.png"  />
 <p class="img-desc">Additional bone offsets disabled.</p>
 </div>
 <div>
-<img src="/doc-img/en-character-11.png" style={{'padding-bottom': '10px'}} />
+<img src="/doc-img/en-character-11.png"  />
 <p class="img-desc">Additional bone offsets enabled：LeftShoulder: (10, 0, -10), RightShoulder: (10, 0, 10).</p>
 </div>
 </div>
