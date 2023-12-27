@@ -391,7 +391,7 @@ We recommend using the **Spout** method, as it has zero latency and best perform
 <p class="img-desc">Spout output to OBS Studio.</p>
 
 :::tip
-All output methods support transparency output. To enable transparent background, simply go to the camera asset and enable **Output → Transparent Background**.
+All output methods support transparency output. To enable transparent background, simply go to the camera asset and enable **Basic Properties → Transparent Background**.
 :::
 
 ## Saving and Loading Scenes

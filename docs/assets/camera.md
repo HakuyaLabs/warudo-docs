@@ -4,247 +4,276 @@ sidebar_position: 50
 
 # Camera
 
-Cameras are... well, cameras!
+Cameras are used to control the view of the scene. You can add up to 8 cameras in a single scene!
 
-## Multiple Cameras
+## Setup
 
-Warudo's supports up to 8 cameras in a single scene.
+By default, your scene should already have a camera. To add a new camera, use the **Add Asset** menu. You will notice the main window still shows the scene from the original camera; this is because the **main camera** is still the original camera. To switch the main camera, you can do either of the following:
 
+1. Click the camera icon in front of the camera name to set the camera as the main camera.
+2. Press **Tab** to switch to the next camera in the scene, or **Ctrl+Tab** to switch to the previous camera in the scene.
+
+![](pathname:///doc-img/en-camera-1.png)
+<p class="img-desc">The solid camera icon in front of the camera name indicates that this camera is the main camera.</p>
+
+The camera is by default set to **Free Look** mode. You can set **Control Mode** to **Orbit Character** to make the camera orbit around the character. You can also set **Control Mode** to **None** to fix the camera in place.
+
+:::tip
+To make the camera orbit around a different character, set the **Focus Character** to the character you would like to focus on.
+:::
+
+To increase or decrease the camera's movement speed, you can adjust the **Control Sensitivity**.
+
+## Output
+
+By default, Warudo's NDI/Spout/virtual camera output the main window's view (you can enable/disable them in **Menu → Settings**). You can also enable **NDI/Spout/Virtual Camera Output** on each camera individually. This allows you to show the scene from multiple cameras at the same time.
 
 ![](pathname:///doc-img/en-camera-1.webp)
-<p class="img-desc">Using the Spout and NDI output features, you can achieve a multi-camera setup in OBS.</p>
+<p class="img-desc">By enabling Spout/NDI/virtual camera output on cameras, you can show the scene from multiple cameras at the same time.</p>
 
-## Main Camera
+:::info
+To output Spout to [OBS](https://obsproject.com/), install the [obs-spout2-plugin](https://github.com/Off-World-Live/obs-spout2-plugin/releases) and add a Spout2 Capture source. To output NDI to [OBS](https://obsproject.com/), install the [obs-ndi](https://github.com/Palakis/obs-ndi) plugin and add an NDI™ Source.
 
-The "Main Camera" refers to the camera that is rendered in the main window and can be controlled using the keyboard and mouse.
-
-There are two ways to switch the main camera:
-
-1. When the main window is focused, press Tab / Ctrl Tab to switch the main camera to the next / previous camera in the scene;
-2. In the configuration window, click the icon on the left side of any camera to set that camera as the main camera.
-
-## Properties
-
-### Controls
-
-* Control Mode:
-  * None: Camera is fixed in place.
-  * Free Look: Similar to the camera in the Unity Editor, when right-clicking the mouse, use WASD to move, E and Q to ascend and descend, and Shift to speed up. Use the middle mouse button to pan the view.
-  * Orbit Character: Camera orbits around the character. Left or right mouse click to rotate the view, use the mouse wheel to zoom in and out, and the middle mouse button to pan the view.
-* Control Sensitivity: Speed of camera movement.
-* Focus Character: The character the camera will focus on when "Control Mode" is set to "Orbit Character". It is also the character the camera will focus on when "Depth of Field" -> "Focus Character" is enabled.
-* Follow Character Speed: Speed of camera following character when "Control Mode" is set to "Orbit Character".
-* Show Gizmos: Whether to display the transform gizmos.
-
-![](pathname:///doc-img/en-camera-2.webp)
+You should use NDI if you need to output Warudo to another device within the same network and use Spout if you only need to output to another application on the same PC (such as OBS). Spout is recommended for its lower resource usage and latency.
+:::
 
 :::tip
-You can turn on/off the main camera's gizmos at any time by pressing the **G key** when the main window is focused.
-:::
+All output methods support transparency output. To enable transparent background, simply enable **Basic Properties → Transparent Background**.
 
-:::info
-If you need to use Warudo during a livestream, it is recommended to turn off the gizmos before starting the stream.
-
-A better solution would be to create a dedicated camera view for the audience which outputs to a livestreaming software like OBS using NDI or Spout. This way, you can continue to make adjustments to the scene using the main window without worrying about affecting the viewing experience.
-:::
-
-* Reset Camera Transform: Reset the camera's position and rotation to default.
-
-### Output
-
-* Spout Output: Sends a video stream to a [Spout](https://github.com/leadedge/Spout2) receiver on the same machine.
-* Spout Output Name: The name of the Spout output.
-
-:::info
-To use Spout output in [OBS](https://obsproject.com/), install the [obs-spout2-plugin](https://github.com/Off-World-Live/obs-spout2-plugin/releases) and add a Spout2 Capture source.
-:::
-
-* NDI Output: Sends a video stream to an [NDI](https://www.ndi.tv) receiver on another machine within the same network.
-* NDI Output Name: The name of the NDI output.
-
-:::info
-To use NDI output in [OBS](https://obsproject.com/), install the [obs-ndi](https://github.com/Palakis/obs-ndi) plugin and add an NDI™ Source.
-:::
-
-:::info
-When to use Spout and when to use NDI? Simply put, use NDI if you want to output the screen to another device within the same network and use Spout if you only want to output the screen to another program on the same PC (such as OBS). Spout is recommended for its lower resource usage and latency.
-:::
-
-* Virtual Camera Output: Outputs the video to a Warudo virtual camera.
-* Mirror Virtual Camera Output: Whether to flip the virtual camera output horizontally.
-* Screenshot: Takes a screenshot and saves it in the Screenshots subfolder in the data folder.
-
-:::tip
-**Spout output, NDI output, virtual camera output, and screenshots all support transparency!** Simply enable the chroma key (see below) and set the alpha value of the chroma key color to 0.
-:::
-
-:::info
-When using Spout output in OBS, set the Composite Mode in the Spout2 Capture properties to Premultiplied Alpha to achieve transparency.
+When using Spout output in OBS, set the **Composite Mode** in the Spout2 Capture properties to **Premultiplied Alpha** to enable transparency.
 
 ![](pathname:///doc-img/en-camera-3.webp)
-:::
 
-:::info
-When using virtual camera output in OBS, set the Video Format in the Video Capture Device properties to ARGB to achieve transparency.
+When using virtual camera output in OBS, set the **Video Format** in the Video Capture Device properties to **ARGB** to enable transparency.
 
 ![](pathname:///doc-img/en-camera-4.webp)
 :::
 
-### Basic Properties
+You can also take a screenshot of this camera's view by clicking the **Screenshot** button.
 
-* Use Chroma Key: Whether to show a solid color instead of the skybox.&#x20;
-
-:::caution
-Even when chroma key is enabled, the [environment ](environment.md)in the scene will still be visible.&#x20;
+:::tip
+To set up a shortcut key for taking screenshots, use the **Take Screenshot** node in blueprints.
 :::
 
-* Chroma Key Color: The solid color displayed as the background when "Use Chroma Key" is enabled.
-* Field of View: The field of view of the camera.
-* Orthographic Projection: Whether to use orthographic projection.
 
-![](pathname:///doc-img/en-camera-5.webp)
+## Basic Properties
 
-### Handheld Movement
+You can set a **Chroma Key** for the camera, so that the background of the scene will be replaced with a color. If you want the background to be transparent, you can either set the **Chroma Key Color** to (0, 0, 0, 0) or simply enable **Transparent Background**.
 
-* Intensity: The range of movement for the handheld camera effect.
-* Speed: The speed of movement for the handheld camera effect.
+:::caution
+Even when **Chroma Key** or **Transparent Background** is enabled, the [environment](environment.md) in the scene will still be visible.
+:::
+
+The camera can be configured to render characters/props/environment or not. For example, if you turn off **Render Environment**, the environment no longer shows up in the camera's view, but the environment's lighting on the characters/props will still be visible. This is especially useful if you need a transparent background but still want to use the environment's lighting; instead of turning off the environment, you can simply turn off **Render Environment** in the camera.
+
+Another useful parameter is **Field Of View**, which controls how wide can the camera see. The larger the value, the wider the camera's view. **Orthographic Projection** is useful if you want to make the view look as flat as possible.
+
+<div style={{display: 'flex', justifyContent: 'space-between', gap: '1rem'}}>
+<div>
+<img src="/doc-img/en-camera-ortho-off.webp" style={{'padding-bottom': '10px'}} />
+<p class="img-desc">Orthographic projection disabled.</p>
+</div>
+<div>
+<img src="/doc-img/en-camera-ortho-on.png" style={{'padding-bottom': '10px'}} />
+<p class="img-desc">Orthographic projection enabled.</p>
+</div>
+</div>
+
+## Handheld Movement
+
+If you want to simulate the camera being held by a person, you can enable **Handheld Movement**. This will add a slight shake to the camera's movement. Adjust the **Intensity** and **Speed** to control the strength and speed of the shake.
+
+## Post Processing Effects {#post-processing}
+
+:::info
+Note that the following post processing effects are not available when Universal RP is enabled in [Warudo Pro](../pro). Instead, you should use the [Post Processing Volume](../ppv) asset.
+:::
 
 ### Tonemapping & Color Grading
 
-* LUT Texture: Adjust the colors of the scene with a LUT texture to create the desired vibes.
+Setting a **LUT Texture** can completely change the atmosphere of the scene.
 
-
-![](pathname:///doc-img/en-camera-6.webp)
+<div style={{display: 'flex', justifyContent: 'space-between', gap: '1rem'}}>
+<div>
+<img src="/doc-img/en-camera-lut-off.png" style={{'padding-bottom': '10px'}} />
+<p class="img-desc">LUT disabled.</p>
+</div>
+<div>
+<img src="/doc-img/en-camera-lut-on.png" style={{'padding-bottom': '10px'}} />
+<p class="img-desc">LUT enabled.</p>
+</div>
+</div>
 
 :::tip
-**Warudo has over 200 built-in LUT textures** that you can choose from. Try picking the right one for your environment to give off great vibes!
+Warudo has over 200 built-in LUT textures. Pick one that suits your scene!
 :::
 
-* LUT Intensity: The strength of the LUT texture's effect on the image.
-* Vibrance: The saturation of the image's colors.
-* Contrast: The contrast of the image's colors.
-* Brightness: The brightness of the image's colors.
-* Tint: An additional tint that is overlayed onto the image.
+You can also enable **ACES Tonemapping**. ACES is a color management system that is widely used in the film industry. It can make the environment look more realistic, but it may not work well with anime-style characters with vibrant colors.
+
+Finally, **Vibrance**, **Contrast**, **Brightness**, **Tint** can be used to adjust the color of the scene to your liking.
+
+:::info
+Note that Warudo by default sets **Vibrance**, **Contrast**, **Brightness** to 1, 1.02, and 1.05 respectively, which makes the scene look more vivid. If you want to preserve the original colors, you should set these values to 0, 1, and 1.
+:::
 
 ### Bloom
 
-The bloom effect creates a halo effect around the bright parts of the image.
+The bloom effect creates a halo effect around the bright parts of the image. The **Strength** controls the intensity of the bloom effect, and the **Threshold** controls the lower limit of the brightness of the image that will emit a bloom effect.
 
-![](pathname:///doc-img/en-camera-7.webp)
-
-* Strength: The intensity of the bloom effect.
-* Threshold: The lower the threshold, the more areas that are not as bright in the image will also emit a bloom effect.
-* Tone: The color of the bloom effect.
-* Depth Attenuation: The degree to which the intensity of the bloom effect decreases with distance.
-* Near Attenuation Distance: The bloom effect produced by bright parts of objects within this distance will be attenuated.
-* High Quality: Whether to improve the rendering quality of the bloom effect at cost of performance.
+<div style={{display: 'flex', justifyContent: 'space-between', gap: '1rem'}}>
+<div>
+<img src="/doc-img/en-camera-bloom-off.png" style={{'padding-bottom': '10px'}} />
+<p class="img-desc">Bloom disabled.</p>
+</div>
+<div>
+<img src="/doc-img/en-camera-bloom-on.png" style={{'padding-bottom': '10px'}} />
+<p class="img-desc">Bloom enabled.</p>
+</div>
+</div>
 
 ### Ambient Occlusion
 
-Adds more shadow to the scene for a more realistic visual effect (in most cases).
+Adds more shadow to the scene for a more realistic look. The **Radius** controls the radius of the shadow, and the **Intensity** controls the intensity of the shadow.
 
-
-![](pathname:///doc-img/en-camera-8.webp)
+<div style={{display: 'flex', justifyContent: 'space-between', gap: '1rem'}}>
+<div>
+<img src="/doc-img/en-camera-ssao-off.png" style={{'padding-bottom': '10px'}} />
+<p class="img-desc">Ambient occlusion disabled.</p>
+</div>
+<div>
+<img src="/doc-img/en-camera-ssao-on.png" style={{'padding-bottom': '10px'}} />
+<p class="img-desc">Ambient occlusion enabled.</p>
+</div>
+</div>
 
 :::info
-For anime models (especially when the face mesh is not completely flat), enabling ambient occlusion is not recommended.
-
-
-![](pathname:///doc-img/en-camera-9.webp)
+For anime-style character models (especially when the face mesh is not completely flat), enabling ambient occlusion is not recommended. If you want to enable ambient occlusion but your character's shadow looks strange, try to adjust the **Max Radius Pixels** value.
 :::
-
-* Radius: The radius of the shadow.
-* Max Radius Pixels: The maximum pixels for shadow sampling. If your character shadow looks strange, try to adjust this value.
-* Intensity: The intensity of the shadow.
-* Color: The color of the shadow.
-* High Quality: Whether to improve the rendering quality of the ambient occlusion at cost of performance.
 
 ### Anamorphic Flares
 
-Provides the horizontal/vertical flare effect of a distorted lens.
+Provides the horizontal/vertical flare effect of a distorted lens. The **Intensity** controls the intensity of the flares, and the **Threshold** controls the lower limit of the brightness of the image that will emit a flare. If you want the flares to overflow more, you can increase the **Spread** value. The flares are by default horizontal, but you can enable **Vertical Flares** to make them vertical instead.
 
-
-![](pathname:///doc-img/en-camera-10.webp)
-
-* Intensity: The intensity of the flares.
-* Threshold: The lower the threshold, the more areas that are not as bright in the image will emit flares.
-* Tint: The color of the flares.
-* Spread: The extent to which the flares overflow.
-* Vertical Flares: Whether the light overflows vertically instead of horizontally.
-* High Quality: Whether to improve the rendering quality of the anamorphic flares at cost of performance.
+<div style={{display: 'flex', justifyContent: 'space-between', gap: '1rem'}}>
+<div>
+<img src="/doc-img/en-camera-flare-off.png" style={{'padding-bottom': '10px'}} />
+<p class="img-desc">Anamorphic flares disabled.</p>
+</div>
+<div>
+<img src="/doc-img/en-camera-flare-on.png" style={{'padding-bottom': '10px'}} />
+<p class="img-desc">Anamorphic flares enabled.</p>
+</div>
+</div>
 
 ### Depth Of Field
 
-Blur objects that are not in focus.
+Blur objects that are not in focus. You can either set a specific **Focus Distance**, or enable **Focus Character** to automatically focus on the character selected in **Controls → Focus Character**.
 
-![](pathname:///doc-img/en-camera-11.webp)
-
-* Focus Character: Whether the camera should automatically focus on the character selected in "Controls" -> "Focus Character".
-* Focusing Distance: The distance between the focus and the camera.
-* Focusing Speed: The speed at which the focus will be re-acquired when the focus object changes distance and becomes out of focus.
-* Focal Length: The larger the value, the blurrier the objects outside the depth of field will be.
-* Aperture: The larger the value, the blurrier the objects outside the depth of field will be.
-* Bokeh Effect: The spread of color on objects outside the depth of field.
-* Bokeh Effect Threshold: The threshold for the bokeh effect.
-* Bokeh Effect Strength: The strength of the bokeh effect.
-* High Quality: Whether to improve the rendering quality of the depth of field at cost of performance.
+<div style={{display: 'flex', justifyContent: 'space-between', gap: '1rem'}}>
+<div>
+<img src="/doc-img/en-camera-dof-off.png" style={{'padding-bottom': '10px'}} />
+<p class="img-desc">Depth of field disabled.</p>
+</div>
+<div>
+<img src="/doc-img/en-camera-dof-bokeh-off.png" style={{'padding-bottom': '10px'}} />
+<p class="img-desc">Depth of field with bokeh disabled.</p>
+</div>
+<div>
+<img src="/doc-img/en-camera-dof-on.png" style={{'padding-bottom': '10px'}} />
+<p class="img-desc">Depth of field with bokeh enabled.</p>
+</div>
+</div>
 
 ### Chromatic Aberration
 
-Mimics the effect produced when a lens is unable to blend all colors to the same point.
+Mimics the effect produced when a lens is unable to blend all colors to the same point. The **Intensity** controls the intensity of the effect.
 
-![](pathname:///doc-img/en-camera-12.webp)
-
-* Intensity: The strength of the chromatic aberration.
-* Smoothing: The higher the value, the smoother the transition between the chromatic aberration and the original color.
+<div style={{display: 'flex', justifyContent: 'space-between', gap: '1rem'}}>
+<div>
+<img src="/doc-img/en-camera-color-abb-off.webp" style={{'padding-bottom': '10px'}} />
+<p class="img-desc">Chromatic aberration disabled.</p>
+</div>
+<div>
+<img src="/doc-img/en-camera-color-abb-on.png" style={{'padding-bottom': '10px'}} />
+<p class="img-desc">Chromatic aberration enabled.</p>
+</div>
+</div>
 
 ### Lens Dirt
 
-Simulates dirt and specks on the lens.
+Simulates dirt and specks on the lens. You need to select a **Texture** for the lens dirt first. The **Intensity** controls the intensity of the lens dirt, and the **Threshold** controls the lower limit of the brightness of the image that will emit a lens dirt effect.
 
-
-![](pathname:///doc-img/en-camera-13.webp)
-
-* Texture: The texture of the lens dirt and specks.
-* Intensity: The strength of the lens dirt.
-* Threshold: The lower the value, the more noticeable it is in bright areas.
+<div style={{display: 'flex', justifyContent: 'space-between', gap: '1rem'}}>
+<div>
+<img src="/doc-img/en-camera-lens-dirt-off.webp" style={{'padding-bottom': '10px'}} />
+<p class="img-desc">Lens dirt disabled.</p>
+</div>
+<div>
+<img src="/doc-img/en-camera-lens-dirt-on.png" style={{'padding-bottom': '10px'}} />
+<p class="img-desc">Lens dirt enabled.</p>
+</div>
+</div>
 
 ### Vignetting
 
 Makes the edges of the image darker.
 
-![](pathname:///doc-img/en-camera-14.webp)
-
-* Color: The vignette color.
-* Fade Out: The higher the value, the larger the area of the vignette.
-* Blink: Simulates the blinking effect commonly seen in first-person games.
-
-
-![](pathname:///doc-img/en-camera-15.webp)
+<div style={{display: 'flex', justifyContent: 'space-between', gap: '1rem'}}>
+<div>
+<img src="/doc-img/en-camera-vignette-off.webp" style={{'padding-bottom': '10px'}} />
+<p class="img-desc">Vignetting disabled.</p>
+</div>
+<div>
+<img src="/doc-img/en-camera-vignette-on.webp" style={{'padding-bottom': '10px'}} />
+<p class="img-desc">Vignetting enabled.</p>
+</div>
+<div>
+<img src="/doc-img/en-camera-vignette-blink.png" style={{'padding-bottom': '10px'}} />
+<p class="img-desc">Vignetting enabled with blink.</p>
+</div>
+</div>
 
 ### Night Vision
 
 Simulates the night vision goggles.
 
-
-![](pathname:///doc-img/en-camera-16.webp)
-
-* Color: The color of the night vision.
+<div style={{display: 'flex', justifyContent: 'space-between', gap: '1rem'}}>
+<div>
+<img src="/doc-img/en-camera-nightvision-off.png" style={{'padding-bottom': '10px'}} />
+<p class="img-desc">Night vision disabled.</p>
+</div>
+<div>
+<img src="/doc-img/en-camera-nightvision-on.webp" style={{'padding-bottom': '10px'}} />
+<p class="img-desc">Night vision enabled.</p>
+</div>
+</div>
 
 ### Blur
 
 Blur the image.
 
-
-![](pathname:///doc-img/en-camera-17.webp)
-
-* Intensity: The strength of the blur.
+<div style={{display: 'flex', justifyContent: 'space-between', gap: '1rem'}}>
+<div>
+<img src="/doc-img/en-camera-blur-off.webp" style={{'padding-bottom': '10px'}} />
+<p class="img-desc">Blur disabled.</p>
+</div>
+<div>
+<img src="/doc-img/en-camera-blur-on.webp" style={{'padding-bottom': '10px'}} />
+<p class="img-desc">Blur enabled.</p>
+</div>
+</div>
 
 ### Pixelate
 
 Add a mosaic effect to the image!
 
-
-![](pathname:///doc-img/en-camera-18.webp)
-
-* Intensity: The strength of the pixelation.
+<div style={{display: 'flex', justifyContent: 'space-between', gap: '1rem'}}>
+<div>
+<img src="/doc-img/en-camera-pixelate-off.webp" style={{'padding-bottom': '10px'}} />
+<p class="img-desc">Pixelate disabled.</p>
+</div>
+<div>
+<img src="/doc-img/en-camera-pixelate-on.png" style={{'padding-bottom': '10px'}} />
+<p class="img-desc">Pixelate enabled.</p>
+</div>
+</div>

@@ -77,11 +77,11 @@ const config: Config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Document',
+            label: 'Handbook',
           },
           {
             position: 'left',
-            label: 'Home Page',
+            label: 'Home',
             href: 'https://warudo.app/',
             target: '_blank',
           },
