@@ -101,7 +101,11 @@ The orientation of the camera.
 In practice, **Manual** and **Composer** are the most commonly used orientation modes.
 
 :::caution
-A common mistake is forgetting to set up the **Dead Zone** and **Soft Zone** in the **Composer** mode. This can cause the camera to move too much when the target moves only slightly, causing a very shaky camera!
+A common mistake is forgetting to set up the **Dead Zone** and **Soft Zone** in the **Composer** mode. This can cause the camera to move too much when the target moves only slightly, causing a very shaky camera! Note that you should set up the **Dead Zone** and **Soft Zone** after you have made sure the camera is in a good position.
+:::
+
+:::tip
+Fixed cameras with both **Position** and **Orientation** mode set to **Manual** are often more useful than you think——they can reduce the cognitive load of the viewers, ensuring they do not suffer from motion sickness. You can add **Handheld Movement** (see below) to make fixed cameras more natural.
 :::
 
 ### Position/Orientation Offset

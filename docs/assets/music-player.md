@@ -1,23 +1,41 @@
 ---
-sidebar_position: 81
+sidebar_position: 60
 ---
 
 # Music Player
 
-Send the animation data of a character to any software that supports the [VirtualMotionCapture protocol](https://protocol.vmc.info/english)!
-
-:::tip
-A list of compatible programs can be found [here](https://protocol.vmc.info/Reference).
+:::info
+This feature is currently in beta.
 :::
 
-## Properties
+The music player asset is a simple music player that can play music files in Warudo. It can be useful for karaoke streams as it downloads and displays the lyrics for the currently playing song automatically.
 
-* IP Address: To which IP address the data will be sent.
-* Port: To which port the data will be sent.
-* Character: Select the character whose animation data will be sent.
-* Send to VirtualMotionCapture: Whether data is being sent to [VirtualMotionCapture](https://akira.works/VirtualMotionCapture-en/) (the software with the same name, not the VMC protocol). This option must be enabled due to a bug in VirtualMotionCapture when parsing animation data.
-  * Calibrating (VirtualMotionCapture): Enable this option during T-Pose calibration in VirtualMotionCapture; disable it after.
+![](pathname:///doc-img/en-music-player-1.png)
+<p class="img-desc">Playing music with lyrics.</p>
+
+## Setup
+
+Click **Open Music Folder** to open the music folder. You can then copy your music files into the folder. The music player supports MP3, WAV, and OGG files.
+
+The music player will automatically download lyrics for the currently playing song. If the lyrics do not match the song, you can  manually search for lyrics by clicking the **Search Online Lyrics** button, or put a `.lrc` lyrics file with the same name as the music file in the music folder.
 
 :::caution
-This function requires that all initial rotations of the bones in the model be 0, otherwise the data sent to other software may not be compatible. If your model is in [VRM format](https://vrm.dev/), then in most cases there should be no issue. However, in very rare cases, the modeler may not have checked the Enforce T-Pose option when exporting, and it can be fixed by re-exporting with this option checked.
+If you are using Universal RP, you must select a **Camera** to have the lyrics shown in the NDI/Spout/virtual camera output.
 :::
+
+:::caution
+Note that the online lyrics feature may return results with bilingual lyrics, usually the original language and Chinese. We will be adding an option to only show lyrics in the original language in the future.
+:::
+
+## Title Image
+
+You can add a line at the beginning of the lyrics file to specify the title image. For example, if you have a song named `Music.mp3` and a title image named `Title.png`, you can add the following to `Music.lrc`:
+
+```
+[warudo.title:00:22.50,1.5,5,1.5,0,0,1500,700]
+```
+
+This tells Warudo to show your title image at 22.5 seconds into the song, with a fade in duration of 1.5 seconds, a duration of 5 seconds, and a fade out duration of 1.5 seconds. The last two numbers are the width and height of the title image in pixels.
+
+![](pathname:///doc-img/en-music-player-2.png)
+<p class="img-desc">Showing a title image.</p>

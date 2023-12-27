@@ -1,19 +1,21 @@
 ---
-sidebar_position: 100
+sidebar_position: 81
 ---
 
 # Motion Player
 
-Record the character's animation and output an animation file in FBX or BVH format.
+:::info
+This feature is currently in beta.
+:::
 
-## Properties
+The motion player allows you to playback WANIM animations recorded with the [motion recorder](motion-recorder).
 
-* Character: The character whose animation data is to be recorded.
-* Target Frame Rate: The frames per second in the recorded animation. Note that this will also limit the render FPS.
-* Export Format: FBX / BVH.
-  * FBX Format:
-    * Record BlendShapes: Whether to export blendshape data.
-  * BVH Format:
-    * Export to Blender: BVH file will have the Z axis as up and the Y axis as forward instead of the normal BVH conventions. From Blender 3.0, it is no longer necessary to enable this option to correctly import BVH.
-    * Enforce Humanoid Bones: Whether to only export [Unity Humanoid](https://docs.unity3d.com/Manual/AvatarCreationandSetup.html) bones.
-* Output Filename: The name of the exported animation file.
+:::info
+Currently, only WANIM animations are supported. Support for FBX and BVH animations are planned.
+:::
+
+## Setup
+
+Select the **Character** that you would like to play the animation on. Select the **Animation** that you would like to play, and click the **Play** button to start playing the animation. You can loop the animation by enabling **Loop**.
+
+You can exclude certain bones from the animation by adding them to the **Excluded Body Parts** or **Excluded Bones** list.
