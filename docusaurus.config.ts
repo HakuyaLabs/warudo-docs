@@ -48,8 +48,8 @@ const config: Config = {
   ],
 
   plugins: [
-    'plugin-image-zoom',
-    'docusaurus-plugin-sass'
+    'docusaurus-plugin-sass',
+    'docusaurus-plugin-image-zoom'
   ],
 
   themes: [
@@ -102,19 +102,16 @@ const config: Config = {
         disableSwitch: false,
         respectPrefersColorScheme: true,
       },
-      imageZoom: {
-        // CSS selector to apply the plugin to, defaults to '.markdown img'
+      zoom: {
         selector: '.markdown img',
-        // Optional medium-zoom options
-        // see: https://www.npmjs.com/package/medium-zoom#options
-        options: {
-          margin: 24,
-          background: 'var(--ifm-background-surface-color)',
-          scrollOffset: 0,
-          // container: '#zoom-container',
-          // template: '#zoom-template',
+        background: {
+          light: 'var(--ifm-background-surface-color)',
+          dark: 'var(--ifm-background-surface-color)'
         },
-      },
+        config: {
+          // options you can specify via https://github.com/francoischalifour/medium-zoom#usage
+        }
+      }
     } satisfies Preset.ThemeConfig,
 };
 

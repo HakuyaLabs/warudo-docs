@@ -124,3 +124,17 @@ display: flex;
   padding: var(--ifm-alert-padding-vertical) var(--ifm-alert-padding-horizontal);
   margin: 1em 0;
 }
+
+.medium-zoom-overlay{
+  z-index: 69;
+  perspective: 1000;     
+  backface-visibility: hidden;     
+  transform-style: preserve-3d; 
+}
+
+.medium-zoom-image--opened {
+  z-index: 79;
+  perspective: 1000;     
+  backface-visibility: hidden;     
+  transform-style: preserve-3d; 
+}

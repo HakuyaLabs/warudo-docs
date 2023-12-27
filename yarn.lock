@@ -5136,6 +5136,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"docusaurus-plugin-image-zoom@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "docusaurus-plugin-image-zoom@npm:1.0.1"
+  dependencies:
+    medium-zoom: "npm:^1.0.6"
+    validate-peer-dependencies: "npm:^2.2.0"
+  peerDependencies:
+    "@docusaurus/theme-classic": ">=2.2.0"
+  checksum: f95687dae6cc0bd301a6c11d7a32781dcb5cf39ff0bba133f8620a7bf77b18240cdfc6edfe2f45c219522bac908228f058aa5ecdd7c0871221cdc34743b11109
+  languageName: node
+  linkType: hard
+
 "docusaurus-plugin-sass@npm:^0.2.5":
   version: 0.2.5
   resolution: "docusaurus-plugin-sass@npm:0.2.5"
@@ -7861,7 +7873,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"medium-zoom@npm:^1.0.4":
+"medium-zoom@npm:^1.0.6":
   version: 1.1.0
   resolution: "medium-zoom@npm:1.1.0"
   checksum: 7d1f05e8eab045c33d7c04d4ee7bf04f5246cf7a720d7b5f5a51c36ab23666e363bcbb6bffae50b5948d5eb19361914cb0e26a1fce5c1fff7a266bc0217893f3
@@ -9144,6 +9156,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"path-root-regex@npm:^0.1.0":
+  version: 0.1.2
+  resolution: "path-root-regex@npm:0.1.2"
+  checksum: 27651a234f280c70d982dd25c35550f74a4284cde6b97237aab618cb4b5745682d18cdde1160617bb4a4b6b8aec4fbc911c4a2ad80d01fa4c7ee74dae7af2337
+  languageName: node
+  linkType: hard
+
+"path-root@npm:^0.1.1":
+  version: 0.1.1
+  resolution: "path-root@npm:0.1.1"
+  dependencies:
+    path-root-regex: "npm:^0.1.0"
+  checksum: aed5cd290df84c46c7730f6a363e95e47a23929b51ab068a3818d69900da3e89dc154cdfd0c45c57b2e02f40c094351bc862db70c2cb00b7e6bd47039a227813
+  languageName: node
+  linkType: hard
+
 "path-scurry@npm:^1.10.1":
   version: 1.10.1
   resolution: "path-scurry@npm:1.10.1"
@@ -9224,15 +9252,6 @@ __metadata:
   dependencies:
     find-up: "npm:^3.0.0"
   checksum: ecb60e1f8e1f611c0bdf1a0b6a474d6dfb51185567dc6f29cdef37c8d480ecba5362e006606bb290519bbb6f49526c403fabea93c3090c20368d98bb90c999ab
-  languageName: node
-  linkType: hard
-
-"plugin-image-zoom@npm:^1.2.0":
-  version: 1.2.0
-  resolution: "plugin-image-zoom@npm:1.2.0"
-  dependencies:
-    medium-zoom: "npm:^1.0.4"
-  checksum: decbb9c5bd2e2eafdca6e96585afc5fad2c2cdee5bdca3b007bdfece56a07e96471225b5aa2bdc532088d3d083353a1d5871ef20adcdc8862dcace431bd42c52
   languageName: node
   linkType: hard
 
@@ -10379,6 +10398,15 @@ __metadata:
   version: 4.0.0
   resolution: "resolve-from@npm:4.0.0"
   checksum: 8408eec31a3112ef96e3746c37be7d64020cda07c03a920f5024e77290a218ea758b26ca9529fd7b1ad283947f34b2291c1c0f6aa0ed34acfdda9c6014c8d190
+  languageName: node
+  linkType: hard
+
+"resolve-package-path@npm:^4.0.3":
+  version: 4.0.3
+  resolution: "resolve-package-path@npm:4.0.3"
+  dependencies:
+    path-root: "npm:^0.1.1"
+  checksum: d2e7883a075b21fbf084f7615f9201e4d5aea6c22ba670dc66503a256c5eba5983d0822b9d51ef33303bfe9b0025916f622f6d780c42d7c020d826f8a9bc58fa
   languageName: node
   linkType: hard
 
@@ -11733,6 +11761,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"validate-peer-dependencies@npm:^2.2.0":
+  version: 2.2.0
+  resolution: "validate-peer-dependencies@npm:2.2.0"
+  dependencies:
+    resolve-package-path: "npm:^4.0.3"
+    semver: "npm:^7.3.8"
+  checksum: 0728592b335dbd5d1444019a4e36e34b4de3a8ade5a4970a5f87b40f881dedeff1a00eb3d79add155a4ab3b97c9990d11ed21d8a3d7dccadd129a5bdf5b02a5a
+  languageName: node
+  linkType: hard
+
 "value-equal@npm:^1.0.1":
   version: 1.0.1
   resolution: "value-equal@npm:1.0.1"
@@ -11791,10 +11829,10 @@ __metadata:
     "@mdx-js/react": "npm:^3.0.0"
     "@types/react": "npm:^18.2.45"
     clsx: "npm:^1.2.1"
+    docusaurus-plugin-image-zoom: "npm:^1.0.1"
     docusaurus-plugin-sass: "npm:^0.2.5"
     dotenv: "npm:^16.3.1"
     node-scp: "npm:^0.0.22"
-    plugin-image-zoom: "npm:^1.2.0"
     prism-react-renderer: "npm:^2.1.0"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
