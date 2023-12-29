@@ -24,6 +24,10 @@ To set up an environment, simply select a **Source** as the model for the enviro
 It is recommended to turn off **Allow Lights To Affect Characters** so that you have more control over the lighting of your character using the [**Directional Light**](light) asset.
 :::
 
+:::tip
+To build up the atmosphere of your scene, an environment is just the beginning. You should look into the post processing effects offered by the [camera](camera) asset, or in the case of Warudo Pro users using Universal RP, the [post processing volume](ppv) and [NiloToon volume](nilotoon-volume) assets. 
+:::
+
 :::caution
 Although you are allowed to move and rotate the environment, it is not recommended to do so; instead, you should move and rotate the character. This is because most environments are not designed to be moved or rotated, and doing so may cause visual glitches in the environment.
 :::

@@ -1,53 +1,59 @@
 ---
-sidebar_position: 20
+sidebar_position: 10
 ---
 
 # Overview
 
-**Blueprints** in Warudo is a flexible and powerful visual scripting system that allows even those without programming backgrounds to utilize concepts and tools that are typically reserved for programmers, creating unique animations and interactive effects for VTuber avatars. Blueprints can be created and edited within Warudo's configuration window, and all changes are reflected in realtime in the scene.
+Blueprints are a flexible and powerful visual scripting system enabling anyone to create unique interactions for their VTubing setup, utilizing concepts and tools that are typically reserved for programmers. Blueprints are created and edited using the Warudo editor, and all changes are reflected in realtime in the scene.
+
+A blueprint is, boiled down, a flowchart. It defines **"When X happens, do Y."** Let's take a look at some toy examples:
+
+* When I press the Esc key, shake the camera.
+* When I receive a Twitch message that contains "beep boop", play a beep boop sound.
+* When I yell out loud, my character is launched into the air.
+
+Uninspiring? How about:
+
+* When I open my mouth, my character [starts fire breathing](https://twitter.com/MVjagaimo/status/1725869971845333173/video/1). (By [@MVjagaimo](https://twitter.com/MVjagaimo))
+* When I press a key, my character [walks to another place in the room, with the camera following the character](https://twitter.com/FelineEntity/status/1730225167572615582). (By [@FelineEntity](https://twitter.com/FelineEntity))
+* When I press WASD, my character [drives a truck around](https://twitter.com/sablokato/status/1731679138677768700). (By [@sablokato](https://twitter.com/sablokato))
+* When I receive a Twitch redeem, my character [spins and ragdolls into the air](https://twitter.com/Shellbunny_/status/1712629869488853260). (By [@Shellbunny_](https://twitter.com/Shellbunny_))
+* When I touch my index fingers together, a [electric spark is generated between them](https://twitter.com/hakuyalabs/status/1724364814158360767). (By [@HakuyaTira](https://twitter.com/hakuyatira))
+* When my character hits a prop with hand, the prop is [propelled away](https://twitter.com/FelineEntity/status/1727379837185319176). (By [@FelineEntity](https://twitter.com/FelineEntity))
+* When I push my hands together, the [Ring Fit prop is squeezed](https://twitter.com/VanJiha_Vtuber/status/1737645095095341397/video/1). (By [@VanJiha_Vtuber](https://twitter.com/VanJiha_Vtuber))
+* When I press buttons on my MIDI controller, the [buttons on my virtual MIDI controller light up](https://twitter.com/ChiuYukina/status/1734913824086729149). (By [@ChiuYukina](https://twitter.com/ChiuYukina))
+  ...
+
+The possibilities are endless! You can find and share pre-made blueprints in our community [Discord](https://discord.gg/warudo), or create your own blueprints from scratch. This section of the handbook will guide you through the basics of blueprints, provide you with some examples to get you started, and dive into more advanced topics.
 
 :::tip
-The blueprint system in Warudo is not just a novelty. Rather, it is a crucial part of Warudo's architecture: [motion capture in Warudo is implemented completely with blueprints.](mocap-nodes.md) This ensures that the blueprint system will continue to be updated and improved, providing more and more node types for you to combine in endless ways. You can also create new node types through the [Mod SDK](../modding/mod-sdk.md).
-:::
-
-To browse the blueprints in the current scene, simply click the "Blueprints" button on the left side of the configuration window. If you have just created a scene, there won't be any blueprints in it.
-
-![](pathname:///doc-img/en-blueprints-overview-1.webp)
-
-To create a blueprint, click the + icon in the lower left corner:
-
-![](pathname:///doc-img/en-blueprints-overview-2.webp)
-
-![](pathname:///doc-img/en-blueprints-overview-3.webp)
-
-Each blueprint is comprised of **nodes** and **connections**. Connections come in two types: <b style={{color: "green"}}>flow connections</b> (<b style={{color: "green"}}>**green**</b>) and **data connections** (**black**), while each node can have both flow and data inputs and outputs.
-
-To create a new node, simply drag the desired node from the palette (right) to the node editor (center). To create a connection, press the input/output and then drag it to another node's output/input. Here's a simple blueprint example: **when the Esc key is pressed, the main camera will shake.**
-
-![](pathname:///doc-img/en-blueprints-overview-4.webp)
-
-<b style={{color: "green"}}>Flow connections</b> determine the order in which the nodes are executed. In the example above, after "On Keystroke Pressed" is executed, "Shake Camera" will be executed next.
-
-**Data connections** are responsible for transmitting data between nodes. When a node is executed, all of its data inputs are evaluated. In the example above, when "Shake Camera" is executed, "Camera" will be set to the main camera because the "Camera" data input is connected to the "Get Main Camera -> Camera" data output. So it's the main camera that will shake, not any other camera.
-
-**Note that the data types of the two ends of a data connection must be compatible.** In the example above, you cannot connect "Get Main Camera -> Camera" (data type: camera) to "Shake Camera -> Sustain Time" (data type: float).
-
-:::tip
-Not all data inputs require a connection to a data output. For example, data such as "Sustain Time" can be set directly on the node.
+Blueprints in Warudo are not just a novelty; rather, they are a crucial part of its architecture. For example, motion capture in Warudo is implemented entirely using blueprints. This ensures continuous updates and improvements to the blueprint system, providing an expanding variety of node types for endless combination possibilities.
 :::
 
 :::info
-A flow input can connect to multiple flow outputs, but a flow output can only connect to one flow input. Otherwise, it would be unclear which node should be executed first.&#x20;
-
-A data output can connect to multiple data inputs, but a data input can only connect to one data output. Otherwise, it would be unclear from which node the data should be transmitted.
+If you are a developer, you will be happy to find out that you can extend Warudo's blueprint system by adding new node types! Please refer to the [Scripting](http://localhost:3002/docs/scripting/overview) section for more details.
 :::
 
-The blueprint can be disabled in the sidebar (left). When the blueprint is disabled, the nodes in the blueprint will not receive events. For example, in the above picture, even if the Esc key is pressed, the "On Keystroke Pressed" node will not receive an event and the flow will not be executed, and as a result the camera will not shake.
+## Interface
 
-:::info
-You can determine if a flow is being executed or if data is being transmitted by checking if there's a ball rolling on the connection:
+In the **Blueprints** tab, you can see a list of all the blueprints in the scene. You can select a blueprint to edit it in the node editor; then, you can drag nodes from the **Node Palette** tab, or modify the properties of the selected blueprint in the **Properties** tab.
 
-![](pathname:///doc-img/en-blueprints-overview-5.webp)
+![](pathname:///doc-img/en-blueprints-1.png)
+<p class="img-desc">Overview.</p>
+
+The toolbar has the following buttons:
+* **Add Blueprint**: Add a new blueprint to the scene.
+* **Remove Blueprint**: Remove the selected blueprint from the scene.
+* **Duplicate Blueprint**: Duplicate the selected blueprint.
+* **Rename Blueprint**: Rename the selected blueprint.
+* **Format Blueprint**: Format the selected blueprint, i.e., automatically arrange the nodes.
+* **Import Blueprint From Clipboard**: Import a blueprint from the clipboard.
+* **Export Blueprint To Clipboard**: Export the selected blueprint to the clipboard.
+* **Import Blueprint From File**: Import a blueprint from a JSON file.
+* **Export Blueprint To File**: Export the selected blueprint to a JSON file.
+
+:::tip
+You can use the import/export feature to copy blueprints between scenes.
 :::
 
-Let's take a look at some of the common nodes used in Warudo's blueprint system.
+To navigate the node editor, you can use **Mouse LMB** to pan, **Mouse Wheel** to zoom, and **Mouse RMB** to select multiple nodes. When one or more nodes are selected, you can use **Mouse LMB** to drag them around, and **Delete** to delete them. You can also use **Ctrl+C** and **Ctrl+V** to copy and paste selected nodes.
