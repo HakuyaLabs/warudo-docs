@@ -29,10 +29,21 @@ jobs:
       - name: Build
         run: yarn build
 
-      - name: Upload production-ready build files
-        run: yarn deploy:server
-        env: # Or as an environment variable
-          DEPLOY_SSH_PORT: ${{ secrets.DEPLOY_SSH_PORT }}
-          DEPLOY_SSH_USERNAME: ${{ secrets.DEPLOY_SSH_USERNAME }}
-          DEPLOY_SSH_PASSWORD: ${{ secrets.DEPLOY_SSH_PASSWORD }}
-          DEPLOY_SSH_HOST: ${{ secrets.DEPLOY_SSH_HOST }}
+      - name: rsync deployments
+        uses: burnett01/rsync-deployments@6.0.0
+        with:
+          switches: -avzr --delete
+          path: build/
+          remote_path: /data/wwwroot/docs.warudo.app/
+          remote_host: ${{ secrets.DEPLOY_SSH_HOST }}
+          remote_port: ${{ secrets.DEPLOY_SSH_PORT }}
+          remote_user: ${{ secrets.DEPLOY_SSH_USERNAME }}
+          remote_key: ${{ secrets.DEPLOY_SSH_PRIVATE_KEY }}
+
+      # - name: Upload production-ready build files
+      #   run: yarn deploy:server
+      #   env: # Or as an environment variable
+      #     DEPLOY_SSH_PORT: ${{ secrets.DEPLOY_SSH_PORT }}
+      #     DEPLOY_SSH_USERNAME: ${{ secrets.DEPLOY_SSH_USERNAME }}
+      #     DEPLOY_SSH_PASSWORD: ${{ secrets.DEPLOY_SSH_PASSWORD }}
+      #     DEPLOY_SSH_HOST: ${{ secrets.DEPLOY_SSH_HOST }}
