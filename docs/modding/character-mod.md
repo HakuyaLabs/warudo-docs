@@ -33,7 +33,7 @@ Since Warudo allows you to package C# scripts into your mod, you can add any thi
 
 ## Automatic Setup (Recommended)
 
-Place your character in the scene and select it. Select "Warudo" -> "Setup Character..." -> "Setup selected GameObject as character mod."
+Place your character in the scene and select it. Select "Warudo" → "Setup Character..." → "Setup selected GameObject as character mod."
 
 ![](pathname:///doc-img/en-character-mod-3.webp)
 
@@ -41,11 +41,11 @@ Wait for a little bit, and you should see a prefab named **"Character"** is gene
 
 ![](pathname:///doc-img/en-character-mod-4.webp)
 
-Select "Warudo" -> "Build Mod" and place the generated `.warudo` file into the Characters subfolder in the Warudo data folder.
+Select "Warudo" → "Build Mod" and place the generated `.warudo` file into the Characters subfolder in the Warudo data folder.
 
 ## Manual Setup
 
-In case the automatic setup fails for some reason (e.g., bones become twisted), you can still create a new character mod manually by naming any character prefab as **"Character"** and placing it in the mod folder (can also be placed in a subfolder). Then, select "Warudo" -> "Build Mod" and place the generated `.warudo` file into the Characters subfolder in the Warudo data folder.
+In case the automatic setup fails for some reason (e.g., bones become twisted), you can still create a new character mod manually by naming any character prefab as **"Character"** and placing it in the mod folder (can also be placed in a subfolder). Then, select "Warudo" → "Build Mod" and place the generated `.warudo` file into the Characters subfolder in the Warudo data folder.
 
 :::info
 If you do the manual setup and your character uses [Magica Cloth](https://assetstore.unity.com/packages/tools/physics/magica-cloth-160144), it is essential to ensure that the model's skeleton is in the T-pose and all bone rotations are 0 before importing it into Unity. Failure to do so will cause Magica Cloth to malfunction in Warudo.

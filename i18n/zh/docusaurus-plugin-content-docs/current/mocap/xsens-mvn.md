@@ -8,7 +8,7 @@ sidebar_position: 100
 
 ## 教程
 
-打开 Xsens MVN -> Options -> Network Streamer，如下图配置即可。
+打开 Xsens MVN → Options → Network Streamer，如下图配置即可。
 
 ![](pathname:///doc-img/zh-xens-1.webp)
 

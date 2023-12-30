@@ -27,7 +27,7 @@ The basic principle of Warudo's face tracking has already been introduced in ["I
 The [**"Switch BlendShape List"**](advanced-nodes.md#switches) node selects either the captured motion data or an empty blendshape list based on the signal of RhyLive receiver being "Tracked". This prevents the model's expression from becoming stuck if the motion capture signal is lost.
 
 :::info
-What if we actually prefer the model's expression to be stuck when tracking is lost? We can simply remove the "Empty BlendShape List" node and connect "Get RhyLive Receiver Data -> BlendShape List" to "Switch BlendShape List -> If False."
+What if we actually prefer the model's expression to be stuck when tracking is lost? We can simply remove the "Empty BlendShape List" node and connect "Get RhyLive Receiver Data → BlendShape List" to "Switch BlendShape List → If False."
 :::
 
 Looking further to the right, we can see that although the blueprint appears to be complicated, the data flowing to the right is actually just the original blendshape list (from the left) with 6 VRM blendshapes set (by the **"Set BlendShape"** nodes): `Blink_L`, `Blink_R`, `A`, `O`, `I`, `U`. For example, the value of `U` is directly taken from `mouthPucker` (an ARKit mouth blendshape); `A`'s value is `jawOpen * 1.2 - mouthFunnel`, and so on.

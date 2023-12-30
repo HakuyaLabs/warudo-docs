@@ -8,7 +8,7 @@ Face & body tracking via [Rokoko](https://www.rokoko.com/).
 
 ## Setup
 
-Open Rokoko Studio and enable **Livestream -> Activate streaming to Unity**:
+Open Rokoko Studio and enable **Livestream → Activate streaming to Unity**:
 
 ![](pathname:///doc-img/zh-rokoko-1.webp)
 

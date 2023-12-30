@@ -9,7 +9,7 @@ Looking for a fun way to thank your viewers for their support? In this tutorial,
 <div style={{width: '100%'}} className="video-box"><video controls loop src="/doc-img/dance.mp4" /></div>
 <p class="img-desc">Dance to thank your viewers for their support!</p>
 
-# Connecting to Streaming Platforms
+## Connecting to Streaming Platforms
 
 Before we get started, you need to use the onboarding assistant to connect Warudo to your Twitch, YouTube or Bilibili account. If you haven't done so, please refer to the [Getting Started](../../tutorials/readme-1#interaction-setup) tutorial. We will assume you stream on Twitch in this tutorial, but the steps are similar for other platforms.
 
@@ -99,7 +99,7 @@ Below is the final blueprint. Now go have some fun with your viewers!
 
 ![](/doc-img/en-blueprint-dance-11.png)
 
-## More On If Branch
+## More on If Branch
 
 We used the String Equal node for the If Branch condition, but there are other conditions you can use. For example, you can use the **Integer Greater Than Or Equal** node to check if **On Twitch Channel Points Redeemed → Reward Cost** is greater than or equal to 1,000, such that the character will dance whenever you receive a Twitch redeem that costs 1,000 points or more.
 

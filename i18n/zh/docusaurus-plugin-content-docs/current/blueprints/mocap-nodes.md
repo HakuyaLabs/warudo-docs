@@ -27,7 +27,7 @@ sidebar_position: 50
 可以看到，[「切换 BlendShape 列表」节点](advanced-nodes.md#qie-huan)会根据 RhyLive 接收器「追踪中」的信号，选择动捕数据或空白的 BlendShape 列表输出。这可以防止动捕信号丢失时，模型表情「卡住」的现象。
 
 :::info
-如果我们觉得模型表情「卡住」更有意思呢？只需要删除「空 BlendShape 列表」节点，然后将「获取 RhyLive 接收器数据 -> BlendShape 列表」连接到「切换 BlendShape 列表 -> 条件为假」就可以了。
+如果我们觉得模型表情「卡住」更有意思呢？只需要删除「空 BlendShape 列表」节点，然后将「获取 RhyLive 接收器数据 → BlendShape 列表」连接到「切换 BlendShape 列表 → 条件为假」就可以了。
 :::
 
 往右看，我们可以看到虽然蓝图看上去错综复杂，不过流向右边的数据其实仅是原本的 BlendShape 列表（来自左边）设置了 6 个 BlendShape（上面的「设置 BlendShape」节点）：Blink\_L、Blink\_R、A、O、I、U。比如 U 的值直接采用了 `mouthPucker`（ARKit 面捕中嘟嘴的数据）的值；A 的值是 `jawOpen * 1.2 - mouthFunnel`，等等。

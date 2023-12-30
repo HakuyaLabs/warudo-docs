@@ -47,7 +47,7 @@ Mod SDK 导出的 Mod 后缀名为 `.warudo`，放在 Warudo 数据文件夹相�
 请到 [https://git-scm.com/download](https://git-scm.com/download) 下载安装 Git，并重启 Unity 及 Unity Hub。
 :::
 
-确认 File -> Build Settings... -> Player Settings... -> Other Settings -> Api Compatibility Level 为 .NET Framework：
+确认 File → Build Settings... → Player Settings... → Other Settings → Api Compatibility Level 为 .NET Framework：
 
 ![](pathname:///doc-img/en-mod-sdk-2.webp)
 

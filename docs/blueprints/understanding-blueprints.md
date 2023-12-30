@@ -27,7 +27,7 @@ Awesome! Now, we need to add a node that shakes the camera. Type "shake camera" 
 ![](pathname:///doc-img/en-understanding-blueprints-3.png)
 <p class="img-desc">Adding the Shake Camera node and connecting it to the On Keystroke Pressed node.</p>
 
-If you clicked on the green dot next to the **Exit** on the On Keystroke Pressed node and dragged it to the green dot next to the **Enter** on the Shake Camera node, congratulations! You have great intuition. By the way, you can remove the connection by clicking on the right side of the connection and dragging it away.
+If you clicked on the green dot next to the **Exit** on the On Keystroke Pressed node and dragged it to the green dot next to the **Enter** on the Shake Camera node, congratulations! You have great intuition. By the way, you can remove the connection by clicking on either end of the connection and dragging it away.
 
 :::tip
 The green dots on the right side of a node are called <b style={{color: "green"}}>flow outputs</b>, while the green dots on the left side of a node are called <b style={{color: "green"}}>flow inputs</b>. So, you just connected the **Exit** flow output of the On Keystroke Pressed node to the **Enter** flow input of the Shake Camera node.
@@ -59,7 +59,7 @@ Indeed, they can! Let's drag a **Get Main Camera** node from the node palette to
 Recall that Warudo supports [multiple cameras](../assets/camera), and the main camera is the camera that is currently shown in the main window.
 :::
 
-Try pressing the Esc key again. Hey, the camera still shakes! But this time, note that the **Camera** dropdown has disappeared. It means that the Shake Camera node is taking the camera from the Get Main Camera node instead, and the camera we selected from the dropdown is ignored (even though technically they refer to the same camera).
+Try pressing the Esc key again. Hey, the camera still shakes! But this time, note that the **Camera** dropdown has disappeared. It means that the Shake Camera node is taking the camera from the Get Main Camera node instead, and the camera we selected from the dropdown is ignored (though technically they are the same camera anyway).
 
 Let's create another camera in the Assets tab, switch to that camera, and then press the Esc key again. You will note that the new camera is the one that shakes, not the one we selected from the dropdown!
 
@@ -96,7 +96,7 @@ Most of the time you don't need to worry about data types, because we all know a
 
 ## Disabling Blueprints
 
-The blueprint can be disabled by clicking the eye icon next to the blueprint name. When the blueprint is disabled, the nodes in the blueprint will not receive events. For example, in the example above, if the Esc key is pressed when the blueprint is disabled, the On Keystroke Pressed node will not receive an event and the flow will not be triggered, and as a result the camera will not shake.
+A blueprint can be disabled by clicking the eye icon next to the blueprint name. When a blueprint is disabled, the nodes in the blueprint will not receive events. For example, in the example above, if the Esc key is pressed when the blueprint is disabled, the On Keystroke Pressed node will not receive an event and the flow will not be triggered, and as a result the camera will not shake.
 
 :::info
 You can determine if a flow is being triggered or if data is being passed by checking if there's a ball rolling on the connection:

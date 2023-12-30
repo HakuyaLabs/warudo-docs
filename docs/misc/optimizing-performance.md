@@ -4,11 +4,21 @@ sidebar_position: 10
 
 # Optimizing Performance
 
+Never use 4K. Please.
+
+1920 x 1080
+
+Limit FPS if possible.
+
+MediaPipe GPU usage.
+
+
+
 ## Warudo's frame rate drops dramatically when running simultaneously with other 3D applications/games (e.g., Apex Legends).
 
-This is because the other 3D application/game are using most of the GPU resources. You can run Warudo in administrator mode and turn on "Increased GPU Priority" in "Settings" -> "Core".
+This is because the other 3D application/game are using most of the GPU resources. You can run Warudo in administrator mode and turn on "Increased GPU Priority" in "Settings" → "Core".
 
-To run Warudo in administrator mode, go to your Steam library, right-click on Warudo and select "Manage" -> "Browse local files":
+To run Warudo in administrator mode, go to your Steam library, right-click on Warudo and select "Manage" → "Browse local files":
 
 ![](pathname:///doc-img/zh-faq-1.webp)
 
@@ -20,12 +30,12 @@ Then go to the "Compatibility" tab, check "Run this program as an administrator"
 
 ![](pathname:///doc-img/zh-faq-3.webp)
 
-Open Warudo and go to "Settings" -> "Core" -> "Advanced" -> "Increase GPU Priority", then select "Yes".
+Open Warudo and go to "Settings" → "Core" → "Advanced" → "Increase GPU Priority", then select "Yes".
 
 ![](pathname:///doc-img/zh-faq-4.webp)
 
 :::caution
-Increased GPU priority for Warudo can in turn result in decreased frame rates for other 3D applications/games running simultaneously. You can try shrinking the Warudo window (not minimizing to the taskbar) or lowering the rendering frame rate in Warudo ("Settings" -> "Core" -> "Graphics" -> "Limit FPS") until the frame rate for both Warudo and other 3D applications/games becomes acceptable.
+Increased GPU priority for Warudo can in turn result in decreased frame rates for other 3D applications/games running simultaneously. You can try shrinking the Warudo window (not minimizing to the taskbar) or lowering the rendering frame rate in Warudo ("Settings" → "Core" → "Graphics" → "Limit FPS") until the frame rate for both Warudo and other 3D applications/games becomes acceptable.
 :::
 
 :::info

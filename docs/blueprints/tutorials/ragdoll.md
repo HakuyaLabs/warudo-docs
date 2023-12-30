@@ -9,6 +9,8 @@ Want to get launched into the sky? Me neither. But it's fun, so let's do it anyw
 <div style={{width: '100%'}} className="video-box"><video controls loop src="/doc-img/ragdoll.mp4" /></div>
 <p class="img-desc">Ragdolling your character.</p>
 
+## Throwing Props
+
 Let's create a new blueprint. For the trigger, we will once again use the **On Keystroke Pressed** node, but you can use any event node you want. I will set the hotkey to **Space** just for ease of testing. Then, add a **Throw Prop At Character** node right next to it, and connect the nodes like below. Set the **Character** option to our character, and the **Prop Source** option to the prop model you want to throw at your character (I will choose "Sea Lion").
 
 ![](/doc-img/en-blueprint-ragdoll-1.png)
@@ -35,7 +37,11 @@ God, this node is huge. There are many options on the **Throw Prop At Character*
 * **Launch Torque** and **Randomize Launch Rotation** determine the rotation of the prop when it is launched.
 * **Alive Time** determines how long the prop will stay in the scene before it disappears.
 
-Now, when you press Space, the prop will be thrown at our character's head, and our character reacts to it. But we wanted to ragdoll our character, not just make them flinch! Let's add a **Activate Character Ragdoll** node, and connect the **On Collide** flow output of the Throw Prop At Character node to the **Enter** flow input of the Activate Character Ragdoll node. Then, set the **Character** option to our character and **Launch Force** to (0, 300, -600).
+Now, when you press Space, the prop will be thrown at our character's head, and our character reacts to it.
+
+## Activating Ragdoll
+
+But we wanted to ragdoll our character, not just make them flinch! Let's add a **Activate Character Ragdoll** node, and connect the **On Collide** flow output of the Throw Prop At Character node to the **Enter** flow input of the Activate Character Ragdoll node. Then, set the **Character** option to our character and **Launch Force** to (0, 300, -600).
 
 ![](/doc-img/en-blueprint-ragdoll-2.png)
 
@@ -49,7 +55,7 @@ Let's press Space again. The prop gets thrown, but this time, when it hits the c
 Other interaction nodes, such as **Launch Liquid At Character** and **Spawn Sticker From Local/Online Image**, can be configured similarly. Try to play around with them and see what you can come up with!
 :::
 
-## Resetting the Character
+## Resetting Ragdoll
 
 You will notice that the character resets after 5 seconds, which can be changed by adjusting the **Reset Wait Time** option on the Activate Character Ragdoll node. You can also disable automatic resetting by setting **Auto Reset** to No, and trigger the **Reset** flow input manually. For example, the following blueprint will only reset the character when you press the **R** key.
 

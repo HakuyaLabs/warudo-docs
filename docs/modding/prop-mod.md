@@ -8,7 +8,7 @@ Warudo can use any Unity [prefab](https://docs.unity3d.com/Manual/Prefabs.html) 
 
 ## Setup
 
-Name the prefab **"Prop"** and make sure it is placed in the mod folder (can be placed in any subfolder). Select "Warudo" -> "Build Mod," and place the generated `.warudo` file into the "Props" subfolder in the Warudo data folder.
+Name the prefab **"Prop"** and make sure it is placed in the mod folder (can be placed in any subfolder). Select "Warudo" → "Build Mod," and place the generated `.warudo` file into the "Props" subfolder in the Warudo data folder.
 
 ## Character Attachment
 

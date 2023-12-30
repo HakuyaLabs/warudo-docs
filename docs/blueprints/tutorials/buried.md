@@ -58,7 +58,7 @@ Let's press Ctrl+Shift+Z again and see what happens. If everything goes well, yo
 If you are interested in nitty-gritty technical details, the data inputs of a node are only evaluated (i.e., sourced from the connected data output) when the node is triggered. So, in this case, what happens behind the scenes is that the Get Random Prop node is triggered every time the Throw Prop At Character node is triggered (by the For Loop node), outputting a different prop each time.
 :::
 
-### More On For Loop
+## More on For Loop
 
 You may have noticed that the For Loop node has a **Loop Index** data output. This data output gives us the current index of the loop, starting from **First Index** and ending at **Last Index**. In the above example, the **Loop Index** data output gives us a number from 1 to 100. What can we do with this number?
 

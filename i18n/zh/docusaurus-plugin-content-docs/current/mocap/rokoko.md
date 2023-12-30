@@ -8,7 +8,7 @@ sidebar_position: 90
 
 ## Setup
 
-打开 Rokoko Studio -> Livestream -> 勾选 Activate 来发送数据到 Unity：
+打开 Rokoko Studio → Livestream → 勾选 Activate 来发送数据到 Unity：
 
 ![](pathname:///doc-img/zh-rokoko-1.webp)
 

@@ -145,6 +145,10 @@ While **holding down Mouse RMB**, use **WASD** to move, **E** and **Q** to move 
 
 After you've gotten used to the two camera modes, switch back to **Orbit Character** mode and click **Reset Camera Transform** to return the camera to its default position.
 
+:::tip
+You can also press **V** to switch between **Orbit Character** and **Free Look** modes.
+:::
+
 ![](pathname:///doc-img/en-getting-started-24.png)
 <p class="img-desc">Reset camera transform.</p>
 

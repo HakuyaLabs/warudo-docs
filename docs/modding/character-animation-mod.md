@@ -16,4 +16,4 @@ If you have created animations using Blender or another tool and exported them a
 Then, perform the following steps on the duplicated AnimationClip (in this example, the outer `AGIA_Idle_cat_01` AnimationClip indicated by a triangle icon).
 :::
 
-Name the AnimationClip **"Animation"** and ensure that it is placed in the mod folder (can be placed in any subfolder). Select "Warudo" -> "Build Mod," and place the generated `.warudo` file into the "CharacterAnimations" subfolder in the Warudo data folder.
+Name the AnimationClip **"Animation"** and ensure that it is placed in the mod folder (can be placed in any subfolder). Select "Warudo" → "Build Mod," and place the generated `.warudo` file into the "CharacterAnimations" subfolder in the Warudo data folder.

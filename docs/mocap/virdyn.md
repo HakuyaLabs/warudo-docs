@@ -8,13 +8,13 @@ Body tracking via [VDMocapStudio](https://www.virdynm.com/virdyn-vdmocap-studio-
 
 ## Setup
 
-Open VDMocapStudio and enable data streaming by clicking **Broadcast -> OpenShare**. Make sure the IP selected is accessible from Warudo.
+Open VDMocapStudio and enable data streaming by clicking **Broadcast → OpenShare**. Make sure the IP selected is accessible from Warudo.
 
 ![](pathname:///doc-img/en-virdyn-1.png)
 
 ## Calibration
 
-Calibration of Virdyn hardware is done in VDMocapStudio. You can also use **Virdyn Studio Receiver -> Calibrate Root Transform** to reset the character's root position and rotation in Warudo.
+Calibration of Virdyn hardware is done in VDMocapStudio. You can also use **Virdyn Studio Receiver → Calibrate Root Transform** to reset the character's root position and rotation in Warudo.
 
 ## Frequently Asked Questions
 

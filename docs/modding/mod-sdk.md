@@ -66,7 +66,7 @@ If you encounter an error with the message `An error occurred while resolving pa
 To resolve this issue, you need to download Git from [https://git-scm.com/download](https://git-scm.com/download) and then restart both Unity and Unity Hub.
 :::
 
-Confirm that the "Api Compatibility Level" in "File -> Build Settings... -> Player Settings... -> Other Settings" is set to .NET Framework.
+Confirm that the "Api Compatibility Level" in "File → Build Settings... → Player Settings... → Other Settings" is set to .NET Framework.
 
 ![](pathname:///doc-img/en-mod-sdk-2.webp)
 
@@ -106,7 +106,7 @@ If you see some errors, keep in mind that some "errors" are really just warnings
 
 ## Creating Your First Mod
 
-To create a new Mod, go to the menu bar and select "Warudo" -> "New Mod":
+To create a new Mod, go to the menu bar and select "Warudo" → "New Mod":
 
 ![](pathname:///doc-img/en-mod-sdk-3.webp)
 

@@ -30,7 +30,7 @@ Open the Unity scene you want to export and place the `EnvironmentSettings` scri
 If you do not place the `EnvironmentSettings` script, rendering settings such as the skybox and shadow color will not be exported to the environment mod.
 :::
 
-Name the scene **"Environment"** and make sure the scene is placed in the mpd folder (can be placed in any subfolder). Select "Warudo" -> "Build Mod," and place the generated `.warudo` file into the "Environments" subfolder in the Warudo data folder.
+Name the scene **"Environment"** and make sure the scene is placed in the mpd folder (can be placed in any subfolder). Select "Warudo" → "Build Mod," and place the generated `.warudo` file into the "Environments" subfolder in the Warudo data folder.
 
 ## FAQ
 
@@ -40,4 +40,4 @@ A: Check if your scene has prefabs with unapplied changes, like these.
 
 ![](pathname:///doc-img/en-environment-mod-2.webp)
 
-Try to apply the changes. If you still see the vertical lines (which means the changes could not be fully applied), right click on them and select "Prefab -> Unpack Completely" to unpack the prefabs, and export the mod again.
+Try to apply the changes. If you still see the vertical lines (which means the changes could not be fully applied), right click on them and select "Prefab → Unpack Completely" to unpack the prefabs, and export the mod again.

@@ -32,7 +32,7 @@ iOS 设备上打开 iFacialMocap，右上角点击齿轮图标进入设置界面
 ## 属性
 
 * 角色：选择面捕要应用到的角色。
-* 端口：Warudo 接收数据使用的端口。可以在 iFacialMocap -> 设置 -> Details Settings -> Port 修改。
+* 端口：Warudo 接收数据使用的端口。可以在 iFacialMocap → 设置 → Details Settings → Port 修改。
 * 校正：校正头部的位置和旋转，让角色望向正前方。
 * 头部移动范围：头部上下左右前后的移动范围。
 * 允许头部上下移动：是否允许头部上下的移动。
