@@ -4,6 +4,10 @@ sidebar_position: 20
 
 # Character Mod
 
+:::caution
+This page is a work in progress. Information may be incomplete or inaccurate.
+:::
+
 Warudo can use any Unity humanoid rig as a [character](../assets/character/)'s source.
 
 :::info

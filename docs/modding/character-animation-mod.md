@@ -4,6 +4,10 @@ sidebar_position: 50
 
 # Character Animation Mod
 
+:::caution
+This page is a work in progress. Information may be incomplete or inaccurate.
+:::
+
 Warudo can use any Unity [AnimationClip](https://docs.unity3d.com/ScriptReference/AnimationClip.html) as a [character animation](../assets/character/#animation)'s source.
 
 ## Setup

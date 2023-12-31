@@ -4,6 +4,10 @@ sidebar_position: 30
 
 # Environment Mod
 
+:::caution
+This page is a work in progress. Information may be incomplete or inaccurate.
+:::
+
 Warudo can use any Unity [scene](https://docs.unity3d.com/Manual/CreatingScenes.html) as an [environment](../assets/environment.md)'s source.
 
 ## Prerequisites

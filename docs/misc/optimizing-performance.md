@@ -4,15 +4,20 @@ sidebar_position: 10
 
 # Optimizing Performance
 
-Never use 4K. Please.
+:::caution
+This page is a work in progress. Information may be incomplete or inaccurate.
+:::
 
-1920 x 1080
+[//]: # (TODO:)
 
-Limit FPS if possible.
+[//]: # ()
+[//]: # (Never use 4K. Please. Maximum 1920 x 1080 resolution.)
 
-MediaPipe GPU usage.
+[//]: # ()
+[//]: # (Limit FPS if possible.)
 
-
+[//]: # ()
+[//]: # (MediaPipe GPU/CPU.)
 
 ## Warudo's frame rate drops dramatically when running simultaneously with other 3D applications/games (e.g., Apex Legends).
 

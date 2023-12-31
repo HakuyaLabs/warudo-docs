@@ -4,6 +4,10 @@ sidebar_position: 10
 
 # Mod SDK
 
+:::caution
+This page is a work in progress. Information may be incomplete or inaccurate.
+:::
+
 By using Unity + Warudo Mod SDK, you can create mods including [characters](character-mod.md), [character animations](character-animation-mod.md), [props](prop-mod.md), [environments](environment-mod.md), and even [write C# plugins](#user-content-fn-1)[^1] to add new resource types and blueprint node types to Warudo.
 
 The mods exported by the Mod SDK have a `.warudo` extension and can be recognized by Warudo when placed in the corresponding subfolder of the Warudo data folder.
