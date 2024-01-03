@@ -79,7 +79,7 @@ Note that we have changed **Scale Vector3 → Vector3** to (1, 1, 1), and **Offs
 
 To see why this works, let's run through the calculations again. When we puff our cheeks, the maximum value would be (1, 1, 1) + (1, 1, 1) = (2, 2, 2), and the minimum value would be (0, 0, 0) + (1, 1, 1) = (1, 1, 1). That's exactly what we want!
 
-## On Update
+## On Update {#on-update}
 
 I hope you hated manually triggering the Get Character Bone Scale node as much as I did. Indeed, we can't be clicking in our blueprint every time we want to inflate our character's head. Only if there is a way to automatically trigger the node... Wait, there is?
 
@@ -91,7 +91,7 @@ The **On Update** node is an event node that is triggered every frame when Warud
 Remember you can add nodes after the Get Character Bone Scale node to trigger more effects using your cheeks! Try to add a **Set Character BlendShape** node to activate a blendshape on your character when you puff your cheeks. Hint: Set Character BlendShape → Target Value is a decimal number between 0 and 1, so you can connect Get Character BlendShape → Value directly to it.
 :::
 
-## Resetting Bone Scale
+## Resetting Bone Scale {#resetting-bone-scale}
 
 Now you can use this blueprint to inflate your character's head in your streams, but you probably don't want to enable this effect all the time. So, because you know event nodes in a disabled blueprint will not be triggered, you decide to only enable the blueprint when you want it and disable it afterwards.
 

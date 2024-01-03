@@ -4,7 +4,7 @@ sidebar_position: 40
 
 # Karaoke Time
 
-Who doesn't love to karoake on stream? But now we are in the 3D world, let's add some realism by making our character hold a microphone. This tutorial will show you how to do just that: toggling a singing pose and a microphone prop with a hotkey.
+Who doesn't love to karaoke on stream? But now we are in the 3D world, let's add some realism by making our character hold a microphone. This tutorial will show you how to do just that: toggling a singing pose and a microphone prop with a hotkey.
 
 <div style={{width: '100%'}} className="video-box"><video controls loop src="/doc-img/karaoke.mp4" /></div>
 <p class="img-desc">Singing my heart out!</p>

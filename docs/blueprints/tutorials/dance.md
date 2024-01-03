@@ -83,7 +83,7 @@ First, let's remove the connection between If Branch ↔ Play Character One Shot
 
 The Switch On Integer node works like this: when the node is triggered, it will check the value of the **Input Integer** data input, and trigger the corresponding flow output. For example, if Input Integer is 1, the flow output labeled 1 will be triggered; if Input Integer is 2, the flow output labeled 2 will be triggered; and so on.
 
-Let's connect each flow output to a different outcome. For example, I have connected the flow output labeled 1 to the Play Character One Shot Overlay Animation node, 2 to a **Play Sound** node, and 3 to a **Spawn Particle** node:
+Let's connect each flow output to a different outcome. For example, I have connected the flow output labeled 1 to the Play Character One Shot Overlay Animation node, 2 to a **Play Sounds** node, and 3 to a **Spawn Particle** node. Remember to set the **Source** option of both nodes:
 
 ![](/doc-img/en-blueprint-dance-8.png)
 
@@ -91,7 +91,7 @@ Now let's test it! Manually set **Switch On Integer → Input Integer** to any n
 
 ![](/doc-img/en-blueprint-dance-9.png)
 
-The last thing we need to do is to randomize the Input Integer. You already guessed it: there is a **Generate Random Integer** node! We set **Value Max** to 3, so that it outputs an integer between 1 and 3.
+The last thing we need to do is to randomize the Input Integer. You may have already guessed it: there is a **Generate Random Integer** node! We set **Value Min** to 1 and **Value Max** to 3, so that it outputs an integer between 1 and 3.
 
 ![](/doc-img/en-blueprint-dance-10.png)
 

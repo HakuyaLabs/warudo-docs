@@ -14,7 +14,7 @@ Warudo is an avatar animation software specifically designed for 3D VTuber lives
 
 Warudo is a comprehensive, feature-packed 3D VTubing software designed for both casual and professional users. It offers support for [a wide variety of motion capture systems](mocap/overview.md), so you can both stream at home or at a professional mocap studio. It also offers a wide range of features, including posing your character with 500+ idle animations, integration with livestreaming platforms, a node-based visual scripting system, and many more.
 
-Warudo is also extremely customizable. It provides a Mod SDK for importing any Unity-compatible 3D assets, and a C# scripting SDK for those inclined to develop custom features, making it versatile for both users and developers.
+Warudo is also extremely customizable. It provkides a Mod SDK for importing any Unity-compatible 3D assets, and a C# scripting SDK for those inclined to develop custom features, making it versatile for both users and developers.
 
 Here are just a few cool examples from the Warudo community:
 
