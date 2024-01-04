@@ -45,7 +45,7 @@ We start with the normal scale (1, 1, 1), then squashed a little bit (1.33, 0.83
 
 Now go ahead and press C a few times, and you will see the head is squashed more and more flat, while resetting every 4 times!
 
-## Variables
+## Variables {#variables}
 
 We can call it a day, but you know we always want to make things more interesting. What if we want to squash the head 10 times? Or 100 times? Creating 100 flow outputs and 100 Set Character Bone Scale nodes is not a good idea; there must be a better way.
 

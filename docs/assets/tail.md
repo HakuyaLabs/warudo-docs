@@ -16,7 +16,7 @@ Wag your tail! The tail asset animates the tail bones on your character. It can 
 </div>
 </div>
 
-## Setup
+## Setup {#setup}
 
 To set up a tail, simply select a **Parent Asset** that the tail belongs to. Then, use the **Path** dropdown list to select the root bone of the tail.
 
