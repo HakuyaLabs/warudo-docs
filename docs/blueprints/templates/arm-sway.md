@@ -13,7 +13,7 @@ Arm sway is a common effect in Live2D models that adds a bit of life to the char
 
 Download the blueprint below and import it into your scene.
 
-<a href="/blueprints/arm-sway.json" target="_blank">
+<a href="/blueprints/arm-sway.json" target="_blank" download>
 <div className="file-box">
 <p>
 arm-sway.json

@@ -37,7 +37,7 @@ Finally, you should have already set up face tracking for your character.
 
 Download the blueprint below and import it into your scene.
 
-<a href="/blueprints/eye-wiggle.json" target="_blank">
+<a href="/blueprints/eye-wiggle.json" target="_blank" download>
 <div className="file-box">
 <p>
 eye-wiggle.json
