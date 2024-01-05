@@ -54,7 +54,7 @@ If you would like to access prop tracking data in blueprints, you can use the **
 
 ## Frequently Asked Questions
 
-Please refer to [Overview](overview#FAQ) and [Customizing Pose Tracking](pose-tracking#FAQ) for common questions.
+Please refer to [Overview](overview#FAQ) and [Customizing Pose Tracking](body-tracking#FAQ) for common questions.
 
 ### My character is in extremely weird poses.
 

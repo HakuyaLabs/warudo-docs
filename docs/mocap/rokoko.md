@@ -30,7 +30,7 @@ Calibration of Rokoko hardware is done in Rokoko Studio.
 
 ## Frequently Asked Questions
 
-Please refer to [Overview](overview#FAQ) and [Customizing Pose Tracking](pose-tracking#FAQ) for common questions.
+Please refer to [Overview](overview#FAQ) and [Customizing Pose Tracking](body-tracking#FAQ) for common questions.
 
 ### My tracking drifts over time.
 

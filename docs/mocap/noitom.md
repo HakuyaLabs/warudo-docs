@@ -18,7 +18,7 @@ Calibration of Noitom hardware is done in Noitom Axis Studio or Axis Neuron.
 
 ## Frequently Asked Questions
 
-Please refer to [Overview](overview#FAQ) and [Customizing Pose Tracking](pose-tracking#FAQ) for common questions.
+Please refer to [Overview](overview#FAQ) and [Customizing Pose Tracking](body-tracking#FAQ) for common questions.
 
 ### My tracking drifts over time.
 

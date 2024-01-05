@@ -18,7 +18,7 @@ Calibration of Virdyn hardware is done in VDMocapStudio. You can also use **Vird
 
 ## Frequently Asked Questions
 
-Please refer to [Overview](overview#FAQ) and [Customizing Pose Tracking](pose-tracking#FAQ) for common questions.
+Please refer to [Overview](overview#FAQ) and [Customizing Pose Tracking](body-tracking#FAQ) for common questions.
 
 ### My tracking drifts over time.
 

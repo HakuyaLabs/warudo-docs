@@ -34,7 +34,7 @@ Calibration of Sony Mocopi is done in the Mocopi app.
 
 ## Frequently Asked Questions
 
-Please refer to [Overview](overview#FAQ) and [Customizing Pose Tracking](pose-tracking#FAQ) for common questions.
+Please refer to [Overview](overview#FAQ) and [Customizing Pose Tracking](body-tracking#FAQ) for common questions.
 
 ### My tracking drifts over time.
 

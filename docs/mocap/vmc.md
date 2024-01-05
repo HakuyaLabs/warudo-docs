@@ -38,7 +38,7 @@ Calibration of VMC-compatible tracking systems is done in the external applicati
 
 ## Frequently Asked Questions
 
-Please refer to [Overview](overview#FAQ) and [Customizing Pose Tracking](pose-tracking#FAQ) for common questions.
+Please refer to [Overview](overview#FAQ) and [Customizing Pose Tracking](body-tracking#FAQ) for common questions.
 
 ### My character is in extremely weird poses.
 
