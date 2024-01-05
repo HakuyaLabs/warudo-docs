@@ -4,20 +4,30 @@ sidebar_position: 50
 
 # Character Animation Mod
 
-:::caution
-This page is a work in progress. Information may be incomplete or inaccurate.
-:::
+Have some [Animation Clips](https://docs.unity3d.com/Manual/AnimationClips.html) that you want to use in Warudo? A character animation mod is what you need!
 
-Warudo can use any Unity [AnimationClip](https://docs.unity3d.com/ScriptReference/AnimationClip.html) as a [character animation](../assets/character/#animation)'s source.
+:::caution
+If you have an animation that animates non-bone transforms or material properties, you should consider other methods of adding these animations to your character. See [Character Mod](character-mod#animations) for details.
+:::
 
 ## Setup
 
-:::info
-If you have created animations using Blender or another tool and exported them as .fbx, after importing them into Unity, you need to expand the .fbx file, select the AnimationClip (indicated by a triangle icon) inside, and press Ctrl+D to create a copy.
+### Step 1: Prepare Animation Clip
+
+If you already have an **Animation Clip** (indicated by a cyan triangle icon) in your project, great! You can skip this step.
+
+If your animation is a FBX file, first make sure **Animation Type** is set to Humanoid in the rig import settings:
+
+![](pathname:///doc-img/en-mod-14.png)
+
+Then, expand the FBX file, select the inner **Animation Clip** (indicated by a cyan triangle icon), and press Ctrl+D to create a copy that is outside the FBX file.
 
 ![](pathname:///doc-img/en-character-animation-mod-1.webp)
 
-Then, perform the following steps on the duplicated AnimationClip (in this example, the outer `AGIA_Idle_cat_01` AnimationClip indicated by a triangle icon).
-:::
+### Step 2: Rename Animation Clip
 
-Name the AnimationClip **"Animation"** and ensure that it is placed in the mod folder (can be placed in any subfolder). Select "Warudo" → "Build Mod," and place the generated `.warudo` file into the "CharacterAnimations" subfolder in the Warudo data folder.
+Rename the Animation Clip to **"Animation"**, and make sure it is placed in the mod folder (can be placed in any subfolder).
+
+### Step 3: Export Mod
+
+Select **Warudo → Build Mod** and make sure the generated `.warudo` file is put into the `CharacterAnimations` data folder.

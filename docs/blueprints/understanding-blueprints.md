@@ -2,7 +2,7 @@
 sidebar_position: 10
 ---
 
-# Understanding Blueprints
+# Creating Your First Blueprint
 
 It is completely normal to feel overwhelmed when you first open the node editor. There are so many nodes, and so many things you can do with them! But don't worry, we will walk you through the basics of blueprints in this section.
 

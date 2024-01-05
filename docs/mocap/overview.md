@@ -4,6 +4,8 @@ sidebar_position: 10
 
 # Overview
 
+![](pathname:///doc-img/mocap-cover.jpg)
+
 Whether you are streaming at home or at a professional mocap studio, Warudo has you covered. Currently, Warudo supports the following motion capture systems:
 
 * Webcam

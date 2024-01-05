@@ -4,6 +4,20 @@ sidebar_position: 100
 
 # Sharing Your Mod
 
-:::caution
-This page is a work in progress. Information may be incomplete or inaccurate.
-:::
+Once you have created a mod, you can share it with others by uploading it to our [Steam Workshop](https://steamcommunity.com/app/2079120/workshop/). It is just a few clicks away!
+
+## Tutorial
+
+Go to the **Discover** tab and click on **Published Items → Create Item**:
+
+![](pathname:///doc-img/en-sharing-mod-1.png)
+
+Fill out the upload form in the popup window:
+
+![](pathname:///doc-img/en-sharing-mod-2.png)
+
+In the **Files** list, you can add files to upload by clicking on the **+** button and selecting the file.
+
+![](pathname:///doc-img/en-sharing-mod-3.png)
+
+Once you are done, just click on **OK** and wait for the upload to finish. Easy, right?

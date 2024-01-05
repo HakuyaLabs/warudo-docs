@@ -4,53 +4,74 @@ sidebar_position: 20
 
 # Character Mod
 
-:::caution
-This page is a work in progress. Information may be incomplete or inaccurate.
-:::
+You can import any character model into Warudo as long as they can be imported into Unity! This includes FBX models or [VRChat avatars](https://booth.pm/en/search/avatar?tags%5B%5D=3D+Character). Even if you are using a VRM model, there are still benefits to creating a character mod, such as adding custom shaders or better physics components such as [Dynamic Bone](https://assetstore.unity.com/packages/tools/animation/dynamic-bone-16743) and [Magica Cloth](https://assetstore.unity.com/packages/tools/physics/magica-cloth-160144).
 
-Warudo can use any Unity humanoid rig as a [character](../assets/character/)'s source.
+## Setup
 
-:::info
-If your model is not set to humanoid rig, go to the model import options in Unity and set the model's "Animation Type" to Humanoid, then click Apply.
+### Step 1: Prepare Model
+
+First, import the character model into the modding project. It should be a humanoid model with an [Animator](https://docs.unity3d.com/ScriptReference/Animator.html) component. If your model does not have an Animator component, go to the model import settings and set **Animation Type** to Humanoid, then click **Apply**.
 
 ![](pathname:///doc-img/en-character-mod-1.webp)
-:::
 
-Warudo is compatible with the following components:
-
-* [VRM](https://vrm.dev/en/univrm/) compnents
-* [Dynamic Bones](https://assetstore.unity.com/packages/tools/animation/dynamic-bone-16743) 1.3.2
-* [VRC PhysBones](https://docs.vrchat.com/docs/physbones) (Automatically converted to Dynamic Bones at runtime)
-* [Magica Cloth](https://assetstore.unity.com/packages/tools/physics/magica-cloth-160144) 1.12.11
-
-:::tip
-Since Warudo allows you to package C# scripts into your mod, you can add any third-party components as you like; but be aware of certain [limitations](https://tira.gitbook.io/warudo/advanced/mod-sdk).
-:::
-
-## Prerequisites
-
-1. If you have an imported model (such as a FBX model), make sure "R/W Enabled" is checked in the import settings.
+If you are using a FBX model, make sure **R/W Enabled** is checked in the model import settings.
 
 ![](pathname:///doc-img/en-character-mod-2.webp)
 
-2\. You must put an [Animator](https://docs.unity3d.com/ScriptReference/Animator.html) on your character GameObject. If you imported a FBX or VRM, it should already have it.
+### Step 2: Setup Character
 
-## Automatic Setup (Recommended)
-
-Place your character in the scene and select it. Select "Warudo" → "Setup Character..." → "Setup selected GameObject as character mod."
+Place your character in the scene and select it. Select **Warudo → Setup Character...** in the menu bar. In the Setup Character window, select **Setup selected GameObject as character mod**:
 
 ![](pathname:///doc-img/en-character-mod-3.webp)
 
-Wait for a little bit, and you should see a prefab named **"Character"** is generated in the mod folder:
+You should see a prefab named **Character** is generated in the mod folder:
 
 ![](pathname:///doc-img/en-character-mod-4.webp)
 
-Select "Warudo" → "Build Mod" and place the generated `.warudo` file into the Characters subfolder in the Warudo data folder.
+:::tip
+If you notice the character's bones become twisted, please refer to the [Normalizing Bones](#normalize-bones) section.
+:::
 
-## Manual Setup
+### Step 3: Export Mod
 
-In case the automatic setup fails for some reason (e.g., bones become twisted), you can still create a new character mod manually by naming any character prefab as **"Character"** and placing it in the mod folder (can also be placed in a subfolder). Then, select "Warudo" → "Build Mod" and place the generated `.warudo` file into the Characters subfolder in the Warudo data folder.
+Select **Warudo → Build Mod** and make sure the generated `.warudo` file is put into the `Characters` data folder.
+
+## Third-Party Components
+
+You can add Unity components to your character mod as you like. Here are some commonly used components:
+
+* [VRM](https://vrm.dev/en/univrm/) components, such as VRM Spring Bones, VRM Spring Bone Colliders
+* [Animation Rigging](https://docs.unity3d.com/Packages/com.unity.animation.rigging@latest) components, such as Rotation Constraint
+* [Dynamic Bone](https://assetstore.unity.com/packages/tools/animation/dynamic-bone-16743) 1.3.2
+* [VRC PhysBones](https://docs.vrchat.com/docs/physbones) (Automatically converted to Dynamic Bone at runtime)
+* [Magica Cloth](https://assetstore.unity.com/packages/tools/physics/magica-cloth-160144) 1.12.11 ([Magica Cloth 2](https://assetstore.unity.com/packages/tools/physics/magica-cloth-2-242307) support is coming soon!)
+
+Note that you need to import the corresponding Unity packages for Dynamic Bone and Magica Cloth, as they are not included in Warudo SDK.
+
+Since Warudo allows you to package C# scripts into your mod, you can also use other Unity components! However, please note the limitations described in the [Custom C# Scripts](mod-sdk#custom-scripts) section.
+
+## Animations
+
+You may want to add custom animations to your character, such as changing hair color or flapping wings. Depending on the nature of your animation, you can use one of the following methods:
+
+* **Animation controls human bones only:** Create a [character animation mod](character-animation-mod) and play using any character animation nodes in Warudo or Character → Overlaying Animations.
+* **Animation controls material properties:** Use Warudo's character expression system (Character → Expressions).
+* **Animation controls non-bone transforms:** Add an [Animator Controller](https://docs.unity3d.com/Manual/class-AnimatorController.html) to the Animator component, and use [Feline's Animator Parameter Setter Nodes](https://steamcommunity.com/sharedfiles/filedetails/?id=3005732826&searchtext=animator+) to access the Animator Controller.
 
 :::info
-If you do the manual setup and your character uses [Magica Cloth](https://assetstore.unity.com/packages/tools/physics/magica-cloth-160144), it is essential to ensure that the model's skeleton is in the T-pose and all bone rotations are 0 before importing it into Unity. Failure to do so will cause Magica Cloth to malfunction in Warudo.
+If you are reusing a VRChat model, you can also just use the Animator Controller that comes with the model. However, the first 2 methods integrate better with Warudo's motion capture and animation system, thus are recommended.
+:::
+
+## Normalizing Bones {#normalize-bones}
+
+Bone normalization refers to the process of ensuring the bones in a model have zero rotation in the T-pose. You can check if a model has normalized bones by importing it into Unity and checking 1. if the model is in the T-pose, and 2. if all bone transforms have (0, 0, 0) rotation _before_ you use Warudo SDK to set up the character. The **Setup Character** window will also warn you if the model does not have normalized bones:
+
+![](pathname:///doc-img/en-mod-11.png)
+
+If after the character setup, your character's bones become twisted, it is likely that the model did not have normalized bones, and Warudo SDK failed to automatically normalize the bones without breaking the model. In this case, you will need to manually normalize the bones _before_ importing the FBX model into Unity.
+
+There are many ways to normalize bones in modeling tools such as Blender or Maya; however, the most reliable way is creating a [VRM](https://vrm.dev/en/univrm/) model from the FBX model, and then importing the VRM model into Unity. Since VRM models are guaranteed to have normalized bones, you can be sure that the bones will not be twisted after setting up the character using Warudo SDK.
+
+:::caution
+If you are using Blender, you should use a third-party add-on such as [Better FBX Importer & Exporter](https://blendermarket.com/products/better-fbx-importer--exporter) to export the FBX model. Blender's built-in FBX exporter does not seem to export normalized bones correctly, according to our users.
 :::

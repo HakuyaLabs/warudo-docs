@@ -4,6 +4,8 @@ sidebar_position: 0
 
 # Overview
 
+![](pathname:///doc-img/assets-cover.jpg)
+
 Assets are the building blocks of Warudo. They are the components that make up your scene. For example, a character is an asset, a prop is an asset, and a camera is also an asset. Assets can be referenced in [blueprints](../blueprints/overview) to add further functionality to your scene.
 
 ## Interface

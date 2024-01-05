@@ -4,6 +4,8 @@ sidebar_position: 10
 
 # Overview
 
+![](pathname:///doc-img/blueprints-cover.jpg)
+
 Blueprints are a flexible and powerful visual scripting system enabling anyone to create unique interactions for their VTubing setup, utilizing concepts and tools that are typically reserved for programmers. Blueprints are created and edited using the Warudo editor, and all changes are reflected in realtime in the scene.
 
 A blueprint is, boiled down, a flowchart. It defines **"When X happens, do Y."** Let's take a look at some toy examples:

@@ -2,46 +2,65 @@
 sidebar_position: 10
 ---
 
-# Mod SDK
+# Overview
 
-:::caution
-This page is a work in progress. Information may be incomplete or inaccurate.
-:::
+![](pathname:///doc-img/mod-cover.jpg)
 
-By using Unity + Warudo Mod SDK, you can create mods including [characters](character-mod.md), [character animations](character-animation-mod.md), [props](prop-mod.md), [environments](environment-mod.md), and even [write C# plugins](#user-content-fn-1)[^1] to add new resource types and blueprint node types to Warudo.
+Warudo provides a complete modding system that allows you to import your own 3D assets into Warudo, including:
 
-The mods exported by the Mod SDK have a `.warudo` extension and can be recognized by Warudo when placed in the corresponding subfolder of the Warudo data folder.
+* [Characters](character-mod)
+* [Character Animations](character-animation-mod)
+* [Props](prop-mod)
+* [Particles](particle-mod)
+* [Environments](environment-mod)
+
+What makes Warudo mods unique is that they can include [C# MonoBehaviour scripts](https://docs.unity3d.com/ScriptReference/MonoBehaviour.html), enabling you to add interactivity to your mods. For example, you can add a script to your character mod to animate your character's ears, or add a script to your environment mod to control the lighting. To interact with Warudo's built-in components, please refer to the [Scripting](../scripting/overview) section.
+
+Mods in Warudo are created using the Warudo SDK. A SDK is basically a fancy way of saying "a set of tools that help you create mods," in this case, a Unity project. Mods exported by the Warudo SDK have a `.warudo` file extension and can be recognized by Warudo when placed in the corresponding data folders. You can share your mod files with others directly, or upload to our [Steam Workshop](https://steamcommunity.com/app/2079120/workshop/) via the **Discover** tab.
+
+![](pathname:///doc-img/en-mod-8.png)
+<p class="img-desc">Browsing and sharing mods in the Discover tab.</p>
 
 ## Setup
 
-First, make sure you have installed [Unity 2021.3.18f1](https://unity.com/).
+Let's get started! First, make sure you have installed [Unity 2021.3.18f1](https://unity.com/). Newer or older versions of Unity are not supported, so please make sure you have the correct version installed.
 
-### **Option 1 (NEW): Download our mod project template**
+If you have no experience with Unity, we recommend going through a few beginner tutorials to get familiar with the Unity editor. [Unity Learn](https://learn.unity.com/) is a great place to start!
+
+There are two ways to set up the Warudo SDK in Unity: you can either download our modding project template, or manually import the SDK `.unitypackage` into your project. We recommend the first option, as it is easier and less error-prone. The second option is more suitable for updating an existing modding project.
+
+### Option 1: Modding Project Template
 
 Download the following project and extract the contents anywhere, say `C:\WarudoModding`.
 
-<a href="/sdk/Warudo-SDK-0.10.0-Mod-Project.zip" target="_blank">
+<a href="/sdk/Warudo SDK 0.12.0 Modding Project.zip" target="_blank">
 <div className="file-box">
 <p>
-Warudo-SDK-0.10.0-Mod-Project.zip
+Warudo SDK 0.12.0 Modding Project.zip
 </p></div>
 </a>
 
-In Unity Hub, click on **"Open"** and select the mod project folder (such as `C:\WarudoModding`). Then wait for Unity to launch the project.
+In Unity Hub, click on **"Add"** and select the mod project folder (such as `C:\WarudoModding`):
 
-:::info
-When you open the mod project for the first time, Unity can take 5-10 minutes to download dependencies and set up the project.
-:::
+![](pathname:///doc-img/en-mod-9.png)
 
-Check the console for any errors. If there are none, you are all set! Now you may [create your first mod.](mod-sdk.md#creating-your-first-mod)
+Then wait for Unity to launch the project. When you open the mod project for the first time, Unity can take 5-10 minutes to set up the project.
+
+Check the console for any errors:
+
+![](pathname:///doc-img/en-mod-10.png)
+
+If there are none, you are all set! Now go ahead and [create your first mod](creating-your-first-mod).
 
 :::tip
-If you see some errors, keep in mind that some "errors" are really just warnings that can be cleared. Try click on "Clear" to see if these errors can be removed.
+If you see errors in the console, try click on "Clear" to see if these errors can be removed. If you are still having trouble, please reach out to us on [Discord](https://discord.gg/warudo).
 :::
 
-### **Option 2: Manually import Mod SDK into your project**
+### Option 2: Manual Installation
 
-You can also import Warudo Mod SDK into an existing Unity project, but we **strongly recommend creating a new project instead, and copying assets from your old projects to the new project.** Mod SDK may override many of your project's settings (e.g. tags, layers, quality levels) which may be undesired.
+:::caution
+You should only use this option if you are updating an existing modding project, or in the very rare case, the first option does not work for you.
+:::
 
 After opening the Unity project, open the `Packages/manifest.json` file under your Unity project folder (note that this file is not visible in the Unity editor) and add the following **9** dependencies in the `dependencies` section:
 
@@ -70,16 +89,16 @@ If you encounter an error with the message `An error occurred while resolving pa
 To resolve this issue, you need to download Git from [https://git-scm.com/download](https://git-scm.com/download) and then restart both Unity and Unity Hub.
 :::
 
-Confirm that the "Api Compatibility Level" in "File → Build Settings... → Player Settings... → Other Settings" is set to .NET Framework.
+Confirm that the **Api Compatibility Level** in **File → Build Settings... → Player Settings... → Other Settings** is set to .NET Framework.
 
 ![](pathname:///doc-img/en-mod-sdk-2.webp)
 
-Download the SDK and import it into your Unity project, either by creating a new project or using an existing one.
+Download the following `.unitypackage` and import it into your Unity project:
 
-<a href="/sdk/WarudoSDK-0.10.0.unitypackage" target="_blank">
+<a href="/sdk/Warudo SDK 0.12.0.unitypackage" target="_blank">
 <div className="file-box">
 <p>
-WarudoSDK-0.10.0.unitypackage
+Warudo SDK 0.12.0.unitypackage
 </p></div>
 </a>
 
@@ -99,44 +118,45 @@ Please uncheck the corresponding folders from import, or your components will be
 * `Plugins/RootMotion/FinalIK`
 * `Plugins/MagicaCloth`
 * `Plugins/RootMotion/PuppetMaster`
-
 :::
 
-Check the console for any errors. If there are none, you are all set! Now you may [create your first mod.](mod-sdk.md#creating-your-first-mod)
+Check the console for any errors. If there are none, you are all set! Now go ahead and [create your first mod](creating-your-first-mod).
 
 :::tip
-If you see some errors, keep in mind that some "errors" are really just warnings that can be cleared. Try click on "Clear" to see if these errors can be removed.
+If you see errors in the console, try click on "Clear" to see if these errors can be removed. If you are still having trouble, please reach out to us on [Discord](https://discord.gg/warudo).
 :::
 
-## Creating Your First Mod
+## Custom Shaders {#custom-shaders}
 
-To create a new Mod, go to the menu bar and select "Warudo" → "New Mod":
+You can use any shader that is compatible with Unity's built-in rendering pipeline, such as [lilToon](https://lilxyzw.github.io/lilToon/#/) and [Poiyomi Shader](https://www.poiyomi.com/).
 
-![](pathname:///doc-img/en-mod-sdk-3.webp)
+[Warudo Pro](../pro.md) also supports the [Universal Render Pipeline](https://docs.unity3d.com/Manual/com.unity.render-pipelines.universal.html) (URP), which allows you to use URP-compatible shaders.
 
-Give your mod a name, and click "Create Mod!" to create it:
+## Custom C# Scripts {#custom-scripts}
 
-![](pathname:///doc-img/en-mod-sdk-4.webp)
-
-You should be able to see that a folder for your mod has been created under the Assets folder:
-
-![](pathname:///doc-img/en-mod-sdk-5.webp)
-
-Now you can start creating mods! How does a [prop mod](prop-mod.md) sound?
-
-## FAQ
-
-> Q: Can I use custom shaders?
-
-A: Yes! However, please note that Warudo's Steam version only supports the built-in (legacy) rendering pipeline. If you need to use the URP/HDRP pipeline, please contact [tiger@warudo.app](mailto:tiger@warudo.app).
-
-> Q: Can I use C# scripts?
-
-A: Yes! For example, in an [environment mod](environment-mod.md), the `EnvironmentSettings` script placed in the scene will be exported and packaged into the mod and will be activated (`Awake()`) when the environment is loaded. Another example would be a custom C# script put on your [character mod](character-mod.md) to animate your character's ears.
+Any C# scripts placed in the mod folder will be compiled and included in the mod. You can attach these scripts to your character, prop, or environment just like how you would do in a normal Unity project.
 
 However, please note the following limitations:
 
 * [Assembly definitions (`.asmdef`)](https://docs.unity3d.com/Manual/ScriptCompilationAssemblyDefinitionFiles.html) are not currently supported. C# scripts covered by the assembly definitions will not be packaged into the mod.
-* [ScriptableObjects ](https://docs.unity3d.com/ScriptReference/ScriptableObject.html)are not currently supported.
+* [ScriptableObjects](https://docs.unity3d.com/ScriptReference/ScriptableObject.html) are not currently supported.
+* Compiled DLLs are not currently supported. You can only include `.cs` source files.
+* Any scripts that reference the `UnityEditor` namespace are not supported.
 
-[^1]: Pending documentation.
+If you are including scripts in your mod, we recommend to set **Log Level** to All and uncheck **Clear Console On Build** in the Mod Settings window:
+
+![](pathname:///doc-img/en-mod-13.png)
+
+This provides more information when building the mod, so you can check the console for any errors. If you have checked scripts are placed in the mod folder but the build log states that no scripts are found so the compilation is skipped, it is likely that `.csproj` files were not generated correctly in your project. You need to click on **Edit → Preferences → External Tools** and click **Regenerate project files**:
+
+![](pathname:///doc-img/en-mod-12.png)
+
+Then, try building the mod again.
+
+## Backing Up Your Modding Project
+
+We recommend making a backup of your modding project regularly or use [Unity Version Control](https://unity.com/solutions/version-control). Especially, if you are creating mods regularly, you should back up the `Asset/Packages/UMod/ExportSettings.asset` file (note this file is not visible in the Unity editor). This file stores the mod export settings, such as the mod export directory and the mod icon. If you lose this file, you will need to manually create all your mods again.
+
+:::caution
+We have received reports that some users have lost their export setting after exporting a mod. This is currently under investigation. In the meantime, we recommend backing up the `ExportSettings.asset` file regularly.
+:::
