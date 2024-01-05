@@ -4,15 +4,11 @@ side-bar-position: 11
 
 # 3D VTubing Primer
 
-:::caution
-This page is a work in progress. Information may be incomplete or inaccurate.
-:::
-
-Below is a list of frequently asked questions about 3D VTubing; they are not specific to Warudo, but are still useful to know.
+Below is a list of frequently asked questions about 3D VTubing; they are not specific to Warudo, but are still useful to know!
 
 ## What is a blendshape? {#blendshape}
 
-A blendshape is a displacement of a number of vertices on the model mesh, like the following:
+A blendshape is a set of vertices moving from one position to another, like the following:
 
 ![](pathname:///doc-img/zh-tutorials-18.gif)
 <p class="img-desc">Reference: https://developpaper.com/unity-realizes-facial-expression-transition-and-switching-animation-tutorial-through-blendshape/</p>
@@ -20,7 +16,7 @@ A blendshape is a displacement of a number of vertices on the model mesh, like t
 A blendshape's value is between 0 and 1. When the value is 0, the vertices do not move. When the value is 1, the vertices move to the target position, as shown below:
 
 ![](pathname:///doc-img/zh-tutorials-19.gif)
-<p class="img-desc">Note that BlendShape in Unity takes values from 0-100, but in Warudo (and most 3D tools) BlendShape takes values from 0-1. Reference: https://developpaper.com/unity-realizes-facial-expression-transition-and-switching-animation-tutorial-through-blendshape/</p>
+<p class="img-desc">Note that blendshapes in Unity takes values from 0-100, but in Warudo (and most 3D tools) blendshapes take values from 0-1. Reference: https://developpaper.com/unity-realizes-facial-expression-transition-and-switching-animation-tutorial-through-blendshape/</p>
 
 The list of blendshapes on a model is entirely up to the modeler (and the modeling tool). Below are a few lists of common blendshapes (for reference only; your model may have more or fewer blendshapes):
 
@@ -222,17 +218,30 @@ You may have heard others refer to blendshapes as "expressions." However, in War
 To avoid confusion, we will stick to referring blendshapes and expressions by their respective names.
 :::
 
+## What are "Perfect Sync" / ARKit blendshapes? {#arkit}
+
+ARKit blendshapes refer to the 52 parameters that are supported by Apple's ARKit face tracking. You can view a list of these blendshapes [here](https://arkit-face-blendshapes.com/). These blendshapes cover a wide range of facial expressions: blinking, smiling, frowning, sneering, etc.
+
+In late 2020, Japanese developer [hinzka](https://hinzka.hatenablog.com/entry/2020/10/12/014540) coined the term "Perfect Sync" for the process of [automatically adding the 52 ARKit blendshapes to any VRoid model](https://hinzka.hatenablog.com/entry/2020/10/12/014540). This process is now widely used in the VTubing community, and "Perfect Sync" is often used interchangeably with "ARKit blendshapes."
+
+We highly recommend adding ARKit blendshapes to your model, as it greatly improves the expressiveness of your model. If your model is created with VRoid Studio, you can use [HANA_Tool](https://booth.pm/en/items/2604269) to automatically add ARKit blendshapes to your model. Otherwise, you will need to manually add the blendshapes in modeling tools such as Blender or Maya.
+
+If you are not familiar with 3D modeling, many modelers offer the service to add ARKit blendshapes to your model. Feel free to ask in our [Discord](https://discord.gg/warudo) to find a modeler!
+
 ## What is a shader? {#shader}
 
-TODO
+A shader determines how a model is rendered. For example, the following image shows the same model rendered with different shaders:
+
+![](pathname:///doc-img/en-primer-1.png)
+<p class="img-desc">Source: [https://bibinbaleo.hatenablog.com/entry/2018/09/14/183700](https://bibinbaleo.hatenablog.com/entry/2018/09/14/183700)</p>
+
+In most 3D VTubing apps, only the Standard and MToon shaders are supported. (MToon shader is the default shader that VRM models use.) However, Warudo supports any shader that is compatible with Unity's built-in (legacy) rendering pipeline, such as [lilToon](https://lilxyzw.github.io/lilToon/#/) and [Poiyomi Shader](https://www.poiyomi.com/). For more information, please refer to the [Modding](../modding/mod-sdk) section.
 
 ## What is Inverse Kinematics (IK)? {#IK}
 
-IK stands for Inverse Kinematics, and in game engines and Warudo, IK can be understood as "making a part of the model rotate towards, or reach a desired position", without requiring an animation made by an animator. See below:
+IK stands for Inverse Kinematics. It can be understood as "making a part of the model rotate towards, or reach a desired position", without requiring an animation made by an animator. See below:
 
 ![](pathname:///doc-img/zh-assets-character.gif)
 <p class="img-desc">Source：https://medium.com/unity3danimation/overview-of-inverse-kinematics-9769a43ba956</p>
 
-## What are "Perfect Sync" / ARKit blendshapes? {#arkit}
-
-
+In Warudo, you can adjust the character asset's **Body IK** and **Look At IK** options to make the character's limbs follow a target position or look at a target position.

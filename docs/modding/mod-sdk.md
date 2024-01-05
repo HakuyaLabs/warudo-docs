@@ -1,5 +1,5 @@
 ---
-sidebar_position: 10
+sidebar_position: 0
 ---
 
 # Overview
@@ -14,9 +14,7 @@ Warudo provides a complete modding system that allows you to import your own 3D 
 * [Particles](particle-mod)
 * [Environments](environment-mod)
 
-What makes Warudo mods unique is that they can include [C# MonoBehaviour scripts](https://docs.unity3d.com/ScriptReference/MonoBehaviour.html), enabling you to add interactivity to your mods. For example, you can add a script to your character mod to animate your character's ears, or add a script to your environment mod to control the lighting. To interact with Warudo's built-in components, please refer to the [Scripting](../scripting/overview) section.
-
-Mods in Warudo are created using the Warudo SDK. A SDK is basically a fancy way of saying "a set of tools that help you create mods," in this case, a Unity project. Mods exported by the Warudo SDK have a `.warudo` file extension and can be recognized by Warudo when placed in the corresponding data folders. You can share your mod files with others directly, or upload to our [Steam Workshop](https://steamcommunity.com/app/2079120/workshop/) via the **Discover** tab.
+Mods in Warudo are created using the **Warudo SDK**. A SDK is basically a fancy way of saying "a set of tools that help you create mods," in this case, our Unity project! Mods exported by the Warudo SDK have a `.warudo` file extension and can be recognized by Warudo when placed in the corresponding data folders. You can share your mod files with others directly, or upload to our [Steam Workshop](https://steamcommunity.com/app/2079120/workshop/) via the **Discover** tab.
 
 ![](pathname:///doc-img/en-mod-8.png)
 <p class="img-desc">Browsing and sharing mods in the Discover tab.</p>
@@ -133,6 +131,8 @@ You can use any shader that is compatible with Unity's built-in rendering pipeli
 [Warudo Pro](../pro.md) also supports the [Universal Render Pipeline](https://docs.unity3d.com/Manual/com.unity.render-pipelines.universal.html) (URP), which allows you to use URP-compatible shaders.
 
 ## Custom C# Scripts {#custom-scripts}
+
+What makes Warudo mods unique is that they can include [C# MonoBehaviour scripts](https://docs.unity3d.com/ScriptReference/MonoBehaviour.html), enabling you to add interactivity to your mods. For example, you can add a script to your character mod to animate your character's ears, or add a script to your environment mod to control the lighting. To interact with Warudo's built-in components, please refer to the [Scripting](../scripting/overview) section.
 
 Any C# scripts placed in the mod folder will be compiled and included in the mod. You can attach these scripts to your character, prop, or environment just like how you would do in a normal Unity project.
 
