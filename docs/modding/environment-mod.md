@@ -68,4 +68,5 @@ Creating an environment mod is definitely trickier than creating other types of 
 * If you use baked lighting, was the lightmap directional mode set to Directional? (Or Dominant Direction / MonoSH if you use Bakery)
 * Did you have more than one Unity scene in the mod folder? If so, please delete the other scenes. (There may be scenes inside subfolders, so make sure to check all your subfolders!)
 * Did your scene have prefabs with unapplied changes? If so, please apply the changes. If you see the vertical lines (which means the changes could not be fully applied), right click on them and select **Prefab → Unpack Completely** to unpack the prefabs, and export the mod again.
+  
   ![](pathname:///doc-img/en-environment-mod-2.webp)

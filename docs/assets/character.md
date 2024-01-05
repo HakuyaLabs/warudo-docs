@@ -4,7 +4,7 @@ sidebar_position: 10
 
 # Character
 
-Characters are the core of Warudo. Warudo supports the standard [VRM](https://vrm.dev/en/univrm/) model format. If your model format is not VRM (for example, it is a MMD or a VRChat model), you can use the [Mod SDK](../../modding/mod-sdk.md) to export it to `.warudo` format and load it into Warudo.
+Characters are the core of Warudo. Warudo supports the standard [VRM](https://vrm.dev/en/univrm/) model format. If your model format is not VRM (for example, it is a MMD or a VRChat model), you can use the [Mod SDK](../modding/mod-sdk.md) to export it to `.warudo` format and load it into Warudo.
 
 Character files should be placed in the `Characters` subfolder of Warudo's data folder.
 
@@ -139,7 +139,7 @@ Body IK is used to make the character's spine or limbs follow a specified target
 ![](pathname:///doc-img/zh-assets-character.gif)
 <p class="img-desc">Body IK in a nutshell.</p>
 
-To use Body IK, simply enable it for the spine or a hand/foot, and set **IK Target** to the target that the character should follow. The IK target is usually a [camera](../camera.md), [prop](../prop.md), or an [anchor](../anchor.md). If you want to create a temporary anchor at the current position of the body part, you can click **Create Temporary IK Target Anchor At Current Position**. When you are done, you can click **Remove Temporary IK Target Anchor** to remove the temporary anchor.
+To use Body IK, simply enable it for the spine or a hand/foot, and set **IK Target** to the target that the character should follow. The IK target is usually a [camera](camera.md), [prop](prop.md), or an [anchor](anchor.md). If you want to create a temporary anchor at the current position of the body part, you can click **Create Temporary IK Target Anchor At Current Position**. When you are done, you can click **Remove Temporary IK Target Anchor** to remove the temporary anchor.
 
 :::tip
 Creating a temporary anchor allows you to fix the model's hands in an ideal position, preventing the hands from drifting left and right due to head movements. This can be quite useful for some poses.
