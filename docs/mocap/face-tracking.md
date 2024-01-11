@@ -39,6 +39,11 @@ After onboarding, you can go to the corresponding face tracking asset (e.g., iFa
     - To trigger a blendshape at a higher threshold (e.g., your character mouth is already slightly opened but your mouth is still closed), increase the bottom right value. To trigger a blendshape at a lower threshold, decrease the bottom right value.
 * **Head Movement/Rotation Intensity:** Adjust the intensity of the head movement/rotation.
 * **Body Movement Intensity:** Adjust the intensity of the automatic body movement due to head movement.
+* **Body Rotation Type:** Makes the body rotate naturally when the head rotates.
+  When set to None, the body will not rotate when the head rotates.
+  When set to Normal, the body rotates in the same direction as the head.
+  When set to Inverted, the body rotates in the same direction as the head on the X and Y axes, but in the opposite direction on the Z axis.
+  You can also set **Body Rotation Type** to Custom, which allows you to customize both the direction and magnitude of each rotation axis.
 * **Eye Movement Intensity:** Adjust the intensity of the pupil movement.
 * **Eye Blink Sensitivity:** Adjust the sensitivity of the eye blink; this is a shortcut for adjusting the sensitivity of the eye blink blendshape in **Configure BlendShapes Mapping**.
 * **Linked Eye Blinking:** If enabled, force both eyes to blink at the same time. Useful if your tracking is not accurate enough to blink each eye individually.
@@ -64,3 +69,7 @@ This is usually caused by applying ARKit tracking on a non-ARKit-compatible mode
 
 * Add ["Perfect Sync" / ARKit blendshapes](../tutorials/3d-primer#arkit) to your model. This is recommended since ARKit-based face tracking is much more expressive, and you already have the tracking data.
 * Click **Configure BlendShapes Mapping** in the tracker asset, and increase the threshold (i.e., set the bottom right value to a negative number like `-0.25`) of the ARKit mouth blendshapes `jawOpen`, `mouthFunnel`, `mouthPucker`.
+
+### My body rotates in the opposite direction when I turn my head.
+
+By default, **Body Rotation Type** is set to Inverted to mimic Live2D models and achieve a more anime look. If you want to disable this, set **Body Rotation Type** to Normal or None.

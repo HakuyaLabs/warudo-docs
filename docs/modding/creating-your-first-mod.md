@@ -53,6 +53,10 @@ By default, the **Mod Export Directory** is empty; in this case, the mod will be
 
 In Warudo, select **Menu → Open Data Folder** to open the data folder. Then, copy the path to the data folder and paste it into the **Mod Export Directory** field. Since we are creating a prop mod, we add `\Props` to the end of the path. For example, if the data folder is `C:\Program Files (x86)\Steam\steamapps\common\Warudo\Warudo_Data\StreamingAssets`, the **Mod Export Directory** should be `C:\Program Files (x86)\Steam\steamapps\common\Warudo\Warudo_Data\StreamingAssets\Props`.
 
+:::tip
+Similarly, if you are creating a character mod, you should set the **Mod Export Directory** to the `Characters` data folder, and so on.
+:::
+
 Finally, select **Warudo → Build Mod** to export the mod. After the mod is exported, you should see a `WhiteCube.warudo` in the props data folder. Now create a prop asset in Warudo and select "WhiteCube" from the **Source** dropdown. If you see a white cube in the scene, hooray! You just created your first mod!
 
 ![](pathname:///doc-img/en-mod-7.png)
@@ -64,6 +68,10 @@ The process of creating other mods is similar: create a new mod using **Warudo �
 When you create a new mod, you need to specify a name for your mod. The name of your mod is important, as it is used to identify your mod in Warudo. Please don't use generic names such as "My Mod" or "Test Mod", as it will be both difficult for others to find your mod and may cause conflicts with other mods.
 
 We recommend using a name that is unique and descriptive; you can include spaces in the name, but not special characters.
+
+:::caution
+Be careful that only one mod of the same name can be loaded at a time, which means you should not reuse the mod folder to export a different mod!
+:::
 
 ## Hot Reloading
 

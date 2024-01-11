@@ -70,8 +70,11 @@ Bone normalization refers to the process of ensuring the bones in a model have z
 
 If after the character setup, your character's bones become twisted, it is likely that the model did not have normalized bones, and Warudo SDK failed to automatically normalize the bones without breaking the model. In this case, you will need to manually normalize the bones _before_ importing the FBX model into Unity.
 
-There are many ways to normalize bones in modeling tools such as Blender or Maya; however, the most reliable way is creating a [VRM](https://vrm.dev/en/univrm/) model from the FBX model, and then importing the VRM model into Unity. Since VRM models are guaranteed to have normalized bones, you can be sure that the bones will not be twisted after setting up the character using Warudo SDK.
+There are many ways to normalize bones in modeling tools such as Blender or Maya; however, the most tried-and-tested way is creating a [VRM](https://vrm.dev/en/univrm/) model from the FBX model, and then importing the VRM model into Unity. Since VRM models are guaranteed to have normalized bones, you can be sure that the bones will not be twisted after setting up the character using Warudo SDK.
 
-:::caution
-If you are using Blender, you should use a third-party add-on such as [Better FBX Importer & Exporter](https://blendermarket.com/products/better-fbx-importer--exporter) to export the FBX model. Blender's built-in FBX exporter does not seem to export normalized bones correctly, according to our users.
-:::
+If you are a Blender user and looking to manually normalize the bones, you can use the **Set Rest Pose** option from [Cats](https://github.com/absolute-quantum/cats-blender-plugin). When you export the FBX, you should use the below settings:
+
+![](pathname:///doc-img/en-mod-15.png)
+<p class="img-desc">Credit: [@Kana_Fuyuko](https://twitter.com/Kana_Fuyuko)</p>
+
+Blender's built-in FBX exporter is known to have issues with not exporting the correct bone rotations, so if that didn't work for you, you can try using a third-party add-on such as [Better FBX Importer & Exporter](https://blendermarket.com/products/better-fbx-importer--exporter) or [Cats](https://github.com/absolute-quantum/cats-blender-plugin) to export the FBX model. 

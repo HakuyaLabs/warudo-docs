@@ -4,7 +4,11 @@ sidebar_position: 5
 
 # Upper Body Rotation
 
-By default, Warudo's face tracking does not rotate the character's upper body. This blueprint allows you to add subtle but realistic upper body rotation to your character, adding nuance to your character's body expression.
+:::caution
+As of Warudo 0.12.0, this blueprint is no longer needed, as upper body rotation is now enabled by default. See [Customizing Face Tracking](../../mocap/face-tracking) for more information.
+:::
+
+This blueprint allows you to add subtle but realistic upper body rotation to your character, adding nuance to your character's body expression.
 
 <div style={{width: '100%'}} className="video-box"><video controls loop src="/doc-img/upper-body-rotation.mp4" /></div>
 <p class="img-desc">Naturally rotating the upper body when turning the head.</p>
