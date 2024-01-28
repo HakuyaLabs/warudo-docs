@@ -4,6 +4,10 @@ sidebar_position: 30
 
 # Live2D Eye Wiggle
 
+:::caution
+As of Warudo 0.12.3, this blueprint is no longer needed; it is recommended to set up eye wiggle with the pendulum physics editor instead. See [Pendulum Physics](../../mocap/pendulum-physics) for more information.
+:::
+
 Eye wiggle is a common effect in Live2D models to make the character's eyes look more lively. This blueprint allows you to add this popular effect to your 3D model!
 
 <div style={{width: '100%'}} className="video-box"><video controls loop src="/doc-img/eye-wiggle.mp4" /></div>
