@@ -10,9 +10,9 @@ We using [Docusaurus](https://docusaurus.io/) to create website which is maked b
 ## Commands
 
 `yarn` Install dependencies  
-`yarn run:en` Start EN version  
-`yarn run:zh` Start ZH version  
-`yarn run:all` Start multi-version at different port  
+`yarn start:en` Start EN version  
+`yarn start:zh` Start ZH version  
+`yarn start:all` Start multi-version at different port  
 `yarn build` Build site
 
  
@@ -74,9 +74,9 @@ That set up package manager we used for node.js.
 Install dependencies.  
 *When project dependencies (package.json) updated, re-run this command is necessary.*
 
-**`yarn run:en`** Start EN version  
-**`yarn run:zh`** Start ZH version  
-**`yarn run:all`** Start multi-version at different port  
+**`yarn start:en`** Start EN version  
+**`yarn start:zh`** Start ZH version  
+**`yarn start:all`** Start multi-version at different port  
 
 Then you are all set, you can view local site on your machine!  
 When you change and save the docs, the browser will automatic refresh.  
