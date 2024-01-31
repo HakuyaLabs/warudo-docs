@@ -10,7 +10,7 @@ This feature is only available in [Warudo Pro](../pro).
 
 The director asset provides simple yet powerful cinematic camera control, enabling you to deliver high-quality live performances with ease.
 
-![](pathname:///doc-img/en-director-1.png)
+![](/doc-img/en-director-1.png)
 <p class="img-desc">The video switcher in the director.</p>
 
 :::tip
@@ -25,7 +25,7 @@ A director asset controls and animates a [camera](./camera) asset. You can selec
 
 The **Virtual Cameras** list contains a list of virtual cameras that the director can switch between. A virtual camera determines how the camera is positioned, oriented, and animated, when the director switches to it. You can press the hotkey shown next to the virtual camera's name to switch to that virtual camera; you can also set the **Live Camera** option directly.
 
-![](pathname:///doc-img/en-director-2.png)
+![](/doc-img/en-director-2.png)
 <p class="img-desc">Press the hotkey to switch to the virtual camera.</p>
 
 By default, the **Switcher** is enabled. The switcher UI provides an intuitive way to preview a grid of virtual cameras and switch between them. You can use **Left/Right Arrow** to go to the previous/next page, and **Mouse LMB** to switch to the selected virtual camera. Of course, you can still use the hotkeys to switch between virtual cameras.
@@ -48,7 +48,7 @@ To add animation to the virtual camera, first enable **Camera Animation** and sp
 
 For example, if you want to animate the **Field Of View** of the camera from 35 to 60, first check the checkbox next to **Field Of View**. Then, in the **Offset** field, specify the offset from the default value, which is 25 in this case.
 
-![](pathname:///doc-img/en-director-3.png)
+![](/doc-img/en-director-3.png)
 <p class="img-desc">Animating the field of view from 35 to 60.</p>
 
 You can animate virtually any option in the virtual camera, including the camera's **Follow Offset**, **Look At Offset**, etc. See below sections for more details.

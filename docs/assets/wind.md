@@ -10,7 +10,7 @@ The wind asset is used to simulate wind in the scene. It can be used to make hai
 How do I know if my model has VRM Spring Bones or Magica Cloth components? You can ask the model creator, but usually the rule of thumb is that if the model has moving hair or clothes, then it probably has VRM Spring Bones or Magica Cloth components. Note that only a `.warudo` model exported using the [Mod SDK](../modding/mod-sdk.md) can have Magica Cloth components.
 :::
 
-![](pathname:///doc-img/en-wind-1.png)
+![](/doc-img/en-wind-1.png)
 <p class="img-desc">Wind blowing the character's hair and jacket.</p>
 
 ## Setup

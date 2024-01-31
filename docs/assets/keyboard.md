@@ -6,7 +6,7 @@ sidebar_position: 40
 
 Keyboard and trackpad are special props that (when combined with a blueprint) can generate animations for the character using keyboard and touchpad, even when the hands are not motion captured.
 
-![](pathname:///doc-img/zh-keyboard-1.webp)
+![](/doc-img/zh-keyboard-1.webp)
 <p class="img-desc">No hand tracking required!</p>
 
 ## Setup

@@ -10,7 +10,7 @@ Body tracking via [Noitom Axis Studio](https://neuronmocap.com/pages/axis-studio
 
 Open Noitom Axis Studio and enable BVH streaming in **Settings → BVH Broadcasting** (toggle the switch at the top right).
 
-![](pathname:///doc-img/en-noitom-1.png)
+![](/doc-img/en-noitom-1.png)
 
 ## Calibration
 

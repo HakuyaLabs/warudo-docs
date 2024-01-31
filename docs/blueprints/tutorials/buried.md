@@ -23,7 +23,7 @@ Okay, let's create our blueprint! Spawning an animal plush is easy: just use the
 
 The answer is the **For Loop** node. As you may have guessed from the name, this node allows us to do something multiple times. But the explanation can wait. Go ahead and recreate the blueprint below. For the For Loop node, we have set **Last Index** to 100, **Interval** to 0.01; for the **Throw Prop At Character** node, we have set **Prop Source** to Tiger and **From** to Above Character Head, so that the tiger plushies will be falling onto the character's head.
 
-![](pathname:///doc-img/en-blueprint-buried-1.png)
+![](/doc-img/en-blueprint-buried-1.png)
 
 We know what the other two nodes are doing: the On Keystroke Pressed node defines a Ctrl+Shift+Z hotkey, while the Throw Prop At Character node spawns a tiger prop and throws it at the character. But what is the For Loop node doing? Let's press Ctrl+Shift+Z and see what happens.
 
@@ -32,7 +32,7 @@ We know what the other two nodes are doing: the On Keystroke Pressed node define
 
 That's a lot of tigers for sure! But how many? Let's take a closer look at the For Loop node. In plain English, the node is saying: "For each number from **First Index** (1) to **Last Index** (100), on a 0.01s **Interval**, trigger the **Loop Body** flow output." Since the Loop Body flow output is connected to the Throw Prop At Character node, in other words, we are saying: "For each number from 1 to 100, spawn a tiger prop every 0.01s and throw it at the character;" or even more simply, "spawn 100 tiger props throughout 1 second and throw them at the character."
 
-![](pathname:///doc-img/en-blueprint-buried-3.png)
+![](/doc-img/en-blueprint-buried-3.png)
 
 :::tip
 Can you guess what happens if we set **Last Index** to 1000 instead? And what if we set **Interval** to 0?
@@ -40,7 +40,7 @@ Can you guess what happens if we set **Last Index** to 1000 instead? And what if
 
 To bury our character however, we need to turn them into a ragdoll. You know the drill: the **Activate Character Ragdoll** node. Here we set the **Launch Force** to (0, -100, 0), which launches the character downwards.
 
-![](pathname:///doc-img/en-blueprint-buried-4.png)
+![](/doc-img/en-blueprint-buried-4.png)
 
 ## Randomizing the Plushies
 
@@ -48,7 +48,7 @@ So far everything is great, but there is one problem: all the plushies are tiger
 
 Well, let's take a look at the **Throw Prop At Character** node. We have set the **Prop Source** to Tiger, but see that black dot next to it? It means that we can connect something to it. In other words, instead of selecting a prop from the dropdown ourselves, we can let a node decide which prop to spawn, as long as that node has a data output that gives us a prop. That's exactly what the **Get Random Prop** node does.
 
-![](pathname:///doc-img/en-blueprint-buried-2.png)
+![](/doc-img/en-blueprint-buried-2.png)
 
 In the above, we have connected the **Prop Source** data output of the Get Random Prop node to the **Prop Source** data input of the Throw Prop At Character node. The Get Random Prop node does what it says: it randomly selects a prop from the **Props** list, or from any prop collection in the **Collections** list. In this case, we have added the "Quirky Animals" collection to the **Collections** list, so the Get Random Prop node will randomly select an animal plush prop, and output it to the Throw Prop At Character node.
 
@@ -64,7 +64,7 @@ You may have noticed that the For Loop node has a **Loop Index** data output. Th
 
 Here's an idea: connect the **Loop Index** to the **Scale** data input of the Get Random Prop node, like below. Can you guess what will happen?
 
-![](pathname:///doc-img/en-blueprint-buried-5.png)
+![](/doc-img/en-blueprint-buried-5.png)
 
 If you correctly guessed that the falling plushies will become bigger and bigger, awesome!
 
@@ -74,4 +74,4 @@ What if we want to make the plushies smaller and smaller instead? Or instead of 
 
 The **For Loop** node also has **On Loop End** and **Exit** flow outputs. The **On Loop End** flow output is triggered when the loop ends, while the **Exit** flow output is triggered immediately after the loop is started. Try adding two **Show Toast** nodes like below, and see what happens.
 
-![](pathname:///doc-img/en-blueprint-buried-6.png)
+![](/doc-img/en-blueprint-buried-6.png)

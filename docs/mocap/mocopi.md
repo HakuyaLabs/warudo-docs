@@ -15,14 +15,14 @@ Then, enter the settings page on the Mocopi app. In **External device connection
 :::tip
 If you do not know your computer's IP, you can check on the configuration page of the **Mocopi Receiver** asset.
 
-![](pathname:///doc-img/en-ifacialmocap-1.png)
+![](/doc-img/en-ifacialmocap-1.png)
 
 If multiple IPs are listed, you would need to try each one. Usually, the IP address assigned to your computer by your WiFi router starts with `192.168`. For example, in the above picture, you can first try `192.168.1.151`.
 :::
 
 Go back to the main interface, tap **Motion** on the menu bar, and tap the **SAVE** icon to switch to the **SEND** mode. Tap the green send button at the bottom to start sending tracking data.
 
-![](pathname:///doc-img/en-mocopi-1.png)
+![](/doc-img/en-mocopi-1.png)
 
 ## Calibration
 

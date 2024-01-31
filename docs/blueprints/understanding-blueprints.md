@@ -10,12 +10,12 @@ It is completely normal to feel overwhelmed when you first open the node editor.
 
 Let's start with a simple example. Suppose you want to shake the camera when the Esc key is pressed. First, click the **Add Blueprint** button in the toolbar to add a new blueprint. You can optionally rename the blueprint to something more meaningful, e.g., "Shake Camera On Esc", but we can leave it for now.
 
-![](pathname:///doc-img/en-understanding-blueprints-1.png)
+![](/doc-img/en-understanding-blueprints-1.png)
 <p class="img-desc">Adding a new blueprint.</p>
 
 This is a beautiful blueprint, but it is also completely useless. We need to add some nodes to it. Type "on keystroke" in the search bar, and you should see the **On Keystroke Pressed** node. Drag it to the node editor, and you should see something like this:
 
-![](pathname:///doc-img/en-understanding-blueprints-2.png)
+![](/doc-img/en-understanding-blueprints-2.png)
 <p class="img-desc">Adding the On Keystroke Pressed node.</p>
 
 :::tip
@@ -24,7 +24,7 @@ If you have accidentally dragged the wrong node, you can click to select the nod
 
 Awesome! Now, we need to add a node that shakes the camera. Type "shake camera" in the search bar, and you should see the **Shake Camera** node. Drag it next to the On Keystroke Pressed node, and here's a challenge for you: try to connect the On Keystroke Pressed node to the Shake Camera node like below.
 
-![](pathname:///doc-img/en-understanding-blueprints-3.png)
+![](/doc-img/en-understanding-blueprints-3.png)
 <p class="img-desc">Adding the Shake Camera node and connecting it to the On Keystroke Pressed node.</p>
 
 If you clicked on the green dot next to the **Exit** on the On Keystroke Pressed node and dragged it to the green dot next to the **Enter** on the Shake Camera node, congratulations! You have great intuition. By the way, you can remove the connection by clicking on either end of the connection and dragging it away.
@@ -41,7 +41,7 @@ Huh, the camera didn't shake at all. I wonder why?
 
 Let's take a closer look at the Shake Camera node. It has a **Camera** data input, but it is not set to anything! Let's select our camera from the dropdown:
 
-![](pathname:///doc-img/en-understanding-blueprints-4.png)
+![](/doc-img/en-understanding-blueprints-4.png)
 <p class="img-desc">Setting the **Camera** data input.</p>
 
 Let's try to press the Esc key again. If the camera shakes, congratulations! You have successfully created your first blueprint.
@@ -52,7 +52,7 @@ Now, you may wonder what are these black dots next to the data inputs on the Sha
 
 Indeed, they can! Let's drag a **Get Main Camera** node from the node palette to the node editor, click the black dot next to the **Camera** data output of the Get Main Camera node, and drag it to the black dot next to the **Camera** data input of the Shake Camera node, like this:
 
-![](pathname:///doc-img/en-understanding-blueprints-5.png)
+![](/doc-img/en-understanding-blueprints-5.png)
 <p class="img-desc">Connecting the Get Main Camera node to the Shake Camera node.</p>
 
 :::tip
@@ -89,7 +89,7 @@ Feeling a bit overwhelmed? Don't worry, we will go through many more examples in
 
 As a side note, the data types of the two ends of a data connection must be compatible. In the example above, you cannot connect **Get Main Camera → Camera** (data type: camera asset) to **Shake Camera → Sustain Time** (data type: "float," the fancy way of saying a decimal number). You can hover on the port to see its data type:
 
-![](pathname:///doc-img/en-blueprints-2.png)
+![](/doc-img/en-blueprints-2.png)
 <p class="img-desc">Hovering on a port to see its data type.</p>
 
 Most of the time you don't need to worry about data types, because we all know a camera can't be a number!
@@ -101,5 +101,5 @@ A blueprint can be disabled by clicking the eye icon next to the blueprint name.
 :::info
 You can determine if a flow is being triggered or if data is being passed by checking if there's a ball rolling on the connection:
 
-![](pathname:///doc-img/en-blueprints-overview-5.webp)
+![](/doc-img/en-blueprints-overview-5.webp)
 :::

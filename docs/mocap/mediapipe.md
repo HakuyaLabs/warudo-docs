@@ -18,7 +18,7 @@ When to use CPU? If you are playing a game that uses a lot of GPU resources, you
 
 If you use MediaPipe for hand tracking, please make sure you are at the camera center and your hands are fully visible in the camera view. You can enable **Show Camera** in the **MediaPipe Tracker** asset to see the camera view; it should look like this:
 
-![](pathname:///doc-img/en-mediapipe-1.png)
+![](/doc-img/en-mediapipe-1.png)
 
 Usually, you should place the camera above the computer screen, with your head slightly above the center of the camera view. We also recommend calibrating hand tracking before use. See [Calibration](#Calibration) for details.
 
@@ -36,7 +36,7 @@ During calibration, you should look straight ahead and keep your head still. Aft
 
 You can calibrate MediaPipe's hand tracking by clicking **Calibrate Hand Tracking** in the **MediaPipe Tracker** asset. Raise one of your hands next to your ear with your palm facing the camera. Use your other hand to press **OK** to calibrate.
 
-![](pathname:///doc-img/en-mediapipe-2.png)
+![](/doc-img/en-mediapipe-2.png)
 <p class="img-desc">During calibration, the hands should be in a relaxed posture with palm facing the camera, with fingers slightly bent if desired.</p>
 
 If you find your hands are moving too fast or too slow, you can adjust the **Hand Movement Range** option. You can also adjust the **Hand Movement Offset** option, to move the hands closer to your head, for example.

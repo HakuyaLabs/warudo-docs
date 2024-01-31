@@ -18,11 +18,11 @@ If you already have an **Animation Clip** (indicated by a cyan triangle icon) in
 
 If your animation is a FBX file, first make sure **Animation Type** is set to Humanoid in the rig import settings:
 
-![](pathname:///doc-img/en-mod-14.png)
+![](/doc-img/en-mod-14.png)
 
 Then, expand the FBX file, select the inner **Animation Clip** (indicated by a cyan triangle icon), and press Ctrl+D to create a copy that is outside the FBX file.
 
-![](pathname:///doc-img/en-character-animation-mod-1.webp)
+![](/doc-img/en-character-animation-mod-1.webp)
 
 ### Step 2: Rename Animation Clip
 

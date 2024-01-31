@@ -18,15 +18,15 @@ Creating mods the first time can be a little overwhelming. If you need help, fee
 
 To create a new mod, go to the menu bar and select **Warudo → New Mod**:
 
-![](pathname:///doc-img/en-mod-sdk-3.webp)
+![](/doc-img/en-mod-sdk-3.webp)
 
 Type "WhiteCube" in **Mod Name**, and click "Create Mod!":
 
-![](pathname:///doc-img/en-mod-1.png)
+![](/doc-img/en-mod-1.png)
 
 You should see a folder for your mod has just been created under the Assets folder:
 
-![](pathname:///doc-img/en-mod-2.png)
+![](/doc-img/en-mod-2.png)
 
 This folder which has the same name as your mod is called the **mod folder**.
 :::tip
@@ -35,19 +35,19 @@ Remember, **all assets (e.g., prefabs, shaders, materials) and scripts for your 
 
 Let's create a cube in the scene. Go to the menu bar and select **GameObject → 3D Object → Cube**:
 
-![](pathname:///doc-img/en-mod-3.png)
+![](/doc-img/en-mod-3.png)
 
 To export the cube as a mod, we must create a prefab in the mod folder. Select the cube in the scene, and drag it to the mod folder to create a prefab, which has a blue cube icon:
 
-![](pathname:///doc-img/en-mod-4.png)
+![](/doc-img/en-mod-4.png)
 
 Warudo needs to know what type of mod you are creating. Since we are creating a prop mod, we need to rename the prefab to "Prop". Right-click on the prefab and select **Rename**:
 
-![](pathname:///doc-img/en-mod-5.png)
+![](/doc-img/en-mod-5.png)
 
 We are almost done! Before exporting the mod, let's check the mod settings are correct. Select **Warudo → Mod Settings** to open the mod settings window, in which you can set the mod's name, version, author, and description. You can also specify a mod icon, which will be shown in Warudo's preview galleries.
 
-![](pathname:///doc-img/en-mod-6.png)
+![](/doc-img/en-mod-6.png)
 
 By default, the **Mod Export Directory** is empty; in this case, the mod will be exported to the project's root folder. It is often convenient to set it to the corresponding Warudo data folder, so after exporting, you can test your mod in Warudo right away!
 
@@ -59,7 +59,7 @@ Similarly, if you are creating a character mod, you should set the **Mod Export 
 
 Finally, select **Warudo → Build Mod** to export the mod. After the mod is exported, you should see a `WhiteCube.warudo` in the props data folder. Now create a prop asset in Warudo and select "WhiteCube" from the **Source** dropdown. If you see a white cube in the scene, hooray! You just created your first mod!
 
-![](pathname:///doc-img/en-mod-7.png)
+![](/doc-img/en-mod-7.png)
 
 The process of creating other mods is similar: create a new mod using **Warudo → New Mod**, put assets and scripts in the mod folder, and export the mod using **Warudo → Build Mod**. For more information on creating different types of mods, please refer to the corresponding sections in the sidebar.
 

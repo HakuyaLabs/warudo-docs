@@ -5,7 +5,7 @@ sidebar_position: 60
 
 Capture your desktop or a window and display it in the scene just like OBS. You can also display images, videos and even webpages!
 
-![](pathname:///doc-img/zh-screen-1.webp)
+![](/doc-img/zh-screen-1.webp)
 <p class="img-desc">Curved screens!</p>
 
 ## Setup
@@ -35,7 +35,7 @@ When **Content Type** is set to **Video**, you can specify a **Video Source** to
 
 When **Content Type** is set to **Browser**, you can specify a **URL** to display a webpage. You can also specify a **Custom CSS** stylesheet to be inserted into the webpage after loading. This allows you to place custom chat widgets in the 3D space:
 
-![](pathname:///doc-img/zh-screen-2.webp)
+![](/doc-img/zh-screen-2.webp)
 <p class="img-desc">Live chat in 3D!</p>
 
 ### Display

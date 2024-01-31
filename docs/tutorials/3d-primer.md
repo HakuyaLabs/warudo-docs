@@ -10,12 +10,12 @@ Below is a list of frequently asked questions about 3D VTubing; they are not spe
 
 A blendshape is a set of vertices moving from one position to another, like the following:
 
-![](pathname:///doc-img/zh-tutorials-18.gif)
+![](/doc-img/zh-tutorials-18.gif)
 <p class="img-desc">Reference: https://developpaper.com/unity-realizes-facial-expression-transition-and-switching-animation-tutorial-through-blendshape/</p>
 
 A blendshape's value is between 0 and 1. When the value is 0, the vertices do not move. When the value is 1, the vertices move to the target position, as shown below:
 
-![](pathname:///doc-img/zh-tutorials-19.gif)
+![](/doc-img/zh-tutorials-19.gif)
 <p class="img-desc">Note that blendshapes in Unity takes values from 0-100, but in Warudo (and most 3D tools) blendshapes take values from 0-1. Reference: https://developpaper.com/unity-realizes-facial-expression-transition-and-switching-animation-tutorial-through-blendshape/</p>
 
 The list of blendshapes on a model is entirely up to the modeler (and the modeling tool). Below are a few lists of common blendshapes (for reference only; your model may have more or fewer blendshapes):
@@ -214,7 +214,7 @@ The list of blendshapes on a model is entirely up to the modeler (and the modeli
 :::caution
 You may have heard others refer to blendshapes as "expressions." However, in Warudo (as well as other VTubing apps such as [VSeeFace](https://vseeface.icu)), an expression actually consists of multiple blendshape values. For example, the "crying" expression shown below is a specific combination of five blendshape values:
 
-![](pathname:///doc-img/zh-tutorials-20.webp)
+![](/doc-img/zh-tutorials-20.webp)
 To avoid confusion, we will stick to referring blendshapes and expressions by their respective names.
 :::
 
@@ -232,7 +232,7 @@ If you are not familiar with 3D modeling, many modelers offer the service to add
 
 A shader determines how a model is rendered. For example, the following image shows the same model rendered with different shaders:
 
-![](pathname:///doc-img/en-primer-1.png)
+![](/doc-img/en-primer-1.png)
 <p class="img-desc">Source: [https://bibinbaleo.hatenablog.com/entry/2018/09/14/183700](https://bibinbaleo.hatenablog.com/entry/2018/09/14/183700)</p>
 
 In most 3D VTubing apps, only the Standard and MToon shaders are supported. (MToon shader is the default shader that VRM models use.) However, Warudo supports any shader that is compatible with Unity's built-in (legacy) rendering pipeline, such as [lilToon](https://lilxyzw.github.io/lilToon/#/) and [Poiyomi Shader](https://www.poiyomi.com/). For more information, please refer to the [Modding](../modding/mod-sdk) section.
@@ -241,7 +241,7 @@ In most 3D VTubing apps, only the Standard and MToon shaders are supported. (MTo
 
 IK stands for Inverse Kinematics. It can be understood as "making a part of the model rotate towards, or reach a desired position", without requiring an animation made by an animator. See below:
 
-![](pathname:///doc-img/zh-assets-character.gif)
+![](/doc-img/zh-assets-character.gif)
 <p class="img-desc">Source：https://medium.com/unity3danimation/overview-of-inverse-kinematics-9769a43ba956</p>
 
 In Warudo, you can adjust the character asset's **Body IK** and **Look At IK** options to make the character's limbs follow a target position or look at a target position.

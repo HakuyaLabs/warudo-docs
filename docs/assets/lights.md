@@ -9,7 +9,7 @@ Light assets are used to illuminate the scene. There are three types of light as
 * **Point Light**: A point light that illuminates the scene from a specific point.
 * **Volumetric Light**: A spotlight that illuminates the scene from a specific point, with volumetric lighting effects.
 
-![](pathname:///doc-img/en-light-1.png)
+![](/doc-img/en-light-1.png)
 <p class="img-desc">Volumetric light.</p>
 
 :::info

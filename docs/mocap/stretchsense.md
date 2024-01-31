@@ -10,7 +10,7 @@ Finger tracking via [StretchSense Glove](https://stretchsense.com/).
 
 Warudo supports StretchSense Glove via the [VMC protocol](./vmc). To use StretchSense Glove with Warudo, select **StretchSense Glove** as **Secondary Pose Tracking** during the onboarding process.
 
-![](pathname:///doc-img/en-stretchsense-1.png)
+![](/doc-img/en-stretchsense-1.png)
 
 ## Calibration
 

@@ -10,7 +10,7 @@ This feature is currently in beta.
 
 The music player asset is a simple music player that can play music files in Warudo. It can be useful for karaoke streams as it downloads and displays the lyrics for the currently playing song automatically.
 
-![](pathname:///doc-img/en-music-player-1.png)
+![](/doc-img/en-music-player-1.png)
 <p class="img-desc">Playing music with lyrics.</p>
 
 ## Setup
@@ -37,5 +37,5 @@ You can add a line at the beginning of the lyrics file to specify the title imag
 
 This tells Warudo to show your title image at 22.5 seconds into the song, with a fade in duration of 1.5 seconds, a duration of 5 seconds, and a fade out duration of 1.5 seconds. The last two numbers are the width and height of the title image in pixels.
 
-![](pathname:///doc-img/en-music-player-2.png)
+![](/doc-img/en-music-player-2.png)
 <p class="img-desc">Showing a title image.</p>

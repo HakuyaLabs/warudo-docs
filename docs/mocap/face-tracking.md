@@ -8,7 +8,7 @@ sidebar_position: 20
 
 During the onboarding process, you can click **Customize Face Tracking...** to customize the tracking blueprint.
 
-![](pathname:///doc-img/en-mocap-3.png)
+![](/doc-img/en-mocap-3.png)
 <p class="img-desc">Customizing face tracking.</p>
 
 The following options are available:
@@ -22,7 +22,7 @@ The following options are available:
 :::info
 These options above affect the generated blueprint; therefore, to change these options after the setup, you need to re-run the setup, or manually modify the face tracking blueprint. **Character → Motion Capture → Blueprint Navigation** provides shortcuts to the specific parts of the blueprint that you may want to modify:
 
-![](pathname:///doc-img/en-mocap-6.png)
+![](/doc-img/en-mocap-6.png)
 :::
 
 ## Tracker Customization
@@ -32,7 +32,7 @@ After onboarding, you can go to the corresponding face tracking asset (e.g., iFa
 * **Mirrored Tracking:** If enabled, Warudo will mirror the tracking data.
 * **[BlendShape](../tutorials/3d-primer#blendshape) Sensitivity:** Adjust the sensitivity of the character's facial expressions. If your expressions are too subtle, increase the sensitivity; if your expressions are too exaggerated, decrease the sensitivity.
 * **Configure BlendShapes Mapping:** Adjust each individual blendshape's threshold and sensitivity. This is useful if you want to disable certain blendshapes, or if you want to adjust the sensitivity of each blendshape individually.
-  ![](pathname:///doc-img/en-mocap-5.png)
+  ![](/doc-img/en-mocap-5.png)
   The left two values are the range of the input blendshape value from the tracker, and the right two values are the range of the output blendshape value to the character. For example, if the input range is 0-1 and the output range is 0-2, then when the input blendshape value is 0.40, the output blendshape value will be 0.80.
     - To disable a blendshape, set the top right value to 0.
     - To make a blendshape more sensitive, increase the top right value; to make a blendshape less sensitive, decrease the top right value.

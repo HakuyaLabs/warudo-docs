@@ -42,14 +42,14 @@ Mod SDK 导出的 Mod 后缀名为 `.warudo`，放在 Warudo 数据文件夹相�
 :::caution
 如果出现错误，提示 An error occurred while resolving packages / Error adding package，点击后出现类似 `No 'git' executable was found. Please install Git on your system then restart Unity and Unity Hub.` 信息：
 
-![](pathname:///doc-img/en-mod-sdk-1.webp)
+![](/doc-img/en-mod-sdk-1.webp)
 
 请到 [https://git-scm.com/download](https://git-scm.com/download) 下载安装 Git，并重启 Unity 及 Unity Hub。
 :::
 
 确认 File → Build Settings... → Player Settings... → Other Settings → Api Compatibility Level 为 .NET Framework：
 
-![](pathname:///doc-img/en-mod-sdk-2.webp)
+![](/doc-img/en-mod-sdk-2.webp)
 
 下载 SDK 并导入到 Unity 项目内（可以新建项目，也可以是现有项目）：
 
@@ -85,15 +85,15 @@ WarudoSDK-0.10.0.unitypackage
 
 要创建一个新的 Mod，菜单栏选择「Warudo」->「New Mod」：
 
-![](pathname:///doc-img/en-mod-sdk-3.webp)
+![](/doc-img/en-mod-sdk-3.webp)
 
 在 Mod Name 处给你的 Mod 起个名，再点击「Create Mod!」即可：
 
-![](pathname:///doc-img/en-mod-sdk-4.webp)
+![](/doc-img/en-mod-sdk-4.webp)
 
 你应该能看到 Assets 文件夹下创建了 Mod 数据文件夹：
 
-![](pathname:///doc-img/en-mod-sdk-5.webp)
+![](/doc-img/en-mod-sdk-5.webp)
 
 这样就可以开始制作 Mod 了！
 

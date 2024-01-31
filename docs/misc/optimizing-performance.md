@@ -36,15 +36,15 @@ If you are running a GPU-intensive game or application alongside Warudo such as 
 
 To allow Warudo to have a higher GPU priority, first you must run Warudo as administrator. Go to your Steam library, right-click on Warudo and select **Manage → Browse local files**:
 
-![](pathname:///doc-img/zh-faq-1.webp)
+![](/doc-img/zh-faq-1.webp)
 
 Right click on Warudo.exe and click on **Properties**:
 
-![](pathname:///doc-img/zh-faq-2.webp)
+![](/doc-img/zh-faq-2.webp)
 
 Then go to the **Compatibility** tab, check **Run this program as an administrator**, and click OK.
 
-![](pathname:///doc-img/en-performance-1.png)
+![](/doc-img/en-performance-1.png)
 
 Finally, open Warudo and enable **Menu → Settings → Increase GPU Priority**.
 

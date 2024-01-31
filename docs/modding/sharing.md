@@ -10,14 +10,14 @@ Once you have created a mod, you can share it with others by uploading it to our
 
 Go to the **Discover** tab and click on **Published Items → Create Item**:
 
-![](pathname:///doc-img/en-sharing-mod-1.png)
+![](/doc-img/en-sharing-mod-1.png)
 
 Fill out the upload form in the popup window:
 
-![](pathname:///doc-img/en-sharing-mod-2.png)
+![](/doc-img/en-sharing-mod-2.png)
 
 In the **Files** list, you can add files to upload by clicking on the **+** button and selecting the file.
 
-![](pathname:///doc-img/en-sharing-mod-3.png)
+![](/doc-img/en-sharing-mod-3.png)
 
 Once you are done, just click on **OK** and wait for the upload to finish. Easy, right?

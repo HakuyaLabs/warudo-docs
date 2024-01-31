@@ -8,7 +8,7 @@ sidebar_position: 30
 
 During the onboarding process, you can click **Customize Pose Tracking...** to customize the tracking blueprint.
 
-![](pathname:///doc-img/en-mocap-4.png)
+![](/doc-img/en-mocap-4.png)
 <p class="img-desc">Customizing pose tracking.</p>
 
 ### Upper Body Trackers
@@ -17,13 +17,13 @@ For upper body trackers (e.g., MediaPipe, RhyLive, Leap Motion Controller), the 
 
 * **Use Keyboard/Trackpad:** Whether to generate animations for the character using a keyboard or trackpad, even when the hands are not tracked.
   
-  ![](pathname:///doc-img/zh-keyboard-1.webp)
+  ![](/doc-img/zh-keyboard-1.webp)
   
   After onboarding, you can adjust the keyboard/touchpad settings by clicking **Character → Motion Capture → Blueprint Navigation → Input Interfaces Animation Settings**.
   
   The keyboard and touchpad can be turned off separately by disabling either asset:
   
-  ![](pathname:///doc-img/zh-keyboard-3.webp)
+  ![](/doc-img/zh-keyboard-3.webp)
   :::danger
   When the keyboard is enabled, please avoid entering sensitive information such as passwords.
   :::
@@ -48,7 +48,7 @@ After onboarding, you can go to the corresponding pose tracking asset (e.g., Med
 
 If you want to set up a secondary pose tracking, you can use the **Secondary Pose Tracking** option during the onboarding process; this is helpful if you are using VR trackers/Mocopi for primary tracking and would like to use [MediaPipe](../mocap/mediapipe.md) or [Leap Motion Controller](../mocap/leap-motion.md) or [StretchSense Gloves](../mocap/stretchsense.md) for added-on finger tracking.
 
-![](pathname:///doc-img/en-getting-started-8.png)
+![](/doc-img/en-getting-started-8.png)
 <p class="img-desc">Setting up secondary pose tracking.</p>
 
 If you want to combine more than two pose tracking systems, you can set up the primary pose tracking first using the onboarding assistant, and then set up the subsequent pose tracking systems using **Character → Setup Motion Capture** with **Track Full Body** set to **No** and **Tracked Body Parts** set to the specific body parts you want to track with that system.

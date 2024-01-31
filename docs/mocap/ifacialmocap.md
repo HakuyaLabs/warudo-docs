@@ -21,7 +21,7 @@ If your iPhone is not compatible with Face ID, you may still be able to use iFac
 :::tip
 If you do not know your computer's IP, you can check on the configuration page of the **iFacialMocap Receiver** asset.
 
-![](pathname:///doc-img/en-ifacialmocap-1.png)
+![](/doc-img/en-ifacialmocap-1.png)
 
 If multiple IPs are listed, you would need to try each one. Usually, the IP address assigned to your computer by your WiFi router starts with `192.168`. For example, in the above picture, you can first try `192.168.1.151`.
 :::
@@ -30,11 +30,11 @@ If multiple IPs are listed, you would need to try each one. Usually, the IP addr
 
 Open the iFacialMocap app, tap on the gear icon in the upper right corner to enter the settings interface. Tap on **Destination IP address** and enter your computer's IP address.
 
-![](pathname:///doc-img/zh-ifacialmocap-1.webp)
+![](/doc-img/zh-ifacialmocap-1.webp)
 
 It's recommended to enable **Optimize for long-time streaming**, which can help reduce device overheating from prolonged use.
 
-![](pathname:///doc-img/zh-ifacialmocap-3.webp)
+![](/doc-img/zh-ifacialmocap-3.webp)
 
 ### FaceMotion3D
 

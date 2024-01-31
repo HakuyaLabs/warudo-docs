@@ -42,15 +42,15 @@ Live2D 中人人都有，但是 3D 模型中（几乎）人人没有的效果，
 
 打开面部跟踪蓝图，找到最右边的「平滑 BlendShape 列表」及「覆盖角色 BlendShape 列表」节点。在中间插入以下节点及连接即可：
 
-![](pathname:///doc-img/zh-blueprint-example-live2d-physics-1.webp)
+![](/doc-img/zh-blueprint-example-live2d-physics-1.webp)
 
 上方的节点是较好理解的——我们根据两只眼睛闭上的程度（`eyeBlinkLeft` 和 `eyeBlinkRight`），乘以 1.5，然后设置两个高光下移 BlendShape 的值：
 
-![](pathname:///doc-img/zh-blueprint-example-live2d-physics-2.webp)
+![](/doc-img/zh-blueprint-example-live2d-physics-2.webp)
 
 下面的节点就是「果冻眼」的核心了。我们获取眼睛闭上的程度（这里只取左眼 `eyeBlinkLeft`），然后输入「Float 摆锤物理」这个神奇的节点，输出值再用来设置高光旋转和高光扩大的 BlendShape：
 
-![](pathname:///doc-img/zh-blueprint-example-live2d-physics-3.webp)
+![](/doc-img/zh-blueprint-example-live2d-physics-3.webp)
 
 「Float 摆锤物理」节点和 [Live2D 的物理模拟](https://docs.live2d.com/en/cubism-editor-manual/physics-operation/)的原理是相同的。通过制定一个多段式的摆锤（见下），摆锤最上方节点的 X 坐标为输入值，而输出值就是摆锤最下方节点的 X 坐标。节点的**摆臂**属性规定了摆锤每一节的长度以及物理属性。
 

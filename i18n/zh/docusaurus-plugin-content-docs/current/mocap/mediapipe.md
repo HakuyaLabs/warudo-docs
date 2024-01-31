@@ -16,7 +16,7 @@ MediaPipe 是 [Webcam Motion Capture](https://webcammotioncapture.info/) 等软�
 * 输入摄像头：选择摄像头。**目前不支持 IP 摄像头（例如** [**DroidCam**](https://play.google.com/store/apps/details?id=com.dev47apps.droidcam\&hl=en\_US\&gl=US\&pli=1)**）。**
 * 校正：校正手部的位置。<b style={{color:"green"}}>**初次使用建议校正！**</b>
 
-![](pathname:///doc-img/zh-mediapipe-1.webp)
+![](/doc-img/zh-mediapipe-1.webp)
 <p class="img-desc">校正时的手部应保持放松的姿势，可以手指适当弯曲。</p>
 
 * 显示摄像头内容：是否显示摄像头的画面。~~（小心暴露中之人）~~
@@ -38,11 +38,11 @@ MediaPipe 是 [Webcam Motion Capture](https://webcammotioncapture.info/) 等软�
 
 <div>
 
-![](pathname:///doc-img/zh-mediapipe-2.webp)
+![](/doc-img/zh-mediapipe-2.webp)
 <p class="img-desc">禁用「肩膀旋转校正」</p>
 
  
-![](pathname:///doc-img/zh-mediapipe-3.webp)
+![](/doc-img/zh-mediapipe-3.webp)
 <p class="img-desc">启用「肩膀旋转校正」</p>
 
 </div>

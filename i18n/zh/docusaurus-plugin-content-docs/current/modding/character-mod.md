@@ -9,7 +9,7 @@ Warudo 支持任意 Humanoid Rig 作为[角色](https://tira.gitbook.io/warudo/a
 :::info
 如果模型未设置成 Humanoid Rig，在 Unity 的模型导入选项设置模型的 Animation Type（动画类型）为 Humanoid，点击 Apply（应用）即可。
 
-![](pathname:///doc-img/en-character-mod-1.webp)
+![](/doc-img/en-character-mod-1.webp)
 :::
 
 Warudo 原生支持的组件：
@@ -27,7 +27,7 @@ Warudo 原生支持的组件：
 
 1. 如果模型是外部导入的（例如 FBX 模型），需要确认导入设置的 R/W Enabled 为勾选状态。
 
-![](pathname:///doc-img/en-character-mod-2.webp)
+![](/doc-img/en-character-mod-2.webp)
 
 2\. 模型 GameObject 上必须有 [Animator](https://docs.unity3d.com/ScriptReference/Animator.html) 组件。
 
@@ -35,11 +35,11 @@ Warudo 原生支持的组件：
 
 放置角色在场景里，确保选中了 GameObject，然后选择「Warudo」->「Setup Character...」->「Setup selected GameObject as character mod」。
 
-![](pathname:///doc-img/en-character-mod-3.webp)
+![](/doc-img/en-character-mod-3.webp)
 
 等待片刻后，即可看到名为 **Character** 的 Prefab 出现在 Mod 文件夹里：
 
-![](pathname:///doc-img/en-character-mod-4.webp)
+![](/doc-img/en-character-mod-4.webp)
 
 选择「Warudo」->「Build Mod」，然后将生成的 `.warudo` 文件放进 Warudo 数据文件夹的 Characters 子文件夹里即可。
 

@@ -4,7 +4,7 @@ sidebar_position: 0
 
 # Overview
 
-![](pathname:///doc-img/mod-cover.jpg)
+![](/doc-img/mod-cover.jpg)
 
 Warudo provides a complete modding system that allows you to import your own 3D assets into Warudo, including:
 
@@ -16,7 +16,7 @@ Warudo provides a complete modding system that allows you to import your own 3D 
 
 Mods in Warudo are created using the **Warudo SDK**. A SDK is basically a fancy way of saying "a set of tools that help you create mods," in this case, our Unity project! Mods exported by the Warudo SDK have a `.warudo` file extension and can be recognized by Warudo when placed in the corresponding data folders. You can share your mod files with others directly, or upload to our [Steam Workshop](https://steamcommunity.com/app/2079120/workshop/) via the **Discover** tab.
 
-![](pathname:///doc-img/en-mod-8.png)
+![](/doc-img/en-mod-8.png)
 <p class="img-desc">Browsing and sharing mods in the Discover tab.</p>
 
 ## Setup
@@ -40,13 +40,13 @@ Warudo SDK 0.12.0 Modding Project.zip
 
 In Unity Hub, click on **"Add"** and select the mod project folder (such as `C:\WarudoModding`):
 
-![](pathname:///doc-img/en-mod-9.png)
+![](/doc-img/en-mod-9.png)
 
 Then wait for Unity to launch the project. When you open the mod project for the first time, Unity can take 5-10 minutes to set up the project.
 
 Check the console for any errors:
 
-![](pathname:///doc-img/en-mod-10.png)
+![](/doc-img/en-mod-10.png)
 
 If there are none, you are all set! Now go ahead and [create your first mod](creating-your-first-mod).
 
@@ -82,14 +82,14 @@ Return to Unity and wait for the project to reload; make sure there are no error
 :::caution
 If you encounter an error with the message `An error occurred while resolving packages / Error adding package` and clicking on it reveals a message similar to `No 'git' executable was found. Please install Git on your system then restart Unity and Unity Hub`, it means that Git is not installed on your system.
 
-![](pathname:///doc-img/en-mod-sdk-1.webp)
+![](/doc-img/en-mod-sdk-1.webp)
 
 To resolve this issue, you need to download Git from [https://git-scm.com/download](https://git-scm.com/download) and then restart both Unity and Unity Hub.
 :::
 
 Confirm that the **Api Compatibility Level** in **File → Build Settings... → Player Settings... → Other Settings** is set to .NET Framework.
 
-![](pathname:///doc-img/en-mod-sdk-2.webp)
+![](/doc-img/en-mod-sdk-2.webp)
 
 Download the following `.unitypackage` and import it into your Unity project:
 
@@ -145,11 +145,11 @@ However, please note the following limitations:
 
 If you are including scripts in your mod, we recommend to set **Log Level** to All and uncheck **Clear Console On Build** in the Mod Settings window:
 
-![](pathname:///doc-img/en-mod-13.png)
+![](/doc-img/en-mod-13.png)
 
 This provides more information when building the mod, so you can check the console for any errors. If you have checked scripts are placed in the mod folder but the build log states that no scripts are found so the compilation is skipped, it is likely that `.csproj` files were not generated correctly in your project. You need to click on **Edit → Preferences → External Tools** and click **Regenerate project files**:
 
-![](pathname:///doc-img/en-mod-12.png)
+![](/doc-img/en-mod-12.png)
 
 Then, try building the mod again.
 

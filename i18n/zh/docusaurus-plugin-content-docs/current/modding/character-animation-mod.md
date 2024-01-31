@@ -11,7 +11,7 @@ Warudo 支持导入 Unity 的 [AnimationClip](https://docs.unity3d.com/ScriptRef
 :::info
 如果你是在 Blender 或其他工具制作动画并导出了 `.fbx`，在导入到 Unity 之后，你必须展开 `.fbx`，选中里面的 AnimationClip（前面有三角的图标），并按下 Ctrl+D 复制出来一份：
 
-![](pathname:///doc-img/en-character-animation-mod-1.webp)
+![](/doc-img/en-character-animation-mod-1.webp)
 
 然后再对复制出来的 AnimationClip 进行以下操作。
 :::

@@ -4,7 +4,7 @@ sidebar_position: 10
 
 # Introduction to Warudo
 
-![](pathname:///doc-img/intro-cover.jpg)
+![](/doc-img/intro-cover.jpg)
 
 ## What is Warudo?
 

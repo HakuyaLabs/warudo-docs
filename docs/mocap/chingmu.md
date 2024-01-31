@@ -24,7 +24,7 @@ You can check if a FBX model has normalized bones by importing it into Unity and
 
 Make sure **VRPN Livestream** (启用Vrpn) is checked, along with **Rigidbodies** (刚体), **Bones** (骨骼), and **Motion Retargeting** (重定向).
 
-![](pathname:///doc-img/en-chingmu-1.png)
+![](/doc-img/en-chingmu-1.png)
 
 If you have multiple characters in the scene, in Warudo, set **Chingmu Avatar Receiver → Object ID** to the index of the character that you would like to track. The index starts from 0.
 

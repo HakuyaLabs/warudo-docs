@@ -18,7 +18,7 @@ What is the difference between VirtualMotionCapture and VMC? Simply put, they ar
 
 Make sure you have connected your VR trackers to SteamVR. Then, open VirtualMotionCapture; load your VRM model, and perform calibration. Finally, check **Enable OSC motion sender** in **Settings → VMCProtocol Motion sender**. The default port 39539 is also the default port that Warudo's VMC receiver uses.
 
-![](pathname:///doc-img/en-vmc-1.png)
+![](/doc-img/en-vmc-1.png)
 
 ### VSeeFace
 
@@ -26,7 +26,7 @@ The following example demonstrates how to apply VMC data to the character using 
 
 In **General settings**, make sure **OSC/VMC Protocol → Send datawith OSC/VMC protocol** is checked. The default port 39539 is also the default port that Warudo's VMC receiver uses.
 
-![](pathname:///doc-img/zh-vmc-1.webp)
+![](/doc-img/zh-vmc-1.webp)
 
 ### Other Applications
 

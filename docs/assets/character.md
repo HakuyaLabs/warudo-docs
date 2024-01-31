@@ -24,7 +24,7 @@ Alternatively, you can manually set up your character by selecting a **Source** 
 
 To set up motion capture for your character, please refer to the [Motion Capture](../mocap/overview#setup) page. Once you have set up motion capture, you can calibrate tracking and access specific parts of the tracking blueprints directly in the character asset.
 
-![](pathname:///doc-img/en-character-1.png)
+![](/doc-img/en-character-1.png)
 <p class="img-desc">Quick calibration and blueprint navigation panels.</p>
 
 ## Expressions {#expressions}
@@ -39,7 +39,7 @@ If you are using a `.warudo` model, but there is a `VRMBlendShapeProxy` componen
 
 You can expand each expression in the expression list to preview it (**Enter Expression**) and customize its settings.
 
-![](pathname:///doc-img/en-character-2.png)
+![](/doc-img/en-character-2.png)
 <p class="img-desc">Expanding an expression.</p>
 
 You can set the **Name** of the expression, which is used for identification in the blueprint. You can also set the **Layer** of the expression. When switching expressions, expressions on the same layer will fade out, while expressions on different layers can overlap.
@@ -60,7 +60,7 @@ Expressions are usually triggered by hotkeys, but you can also trigger an expres
 
 To set up, add a new entry to the **Trigger Conditions** list. Set up the **Conditions** for your expression trigger, and customize other options as needed. For example, the below settings will trigger the expression when the `mouthSmileLeft` and `mouthSmileRight` blendshapes are both greater than 0.5.
 
-![](pathname:///doc-img/en-character-4.png)
+![](/doc-img/en-character-4.png)
 
 You can have more than one entry in the **Trigger Conditions** list, and when any of the **Conditions** in an entry are met, the expression will be triggered.
 
@@ -76,7 +76,7 @@ The **Constrained BlendShapes** list contains all the blendshapes that will be c
 
 Optionally, you can set the **Constraint BlendShape** to establish a mapping between it and the constrained blendshape. For example, the following settings will make the `JawOpen` blendshape value follow the `Smile` blendshape value such that when `Smile` is 0, `JawOpen` can take from 0 to 1, and when `Smile` is 1, `JawOpen` is constrained from 0 to 0.25.
 
-![](pathname:///doc-img/en-character-3.png)
+![](/doc-img/en-character-3.png)
 <p class="img-desc">Constraining the `JawOpen` blendshape.</p>
 
 The **Toggle GameObjects** list contains all the child GameObjects that will be toggled when this expression is active. For example, you can use this to toggle the visibility of a particle effect when the character is smiling.
@@ -94,16 +94,16 @@ In Warudo, there are three types of animations:
 
 * **Idle Animation**: The default animation that plays when no other animations are playing.
 
-  ![](pathname:///doc-img/en-character-5.png)
+  ![](/doc-img/en-character-5.png)
   <p class="img-desc">Selecting an idle animation.</p>
 * **Overlaying Animations**: Animations overlaid on top of the idle animation.
 
   For example, let's say you like the "Cat" animation and want to use it. However, you also want your character to sit down on a bed. To combine the two animations, you can set **Idle Animation** to a sitting animation, while adding a new entry to the **Overlaying Animations** list, setting the **Animation** to "Cat", and click **Mask Upper Body** to ensure the "Cat" animation only affects the upper body.
 
-  ![](pathname:///doc-img/en-character-6.png)
+  ![](/doc-img/en-character-6.png)
     <p class="img-desc">Combining the "Cat" animation with a sitting animation using overlaying animations.</p>
 
-  ![](pathname:///doc-img/en-character-7.png)
+  ![](/doc-img/en-character-7.png)
     <p class="img-desc">The "Cat" animation only affects the upper body.</p>
 
   You can add as many overlaying animations as you want; each layer of animation can be assigned its own **Masked Body Parts**, **Weight** and **Speed**, allowing different parts of the body to play different animations. The lower an animation is in the list, the higher its priority.
@@ -136,7 +136,7 @@ To use Look At IK, simply enable it and set **Target** to the target that the ch
 
 Body IK is used to make the character's spine or limbs follow a specified target in the scene.
 
-![](pathname:///doc-img/zh-assets-character.gif)
+![](/doc-img/zh-assets-character.gif)
 <p class="img-desc">Body IK in a nutshell.</p>
 
 To use Body IK, simply enable it for the spine or a hand/foot, and set **IK Target** to the target that the character should follow. The IK target is usually a [camera](camera.md), [prop](prop.md), or an [anchor](anchor.md). If you want to create a temporary anchor at the current position of the body part, you can click **Create Temporary IK Target Anchor At Current Position**. When you are done, you can click **Remove Temporary IK Target Anchor** to remove the temporary anchor.
@@ -219,14 +219,14 @@ Try setting **Animation → Additional Bone Offsets**. The rotation angle of the
 
 Open the **Expression Key Bindings** blueprint and locate the **On Keystroke Pressed** node. Then, modify it as needed. For example, in the original blueprint, pressing Alt+1 will activate the `Joy` expression:
 
-![](pathname:///doc-img/en-expression-1.webp)
+![](/doc-img/en-expression-1.webp)
 
 The following changes the hotkey to Ctrl+Shift+T.
 
-![](pathname:///doc-img/en-expression-2.webp)
+![](/doc-img/en-expression-2.webp)
 
 ### Can I enable an expression for a certain period of time and then automatically disable it after a while?
 
 To do this, enable **Is Transient** on the **Toggle Character Expression** node in the **Expression Key Bindings** blueprint. The duration of the expression will be determined by **Exit Delay** of each BlendShape in the expression.
 
-![](pathname:///doc-img/en-expression-5.webp)
+![](/doc-img/en-expression-5.webp)

@@ -10,7 +10,7 @@ Body tracking via [Xsens MVN Analyze/Animate](https://base.xsens.com/s/motion-ca
 
 Open **Xsens MVN → Options → Network Streamer** and configure as shown below.
 
-![](pathname:///doc-img/zh-xens-1.webp)
+![](/doc-img/zh-xens-1.webp)
 
 Then, update **Actor ID** in the **Xsens MVN Receiver** asset to the Xsens Actor whose motion capture data you would like to receive. The default is 1.
 

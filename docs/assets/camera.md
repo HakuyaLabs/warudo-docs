@@ -13,7 +13,7 @@ By default, your scene should already have a camera. To add a new camera, use th
 1. Click the camera icon in front of the camera name to set the camera as the main camera.
 2. Press **Tab** to switch to the next camera in the scene, or **Ctrl+Tab** to switch to the previous camera in the scene.
 
-![](pathname:///doc-img/en-camera-1.png)
+![](/doc-img/en-camera-1.png)
 <p class="img-desc">The solid camera icon in front of the camera name indicates that this camera is the main camera.</p>
 
 The camera is by default set to **Free Look** mode. You can set **Control Mode** to **Orbit Character** to make the camera orbit around the character. You can also set **Control Mode** to **None** to fix the camera in place.
@@ -28,7 +28,7 @@ To increase or decrease the camera's movement speed, you can adjust the **Contro
 
 By default, Warudo's NDI/Spout/virtual camera output the main window's view (you can enable/disable them in **Menu → Settings**). You can also enable **NDI/Spout/Virtual Camera Output** on each camera individually. This allows you to show the scene from multiple cameras at the same time.
 
-![](pathname:///doc-img/en-camera-1.webp)
+![](/doc-img/en-camera-1.webp)
 <p class="img-desc">By enabling Spout/NDI/virtual camera output on cameras, you can show the scene from multiple cameras at the same time.</p>
 
 :::info
@@ -42,11 +42,11 @@ All output methods support transparency output. To enable transparent background
 
 When using Spout output in OBS, set the **Composite Mode** in the Spout2 Capture properties to **Premultiplied Alpha** to enable transparency.
 
-![](pathname:///doc-img/en-camera-3.webp)
+![](/doc-img/en-camera-3.webp)
 
 When using virtual camera output in OBS, set the **Video Format** in the Video Capture Device properties to **ARGB** to enable transparency.
 
-![](pathname:///doc-img/en-camera-4.webp)
+![](/doc-img/en-camera-4.webp)
 :::
 
 You can also take a screenshot of this camera's view by clicking the **Screenshot** button.

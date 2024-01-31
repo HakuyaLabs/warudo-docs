@@ -10,7 +10,7 @@ Body tracking via [VDMocapStudio](https://www.virdynm.com/virdyn-vdmocap-studio-
 
 Open VDMocapStudio and enable data streaming by clicking **Broadcast → OpenShare**. Make sure the IP selected is accessible from Warudo.
 
-![](pathname:///doc-img/en-virdyn-1.png)
+![](/doc-img/en-virdyn-1.png)
 
 ## Calibration
 

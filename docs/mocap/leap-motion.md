@@ -18,7 +18,7 @@ Warudo supports all 3 tracking modes offered by the Leap Motion Controller: **De
 
 There is generally no need to calibrate the Leap Motion Controller. However, you can adjust **Controller Position Offset**, **Controller Rotation Offset**, and **Controller Scale** in the **Leap Motion Controller** asset to adjust the tracking. A virtual Leap Motion Controller will be displayed in the scene to help you visualize the tracking.
 
-![](pathname:///doc-img/en-leapmotion-1.png)
+![](/doc-img/en-leapmotion-1.png)
 <p class="img-desc">Adjusting the virtual Leap Motion Controller.</p>
 
 ## Options

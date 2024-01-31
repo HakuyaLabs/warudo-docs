@@ -4,7 +4,7 @@ sidebar_position: 10
 
 # Overview
 
-![](pathname:///doc-img/mocap-cover.jpg)
+![](/doc-img/mocap-cover.jpg)
 
 Whether you are streaming at home or at a professional mocap studio, Warudo has you covered. Currently, Warudo supports the following motion capture systems:
 
@@ -46,17 +46,17 @@ For best tracking quality, we recommend using an iPhone 12 or newer (iPhone mini
 
 There are two ways to set up motion capture in Warudo. The first and the preferred way is to use the **Onboarding Assistant** asset that comes with every scene. Simply click **Basic Setup → Get Started** to start the onboarding process and follow the instructions.
 
-![](pathname:///doc-img/en-getting-started-2.png)
+![](/doc-img/en-getting-started-2.png)
 <p class="img-desc">Setting up motion capture in the onboarding assistant asset.</p>
 
 After the onboarding process is complete, you can select the relevant motion capture assets to further customize your tracking. For example, if you are using iFacialMocap, you may notice Warudo adds some movement to your character's body when your head moves. If this is not desirable, you can set **Body Movement Intensity** to 0 in the **iFacialMocap Receiver** asset.
 
-![](pathname:///doc-img/en-mocap-1.png)
+![](/doc-img/en-mocap-1.png)
 <p class="img-desc">Adjusting the body movement intensity of iFacialMocap.</p>
 
 The second way to set up motion capture is to use **Character → Setup Motion Capture**. This allows you to set up face tracking and/or pose tracking directly. However, some checking steps in the onboarding process are also skipped.
 
-![](pathname:///doc-img/en-mocap-2.png)
+![](/doc-img/en-mocap-2.png)
 <p class="img-desc">Setting up motion capture in the character asset.</p>
 
 This method is useful if you need to set up multiple face tracking or pose tracking systems, since the onboarding assistant always remove the existing motion capture setup when you start a new onboarding process.

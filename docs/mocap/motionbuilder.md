@@ -30,7 +30,7 @@ You can check if a FBX model has normalized bones by importing it into Unity and
 
 Drag **Devices → Warudo Device** into the scene view.
 
-![](pathname:///doc-img/en-motionbuilder-1.png)
+![](/doc-img/en-motionbuilder-1.png)
 
 :::caution
 If you cannot see "Warudo Device", it means the plugin failed to load. Please download and install [Microsoft Visual C++ Redistributable](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170) and restart MotionBuilder.
@@ -38,7 +38,7 @@ If you cannot see "Warudo Device", it means the plugin failed to load. Please do
 
 Select **Devices → Warudo Device → Characters**, click **Add** to add a new row. Change the default name **MyCharacter** to the actual character name, and click the red box next to the "Online" text. It should turn green immediately, indicating that MotionBuilder is now streaming motion data to Warudo.
 
-![](pathname:///doc-img/en-motionbuilder-2.png)
+![](/doc-img/en-motionbuilder-2.png)
 
 In Warudo, update **MotionBuilder Receiver → MotionBuilder Character Name** to the actual character name.
 

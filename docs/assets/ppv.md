@@ -20,10 +20,10 @@ You can click **Import From Environment** to import the post processing settings
 
 Bloom is a post processing effect that makes bright areas of the scene "glow."
 
-![](pathname:///doc-img/bloom-off.png)
+![](/doc-img/bloom-off.png)
 <p class="img-desc">Bloom disabled.</p>
 
-![](pathname:///doc-img/bloom.png)
+![](/doc-img/bloom.png)
 <p class="img-desc">Bloom enabled.</p>
 
 :::info
@@ -38,50 +38,50 @@ The channel mixer modifies the influence of each input color channel on the over
 
 Mimics the effect produced when a lens is unable to blend all colors to the same point.
 
-![](pathname:///doc-img/chromatic-aberration-off.png)
+![](/doc-img/chromatic-aberration-off.png)
 <p class="img-desc">Chromatic aberration disabled.</p>
 
-![](pathname:///doc-img/chromatic-aberration.png)
+![](/doc-img/chromatic-aberration.png)
 <p class="img-desc">Chromatic aberration enabled.</p>
 
 ## Color Adjustments
 
 Use this effect to tweak the overall tone, brightness, and contrast of the final rendered image.
 
-![](pathname:///doc-img/color-adjustments-off.png)
+![](/doc-img/color-adjustments-off.png)
 <p class="img-desc">Color adjustments disabled.</p>
 
-![](pathname:///doc-img/color-adjustments.png)
+![](/doc-img/color-adjustments.png)
 <p class="img-desc">Color adjustments enabled.</p>
 
 ## Depth of Field
 
 Blur objects that are not in focus. If you override **Focus Distance**, you will be able to set **Auto Focus Character** so that the focus distance will automatically follow the character.
 
-![](pathname:///doc-img/dof-gaussian.png)
+![](/doc-img/dof-gaussian.png)
 <p class="img-desc">Depth of field with Gaussian mode.</p>
 
-![](pathname:///doc-img/dof-bokeh.png)
+![](/doc-img/dof-bokeh.png)
 <p class="img-desc">Depth of field with Bokeh mode.</p>
 
 ## Film Grain
 
 Simulates the random optical texture of photographic film, usually caused by small particles being present on the physical film.
 
-![](pathname:///doc-img/film-grain-off.png)
+![](/doc-img/film-grain-off.png)
 <p class="img-desc">Film grain disabled.</p>
 
-![](pathname:///doc-img/film-grain.png)
+![](/doc-img/film-grain.png)
 <p class="img-desc">Film grain enabled.</p>
 
 ## Lens Distortion
 
 Distorts the final rendered picture to simulate the shape of a real-world camera lens.
 
-![](pathname:///doc-img/lens-distortion-off.png)
+![](/doc-img/lens-distortion-off.png)
 <p class="img-desc">Lens distortion disabled.</p>
 
-![](pathname:///doc-img/lens-distortion.png)
+![](/doc-img/lens-distortion.png)
 <p class="img-desc">Lens distortion enabled.</p>
 
 ## Lift Gamma Gain
@@ -92,20 +92,20 @@ Perform three-way color grading.
 
 Simulates the blur that occurs in an image when a real-world camera films objects moving faster than the camera’s exposure time.
 
-![](pathname:///doc-img/motion-blur-off.png)
+![](/doc-img/motion-blur-off.png)
 <p class="img-desc">Motion blur disabled.</p>
 
-![](pathname:///doc-img/motion-blur.png)
+![](/doc-img/motion-blur.png)
 <p class="img-desc">Motion blur enabled.</p>
 
 ## Panini Projection
 
 Help render perspective views in scenes with a very large field of view. 
 
-![](pathname:///doc-img/panini-off.png)
+![](/doc-img/panini-off.png)
 <p class="img-desc">Panini projection disabled.</p>
 
-![](pathname:///doc-img/panini.png)
+![](/doc-img/panini.png)
 <p class="img-desc">Panini projection enabled.</p>
 
 ## Shadows Midtones Highlights

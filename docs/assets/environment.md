@@ -6,14 +6,14 @@ sidebar_position: 40
 
 Often referred to as a "3D background," an environment is a 3D scene that is displayed behind the characters. You can import your own environments using the [Mod SDK](../modding/mod-sdk.md).
 
-![](pathname:///doc-img/zh-environment-1.webp)
+![](/doc-img/zh-environment-1.webp)
 <p class="img-desc">The Onsen environment.</p>
 
 ## Steam Workshop
 
 In addition to the built-in environments, you can download official and community environments from Warudo's Steam Workshop. Click on the **Discover** tab and select the **Environments** category:
 
-![](pathname:///doc-img/en-environment-1.png)
+![](/doc-img/en-environment-1.png)
 <p class="img-desc">Browsing environments from the Steam Workshop.</p>
 
 ## Setup

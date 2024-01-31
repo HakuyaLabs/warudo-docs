@@ -4,7 +4,7 @@ sidebar_position: 10
 
 # Overview
 
-![](pathname:///doc-img/blueprints-cover.jpg)
+![](/doc-img/blueprints-cover.jpg)
 
 Blueprints are a flexible and powerful visual scripting system enabling anyone to create unique interactions for their VTubing setup, utilizing concepts and tools that are typically reserved for programmers. Blueprints are created and edited using the Warudo editor, and all changes are reflected in realtime in the scene.
 
@@ -40,7 +40,7 @@ If you are a developer, you will be happy to find out that you can extend Warudo
 
 In the **Blueprints** tab, you can see a list of all the blueprints in the scene. You can select a blueprint to edit it in the node editor; then, you can drag nodes from the **Node Palette** tab, or modify the properties of the selected blueprint in the **Properties** tab.
 
-![](pathname:///doc-img/en-blueprints-1.png)
+![](/doc-img/en-blueprints-1.png)
 <p class="img-desc">Overview.</p>
 
 The toolbar has the following buttons:
