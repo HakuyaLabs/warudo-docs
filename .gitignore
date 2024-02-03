@@ -14,7 +14,7 @@
 .env.development.local
 .env.test.local
 .env.production.local
-.obsidian
+
 
 npm-debug.log*
 yarn-debug.log*
@@ -30,3 +30,7 @@ yarn-error.log*
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+
+# Obsidian
+.obsidian
+_obsidian_database_.md
