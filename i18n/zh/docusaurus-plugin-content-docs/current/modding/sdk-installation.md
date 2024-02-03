@@ -4,14 +4,18 @@ sidebar_position: 1
 
 # Unity & Warudo SDK 安装
 
-## Windows (64 位)
+:::caution
 
-### Step 1 - 安装 Unity Hub
+目前仅支持 64 位 Windows 系统。
 
-首先，你需要下载 **Unity Hub** （一般最新版本即可），  
+:::
+
+## Step 1 - 安装 Unity Hub
+
+首先，你需要下载 **Unity Hub**（一般最新版本即可），  
 Unity Hub 是用于管理不同版本的 Unity Editor 和不同版本的项目的软件。
 
-可在下图中两个红框处选一点击，下载可能需要注册 Unity 帐号。
+打开 [**Unity 官网**](https://unity.com/cn/download) 可在下图中两个红框处选一点击，下载可能需要注册 Unity 帐号。
 
 ![](/doc-img/sdk-installation-1.png)
 
@@ -21,9 +25,9 @@ Unity Hub 是用于管理不同版本的 Unity Editor 和不同版本的项目�
 ![](/doc-img/sdk-installation-2.png)
 
 登录后会自动建议你下载最新的长期支持版本 (Long-Term Support, LTS) Unity Editor，  
-Warudo 不使用该版本，建议点击 **Skip nstallation**。  
+Warudo 不使用该版本，建议点击 **Skip installation**。  
 
-但是如果你确实想要安装该版本，也强烈建议将安装路径更改为，`...\<版本号>` （例如 `D:\Softwares\Unity\2022.3.17f1`），  
+但是如果你确实想要安装该版本，也强烈建议将安装路径更改为 `...\<版本号>` （例如 `D:\Softwares\Unity\2022.3.17f1`），  
 更方面后续管理**多版本**的 Unity Editor，  
 而**不要**使用默认的安装路径 `C:\Program Files\Unity\Hub\Editor` 。
 
@@ -45,7 +49,7 @@ Warudo 不使用该版本，建议点击 **Skip nstallation**。
 
 ![](/doc-img/sdk-installation-8.png)
 
-### Step 2 - 安装 Unity Editor
+## Step 2 - 安装 Unity Editor
 
 接下来，你需要下载 Unity Editor 的安装包，且版本必须严格为 **Unity 2021.3.18f1** 。
 
@@ -77,17 +81,17 @@ Warudo 不使用该版本，建议点击 **Skip nstallation**。
 ![](/doc-img/sdk-installation-10.png)
 
 
-### Step 3 - 下载并导入 Warudo SDK
+## Step 3 - 下载并导入 Warudo SDK
 
 在 Unity 中设置 Warudo SDK 有两种方法：
 
 - 下载我们的模组项目模板；
 - 手动将 SDK .unitypackage 导入到您的项目中。
 
-我们推荐第一个选项，因为它更容易且不易出错。
+我们推荐第一个选项，因为它更容易且不易出错。  
 第二个选项更适合更新现有的 modding 项目。
 
-#### **方法一 直接导入模板项目（推荐）**
+### 方法一 直接导入模板项目（推荐）
 
 [Warudo SDK 0.12.0 Modding Project.zip](https://docs.warudo.app/sdk/Warudo%20SDK%200.12.0%20Modding%20Project.zip)
 
@@ -109,14 +113,18 @@ Warudo 不使用该版本，建议点击 **Skip nstallation**。
 如果没有 Error，那么一切都准备好了！你可以开始 [创建你的第一个模组](creating-your-first-mod) 了！
 
 :::tip
+
 如果您在控制台中看到 Error，请尝试单击 “Clear” 以查看是否可以删除这些错误。  
 如果仍然存在问题，请通过 [Discord](https://discord.gg/warudo) 或者 QQ 频道 与我们联系。
+
 :::
 
-#### **方法二 手动导入 `*.unitypackage`** （不推荐）
+### 方法二 手动导入 `*.unitypackage` （不推荐）
 
 :::caution
+
 仅当您要**更新现有模组项目**时才应使用此选项，或者在极少数方法一不适合您的情况下。
+
 :::
 
 打开 Unity 项目后，打开 Unity 项目文件夹下的 `Packages/manifest.json` 文件（注意，该文件在 Unity 编辑器中不可见），并在 `dependencies` 部分添加以下 **9** 个依赖项：
@@ -139,12 +147,14 @@ Warudo 不使用该版本，建议点击 **Skip nstallation**。
 返回 Unity 并等待项目重新加载；确保没有 errors 。
 
 :::caution
+
 如果您遇到消息错误 `An error occurred while resolving packages / Error adding package`，
 单击它会显示类似以下内容的消息： 
 `No 'git' executable was found. Please install Git on your system then restart Unity and Unity Hub`，
 这意味着您的系统上尚未安装 Git。
 ![](/doc-img/en-mod-sdk-1.webp)
 要解决此问题，您需要从 https://git-scm.com/download 下载 Git，然后重新启动 Unity 和 Unity Hub。
+
 :::
 
 确认 **File → Build Settings... → Player Settings... → Other Settings** 中的 **Api Compatibility Level** 被设置为 `.NET Framework`。
@@ -161,6 +171,7 @@ Warudo SDK 0.12.0.unitypackage
 </a>
 
 :::caution
+
 如果您要导入到**已经存在**的项目安装了以下任一项：
 
 * [Animancer](https://assetstore.unity.com/packages/tools/animation/animancer-pro-116514)
@@ -176,6 +187,7 @@ Warudo SDK 0.12.0.unitypackage
 * `Plugins/RootMotion/FinalIK`
 * `Plugins/MagicaCloth`
 * `Plugins/RootMotion/PuppetMaster`
+
 :::
 
 点击打开下方通知栏，检查是否存在【Error】。
@@ -185,6 +197,8 @@ Warudo SDK 0.12.0.unitypackage
 如果没有，那么一切都准备好了！你可以开始 [创建你的第一个模组](creating-your-first-mod) 了！
 
 :::tip
+
 如果您在控制台中看到 Error，请尝试单击 “Clear” 以查看是否可以删除这些错误。  
 如果仍然存在问题，请通过 [Discord](https://discord.gg/warudo) 或者 QQ 频道 与我们联系。
+
 :::

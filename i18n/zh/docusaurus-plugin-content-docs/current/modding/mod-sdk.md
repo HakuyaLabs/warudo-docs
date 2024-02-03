@@ -2,84 +2,15 @@
 sidebar_position: 0
 ---
 
-# Mod SDK
+# 简介
 
 你可以使用 Unity + Warudo Mod SDK 制作 Mod，包括[角色](https://tira.gitbook.io/warudo/advanced/character-mod)、[角色动画](https://tira.gitbook.io/warudo/advanced/character-animation-mod)、[道具](https://tira.gitbook.io/warudo/advanced/prop-mod)、[环境](https://tira.gitbook.io/warudo/advanced/environment-mod)等，甚至可以编写 C# 插件，给 Warudo 添加新的资源类型和蓝图节点类型。
 
 Mod SDK 导出的 Mod 后缀名为 `.warudo`，放在 Warudo 数据文件夹相应的子文件夹下即可被识别。
 
-
-
-<b style={{color: "red"}}>！！！</b>
-<br /><br />
-<b style={{color: "red"}}>以下部分的内容暂时尚未更新到最新。请参阅</b><b style={{color: "red"}}><a href="https://docs.warudo.app/warudo/modding/mod-sdk">英文文档</a></b>
-<br /><br />
-<b style={{color: "red"}}>！！！</b>
-
-
-
 ## 配置 SDK
 
-首先，请确保你已安装 [Unity 2021.3.6f1](https://unity.com/)（其他版本的 Unity 不保证兼容性）。
-
-打开 Unity 项目文件夹下的 `Packages/manifest.json`（注意这个文件不会在 Unity 编辑器中显示），在 `"dependencies"` 内添加以下 **7** 项依赖：
-
-```
-{
-  "dependencies": {
-    "com.unity.burst": "1.6.6",
-    "com.unity.collections": "1.2.4",
-    "com.cysharp.unitask": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask",
-    "com.vrmc.gltf": "https://github.com/vrm-c/UniVRM.git?path=/Assets/UniGLTF#v0.100.1",
-    "com.vrmc.univrm": "https://github.com/vrm-c/UniVRM.git?path=/Assets/VRM#v0.100.1",
-    "com.vrmc.vrmshaders": "https://github.com/vrm-c/UniVRM.git?path=/Assets/VRMShaders#v0.100.1",
-    "com.unity.nuget.newtonsoft-json": "3.0.2",
-    // ...
-```
-
-回到 Unity，等待项目重载，确保没有报错。
-
-:::caution
-如果出现错误，提示 An error occurred while resolving packages / Error adding package，点击后出现类似 `No 'git' executable was found. Please install Git on your system then restart Unity and Unity Hub.` 信息：
-
-![](/doc-img/en-mod-sdk-1.webp)
-
-请到 [https://git-scm.com/download](https://git-scm.com/download) 下载安装 Git，并重启 Unity 及 Unity Hub。
-:::
-
-确认 File → Build Settings... → Player Settings... → Other Settings → Api Compatibility Level 为 .NET Framework：
-
-![](/doc-img/en-mod-sdk-2.webp)
-
-下载 SDK 并导入到 Unity 项目内（可以新建项目，也可以是现有项目）：
-
-<a href="/sdk/WarudoSDK-0.10.0.unitypackage" target="_blank">
-<div className="file-box">
-<p>
-WarudoSDK-0.10.0.unitypackage
-</p></div>
-</a>
-
-:::caution
-如果是导入到**现有 Unity 项目**内，且你的项目内已经安装以下任意组件：
-
-* [Animancer](https://assetstore.unity.com/packages/tools/animation/animancer-pro-116514)
-* [Dynamic Bones](https://assetstore.unity.com/packages/tools/animation/dynamic-bone-16743)
-* [Final IK](https://assetstore.unity.com/packages/tools/animation/final-ik-14290)
-* [Magica Cloth](https://assetstore.unity.com/packages/tools/physics/magica-cloth-160144)
-* [PuppetMaster](https://assetstore.unity.com/packages/tools/physics/puppetmaster-48977)
-
-请在导入时取消对应的勾选，否则你的组件文件将被替换：
-
-* `Plugins/Animancer`
-* `Packages/DynamicBone`
-* `Plugins/RootMotion/FinalIK`
-* `Plugins/MagicaCloth`
-* `Plugins/RootMotion/PuppetMaster`
-
-:::
-
-没有编译错误就大功告成啦。接着……
+要配置 SDK 你需要先安装好 Unity，详细步骤请查看：[Unity & Warudo SDK 安装](sdk-installation.md)
 
 ## 创建 Mod
 
