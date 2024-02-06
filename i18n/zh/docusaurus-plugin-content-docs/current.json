@@ -31,6 +31,14 @@
     "message": "拓展",
     "description": "The label for category Extensions in sidebar tutorialSidebar"
   },
+  "sidebar.tutorialSidebar.category.Modding": {
+    "message": "Mod 制作",
+    "description": "The label for category Modding in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Scripting": {
+    "message": "自定义脚本",
+    "description": "The label for category Scripting in sidebar tutorialSidebar"
+  },
   "sidebar.tutorialSidebar.category.Miscellaneous": {
     "message": "其他",
     "description": "The label for category Miscellaneous in sidebar tutorialSidebar"
