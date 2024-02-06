@@ -20,8 +20,6 @@ using Warudo.Core.Graphs;
     Category = "Hello World Category")]
 public class HelloWorldNode : Node {
 
-    /* DATA INPUTS */
-
     /* DATA OUTPUTS */
     [DataOutput]
     [Label("输出字符串")]
@@ -137,6 +135,26 @@ public 类型 变量名;
 [Description("这是一句注释。")]
 public 类型 变量名 = 默认值;
 ```
+
+对于 `int` 和 `float` 类型，还可以给输入框加上**滑杆**：
+
+```cs
+[DataInput]
+[IntegerSlider(0, 10)]
+public int InputInt = 5;
+
+[DataInput]
+[FloatSlider(0, 1)]
+public float InputFloat = 0.5f;
+```
+
+![](/doc-img/custom-node-2.png)
+
+:::caution
+
+用户仍然可以通过手动输入来设置超过滑杆范围的值。
+
+:::
 
 ### 输出接口
 
