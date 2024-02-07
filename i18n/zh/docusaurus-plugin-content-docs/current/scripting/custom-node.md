@@ -225,12 +225,7 @@ public string Info5 = @"
 大部分支持的功能都展示在了 [ExampleNode](https://github.com/HakuyaLabs/WarudoPlaygroundExamples/blob/master/ExampleNode.cs) 中，  
 你可以下载该文件，将其放置在 Playground 中，然后在蓝图中查看和尝试其对应的作用。
 
-或者你也可以参考我们提供的其他节点示例：
-
-- 【获取随机音效】节点 [GetRandomSoundNode.cs](https://gist.github.com/TigerHix/f0f1a7e3c53ca65450fdca1ff06eb343)
-- 【角色动画源】节点 [LiteralCharacterAnimationSourceNode.cs](https://gist.github.com/TigerHix/2dc58213defe400ddb280a8cc1e6334b)
-- 【平滑变换】节点 [SmoothTransformNode.cs](https://gist.github.com/TigerHix/eaf8e05e5e1b687b8265420b9943903d)
-- ⋯⋯
+或者你也可以参考文末我们提供的其他范例。
 
 ## 接口类型
 
@@ -245,3 +240,33 @@ public string Info5 = @"
 - `Quaternion` X-Y-Z-W 四元数
 - `HumanBodyBones` Unity 定义的角色骨骼 [Unity - Scripting API: HumanBodyBones](https://docs.unity3d.com/ScriptReference/HumanBodyBones.html)
 - ⋯⋯
+
+## 范例
+
+### 基础
+
+- [StructuredDataExampleNode.cs](https://gist.github.com/TigerHix/81cfa66a8f810165c426d1b5157677b5)  
+创建“内部”数据类型。(StructuredData)
+
+- [GetRandomSoundNode.cs](https://gist.github.com/TigerHix/f0f1a7e3c53ca65450fdca1ff06eb343)  
+【获取随机音效】节点。
+
+- [LiteralCharacterAnimationSourceNode.cs](https://gist.github.com/TigerHix/2dc58213defe400ddb280a8cc1e6334b)  
+【角色动画源】节点。
+
+- [SmoothTransformNode.cs](https://gist.github.com/TigerHix/eaf8e05e5e1b687b8265420b9943903d)  
+【平滑变化】节点。
+
+### 进阶
+
+- [FindAssetByTypeNode.cs](https://gist.github.com/TigerHix/ab3522bb25669457cc583abc4fb025d2)  
+自动填充（下拉）列表示例。
+
+- [MultiGateNode.cs](https://gist.github.com/TigerHix/8747793a68f0aa15a469f9823812e221)  
+动态数据 / 流端口示例。
+
+- [ThrowPropAtCharacterNode.cs](https://gist.github.com/TigerHix/18e9f20152c0cfac38fd5528c7af16b6)  
+【向角色投掷道具】节点。
+
+- [SpawnStickerNode.cs](https://gist.github.com/TigerHix/fe35442e9052cd8c4ea80e0261349321)  
+【从本地图片生成贴纸】和【从网络图片生成贴纸】节点。

@@ -6,7 +6,7 @@ sidebar_position: 20
 
 :::warning
 
-This page is still a work in progress.
+This page is still under development and is not completed. We are working to improve the content.
 
 :::
 

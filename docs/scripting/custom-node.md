@@ -6,7 +6,7 @@ sidebar_position: 30
 
 :::warning
 
-This page is still a work in progress.
+This page is still under development and is not completed. We are working to improve the content.
 
 :::
 
@@ -37,5 +37,5 @@ Dynamic data / flow ports example.
 - [ThrowPropAtCharacterNode.cs](https://gist.github.com/TigerHix/18e9f20152c0cfac38fd5528c7af16b6)  
 Throw Prop At Character.
 
-- [SpawnLocalImageStickerNode.cs](https://gist.github.com/TigerHix/fe35442e9052cd8c4ea80e0261349321)  
+- [SpawnStickerNode.cs](https://gist.github.com/TigerHix/fe35442e9052cd8c4ea80e0261349321)  
 Spawn Local / Online Image Sticker.
