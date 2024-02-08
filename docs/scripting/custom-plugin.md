@@ -15,10 +15,10 @@ This page is still under development and is not completed. We are working to imp
 ### Basic
 
 - [Example plugin](https://gist.github.com/TigerHix/b78aabffc2d03346ff3da526706ce2ca)  
-The template of a basic plugin.
+The template of a plugin (single file) with the basic use of `Plugin` class.
 
 - [WarudoPluginExamples](https://github.com/HakuyaLabs/WarudoPluginExamples)  
-Including the **Stream Deck Plugin** and **VMC Plugin**.
+The complete plugin examples (multiple files), including the **Stream Deck Plugin** and **VMC Plugin**.
     - **Stream Deck Plugin**: This plugin communicates with an external application (Warudo's [Stream Deck plugin](https://apps.elgato.com/plugins/warudo.streamdeck)) via WebSocket. It demonstrates the use of the WebSocket service base class `WebSocketService`.
     - **VMC Plugin**: This plugin adds [VMC](https://protocol.vmc.info/english) as a supported motion capture method via registering a `FaceTrackingTemplate` and a `PoseTrackingTemplate`.
 

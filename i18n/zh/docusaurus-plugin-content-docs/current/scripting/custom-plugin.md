@@ -15,10 +15,10 @@ sidebar_position: 40
 ### 基础
 
 - [Example plugin](https://gist.github.com/TigerHix/b78aabffc2d03346ff3da526706ce2ca)  
-基本插件模板。
+插件的基础模板（单文件），`Plugin` 类的基本使用。
 
 - [WarudoPluginExamples](https://github.com/HakuyaLabs/WarudoPluginExamples)  
-内置插件范例，包括 **Stream Deck 插件** 和 **VMC 插件**。
+完整插件范例（多文件），包括 **Stream Deck 插件** 和 **VMC 插件**。
     - **Stream Deck Plugin**：该插件通过 WebSocket 与外部应用程序通信（Warudo 的 [Stream Deck plugin](https://apps.elgato.com/plugins/warudo.streamdeck)）。它演示了 WebSocket 服务基类 `WebSocketService` 的使用。
     - **VMC Plugin**：此插件通过注册 `FaceTrackingTemplate` 和 `PoseTrackingTemplate` 从而添加了 [VMC](https://protocol.vmc.info/english) 作为受支持的动作捕捉方案。
 
