@@ -23,6 +23,10 @@
     "message": "蓝图",
     "description": "The label for category Blueprints in sidebar tutorialSidebar"
   },
+  "sidebar.tutorialSidebar.category.Nodes": {
+    "message": "节点",
+    "description": "The label for category Nodes in sidebar tutorialSidebar"
+  },
   "sidebar.tutorialSidebar.category.Advanced": {
     "message": "Advanced",
     "description": "The label for category Advanced in sidebar tutorialSidebar"
