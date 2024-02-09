@@ -198,7 +198,6 @@ public string Info2 = "第一行。  \n第二行。";
 public string Info3 = @"
 第一行。[空格][空格]  
 第二行。";
-}
 ```
 
 使用**两个**换行符进行**分段**：  
@@ -214,8 +213,7 @@ public string Info4 = "第一段。\n\n第二段。";
 public string Info5 = @"
 第一段。
 
-第二段。"
-};
+第二段。";
 ```
 
 其他 markdown 语法（列表、代码块...）可自行尝试。

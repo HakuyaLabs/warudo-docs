@@ -53,7 +53,7 @@ randint => Random.Range(int, int)
 | `abs(x)`   | `Mathf.Abs(x)`   | Returns the absolute value of x.                         |
 | `ceil(x)`  | `Mathf.Ceil(x)`  | Returns the smallest integer greater than or equal to x. |
 | `floor(x)` | `Mathf.Floor(x)` | Returns the largest integer less than or equal to x.     |
-| `round(x)` | `Mathf.Round(x)` | Rounds x to the nearest integer.                         |
+| `round(x)` | `Mathf.Round(x)` | Rounds x to the nearest integer by Banker's Rounding.    |
 | `sign(x)`  | `Mathf.Sign(x)`  | Returns the sign (±1.0) of x.                            |
 
 ### Trigonometric Functions
@@ -104,3 +104,8 @@ randint => Random.Range(int, int)
 | `ilerp(from, to, t)`  | `Mathf.InverseLerp(from, to, t)` | Calculates the linear parameter t that produces the interpolant value within the range \[from, to\]. |
 | `rand(min, max)`      | `Random.Range(min, max)`         | Returns a random float number between min (inclusive) and max (inclusive).                           |
 | `randint(min, max)`   | `Random.Range(min, max)`         | Returns a random integer number between min (inclusive) and max (exclusive).                         |
+
+## URL
+
+For more details, check out:  
+[HakuyaLabs/Mathfs: Expanded Math Functionality for Unity](https://github.com/HakuyaLabs/Mathfs)

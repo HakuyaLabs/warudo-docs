@@ -53,7 +53,7 @@ randint => Random.Range(int, int)
 | `abs(x)`   | `Mathf.Abs(x)`   | 返回 x 的绝对值。             |
 | `ceil(x)`  | `Mathf.Ceil(x)`  | 返回大于或等于 x 的最小整数。 |
 | `floor(x)` | `Mathf.Floor(x)` | 返回小于或等于 x 的最大整数。 |
-| `round(x)` | `Mathf.Round(x)` | 将 x 舍入到最近的整数。       |
+| `round(x)` | `Mathf.Round(x)` | 将 x 银行家舍入到最近的整数。       |
 | `sign(x)`  | `Mathf.Sign(x)`  | 返回 x 的符号（±1.0）。       |
 
 ### 三角函数
@@ -103,3 +103,8 @@ randint => Random.Range(int, int)
 | `ilerp(from, to, t)`  | `Mathf.InverseLerp(from, to, t)` | 计算产生范围 \[from, to\] 内插值值的线性参数 t。            |
 | `rand(min, max)`      | `Random.Range(min, max)`         | 返回一个介于 min（含）和 max（含）之间的随机浮点数。        |
 | `randint(min, max)`   | `Random.Range(min, max)`         | 返回一个介于 min（含）和 max（不含）之间的随机整数。        |
+
+## URL
+
+更多细节，可以查看：  
+[HakuyaLabs/Mathfs: Expanded Math Functionality for Unity](https://github.com/HakuyaLabs/Mathfs)
