@@ -175,6 +175,8 @@ public 类型 函数名() {
 
 ### 文本块
 
+#### 静态文本块
+
 你可以通过一个或者多个 `[markdown]` 字段来为节点添加一段文字。这些文字会出现在节点的**底部**。
 
 该字段可以用来说明节点作用、**动态展示**节点内部变量数据等各种功能。
@@ -188,12 +190,12 @@ public string Info = "这是一段描述文字。";
 
 使用 `空格+空格+换行` 进行**换行**：
 
-```
+```cs
 [Markdown]
 public string Info2 = "第一行。  \n第二行。";
 ```
 
-```
+```cs
 [Markdown]
 public string Info3 = @"
 第一行。[空格][空格]  
@@ -203,12 +205,12 @@ public string Info3 = @"
 使用**两个**换行符进行**分段**：  
 （严格 markdown 的单个换行符只会被视为空格）
 
-```
+```cs
 [Markdown]
 public string Info4 = "第一段。\n\n第二段。";
 ```
 
-```
+```cs
 [Markdown]
 public string Info5 = @"
 第一段。
@@ -216,7 +218,21 @@ public string Info5 = @"
 第二段。";
 ```
 
-其他 markdown 语法（列表、代码块...）可自行尝试。
+其他 markdown 语法（列表、表格、代码块、超链接）也同样支持。
+
+#### 动态文本块
+
+有时你会希望有一个文本块能够实时显示节点内部的数据，可以用以下方法实现：
+
+```cs
+[Markdown]
+public string Info = "";
+
+public override void OnUpdate() {
+    Info = $"Input value is {Input}."
+    BroadcastDataInput(nameof(Info));
+}
+```
 
 ###  其他成员写法
 
