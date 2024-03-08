@@ -14,6 +14,9 @@ This page is still under development and is not completed. We are working to imp
 
 ### Basic
 
+- [ExampleNode.cs](https://github.com/HakuyaLabs/WarudoPlaygroundExamples/blob/master/ExampleNode.cs)  
+Standard example of node, showing the basic format of various node components.
+
 - [StructuredDataExampleNode.cs](https://gist.github.com/TigerHix/81cfa66a8f810165c426d1b5157677b5)  
 Creating "inner" data types. (StructuredData)
 

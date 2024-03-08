@@ -4,6 +4,39 @@ sidebar_position: 30
 
 # 自定义节点
 
+## 范例
+
+### 基础
+
+- [ExampleNode.cs](https://github.com/HakuyaLabs/WarudoPlaygroundExamples/blob/master/ExampleNode.cs)  
+节点的标准范例，展示了各种节点组件的基本写法。
+
+- [StructuredDataExampleNode.cs](https://gist.github.com/TigerHix/81cfa66a8f810165c426d1b5157677b5)  
+创建“内部”数据类型。(StructuredData)
+
+- [GetRandomSoundNode.cs](https://gist.github.com/TigerHix/f0f1a7e3c53ca65450fdca1ff06eb343)  
+【获取随机音效】节点。
+
+- [LiteralCharacterAnimationSourceNode.cs](https://gist.github.com/TigerHix/2dc58213defe400ddb280a8cc1e6334b)  
+【角色动画源】节点。
+
+- [SmoothTransformNode.cs](https://gist.github.com/TigerHix/eaf8e05e5e1b687b8265420b9943903d)  
+【平滑变化】节点。
+
+### 进阶
+
+- [FindAssetByTypeNode.cs](https://gist.github.com/TigerHix/ab3522bb25669457cc583abc4fb025d2)  
+自动填充（下拉）列表示例。
+
+- [MultiGateNode.cs](https://gist.github.com/TigerHix/8747793a68f0aa15a469f9823812e221)  
+动态数据 / 流端口示例。
+
+- [ThrowPropAtCharacterNode.cs](https://gist.github.com/TigerHix/18e9f20152c0cfac38fd5528c7af16b6)  
+【向角色投掷道具】节点。
+
+- [SpawnStickerNode.cs](https://gist.github.com/TigerHix/fe35442e9052cd8c4ea80e0261349321)  
+【从本地图片生成贴纸】和【从网络图片生成贴纸】节点。
+
 ## Hello World！
 
 要开始创建一个自定义节点，让我们从最简单的开始。  
@@ -39,8 +72,6 @@ public class HelloWorldNode : Node {
 
 恭喜你！你成功创建了你的第一个自定义节点。
 
-
-
 现在需要做的，就是跟随下面的教程，创建符合你需求的节点了⸺
 
 ## 代码组成
@@ -48,7 +79,7 @@ public class HelloWorldNode : Node {
 一个含有单个节点的 C# 文件的通用结构如下：
 
 ```cs
-【using】
+【导入命名空间】
 
 [NodeType(
     【节点属性】
@@ -64,17 +95,17 @@ public class 【节点名】 : Node {
 
 我们接下来开始分别介绍：
 
-## using
+## 导入命名空间
 
-最基础的 using，这保证了你的节点可以被编译并且被 Warudo 识别。
+以下是最基础的命名空间，这保证了你的节点可以被编译并且被 Warudo 识别。
 
 ```cs
 using Warudo.Core.Attributes;
 using Warudo.Core.Graphs;
 ```
 
-但是我们的节点需要和其他节点连接，需要很多定义好的类型，如果你不想纠结哪些类型在哪个包中，可以直接全部导入，  
-以下是 [ExampleNode](https://github.com/HakuyaLabs/WarudoPlaygroundExamples/blob/master/ExampleNode.cs) 的 using 部分：
+但是节点和其他节点连接需要很多处于其他命名空间的类型，此时就需要按需导入。  
+例如，以下是 [ExampleNode](https://github.com/HakuyaLabs/WarudoPlaygroundExamples/blob/master/ExampleNode.cs) 的 using 部分：
 
 ```cs
 using UnityEngine;
@@ -85,11 +116,9 @@ using Warudo.Plugins.Core.Assets;
 using Warudo.Plugins.Core.Assets.Cinematography;
 ```
 
-你当然也可以导入自己需要的其他包。
-
 ## 节点属性
 
-在节点开头我们需要定义节点的几个属性：
+在节点开头我们可以定义节点的几个参数：
 
 ```cs
 [NodeType(
@@ -106,19 +135,34 @@ using Warudo.Plugins.Core.Assets.Cinematography;
 节点的标题，搜索节点的时候就会检索其标题。
 - `Category`  
 节点在节点池中的分类，同样可以方便检索。
+- `Width = 1f`  
+节点的宽度，默认值为 1f （= 2 列）。
 
 ## 节点名
 
-建议以驼峰命名法以 `XxxNode` 命名，并且与文件名保持一致。
+建议以大驼峰命名法以 `XxxNode` 命名，并且与文件名保持一致。
 
 ## 节点成员
 
-一个节点的定义由多个部分组成，这些部分被称为类的**成员**。
-我们这里介绍最重要的几种：
+一个节点的定义由多个部分组成，这些部分被称为类的**成员**。  
+Warudo 使用 C# 的特性 (Attribute) 来指定成员的类型。  
+有以下几类：
 
-### 输入接口
+|      特性      |   作用   | 类型                                                            |
+|:--------------:|:--------:|:--------------------------------------------------------------- |
+| `[DataInput]`  | 数据输入 | Must be a public field.                                         |
+| `[DataOutput]` | 数据输出 | Must be a public method with a return value.                    |
+| `[FlowInput]`  |  流输入  | Must be a public `Continuation` method.                         |
+| `[FlowOutput]` |  流输出  | Must be a public `Continuation` field without an initial value. |
+|  `[Trigger]`   |   按钮   | Must be a public method                                         |
+|  `[Markdown]`  |  文本框  | Must be a public `string` field.                                |
 
-最简单的输入接口如下：
+
+以下是最重要的几种成员类型的基础介绍：
+
+### DataInput / 数据输入
+
+最简单的数据输入接口如下：
 
 ```cs
 [DataInput]
@@ -156,9 +200,9 @@ public float InputFloat = 0.5f;
 
 :::
 
-### 输出接口
+### DataOutput / 数据输出
 
-最简单的输出接口如下：
+最简单的数据输出接口如下：
 
 ```cs
 [DataOutput]
@@ -170,10 +214,12 @@ public 类型 函数名() {
 你可以在 `{}` 内编写你需要的代码，让它在每次被调用的时候根据输入接口的数据输出需要的数据。
 
 :::info
+
 输出接口暂时不支持添加注释。
+
 :::
 
-### 文本块
+### Markdown / 文本块
 
 #### 静态文本块
 
@@ -181,7 +227,7 @@ public 类型 函数名() {
 
 该字段可以用来说明节点作用、**动态展示**节点内部变量数据等各种功能。
 
-```
+```cs
 [Markdown]
 public string Info = "这是一段描述文字。";
 ```
@@ -234,14 +280,14 @@ public override void OnUpdate() {
 }
 ```
 
-###  其他成员写法
+###  其他
 
 大部分支持的功能都展示在了 [ExampleNode](https://github.com/HakuyaLabs/WarudoPlaygroundExamples/blob/master/ExampleNode.cs) 中，  
 你可以下载该文件，将其放置在 Playground 中，然后在蓝图中查看和尝试其对应的作用。
 
 或者你也可以参考文末我们提供的其他范例。
 
-## 接口类型
+## 数据类型
 
 要与其他节点进行连接，则接口的类型必须一致（或者兼容）。
 
@@ -254,33 +300,3 @@ public override void OnUpdate() {
 - `Quaternion` X-Y-Z-W 四元数
 - `HumanBodyBones` Unity 定义的角色骨骼 [Unity - Scripting API: HumanBodyBones](https://docs.unity3d.com/ScriptReference/HumanBodyBones.html)
 - ⋯⋯
-
-## 范例
-
-### 基础
-
-- [StructuredDataExampleNode.cs](https://gist.github.com/TigerHix/81cfa66a8f810165c426d1b5157677b5)  
-创建“内部”数据类型。(StructuredData)
-
-- [GetRandomSoundNode.cs](https://gist.github.com/TigerHix/f0f1a7e3c53ca65450fdca1ff06eb343)  
-【获取随机音效】节点。
-
-- [LiteralCharacterAnimationSourceNode.cs](https://gist.github.com/TigerHix/2dc58213defe400ddb280a8cc1e6334b)  
-【角色动画源】节点。
-
-- [SmoothTransformNode.cs](https://gist.github.com/TigerHix/eaf8e05e5e1b687b8265420b9943903d)  
-【平滑变化】节点。
-
-### 进阶
-
-- [FindAssetByTypeNode.cs](https://gist.github.com/TigerHix/ab3522bb25669457cc583abc4fb025d2)  
-自动填充（下拉）列表示例。
-
-- [MultiGateNode.cs](https://gist.github.com/TigerHix/8747793a68f0aa15a469f9823812e221)  
-动态数据 / 流端口示例。
-
-- [ThrowPropAtCharacterNode.cs](https://gist.github.com/TigerHix/18e9f20152c0cfac38fd5528c7af16b6)  
-【向角色投掷道具】节点。
-
-- [SpawnStickerNode.cs](https://gist.github.com/TigerHix/fe35442e9052cd8c4ea80e0261349321)  
-【从本地图片生成贴纸】和【从网络图片生成贴纸】节点。

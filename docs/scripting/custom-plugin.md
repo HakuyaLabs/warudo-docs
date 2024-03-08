@@ -30,3 +30,29 @@ Custom plugin to load AnimationClips from the mod folder and registers them as c
 - [KatanaAnimations.cs #Comment](https://gist.github.com/TigerHix/2cb8052b0e8aeeb7f9cb796dc7edc6a3?permalink_comment_id=4633225#gistcomment-4633225)  
 Built in resource types and what URI resolvers are expected to return.  
 ( if you are looking to use `Context.ResourceManager.ResolveResourceUri<T>` )
+
+## File Structure
+
+The recommended file structure of a plugin project is as follows:  
+Note that all files and folders except `*Plugin.cs` are optional, you can create them only when needed.
+
+```
+<PLUGIN_DIR>
+│
+├── <PLUGIN_NAME>Plugin.cs
+│
+├── Localizations
+│   └── Warudo.<PLUGIN_NAME>.json
+│
+├── Assets
+│   ├── Asset1.cs
+│   ├── Asset2.cs
+│   └── ...
+│
+├── Nodes
+│   ├── Node1.cs
+│   ├── Node2.cs
+│   └── ...
+│
+└── ...
+```

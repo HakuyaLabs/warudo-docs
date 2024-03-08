@@ -30,3 +30,29 @@ sidebar_position: 40
 - [KatanaAnimations.cs #Comment](https://gist.github.com/TigerHix/2cb8052b0e8aeeb7f9cb796dc7edc6a3?permalink_comment_id=4633225#gistcomment-4633225)  
 内置资源类型以及 URI 解析器预期返回的内容。 
 （如果你试图使用 `Context.ResourceManager.ResolveResourceUri<T>` ）
+
+## 文件结构
+
+推荐的插件项目的文件结构如下：  
+注意，除了 `*Plugin.cs` 以外的所有文件和文件夹都不是必须的，你可以仅在需要的时候再创建它们。
+
+```
+<PLUGIN_DIR>
+│
+├── <PLUGIN_NAME>Plugin.cs
+│
+├── Localizations
+│   └── Warudo.<PLUGIN_NAME>.json
+│
+├── Assets
+│   ├── Asset1.cs
+│   ├── Asset2.cs
+│   └── ...
+│
+├── Nodes
+│   ├── Node1.cs
+│   ├── Node2.cs
+│   └── ...
+│
+└── ...
+```
