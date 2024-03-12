@@ -15,16 +15,17 @@ sidebar_position: 70
 Warudo supports all 3 tracking modes offered by the Leap Motion Controller: **Desktop**, **Screen Top**, and **Chest Mounted**. We recommend using the **Chest Mounted** mode along with a [neck/chest mount](https://www.etsy.com/market/leap_motion_mounting) for the best experience.
 Warudo支持Leap Motion Controller提供的所有三种追踪模式：**Desktop（桌面）**, **Screen Top（屏幕顶部）**, 以及 **Chest Mounted（颈挂式）**
 
-## Calibration {#Calibration}
+## 校正 {#校正}
 
 There is generally no need to calibrate the Leap Motion Controller. However, you can adjust **Controller Position Offset**, **Controller Rotation Offset**, and **Controller Scale** in the **Leap Motion Controller** asset to adjust the tracking. A virtual Leap Motion Controller will be displayed in the scene to help you visualize the tracking.
+总体来讲，Leap Motion Controller并不需要校正即可使用。但您可以在**Leap Controller Asset**中调制**传感器位置**，**传感器转向**以及**传感器距离**，
 
 ![](/doc-img/en-leapmotion-1.png)
 <p class="img-desc">Adjusting the virtual Leap Motion Controller.</p>
 
-## Options
+## 选项
 
-* **Controller Position Offset**: The offset of the controller position. Positive X is a left offset, positive Y is an upward offset, and positive Z is a forward offset.
+* **Controller Position Offset**: 对传感器的位置进行调整，正数X值会将传感器位置向左侧调整，反之则向右侧调整。正数Y值会将传感器位置向上方调整，反之则向下方调整。正数Z值会将传感器位置向前方调整，反之则向后方调整。
 * **Controller Rotation Offset**: The offset of the controller rotation.
 * **Controller Scale**: The scale of the controller. Increase this value if you want hands to be further away from the body. You can also enable **Per-Axis Scale** to scale the controller on each axis separately.
 * **Fix Finger Orientations Weight**: Due to different model specifications, the finger orientations of the Leap Motion Controller may not match the finger orientations of the model. This option allows you to adjust the finger orientations of the Leap Motion Controller to match the model. 0 means no adjustment, 1 means full adjustment. Adjust this value until the fingers look natural.
