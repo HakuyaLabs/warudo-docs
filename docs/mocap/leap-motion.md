@@ -6,11 +6,11 @@ sidebar_position: 70
 
 使用 [Leap Motion Controller](https://leap2.ultraleap.com/leap-motion-controller-2/)进行手部追踪。
 
-## Setup
+## 初始设置
 
-We recommend using a Leap Motion Controller 2 for more accurate and stable tracking. The original Leap Motion Controller is also supported.
+为了更准确和稳定的手部追踪，我们推荐您使用Leap Motion Controller 2，但初代Leap Motion Controller 也是受支持的。
 
-To connect the Leap Motion Controller to Warudo, you need to download and install the latest Gemini software from [Leap Motion's website](https://leap2.ultraleap.com/gemini-downloads/).
+您将需要下载安装最新的[Gemeni](https://leap2.ultraleap.com/gemini-downloads/)软件以将Leap Motion Controller连接到Warudo。
 
 Warudo supports all 3 tracking modes offered by the Leap Motion Controller: **Desktop**, **Screen Top**, and **Chest Mounted**. We recommend using the **Chest Mounted** mode along with a [neck/chest mount](https://www.etsy.com/market/leap_motion_mounting) for the best experience.
 
