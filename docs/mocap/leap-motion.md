@@ -15,7 +15,7 @@ sidebar_position: 70
 Warudo supports all 3 tracking modes offered by the Leap Motion Controller: **Desktop**, **Screen Top**, and **Chest Mounted**. We recommend using the **Chest Mounted** mode along with a [neck/chest mount](https://www.etsy.com/market/leap_motion_mounting) for the best experience.
 Warudo支持Leap Motion Controller提供的所有三种追踪模式：**Desktop（桌面）**, **Screen Top（屏幕顶部）**, 以及 **Chest Mounted（颈挂式）**
 
-## 校正 {#校正}
+## Calibration {#Calibration}
 
 There is generally no need to calibrate the Leap Motion Controller. However, you can adjust **Controller Position Offset**, **Controller Rotation Offset**, and **Controller Scale** in the **Leap Motion Controller** asset to adjust the tracking. A virtual Leap Motion Controller will be displayed in the scene to help you visualize the tracking.
 
