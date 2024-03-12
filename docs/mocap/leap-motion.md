@@ -16,8 +16,7 @@ Warudo支持Leap Motion Controller提供的所有三种捕捉模式：**Desktop�
 
 ## 校正 {#校正}
 
-There is generally no need to calibrate the Leap Motion Controller. However, you can adjust **Controller Position Offset**, **Controller Rotation Offset**, and **Controller Scale** in the **Leap Motion Controller** asset to adjust the tracking. A virtual Leap Motion Controller will be displayed in the scene to help you visualize the tracking.
-总体来讲，Leap Motion Controller并不需要校正即可使用。但您可以在**Leap Controller Asset**中调制**传感器位置**，**传感器转向**以及**传感器距离**，
+总体来讲，Leap Motion Controller并不需要校正即可使用。但您可以在**Leap Controller Asset**中调制**传感器位置**，**传感器转向**以及**传感器距离**来调整捕捉效果。该界面中将会显示一个虚拟的Leap Motion Controller图标，以帮助您可视化的校正捕捉效果。
 
 ![](/doc-img/en-leapmotion-1.png)
 <p class="img-desc">Adjusting the virtual Leap Motion Controller.</p>
