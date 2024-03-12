@@ -14,7 +14,7 @@ sidebar_position: 70
 
 Warudo支持Leap Motion Controller提供的所有三种捕捉模式：**Desktop（桌面）**, **Screen Top（屏幕顶部）**, 以及 **Chest Mounted（颈挂式）**。为了更好的体验，我们推荐在使用颈挂式捕捉模式时，使用一个[颈挂](https://www.etsy.com/market/leap_motion_mounting)。
 
-## 校正 {#校正}
+## 校正 {#Calibration}
 
 总体来讲，Leap Motion Controller并不需要校正即可使用。但您可以在**Leap Controller Asset**中调制**传感器位置**，**传感器转向**以及**传感器距离**来调整捕捉效果。该界面中将会显示一个虚拟的Leap Motion Controller图标，以帮助您可视化的校正捕捉效果。
 
