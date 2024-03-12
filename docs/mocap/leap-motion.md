@@ -4,7 +4,7 @@ sidebar_position: 70
 
 # Leap Motion Controller
 
-Hand tracking via [Leap Motion Controller](https://leap2.ultraleap.com/leap-motion-controller-2/).
+使用 [Leap Motion Controller](https://leap2.ultraleap.com/leap-motion-controller-2/)进行手部追踪。
 
 ## Setup
 
