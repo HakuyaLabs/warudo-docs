@@ -4,22 +4,22 @@ sidebar_position: 120
 
 # Noitom Axis
 
-Body tracking via [Noitom Axis Studio](https://neuronmocap.com/pages/axis-studio) or Axis Neuron. Requires a [Noitom Perception Neuron](https://neuronmocap.com/) suit.
+使用[Noitom Axis Studio软件](https://neuronmocap.com/pages/axis-studio)或者[Axis Neuron软件](https://neuronmocap.com/pages/axis-neuron)进行动作捕捉。 这个动捕方法需要使用官方售卖的[Noitom Perception Neuron](https://neuronmocap.com/)动捕服装。
 
-## Setup
+## 初始设置
 
-Open Noitom Axis Studio and enable BVH streaming in **Settings → BVH Broadcasting** (toggle the switch at the top right).
+打开[Noitom Axis Studio软件](https://neuronmocap.com/pages/axis-studio)并在如图的**Settings → BVH Broadcasting** 中打开BVH串流
 
 ![](/doc-img/en-noitom-1.png)
 
-## Calibration
+## 校正
 
-Calibration of Noitom hardware is done in Noitom Axis Studio or Axis Neuron.
+Noitom动捕服装的校正需要在[Noitom Axis Studio软件](https://neuronmocap.com/pages/axis-studio)或者[Axis Neuron软件](https://neuronmocap.com/pages/axis-neuron)中进行。
 
-## Frequently Asked Questions
+## 常见问题
 
-Please refer to [Overview](overview#FAQ) and [Customizing Pose Tracking](body-tracking#FAQ) for common questions.
+常见问题请参考[动作捕捉方案一览](overview#FAQ)和[姿态追踪](body-tracking#FAQ)页面。
 
-### My tracking drifts over time.
+### 我的动捕结果经常会自己平移
 
-This is a common issue with inertial motion capture systems, which drift over time due to accumulated errors. To reduce the drift, make sure there are no magnetic or electrical interference near the tracking sensors.
+这种随着时间一点点增大，导致动捕结果平移的误差是惯性动捕系统的常见问题。请尽量减少动捕设备周边的电磁干扰来减少漂移问题。
