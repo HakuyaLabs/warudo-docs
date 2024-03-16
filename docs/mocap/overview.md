@@ -9,9 +9,9 @@ sidebar_position: 10
 不论在自家还是在专业动捕工作室，Warudo自有妙计帮助您。目前Warudo支持以下动捕设备：
 
 * 摄像头
-  * Built-in tracking via [MediaPipe](./mediapipe) or [OpenSeeFace](./openseeface).使用本软件自带的[MediaPipe](./mediapipe) 或者 [OpenSeeFace](./openseeface)功能即可进行动作捕捉。
+  * 使用本软件自带的[MediaPipe](./mediapipe) 或者 [OpenSeeFace](./openseeface)功能即可进行动作捕捉。
 * iPhone
-  * Requires either [iFacialMocap / FaceMotion3D](./ifacialmocap) or [RhyLive](./rhylive) app to be installed on the iPhone.在iPhone上安装[iFacialMocap / FaceMotion3D](./ifacialmocap) 或 [RhyLive]软件即可使用
+  * 在iPhone上安装[iFacialMocap / FaceMotion3D](./ifacialmocap) 或 [RhyLive]软件即可使用
 * [Leap Motion Controller](./leap-motion)
 * [Sony Mocopi](./mocopi)
 * [Rokoko](./rokoko)
@@ -40,7 +40,7 @@ sidebar_position: 10
 :::
 * 如果您对MediaPipe的手部捕捉感到不满意，请您考虑使用[Leap Motion Controller](./leap-motion)进行手部动捕。您可以使用一个[颈挂](https://www.etsy.com/market/leap_motion_mounting)以让它能够追踪手部动作。
 * 如果您需要全身动捕方案，您可以考虑使用[Sony Mocopi](./mocopi)或者[VR trackers](./vmc.md)。如果您有足够预算，您也可以考虑购买动捕服装，例如[Virdyn VDSuit](./virdyn), [Noitom Perception Neuron](./noitom), [Rokoko Smartsuit Pro](./rokoko), 或者[Xsens MVN Link](./xsens-mvn)。您也可以使用[StretchSense gloves](./stretchsense)为其增加手部动捕功能。
-* If you are looking for a more professional solution, you may consider using an optical tracking system, such as [Vicon](https://www.vicon.com/), [OptiTrack](https://optitrack.com/), or [Chingmu](https://www.chingmu.com/).如果您需要专业级的解决方案，您也可以使用光学捕捉系统，常见的方案有[Vicon](https://www.vicon.com/), [OptiTrack](https://optitrack.com/)和 [青瞳](https://www.chingmu.com/)。
+* 如果您需要更专业的解决方案，您也可以使用光学捕捉系统，常见的方案有[Vicon](https://www.vicon.com/), [OptiTrack](https://optitrack.com/)和 [青瞳](https://www.chingmu.com/)。
 
 ## 初始设置 {#setup}
 
@@ -71,7 +71,7 @@ sidebar_position: 10
 
 ### 动啊模型，为什么不动！
 
-If you are using a motion capture system that requires an external application, such as iFacialMocap, make sure the application is running and the tracking data is being sent to Warudo. Also, make sure your computer's firewall is not blocking Warudo from receiving the tracking data; you may need to add Warudo to the whitelist, or temporarily disable the firewall.如果您正在使用一个需要外部应用程序的动捕设备（如iFacialMocap），请确保该应用正在运行并在将动捕数据传输给Warudo。并且您需要检查您电脑的防火墙设置以防其阻止Warudo接收动捕数据；您可能需要暂时停用防火墙或者将Warudo列入白名单。
+如果您正在使用一个需要外部应用程序的动捕设备（如iFacialMocap），请确保该应用正在运行并在将动捕数据传输给Warudo。并且您需要检查您电脑的防火墙设置以防其阻止Warudo接收动捕数据；您可能需要暂时停用防火墙或者将Warudo列入白名单。
 
 有些动捕接收器有**Port（接口）** 选项。请确保接口号码与第三方应用的接口号码对应。
 
