@@ -12,7 +12,7 @@ sidebar_position: 70
 
 您将需要下载安装最新的[Gemeni软件](https://leap2.ultraleap.com/gemini-downloads/)以将您的Leap Motion Controller连接到Warudo。
 
-Warudo支持Leap Motion Controller提供的所有三种捕捉模式：**Desktop（桌面）**, **Screen Top（屏幕顶部）**, 以及 **Chest Mounted（颈挂式）**。为了更好的体验，我们推荐在使用颈挂式捕捉模式时，使用一个[颈挂](https://www.etsy.com/market/leap_motion_mounting)。
+Warudo支持Leap Motion Controller提供的所有三种捕捉模式：**Desktop（将设备置于桌面上时）**, **Screen Top（将设备置于屏幕顶部时）**, 以及 **Chest Mounted（颈挂式）**。为了更好的体验，我们推荐在使用颈挂式捕捉模式时，使用一个[颈挂](https://www.etsy.com/market/leap_motion_mounting)。
 
 ## 校正 {#Calibration}
 
