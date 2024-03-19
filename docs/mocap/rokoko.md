@@ -17,7 +17,7 @@ sidebar_position: 90
 ![](/doc-img/zh-rokoko-2.webp)
 
 :::注意
-Note: 你需要拥有Rokoko Plus或者Pro订阅才能将数据流分享到Unity。
+Note: 你需要拥有 Rokoko Plus 或者 Pro 订阅才能将数据流分享到 Unity。
 :::
 
 :::更多信息
