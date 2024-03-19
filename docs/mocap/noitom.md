@@ -2,19 +2,19 @@
 sidebar_position: 120
 ---
 
-# Noitom Axis
+# 诺亦腾 Axis
 
-使用[Noitom Axis Studio软件](https://neuronmocap.com/pages/axis-studio)或者[Axis Neuron软件](https://neuronmocap.com/pages/axis-neuron)进行动作捕捉。 这个动捕方法需要使用官方售卖的[Noitom Perception Neuron](https://neuronmocap.com/)动捕服装。
+使用[诺亦腾 Axis Studio软件](https://neuronmocap.com/pages/axis-studio)或者[Axis Neuron软件](https://neuronmocap.com/pages/axis-neuron)进行动作捕捉。 这个动捕方法需要使用官方售卖的[Noitom Perception Neuron](https://neuronmocap.com/)动捕服装。
 
 ## 初始设置
 
-打开[Noitom Axis Studio软件](https://neuronmocap.com/pages/axis-studio)并在如图的**Settings → BVH Broadcasting** 中打开BVH串流
+打开[诺亦腾 Axis Studio软件](https://neuronmocap.com/pages/axis-studio)并在如图的**Settings → BVH Broadcasting** 中打开BVH串流
 
 ![](/doc-img/en-noitom-1.png)
 
 ## 校正
 
-Noitom动捕服装的校正需要在[Noitom Axis Studio软件](https://neuronmocap.com/pages/axis-studio)或者[Axis Neuron软件](https://neuronmocap.com/pages/axis-neuron)中进行。
+Noitom动捕服装的校正需要在[诺亦腾 Axis Studio软件](https://neuronmocap.com/pages/axis-studio)或者[Axis Neuron软件](https://neuronmocap.com/pages/axis-neuron)中进行。
 
 ## 常见问题
 
