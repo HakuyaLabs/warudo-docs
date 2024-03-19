@@ -4,7 +4,7 @@ sidebar_position: 120
 
 # 诺亦腾 Axis
 
-使用[诺亦腾 Axis Studio软件](https://neuronmocap.com/pages/axis-studio)或者[Axis Neuron软件](https://neuronmocap.com/pages/axis-neuron)进行动作捕捉。 这个动捕方法需要使用官方售卖的[Noitom Perception Neuron](https://neuronmocap.com/)动捕服装。
+使用[诺亦腾 Axis Studio软件](https://neuronmocap.com/pages/axis-studio)或者[Axis Neuron软件](https://neuronmocap.com/pages/axis-neuron)进行动作捕捉。 这个动捕方法需要使用官方售卖的[诺亦腾 Perception Neuron](https://neuronmocap.com/)动捕服装。
 
 ## 初始设置
 

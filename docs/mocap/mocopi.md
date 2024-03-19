@@ -2,9 +2,9 @@
 sidebar_position: 80
 ---
 
-# Sony Mocopi
+# 索尼 Mocopi
 
-用 [Sony Mocopi](https://electronics.sony.com/more/mocopi/all-mocopi/p/qmss1-uscx)进行动作捕捉。
+用 [索尼 Mocopi](https://electronics.sony.com/more/mocopi/all-mocopi/p/qmss1-uscx)进行动作捕捉。
 
 ## 初始设置
 
@@ -13,7 +13,7 @@ sidebar_position: 80
 在初始设置完成之后，在Mocopi手机应用程序的设置页面中，选中**External device connection settings（外部设备连接设置）**，将**Transfer Format** 设置为**mocopi（UDP）**，然后再**IP address**中输入您的计算机IP地址。
 
 :::tip
-如果您不知道电脑的IP地址，可以在**Mocopi Receiver**素材的设置页面中找到。
+如果您不知道电脑的IP地址，可以在**Mocopi 接收器**素材的设置页面中找到。
 
 ![](/doc-img/en-ifacialmocap-1.png)
 

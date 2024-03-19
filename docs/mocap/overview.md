@@ -12,7 +12,7 @@ sidebar_position: 10
   * 使用本软件自带的 [MediaPipe](./mediapipe) 或者 [OpenSeeFace](./openseeface) 功能即可进行动作捕捉。
 * iPhone
   * 在iPhone上安装 [iFacialMocap / FaceMotion3D](./ifacialmocap) 或 [RhyLive](./rhylive) 软件即可使用
-* [Leap Motion Controller](./leap-motion)
+* [Leap Motion 控制器](./leap-motion)
 * [Sony Mocopi](./mocopi)
 * [Rokoko](./rokoko)
 * [Xsens MVN](./xsens-mvn)
@@ -38,8 +38,8 @@ sidebar_position: 10
 :::提示
 为了更好的捕捉效果，我们推荐您使用 iPhone 12 或更新的 iPhone 型号（iPhone mini 也可以），较早期的 iPhone 型号可能会影响捕捉效果。
 :::
-* 如果您对 MediaPipe 的手部捕捉感到不满意，请您考虑使用 [Leap Motion Controller](./leap-motion) 进行手部动捕。您可以使用一个[颈挂](https://www.etsy.com/market/leap_motion_mounting)以让它能够追踪手部动作。
-* 如果您需要全身动捕方案，您可以考虑使用 [Sony Mocopi](./mocopi )或者 [VR trackers](./vmc.md)。如果您有足够预算，您也可以考虑购买动捕服装，例如[Virdyn VDSuit](./virdyn), [Noitom Perception Neuron](./noitom), [Rokoko Smartsuit Pro](./rokoko), 或者 [Xsens MVN Link](./xsens-mvn)。您也可以使用 [StretchSense gloves](./stretchsense) 为其增加手部动捕功能。
+* 如果您对 MediaPipe 的手部捕捉感到不满意，请您考虑使用 [Leap Motion 控制器](./leap-motion) 进行手部动捕。您可以使用一个[颈挂](https://www.etsy.com/market/leap_motion_mounting)以让它能够追踪手部动作。
+* 如果您需要全身动捕方案，您可以考虑使用 [索尼 Mocopi](./mocopi )或者 [VR trackers](./vmc.md)。如果您有足够预算，您也可以考虑购买动捕服装，例如[Virdyn（虚拟动力） VDSuit](./virdyn), [诺亦腾 Perception Neuron](./noitom), [Rokoko Smartsuit Pro](./rokoko), 或者 [Xsens MVN Link](./xsens-mvn)。您也可以使用 [StretchSense gloves](./stretchsense) 为其增加手部动捕功能。
 * 如果您需要更专业的解决方案，您也可以使用光学捕捉系统，常见的方案有 [Vicon](https://www.vicon.com/), [OptiTrack](https://optitrack.com/)和 [青瞳](https://www.chingmu.com/)。
 
 ## 初始设置 {#setup}
