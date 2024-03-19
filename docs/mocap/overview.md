@@ -29,7 +29,7 @@ sidebar_position: 10
 
 ## 我应该使用哪种动捕系统?
 
-如果您是初次进行3D直播的话，我们建议您先使用Warudo内置的 [MediaPipe](./mediapipe) 来完成全部动捕，只需要您拥有一个电脑摄像头便可完成全部流程。如果您使用iPhone，我们推荐您使用 [iFacialMocap](./ifacialmocap) 来代替 MediaPipe 进行更高精度的面部动捕，这样也可以降低您电脑的动捕负载。
+如果您是初次进行3D直播的话，我们建议您先使用Warudo内置的 [MediaPipe](./mediapipe) 来完成全部动捕，只需要您拥有一个电脑摄像头便可完成全部流程。如果您使用 iPhone，我们推荐您使用 [iFacialMocap](./ifacialmocap) 来代替 MediaPipe 进行更高精度的面部动捕，这样也可以降低您电脑的动捕负载。
 
 如果您想要提高您的动捕质量，我们有以下建议：
 
@@ -44,7 +44,7 @@ sidebar_position: 10
 
 ## 初始设置 {#setup}
 
-在Warudo中有两种方法进行动捕初始设置。第一种推荐的方法是使用**开播助手**一步一步的进行。只需点击 **Basic Setup → Get Started** 开始开播流程，然后按指示做即可。
+在 Warudo 中有两种方法进行动捕初始设置。第一种推荐的方法是使用**开播助手**一步一步的进行。只需点击 **Basic Setup → Get Started** 开始开播流程，然后按指示做即可。
 
 ![](/doc-img/en-getting-started-2.png)
 <p class="img-desc">在开播助手组件中设置动作捕捉</p>
@@ -52,7 +52,7 @@ sidebar_position: 10
 在开播流程完毕后，您可以使用相关的动捕组件来客制化您的动捕效果。比如说，如果您正在使用iFacialMocap，您可能会注意到Warudo会在您移动头部时增加一些躯干动作。如果您不需要，可以在 **iFacialMocap Receiver** 组件中将 **Body Movement Intensity** 设置为0.
 
 ![](/doc-img/en-mocap-1.png)
-<p class="img-desc">在iFacialMocap中调整Body Movement Intensity</p>
+<p class="img-desc">在 iFacialMocap 中调整 Body Movement Intensity</p>
 
 另一种设置动捕的方式是使用 **Character → Setup Motion Capture**，这样能让您直接设置面部和身体的动捕。然而，一些开播流程中的检察环节会被跳过。
 
