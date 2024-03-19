@@ -4,34 +4,34 @@ sidebar_position: 90
 
 # Rokoko
 
-Face & body tracking via [Rokoko](https://www.rokoko.com/).
+使用 [Rokoko](https://www.rokoko.com/) 进行面部/身体动捕。
 
-## Setup
+## 初始设定
 
-Open Rokoko Studio and enable **Livestream → Activate streaming to Unity**:
+打开Rokoko并开启 **Livestream → Activate streaming to Unity**:
 
 ![](/doc-img/zh-rokoko-1.webp)
 
-Then, update **Profile Name** in the **Rokoko Receiver** asset to the Rokoko actor whose motion capture data you would like to receive:
+Then, update **Profile Name** in the **Rokoko Receiver** asset to the Rokoko actor whose motion capture data you would like to receive:然后，在 **Rokoko Receiver** 组件中将 **Profile Name** 更新为您想要接收动捕数据的Rokoko actor的名字。
 
 ![](/doc-img/zh-rokoko-2.webp)
 
-:::caution
-Note: You need a Rokoko Plus or Pro subscription to stream to Unity.
+:::注意
+Note: 你需要拥有Rokoko Plus或者Pro订阅才能将数据流分享到Unity。
 :::
 
-:::info
-For more details, see the [official documentation](https://support.rokoko.com/hc/en-us/articles/4410471183633-Getting-Started-Streaming-to-Unity).
+:::更多信息
+如有更多疑问，请您查阅 [Rokoko官方手册](https://support.rokoko.com/hc/en-us/articles/4410471183633-Getting-Started-Streaming-to-Unity).
 :::
 
-## Calibration
+## 校正
 
-Calibration of Rokoko hardware is done in Rokoko Studio.
+Rokoko 动捕硬件的校正需要在 Rokoko Studio中进行。
 
-## Frequently Asked Questions
+## 常见问题{#FAQ}
 
-Please refer to [Overview](overview#FAQ) and [Customizing Pose Tracking](body-tracking#FAQ) for common questions.
+常见问题请参考[动作捕捉方案一览](overview#FAQ)以及[姿态追踪](body-tracking#FAQ)。
 
-### My tracking drifts over time.
+### 我的动捕结果经常会自己平移
 
-This is a common issue with inertial motion capture systems, which drift over time due to accumulated errors. To reduce the drift, make sure there are no magnetic or electrical interference near the tracking sensors.
+这种随着时间一点点增大，导致动捕结果平移的误差是惯性动捕系统的常见问题。请尽量减少动捕设备周边的电磁干扰来减少漂移问题。
