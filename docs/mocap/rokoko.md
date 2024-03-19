@@ -12,7 +12,7 @@ sidebar_position: 90
 
 ![](/doc-img/zh-rokoko-1.webp)
 
-Then, update **Profile Name** in the **Rokoko Receiver** asset to the Rokoko actor whose motion capture data you would like to receive:然后，在 **Rokoko Receiver** 组件中将 **Profile Name** 更新为您想要接收动捕数据的Rokoko actor的名字。
+然后，在 **Rokoko 接收器** 组件中将 **Profile Name** 更新为您想要接收动捕数据的Rokoko actor的名字。
 
 ![](/doc-img/zh-rokoko-2.webp)
 
