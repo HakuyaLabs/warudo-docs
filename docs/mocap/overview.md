@@ -13,16 +13,16 @@ sidebar_position: 10
 * iPhone
   * 在iPhone上安装 [iFacialMocap / FaceMotion3D](./ifacialmocap) 或 [RhyLive](./rhylive) 软件即可使用
 * [Leap Motion 控制器](./leap-motion)
-* [Sony Mocopi](./mocopi)
+* [索尼 Mocopi](./mocopi)
 * [Rokoko](./rokoko)
 * [Xsens MVN](./xsens-mvn)
-* [Virdyn Studio (VDMocapStudio)](./virdyn)
+* [Virdyn（虚拟动力） Studio (VDMocapStudio)](./virdyn)
 * [Noitom Axis](./noitom)
 * [StretchSense Glove](./stretchsense)
 * 支持[VMC protocol](./vmc)的第三方软件, 例如 [VSeeFace](https://www.vseeface.icu/), [VirtualMotionCapture](https://vmc.info/)
   * 付费（赞助性质）版本的 [VirtualMotionCapture](https://www.patreon.com/sh_akira) 可支持VR动捕。
 
-[Warudo Pro](../pro.md) 可以额外支持以下系统:
+[Warudo Pro](../pro.md) 可以额外支持以下动捕系统:
 
 * 任何兼容 [Autodesk MotionBuilder](./motionbuilder) 软件的光学动捕系统,例如 [Vicon](https://www.vicon.com/), [OptiTrack](https://optitrack.com/)
 * [青瞳 Avatar](./chingmu)
