@@ -61,7 +61,7 @@ sidebar_position: 10
 
 这个方法在使用多个面部/身体动捕时非常方便，因为开播助手每进行一次新的开播时都会删除已有的动捕设置。
 
-不论您使用哪种方法，Warudo 都会在您的界面上生成对应的蓝图。比如说如果您使用iFacialMocap进行面部动捕，使用MediaPipe进行身体动捕，您会看到两张蓝图：**Face Tracking - iFacialMocap** 以及 **Pose Tracking - MediaPipe**，您可以编辑这些蓝图来定制化您的动捕效果。
+不论您使用哪种方法，Warudo 都会在您的界面上生成对应的蓝图。比如说如果您使用 iFacialMocap 进行面部动捕，使用 MediaPipe 进行身体动捕，您会看到两张蓝图：**Face Tracking - iFacialMocap** 以及 **Pose Tracking - MediaPipe**，您可以编辑这些蓝图来定制化您的动捕效果。
 
 :::注意
 在几乎所有情况下您都不应该手工创建一个动捕模块（例如点击 **Add Asset** 然后选择一个动捕模块，例如 **iFacialMocap Receiver**）这是因为动捕模块本身只能捕捉动作并输出捕捉结果，但它必须要使用蓝图才能与您想要使用的直播模型相关联。开播助手和 **Setup Motion Capture** 两种模块都能够自动为您创建需要的蓝图。
