@@ -49,7 +49,7 @@ sidebar_position: 10
 ![](/doc-img/en-getting-started-2.png)
 <p class="img-desc">在开播助手组件中设置动作捕捉</p>
 
-在开播流程完毕后，您可以使用相关的动捕组件来客制化您的动捕效果。比如说，如果您正在使用iFacialMocap，您可能会注意到Warudo会在您移动头部时增加一些躯干动作。如果您不需要，可以在 **iFacialMocap Receiver** 组件中将 **Body Movement Intensity** 设置为0.
+在开播流程完毕后，您可以使用相关的动捕组件来客制化您的动捕效果。比如说，如果您正在使用 iFacialMocap，您可能会注意到 Warudo 会在您移动头部时增加一些躯干动作。如果您不需要，可以在 **iFacialMocap Receiver** 组件中将 **Body Movement Intensity** 设置为0.
 
 ![](/doc-img/en-mocap-1.png)
 <p class="img-desc">在 iFacialMocap 中调整 Body Movement Intensity</p>
