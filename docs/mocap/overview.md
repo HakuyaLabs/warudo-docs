@@ -29,17 +29,17 @@ sidebar_position: 10
 
 ## 我应该使用哪种动捕系统?
 
-如果您是初次进行3D直播的话，我们建议您先使用Warudo内置的 [MediaPipe](./mediapipe) 来完成全部动捕，只需要您拥有一个电脑摄像头便可完成全部流程。如果您使用 iPhone，我们推荐您使用 [iFacialMocap](./ifacialmocap) 来代替 MediaPipe 进行更高精度的面部动捕，这样也可以降低您电脑的动捕负载。
+如果您是初次进行3D直播的话，我们建议您先使用 Warudo 内置的 [MediaPipe](./mediapipe) 来完成全部动捕，只需要您拥有一个电脑摄像头便可完成全部流程。如果您使用 iPhone，我们推荐您使用 [iFacialMocap](./ifacialmocap) 来代替 MediaPipe 进行更高精度的面部动捕，这样也可以降低您电脑的动捕负载。
 
 如果您想要提高您的动捕质量，我们有以下建议：
 
-* 使用 iPhone 上的 [iFacialMocap](./ifacialmocap) 应用进行面部动捕，这是目前最好的家用面部动捕方案。如果您没有 iPhone，请考虑购买一台二手 iPhone，只要它支持Face ID即可使用此应用。
+* 使用 iPhone 上的 [iFacialMocap](./ifacialmocap) 应用进行面部动捕，这是目前最好的家用面部动捕方案。如果您没有 iPhone，请考虑购买一台二手 iPhone，只要它支持 Face ID 即可使用此应用。
 
 :::提示
 为了更好的捕捉效果，我们推荐您使用 iPhone 12 或更新的 iPhone 型号（iPhone mini 也可以），较早期的 iPhone 型号可能会影响捕捉效果。
 :::
 * 如果您对 MediaPipe 的手部捕捉感到不满意，请您考虑使用 [Leap Motion 控制器](./leap-motion) 进行手部动捕。您可以使用一个[颈挂](https://www.etsy.com/market/leap_motion_mounting)以让它能够追踪手部动作。
-* 如果您需要全身动捕方案，您可以考虑使用 [索尼 Mocopi](./mocopi )或者 [VR trackers](./vmc.md)。如果您有足够预算，您也可以考虑购买动捕服装，例如[Virdyn（虚拟动力） VDSuit](./virdyn), [诺亦腾 Perception Neuron](./noitom), [Rokoko Smartsuit Pro](./rokoko), 或者 [Xsens MVN Link](./xsens-mvn)。您也可以使用 [StretchSense gloves](./stretchsense) 为其增加手部动捕功能。
+* 如果您需要全身动捕方案，您可以考虑使用 [索尼 Mocopi](./mocopi )或者 [VR trackers](./vmc.md)。如果您有足够预算，您也可以考虑购买动捕服装，例如 [Virdyn（虚拟动力） VDSuit](./virdyn), [诺亦腾 Perception Neuron](./noitom), [Rokoko Smartsuit Pro](./rokoko), 或者 [Xsens MVN Link](./xsens-mvn)。您也可以使用 [StretchSense gloves](./stretchsense) 为其增加手部动捕功能。
 * 如果您需要更专业的解决方案，您也可以使用光学捕捉系统，常见的方案有 [Vicon](https://www.vicon.com/), [OptiTrack](https://optitrack.com/)和 [青瞳](https://www.chingmu.com/)。
 
 ## 初始设置 {#setup}
@@ -61,7 +61,7 @@ sidebar_position: 10
 
 这个方法在使用多个面部/身体动捕时非常方便，因为开播助手每进行一次新的开播时都会删除已有的动捕设置。
 
-不论您使用哪种方法，Warudo都会在您的界面上生成对应的蓝图。比如说如果您使用iFacialMocap进行面部动捕，使用MediaPipe进行身体动捕，您会看到两张蓝图：**Face Tracking - iFacialMocap** 以及 **Pose Tracking - MediaPipe**，您可以编辑这些蓝图来定制化您的动捕效果。
+不论您使用哪种方法，Warudo 都会在您的界面上生成对应的蓝图。比如说如果您使用iFacialMocap进行面部动捕，使用MediaPipe进行身体动捕，您会看到两张蓝图：**Face Tracking - iFacialMocap** 以及 **Pose Tracking - MediaPipe**，您可以编辑这些蓝图来定制化您的动捕效果。
 
 :::注意
 在几乎所有情况下您都不应该手工创建一个动捕模块（例如点击 **Add Asset** 然后选择一个动捕模块，例如 **iFacialMocap Receiver**）这是因为动捕模块本身只能捕捉动作并输出捕捉结果，但它必须要使用蓝图才能与您想要使用的直播模型相关联。开播助手和 **Setup Motion Capture** 两种模块都能够自动为您创建需要的蓝图。
