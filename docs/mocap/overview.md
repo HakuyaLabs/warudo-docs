@@ -17,7 +17,7 @@ sidebar_position: 10
 * [Rokoko](./rokoko)
 * [Xsens MVN](./xsens-mvn)
 * [Virdyn（虚拟动力） Studio (VDMocapStudio)](./virdyn)
-* [Noitom Axis](./noitom)
+* [诺亦腾 Axis](./noitom)
 * [StretchSense Glove](./stretchsense)
 * 支持[VMC protocol](./vmc)的第三方软件, 例如 [VSeeFace](https://www.vseeface.icu/), [VirtualMotionCapture](https://vmc.info/)
   * 付费（赞助性质）版本的 [VirtualMotionCapture](https://www.patreon.com/sh_akira) 可支持VR动捕。
