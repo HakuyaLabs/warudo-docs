@@ -10,9 +10,12 @@ Let's create your first mod! We will create a [prop mod](prop-mod) that is a sim
 Before getting started, make sure you have already set up the [Warudo SDK](mod-sdk.md).
 :::
 
+If you have no experience with Unity, we recommend going through a few beginner tutorials to get familiar with the Unity editor. [Unity Learn](https://learn.unity.com/) is a great place to start!
+
 :::tip
 Creating mods the first time can be a little overwhelming. If you need help, feel free to reach out to us on [Discord](https://discord.gg/warudo)!
 :::
+
 
 ## Tutorial
 

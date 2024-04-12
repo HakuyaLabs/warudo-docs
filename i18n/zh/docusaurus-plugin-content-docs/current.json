@@ -23,6 +23,10 @@
     "message": "蓝图",
     "description": "The label for category Blueprints in sidebar tutorialSidebar"
   },
+  "sidebar.tutorialSidebar.category.Nodes": {
+    "message": "节点",
+    "description": "The label for category Nodes in sidebar tutorialSidebar"
+  },
   "sidebar.tutorialSidebar.category.Advanced": {
     "message": "Advanced",
     "description": "The label for category Advanced in sidebar tutorialSidebar"
@@ -30,6 +34,14 @@
   "sidebar.tutorialSidebar.category.Extensions": {
     "message": "拓展",
     "description": "The label for category Extensions in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Modding": {
+    "message": "Mod 制作",
+    "description": "The label for category Modding in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Scripting": {
+    "message": "自定义脚本",
+    "description": "The label for category Scripting in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Miscellaneous": {
     "message": "其他",
