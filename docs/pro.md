@@ -18,5 +18,5 @@ For pricing and more details, please contact us: [info@warudo.app](mailto:info@w
 
 Yes you can! We offer a special indie pricing for Warudo Pro, provided that you meet the following criteria:
 
-* the copyrights of your VTubing persona are exclusively yours, and you possess ownership of your accounts on social/livestreaming platforms;
+* the copyrights of your VTuber IP (Intellectual Property) are exclusively yours, and you possess ownership of your accounts on social/livestreaming platforms;
 * there are no contractual obligations requiring you to stream for X hours per week, unless such a contract is directly in agreement with a major livestreaming platform (e.g., Twitch, YouTube).
