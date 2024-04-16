@@ -31,10 +31,10 @@ For non-streaming activities, Warudo can be used for **free**. For example, test
 
 For streaming activities, Warudo can be used for **free** if and only if:
 
-* the copyrights of your VTubing persona are exclusively yours, and you possess ownership of your accounts on social/livestreaming platforms;
+* the copyrights of your VTuber IP (Intellectual Property) are exclusively yours, and you possess ownership of your accounts on social/livestreaming platforms;
 * there are no contractual obligations requiring you to stream for X hours per week, unless such a contract is directly in agreement with a major livestreaming platform (e.g., Twitch, YouTube).
 
-If you are not sure, please contact us at [info@warudo.app](mailto:info@warudo.app).
+Note that you _can_ still own full copyrights of your VTuber IP even if you use a non-exclusive VTubing model, such as a VRChat public avatar. If you are not sure, please contact us at [info@warudo.app](mailto:info@warudo.app).
 
 ## I am a corporate VTuber. How can I use Warudo?
 
