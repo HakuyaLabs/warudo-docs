@@ -6,7 +6,7 @@ sidebar_position: 11
 
 ## What is Warudo Pro?
 
-Warudo Pro is the version of Warudo that we exclusively offer to corporate users.
+Warudo Pro is the version of Warudo that we offer to corporate users.
 
 In addition to all the features of the Steam version, Warudo Pro adds support for Universal RP (URP), support for [NiloToon rendering](https://github.com/ColinLeung-NiloCat/UnityURPToonLitShaderExample#nilotoonurp-users-creations-public-media-not-nda-contents), as well as support for [Autodesk MotionBuilder and optical motion capture systems (e.g., Vicon, OptiTrack)](mocap/motionbuilder). Leveraging Warudo Pro's [Stage Director mode](assets/director) for cinematic camera control, users of Warudo Pro have been able to deliver industry-leading live 3D VTubing performances.
 
