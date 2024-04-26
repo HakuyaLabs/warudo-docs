@@ -31,6 +31,10 @@ const config: Config = {
     locales: ['en', 'zh'],
   },
 
+  scripts: [
+    {src: 'https://hm.baidu.com/hm.js?c35709853d215762230812b0ef3005d0', async: true}
+  ],
+
   presets: [
     [
       '@docusaurus/preset-classic',
@@ -43,6 +47,14 @@ const config: Config = {
             require.resolve('./src/css/custom.css'),
             require.resolve('./src/css/in-app.scss')
           ],
+        },
+        gtag: {
+          trackingID: 'G-9BCC5L6S1L',
+        },
+        sitemap: {
+          changefreq: 'daily',
+          priority: 0.5,
+          filename: 'sitemap.xml',
         },
       },
     ],
