@@ -49,7 +49,7 @@ const config: Config = {
           ],
         },
         gtag: {
-          trackingID: 'G-9BCC5L6S1L',
+          trackingID: 'G-Q2QBCHC2X2',
         },
         sitemap: {
           changefreq: 'daily',
