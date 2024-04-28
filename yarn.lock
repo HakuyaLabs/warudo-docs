@@ -3526,6 +3526,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@docusaurus/tsconfig@npm:^3.2.1":
+  version: 3.2.1
+  resolution: "@docusaurus/tsconfig@npm:3.2.1"
+  checksum: 10c0/6dc9d908d26b44bc02065437d6bdc29be278b6a6660565e53d0d38c72d8fd4a8ddaf77602652ed7f0fe518498ea85b9949b81c62b7773b96089bafc647b3abfd
+  languageName: node
+  linkType: hard
+
 "@docusaurus/types@npm:3.0.1":
   version: 3.0.1
   resolution: "@docusaurus/types@npm:3.0.1"
