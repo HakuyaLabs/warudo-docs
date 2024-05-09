@@ -4,9 +4,13 @@ sidebar_position: 1
 
 # Unity & Warudo SDK 安装
 
-:::caution
+该页面将引导您逐步安装 **Unity Editor** 和 **Warudo SDK**。
 
-目前仅支持 64 位 Windows 系统。
+---
+
+:::info
+
+目前仅支持 **64 位 Windows** 系统。
 
 :::
 

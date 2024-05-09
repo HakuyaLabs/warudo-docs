@@ -53,7 +53,7 @@ randint => Random.Range(int, int)
 | `abs(x)`   | `Mathf.Abs(x)`   | 返回 x 的绝对值。             |
 | `ceil(x)`  | `Mathf.Ceil(x)`  | 返回大于或等于 x 的最小整数。 |
 | `floor(x)` | `Mathf.Floor(x)` | 返回小于或等于 x 的最大整数。 |
-| `round(x)` | `Mathf.Round(x)` | 将 x 银行家舍入到最近的整数。       |
+| `round(x)` | `Mathf.Round(x)` | 将 x 银行家舍入到最近的整数。 |
 | `sign(x)`  | `Mathf.Sign(x)`  | 返回 x 的符号（±1.0）。       |
 
 ### 三角函数
