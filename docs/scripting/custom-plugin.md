@@ -56,3 +56,7 @@ Note that all files and folders except `*Plugin.cs` are optional, you can create
 │
 └── ...
 ```
+
+## Blueprints
+
+Custom scripting in Warudo works best when it complements, not replaces, the [blueprint system](../blueprints/overview.md). If you find yourself writing a huge `Plugin` class that handles a lot of logic, think carefully if it can be written as a custom node instead. For example, if your idea is to play a fireworks effect when you receive a custom UDP packet over the LAN, instead of a `Plugin` class that does both, it is much better (and easier to maintain) to implement two custom nodes - one that triggers the output flow when the custom UDP packet is received, and one that straightly plays a firework effect when the input flow is received.
