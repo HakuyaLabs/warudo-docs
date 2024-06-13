@@ -1,7 +1,6 @@
 ---
 sidebar_position: 10
 ---
-import {AuthorBar} from '../src/components/AuthorBar/AuthorBar'
 
 # Introduction to Warudo
 
@@ -47,9 +46,9 @@ Please contact us at [info@warudo.app](mailto:info@warudo.app), or join our [Dis
 
 <AuthorBar authors={{
   creators: [
-    {name: '测试', email: 'i@flag.moe', link: 'https://flag.moe/'}
+    {name: 'Nekotora', github: 'Nekotora'}
   ],
   translators: [
-    {name: '测试', email: 'i@flag.moe', link: 'https://flag.moe/'}
+    {name: 'Nekotora', github: 'Nekotora'}
   ],
 }} />

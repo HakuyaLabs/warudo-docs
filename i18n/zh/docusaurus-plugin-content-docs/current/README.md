@@ -43,3 +43,13 @@ Warudo 是目前功能最全面的 3D 虚拟形象直播软件之一，也是力
 ## 我有其他问题！
 
 请邮件联系我们：[info@warudo.app](mailto:info@warudo.app)，或者加入我们的 [QQ 频道](https://warudo.app/qq)。
+
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'Nekotora', github: 'Nekotora'}
+  ],
+  translators: [
+    {name: 'Nekotora', github: 'Nekotora'}
+  ],
+}} />
