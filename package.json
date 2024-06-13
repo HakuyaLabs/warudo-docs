@@ -15,8 +15,7 @@
     "serve": "docusaurus serve --port 3002",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
-    "typecheck": "tsc",
-    "deploy:server": "node deploy.cjs"
+    "typecheck": "tsc"
   },
   "dependencies": {
     "@docusaurus/core": "^3.4.0",
