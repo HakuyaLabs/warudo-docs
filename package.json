@@ -42,7 +42,8 @@
     "sass": "^1.68.0"
   },
   "devDependencies": {
-    "typescript": "^5.0"
+    "@docusaurus/tsconfig": "^3.4.0",
+    "typescript": "^5.4.5"
   },
   "overrides": {
     "docusaurus-plugin-image-zoom": {

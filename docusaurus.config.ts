@@ -41,8 +41,10 @@ const config: Config = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          showLastUpdateAuthor: true,
-          showLastUpdateTime: true,
+          // editUrl: 'https://github.com/HakuyaLabs/warudo-doc/edit/master/',
+          // editLocalizedFiles: true,
+          showLastUpdateAuthor: false,
+          showLastUpdateTime: false
         },
         theme: {
           customCss: [
