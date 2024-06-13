@@ -4,6 +4,12 @@ sidebar_position: 15
 
 # 环境 Mod
 
+:::warning
+
+该页面尚未更新到最新，最新版本可以查看 [**英文版**](https://docs.warudo.app/docs/modding/environment-mod) 。
+
+:::
+
 Warudo 支持任意 Unity [场景](https://docs.unity3d.com/Manual/CreatingScenes.html)作为[环境](https://tira.gitbook.io/warudo/assets/environment)源。
 
 ## 前置条件
