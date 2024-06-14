@@ -21,3 +21,11 @@ sidebar_position: 110
 :::caution
 此功能要求模型所有关节的初始旋转皆为 0，否则发送到其他软件的数据可能无法兼容。如果你的模型是 [VRM 格式](https://vrm.dev/)，那么绝大多数情况下是没有问题的——极少数情况是模型师导出时没有勾选 Enforce T-Pose 选项，重新导出即可。
 :::
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

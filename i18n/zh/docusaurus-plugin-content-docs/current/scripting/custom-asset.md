@@ -21,3 +21,11 @@ Attachable / GameObjectAsset 范例。
 
 - [CharacterPoserAsset.cs](https://gist.github.com/TigerHix/8413f8e10e508f37bb946d8802ee4e0b)  
 自定义资产，使用 IK 锚点来影响角色的姿势。
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

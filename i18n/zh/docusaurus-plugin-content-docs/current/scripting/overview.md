@@ -17,3 +17,11 @@ sidebar_position: 0
 
 
 :::
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

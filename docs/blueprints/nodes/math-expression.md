@@ -112,7 +112,7 @@ For more details, check out:
 
 <AuthorBar authors={{
   creators: [
-    {name: 'HakuyaTira', github: 'TigerHix'},
+    {name: 'hanekit', github: 'hanekit'},
   ],
   translators: [
   ],

@@ -15,3 +15,11 @@ Warudo 目前支持 5 种面部捕捉方案。
 开发中的面部捕捉方案：
 
 * **NVIDIA Maxine**：基于摄像头的面捕方案，需要 NVIDIA RTX 系列（或者其他图灵架构）显卡。可以捕捉 51 个 ARKit BlendShape。
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

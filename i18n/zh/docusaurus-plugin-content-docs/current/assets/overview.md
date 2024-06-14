@@ -28,3 +28,11 @@ sidebar_position: 0
 :::tip
 如果你想在不同的场景之间复制资源，你可以利用资源的导入/导出功能来做到这一点。
 :::
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

@@ -52,3 +52,11 @@ MediaPipe 是 [Webcam Motion Capture](https://webcammotioncapture.info/) 等软�
 * **建议将摄像头放在电脑屏幕上方，头显示在摄像头画面中央偏上为佳。**
 * 使用 MediaPipe 动捕时，不能最小化追踪器窗口（MediaPipe Tracker），否则动捕会停止运作！（可以被别的窗口挡住，只要不点击窗口的最小化按钮即可。）
 * 捕捉双手比捕捉单手更为稳定。
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

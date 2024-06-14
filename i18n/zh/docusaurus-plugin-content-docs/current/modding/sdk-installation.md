@@ -206,3 +206,11 @@ Warudo SDK 0.12.0.unitypackage
 如果仍然存在问题，请通过 [Discord](https://discord.gg/warudo) 或者 QQ 频道 与我们联系。
 
 :::
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

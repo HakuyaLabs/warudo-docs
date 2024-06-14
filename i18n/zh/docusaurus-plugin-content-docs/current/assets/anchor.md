@@ -38,3 +38,11 @@ sidebar_position: 90
 :::info
 适当调低摄像机「控制」->「控制灵敏度」，即可更精细地操作摄像机。
 :::
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

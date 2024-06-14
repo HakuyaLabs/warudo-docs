@@ -58,3 +58,11 @@ sidebar_position: 40
 * 旋转偏移：尾巴的旋转角度偏移。
 * 弯曲程度：尾巴每个关节的额外弯曲程度。
 * 尾巴总长度：让尾巴可以伸长变短。
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

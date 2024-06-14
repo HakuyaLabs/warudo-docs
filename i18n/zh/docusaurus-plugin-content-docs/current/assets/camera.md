@@ -248,3 +248,11 @@ Spout 输出到 OBS 的情况下，需要在 Spout2 Capture 属性中设置 Comp
 ![](/doc-img/zh-camera-19.webp)
 
 * 强度：像素化的强度。
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

@@ -22,3 +22,11 @@ sidebar_position: 80
 
 * 强度：阴影的强度。
 * 软阴影：是否模糊阴影的边缘。
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

@@ -22,3 +22,10 @@ sidebar_position: 80
 
 * 端口：Warudo 接收数据使用的端口。
 
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

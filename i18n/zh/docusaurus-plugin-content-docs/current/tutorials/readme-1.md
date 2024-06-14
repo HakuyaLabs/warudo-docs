@@ -481,3 +481,11 @@ Warudo 内置超过 500 个待机动画，我们选择一个猫猫手吧：
 :::info
 记得用「🚀」->「保存场景」时不时保存一下场景！
 :::
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

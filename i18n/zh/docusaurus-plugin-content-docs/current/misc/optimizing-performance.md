@@ -55,3 +55,12 @@ Warudo 当中的[环境](../assets/environment)（即所谓的「3D 背景」）
 :::info
 如果你在运行其他应用程序/游戏也遇到了性能问题，你也可以尝试以管理员身份运行这些应用程序/游戏。
 :::
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+    {name: 'robinwongm', github: 'robinwongm'},
+  ],
+}} />

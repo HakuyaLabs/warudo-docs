@@ -17,3 +17,11 @@ sidebar_position: 100
     * 导出到 Blender：是否使用 Blender 的坐标系，即 Z 轴作为上方，Y 轴作为前方，而不使用 BVH 惯常的约定方向。从 Blender 3.0 起，无需启用此选项也可正确导入 BVH。
     * 导出为 Humanoid 骨骼：是否仅导出符合 [Unity Humanoid 规范](https://docs.unity3d.com/Manual/AvatarCreationandSetup.html)的骨骼。
 * 导出文件名：导出的动画文件名。
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

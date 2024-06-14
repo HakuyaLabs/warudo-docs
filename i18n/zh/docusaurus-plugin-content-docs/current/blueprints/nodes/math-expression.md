@@ -108,3 +108,12 @@ randint => Random.Range(int, int)
 
 更多细节，可以查看：  
 [HakuyaLabs/Mathfs: Expanded Math Functionality for Unity](https://github.com/HakuyaLabs/Mathfs)
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'hanekit', github: 'hanekit'},
+  ],
+  translators: [
+    {name: 'hanekit', github: 'hanekit'},
+  ],
+}} />
