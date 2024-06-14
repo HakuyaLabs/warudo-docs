@@ -3526,6 +3526,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@docusaurus/tsconfig@npm:^3.4.0":
+  version: 3.4.0
+  resolution: "@docusaurus/tsconfig@npm:3.4.0"
+  checksum: 10c0/62b992e3f4d941de88ef5a753c677268ced75d83acd48a04bb06a1852be915d058af6f9508b87c3dfd59da0cbb6ee185dd3cba021eb66f115ce4b96585709903
+  languageName: node
+  linkType: hard
+
 "@docusaurus/types@npm:3.0.1":
   version: 3.0.1
   resolution: "@docusaurus/types@npm:3.0.1"
@@ -6840,6 +6847,13 @@ __metadata:
   dependencies:
     "@babel/runtime": "npm:^7.21.0"
   checksum: 10c0/e4b521fbf22bc8c3db332bbfb7b094fd3e7627de0259a9d17c7551e2d2702608a7307a449206065916538e384f37b181565447ce2637ae09828427aed9cb5581
+  languageName: node
+  linkType: hard
+
+"dayjs@npm:^1.11.11":
+  version: 1.11.11
+  resolution: "dayjs@npm:1.11.11"
+  checksum: 10c0/0131d10516b9945f05a57e13f4af49a6814de5573a494824e103131a3bbe4cc470b1aefe8e17e51f9a478a22cd116084be1ee5725cedb66ec4c3f9091202dc4b
   languageName: node
   linkType: hard
 
@@ -12348,12 +12362,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-icons@npm:^4.11.0":
-  version: 4.12.0
-  resolution: "react-icons@npm:4.12.0"
+"react-icons@npm:^5.2.1":
+  version: 5.2.1
+  resolution: "react-icons@npm:5.2.1"
   peerDependencies:
     react: "*"
-  checksum: 10c0/2170f43031ee7365539f72d4075cbe6c7fbf9a66d6cf4494aa9393b194272da0564f5b19d1b24dbfc567c0ac89f5fe5b8974d92dd83f61e252388dde6a226fb8
+  checksum: 10c0/9d52b975afaf27dab07dcaefd50497ba43cc57076fc26ccac5142965e01c7fd0c503a62ea31c3bb710e0b2959a4620c2fed12c3c86960ad8ceb63de7f0085f3a
   languageName: node
   linkType: hard
 
@@ -13921,23 +13935,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:^5.0":
-  version: 5.3.3
-  resolution: "typescript@npm:5.3.3"
+"typescript@npm:^5.4.5":
+  version: 5.4.5
+  resolution: "typescript@npm:5.4.5"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 10c0/e33cef99d82573624fc0f854a2980322714986bc35b9cb4d1ce736ed182aeab78e2cb32b385efa493b2a976ef52c53e20d6c6918312353a91850e2b76f1ea44f
+  checksum: 10c0/2954022ada340fd3d6a9e2b8e534f65d57c92d5f3989a263754a78aba549f7e6529acc1921913560a4b816c46dce7df4a4d29f9f11a3dc0d4213bb76d043251e
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@npm%3A^5.0#optional!builtin<compat/typescript>":
-  version: 5.3.3
-  resolution: "typescript@patch:typescript@npm%3A5.3.3#optional!builtin<compat/typescript>::version=5.3.3&hash=e012d7"
+"typescript@patch:typescript@npm%3A^5.4.5#optional!builtin<compat/typescript>":
+  version: 5.4.5
+  resolution: "typescript@patch:typescript@npm%3A5.4.5#optional!builtin<compat/typescript>::version=5.4.5&hash=5adc0c"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 10c0/1d0a5f4ce496c42caa9a30e659c467c5686eae15d54b027ee7866744952547f1be1262f2d40de911618c242b510029d51d43ff605dba8fb740ec85ca2d3f9500
+  checksum: 10c0/db2ad2a16ca829f50427eeb1da155e7a45e598eec7b086d8b4e8ba44e5a235f758e606d681c66992230d3fc3b8995865e5fd0b22a2c95486d0b3200f83072ec9
   languageName: node
   linkType: hard
 
@@ -14286,6 +14300,7 @@ __metadata:
     "@docusaurus/plugin-google-gtag": "npm:^3.4.0"
     "@docusaurus/preset-classic": "npm:^3.4.0"
     "@docusaurus/theme-common": "npm:^3.4.0"
+    "@docusaurus/tsconfig": "npm:^3.4.0"
     "@docusaurus/types": "npm:^3.1.1"
     "@easyops-cn/docusaurus-search-local": "npm:^0.40.1"
     "@mdx-js/react": "npm:^3.0.0"
@@ -14293,6 +14308,7 @@ __metadata:
     clsx: "npm:^1.2.1"
     concurrently: "npm:^8.2.2"
     cross-env: "npm:^7.0.3"
+    dayjs: "npm:^1.11.11"
     docusaurus-plugin-image-zoom: "npm:^1.0.1"
     docusaurus-plugin-sass: "npm:^0.2.5"
     dotenv: "npm:^16.3.1"
@@ -14300,10 +14316,10 @@ __metadata:
     prism-react-renderer: "npm:^2.1.0"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
-    react-icons: "npm:^4.11.0"
+    react-icons: "npm:^5.2.1"
     react-twitter-embed: "npm:^4.0.4"
     sass: "npm:^1.68.0"
-    typescript: "npm:^5.0"
+    typescript: "npm:^5.4.5"
   languageName: unknown
   linkType: soft
 

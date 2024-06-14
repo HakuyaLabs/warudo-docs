@@ -7,7 +7,8 @@
     "start": "docusaurus start --port 3002",
     "start:en": "docusaurus start --port 3010 --locale en",
     "start:zh": "docusaurus start --port 3011 --locale zh",
-    "start:all": "concurrently \"cross-env DOCUSAURUS_GENERATED_FILES_DIR_NAME=.docusaurus/dev-ver/en yarn start:en\" \"cross-env DOCUSAURUS_GENERATED_FILES_DIR_NAME=.docusaurus/dev-ver/zh yarn start:zh\"",
+    "start:jp": "docusaurus start --port 3012 --locale jp",
+    "start:all": "concurrently \"cross-env DOCUSAURUS_GENERATED_FILES_DIR_NAME=.docusaurus/dev-ver/en yarn start:en\" \"cross-env DOCUSAURUS_GENERATED_FILES_DIR_NAME=.docusaurus/dev-ver/zh yarn start:zh\" \"cross-env DOCUSAURUS_GENERATED_FILES_DIR_NAME=.docusaurus/dev-ver/jp yarn start:jp\"",
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
@@ -30,6 +31,7 @@
     "clsx": "^1.2.1",
     "concurrently": "^8.2.2",
     "cross-env": "^7.0.3",
+    "dayjs": "^1.11.11",
     "docusaurus-plugin-image-zoom": "^1.0.1",
     "docusaurus-plugin-sass": "^0.2.5",
     "dotenv": "^16.3.1",
@@ -37,12 +39,13 @@
     "prism-react-renderer": "^2.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-icons": "^4.11.0",
+    "react-icons": "^5.2.1",
     "react-twitter-embed": "^4.0.4",
     "sass": "^1.68.0"
   },
   "devDependencies": {
-    "typescript": "^5.0"
+    "@docusaurus/tsconfig": "^3.4.0",
+    "typescript": "^5.4.5"
   },
   "overrides": {
     "docusaurus-plugin-image-zoom": {

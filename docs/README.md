@@ -43,3 +43,11 @@ You can evaluate and test the Steam version of Warudo for as long as you like. H
 ## I have other questions!
 
 Please contact us at [info@warudo.app](mailto:info@warudo.app), or join our [Discord](https://discord.gg/warudo).
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

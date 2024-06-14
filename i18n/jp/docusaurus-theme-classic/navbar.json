@@ -4,23 +4,15 @@
     "description": "The title in the navbar"
   },
   "logo.alt": {
-    "message": "My Site Logo",
+    "message": "Warudo Handbook",
     "description": "The alt text of navbar logo"
   },
-  "item.label.文档": {
-    "message": "文档",
-    "description": "Navbar item with label 文档"
-  },
-  "item.label.GitHub": {
-    "message": "GitHub",
-    "description": "Navbar item with label GitHub"
-  },
   "item.label.Handbook": {
-    "message": "Handbook",
+    "message": "ハンドブック",
     "description": "Navbar item with label Handbook"
   },
   "item.label.Home": {
-    "message": "Home",
+    "message": "ホーム",
     "description": "Navbar item with label Home"
   }
 }
