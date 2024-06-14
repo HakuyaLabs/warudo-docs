@@ -124,7 +124,7 @@
     "description": "The title of the page for a docs tag"
   },
   "theme.docs.versionBadge.label": {
-    "message": "Version: {versionLabel}"
+    "message": "版本: {versionLabel}"
   },
   "theme.docs.versions.unreleasedVersionLabel": {
     "message": "This is unreleased documentation for {siteTitle} {versionLabel} version.",
@@ -203,7 +203,7 @@
     "description": "The ARIA label for the main navigation"
   },
   "theme.navbar.mobileLanguageDropdown.label": {
-    "message": "Languages",
+    "message": "语言",
     "description": "The label for the mobile language switcher dropdown"
   },
   "theme.TOCCollapsible.toggleButtonLabel": {
@@ -215,7 +215,7 @@
     "description": "Pluralized label for \"{readingTime} min read\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.blog.post.readMore": {
-    "message": "Read More",
+    "message": "阅读更多",
     "description": "The label used in blog post item excerpts to link to full blog posts"
   },
   "theme.blog.post.readMoreLabel": {
@@ -223,7 +223,7 @@
     "description": "The ARIA label for the link to full blog posts from excerpts"
   },
   "theme.docs.breadcrumbs.home": {
-    "message": "Home page",
+    "message": "首页",
     "description": "The ARIA label for the home page in the breadcrumbs"
   },
   "theme.docs.sidebar.collapseButtonTitle": {
@@ -235,7 +235,7 @@
     "description": "The title attribute for collapse button of doc sidebar"
   },
   "theme.docs.sidebar.navAriaLabel": {
-    "message": "Docs sidebar",
+    "message": "文档侧边栏",
     "description": "The ARIA label for the sidebar navigation"
   },
   "theme.docs.sidebar.closeSidebarButtonAriaLabel": {
@@ -259,7 +259,7 @@
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
   },
   "theme.ErrorPageContent.tryAgain": {
-    "message": "Try again",
+    "message": "重试",
     "description": "The label of the button to try again rendering when the React error boundary captures an error"
   },
   "theme.common.skipToMainContent": {
@@ -267,7 +267,7 @@
     "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
   },
   "theme.tags.tagsPageTitle": {
-    "message": "Tags",
+    "message": "标签",
     "description": "The title of the tag list page"
   },
   "theme.SearchBar.noResultsText": {
@@ -304,5 +304,49 @@
   "theme.SearchPage.noResultsText": {
     "message": "没有找到任何文档",
     "description": "The paragraph for empty search result"
+  },
+  "authbar.contributions": {
+    "message": "贡献者"
+  },
+  "authbar.contributions.authors": {
+    "message": "作者"
+  },
+  "authbar.contributions.translators": {
+    "message": "翻译者"
+  },
+  "authbar.lastUpdated": {
+    "message": "上次更新于"
+  },
+  "theme.docs.DocCard.categoryDescription.plurals": {
+    "message": "{count} 个项目",
+    "description": "The default description for a category card in the generated index about how many items this category includes"
+  },
+  "theme.admonition.warning": {
+    "message": "注意",
+    "description": "The default label used for the Warning admonition (:::warning)"
+  },
+  "theme.DocSidebarItem.expandCategoryAriaLabel": {
+    "message": "展开侧边栏分类 '{label}'",
+    "description": "The ARIA label to expand the sidebar category"
+  },
+  "theme.DocSidebarItem.collapseCategoryAriaLabel": {
+    "message": "折叠侧边栏分类 '{label}'",
+    "description": "The ARIA label to collapse the sidebar category"
+  },
+  "theme.unlistedContent.title": {
+    "message": "未列出页",
+    "description": "The unlisted content banner title"
+  },
+  "theme.unlistedContent.message": {
+    "message": "此页面未列出。搜索引擎不会对其索引，只有拥有直接链接的用户才能访问。",
+    "description": "The unlisted content banner message"
+  },
+  "authbar.contributions.untranslated.title": {
+    "message": "帮助我们改进 Warudo Handbook!",
+    "description": "This title shows at bottom of doc page which not translated and used its english version."
+  },
+  "authbar.contributions.untranslated.message": {
+    "message": "你正在阅读的页面还没有对应的中文翻译。 如果可以的话可以帮助我们改进！",
+    "description": "This message shows at bottom of doc page which not translated and used its english version."
   }
 }
