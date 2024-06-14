@@ -15,6 +15,22 @@
     }
   }
 
+  .no-translate{
+    background: var(--ifm-breadcrumb-item-background-active);
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 6px solid var(--ifm-color-primary);
+    border-left-width: var(--ifm-alert-border-left-width);
+    border-radius: var(--ifm-alert-border-radius);
+    h3{
+      margin: 0;
+      margin-bottom: 12px;
+    }
+    p{
+      margin: 0;
+    }
+  }
+
   .line{
     margin: 20px 0;
     p.title{
