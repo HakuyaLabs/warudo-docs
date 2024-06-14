@@ -5,6 +5,8 @@ sidebar_label: Warudo 介绍
 
 # Warudo 介绍
 
+![](/doc-img/intro-cover.jpg)
+
 ## Warudo 是什么？
 
 Warudo 是一款专为 VTuber 直播设计的虚拟形象动画软件，可以自由导入并使用外部 3D 素材（包括[场景](modding/environment-mod.md)、[道具](modding/prop-mod.md)等），使用[蓝图](/docs/mocap/blueprints/overview)深入配置你的虚拟形象，并支持[第三方 C# 插件](modding/mod-sdk.md)。丰富的功能再加上极高的可自定义性，力求为你的 3D 虚拟形象打造最理想的直播效果。
@@ -47,9 +49,8 @@ Warudo 是目前功能最全面的 3D 虚拟形象直播软件之一，也是力
 
 <AuthorBar authors={{
   creators: [
-    {name: 'Nekotora', github: 'Nekotora'}
+    {name: 'HakuyaTira', github: 'TigerHix'},
   ],
   translators: [
-    {name: 'Nekotora', github: 'Nekotora'}
   ],
 }} />

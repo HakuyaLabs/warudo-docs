@@ -47,11 +47,7 @@ Please contact us at [info@warudo.app](mailto:info@warudo.app), or join our [Dis
 <AuthorBar authors={{
   creators: [
     {name: 'HakuyaTira', github: 'TigerHix'},
-    {name: 'Nekotora', github: 'Nekotora'},
-    {name: 'hanekit', github: 'hanekit'}
   ],
   translators: [
-    {name: 'hanekit', github: 'hanekit'},
-    {name: 'robinWongM', github: 'robinWongM'}
   ],
 }} />
