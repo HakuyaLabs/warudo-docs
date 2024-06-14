@@ -29,3 +29,11 @@ This blueprint should work out of the box. Follow the instructions on the **Comm
 :::tip
 If you have created another character asset, you may need to update the **Character** option on the nodes.
 :::
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

@@ -81,3 +81,11 @@ Creating an environment mod is definitely trickier than creating other types of 
 * Did your scene have prefabs with unapplied changes? If so, please apply the changes. If you see the vertical lines (which means the changes could not be fully applied), right click on them and select **Prefab → Unpack Completely** to unpack the prefabs, and export the mod again.
 
 ![](/doc-img/en-environment-mod-2.webp)
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

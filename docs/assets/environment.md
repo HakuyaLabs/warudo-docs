@@ -35,3 +35,11 @@ Although you are allowed to move and rotate the environment, it is not recommend
 ## Override Environment Settings
 
 You can override the environment settings such as **Ambient Lighting Source**, **Environment Reflections Intensity**, etc. Note that not all these settings are supported by all environments; for example, if an environment use baked lighting, then **Ambient Lighting Source** will be ignored.
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

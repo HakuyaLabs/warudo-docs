@@ -21,3 +21,11 @@ A list of compatible programs can be found [here](https://protocol.vmc.info/Refe
 :::caution
 This function requires that all initial rotations of the bones in the model be 0, otherwise the data sent to other software may not be compatible. If your model is in [VRM format](https://vrm.dev/), then in most cases there should be no issue. However, in very rare cases, the modeler may not have checked the Enforce T-Pose option when exporting, and it can be fixed by re-exporting with this option checked.
 :::
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

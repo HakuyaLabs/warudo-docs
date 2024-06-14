@@ -193,3 +193,11 @@ Check the console for any errors. If there are none, you are all set! Now go ahe
 If you see errors in the console, try click on "Clear" to see if these errors can be removed. If you are still having trouble, please reach out to us on [Discord](https://discord.gg/warudo).
 
 :::
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

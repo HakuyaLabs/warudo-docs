@@ -78,3 +78,11 @@ Some motion capture receivers have a **Port** option. Make sure the port number 
 ### My tracking is too smooth / too jittery.
 
 Please go to the tracking blueprint (e.g., **Face Tracking - iFacialMocap**) and locate the **Smooth Rotation List** / **Smooth Position List** / **Smooth Transform** / **Smooth BlendShape List** nodes. Increase the **Smooth Time** value to make the tracking smoother, or decrease the value to make the tracking more responsive.
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

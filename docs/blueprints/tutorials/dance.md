@@ -116,3 +116,11 @@ The following blueprint will make the character dance when you receive a Twitch 
 If you have used the onboarding assistant to set up an interaction blueprint, you may have noticed it is doing very similar things as the blueprint we have just created! It may contain more nodes, but the core logic is the same: when you receive a stream event, do something interesting.
 
 With your newfound knowledge, you can now create your own interaction blueprints! Feel free to incorporate what you have learned from the previous tutorials and create something unique for your channel. Or, if you are still looking for more funsies, read on!
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

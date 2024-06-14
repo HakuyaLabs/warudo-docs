@@ -342,11 +342,11 @@
     "description": "The unlisted content banner message"
   },
   "authbar.contributions.untranslated.title": {
-    "message": "帮助我们改进 Warudo Handbook!",
+    "message": "当前页面还没有中文翻译，帮助我们改进！",
     "description": "This title shows at bottom of doc page which not translated and used its english version."
   },
   "authbar.contributions.untranslated.message": {
-    "message": "你正在阅读的页面还没有对应的中文翻译。 如果可以的话可以帮助我们改进！",
+    "message": "你正在阅读的页面还没有对应的中文翻译。 如果可以的话可以在 Github 提交你的翻译帮助我们改进！",
     "description": "This message shows at bottom of doc page which not translated and used its english version."
   }
 }

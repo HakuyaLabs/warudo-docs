@@ -123,3 +123,11 @@ Enables collision detection for the camera, so that the camera will not go throu
 ## Global Offsets
 
 The **Global Offsets** section allows you to specify global offsets for all virtual cameras, including **Camera Animation Speed**, **Field Of View**, **Position**, **Orientation**, and **Zoom**. This can be especially useful for implementing effects such as zooming in and out based on audio volume, regardless of which virtual camera is currently active.
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

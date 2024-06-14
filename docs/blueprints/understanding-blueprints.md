@@ -103,3 +103,11 @@ You can determine if a flow is being triggered or if data is being passed by che
 
 ![](/doc-img/en-blueprints-overview-5.webp)
 :::
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

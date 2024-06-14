@@ -230,3 +230,11 @@ The following changes the hotkey to Ctrl+Shift+T.
 To do this, enable **Is Transient** on the **Toggle Character Expression** node in the **Expression Key Bindings** blueprint. The duration of the expression will be determined by **Exit Delay** of each BlendShape in the expression.
 
 ![](/doc-img/en-expression-5.webp)
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

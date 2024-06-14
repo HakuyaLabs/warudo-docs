@@ -61,3 +61,11 @@ Alternatively, you can try using the "Wireless" option instead.
 ### I am using the "Wireless" option and make sure my computer and iPhone are connected to the same WiFi network, but my character is not moving.
 
 Please try to toggle off and on the "无线" (Wireless) switch in the RhyLive app, or restart the app.
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

@@ -45,3 +45,11 @@ Please refer to [Overview](overview#FAQ) and [Customizing Pose Tracking](body-tr
 First, make sure you have loaded the same model in Warudo and the external application.
 
 We also require the models to have normalized bones,  i.e., all bones on the model should have zero rotation (0, 0, 0) when the model is in T-pose. If your model is in [VRM format](https://vrm.dev/), then in most cases there should be no issue. However, in very rare cases, the modeler may not have checked the Enforce T-Pose option when exporting, and it can be fixed by re-exporting with this option checked. Please refer to [this page](../misc/normalizing-model-bones) for more details.
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

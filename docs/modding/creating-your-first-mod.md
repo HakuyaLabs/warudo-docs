@@ -83,3 +83,11 @@ Warudo supports hot reloading, which means if you have exported a new version of
 :::info
 Note that hot reloading may not always work as expected. If you encounter any issues, please restart Warudo.
 :::
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

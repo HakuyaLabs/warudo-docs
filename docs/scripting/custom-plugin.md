@@ -56,3 +56,12 @@ Note that all files and folders except `*Plugin.cs` are optional, you can create
 │
 └── ...
 ```
+
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

@@ -16,3 +16,12 @@ But you can check our examples in following pages:
 Meanwhile, you can also check out our [GitHub Repo](https://github.com/HakuyaLabs/WarudoPlaygroundExamples/) and [Discord](https://discord.gg/warudo) for getting started with C# scripting in Warudo.
 
 :::
+
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

@@ -53,3 +53,11 @@ This is caused by a bug in Windows. To fix it, search **Terminal** in the Start 
 ### I can see the OpenSeeFace tracker window, but my tracking is not working.
 
 Some antivirus software may block Warudo from accessing the camera. Please disable the camera protection function of your antivirus software, or add Warudo to the whitelist.
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

@@ -87,3 +87,11 @@ If you are using a laptop, make sure it is plugged in and not running on battery
 We generally recommend to use a Leap Motion Controller 2 with a neck/chest mount for hand tracking, if you have the budget. Leap Motion tracking is generally more stable and uses less CPU/GPU resources than MediaPipe, especially when you are playing a 3D game.
 
 We do not recommend Leap Motion Controller 1 which tends to lose tracking easily.
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

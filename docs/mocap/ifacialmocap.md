@@ -53,3 +53,11 @@ During calibration, you should look straight ahead and keep your head still. Aft
 ## Frequently Asked Questions
 
 Please refer to [Overview](overview#FAQ) and [Customizing Face Tracking](face-tracking#FAQ) for common questions.
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

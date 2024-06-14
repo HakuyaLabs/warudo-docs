@@ -20,3 +20,11 @@ Yes you can! We offer a special indie pricing for Warudo Pro, provided that you 
 
 * the copyrights of your VTuber IP (Intellectual Property) are exclusively yours, and you possess ownership of your accounts on social/livestreaming platforms;
 * there are no contractual obligations requiring you to stream for X hours per week, unless such a contract is directly in agreement with a major livestreaming platform (e.g., Twitch, YouTube).
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />
