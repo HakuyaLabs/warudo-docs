@@ -4,7 +4,7 @@ sidebar_position: 0
 
 # Overview
 
-In this section, we provide some ready-to-use blueprints that you can just import into your scene and use right away! Technically, you don't need to read any of the other sections to use these blueprints, but we still recommend you to read [Understanding Blueprints](../understanding-blueprints) to get a better understanding of how blueprints work.
+In this section, we provide some ready-to-use blueprints that you can just import into your scene and use right away! Technically, you don't need to read any of the other sections to use these blueprints, but we still recommend you to read [Creating Your First Blueprint](../understanding-blueprints) to get a better understanding of how blueprints work.
 
 ## Setup
 

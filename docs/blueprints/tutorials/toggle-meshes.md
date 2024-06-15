@@ -11,7 +11,7 @@ Often character models will have multiple meshes for different clothing and acce
 
 ## Toggling Meshes
 
-Without further ado, let's get started! First, let's create a new blueprint. Just like in the [Understanding Blueprints](../understanding-blueprints) tutorial, we need to add a **On Keystroke Pressed** node. I will set the hotkey to **Ctrl+Shift+J** (J for "jacket"), but you can use whatever you want.
+Without further ado, let's get started! First, let's create a new blueprint. Just like in the [Creating Your First Blueprint](../understanding-blueprints.md) tutorial, we need to add a **On Keystroke Pressed** node. I will set the hotkey to **Ctrl+Shift+J** (J for "jacket"), but you can use whatever you want.
 
 ![](/doc-img/en-blueprint-toggle-meshes-1.png)
 
