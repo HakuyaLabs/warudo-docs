@@ -21,7 +21,7 @@ The concept of entities is loosely similar to Unity's MonoBehaviour, but with a 
 
 After an entity is instantiated, it is automatically assigned a UUID (unique identifier) by Warudo. You can access it via the `Id` property. This UUID is then used to identify the entity in the scene, and is saved along with the scene.
 
-An entity type can contain regular C# fields and methods. However, to interface with the Warudo runtime, you need to create [**ports and triggers**](ports-and-triggers) in the entity. All entities can have [data input ports](ports-and-triggers#data-input-ports), [data output ports](ports-and-triggers#data-output-ports) and [triggers](ports-and-triggers#triggers), while nodes can additionally have [data output ports](ports-and-triggers#data-output-ports), [flow input ports](ports-and-triggers#flow-input-ports), and [flow output ports](ports-and-triggers#flow-output-ports).
+An entity type can contain regular C# fields and methods. However, to interface with the Warudo runtime, you need to create [**ports and triggers**](ports-and-triggers) in the entity. All entities can have [data input ports](ports-and-triggers#data-input-ports) and [triggers](ports-and-triggers#triggers), while nodes can additionally have [data output ports](ports-and-triggers#data-output-ports), [flow input ports](ports-and-triggers#flow-input-ports), and [flow output ports](ports-and-triggers#flow-output-ports).
 
 ![](/doc-img/en-custom-node-1.png)
 
@@ -54,6 +54,8 @@ Assets, nodes, and plugins have extra lifecycle stages:
 :::info
 The update order is as follows: plugins → assets → nodes.
 :::
+
+You can override these lifecycle methods to implement custom behavior for your entities. For example, if you want to run something on every frame, override the `OnUpdate()` method.
 
 <AuthorBar authors={{
 creators: [
