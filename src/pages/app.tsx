@@ -15,7 +15,6 @@ export default function AppPage() {
 
 
   const tagList = useMemo(() => {
-    console.log(i18n.currentLocale);
     if (i18n.currentLocale == 'zh') {
       return [
         {name: '角色'},

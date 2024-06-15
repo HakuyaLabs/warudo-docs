@@ -17,7 +17,6 @@ export function AuthorBar(props: {
   const { authors } = props;
   const { metadata } = useDoc();
   const { lastUpdatedAt, lastUpdatedBy, tags, source } = metadata;
-  console.log(metadata);
 
   const isNotFoundTranslate = useMemo(() => {
     if(metadata.permalink.startsWith('/zh') && metadata.source.indexOf('i18n/zh') < 0) {
