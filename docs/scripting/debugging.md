@@ -25,3 +25,11 @@ Please also refer to the [Modding](../modding/mod-sdk#custom-scripts) documentat
 ## Join the Discord
 
 If you are still having trouble, feel free to ask for help on our [Discord](https://discord.gg/warudo). We have a dedicated **#plugins-scripting** channel for anything related to scripting, and experienced folks there would be happy to help you diagnose the issue!
+
+<AuthorBar authors={{
+creators: [
+{name: 'HakuyaTira', github: 'TigerHix'},
+],
+translators: [
+],
+}} />

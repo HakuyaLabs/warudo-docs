@@ -54,3 +54,11 @@ Assets, nodes, and plugins have extra lifecycle stages:
 :::info
 The update order is as follows: plugins → assets → nodes.
 :::
+
+<AuthorBar authors={{
+creators: [
+{name: 'HakuyaTira', github: 'TigerHix'},
+],
+translators: [
+],
+}} />

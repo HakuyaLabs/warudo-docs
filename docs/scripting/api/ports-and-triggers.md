@@ -439,3 +439,11 @@ typeProperties.max = itemCount; // Change the slider range
 
 BroadcastDataInputProperties(nameof(CurrentItem)); // Notify the editor that the properties have changed
 ```
+
+<AuthorBar authors={{
+creators: [
+{name: 'HakuyaTira', github: 'TigerHix'},
+],
+translators: [
+],
+}} />

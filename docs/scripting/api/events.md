@@ -51,3 +51,11 @@ Subscribe<MyEvent>(e => {
 ```
 
 The events are automatically unsubscribed when the entity is destroyed.
+
+<AuthorBar authors={{
+creators: [
+{name: 'HakuyaTira', github: 'TigerHix'},
+],
+translators: [
+],
+}} />

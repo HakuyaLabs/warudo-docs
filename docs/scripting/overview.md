@@ -58,3 +58,11 @@ public class CharacterPlayRandomExpressionNode : Node {
 ```
 
 Intrigued? Read on!
+
+<AuthorBar authors={{
+creators: [
+{name: 'HakuyaTira', github: 'TigerHix'},
+],
+translators: [
+],
+}} />

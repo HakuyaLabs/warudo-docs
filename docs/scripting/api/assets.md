@@ -163,3 +163,11 @@ Attachable / GameObjectAsset example.
 
 - [CharacterPoserAsset.cs](https://gist.github.com/TigerHix/8413f8e10e508f37bb946d8802ee4e0b)  
 Custom asset to pose your character with IK anchors.
+
+<AuthorBar authors={{
+creators: [
+{name: 'HakuyaTira', github: 'TigerHix'},
+],
+translators: [
+],
+}} />

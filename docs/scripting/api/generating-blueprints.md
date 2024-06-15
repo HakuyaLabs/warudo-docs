@@ -59,3 +59,11 @@ var graph = Context.OpenedScene.GetGraphs().Values.First(it => it.Name == "My Aw
 ```
 
 As you can see, this is rather hacky and not recommended for production code. The JSON format may change in future versions, and it is not as flexible as generating blueprints by code.
+
+<AuthorBar authors={{
+creators: [
+{name: 'HakuyaTira', github: 'TigerHix'},
+],
+translators: [
+],
+}} />

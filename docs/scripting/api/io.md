@@ -52,3 +52,11 @@ protected override void OnCreate() {
     var json = ModHost.Assets.Load<TextAsset>("Assets/MyModFolder/Animations.json"); // Change the path to match your mod folder structure
 }
 ```
+
+<AuthorBar authors={{
+creators: [
+{name: 'HakuyaTira', github: 'TigerHix'},
+],
+translators: [
+],
+}} />

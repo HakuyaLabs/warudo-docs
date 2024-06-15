@@ -34,3 +34,11 @@ Playground has the following limitations:
 
 * You cannot (easily) use third-party DLLs or NuGet packages. We will improve this in the future.
 * You cannot add or reference Unity assets (e.g., prefabs, materials, textures) in Playground scripts (use [plugin mods](plugin-mod) instead).
+
+<AuthorBar authors={{
+creators: [
+{name: 'HakuyaTira', github: 'TigerHix'},
+],
+translators: [
+],
+}} />

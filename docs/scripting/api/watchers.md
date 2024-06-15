@@ -96,3 +96,11 @@ protected void OnAnyDataInputChanged() {
     // Called when A, B, or C changes
 }
 ```
+
+<AuthorBar authors={{
+creators: [
+{name: 'HakuyaTira', github: 'TigerHix'},
+],
+translators: [
+],
+}} />

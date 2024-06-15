@@ -37,3 +37,11 @@ Plugin mods have the following limitations:
 - You cannot use reflection (`System.Reflection`) or access the file system (`System.IO`).
   * To invoke methods on `MonoBehaviour` components, consider using Unity's [`SendMessage`](https://docs.unity3d.com/ScriptReference/GameObject.SendMessage.html) or [`BroadcastMessage`](https://docs.unity3d.com/ScriptReference/Component.BroadcastMessage.html) methods.
   * To store and retrieve data, see [Saving and Loading Data](api/io).
+
+<AuthorBar authors={{
+creators: [
+{name: 'HakuyaTira', github: 'TigerHix'},
+],
+translators: [
+],
+}} />

@@ -147,3 +147,11 @@ The complete plugin examples (multiple files), including the **Stream Deck Plugi
 
 - [KatanaAnimations.cs](https://gist.github.com/TigerHix/2cb8052b0e8aeeb7f9cb796dc7edc6a3)  
 Custom plugin to load AnimationClips from the mod folder and registers them as character animations.
+
+<AuthorBar authors={{
+creators: [
+{name: 'HakuyaTira', github: 'TigerHix'},
+],
+translators: [
+],
+}} />

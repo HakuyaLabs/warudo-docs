@@ -153,3 +153,11 @@ Add it to your scene and have fun! Who needs VTubing when I can do this all day?
 ## Summary
 
 In this short tutorial, we learned how to use Playground and took a glimpse into how custom nodes and assets work. In the next tutorial, we will see how to create a plugin mod to distribute the custom node and asset we have just created!
+
+<AuthorBar authors={{
+creators: [
+{name: 'HakuyaTira', github: 'TigerHix'},
+],
+translators: [
+],
+}} />

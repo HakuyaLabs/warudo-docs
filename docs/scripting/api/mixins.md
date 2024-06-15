@@ -99,3 +99,11 @@ Warudo provides several built-in mixins that you can use in your entities:
 :::warning
 Currently, built-in mixin types are not well-documented. We are working on improving this, but in the meantime, we recommend referring to their inheritors for usage examples.
 :::
+
+<AuthorBar authors={{
+creators: [
+{name: 'HakuyaTira', github: 'TigerHix'},
+],
+translators: [
+],
+}} />

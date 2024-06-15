@@ -18,3 +18,11 @@ The editor and runtime communicate with each other via a WebSocket connection. W
 The Warudo runtime is built using [Unity 2021.3](https://unity.com/); however, the core framework is designed to be as engine-agnostic as possible, which allows nodes, assets, and plugins to interact with each other and with the user through a set of simple and clean APIs, as well as enabling features such as [hot-reloading](../playground).
 
 Instead of writing C# classes that derive from `MonoBehaviour` in typical Unity projects, you will write classes that derive from Warudo's base classes such as `Node` and `Asset`. These classes are then instantiated and managed by Warudo's runtime. Then, inside these classes, you can call Unity APIs to interact with the Unity scene, such as creating GameObjects, adding components, etc.
+
+<AuthorBar authors={{
+creators: [
+{name: 'HakuyaTira', github: 'TigerHix'},
+],
+translators: [
+],
+}} />

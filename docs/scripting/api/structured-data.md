@@ -306,3 +306,11 @@ public async void PromptUserInput() {
 ```
 
 This saves the user's edits to the structured data while allowing them to correct the invalid inputs.
+
+<AuthorBar authors={{
+creators: [
+{name: 'HakuyaTira', github: 'TigerHix'},
+],
+translators: [
+],
+}} />

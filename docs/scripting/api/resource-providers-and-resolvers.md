@@ -174,3 +174,11 @@ Context.ResourceManager.RegisterUriThumbnailResolver(new MyUriThumbnailResolver(
 :::tip
 For best experience, make sure your thumbnail images can be loaded within 50ms.
 :::
+
+<AuthorBar authors={{
+creators: [
+{name: 'HakuyaTira', github: 'TigerHix'},
+],
+translators: [
+],
+}} />

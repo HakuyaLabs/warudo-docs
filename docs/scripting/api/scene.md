@@ -34,3 +34,11 @@ var newNodeByTypeId = blueprint.AddNode("e931f780-e41e-40ce-96d0-a4d47ca64853");
 
 Context.Service.BroadcastOpenedScene(); // Send the updated scene to the editor
 ```
+
+<AuthorBar authors={{
+creators: [
+{name: 'HakuyaTira', github: 'TigerHix'},
+],
+translators: [
+],
+}} />

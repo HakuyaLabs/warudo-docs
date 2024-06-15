@@ -186,3 +186,11 @@ Creating a plugin mod is more powerful than using [Playground](playground), but 
 * Plugin mods have more [security limitations](plugin-mod#limitations). For example, you cannot access the `System.IO` namespace (though we provide a [sandboxed file persistence API](api/io)).
 
 When to use a plugin mod or Playground depends on your use case. If you are prototyping a new feature or testing a new idea, Playground is a great tool to quickly iterate and see the results, especially if you don't need to reference Unity assets. If you work on custom development for VTubers, Playground is brilliant for implementing small, self-contained features for your clients. However, if you need to load custom Unity assets or distribute your custom nodes and assets on [our Steam Workshop](../modding/sharing), a plugin mod is the way to go. (Even still, you can use Playground to prototype your custom nodes and assets before moving them to a plugin mod!)
+
+<AuthorBar authors={{
+creators: [
+{name: 'HakuyaTira', github: 'TigerHix'},
+],
+translators: [
+],
+}} />

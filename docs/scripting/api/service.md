@@ -26,3 +26,11 @@ Here are some of the commonly used methods:
 :::tip
 You can safely assume `Context.Service` is always available in the runtime, even if the editor is closed.
 :::
+
+<AuthorBar authors={{
+creators: [
+{name: 'HakuyaTira', github: 'TigerHix'},
+],
+translators: [
+],
+}} />

@@ -67,3 +67,10 @@ localizationManager.SetLocalizedString("MY_STRING", "zh_CN", "我的字符串");
 localizationManager.SetLocalizedString("MY_STRING", "ja", "私の文字列");
 ```
 
+<AuthorBar authors={{
+creators: [
+{name: 'HakuyaTira', github: 'TigerHix'},
+],
+translators: [
+],
+}} />
