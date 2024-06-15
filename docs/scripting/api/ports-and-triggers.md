@@ -32,18 +32,14 @@ Here are a few more examples:
 - **Enum Input:** (Shown as a dropdown in the editor)
   ```csharp
   public enum Color {
-      [Label("RED!!!")]
       Red,
-      [Label("GREEN!!!")]
       Green,
-      [Label("BLUE!!!")]
       Blue
   }
   
   [DataInput]
   public Color MyColor = Color.Red;
   ```
-  Note you can add labels to enum values using the `[Label(string label)]` attribute.
 - **Array Input:** (Shown as an editable list in the editor)
   ```csharp
   [DataInput]
@@ -259,7 +255,7 @@ protected bool FilterCharacterAsset(CharacterAsset character) {
 Let's say you have an entity. There are two ways to read its data inputs:
 
 1. Access the data input field directly. For example, if you have a node with a _public_ data input field `public int MyNumber = 42;`, you can read the value of `MyNumber` directly by using `node.MyNumber`.
-2. Use the `T GetDataInput<T>(string key)` or `object GetDataInput(string key)` method. This method is available in all entities and returns the value of the data input with the specified name. For example, if you have a node with a data input named `MyNumber`, you can read the value of `MyNumber` by using `node.GetDataInput<int>("MyNumber")` (or `node.GetDataInput(nameof(node.MyNumber))` which is stylistically preferred).
+2. Use the `T GetDataInput<T>(string key)` or `object GetDataInput(string key)` method. This method is available in all entities and returns the value of the data input with the specified name. For example, if you have a node with a data input named `MyNumber`, you can read the value of `MyNumber` by using `node.GetDataInput<int>("MyNumber")` (or `node.GetDataInput<int>(nameof(node.MyNumber))` which is stylistically preferred).
 
 :::tip
 The key of a port is always the name of the field, unless the port is dynamically added (see [Dynamic Ports](#dynamic-ports))
@@ -370,10 +366,6 @@ public async void ShowConfirmationDialog() {
     }
 }
 ```
-
-:::info
-A list of available operations in the `Service` class can be found in [Common Operations](operations#service).
-:::
 
 ### Invoking Triggers Programmatically
 
