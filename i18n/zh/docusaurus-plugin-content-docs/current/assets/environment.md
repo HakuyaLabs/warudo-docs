@@ -17,3 +17,10 @@ sidebar_position: 70
 如果场景的光照看上去不太对，请尝试「🚀」->「重启场景」。
 :::
 
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

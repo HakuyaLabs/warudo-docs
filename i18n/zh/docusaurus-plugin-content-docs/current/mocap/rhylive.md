@@ -50,3 +50,11 @@ iOS 设备上打开 RhyLive，左上角点击菜单图标进入设置界面。�
 * 眨眼灵敏度：眨眼的灵敏度。
 * 限制挤眼程度：如果你的模型适配了 ARKit BlendShape（即「完美同步」），根据模型师的偏好，你的模型眼睛可能无法完全闭起来（或者闭过头）。这种情况可以试着切换此选项。
 * 使用 BlendShape 控制眼睛：**需要模型适配 ARKit BlendShape。**不使用骨骼而是使用眼睛移动 BlendShape（EyeLookInLeft、EyeLookInRight、EyeLookOutLeft、EyeLookOutRight）来控制角色眼睛的移动。如果你的模型没有眼睛骨骼，则需要开启此选项。
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

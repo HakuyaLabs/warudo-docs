@@ -127,3 +127,11 @@ The final blueprint looks like this (quite a big one!):
 ![](/doc-img/en-blueprint-squashing-13.png)
 
 Congratulations! That's blueprint variables for you. This is a more challenging tutorial than the previous ones, so kudos to you for making it this far!
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

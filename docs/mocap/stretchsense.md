@@ -19,3 +19,11 @@ Calibration of StretchSense Glove is done in StretchSense Hand Engine.
 ## Frequently Asked Questions
 
 Please refer to [Overview](overview#FAQ) and [Customizing Pose Tracking](body-tracking#FAQ) for common questions.
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

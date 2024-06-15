@@ -59,3 +59,11 @@ You can use the import/export feature to copy blueprints between scenes.
 :::
 
 To navigate the node editor, you can use **Mouse LMB** to pan, **Mouse Wheel** to zoom, and **Mouse RMB** to select multiple nodes. When one or more nodes are selected, you can use **Mouse LMB** to drag them around, and **Delete** to delete them. You can also use **Ctrl+C** and **Ctrl+V** to copy and paste selected nodes.
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

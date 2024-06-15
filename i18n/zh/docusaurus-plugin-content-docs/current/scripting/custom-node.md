@@ -300,3 +300,11 @@ public override void OnUpdate() {
 - `Quaternion` X-Y-Z-W 四元数
 - `HumanBodyBones` Unity 定义的角色骨骼 [Unity - Scripting API: HumanBodyBones](https://docs.unity3d.com/ScriptReference/HumanBodyBones.html)
 - ⋯⋯
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

@@ -11,3 +11,11 @@ In this section, we provide some ready-to-use blueprints that you can just impor
 To use any of the blueprints in this section, you can simply download the blueprint file and import it using the **Import Blueprint From File** button in the **Blueprints** tab:
 
 ![](/doc-img/en-blueprint-templates-1.png)
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

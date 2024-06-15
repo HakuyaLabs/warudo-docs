@@ -40,3 +40,11 @@ Please make sure you have installed the latest [Gemini software](https://leap2.u
 ### My model's wrist/fingers look unnatural.
 
 Try adjusting the **Fix Finger Orientations Weight** option in the **Leap Motion Tracker** asset. You may also need to adjust the **Wrist Rotation Offset** and **Global Finger Rotation Offset** options (check the left boxes to enable them).
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

@@ -18,3 +18,11 @@ There are 3 export formats available:
 :::caution
 Note that FBX exporting is experimental and most likely will ever work correctly on VRM models, or `.warudo` models from a FBX file without Maya-specific features (e.g., IK, constraints, etc.).
 :::
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

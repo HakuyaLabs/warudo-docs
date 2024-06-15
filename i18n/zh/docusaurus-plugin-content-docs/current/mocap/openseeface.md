@@ -36,3 +36,10 @@ OpenSeeFace 是 [VSeeFace](https://www.vseeface.icu/) 使用的面部识别技�
 
 * OpenSeeFace 启动后，需要大概十几秒的时间内部校正，期间模型的嘴巴眼睛可能会乱动，这是正常现象。
 
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

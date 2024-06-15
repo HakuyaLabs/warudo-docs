@@ -22,16 +22,27 @@ We recommend you to optimize your scene, for example:
 
 We generally recommend to bake lighting in the scene, as it can significantly improve the visual quality and performance of your environment mod.
 
+:::warning
+
+Currently, the baking of the **"Standard"** materials is **not supported** in the Unity's Built-in Render Pipeline (BiRP).  
+If you need to bake lightmaps, it is recommended to use other materials for best results.
+
+:::
+
 #### Unity's Built-in Lightmapper
 
-Most of the time, using Unity's built-in lightmapper is sufficient. Note that Warudo uses directional lightmaps, so make sure **Directional Mode** is set to Directional in **Windows → Rendering → Lighting**:
+Most of the time, using Unity's built-in lightmapper is sufficient.
+
+Note that Warudo uses directional lightmaps, so make sure **Directional Mode** is set to **Directional** in **Windows → Rendering → Lighting**:
 
 ![](/doc-img/en-environment-mod-1.webp)
 
 Otherwise, the lighting in the scene may be incorrect.
 
 :::info
+
 If the scene already has lightmaps baked, after switching the lightmapping directional mode, you need to click **Generate Lighting** to rebake the lightmaps.
+
 :::
 
 #### Bakery
@@ -68,5 +79,13 @@ Creating an environment mod is definitely trickier than creating other types of 
 * If you use baked lighting, was the lightmap directional mode set to Directional? (Or Dominant Direction / MonoSH if you use Bakery)
 * Did you have more than one Unity scene in the mod folder? If so, please delete the other scenes. (There may be scenes inside subfolders, so make sure to check all your subfolders!)
 * Did your scene have prefabs with unapplied changes? If so, please apply the changes. If you see the vertical lines (which means the changes could not be fully applied), right click on them and select **Prefab → Unpack Completely** to unpack the prefabs, and export the mod again.
-  
-  ![](/doc-img/en-environment-mod-2.webp)
+
+![](/doc-img/en-environment-mod-2.webp)
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

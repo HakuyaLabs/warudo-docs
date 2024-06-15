@@ -245,3 +245,12 @@ IK stands for Inverse Kinematics. It can be understood as "making a part of the 
 <p class="img-desc">Source：https://medium.com/unity3danimation/overview-of-inverse-kinematics-9769a43ba956</p>
 
 In Warudo, you can adjust the character asset's **Body IK** and **Look At IK** options to make the character's limbs follow a target position or look at a target position.
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />
+

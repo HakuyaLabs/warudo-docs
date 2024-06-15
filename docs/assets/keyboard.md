@@ -16,3 +16,11 @@ To use keyboard/trackpad, simply enable **Use Keyboard/Trackpad** during the mot
 :::info
 Currently, keyboard/trackpad are only supported for upper body tracking setups.
 :::
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

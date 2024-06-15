@@ -45,3 +45,11 @@ sidebar_position: 20
 ## **我需要其他帮助！**
 
 请加入我们的 [Discord](https://discord.gg/Df8qYYBFhH)、QQ 群（757419380），或者联系 [tiger@warudo.app](mailto:tiger@warudo.app)。
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

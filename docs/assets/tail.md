@@ -60,3 +60,11 @@ Additional shaping parameters for the tail.
 :::tip
 **Rotation Offset** is useful to make the tail point more upwards or downwards, especially when the model is sitting down. **Curving** is frequently used to make the tail more round or pointy.
 :::
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

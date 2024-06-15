@@ -30,3 +30,10 @@ sidebar_position: 90
 * Profile 名称：要接受的 Rokoko 人物 Profile 名称。&#x20;
 * 根据 Studio Actor 调整臀部高度：是否根据 Studio Actor 调整臀部高度。
 
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

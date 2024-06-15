@@ -113,3 +113,11 @@ Alt+Z, Alt+X, Alt+C... Alt+/
 把蓝图中「切换 BlendShape 表情」节点的「临时」设置为是即可。表情显示的时长将由表情里每个 BlendShape 的淡出延迟决定。
 
 ![](/doc-img/zh-expression-5.webp)
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

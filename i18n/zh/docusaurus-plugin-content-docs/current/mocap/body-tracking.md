@@ -12,3 +12,11 @@ Warudo 目前支持 5 种姿态捕捉方案。
 * [**VMC**](vmc.md)：由外部程序发送 [VirtualMotionCapture 数据](https://protocol.vmc.info/english)到 Warudo。比如你想使用 VR 动捕（例如：SlimeVR、Mocopi 等），就可以使用 VirtualMotionCapture 软件，发送 VMC 数据给 Warudo。
 * [**Rokoko**](rokoko.md)：由 [Rokoko Studio](https://www.rokoko.com/products/studio) 发送全身动捕数据到 Warudo。
 * [**Xsens MVN**](xsens-mvn.md)：由 [Xsens MVN Analyze/Animate](https://base.xsens.com/s/motion-capture-mvn-software?language=en\_US) 发送全身动捕数据到 Warudo。
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

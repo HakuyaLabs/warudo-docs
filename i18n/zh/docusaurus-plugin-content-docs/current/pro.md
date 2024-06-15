@@ -20,3 +20,11 @@ Warudo Pro 是我们提供给企业用户的 Warudo 版本。
 
 * 直播平台的账号以及虚拟形象的模型版权属于使用者本人；
 * 直播是个人行为，不属于任何与第三方（例如直播公会、艺人事务所）签订的合同范围内（和直播平台直接签约除外）。
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

@@ -28,3 +28,11 @@ sidebar_position: 30
 进阶设置可以在生成的姿态追踪蓝图中的「生成输入设备动作」节点找到：
 
 ![](/doc-img/zh-keyboard-4.webp)
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

@@ -39,3 +39,11 @@ This tells Warudo to show your title image at 22.5 seconds into the song, with a
 
 ![](/doc-img/en-music-player-2.png)
 <p class="img-desc">Showing a title image.</p>
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

@@ -28,7 +28,21 @@ const config: Config = {
   // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en', 'zh'],
+    locales: ['en', 'zh', 'jp'],
+    localeConfigs: {
+      en: {
+        label: 'English',
+        htmlLang: 'en-GB',
+      },
+      zh: {
+        label: '简体中文',
+        htmlLang: 'zh-Hans',
+      },
+      jp: {
+        label: '日本語',
+        htmlLang: 'ja',
+      },
+    },
   },
 
   scripts: [
@@ -41,9 +55,14 @@ const config: Config = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
+          editUrl: 'https://github.com/HakuyaLabs/warudo-doc/master/',
+          editLocalizedFiles: true,
+          showLastUpdateAuthor: true,
+          showLastUpdateTime: true
         },
         theme: {
           customCss: [
+            require.resolve('./src/css/common.scss'),
             require.resolve('./src/css/custom.css'),
             require.resolve('./src/css/in-app.scss')
           ],
@@ -67,7 +86,6 @@ const config: Config = {
 
   themes: [
     [
-
       '@easyops-cn/docusaurus-search-local',
       {
         hashed: true,
@@ -84,6 +102,7 @@ const config: Config = {
         logo: {
           alt: 'Warudo',
           src: 'img/logo.webp',
+          href: '#',
         },
         items: [
           {

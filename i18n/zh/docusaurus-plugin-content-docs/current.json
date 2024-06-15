@@ -28,7 +28,7 @@
     "description": "The label for category Nodes in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Advanced": {
-    "message": "Advanced",
+    "message": "高级",
     "description": "The label for category Advanced in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Extensions": {
@@ -46,5 +46,9 @@
   "sidebar.tutorialSidebar.category.Miscellaneous": {
     "message": "其他",
     "description": "The label for category Miscellaneous in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Ready-to-Use Blueprints": {
+    "message": "Ready-to-Use Blueprints",
+    "description": "The label for category Ready-to-Use Blueprints in sidebar tutorialSidebar"
   }
 }

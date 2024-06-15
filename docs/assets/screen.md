@@ -63,3 +63,11 @@ You can crop the four sides of the screen using the **Crop** settings; each valu
 **Tint** allows you to adjust the overall hue of the screen. When the tint's alpha is less than 1, the screen will become semi-transparent.
 
 You can set a **Chroma Key** color to make the corresponding color in the screen transparent. This is useful for displaying a collab partner's stream in the scene, for example.
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

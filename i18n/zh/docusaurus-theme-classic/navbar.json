@@ -18,5 +18,13 @@
   "item.label.Home Page": {
     "message": "主页",
     "description": "Navbar item with label 主页"
+  },
+  "item.label.Handbook": {
+    "message": "手册",
+    "description": "Navbar item with label Handbook"
+  },
+  "item.label.Home": {
+    "message": "主页",
+    "description": "Navbar item with label Home"
   }
 }

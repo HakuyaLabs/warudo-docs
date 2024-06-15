@@ -58,3 +58,11 @@ Similar to the character asset, you can adjust **Default BlendShapes**, **Defaul
 Please use **Onboarding Assistant → Interactions Setup → Get Started** to set up interactions. During the setup process, you will have the option to specify the conditions for throwing a prop at your character, along with other fun interactions.
 
 Note that the "prop" thrown by the **Throw Prop At Character** node in the interactions blueprint is a temporary object; it is not a prop asset. A prop asset is a persistent model in the scene, and it does not have a physics body.
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

@@ -42,3 +42,11 @@ A：可以！以[环境 Mod](https://tira.gitbook.io/warudo/advanced/environment
 
 * 暂不支持 [Assembly Definitions (`.asmdef`)](https://docs.unity3d.com/Manual/ScriptCompilationAssemblyDefinitionFiles.html)。被涵盖在 Assembly Definition 里的 C# 脚本不会导出到 Mod 里。
 * 暂不支持 [ScriptableObject](https://docs.unity3d.com/ScriptReference/ScriptableObject.html)。
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

@@ -131,3 +131,11 @@ Did I mention there is a **Switch Main Camera** node? It does exactly what it sa
 Here's the result:
 
 <div style={{width: '100%'}} className="video-box"><video controls loop src="/doc-img/camera-3.mp4" /></div>
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

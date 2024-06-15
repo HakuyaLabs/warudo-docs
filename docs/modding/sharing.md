@@ -21,3 +21,11 @@ In the **Files** list, you can add files to upload by clicking on the **+** butt
 ![](/doc-img/en-sharing-mod-3.png)
 
 Once you are done, just click on **OK** and wait for the upload to finish. Easy, right?
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

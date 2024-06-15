@@ -27,3 +27,11 @@ The toolbar has the following buttons:
 :::tip
 You can use the import/export feature to copy assets between scenes.
 :::
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

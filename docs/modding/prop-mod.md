@@ -29,3 +29,11 @@ Select the root GameObject of the prop and drag it to the mod folder to create a
 ### Step 4: Export Mod
 
 Select **Warudo → Build Mod** and make sure the generated `.warudo` file is put into the `Props` data folder.
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

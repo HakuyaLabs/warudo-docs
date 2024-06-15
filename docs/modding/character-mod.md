@@ -78,3 +78,11 @@ If you are a Blender user and looking to manually normalize the bones, you can u
 <p class="img-desc">Credit: [@Kana_Fuyuko](https://twitter.com/Kana_Fuyuko)</p>
 
 Blender's built-in FBX exporter is known to have issues with not exporting the correct bone rotations, so if that didn't work for you, you can try using a third-party add-on such as [Better FBX Importer & Exporter](https://blendermarket.com/products/better-fbx-importer--exporter) or [Cats](https://github.com/absolute-quantum/cats-blender-plugin) to export the FBX model. 
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

@@ -4,6 +4,12 @@ sidebar_position: 15
 
 # 环境 Mod
 
+:::warning
+
+该页面尚未更新到最新，最新版本可以查看 [**英文版**](https://docs.warudo.app/docs/modding/environment-mod) 。
+
+:::
+
 Warudo 支持任意 Unity [场景](https://docs.unity3d.com/Manual/CreatingScenes.html)作为[环境](https://tira.gitbook.io/warudo/assets/environment)源。
 
 ## 前置条件
@@ -31,3 +37,11 @@ Warudo 支持任意 Unity [场景](https://docs.unity3d.com/Manual/CreatingScene
 :::
 
 命名场景为 **Environment**，并确保场景放在 Mod 文件夹内（可以放在任意子文件夹），选择「Warudo」->「Build Mod」，然后将生成的 `.warudo` 文件放进 Warudo 数据文件夹的 Environments 子文件夹里即可。
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

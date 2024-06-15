@@ -52,3 +52,11 @@ If you want to set up a secondary pose tracking, you can use the **Secondary Pos
 <p class="img-desc">Setting up secondary pose tracking.</p>
 
 If you want to combine more than two pose tracking systems, you can set up the primary pose tracking first using the onboarding assistant, and then set up the subsequent pose tracking systems using **Character → Setup Motion Capture** with **Track Full Body** set to **No** and **Tracked Body Parts** set to the specific body parts you want to track with that system.
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

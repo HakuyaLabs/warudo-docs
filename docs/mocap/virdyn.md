@@ -23,3 +23,11 @@ Please refer to [Overview](overview#FAQ) and [Customizing Pose Tracking](body-tr
 ### My tracking drifts over time.
 
 This is a common issue with inertial motion capture systems, which drift over time due to accumulated errors. To reduce the drift, make sure there are no magnetic or electrical interference near the tracking sensors.
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

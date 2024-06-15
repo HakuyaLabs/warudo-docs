@@ -31,3 +31,11 @@ Rename the Animation Clip to **"Animation"**, and make sure it is placed in the 
 ### Step 3: Export Mod
 
 Select **Warudo → Build Mod** and make sure the generated `.warudo` file is put into the `CharacterAnimations` data folder.
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

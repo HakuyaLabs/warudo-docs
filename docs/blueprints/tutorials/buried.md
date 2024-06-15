@@ -75,3 +75,11 @@ What if we want to make the plushies smaller and smaller instead? Or instead of 
 The **For Loop** node also has **On Loop End** and **Exit** flow outputs. The **On Loop End** flow output is triggered when the loop ends, while the **Exit** flow output is triggered immediately after the loop is started. Try adding two **Show Toast** nodes like below, and see what happens.
 
 ![](/doc-img/en-blueprint-buried-6.png)
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

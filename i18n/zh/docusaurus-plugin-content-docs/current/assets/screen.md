@@ -41,3 +41,11 @@ sidebar_position: 60
 * 色键颜色：色键的颜色。
 * 接受光照：屏幕是否受场景内光照影响。
   * 开启时，可调整屏幕材质的平滑度、金属性及自发光参数。
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

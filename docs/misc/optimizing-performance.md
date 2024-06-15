@@ -55,3 +55,11 @@ Increased GPU priority for Warudo can in turn decrease frame rates of other 3D a
 :::info
 If you are experiencing performance issues with other applications/games, you can try to run them as administrator as well.
 :::
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

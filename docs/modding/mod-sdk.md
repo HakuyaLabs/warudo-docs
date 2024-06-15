@@ -60,3 +60,11 @@ We recommend making a backup of your modding project regularly or use [Unity Ver
 :::caution
 We have received reports that some users have lost their export setting after exporting a mod. This is currently under investigation. In the meantime, we recommend backing up the `ExportSettings.asset` file regularly.
 :::
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

@@ -48,3 +48,11 @@ There are other event nodes. like the **On YouTube Super Chat Received** node. I
 ![](/doc-img/en-blueprint-toggle-meshes-5.png)
 
 This "if X, then Y" paradigm is the foundation of blueprints. The X is an event, like pressing a hotkey or receiving a Super Chat, and the Y is all sorts of interesting interactions, like making your character dance, or ragdolling your character. In fact, that's exactly what we will look into in the next tutorial...
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

@@ -108,3 +108,10 @@ Now when your face is no longer tracked, your character will tilt their head to 
 ![](/doc-img/en-blueprint-nap-14.png)
 
 
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

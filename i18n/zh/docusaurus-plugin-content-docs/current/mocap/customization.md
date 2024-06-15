@@ -22,3 +22,10 @@ Warudo 的动作捕捉都是用[蓝图](/docs/mocap/blueprints/overview)实现�
 
 使用「Float 摆锤物理」节点，你可以轻易实现 Live2D 中的眼睛物理效果。详情请参考[这篇文档](../blueprints/example-live2d-physics.md)。
 
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

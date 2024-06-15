@@ -21,3 +21,11 @@ Select the root particle GameObject and drag it to the mod folder to create a pr
 ### Step 4: Export Mod
 
 Select **Warudo → Build Mod** and make sure the generated `.warudo` file is put into the `Particles` data folder.
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

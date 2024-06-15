@@ -4,9 +4,13 @@ sidebar_position: 1
 
 # Unity & Warudo SDK Installation
 
-:::caution
+This page will guide you to install the **Unity Editor** and the **Warudo SDK** step by step.
 
-Currently only 64-bit Windows systems are supported.
+---
+
+:::info
+
+Currently only **64-bit Windows** systems are supported.
 
 :::
 
@@ -100,11 +104,11 @@ The second option is more suitable for updating an existing modding project.
 
 ![](/doc-img/en-mod-9.png)
 
-Check the console for any errors, a few warnings may appear, which is normal.:
+Check the console for any errors, a few warnings may appear, which is normal:
 
 ![](/doc-img/en-mod-10.png)
 
-If there are none, you are all set! Now go ahead and [create your first mod](creating-your-first-mod).
+If there are no errors, you are all set! Now go ahead and [create your first mod](creating-your-first-mod).
 
 :::tip
 
@@ -189,3 +193,11 @@ Check the console for any errors. If there are none, you are all set! Now go ahe
 If you see errors in the console, try click on "Clear" to see if these errors can be removed. If you are still having trouble, please reach out to us on [Discord](https://discord.gg/warudo).
 
 :::
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />
