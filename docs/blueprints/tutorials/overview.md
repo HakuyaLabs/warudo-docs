@@ -5,7 +5,7 @@ sidebar_position: 0
 # Overview
 
 :::info
-If you have not read the [Understanding Blueprints](../understanding-blueprints.md) section, we recommend that you do so before continuing.
+If you have not read the [Creating Your First Blueprint](../understanding-blueprints.md) section, we recommend that you do so before continuing.
 :::
 
 Creating a blueprint is really just a two-step process:
