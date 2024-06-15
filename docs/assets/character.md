@@ -194,6 +194,10 @@ Note that models exported by [VRoid Studio](https://vroid.com/en/studio) only ha
 To toggle meshes in blueprints, you can use the **Toggle Character Meshes** node.
 :::
 
+## Scaling
+
+You can scale the character by using the **Transform → Scale** property. However, this may break features such as ragdoll, IK, and compatibility with some motion capture systems (e.g., [Leap Motion](../mocap/leap-motion)). If you need to scale the character, we recommend to scale the character in the 3D modeling software instead, i.e., before you have imported the model into Unity or Warudo.
+
 ## Frequently Asked Questions {#FAQ}
 
 ### How can I trigger an expression automatically with face tracking?

@@ -12,6 +12,7 @@ Whether you are streaming at home or at a professional mocap studio, Warudo has 
   * Built-in tracking via [MediaPipe](./mediapipe) or [OpenSeeFace](./openseeface).
 * iPhone
   * Requires either [iFacialMocap / FaceMotion3D](./ifacialmocap) or [RhyLive](./rhylive) app to be installed on the iPhone.
+* [SteamVR] (./steamvr)
 * [Leap Motion Controller](./leap-motion)
 * [Sony Mocopi](./mocopi)
 * [Rokoko](./rokoko)
@@ -25,6 +26,7 @@ Whether you are streaming at home or at a professional mocap studio, Warudo has 
 [Warudo Pro](../pro.md) also supports the following motion capture systems:
 
 * Any optical tracking system compatible with [Autodesk MotionBuilder](./motionbuilder), e.g., [Vicon](https://www.vicon.com/), [OptiTrack](https://optitrack.com/)
+* [OptiTrack Motive](./optitrack)
 * [Chingmu Avatar](./chingmu)
 
 ## What motion capture systems should I use?
@@ -72,6 +74,8 @@ You should almost never create a motion capture asset manually, i.e., by clickin
 ### My character is not moving.
 
 If you are using a motion capture system that requires an external application, such as iFacialMocap, make sure the application is running and the tracking data is being sent to Warudo. Also, make sure your computer's firewall is not blocking Warudo from receiving the tracking data; you may need to add Warudo to the whitelist, or temporarily disable the firewall.
+
+You may also want to set your network as a private network, as Windows may block incoming connections from public networks. See [this guide](https://support.microsoft.com/en-us/windows/make-a-wi-fi-network-public-or-private-in-windows-0460117d-8d3e-a7ac-f003-7a0da607448d) for more information.
 
 Some motion capture receivers have a **Port** option. Make sure the port number matches the port number in the external application.
 

@@ -62,6 +62,12 @@ First, make sure you have loaded the same model in Warudo and Autodesk MotionBui
 
 We also require the models to have normalized bones,  i.e., all bones on the model should have zero rotation (0, 0, 0) when the model is in T-pose. Please refer to [this page](../misc/normalizing-model-bones) for more details.
 
+### I have confirmed Autodesk MotionBuilder is streaming data to another PC running Warudo, but Warudo has not received any data.
+
+Please make sure the network settings are correct, i.e., the two PCs are on the same network and can communicate with each other. You can try to ping in both directions to confirm.
+
+Additionally, if your character has a rather large hierarchy, please check if the receiving PC has a large enough MTU (Maximum Transmission Unit) size to receive the data, and increase it if necessary. See [this page](https://answers.microsoft.com/en-us/windows/forum/all/how-to-change-mtu-settings-in-windows-10/5c36c250-a0e8-47ee-b01c-de22139dc297) for more details.
+
 <AuthorBar authors={{
   creators: [
     {name: 'HakuyaTira', github: 'TigerHix'},
