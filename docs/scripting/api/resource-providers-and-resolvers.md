@@ -4,7 +4,7 @@ sidebar_position: 200
 
 # Resource Providers & Resolvers
 
-Resources in Warudo are any external data that can be used by assets and nodes. For example, character resources are the `.vrm` and `.warudo` files in the `Characters` directory; character animation resources are the 500+ built-in animations provided by Warudo plus any custom [character animation mods](../../modding/character-animation-mod) in the `CharacterAnmations` directory; [screen](../../assets/screen) image resources are the image files in the `Images` directory; and so on.
+Resources in Warudo are any external data that can be used by assets and nodes. For example, character resources are the `.vrm` and `.warudo` files in the `Characters` directory; character animation resources are the 500+ built-in animations provided by Warudo plus any custom [character animation mods](../../modding/character-animation-mod) in the `CharacterAnimations` directory; [screen](../../assets/screen) image resources are the image files in the `Images` directory; and so on.
 
 ## Overview
 
