@@ -2,44 +2,44 @@
 sidebar_position: 70
 ---
 
-# Leap Motion Controller
+# Leap Motion 控制器 
 
-Hand tracking via [Leap Motion Controller](https://leap2.ultraleap.com/leap-motion-controller-2/).
+使用 [Leap Motion 控制器](https://leap2.ultraleap.com/leap-motion-controller-2/)进行手部捕捉。
 
-## Setup
+## 初始设置
 
-We recommend using a Leap Motion Controller 2 for more accurate and stable tracking. The original Leap Motion Controller is also supported.
+为了更准确和稳定的手部捕捉，我们推荐您使用更新一代的Leap Motion 控制器 2，但Warudo也支持使用初代Leap Motion 控制器进行捕捉。
 
-To connect the Leap Motion Controller to Warudo, you need to download and install the latest Gemini software from [Leap Motion's website](https://leap2.ultraleap.com/gemini-downloads/).
+您将需要下载安装最新的[Gemeni软件](https://leap2.ultraleap.com/gemini-downloads/)以将您的Leap Motion 控制器连接到Warudo。
 
-Warudo supports all 3 tracking modes offered by the Leap Motion Controller: **Desktop**, **Screen Top**, and **Chest Mounted**. We recommend using the **Chest Mounted** mode along with a [neck/chest mount](https://www.etsy.com/market/leap_motion_mounting) for the best experience.
+Warudo支持 Leap Motion 控制器提供的所有三种捕捉模式：**Desktop（将设备置于桌面上时）**, **Screen Top（将设备置于屏幕顶部时）**, 以及 **Chest Mounted（颈挂式）**。为了更好的体验，我们推荐在使用颈挂式捕捉模式时，使用一个[颈挂](https://www.etsy.com/market/leap_motion_mounting)。
 
-## Calibration {#Calibration}
+## 校正 {#Calibration}
 
-There is generally no need to calibrate the Leap Motion Controller. However, you can adjust **Controller Position Offset**, **Controller Rotation Offset**, and **Controller Scale** in the **Leap Motion Controller** asset to adjust the tracking. A virtual Leap Motion Controller will be displayed in the scene to help you visualize the tracking.
+总体来讲，Leap Motion 控制器并不需要校正即可使用。但您可以在 **Leap Motion 控制器 Asset** 中调制**控制器位置偏移**，**控制器旋转偏移**，以及**控制器缩放比率** 来调整捕捉效果。该界面中将会显示一个虚拟的 Leap Motion 控制器图标，以帮助您可视化的校正动捕效果。
 
 ![](/doc-img/en-leapmotion-1.png)
-<p class="img-desc">Adjusting the virtual Leap Motion Controller.</p>
+<p class="img-desc">图为调整 Leap Motion 控制器的示意图。</p>
 
-## Options
+## 选项
 
-* **Controller Position Offset**: The offset of the controller position. Positive X is a left offset, positive Y is an upward offset, and positive Z is a forward offset.
-* **Controller Rotation Offset**: The offset of the controller rotation.
-* **Controller Scale**: The scale of the controller. Increase this value if you want hands to be further away from the body. You can also enable **Per-Axis Scale** to scale the controller on each axis separately.
-* **Fix Finger Orientations Weight**: Due to different model specifications, the finger orientations of the Leap Motion Controller may not match the finger orientations of the model. This option allows you to adjust the finger orientations of the Leap Motion Controller to match the model. 0 means no adjustment, 1 means full adjustment. Adjust this value until the fingers look natural.
-* **Shoulder Rotation Weight**: How much the shoulders should be rotated. 0 means no rotation, 1 means full rotation. Adjust this value until the shoulders look natural.
+* **控制器位置偏移**: 对传感器的三维空间坐标位置进行调整，正数X值会将传感器位置向左侧调整，反之则向右侧调整。正数Y值会将传感器位置向上方调整，反之则向下方调整。正数Z值会将传感器位置向前方调整，反之则向后方调整。
+* **控制器旋转偏移**: 平面旋转虚拟 Leap Motion 控制器,以调整传感器的角度。
+* **控制器缩放比率**: 此参数为调整传感器的距离感应比例，调整它可以改变模型手部和身体的距离感应灵敏度。你也可以使用 **对每个轴单独缩放** 来单独精调传感器在每个方向上的灵敏度。 
+* **修正手指朝向权重**: 由于每个人物模型的参数不同，Leap Motion 控制器中手指的朝向可能与模型中手指的朝向不同步，这个参数可以让您调整手指的朝向，以使模型显示的动作与传感器捕捉到的动作同步。0代表不做任何调整，1代表最高修正值。请您持续调整，直至模型看上去效果自然。
+* **修正肩部朝向权重**: 这个参数会改变模型肩部的旋转角度，0代表不做任何调整，1代表完全翻转，请您持续调整，直至模型看上去效果自然。
 
-## Frequently Asked Questions {#FAQ}
+## 常见问题{#FAQ}
 
-Please refer to [Overview](overview#FAQ) and [Customizing Pose Tracking](body-tracking#FAQ) for common questions.
+常见问题请参考[动作捕捉方案一览](overview#FAQ)以及[姿态追踪](body-tracking#FAQ)。
 
-### The Leap Motion Tracker asset says "Tracker not started."
+### **Leap Motion 追踪器显示**"Tracker not started."
 
-Please make sure you have installed the latest [Gemini software](https://leap2.ultraleap.com/gemini-downloads/), and it is running in the background.
+请确保您已下载并安装最新版本的[Gemini软件](https://leap2.ultraleap.com/gemini-downloads/)，并且程序已在后台运行。
 
-### My model's wrist/fingers look unnatural.
+### 我的模型的手腕/手指看着很奇怪。.
 
-Try adjusting the **Fix Finger Orientations Weight** option in the **Leap Motion Tracker** asset. You may also need to adjust the **Wrist Rotation Offset** and **Global Finger Rotation Offset** options (check the left boxes to enable them).
+请尝试在**Leap Motion 追踪器 Asset**中调整**修正手指朝向权重（手指方向修正权重）** 选项,您可能也需要调整**手腕旋转偏移** 与 **全局手指旋转偏移** 选项。（您可以在选项左侧的方框内开启它们）
 
 <AuthorBar authors={{
   creators: [
