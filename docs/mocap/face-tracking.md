@@ -2,21 +2,21 @@
 sidebar_position: 20
 ---
 
-# 面部追踪
+# Customizing Face Tracking
 
-## 蓝图自定义
+## Blueprint Customization
 
-在开播准备环节，您可以点击 **面部追踪进阶设置…** 来对蓝图进行定制。
+During the onboarding process, you can click **Customize Face Tracking...** to customize the tracking blueprint.
 
 ![](/doc-img/en-mocap-3.png)
 <p class="img-desc">Customizing face tracking.</p>
 
-目前我们提供以下几种选择:
+The following options are available:
 
-* **BlendShape 映射:** 选择适合您模型的 BlendShape 映射。比如说，如果您的模型带有 "Perfect Sync"/ARKit Blendshape, 请您选择 **Arkit**; 如果您的模型是由MMD模型转换而来，请选择 **MMD** ;其他请选择 **VRM**。 Warudo 会尝试自动识别模型类型，但您也可以在这里手动更改类型。-
-* **启用头部和身体运动:** 此选项开启时，Warudo 会尝试基于动捕数据来同时运动模型的头身部分。在您使用完整的全身动捕系统的情况下，此选项会被开播助手设置为**关闭**。
-* **头部待机动画 (自动眨眼/自动眼部动作/自动摇头):** 在开启状态下，Warudo 会给角色增加微小的头部、眼部动作。
-* **视线:** 此选项开启时，，您的角色视线会望向指定方向（默认指向摄像机位）。这样可以帮助您在任何机位下保持与观众的眼神交流并允许您的头部自由转动。
+* **BlendShape Mapping:** Select the blendshape mapping that matches your model. For example, if your model has "Perfect Sync"/ARKit blendshapes, select **ARKit**; if your model is converted from a MMD model, select **MikuMikuDance**; otherwise, select **VRM**. By default, Warudo will try to automatically detect the blendshape mapping, but you can override it here.
+* **Enable Head and Body Movements:** If enabled, Warudo will move your character's head and body according to the tracking data. If disabled, only the face (blendshapes and eye bones) will be animated. This is automatically set to **No** by the onboarding assistant if you use a full-body pose tracking system that already tracks the head and body.
+* **Idle Head Animation (Auto Blinking / Auto Eye Movements / Auto Head Movements):** If enabled, Warudo will add subtle head motion, eye movement, and blinking to your character.
+* **Look At:** If enabled, your character will look at a target (default to the camera) when you look forward. This helps your character / you maintain eye contact with the audience regardless of the camera position, while still allowing your character / you to look around freely.
 * **Lip Sync**: If enabled, Warudo will animate your character's mouth based on your speech. You can choose to enable lip sync only when tracking is lost, or always enable it.
 
 :::info

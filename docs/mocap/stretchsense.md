@@ -2,23 +2,23 @@
 sidebar_position: 130
 ---
 
-# StretchSense 手套
+# StretchSense Glove
 
-使用[StretchSense 手套](https://stretchsense.com/)进行手指动作捕捉。
+Finger tracking via [StretchSense Glove](https://stretchsense.com/).
 
-## 初始设置
+## Setup
 
-Warudo基于[VMC protocol](./vmc)来支持StretchSense 手套。 要使用StretchSense 手套进行动作捕捉，请在Onboarding期间在菜单中将**Secondary Pose Tracking** 选项设置为**StretchSense Glove**。
+Warudo supports StretchSense Glove via the [VMC protocol](./vmc). To use StretchSense Glove with Warudo, select **StretchSense Glove** as **Secondary Pose Tracking** during the onboarding process.
 
 ![](/doc-img/en-stretchsense-1.png)
 
-## 校正
+## Calibration
 
-StretchSense 手套的校正需要在[StretchSense Hand Engine](https://stretchsense.com/solution/hand-engine/)中进行。
+Calibration of StretchSense Glove is done in StretchSense Hand Engine.
 
-## 常见问题
+## Frequently Asked Questions
 
-常见问题请参考[动作捕捉方案一览](overview#FAQ)和[姿态追踪](body-tracking#FAQ)页面。
+Please refer to [Overview](overview#FAQ) and [Customizing Pose Tracking](body-tracking#FAQ) for common questions.
 
 <AuthorBar authors={{
   creators: [
@@ -27,4 +27,3 @@ StretchSense 手套的校正需要在[StretchSense Hand Engine](https://stretchs
   translators: [
   ],
 }} />
-
