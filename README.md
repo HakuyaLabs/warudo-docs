@@ -10,9 +10,6 @@ The main purpose of this repository is to provide comprehensive beginner-friendl
 
 The Warudo handbook proudly uses using [Docusaurus](https://docusaurus.io/) to create website which is maked by JavaScript Markdown and so much more great staffs.
 
-![ci status](https://github.com/HakuyaLabs/warudo-docs/actions/workflows/<WORKFLOW_FILE>/badge.svg)
-
-
 ## Getting started
 [https://docs.warudo.app/](https://docs.warudo.app/)
 
