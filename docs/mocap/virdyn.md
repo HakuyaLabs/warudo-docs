@@ -4,25 +4,25 @@ sidebar_position: 110
 
 # Virdyn Studio (VDMocapStudio)
 
-Body tracking via [VDMocapStudio](https://www.virdynm.com/virdyn-vdmocap-studio-motion-capture-software-system-for-vdsuit-full-product/). Requires a [VDSuit](https://www.virdynm.com/virdyn-vdsuit-full-for-full-body-function-inertia-motion-capture-suit-product/) suit.
+使用虚拟动力出品的 [Virdyn Studio（VDMocapStudio）](https://www.virdynm.com/virdyn-vdmocap-studio-motion-capture-software-system-for-vdsuit-full-product/)软件进行动作捕捉。 这个动捕方法需要使用官方售卖的 [Virdyn（虚拟动力）VDSuit](https://www.virdynm.com/virdyn-vdsuit-full-for-full-body-function-inertia-motion-capture-suit-product/) 动捕服装。
 
-## Setup
+## 初始设置
 
-Open VDMocapStudio and enable data streaming by clicking **Broadcast → OpenShare**. Make sure the IP selected is accessible from Warudo.
+请先打开 [VDMocapStudio](https://www.virdynm.com/virdyn-vdmocap-studio-motion-capture-software-system-for-vdsuit-full-product/) 软件，点击软件中的 **Broadcast → OpenShare** 以打开数据串流，并请确保您选择的IP地址能被Warudo访问。
 
 ![](/doc-img/en-virdyn-1.png)
 
-## Calibration
+## 校正
 
-Calibration of Virdyn hardware is done in VDMocapStudio. You can also use **Virdyn Studio Receiver → Calibrate Root Transform** to reset the character's root position and rotation in Warudo.
+Virdyn硬件的校正需要在VDMocapStudio中完成。你也可以使用Warudo中的 **Virdyn Studio Receiver → Calibrate Root Transform** 功能，来将角色重置为默认的位置和方向。
 
-## Frequently Asked Questions
+## 常见问题
 
-Please refer to [Overview](overview#FAQ) and [Customizing Pose Tracking](body-tracking#FAQ) for common questions.
+常见问题请参考[动作捕捉方案一览](overview#FAQ)和[姿态追踪](body-tracking#FAQ)页面。
 
-### My tracking drifts over time.
+### 我的动捕结果经常会自己平移
 
-This is a common issue with inertial motion capture systems, which drift over time due to accumulated errors. To reduce the drift, make sure there are no magnetic or electrical interference near the tracking sensors.
+这种随着时间一点点增大，导致动捕结果平移的误差是惯性动捕系统的常见问题。请尽量减少动捕设备周边的电磁干扰来减少漂移问题。
 
 <AuthorBar authors={{
   creators: [
