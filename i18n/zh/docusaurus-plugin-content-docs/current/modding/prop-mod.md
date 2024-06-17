@@ -21,5 +21,6 @@ Warudo 支持任意 Unity [Prefab](https://docs.unity3d.com/Manual/Prefabs.html)
     {name: 'HakuyaTira', github: 'TigerHix'},
   ],
   translators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
   ],
 }} />

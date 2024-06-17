@@ -36,9 +36,10 @@ Playground has the following limitations:
 * You cannot add or reference Unity assets (e.g., prefabs, materials, textures) in Playground scripts (use [plugin mods](plugin-mod) instead).
 
 <AuthorBar authors={{
-creators: [
-{name: 'HakuyaTira', github: 'TigerHix'},
-],
-translators: [
-],
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+    {name: 'hanekit', github: 'hanekit'}
+  ],
+  translators: [
+  ],
 }} />

@@ -210,7 +210,9 @@ Warudo SDK 0.12.0.unitypackage
 <AuthorBar authors={{
   creators: [
     {name: 'HakuyaTira', github: 'TigerHix'},
+    {name: 'hanekit', github: 'hanekit'}
   ],
   translators: [
+    {name: 'hanekit', github: 'hanekit'}
   ],
 }} />

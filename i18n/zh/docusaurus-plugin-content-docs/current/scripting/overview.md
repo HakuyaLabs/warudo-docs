@@ -21,7 +21,9 @@ sidebar_position: 0
 <AuthorBar authors={{
   creators: [
     {name: 'HakuyaTira', github: 'TigerHix'},
+    {name: 'hanekit', github: 'hanekit'}
   ],
   translators: [
+    {name: 'hanekit', github: 'hanekit'}
   ],
 }} />

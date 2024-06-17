@@ -34,5 +34,6 @@ sidebar_position: 0
     {name: 'HakuyaTira', github: 'TigerHix'},
   ],
   translators: [
+    {name: 'robinwongm', github: 'robinwongm'},
   ],
 }} />

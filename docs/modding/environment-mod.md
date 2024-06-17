@@ -89,6 +89,7 @@ Some users have reported that having multiple sets of lightmaps and `LightingSet
 <AuthorBar authors={{
   creators: [
     {name: 'HakuyaTira', github: 'TigerHix'},
+    {name: 'hanekit', github: 'hanekit'}
   ],
   translators: [
   ],

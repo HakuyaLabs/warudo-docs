@@ -48,5 +48,6 @@ A：可以！以[环境 Mod](https://tira.gitbook.io/warudo/advanced/environment
     {name: 'HakuyaTira', github: 'TigerHix'},
   ],
   translators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
   ],
 }} />
