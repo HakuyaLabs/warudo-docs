@@ -118,3 +118,11 @@ That is when we need the **Sequence** node. The Sequence node has a variable num
 ![](/doc-img/en-blueprint-spinning-15.png)
 
 Now you only need to press R to start or gracefully stop spinning!
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

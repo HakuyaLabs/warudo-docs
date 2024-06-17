@@ -19,3 +19,12 @@ StretchSense 手套的校正需要在[StretchSense Hand Engine](https://stretchs
 ## 常见问题
 
 常见问题请参考[动作捕捉方案一览](overview#FAQ)和[姿态追踪](body-tracking#FAQ)页面。
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />
+

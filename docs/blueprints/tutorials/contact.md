@@ -82,3 +82,11 @@ Finally, we just need to add a **Toggle Asset Enabled** whenever our hand is in 
 ![](/doc-img/en-blueprint-contact-10.png)
 
 Now when you reach your left hand to your right shoulder, you should see the katana appear in your hand! You can also add a **Play Sound** node to play a sound effect when the katana appears, or a particle, or anything you like—that's the beauty of the contact system!
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

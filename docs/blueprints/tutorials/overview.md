@@ -5,7 +5,7 @@ sidebar_position: 0
 # Overview
 
 :::info
-If you have not read the [Understanding Blueprints](../understanding-blueprints.md) section, we recommend that you do so before continuing.
+If you have not read the [Creating Your First Blueprint](../understanding-blueprints.md) section, we recommend that you do so before continuing.
 :::
 
 Creating a blueprint is really just a two-step process:
@@ -18,3 +18,11 @@ However, there are 300+ nodes in Warudo, and it can be difficult to know which o
 :::tip
 We have arranged the tutorials in the order of increasing difficulty. If you are new to Warudo, we recommend that you start with the first tutorial and work your way down.
 :::
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

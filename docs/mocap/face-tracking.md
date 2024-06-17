@@ -73,3 +73,11 @@ This is usually caused by applying ARKit tracking on a non-ARKit-compatible mode
 ### My body rotates in the opposite direction when I turn my head.
 
 By default, **Body Rotation Type** is set to Inverted to mimic Live2D models and achieve a more anime look. If you want to disable this, set **Body Rotation Type** to Normal or None.
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

@@ -72,3 +72,11 @@ This blueprint only implements the movement of one layer of highlights; however,
 :::tip
 Keep in mind that the "Float Pendulum Physics" node is not limited to just creating eye wiggle physics! Other physical effects seen in Live2D can be implemented in Warudo this way as well, such as arm bouncing physics.
 :::
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

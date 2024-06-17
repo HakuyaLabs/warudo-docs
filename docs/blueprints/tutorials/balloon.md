@@ -114,3 +114,11 @@ In many cases, this would be fine, but if you want to depend on the actual face 
 ![](/doc-img/en-blueprint-balloon-11.png)
 
 The downside of this approach is that this blueprint won't work if we are not using iFacialMocap. The plus side is that we are no longer depending on any character blendshape; the character doesn't even need to have a `cheekPuff` blendshape, and we can still use puffing our cheeks as a trigger for a variety of fun effects!
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

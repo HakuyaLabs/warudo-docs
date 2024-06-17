@@ -40,3 +40,11 @@ Warudo支持 Leap Motion 控制器提供的所有三种捕捉模式：**Desktop�
 ### 我的模型的手腕/手指看着很奇怪。.
 
 请尝试在**Leap Motion 追踪器 Asset**中调整**修正手指朝向权重（手指方向修正权重）** 选项,您可能也需要调整**手腕旋转偏移** 与 **全局手指旋转偏移** 选项。（您可以在选项左侧的方框内开启它们）
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

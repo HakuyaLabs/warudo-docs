@@ -51,3 +51,11 @@ We also require the models to have normalized bones,  i.e., all bones on the mod
 ### My character is not moving.
 
 You can try click **Settings → Chingmu → Restart Chingmu Plugin**. If this does not work, try restarting Chingmu Avatar and/or Warudo.
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

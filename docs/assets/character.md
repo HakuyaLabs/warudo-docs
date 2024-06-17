@@ -155,7 +155,7 @@ After
 </div>
 :::
 
-The **Bend Goal Target** and **Bend Goal Weight** options can be used to control the rotation of the elbows and knees. The **Bend Goal Target** is usually an [anchor](../anchor.md).
+The **Bend Goal Target** and **Bend Goal Weight** options can be used to control the rotation of the elbows and knees. The **Bend Goal Target** is usually an [anchor](anchor.md).
 
 <div style={{display: 'flex', justifyContent: 'space-between', gap: '1rem'}}>
 <div>
@@ -194,6 +194,10 @@ Note that models exported by [VRoid Studio](https://vroid.com/en/studio) only ha
 To toggle meshes in blueprints, you can use the **Toggle Character Meshes** node.
 :::
 
+## Scaling
+
+You can scale the character by using the **Transform → Scale** property. However, this may break features such as ragdoll, IK, and compatibility with some motion capture systems (e.g., [Leap Motion](../mocap/leap-motion)). If you need to scale the character, we recommend to scale the character in the 3D modeling software instead, i.e., before you have imported the model into Unity or Warudo.
+
 ## Frequently Asked Questions {#FAQ}
 
 ### How can I trigger an expression automatically with face tracking?
@@ -230,3 +234,11 @@ The following changes the hotkey to Ctrl+Shift+T.
 To do this, enable **Is Transient** on the **Toggle Character Expression** node in the **Expression Key Bindings** blueprint. The duration of the expression will be determined by **Exit Delay** of each BlendShape in the expression.
 
 ![](/doc-img/en-expression-5.webp)
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

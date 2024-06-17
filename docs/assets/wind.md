@@ -16,3 +16,11 @@ How do I know if my model has VRM Spring Bones or Magica Cloth components? You c
 ## Setup
 
 Create a **Wind (VRM)** or **Wind (Magica Cloth)** asset depending on the type of physics components your model has. Then, play with the parameters to adjust the wind effect.
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

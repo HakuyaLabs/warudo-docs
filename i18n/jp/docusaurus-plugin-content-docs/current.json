@@ -1,0 +1,42 @@
+{
+  "version.label": {
+    "message": "次へ",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.Tutorials": {
+    "message": "チュートリアル",
+    "description": "The label for category Tutorials in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Motion Capture": {
+    "message": "モーションキャプチャ",
+    "description": "The label for category Motion Capture in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Assets": {
+    "message": "アセット",
+    "description": "The label for category Assets in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Blueprints": {
+    "message": "ブループリント",
+    "description": "The label for category Blueprints in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Ready-to-Use Blueprints": {
+    "message": "すぐに使用できるブループリント",
+    "description": "The label for category Ready-to-Use Blueprints in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Nodes": {
+    "message": "ノード",
+    "description": "The label for category Nodes in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Modding": {
+    "message": "モッディング",
+    "description": "The label for category Modding in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Scripting": {
+    "message": "スクリプティング",
+    "description": "The label for category Scripting in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Miscellaneous": {
+    "message": "その他",
+    "description": "The label for category Miscellaneous in sidebar tutorialSidebar"
+  }
+}

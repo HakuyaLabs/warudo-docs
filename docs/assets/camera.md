@@ -277,3 +277,11 @@ Add a mosaic effect to the image!
 <p class="img-desc">Pixelate enabled.</p>
 </div>
 </div>
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

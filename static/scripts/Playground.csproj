@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <OutputType>Library</OutputType>
+        <!--
+            Technically, Unity uses net481, but most .NET 5 APIs are available anyway, so we use net5.0 here.
+        -->
+        <TargetFramework>net5.0</TargetFramework>
+        <LangVersion>9.0</LangVersion>
+    </PropertyGroup>
+    <ItemGroup>
+        <!--
+            It is possible to reference some of the other DLLs in the Warudo_Data/Managed directory;
+            however, note the other DLLs are not guaranteed to be present in all Warudo installations.
+        -->
+        <Reference Include="Assembly-CSharp">
+            <HintPath>../../Managed/Assembly-CSharp.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine">
+            <HintPath>../../Managed/UnityEngine.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.CoreModule">
+            <HintPath>../../Managed/UnityEngine.CoreModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.AnimationModule">
+            <HintPath>../../Managed/UnityEngine.AnimationModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.AudioModule">
+            <HintPath>../../Managed/UnityEngine.AudioModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.InputModule">
+            <HintPath>../../Managed/UnityEngine.InputModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.PhysicsModule">
+            <HintPath>../../Managed/UnityEngine.PhysicsModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.TextRenderingModule">
+            <HintPath>../../Managed/UnityEngine.TextRenderingModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.UI">
+            <HintPath>../../Managed/UnityEngine.UI.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.UIModule">
+            <HintPath>../../Managed/UnityEngine.UIModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.XRModule">
+            <HintPath>../../Managed/UnityEngine.XRModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.UnityWebRequestModule.dll">
+            <HintPath>../../Managed/UnityEngine.UnityWebRequestModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.UnityWebRequestAudioModule.dll">
+            <HintPath>../../Managed/UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.UnityWebRequestTextureModule.dll">
+            <HintPath>../../Managed/UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.UnityWebRequestWWWModule.dll">
+            <HintPath>../../Managed/UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+        </Reference>
+        <Reference Include="Unity.Collections">
+            <HintPath>../../Managed/Unity.Collections.dll</HintPath>
+        </Reference>
+        <Reference Include="Unity.InputSystem">
+            <HintPath>../../Managed/Unity.InputSystem.dll</HintPath>
+        </Reference>
+        <Reference Include="Unity.Jobs">
+            <HintPath>../../Managed/Unity.Jobs.dll</HintPath>
+        </Reference>
+        <Reference Include="Unity.Mathematics">
+            <HintPath>../../Managed/Unity.Mathematics.dll</HintPath>
+        </Reference>
+        <Reference Include="Unity.TextMeshPro">
+            <HintPath>../../Managed/Unity.TextMeshPro.dll</HintPath>
+        </Reference>
+        <Reference Include="Cinemachine">
+            <HintPath>../../Managed/Cinemachine.dll</HintPath>
+        </Reference>
+        <Reference Include="Warudo.Core">
+            <HintPath>../../Managed/Warudo.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Warudo.Plugins.Core">
+            <HintPath>../../Managed/Warudo.Plugins.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="UniTask">
+            <HintPath>../../Managed/UniTask.dll</HintPath>
+        </Reference>
+        <Reference Include="UniTask.Linq">
+            <HintPath>../../Managed/UniTask.Linq.dll</HintPath>
+        </Reference>
+        <Reference Include="DOTween">
+            <HintPath>../../Managed/DOTween.dll</HintPath>
+        </Reference>
+        <Reference Include="RootMotion">
+            <HintPath>../../Managed/RootMotion.dll</HintPath>
+        </Reference>
+        <Reference Include="WebSocketSharp">
+            <HintPath>../../Managed/websocket-sharp.dll</HintPath>
+        </Reference>
+        <Reference Include="Newtonsoft.Json">
+            <HintPath>../../Managed/Newtonsoft.Json.dll</HintPath>
+        </Reference>
+        <Reference Include="MessagePack">
+            <HintPath>../../Managed/MessagePack.dll</HintPath>
+        </Reference>
+        <Reference Include="Animancer">
+            <HintPath>../../Managed/Animancer.dll</HintPath>
+        </Reference>
+        <Reference Include="ALINE">
+            <HintPath>../../Managed/ALINE.dll</HintPath>
+        </Reference>
+        <Reference Include="uOSC.Runtime">
+            <HintPath>../../Managed/uOSC.Runtime.dll</HintPath>
+        </Reference>
+        <Reference Include="VRM">
+            <HintPath>../../Managed/VRM.dll</HintPath>
+        </Reference>
+        <Reference Include="UniGLTF">
+            <HintPath>../../Managed/UniGLTF.dll</HintPath>
+        </Reference>
+        <Reference Include="UniHumanoid">
+            <HintPath>../../Managed/UniHumanoid.dll</HintPath>
+        </Reference>
+        <Reference Include="VRM10">
+            <HintPath>../../Managed/VRM10.dll</HintPath>
+        </Reference>
+        <Reference Include="DynamicBone">
+            <HintPath>../../Managed/DynamicBone.dll</HintPath>
+        </Reference>
+        <Reference Include="MagicaCloth">
+            <HintPath>../../Managed/MagicaCloth.dll</HintPath>
+        </Reference>
+        <Reference Include="MagicaClothV2">
+            <HintPath>../../Managed/MagicaClothV2.dll</HintPath>
+        </Reference>
+    </ItemGroup>
+</Project>

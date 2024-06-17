@@ -29,3 +29,11 @@ When you are using an [environment](environment), we recommend turning off **Env
 ### Shadow
 
 You can enable **Shadow** to make the light cast shadows. Note that in order to cast a character's shadow on the environment (e.g., the floor), you need to enable **Main Properties → Affect Environment**.
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

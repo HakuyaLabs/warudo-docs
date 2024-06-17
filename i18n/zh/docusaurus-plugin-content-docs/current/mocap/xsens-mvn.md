@@ -25,3 +25,10 @@ sidebar_position: 100
 * 端口：Xsens MVN 使用的端口（见上图）。默认为 9763。
 * 演员 ID：要接收的 Xsens 演员（Actor）的 ID。默认为 1。
 
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

@@ -28,8 +28,26 @@ const config: Config = {
   // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en', 'zh'],
+    locales: ['en', 'zh', 'jp'],
+    localeConfigs: {
+      en: {
+        label: 'English',
+        htmlLang: 'en-GB',
+      },
+      zh: {
+        label: '简体中文',
+        htmlLang: 'zh-Hans',
+      },
+      jp: {
+        label: '日本語',
+        htmlLang: 'ja',
+      },
+    },
   },
+
+  scripts: [
+    {src: 'https://hm.baidu.com/hm.js?c35709853d215762230812b0ef3005d0', async: true}
+  ],
 
   presets: [
     [
@@ -37,12 +55,25 @@ const config: Config = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
+          editUrl: 'https://github.com/HakuyaLabs/warudo-doc/master/',
+          editLocalizedFiles: true,
+          showLastUpdateAuthor: true,
+          showLastUpdateTime: true
         },
         theme: {
           customCss: [
+            require.resolve('./src/css/common.scss'),
             require.resolve('./src/css/custom.css'),
             require.resolve('./src/css/in-app.scss')
           ],
+        },
+        gtag: {
+          trackingID: 'G-Q2QBCHC2X2',
+        },
+        sitemap: {
+          changefreq: 'daily',
+          priority: 0.5,
+          filename: 'sitemap.xml',
         },
       },
     ],
@@ -55,11 +86,10 @@ const config: Config = {
 
   themes: [
     [
-
       '@easyops-cn/docusaurus-search-local',
       {
         hashed: true,
-        language: ["en", "zh"],
+        language: ["en", "zh", "jp"],
       },
     ],
   ],
@@ -72,6 +102,7 @@ const config: Config = {
         logo: {
           alt: 'Warudo',
           src: 'img/logo.webp',
+          href: '#',
         },
         items: [
           {

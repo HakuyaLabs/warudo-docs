@@ -34,4 +34,13 @@ Rokoko 动捕硬件的校正需要在 Rokoko Studio中进行。
 
 ### 我的动捕结果经常会自己平移
 
+
 这种随着时间一点点增大，导致动捕结果平移的误差是惯性动捕系统的常见问题。请尽量减少动捕设备周边的电磁干扰来减少漂移问题。
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

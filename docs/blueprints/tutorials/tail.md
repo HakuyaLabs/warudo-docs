@@ -82,3 +82,11 @@ There is! The **Invoke Asset Trigger** node can do exactly that. It is similar t
 ![](/doc-img/en-blueprint-tail-10.png)
 
 There are quite a few buttons in Warudo, so this node can come in handy at times! For example, if you use iFacialMocap or MediaPipe for face tracking, I personally find it useful to assign a hotkey to **iFacialMocap Receiver / MediaPipe Tracker → Calibrate** so that I can calibrate my face tracking with a hotkey.
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

@@ -36,19 +36,24 @@ If you notice the character's bones become twisted, please refer to the [Normali
 
 Select **Warudo → Build Mod** and make sure the generated `.warudo` file is put into the `Characters` data folder.
 
+## Scaling
+
+You can scale the character in Warudo by using the **Character → Transform → Scale** property. However, this may break features such as ragdoll, IK, and compatibility with some motion capture systems (e.g., [Leap Motion](../mocap/leap-motion)). If you need to scale the character, we recommend to scale the character in the 3D modeling software instead, i.e., before you have imported the model into Unity or Warudo.
+
 ## Third-Party Components
 
-You can add Unity components to your character mod as you like. Here are some commonly used components:
+Warudo includes some third-party components that you can use in your character mod. Here are some commonly used components:
 
 * [VRM](https://vrm.dev/en/univrm/) components, such as VRM Spring Bones, VRM Spring Bone Colliders
 * [Animation Rigging](https://docs.unity3d.com/Packages/com.unity.animation.rigging@latest) components, such as Rotation Constraint
 * [Dynamic Bone](https://assetstore.unity.com/packages/tools/animation/dynamic-bone-16743) 1.3.2
 * [VRC PhysBones](https://docs.vrchat.com/docs/physbones) (Automatically converted to Dynamic Bone at runtime)
-* [Magica Cloth](https://assetstore.unity.com/packages/tools/physics/magica-cloth-160144) 1.12.11 ([Magica Cloth 2](https://assetstore.unity.com/packages/tools/physics/magica-cloth-2-242307) support is coming soon!)
+* [Magica Cloth](https://assetstore.unity.com/packages/tools/physics/magica-cloth-160144) 1.12.11
+* [Magica Cloth 2](https://assetstore.unity.com/packages/tools/physics/magica-cloth-2-242307) 2.6.0
 
 Note that you need to import the corresponding Unity packages for Dynamic Bone and Magica Cloth, as they are not included in Warudo SDK.
 
-Since Warudo allows you to package C# scripts into your mod, you can also use other Unity components! However, please note the limitations described in the [Custom C# Scripts](mod-sdk#custom-scripts) section.
+Since Warudo allows you to package C# scripts into your mod, you can also use other third-party Unity components! However, please note the limitations described in the [Custom C# Scripts](mod-sdk#custom-scripts) section.
 
 ## Animations
 
@@ -78,3 +83,11 @@ If you are a Blender user and looking to manually normalize the bones, you can u
 <p class="img-desc">Credit: [@Kana_Fuyuko](https://twitter.com/Kana_Fuyuko)</p>
 
 Blender's built-in FBX exporter is known to have issues with not exporting the correct bone rotations, so if that didn't work for you, you can try using a third-party add-on such as [Better FBX Importer & Exporter](https://blendermarket.com/products/better-fbx-importer--exporter) or [Cats](https://github.com/absolute-quantum/cats-blender-plugin) to export the FBX model. 
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

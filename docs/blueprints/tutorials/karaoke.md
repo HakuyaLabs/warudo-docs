@@ -100,3 +100,11 @@ Here's a simple solution: we simply flip the order of the Toggle Asset Enabled a
 ![](/doc-img/en-blueprint-karaoke-11.png)
 
 The Delay Control Flow node only triggers a flow at the Exit after the specified delay. Using this node, you can create sequences of events that happen one after another. For example, you can use it to make your character dance for 5s, when you suddenly drop a bunch of props on their head, with an explosion particle effect played at the end. It is all up to your imagination!
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

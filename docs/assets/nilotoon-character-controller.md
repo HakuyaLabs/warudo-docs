@@ -27,3 +27,11 @@ Please refer to the NiloToon documentation for more details.
 Select the **Character** you want to adjust NiloToon settings for. If the character is configured with NiloToon, you will see its settings being read and shown in the asset.
 
 You can adjust the settings directly in the asset, or control them using the **Set Asset Property** node in [blueprints](../blueprints/overview).
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

@@ -11,7 +11,7 @@ Often character models will have multiple meshes for different clothing and acce
 
 ## Toggling Meshes
 
-Without further ado, let's get started! First, let's create a new blueprint. Just like in the [Understanding Blueprints](../understanding-blueprints) tutorial, we need to add a **On Keystroke Pressed** node. I will set the hotkey to **Ctrl+Shift+J** (J for "jacket"), but you can use whatever you want.
+Without further ado, let's get started! First, let's create a new blueprint. Just like in the [Creating Your First Blueprint](../understanding-blueprints.md) tutorial, we need to add a **On Keystroke Pressed** node. I will set the hotkey to **Ctrl+Shift+J** (J for "jacket"), but you can use whatever you want.
 
 ![](/doc-img/en-blueprint-toggle-meshes-1.png)
 
@@ -48,3 +48,11 @@ There are other event nodes. like the **On YouTube Super Chat Received** node. I
 ![](/doc-img/en-blueprint-toggle-meshes-5.png)
 
 This "if X, then Y" paradigm is the foundation of blueprints. The X is an event, like pressing a hotkey or receiving a Super Chat, and the Y is all sorts of interesting interactions, like making your character dance, or ragdolling your character. In fact, that's exactly what we will look into in the next tutorial...
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

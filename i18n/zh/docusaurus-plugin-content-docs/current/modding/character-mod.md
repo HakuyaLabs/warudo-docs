@@ -1,5 +1,5 @@
 ---
-sidebar_position: 20
+sidebar_position: 10
 ---
 
 # 角色 Mod
@@ -50,3 +50,11 @@ Warudo 原生支持的组件：
 :::info
 手动配置且角色使用 [Magica Cloth](https://assetstore.unity.com/packages/tools/physics/magica-cloth-160144) 的情况下，必须（导入 Unity 之前）保证模型的骨骼在 T-pose 下，关节的旋转均为 0。否则导入到 Warudo 后，Magica Cloth 将无法正常运作。
 :::
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

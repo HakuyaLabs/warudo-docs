@@ -12,6 +12,7 @@ sidebar_position: 10
   * 使用本软件自带的 [MediaPipe](./mediapipe) 或者 [OpenSeeFace](./openseeface) 功能即可进行动作捕捉。
 * iPhone
   * 在iPhone上安装 [iFacialMocap / FaceMotion3D](./ifacialmocap) 或 [RhyLive](./rhylive) 软件即可使用
+* [SteamVR] (./steamvr)
 * [Leap Motion 控制器](./leap-motion)
 * [索尼 Mocopi](./mocopi)
 * [Rokoko](./rokoko)
@@ -25,6 +26,7 @@ sidebar_position: 10
 [Warudo Pro](../pro.md) 可以额外支持以下动捕系统:
 
 * 任何兼容 [Autodesk MotionBuilder](./motionbuilder) 软件的光学动捕系统,例如 [Vicon](https://www.vicon.com/), [OptiTrack](https://optitrack.com/)
+* [OptiTrack Motive](./optitrack)
 * [青瞳 Avatar](./chingmu)
 
 ## 我应该使用哪种动捕系统?
@@ -73,8 +75,18 @@ sidebar_position: 10
 
 如果您正在使用一个需要外部应用程序的动捕设备（如 iFacialMocap），请确保该应用正在运行并在将动捕数据传输给Warudo。并且您需要检查您电脑的防火墙设置以防其阻止Warudo接收动捕数据；您可能需要暂时停用防火墙或者将 Warudo 列入白名单。
 
-有些动捕接收器有 **Port（接口）** 选项。请确保接口号码与第三方应用的接口号码对应。
+有些动捕接收器有 **Port（端口）** 选项。请确保端口数字与第三方软件中的端口号码对应。
+
 
 ### 我的模型动作太跳跃/太僵硬了。
 
 请在动捕蓝图（例如 **Face Tracking - iFacialMocap**）中找到 **Smooth Rotation List** / **Smooth Position List** / **Smooth Transform** / **Smooth BlendShape List** 选项。增加 **Smooth Time** 可以让动捕轨迹更平滑，反之可以让模型响应更迅速。
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />
+

@@ -14,3 +14,11 @@ Some blueprint nodes also allow you to specify an anchor as the origin or destin
 ## Setup
 
 To set up an anchor, first set the **Attach To** option if you want the anchor to be attached to a character or prop. Then, use the transform gizmos to move and rotate the anchor, so that it is in the desired position.
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

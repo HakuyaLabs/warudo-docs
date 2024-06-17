@@ -86,3 +86,11 @@ Overrides the NiloToon shadow settings for the character.
 <p class="img-desc">Shadow override enabled.</p>
 </div>
 </div>
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

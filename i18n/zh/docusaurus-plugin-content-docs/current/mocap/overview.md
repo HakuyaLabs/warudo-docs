@@ -35,3 +35,11 @@ Warudo 针对家用 3D 特别优化，同时也支持主流的专业动作捕捉
 * 以下方案需要定制，详情请联系 [tiger@warudo.app](mailto:tiger@warudo.app)。
   * 兼容 [VRPN ](https://github.com/vrpn/vrpn)的动捕系统（[青瞳视觉](https://digi-human.com) Avatar Lite、[OptiTrack ](https://optitrack.com/)等）
   * [Manus Core](https://www.manus-meta.com/knowledge-products/manus-core)
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />

@@ -43,3 +43,11 @@ sidebar_position: 20
 :::info
 道具的位置和旋转可以在主窗口中使用 Gizmo 进行调整。
 :::
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+  ],
+}} />
