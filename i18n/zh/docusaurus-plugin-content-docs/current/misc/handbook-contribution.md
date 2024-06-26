@@ -60,6 +60,7 @@ https://discord.gg/warudo
 | `yarn` | 安装依赖 |
 | `yarn start:en` |  运行英文文档开发模式 |
 | `yarn start:zh` | 运行中文文档开发模式 |
+| `yarn start:jp` | 运行日文文档开发模式 |
 | `yarn start:all` | 在不同端口同时运行多个语言文档 |
 |`yarn build` | 构建生产版本文档 |
 

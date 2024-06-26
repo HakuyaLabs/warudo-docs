@@ -58,8 +58,9 @@ It's recommended to copy every file in `/docs` folder to `/i18n/[lang]/docusauru
 | Command | Description |
 |--|--|
 | `yarn` | Install dependencies |
-| `yarn start:en` |  Start EN version |
-| `yarn start:zh` | Start ZH version |
+| `yarn start:en` |  Start English version |
+| `yarn start:zh` | Start Chinese version |
+| `yarn start:jp` | Start Japanese version |
 | `yarn start:all` | Start multi-version at different port |
 |`yarn build` | Build site |
 
