@@ -42,8 +42,9 @@ Steam版のWarudoは、好きなだけ評価およびテストできます。た
 
 <AuthorBar authors={{
   creators: [
-    {name: 'unsoluble_sugar', github: 'unsolublesugar'},
+    {name: 'HakuyaTira', github: 'TigerHix'},
   ],
   translators: [
+    {name: 'unsoluble_sugar', github: 'unsolublesugar'},
   ],
 }} />
