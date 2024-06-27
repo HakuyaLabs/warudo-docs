@@ -172,8 +172,9 @@ Warudo Handbook左側のナビゲーションバー構造も英語版ファイ�
 
 <AuthorBar authors={{
   creators: [
-    {name: 'unsoluble_sugar', github: 'unsolublesugar'},
+    {name: 'Nekotora', github: 'Nekotora'},
   ],
   translators: [
+    {name: 'unsoluble_sugar', github: 'unsolublesugar'},
   ],
 }} />
