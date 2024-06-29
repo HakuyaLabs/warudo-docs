@@ -175,6 +175,6 @@ Warudo Handbook左側のナビゲーションバー構造も英語版ファイ�
     {name: 'Nekotora', github: 'Nekotora'},
   ],
   translators: [
-    {name: 'unsoluble_sugar', github: 'unsolublesugar'},
+    {name: '星影月夜', github: 'unsolublesugar'},
   ],
 }} />
