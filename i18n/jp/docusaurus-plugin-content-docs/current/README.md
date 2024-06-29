@@ -50,6 +50,6 @@ Steam版のWarudoは、好きなだけ評価およびテストできます。た
     {name: 'HakuyaTira', github: 'TigerHix'},
   ],
   translators: [
-    {name: 'unsoluble_sugar', github: 'unsolublesugar'},
+    {name: '星影月夜', github: 'unsolublesugar'},
   ],
 }} />
