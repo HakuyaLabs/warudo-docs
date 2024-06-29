@@ -14,7 +14,7 @@ Warudoを開くと、**メインウィンドウ**と**エディターウィン�
 ![](/doc-img/jp-getting-started-2.png)
 <p class="img-desc">エディターウィンドウ</p>
 
-エディターウィンドウはキャラクターや環境などを設定するために使用され、メイン ウィンドウではすべての操作が実行されます。メインウィンドウにフォーカスがあるときに**Esc**キーを押すと、いつでもエディターウィンドウを閉じて再度開くことができます。
+エディターウィンドウはキャラクターや環境などを設定するために使用され、メインウィンドウではエディターウィンドウで設定したすべての操作が実行されます。メインウィンドウにフォーカスがあるときに**Esc**キーを押すと、いつでもエディターウィンドウを閉じて再度開くことができます。
 
 さあ、始めましょう！ **「基本設定」→「始める」** をクリックします。
 
@@ -33,23 +33,23 @@ Warudo supports two model formats: `.vrm` and `.warudo`. The former is a standar
 
 Now, go back to Warudo and open the dropdown. You should see your character's name in the list. Select it, and you should see your character loaded into the scene!
 
-![](/doc-img/en-getting-started-4.png)
+![](/doc-img/jp-getting-started-4.png)
 <p class="img-desc">Character loaded into the scene.</p>
 
 Let's click **OK** to move on to the next step. Here, you are asked if you would like Warudo to recommend a motion capture setup for you. If you select "Yes," Warudo asks you a few questions to decide what face tracking and pose tracking solutions to use. For example, if you have an iPhone and a webcam, and you don't have a Leap Motion Controller or full-body tracking hardware, Warudo will recommend using [iFacialMocap](../mocap/ifacialmocap.md) (an iPhone app) for face tracking and [MediaPipe](../mocap/mediapipe.md) (a built-in tracking that uses your webcam) for hand tracking. If you select "No," then you will have to manually select what face tracking and pose tracking solutions to use.
 
 If you are a first-time user, we recommend selecting "Yes" to let Warudo recommend a motion capture setup for you. Click **OK**, and select the options that best describe your setup, and click **OK** again.
 
-![](/doc-img/en-getting-started-5.png)
+![](/doc-img/jp-getting-started-5.png)
 <p class="img-desc">Configure motion capture.</p>
 
-![](/doc-img/en-getting-started-6.png)
+![](/doc-img/jp-getting-started-6.png)
 <p class="img-desc">Answer a few questions.</p>
 
 In the next screen, you are asked to confirm the face tracking and pose tracking solutions that Warudo has selected for you:
 
-![](/doc-img/en-getting-started-7.png)
-![](/doc-img/en-getting-started-8.png)
+![](/doc-img/jp-getting-started-7.png)
+![](/doc-img/jp-getting-started-8.png)
 <p class="img-desc">Confirm motion capture setup.</p>
 
 :::tip
@@ -58,27 +58,27 @@ If you want to set up a secondary tracking, you can use the **Secondary Pose Tra
 
 Click **OK** to move on to the next step. If your model contains expressions, Warudo can help you import them and assign hotkeys to them. Select **Yes** and click **OK** to continue.
 
-![](/doc-img/en-getting-started-9.png)
+![](/doc-img/jp-getting-started-9.png)
 <p class="img-desc">Import expressions.</p>
 
 A popup window will appear which contains a list of expressions just imported along with their hotkeys. Don't worry, you can change the hotkeys later. Click **OK** to continue.
 
-![](/doc-img/en-getting-started-10.png)
+![](/doc-img/jp-getting-started-10.png)
 <p class="img-desc">Confirm expression hotkeys.</p>
 
 Finally, you are asked to select a background for your VTubing scene. You can go with a transparent background or the default skybox, but Warudo comes with a few nice backgrounds for you to use (they are called **Environments**). Let's select **Yes** and choose the **VR Room** environment. Click **OK** to complete the setup.
 
-![](/doc-img/en-getting-started-11.png)
+![](/doc-img/jp-getting-started-11.png)
 <p class="img-desc">Select an environment.</p>
 
 Your main window should now look like this:
 
-![](/doc-img/en-getting-started-12.png)
+![](/doc-img/jp-getting-started-12.png)
 <p class="img-desc">Scene after setup.</p>
 
 If you have already connected your tracking software/hardware——in my case, I have opened the iFacialMocap app on my iPhone——then you should see your character moving already!
 
-![](/doc-img/en-getting-started-13.png)
+![](/doc-img/jp-getting-started-13.png)
 <p class="img-desc">Character in motion.</p>
 
 Let's move on to learning some basic controls!
@@ -424,5 +424,6 @@ Congratulations! You have now learned the basics of Warudo. We recommend reading
     {name: 'HakuyaTira', github: 'TigerHix'},
   ],
   translators: [
+    {name: '星影月夜', github: 'unsolublesugar'},
   ],
 }} />
