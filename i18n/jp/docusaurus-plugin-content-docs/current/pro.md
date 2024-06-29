@@ -7,9 +7,8 @@ sidebar_position: 11
 ## Warudo Proとは？
 
 Warudo Proは、法人ユーザー向けに提供しているWarudoのバージョンです。
-Warudo Proでは、Steam版の全機能に加え、Universal Render Pipeline（URP）のサポート、[NiloToonレンダリング](https://github.com/ColinLeung-NiloCat/UnityURPToonLitShaderExample#nilotoonurp-users-creations-public-media-not-nda-contents)、[Autodesk MotionBuilder、および光学式モーションキャプチャシステム （VICON、OptiTrack など）](mocap/motionbuilder) のサポートが追加されています。
 
-Warudo Proの[Stage Directorモード](assets/director)を活用して映画のようなカメラ制御を行うことで、Warudo Proのユーザーは業界をリードする3D VTuberライブパフォーマンスを実現できます。
+Warudo Proでは、Steam版の全機能に加え、Universal Render Pipeline（URP）のサポート、[NiloToonレンダリング](https://github.com/ColinLeung-NiloCat/UnityURPToonLitShaderExample#nilotoonurp-users-creations-public-media-not-nda-contents)、[Autodesk MotionBuilder、および光学式モーションキャプチャシステム （VICON、OptiTrack など）](mocap/motionbuilder) のサポートが追加されています。Warudo Proの[Stage Directorモード](assets/director)を活用して映画のようなカメラ制御を行うことで、Warudo Proのユーザーは業界をリードする3D VTuberライブパフォーマンスを実現できます。
 
 Warudo Proの[最近の導入事例はこちら](https://twitter.com/hakuyalabs/status/1713191982162727037)でご覧いただけます。
 
