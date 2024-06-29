@@ -26,6 +26,6 @@ Warudo Proの[最近の導入事例はこちら](https://twitter.com/hakuyalabs/
     {name: 'HakuyaTira', github: 'TigerHix'},
   ],
   translators: [
-    {name: 'unsoluble_sugar', github: 'unsolublesugar'},
+    {name: '星影月夜', github: 'unsolublesugar'},
   ],
 }} />
