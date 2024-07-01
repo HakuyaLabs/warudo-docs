@@ -92,7 +92,7 @@ Let's take a moment to admire your character model. By default, the scene camera
 
 Now let's learn how to move the character. In the editor window, click on **Character** to select the character asset.
 
-![](/doc-img/en-getting-started-15.png)
+![](/doc-img/jp-getting-started-15.png)
 <p class="img-desc">Select the character asset.</p>
 
 You should see a **translation gizmo** under the model's feet that can be used to move the model. Simply drag on an axis to move along that axis. Here I moved the model next to the bed:
@@ -116,12 +116,12 @@ Press **R** to switch to the **scale gizmo**. Usually you don't want to scale yo
 
 That doesn't look good! How can we restore the scale? If you've been paying attention, you may have noticed that the values in the **Transform** section change as you drag the gizmos. For example, this is what mine looks like now:
 
-![](/doc-img/en-getting-started-19.png)
+![](/doc-img/jp-getting-started-19.png)
 <p class="img-desc">Transform values.</p>
 
 To return to the initial scale, just set the **Scale** values to **1**, or click on the **Reset** button that appears when you hover over the **Scale** values:
 
-![](/doc-img/en-getting-started-20.png)
+![](/doc-img/jp-getting-started-20.png)
 <p class="img-desc">Reset scale.</p>
 
 That's much better!
@@ -137,7 +137,7 @@ You can also switch between different gizmos in the editor.
 
 In addition to orbiting around the model, the camera can also be switched to a free-look mode, allowing the camera to fly through the scene. Select the **Camera** asset and choose **Free Look** for the **Control Mode**:
 
-![](/doc-img/en-getting-started-22.png)
+![](/doc-img/jp-getting-started-22.png)
 <p class="img-desc">Switch to free-look mode.</p>
 
 While **holding down Mouse RMB**, use **WASD** to move, **E** and **Q** to move up and down, and hold **Left Shift** to move faster. Use **Mouse MMB** to pan the view.
@@ -148,7 +148,7 @@ After you've gotten used to the two camera modes, switch back to **Orbit Charact
 You can also press **V** to switch between **Orbit Character** and **Free Look** modes.
 :::
 
-![](/doc-img/en-getting-started-24.png)
+![](/doc-img/jp-getting-started-24.png)
 <p class="img-desc">Reset camera transform.</p>
 
 ![](/doc-img/jp-getting-started-23.png)
