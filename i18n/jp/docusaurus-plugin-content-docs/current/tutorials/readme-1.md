@@ -85,6 +85,10 @@ Warudoのエディターウィンドウに戻ってキャラクター選択の�
 ![](/doc-img/jp-getting-started-13.png)
 <p class="img-desc">シーン内で動くキャラクター</p>
 
+:::tip
+MediaPipe選択時、トラッカーウィンドウが真っ黒で「Loading...」と表示され続けてキャラクターが動かない場合、WebカメラのGPUアクセラレーションを無効にすることで問題が解決する可能性があります。詳しくは[MediaPipeのFAQ](mocap/mediapipe.md)を参照してください。
+:::
+
 それでは、基本的な操作方法を学びましょう！
 
 ## Scene Controls
