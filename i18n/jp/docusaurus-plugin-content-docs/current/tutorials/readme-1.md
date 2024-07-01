@@ -14,74 +14,78 @@ Warudoを開くと、**メインウィンドウ**と**エディターウィン�
 ![](/doc-img/jp-getting-started-2.png)
 <p class="img-desc">エディターウィンドウ</p>
 
-エディターウィンドウはキャラクターや環境などを設定するために使用され、メインウィンドウではエディターウィンドウで設定したすべての操作が実行されます。メインウィンドウにフォーカスがあるときに**Esc**キーを押すと、いつでもエディターウィンドウを閉じて再度開くことができます。
+エディターウィンドウはキャラクターや環境などを設定するために使用され、メインウィンドウではエディターウィンドウで設定したすべての操作が実行されます。エディターウィンドウを閉じてしまった場合、メインウィンドウにフォーカスをあてた状態で**Esc**キーを押すと、再度開くことができます。
 
-さあ、始めましょう！ **「基本設定」→「始める」** をクリックします。
+![](/doc-img/jp-getting-started-66.png)
+
+さあ、始めましょう！ **「基本設定」→[始める]** をクリックします。
 
 ![](/doc-img/jp-getting-started-3.png)
 <p class="img-desc">基本設定ウィンドウ</p>
 
-Click on **Open Characters Folder**, and you should see a folder named "Characters" opened in the file explorer. This is where you put your character models.
+**[キャラクター フォルダを開く]** をクリックすると、エクスプローラーの「Characters」という名前のフォルダーが開きます。ここにキャラクターモデルを配置します。
 
-Warudo supports two model formats: `.vrm` and `.warudo`. The former is a standard avatar format exported by software like [VRoid Studio](https://vroid.com/en/studio), while the latter is Warudo's own format and supports virtually any Unity-compatible character model ([details](../modding/character-mod.md)). For now, let's just put a `.vrm` file in the "Characters" folder.
+Warudoは、`.vrm`と`.warudo`の2つのモデル形式をサポートしています。`.vrm`は[VRoid Studio]((https://vroid.com/en/studio))などのソフトウェアによってエクスポートされる標準的なアバター形式であり、`.warudo`はWarudo独自の形式で、ほぼすべてのUnity互換のキャラクターモデルをサポートしています （[詳細](modding/character-mod.md)）。まずは、`.vrm`ファイルを「Characters」フォルダに配置しましょう。
 
 :::info
-**Q:** Does Warudo support `.vsfavatar` models?
+**Q:** Warudoは、`.vsfavatar`モデルをサポートしていますか？
 
-**A:** No, Warudo does not support `.vsfavatar` models. However, if you have access to the Unity source files that are used to create the `.vsfavatar` model, creating a `.warudo` model is very easy; both `.vsfavatar` and `.warudo` are exported from Unity. Please follow the [modding guide](../modding/character-mod.md) for more details.
+**A:** いいえ、サポートしていません。ただし、`.vsfavatar`モデルの作成に使用するUnityプロジェクトにアクセスできるのであれば、 `.warudo`モデルの作成は非常に簡単です。両形式ともUnityからエクスポートできます。詳細については、[modding guide](modding/character-mod.md)を参照してください。
 :::
 
-Now, go back to Warudo and open the dropdown. You should see your character's name in the list. Select it, and you should see your character loaded into the scene!
+Warudoのエディターウィンドウに戻ってキャラクター選択のドロップダウンを開きます。リストにキャラクターの名前が表示されるので、使用したいキャラクターを選択すると、モデルがシーンに読み込まれます！
 
 ![](/doc-img/jp-getting-started-4.png)
-<p class="img-desc">Character loaded into the scene.</p>
+<p class="img-desc">キャラクターがシーンにロードされました</p>
 
-Let's click **OK** to move on to the next step. Here, you are asked if you would like Warudo to recommend a motion capture setup for you. If you select "Yes," Warudo asks you a few questions to decide what face tracking and pose tracking solutions to use. For example, if you have an iPhone and a webcam, and you don't have a Leap Motion Controller or full-body tracking hardware, Warudo will recommend using [iFacialMocap](../mocap/ifacialmocap.md) (an iPhone app) for face tracking and [MediaPipe](../mocap/mediapipe.md) (a built-in tracking that uses your webcam) for hand tracking. If you select "No," then you will have to manually select what face tracking and pose tracking solutions to use.
-
-If you are a first-time user, we recommend selecting "Yes" to let Warudo recommend a motion capture setup for you. Click **OK**, and select the options that best describe your setup, and click **OK** again.
+**[OK]** をクリックして次のステップに進みましょう。ここでは、推奨されるモーションキャプチャ設定をWarudoに適用するかどうかを尋ねられます。
 
 ![](/doc-img/jp-getting-started-5.png)
-<p class="img-desc">Configure motion capture.</p>
+<p class="img-desc">モーションキャプチャを設定</p>
+
+**[はい]** を選択すると、Warudoは、使用するモーショントラッキングおよびフェイストラッキングソフトを決定するためにいくつかの質問をします。たとえば、iPhoneとWebカメラがあり、Leap Motionコントローラーまたはフルトラッキング機器がない場合、Warudoはフェイストラッキングに[iFacialMocap](mocap/ifacialmocap.md)（iPhoneアプリ）、手のトラッキングに[MediaPipe](mocap/mediapipe.md)（Webカメラを使用するWarudo内臓のモーショントラッキングソフト）の使用を推奨します。**[いいえ]** を選択した場合は、使用するフェイストラッキングおよびモーショントラッキングソフトを手動で選択する必要があります。
+
+初めてWarudoを使用する場合は、**[はい、お勧めしてください]** を選択して、Warudoが推奨するモーションキャプチャ設定を適用することをおすすめします。 **[OK]** をクリックし、設定に最も適したオプションを選択後、**[OK]** をクリックします。
 
 ![](/doc-img/jp-getting-started-6.png)
-<p class="img-desc">Answer a few questions.</p>
+<p class="img-desc">いくつかの質問に答えてください</p>
 
-In the next screen, you are asked to confirm the face tracking and pose tracking solutions that Warudo has selected for you:
+次の画面では、Warudoが選択したフェイストラッキングおよびモーショントラッキングソフトを確認するよう求められます。
 
 ![](/doc-img/jp-getting-started-7.png)
 ![](/doc-img/jp-getting-started-8.png)
-<p class="img-desc">Confirm motion capture setup.</p>
+<p class="img-desc">モーションキャプチャの設定を確認</p>
 
 :::tip
-If you want to set up a secondary tracking, you can use the **Secondary Pose Tracking** option; this is helpful if you are using VR trackers/Mocopi for primary tracking and would like to use [MediaPipe](../mocap/mediapipe.md) or [Leap Motion Controller](../mocap/leap-motion.md) or [StretchSense Gloves](../mocap/stretchsense.md) for added-on finger tracking.
+セカンダリトラッキングを設定する場合は、**[Secondary Pose Tracking]** オプションを使用できます。
+これは、プライマリトラッキングにVRトラッカー/Mocopiを使用していて、追加の指トラッキングに[MediaPipe](mocap/mediapipe.md)、[Leap Motion Controller](mocap/leap-motion.md)または[StretchSense Gloves](mocap/stretchsense.md)を使用する場合に役立つオプションです。
 :::
-
-Click **OK** to move on to the next step. If your model contains expressions, Warudo can help you import them and assign hotkeys to them. Select **Yes** and click **OK** to continue.
+**[OK]** をクリックして次のステップに進みます。モデルに表情トリガーが含まれている場合、Warudoにインポートしてショートカットキーを割り当てることができます。**[表情をインポートします]** を選択し、**[OK]** をクリックします。
 
 ![](/doc-img/jp-getting-started-9.png)
 <p class="img-desc">Import expressions.</p>
 
-A popup window will appear which contains a list of expressions just imported along with their hotkeys. Don't worry, you can change the hotkeys later. Click **OK** to continue.
+インポートしたトリガーのリストとそのショートカットキーを含むポップアップウィンドウが表示されます。もちろん、ショートカットキーはあとで変更できます。**[OK]** をクリックしましょう。
 
 ![](/doc-img/jp-getting-started-10.png)
-<p class="img-desc">Confirm expression hotkeys.</p>
+<p class="img-desc">ショートカットキーを確認</p>
 
-Finally, you are asked to select a background for your VTubing scene. You can go with a transparent background or the default skybox, but Warudo comes with a few nice backgrounds for you to use (they are called **Environments**). Let's select **Yes** and choose the **VR Room** environment. Click **OK** to complete the setup.
+最後に、シーンの背景を選択するように求められます。透明な背景またはデフォルトのスカイボックスを使用できますが、Warudoにはすぐに使用できる素敵な背景がいくつか付属しています (これらは**環境**と呼ばれます)。**[環境を選択して適用]** を選択して、**VR Room** を選択しましょう。 **[OK]** をクリックしてセットアップを完了します。
 
 ![](/doc-img/jp-getting-started-11.png)
-<p class="img-desc">Select an environment.</p>
+<p class="img-desc">環境を選択</p>
 
-Your main window should now look like this:
+メインウィンドウは以下のようになります:
 
 ![](/doc-img/jp-getting-started-12.png)
-<p class="img-desc">Scene after setup.</p>
+<p class="img-desc">セットアップ後のシーン</p>
 
-If you have already connected your tracking software/hardware——in my case, I have opened the iFacialMocap app on my iPhone——then you should see your character moving already!
+すでにトラッキングソフトや機器を接続している場合、キャラクターが動いているのがわかるはずです。
 
 ![](/doc-img/jp-getting-started-13.png)
-<p class="img-desc">Character in motion.</p>
+<p class="img-desc">シーン内で動くキャラクター</p>
 
-Let's move on to learning some basic controls!
+それでは、基本的な操作方法を学びましょう！
 
 ## Scene Controls
 
