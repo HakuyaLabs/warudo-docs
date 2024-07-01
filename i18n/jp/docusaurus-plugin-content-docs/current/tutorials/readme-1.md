@@ -87,7 +87,7 @@ Let's move on to learning some basic controls!
 
 Let's take a moment to admire your character model. By default, the scene camera is set to **Orbit Character** mode, which means the camera always rotates around the character. You can use **Mouse LMB/RMB** to rotate the view, **Mouse Wheel** to zoom in or out, and **Mouse MMB** to pan the view. Try moving the camera to this angle:
 
-![](/doc-img/en-getting-started-14.png)
+![](/doc-img/jp-getting-started-14.png)
 <p class="img-desc">Camera orbiting around the character.</p>
 
 Now let's learn how to move the character. In the editor window, click on **Character** to select the character asset.
@@ -97,7 +97,7 @@ Now let's learn how to move the character. In the editor window, click on **Char
 
 You should see a **translation gizmo** under the model's feet that can be used to move the model. Simply drag on an axis to move along that axis. Here I moved the model next to the bed:
 
-![](/doc-img/en-getting-started-16.png)
+![](/doc-img/jp-getting-started-16.png)
 <p class="img-desc">Move the model.</p>
 
 :::tip
@@ -106,12 +106,12 @@ Can't see the gizmo? Try use **Mouse MMB** to pan the view.
 
 You can switch to the **rotation gizmo** by pressing **E** (and, by the way, switch back to the translation gizmo by pressing **W**). Let's rotate the model a bit:
 
-![](/doc-img/en-getting-started-17.png)
+![](/doc-img/jp-getting-started-17.png)
 <p class="img-desc">Rotate the model.</p>
 
 Press **R** to switch to the **scale gizmo**. Usually you don't want to scale your character, but Let's make the model wider just for fun:
 
-![](/doc-img/en-getting-started-18.png)
+![](/doc-img/jp-getting-started-18.png)
 <p class="img-desc">Scale the model.</p>
 
 That doesn't look good! How can we restore the scale? If you've been paying attention, you may have noticed that the values in the **Transform** section change as you drag the gizmos. For example, this is what mine looks like now:
@@ -126,7 +126,7 @@ To return to the initial scale, just set the **Scale** values to **1**, or click
 
 That's much better!
 
-![](/doc-img/en-getting-started-21.png)
+![](/doc-img/jp-getting-started-21.png)
 <p class="img-desc">Back to normal.</p>
 
 :::tip
@@ -151,7 +151,7 @@ You can also press **V** to switch between **Orbit Character** and **Free Look**
 ![](/doc-img/en-getting-started-24.png)
 <p class="img-desc">Reset camera transform.</p>
 
-![](/doc-img/en-getting-started-23.png)
+![](/doc-img/jp-getting-started-23.png)
 <p class="img-desc">Back to default camera position.</p>
 
 ## Assets Tab
