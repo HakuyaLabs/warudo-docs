@@ -370,7 +370,7 @@ Warudo を初めて使用する場合は、オプションをいろいろ試し�
 ![](/doc-img/jp-getting-started-61.png)
 <p class="img-desc">新しいブループリントが追加</p>
 
-今回の場合、ブループリントには「Water」と呼ばれるYouTubeチャットを受け取ったときにキャラクターに液体を発射するロジックが含まれています。追加されたブループリントをクリックして選択し、**キャラクターに液体を発射する**ノードを見つけます。
+今回の場合、ブループリントには「Water」というYouTubeチャットを受け取ったときに、キャラクターに液体を発射するロジックが含まれています。追加されたブループリントをクリックして選択し、**キャラクターに液体を発射する**ノードを見つけます。
 
 ![](/doc-img/jp-getting-started-62.png)
 <p class="img-desc">「液体発射」ノードを見つけます</p>
@@ -404,27 +404,27 @@ Warudo を初めて使用する場合は、オプションをいろいろ試し�
 すべての出力方法は透過出力をサポートしています。透明な背景を有効にするには、カメラアセットに移動して、**[基本プロパティ] → [透明な背景]** を有効にするだけです。
 :::
 
-## Saving and Loading Scenes {#saving-and-loading-scenes}
+## シーンの保存と読み込み {#saving-and-loading-scenes}
 
-Now that you have set up your scene, remember to save it! Unlike other software, Warudo does not automatically save your scene, so that you can experiment with different settings without worrying about messing up your scene. Click on the Warudo icon, and select **Save Scene**:
+シーンの設定が完了したら忘れずに保存しましょう。他のソフトウェアとは異なり、Warudoはシーンを自動的に保存しないため、シーンを台無しにすることなくさまざまな設定を試すことができます。Warudoアイコンをクリックし、**[シーンを保存]** を選択します。
 
-![](/doc-img/en-getting-started-56.png)
-<p class="img-desc">Save scene.</p>
+![](/doc-img/jp-getting-started-56.png)
+<p class="img-desc">シーンの保存</p>
 
-You can also save the scene as a new file by selecting **Save Scene As**. To load a scene, select **Open Scene**.
+**[シーンを名前を付けて保存]** を選択して、シーンを新しいファイルとして保存することもできます。シーンをロードするには、**[シーンをロード]** を選択します。
 
-![](/doc-img/en-getting-started-57.png)
-<p class="img-desc">Open scene.</p>
+![](/doc-img/jp-getting-started-57.png)
+<p class="img-desc">シーンの読み込み</p>
 
-Finally, you can use **Reload Scene** and **Restart Scene** to reload and restart the scene respectively. **Reload Scene** resets the scene state and abandons all changes made to the scene since the last save, while **Restart Scene** only resets the scene state but keeps the changes made to the scene.
+最後に、 **[シーンのリロード]** と **[シーンの再起動]** について説明します。 **[シーンのリロード]** はシーンの状態をリセットし、最後の保存以降にシーンに加えられたすべての変更を破棄しますが、 **[シーンの再起動]** はシーンの状態のみをリセットし、シーンに加えられた変更を保持します。
 
 :::info
-"Resetting the scene state" means resetting physics, temporary objects, etc. in the scene. For example, if you have somehow spawned 1,000 thrown props in the scene, using **Reload Scene** or **Restart Scene** will remove all of them, since they are not part of the scene file.
+「シーンの状態をリセットする」とは、シーン内の物理、一時オブジェクトなどをリセットすることを意味します。たとえば、シーン内に何らかの方法で1,000個の投げられた小道具を生成した場合、それらはシーンファイルの一部ではないため、 **[シーンの再ロード]** または **[シーンの再起動]** を使用すると、すべて削除されます。
 :::
 
-## Summary {#summary}
+## まとめ {#summary}
 
-Congratulations! You have now learned the basics of Warudo. We recommend reading the rest of the handbook to learn more about Warudo's features. If you have any questions, please join our [Discord](https://discord.gg/warudo), and we will be happy to help you out!
+おめでとうございます！これで、Warudoの基本を学習できました。Warudoの機能について詳しく知るには、ハンドブックの残りの部分を読むことをおすすめめします。ご質問がある場合は、[Discord](https://discord.gg/warudo) にご参加ください。喜んでお手伝いいたします！
 
 <AuthorBar authors={{
   creators: [
