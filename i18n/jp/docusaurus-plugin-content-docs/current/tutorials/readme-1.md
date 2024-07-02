@@ -163,19 +163,19 @@ MediaPipe選択時、トラッカーウィンドウが真っ黒で「Loading...�
 
 ## アセットタブ
 
-キャラクターとカメラを動かす基本的な方法がわかったので、エディターウィンドウを見てみましょう。デフォルトでは、**[アセット]** タブが表示されます。
+キャラクターとカメラを動かす基本的な方法がわかったので、エディターウィンドウを見てみましょう。
+
+デフォルトでは、**[アセット]** タブが表示されます。**アセット**とは、キャラクター、カメラ、小道具、モーション キャプチャトラッカーなど、基本的に「シーン内」にあるものすべてを指します。
 
 ![](/doc-img/jp-getting-started-67.png)
 <p class="img-desc">アセットタブ</p>
 
-**アセット**とは、キャラクター、カメラ、小道具、モーション キャプチャトラッカーなど、基本的に「シーン内」にあるものすべてを指します。
-
-**アセット**をクリックして選択すると、詳細設定を変更することができます。たとえば、**指向性ライト**アセットをクリックして選択し、ライトのカラーを調整します。
+アセットをクリックして選択すると、詳細設定を変更することができます。たとえば、**指向性ライト**アセットをクリックして選択し、ライトのカラーを調整します。
 
 ![](/doc-img/jp-getting-started-25.png)
 <p class="img-desc">指向性ライトを選択し、色を調整します</p>
 
-不気味ですね！
+ちょっと不気味ですね！
 
 ![](/doc-img/jp-getting-started-26.png)
 <p class="img-desc">ライトのカラーが赤に設定されました</p>
@@ -185,7 +185,7 @@ MediaPipe選択時、トラッカーウィンドウが真っ黒で「Loading...�
 ![](/doc-img/jp-getting-started-27.png)
 <p class="img-desc">iFacialMocapの調整</p>
 
-せっかくなので、続いて新しいアセットを追加してみしょう。 **[アセットの追加]** をクリックして **[Prop]** を選択します。
+せっかくなので、続いて新しいアセットを追加してみましょう。 **[アセットの追加]** をクリックして **[道具]** を選択します。
 
 ![](/doc-img/jp-getting-started-28.png)
 <p class="img-desc">アセットを追加します</p>
@@ -246,7 +246,6 @@ MediaPipe選択時、トラッカーウィンドウが真っ黒で「Loading...�
 ![](/doc-img/jp-getting-started-55.png)
 <p class="img-desc">キャラクターは座りながら手を挙げます</p>
 
-
 :::info
 **Q:** 助けて！Warudoにはたくさんのオプションがありますが、何をするのかわかりません！
 
@@ -269,85 +268,84 @@ Warudo を初めて使用する場合は、オプションをいろいろ試し�
 画面が明るすぎる場合は、**色合い**オプションをグレーに調整して暗くすることができます。
 :::
 
-## Blueprints Tab
+## ブループリントタブ
 
-Now you are familiar with assets, let's take a look at the **Blueprints** tab. Click on the sigma icon to switch to the blueprints tab:
+アセットについて理解できたので、**ブループリント**タブを見てみましょう。∑（シグマ）アイコンをクリックしてブループリントタブに切り替えます。
 
-![](/doc-img/en-getting-started-40.png)
-<p class="img-desc">Switch to the blueprints tab.</p>
+![](/doc-img/jp-getting-started-40.png)
+<p class="img-desc">ブループリントタブに切り替え</p>
 
-But what is a blueprint? Essentially, blueprints are "what should happen when something happens." For example, "when I press the **Space** key, the character should wave their hand." Or, "when I receive a Twitch redeem, a prop should be thrown at my character."
+ところで、ブループリントとは何でしょうか？ブループリントとは「何かが起こったときに何が起こるべきか」を定義する仕組みです。たとえば、「**スペース**キーを押すと、キャラクターが手を振る」とか、「YouTubeライブでスーパーチャットを受け取るとキャラクターに小道具が投げられる」などといったものです。
 
-Our scene already has a few blueprints. For example, the **Expression Key Bindings** blueprint implements the hotkeys for switching between expressions. Let's click on it to select it:
+シーンにはデフォルトでいくつかのブループリントが用意されています。たとえば、 **「表情ボタンのバインド」** ブループリントは、キャラクターの表情を切り替えるためのショートカットキーを定義します。クリックして選択してみましょう。
 
-![](/doc-img/en-getting-started-44.png)
-<p class="img-desc">Select the expression key bindings blueprint.</p>
+![](/doc-img/jp-getting-started-44.png)
+<p class="img-desc">「表情ボタンのバインド」ブループリントを選択</p>
 
-Use **Mouse Wheel** to zoom in and out, and **Mouse LMB** to pan the view. Pan to the right until you see these two nodes:
+**マウスホイール**を使用してズームイン・ズームアウトし、**マウスの左クリック**でビューをパンします。以下の2つのノードが表示されるまで右に移動します。
 
-![](/doc-img/en-getting-started-45.png)
-<p class="img-desc">Zoom out and pan to the right.</p>
+![](/doc-img/jp-getting-started-45.png)
+<p class="img-desc">ズームアウトして右に移動します</p>
 
-The two nodes right here are essentially saying: "when **Alt+1** is pressed, the character asset **Character** should switch to the **Joy** expression." Let's try it out! Press **Alt+1** on your keyboard, and you should see your character switch to the **Joy** expression:
+ここにある2つのノードは、「**Alt+1**キーが押されたら、キャラクターの表情が**Joy**に切り替わる」ことを示しています。さっそく試してみましょう。キーボードで**Alt+1**キーを押すと、キャラクターが**Joy** の表情に切り替わるのがわかります。
 
-![](/doc-img/en-getting-started-46.png)
-<p class="img-desc">Character switches to the "Joy" expression.</p>
+![](/doc-img/jp-getting-started-46.png)
+<p class="img-desc">キャラクターの表情が **「Joy」** に変わります</p>
 
-Similarly, the two nodes below are saying: "when **Alt+Backspace** is pressed, the character asset **Character** should exit all expressions." Press **Alt+Backspace** to try it out.
+同様に、以下の2つのノードは、「**Alt+Backspace**キーが押されると、すべての**キャラクター**の表情をフェードアウトします」と定義されています。**Alt+Backspace**キーを押して試してみてください。
 
-![](/doc-img/en-getting-started-47.png)
-<p class="img-desc">Character exits all expressions.</p>
+![](/doc-img/jp-getting-started-47.png)
+<p class="img-desc">すべてのキャラクターの表情がフェードアウトされる</p>
 
-Let's go back to the two nodes that switch to the **Joy** expression. You can change the hotkey by changing the **Keystroke** option and other options; for example, in the following, I have changed the hotkey to **Ctrl+Shift+Q**:
+表現を**Joy**に切り替える2つのノードに戻りましょう。**キー押す**オプションやその他のオプションを変更することで、ショートカットキーを変更できます。たとえば、次の例では、ショートカットキーを**Ctrl+Shift+Q**に変更しました
 
-![](/doc-img/en-getting-started-48.png)
-<p class="img-desc">Change hotkey.</p>
+![](/doc-img/jp-getting-started-48.png)
+<p class="img-desc">ショートカットキーの変更</p>
 
-You can also make more things happen when the hotkey is pressed. How about playing a sound effect? Type **play sound** in the search bar and drag the **Play Sound** node to the right of the **Toggle Character Expression** node:
+ショートカットキーが押されたときに、さらに多くのことが起こるようにすることもできます。効果音を再生してみませんか？検索バーに **「play sound」** と入力し、 **「サウンドの再生」** ノードを **「キャラクターの表情切り替え」** ノードの右側にドラッグします。
 
-![](/doc-img/en-getting-started-49.png)
-<p class="img-desc">Locate the "Play Sound" node.</p>
+![](/doc-img/jp-getting-started-49.png)
+<p class="img-desc">「サウンドの再生」ノードを見つけます</p>
 
-Click on the green dot next to the **Exit** output of the **Toggle Character Expression** node and drag it to the green dot next to the **Enter** input of the **Play Sound** node:
+**「キャラクターの表情切り替え」** ノードの **「出口」** の横にある緑色の点をクリックし、 **「サウンドの再生」** ノードの **「入口」** の横にある緑色の点にドラッグします。
 
-![](/doc-img/en-getting-started-50.png)
-<p class="img-desc">Drag the "Play Sound" node to the right of the "Toggle Character Expression" node.</p>
+![](/doc-img/jp-getting-started-50.png)
+<p class="img-desc">「サウンドの再生」ノードと「キャラクター表情の切り替え」ノードを接続</p>
 
-This connects the two nodes together. Now, click on the **Source** dropdown menu and select a sound effect you like. I have selected the **Punch Light 01** sound effect.
+これで2つのノードが接続されます。次に、 **「サウンドの再生」** ノードの **[ソース]** ドロップダウンメニューをクリックして、好きな効果音を選択します。ここでは、**「Punch Light 01」** の効果音を選択しました。
 
-![](/doc-img/en-getting-started-51.png)
-<p class="img-desc">Select a sound effect.</p>
+![](/doc-img/jp-getting-started-51.png)
+<p class="img-desc">再生させる効果音を選択</p>
 
 :::tip
-You can click **Open Sounds Folder** and put in your own sound effects!
+**「サウンドフォルダーを開く」** をクリックして、独自の効果音を追加することもできます！
 :::
 
-Now, when you press **Ctrl+Shift+Q** (or the hotkey you assigned), your character should switch to the **Joy** expression, and you should hear a sound effect!
+これで、 **Ctrl+Shift+Q** （割り当てたショートカットキー）を押すと、キャラクターの表情が **「Joy」** に切り替わり、効果音が聞こえるはずです。
 
-Let's implement something new. For example, let's play an emote animation on the character when we press **Space**. Pan to an empty area and try to add the following nodes yourself and connect them together as shown. Select the character asset in the **Character** dropdown menu, and select **Energetic** for the **Animation** option:
+さらに何か新しいものを実装してみましょう。たとえば、**スペース**キーを押すと、**キャラクター**がエモートするアニメーションを再生してみましょう。空の領域にパンし、以下を参考にノードを自分で追加して、図のように接続してみてください。 **[キャラクター]** ドロップダウンメニューでキャラクターアセットを選択し、**[アニメーション]** オプションで **[エネルギッシュ]** を選択します。
 
-![](/doc-img/en-getting-started-52.png)
-<p class="img-desc">Add nodes to play an emote animation.</p>
+![](/doc-img/jp-getting-started-52.png)
+<p class="img-desc">エモートアニメーションを再生するためのノードを追加します</p>
 
-If your character is currently sitting, you may want to mask the animation to only play on the upper body. To do so, click on **Mask Upper Body** on the **Play Character One Shot Overlay Animation** node:
+キャラクターが現在座っている場合は、アニメーションをマスクして上半身のみで再生するようにすることができます。これを設定するには、**キャラクターの単発アニメーションを再生する**ノードの**上半身をマスク**をクリックします。
 
-![](/doc-img/en-getting-started-53.png)
-<p class="img-desc">Mask the animation to only play on the upper body.</p>
+![](/doc-img/jp-getting-started-53.png)
+<p class="img-desc">アニメーションをマスクして上半身のみで再生されるようにします</p>
 
-Now, when you press **Space**, your character should play the **Energetic** emote animation!
+これで、**スペース**キーを押すと、キャラクターが**エネルギッシュ**のエモートアニメーションを再生するはずです！
 
-![](/doc-img/en-getting-started-54.png)
-<p class="img-desc">Character plays the "Energetic" emote animation.</p>
+![](/doc-img/jp-getting-started-54.png)
+<p class="img-desc">キャラクターが「エネルギッシュ」のエモートアニメーションを再生</p>
 
-
-That's our brief introduction to blueprints! Hopefully it offers you a glimpse of what blueprints can do. Blueprints are a very powerful feature, but even without touching them at all, you can still do a lot of things with Warudo. Once you are familiar with the rest of the features, we recommend reading the [blueprint tutorial](/docs/blueprints/overview) to learn more about blueprints.
+以上がブループリントの簡単な紹介です。ブループリントで何ができるのか、少しでもわかっていただけたかと思います。ブループリントは非常に強力な機能ですが、まったく触らなくても、Warudoで多くのことを行うことができます。残りの機能に慣れたら、[ブループリントのチュートリアル](/docs/blueprints/overview)を読んで、ブループリントについてさらに学ぶことをおすすめします。
 
 :::tip
-You can use **Mouse RMB** to drag a selection box to select multiple nodes. To remove a node, select it and press **Delete**.
+**マウスの右ボタン**を使用して選択ボックスをドラッグし、複数のノードを選択できます。ノードを削除するには、ノードを選択して**Delete**キーを押します。
 :::
 
 :::info
-You may have noticed there is a blueprint for face tracking and a blueprint for pose tracking. These blueprints were automatically generated by the onboarding assistant and can be customized to your liking. For beginners though, they could look intimidating, so we recommend leaving them alone for now.
+フェイストラッキング用のブループリントとモーショントラッキング用のブループリントがあることに気づいたかもしれません。これらのブループリントは初心者ナビによって自動的に生成され、好みに合わせてカスタマイズできます。ただし、初心者にとっては難しそうに見える可能性があるため、慣れるまではそのままにしておくことをおすすめします。
 :::
 
 ## Interaction Setup {#interaction-setup}
