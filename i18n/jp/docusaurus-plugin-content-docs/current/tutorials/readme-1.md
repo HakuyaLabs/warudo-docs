@@ -275,7 +275,7 @@ Warudo を初めて使用する場合は、オプションをいろいろ試し�
 ![](/doc-img/jp-getting-started-40.png)
 <p class="img-desc">ブループリントタブに切り替え</p>
 
-ところで、ブループリントとは何でしょうか？ブループリントとは「何かが起こったときに何が起こるべきか」を定義する仕組みです。たとえば、「**スペース**キーを押すと、キャラクターが手を振る」とか、「YouTubeライブでスーパーチャットを受け取るとキャラクターに小道具が投げられる」などといったものです。
+ところで、ブループリントとは何でしょうか？ブループリントとは「何かが起こったときに何が起こるか」を定義する仕組みです。たとえば、「**スペース**キーを押すと、キャラクターが手を振る」とか、「YouTubeライブでスーパーチャットを受け取るとキャラクターに小道具が投げられる」などといったものです。
 
 シーンにはデフォルトでいくつかのブループリントが用意されています。たとえば、 **「表情ボタンのバインド」** ブループリントは、キャラクターの表情を切り替えるためのショートカットキーを定義します。クリックして選択してみましょう。
 
@@ -350,36 +350,38 @@ Warudo を初めて使用する場合は、オプションをいろいろ試し�
 
 ## インタラクションの設定 {#interaction-setup}
 
-VTubing isn't fun if you can't interact with your viewers! Warudo offers a wide range of interaction features, but the quickest way to get started is to use our onboarding assistant. Select the **Onboarding Assistant** asset, and click on **Interaction Setup → Get Started**:
+視聴者と双方向のコミュニケーションができなければ、VTuber活動は楽しくありません。Warudoは幅広いインタラクション機能を提供していますが、もっとも早く始めるには、初心者ナビを使用するのが一番です。**初心者**アセットを選択し、**[インタラクションの設定] → [始める]** をクリックします。
 
-![](/doc-img/en-getting-started-58.png)
-<p class="img-desc">Interaction setup.</p>
+![](/doc-img/jp-getting-started-58.png)
+<p class="img-desc">インタラクションの設定</p>
 
-You will be asked to select a streaming platform:
+配信プラットフォームを選択します。
 
-![](/doc-img/en-getting-started-59.png)
-<p class="img-desc">Select a streaming platform.</p>
+![](/doc-img/jp-getting-started-59.png)
+<p class="img-desc">配信プラットフォームを選択</p>
 
-Follow the instructions to set up the streaming platform integration. For example, in the following, I am setting the **Launching Liquid** interaction to trigger when I receive a Twitch redeem called "Water":
+配信プラットフォームの連携設定をするには、画面の指示に従ってください。たとえば、次の例では、「Water」というYouTubeチャットを受け取ったときに**液体発射**インタラクションがトリガーされるように設定しています。
 
-![](/doc-img/en-getting-started-60.png)
-<p class="img-desc">Set up integration.</p>
+![](/doc-img/jp-getting-started-60.png)
+<p class="img-desc">配信プラットフォーム連携の設定</p>
 
-When you are done, you will notice a new blueprint has been added to the blueprints tab. Remember what we said about blueprints? They are "what should happen when something happens." In this case, the blueprint should contain the logic for launching liquid at our character when we receive a Twitch redeem called "Water." Click on the blueprint to select it, and locate the **Launch Liquid At Character** node:
+設定が完了すると、ブループリントタブに新しいブループリントが追加されていることに気づくでしょう。ブループリントについて述べたことを覚えていますか？ブループリントとは、「何かが起こったときに何が起こるか」を定義する仕組みです。
 
-![](/doc-img/en-getting-started-61.png)
-<p class="img-desc">A new blueprint has been added.</p>
+![](/doc-img/jp-getting-started-61.png)
+<p class="img-desc">新しいブループリントが追加</p>
 
-![](/doc-img/en-getting-started-62.png)
-<p class="img-desc">Locate the "Launch Liquid At Character" node.</p>
+今回の場合、ブループリントには「Water」と呼ばれるYouTubeチャットを受け取ったときにキャラクターに液体を発射するロジックが含まれています。追加されたブループリントをクリックして選択し、**キャラクターに液体を発射する**ノードを見つけます。
 
-Indeed, the nodes above are essentially saying: "when we receive a Twitch redeem, if the redeem title is 'Water', then launch liquid at the character asset 'Character'." You can click the "Enter" button on the **Launch Liquid At Character** node to test it out:
+![](/doc-img/jp-getting-started-62.png)
+<p class="img-desc">「液体発射」ノードを見つけます</p>
 
-![](/doc-img/en-getting-started-63.png)
-<p class="img-desc">Test the interaction.</p>
+たしかに、このノードには「YouTubeチャットを受け取ったときに、チャットメッセージが「Water」の場合、キャラクターに液体を発射する」と定義されています。**液体を発射する**ノードの「入口」ボタンをクリックすると動作テストすることができます。
 
-![](/doc-img/en-getting-started-64.png)
-<p class="img-desc">It works!</p>
+![](/doc-img/jp-getting-started-63.png)
+<p class="img-desc">動作をテストしてみましょう</p>
+
+![](/doc-img/jp-getting-started-64.png)
+<p class="img-desc">水圧がすごい…！</p>
 
 ## Outputting to OBS Studio / Streamlabs {#outputting-to-obs-studio--streamlabs}
 
