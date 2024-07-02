@@ -198,7 +198,7 @@ MediaPipe選択時、トラッカーウィンドウが真っ黒で「Loading...�
 ![](/doc-img/jp-getting-started-30.png)
 <p class="img-desc">ギャラリーのプレビュー</p>
 
-次に、**マイク**のプロップを選択しましょう。**X**ボタン (またはポップアップの外側の任意の場所) をクリックしてギャラリープレビューを閉じます。
+次に、**マイク**を選択しましょう。**X**ボタン (またはポップアップの外側の任意の場所) をクリックしてギャラリープレビューを閉じます。
 
 ![](/doc-img/jp-getting-started-31.png)
 <p class="img-desc">道具の中からマイクを選択します</p>
@@ -223,50 +223,50 @@ MediaPipe選択時、トラッカーウィンドウが真っ黒で「Loading...�
 ![](/doc-img/jp-getting-started-36.png)
 <p class="img-desc">マイクが手の動きに追従する</p>
 
-As you can see, each type of asset comes with many options. For example, you can change **Attach To Bone** to attach the microphone to the character's left hand instead, or change **Override Hand Pose** to make the character hold the microphone with a different hand pose:
+ご覧のとおり、各タイプのアセットには多くのオプションがあります。たとえば、**「ボーンをバインドする」** を変更してマイクをキャラクターの左手に取り付けたり、**「ジェスチャーを上書き」** を変更してキャラクターが別の手のポーズでマイクを持つようにしたりできます。
 
-![](/doc-img/en-getting-started-37.png)
-<p class="img-desc">Adjust prop options.</p>
+![](/doc-img/jp-getting-started-37.png)
+<p class="img-desc">道具のオプションを調整</p>
 
-The character asset is also highly customizable. For example, our character has stood next to the bed for a while. Let's make them sit on the bed! Click on the **Character** asset to select it, and click on the **Preview Gallery** button next to the **Idle Animation** dropdown menu:
+キャラクターアセットも高度にカスタマイズ可能です。たとえば、いまベッドの横に立っているキャラクターを、ベッドに座らせてみましょう。**キャラクター**アセットをクリックして選択し、**[スタンバイアニメーション]** ドロップダウン メニューの横にある **[ギャラリープレビュー]** ボタンをクリックします。
 
-![](/doc-img/en-getting-started-42.png)
-<p class="img-desc">Select a character idle animation.</p>
+![](/doc-img/jp-getting-started-42.png)
+<p class="img-desc">キャラクターのスタンバイアニメーションを選択します</p>
 
-![](/doc-img/en-getting-started-41.png)
-<p class="img-desc">Select the "Sitting" idle animation.</p>
+![](/doc-img/jp-getting-started-41.png)
+<p class="img-desc">「座る」のスタンバイアニメーションを選択します</p>
 
-Comfy!
+快適！
 
-![](/doc-img/en-getting-started-43.png)
-<p class="img-desc">Character sitting on the bed.</p>
+![](/doc-img/jp-getting-started-43.png)
+<p class="img-desc">ベッドに座っているキャラクター</p>
 
-The best part is that **Warudo's motion capture blends seamlessly with the idle animations**! For example, if you raise your hand, the character will still raise their hand while sitting:
+最も優れている点は、**Warudoのモーションキャプチャがスタンバイアニメーションとシームレスに融合していること**です！たとえば、手を挙げると、キャラクターは座っている間も手を挙げます。
 
-![](/doc-img/en-getting-started-55.png)
-<p class="img-desc">Character raises hand while sitting.</p>
+![](/doc-img/jp-getting-started-55.png)
+<p class="img-desc">キャラクターは座りながら手を挙げます</p>
 
 
 :::info
-**Q:** Help! There are so many options in Warudo, and I don't know what they do!
+**Q:** 助けて！Warudoにはたくさんのオプションがありますが、何をするのかわかりません！
 
-**A:** It is easy to feel overwhelmed, but don't worry, you don't need to understand all of them. Many options are for advanced users and are not necessary for day-to-day usage.
+**A:** 圧倒されてしまいがちですが、心配しないでください。すべてを理解する必要はありません。多くのオプションは上級ユーザー向けであり、日常的な使用には必要ありません。
 
-If you are new to Warudo, just play around with the options and see what they do. You can always reset the options to their default values by clicking the **Reset** button when hovering on them. The later sections of this handbook will explore each type of asset and their options in detail with examples.
+Warudo を初めて使用する場合は、オプションをいろいろ試し、どのような効果があるかを確認してください。オプションにマウスを移動して **[リセット]** ボタンをクリックすると、いつでもオプションをデフォルト値にリセットできます。このハンドブックの後半のセクションでは、各タイプのアセットとそのオプションについて、例を挙げて詳しく説明します。
 :::
 
-Finally, let's try to add a **Screen** asset. Click on **Add Asset** and select **Screen**:
+最後に、**スクリーン**アセットを追加してみましょう。**アセットの追加**をクリックし、**スクリーン**を選択します。
 
-![](/doc-img/en-getting-started-38.png)
-<p class="img-desc">Add screen asset.</p>
+![](/doc-img/jp-getting-started-38.png)
+<p class="img-desc">スクリーンアセットを追加します</p>
 
-The screen asset is used to display images and videos, but it can also capture your windows/monitors just like OBS Studio! In the following example, I have selected **Window** for the **Content Type** option and **Warudo Editor** for the **Window** option, and moved the screen to behind the character:
+スクリーンアセットは画像や動画を表示するために使用されますが、OBS Studio と同様にウィンドウやモニターをキャプチャすることもできます。次の例では、**コンテンツの表示**オプションで**ウィンドウ**を選択し、**ウィンドウ**オプションで**Warudo Editor**を選択し、スクリーンをキャラクターの背後に移動しました。
 
-![](/doc-img/en-getting-started-39.png)
-<p class="img-desc">Screen usage example.</p>
+![](/doc-img/jp-getting-started-39.png)
+<p class="img-desc">スクリーンの使用例</p>
 
 :::tip
-If the screen is too bright, you can adjust the **Tint** option to a gray color to make it darker.
+画面が明るすぎる場合は、**色合い**オプションをグレーに調整して暗くすることができます。
 :::
 
 ## Blueprints Tab
