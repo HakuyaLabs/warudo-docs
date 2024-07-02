@@ -91,76 +91,75 @@ MediaPipe選択時、トラッカーウィンドウが真っ黒で「Loading...�
 
 それでは、基本的な操作方法を学びましょう！
 
-## Scene Controls
+## シーン操作
 
-Let's take a moment to admire your character model. By default, the scene camera is set to **Orbit Character** mode, which means the camera always rotates around the character. You can use **Mouse LMB/RMB** to rotate the view, **Mouse Wheel** to zoom in or out, and **Mouse MMB** to pan the view. Try moving the camera to this angle:
+キャラクターモデルをじっくりと鑑賞してみましょう。デフォルトでは、シーンカメラは**オービットキャラクター**モードに設定されており、カメラは常にキャラクターの周りを回転します。**マウスの左ボタン/右ボタン**を使用してビューを回転させ、**マウスホイール**を使用してズームインまたはズームアウトし、**マウスの中央ボタン**を使用してビューをパン（水平・垂直方向に移動）することができます。カメラを次の角度に動かしてみてください。
 
 ![](/doc-img/jp-getting-started-14.png)
-<p class="img-desc">Camera orbiting around the character.</p>
+<p class="img-desc">キャラクターの周りを回るカメラ</p>
 
-Now let's learn how to move the character. In the editor window, click on **Character** to select the character asset.
+次に、キャラクターを動かす方法を学びましょう。エディターウィンドウで、**「キャラクター」** をクリックして、キャラクターアセットを選択します。
 
 ![](/doc-img/jp-getting-started-15.png)
-<p class="img-desc">Select the character asset.</p>
+<p class="img-desc">キャラクターアセットを選択</p>
 
-You should see a **translation gizmo** under the model's feet that can be used to move the model. Simply drag on an axis to move along that axis. Here I moved the model next to the bed:
+モデルの足下に、モデルを移動するために使用できる**移動ギズモ**が表示されます。軸をドラッグするだけで、その軸に沿って移動できます。ここでは、モデルをベッドの隣に移動しました。
 
 ![](/doc-img/jp-getting-started-16.png)
-<p class="img-desc">Move the model.</p>
+<p class="img-desc">モデルを移動させる</p>
 
 :::tip
-Can't see the gizmo? Try use **Mouse MMB** to pan the view.
+ギズモが表示されませんか？**マウスの中央ボタン**を使用して、カメラを後退させてみてください。
 :::
 
-You can switch to the **rotation gizmo** by pressing **E** (and, by the way, switch back to the translation gizmo by pressing **W**). Let's rotate the model a bit:
+**E**キー を押すと**回転ギズモ**に切り替えることができます（**W** キーを押すと移動ギズモに戻ります）
 
 ![](/doc-img/jp-getting-started-17.png)
-<p class="img-desc">Rotate the model.</p>
+<p class="img-desc">モデルを回転させる</p>
 
-Press **R** to switch to the **scale gizmo**. Usually you don't want to scale your character, but Let's make the model wider just for fun:
+**R**キーを押して**スケールギズモ**に切り替えます。通常はキャラクターをスケールする必要はありませんが、試しにモデルの幅を広げてみましょう。
 
 ![](/doc-img/jp-getting-started-18.png)
-<p class="img-desc">Scale the model.</p>
+<p class="img-desc">モデルを拡大縮小させる</p>
 
-That doesn't look good! How can we restore the scale? If you've been paying attention, you may have noticed that the values in the **Transform** section change as you drag the gizmos. For example, this is what mine looks like now:
+見た目がよくありませんね。スケールを元に戻すにはどうしたらよいでしょうか。エディターウィンドウをよく見てみると、ギ​​ズモのドラッグに応じて **[変換]** セクションの値が変化することに気付いたかもしれません。たとえば、私のギズモは現在以下のようになっています。
 
 ![](/doc-img/jp-getting-started-19.png)
-<p class="img-desc">Transform values.</p>
+<p class="img-desc">変換の値が変わっている</p>
 
-To return to the initial scale, just set the **Scale** values to **1**, or click on the **Reset** button that appears when you hover over the **Scale** values:
+デフォルトのスケールに戻すには、**スケール**の値を**1**に設定するか、**スケール**の値の上にマウスを置いたときに表示される**リセット**ボタンをクリックします。
 
 ![](/doc-img/jp-getting-started-20.png)
-<p class="img-desc">Reset scale.</p>
+<p class="img-desc">スケールをリセットする</p>
 
-That's much better!
+やったぜ！
 
 ![](/doc-img/jp-getting-started-21.png)
-<p class="img-desc">Back to normal.</p>
+<p class="img-desc">初期状態に戻りました</p>
 
 :::tip
-You can also switch between different gizmos in the editor.
+エディターウインドウにもギズモを切り替えるボタンが配置されています。
 
 ![](/doc-img/en-getting-started-66.png)
 :::
 
-In addition to orbiting around the model, the camera can also be switched to a free-look mode, allowing the camera to fly through the scene. Select the **Camera** asset and choose **Free Look** for the **Control Mode**:
+カメラを**自由観察**モードに切り替えると、モデルの周りを回るだけでなくシーン内を飛行させることもできます。**「ビデオカメラ」** アセットを選択し、**コントロール**の**自由観察**を選択します。
 
 ![](/doc-img/jp-getting-started-22.png)
-<p class="img-desc">Switch to free-look mode.</p>
+<p class="img-desc">カメラを自由観察モードに切り替える</p>
 
-While **holding down Mouse RMB**, use **WASD** to move, **E** and **Q** to move up and down, and hold **Left Shift** to move faster. Use **Mouse MMB** to pan the view.
+**マウスの右ボタンを押しながら**、**WASD**キーで前後左右に移動し、**E**キーと**Q**キーで上下に移動します。**左シフト**キーを押したまま移動すると移動速度が速くなります。**マウスの中央ボタン**を使用してビューをパンします。
 
-After you've gotten used to the two camera modes, switch back to **Orbit Character** mode and click **Reset Camera Transform** to return the camera to its default position.
-
+2つのカメラモードに慣れたら、**オービットキャラクター**モードを選択し直し、**[カメラ変換をリセット]** ボタンをクリックしてカメラをデフォルトの位置に戻します。
 :::tip
-You can also press **V** to switch between **Orbit Character** and **Free Look** modes.
+**V** キーを押して、**オービットキャラクター** モードと**自由観察** モードを切り替えることもできます。
 :::
 
 ![](/doc-img/jp-getting-started-24.png)
-<p class="img-desc">Reset camera transform.</p>
+<p class="img-desc">カメラの変換をリセットする</p>
 
 ![](/doc-img/jp-getting-started-23.png)
-<p class="img-desc">Back to default camera position.</p>
+<p class="img-desc">カメラがデフォルト位置に戻ります</p>
 
 ## Assets Tab
 
