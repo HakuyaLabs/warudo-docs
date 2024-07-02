@@ -4,7 +4,7 @@ sidebar_position: 10
 
 # はじめに
 
-## 基本設定
+## 基本設定 {#basic-setup}
 
 Warudoを開くと、**メインウィンドウ**と**エディターウィンドウ**の2つのウィンドウが表示されます。
 
@@ -91,7 +91,7 @@ MediaPipe選択時、トラッカーウィンドウが真っ黒で「Loading...�
 
 それでは、基本的な操作方法を学びましょう！
 
-## シーン操作
+## シーン操作 {#scene-controls}
 
 キャラクターモデルをじっくりと鑑賞してみましょう。デフォルトでは、シーンカメラは**オービットキャラクター**モードに設定されており、カメラは常にキャラクターの周りを回転します。**マウスの左ボタン/右ボタン**を使用してビューを回転させ、**マウスホイール**を使用してズームインまたはズームアウトし、**マウスの中央ボタン**を使用してビューをパン（水平・垂直方向に移動）することができます。カメラを次の角度に動かしてみてください。
 
@@ -161,7 +161,7 @@ MediaPipe選択時、トラッカーウィンドウが真っ黒で「Loading...�
 ![](/doc-img/jp-getting-started-23.png)
 <p class="img-desc">カメラがデフォルト位置に戻ります</p>
 
-## アセットタブ
+## アセットタブ {#assets-tab}
 
 キャラクターとカメラを動かす基本的な方法がわかったので、エディターウィンドウを見てみましょう。
 
@@ -268,7 +268,7 @@ Warudo を初めて使用する場合は、オプションをいろいろ試し�
 画面が明るすぎる場合は、**色合い**オプションをグレーに調整して暗くすることができます。
 :::
 
-## ブループリントタブ
+## ブループリントタブ {#blueprints-tab}
 
 アセットについて理解できたので、**ブループリント**タブを見てみましょう。∑（シグマ）アイコンをクリックしてブループリントタブに切り替えます。
 
@@ -348,7 +348,7 @@ Warudo を初めて使用する場合は、オプションをいろいろ試し�
 フェイストラッキング用のブループリントとモーショントラッキング用のブループリントがあることに気づいたかもしれません。これらのブループリントは初心者ナビによって自動的に生成され、好みに合わせてカスタマイズできます。ただし、初心者にとっては難しそうに見える可能性があるため、慣れるまではそのままにしておくことをおすすめします。
 :::
 
-## Interaction Setup {#interaction-setup}
+## インタラクションの設定 {#interaction-setup}
 
 VTubing isn't fun if you can't interact with your viewers! Warudo offers a wide range of interaction features, but the quickest way to get started is to use our onboarding assistant. Select the **Onboarding Assistant** asset, and click on **Interaction Setup → Get Started**:
 
@@ -381,7 +381,7 @@ Indeed, the nodes above are essentially saying: "when we receive a Twitch redeem
 ![](/doc-img/en-getting-started-64.png)
 <p class="img-desc">It works!</p>
 
-## Outputting to OBS Studio / Streamlabs
+## Outputting to OBS Studio / Streamlabs {#outputting-to-obs-studio--streamlabs}
 
 It's time to put Warudo into your favorite streaming software! There are four ways to do so:
 
@@ -402,7 +402,7 @@ We recommend using the **Spout** method, as it has zero latency and best perform
 All output methods support transparency output. To enable transparent background, simply go to the camera asset and enable **Basic Properties → Transparent Background**.
 :::
 
-## Saving and Loading Scenes
+## Saving and Loading Scenes {#saving-and-loading-scenes}
 
 Now that you have set up your scene, remember to save it! Unlike other software, Warudo does not automatically save your scene, so that you can experiment with different settings without worrying about messing up your scene. Click on the Warudo icon, and select **Save Scene**:
 
@@ -420,7 +420,7 @@ Finally, you can use **Reload Scene** and **Restart Scene** to reload and restar
 "Resetting the scene state" means resetting physics, temporary objects, etc. in the scene. For example, if you have somehow spawned 1,000 thrown props in the scene, using **Reload Scene** or **Restart Scene** will remove all of them, since they are not part of the scene file.
 :::
 
-## Summary
+## Summary {#summary}
 
 Congratulations! You have now learned the basics of Warudo. We recommend reading the rest of the handbook to learn more about Warudo's features. If you have any questions, please join our [Discord](https://discord.gg/warudo), and we will be happy to help you out!
 
