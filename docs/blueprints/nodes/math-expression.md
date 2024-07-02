@@ -105,11 +105,6 @@ randint => Random.Range(int, int)
 | `rand(min, max)`      | `Random.Range(min, max)`         | Returns a random float number between min (inclusive) and max (inclusive).                           |
 | `randint(min, max)`   | `Random.Range(min, max)`         | Returns a random integer number between min (inclusive) and max (exclusive).                         |
 
-## URL
-
-For more details, check out:  
-[HakuyaLabs/Mathfs: Expanded Math Functionality for Unity](https://github.com/HakuyaLabs/Mathfs)
-
 <AuthorBar authors={{
   creators: [
     {name: 'hanekit', github: 'hanekit'},

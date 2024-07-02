@@ -12,7 +12,7 @@ Whether you are streaming at home or at a professional mocap studio, Warudo has 
   * Built-in tracking via [MediaPipe](./mediapipe) or [OpenSeeFace](./openseeface).
 * iPhone
   * Requires either [iFacialMocap / FaceMotion3D](./ifacialmocap) or [RhyLive](./rhylive) app to be installed on the iPhone.
-* [SteamVR] (./steamvr)
+* [SteamVR](./steamvr)
 * [Leap Motion Controller](./leap-motion)
 * [Sony Mocopi](./mocopi)
 * [Rokoko](./rokoko)
