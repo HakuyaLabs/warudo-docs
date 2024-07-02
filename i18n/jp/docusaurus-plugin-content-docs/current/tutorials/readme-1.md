@@ -383,25 +383,25 @@ Warudo を初めて使用する場合は、オプションをいろいろ試し�
 ![](/doc-img/jp-getting-started-64.png)
 <p class="img-desc">水圧がすごい…！</p>
 
-## Outputting to OBS Studio / Streamlabs {#outputting-to-obs-studio--streamlabs}
+## OBS Studio / Streamlabsへの出力 {#outputting-to-obs-studio--streamlabs}
 
-It's time to put Warudo into your favorite streaming software! There are four ways to do so:
+お気に入りの配信ソフトウェアにWarudoを追加する時が来ました。その方法は4つあります。
 
-* **Virtual camera:** Warudo can output as a virtual camera. This is useful for collab streams on [VDO.Ninja](https://vdo.ninja/) or you want to use your VTubing avatar on Discord/Zoom. To use this method, go to **Settings → Output** and enable **Virtual Camera Output**.
-* **NDI:** Warudo can output as an [NDI](https://ndi.video/) source. To use this method, go to **Settings → Output** and enable **NDI Output**. Note that audio output is not supported.
-* **Spout:** Warudo can output as a [Spout](https://spout.zeal.co/) source. To use this method, go to **Settings → Output** and enable **Spout Output**. **This is by default already enabled.**
-* **Window/Game capture:** You can also use window/game capture in OBS Studio or Streamlabs to capture the Warudo window. We do not recommend this method, as it takes up significantly more CPU/GPU resources than the other methods.
+* **仮想カメラ:** Warudoは仮想カメラとして出力できます。これは、 [VDO.Ninja](https://vdo.ninja/)でのコラボストリームや、Discord/Zoom で VTuberアバターを使用する場合に便利です。この方法を使用するには、 **[設定] → [出力]** に移動し、**[仮想カメラ出力]** を有効にします。
+* **NDI:** Warudoは[NDI](https://ndi.video/)ソースとして出力できます。この方法を使用するには、**[設定] → [出力]** に移動し、**[NDI 出力]** を有効にします。オーディオ出力はサポートされていないことに注意してください。
+* **Spout:** Warudoは[Spout](https://spout.zeal.co/)ソースとして出力できます。この方法を使用するには、 **[設定] → [出力]** に移動して、**[Spout 出力]** を有効にします。**これはデフォルトで既に有効になっています。**
+* **ウィンドウ/ゲームキャプチャ:** OBS Studio または Streamlabsのウィンドウ/ゲームキャプチャを使用して、Warudoウィンドウをキャプチャすることもできます。ただし、他の方法よりもCPU/GPUリソースを大幅に消費するため、この方法はおすすめしません。
 
-We recommend using the **Spout** method, as it has zero latency and best performance. Furthermore, it hides the transform gizmos, so you can move/rotate characters or props during a stream without showing the gizmos to the audience! To set up Spout output, follow these steps:
+レイテンシがゼロでパフォーマンスが最高の**Spout**メソッドを使用することをおすすめします。さらに、変換ギズモが非表示になるため、ギズモを視聴者に表示せずに、ストリーム中にキャラクターや小道具を移動/回転できます。Spout出力を設定するには、次の手順に従ってください。
 
-* **OBS Studio:** Install the [**Spout2 Plugin for OBS Studio**](https://github.com/Off-World-Live/obs-spout2-plugin) first, then add a **Spout2 Capture** source, and select **Warudo** as the sender.
-* **Streamlabs:** Add a **Spout2** source, and select **Warudo** as the sender.
+* **OBS Studio:** まず、**[OBS Studio用のSpout2プラグイン](https://github.com/Off-World-Live/obs-spout2-plugin)** をインストールし、次に**Spout2 Capture**ソースを追加して、**[SpoutSenders]** で**Warudo**を選択します。
+* **Streamlabs:** **Spout2**ソースを追加し、送信者として**Warudo**を選択します。
 
-![](/doc-img/en-getting-started-65.png)
-<p class="img-desc">Spout output to OBS Studio.</p>
+![](/doc-img/jp-getting-started-65.png)
+<p class="img-desc">OBS Studioでの出力の様子</p>
 
 :::tip
-All output methods support transparency output. To enable transparent background, simply go to the camera asset and enable **Basic Properties → Transparent Background**.
+すべての出力方法は透過出力をサポートしています。透明な背景を有効にするには、カメラアセットに移動して、**[基本プロパティ] → [透明な背景]** を有効にするだけです。
 :::
 
 ## Saving and Loading Scenes {#saving-and-loading-scenes}
