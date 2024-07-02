@@ -161,67 +161,67 @@ MediaPipe選択時、トラッカーウィンドウが真っ黒で「Loading...�
 ![](/doc-img/jp-getting-started-23.png)
 <p class="img-desc">カメラがデフォルト位置に戻ります</p>
 
-## Assets Tab
+## アセットタブ
 
-Now you have a basic sense of how to move the character and the camera, let's take a look at the editor!
+キャラクターとカメラを動かす基本的な方法がわかったので、エディターウィンドウを見てみましょう。デフォルトでは、**[アセット]** タブが表示されます。
 
-By default, you are at the **Assets** tab. An **asset** is essentially anything that is "in the scene," such as a character, a camera, a prop, a motion capture tracker, etc.
+![](/doc-img/jp-getting-started-67.png)
+<p class="img-desc">アセットタブ</p>
 
-You can click on an asset to select it. For example, click on the **Directional Light** asset to select it and adjust its color:
+**アセット**とは、キャラクター、カメラ、小道具、モーション キャプチャトラッカーなど、基本的に「シーン内」にあるものすべてを指します。
+
+それぞれの**アセット** をクリックして選択すると、詳細設定を変更することができます。たとえば、**指向性ライト**アセットをクリックして選択し、照明の色を調整します。
 
 ![](/doc-img/en-getting-started-25.png)
-<p class="img-desc">Select the directional light and adjust its color.</p>
+<p class="img-desc">指向性ライトを選択し、色を調整します</p>
 
-Spooky!
+不気味ですね！
 
 ![](/doc-img/en-getting-started-26.png)
-<p class="img-desc">Light color set to red.</p>
+<p class="img-desc">ライトの色が赤に設定されました</p>
 
-A motion capture tracker is also an asset. For example, since I have selected **iFacialMocap** as my face tracking solution, I have a **iFacialMocap Receiver** asset in my scene. I can click on it to select it and click the **Calibrate** button to calibrate my face tracking:
+モーションキャプチャトラッカーもアセットのひとつとして扱われます。たとえば、フェイストラッキングソフトとして**iFacialMocap**を選択すると、シーンに**iFacialMocapの受信機**アセットが表示されます。これをクリックして選択し、 **[キャリブレーション]** ボタンをクリックするとフェイストラッキングをキャリブレーションできます。
 
 ![](/doc-img/en-getting-started-27.png)
-<p class="img-desc">Calibrate iFacialMocap.</p>
+<p class="img-desc">iFacialMocapの調整</p>
 
-Since we are already here, how about we try to add a new asset? Click on **Add Asset** and select **Prop**:
+せっかくなので、続いて新しいアセットを追加してみしょう。 **[アセットの追加]** をクリックして **[Prop]** を選択します。
 
-![](/doc-img/en-getting-started-28.png)
-<p class="img-desc">Add asset.</p>
+![](/doc-img/jp-getting-started-28.png)
+<p class="img-desc">アセットを追加します</p>
 
-![](/doc-img/en-getting-started-29.png)
-<p class="img-desc">Select "Prop".</p>
+![](/doc-img/jp-getting-started-29.png)
+<p class="img-desc">「道具」を選択します</p>
 
-The prop asset is added to the scene, but we haven't selected a model yet! Let's click on the **Preview Gallery** button next to the **Source** dropdown menu:
+**道具**アセットがシーンに追加されましたが、まだモデルが選択されていません。**ソース**ドロップダウンメニューの横にある**ギャラリープレビュー**ボタンをクリックしましょう。
 
-![](/doc-img/en-getting-started-30.png)
-<p class="img-desc">Preview gallery.</p>
+![](/doc-img/jp-getting-started-30.png)
+<p class="img-desc">ギャラリーのプレビュー</p>
 
-Let's select the **Microphone** prop. Then, click **X** (or anywhere outside the popup) to close the preview gallery:
+次に、**マイク**のプロップを選択しましょう。**X**ボタン (またはポップアップの外側の任意の場所) をクリックしてギャラリープレビューを閉じます。
 
-![](/doc-img/en-getting-started-31.png)
-<p class="img-desc">Select the microphone prop.</p>
+![](/doc-img/jp-getting-started-31.png)
+<p class="img-desc">道具の中からマイクを選択します</p>
 
-Hmm, where is our microphone? Zoom out a bit, and you should see it... sunk into the ground!
+あれ？マイクはどこにあるのでしょうか。少しズームアウトすると・・・地面に埋め込まれているのが見えるはずです！
 
-![](/doc-img/en-getting-started-32.png)
-<p class="img-desc">Oh noes.</p>
+![](/doc-img/jp-getting-started-32.png)
+<p class="img-desc">そこにいたのか</p>
 
-That's not good! We want to attach it to our character's hand. In the **Transform Attachment** section, click on the **Attach To** dropdown menu and select **Character**:
+このままではよろしくありません。キャラクターの手に取り付けたいですね。**トランスフォームバインド**セクションの**バインド**ドロップダウンメニューをクリックして、**キャラクター**を選択します。
 
-![](/doc-img/en-getting-started-33.png)
-<p class="img-desc">Attach to character.</p>
+![](/doc-img/jp-getting-started-33.png)
+<p class="img-desc">キャラクターにアタッチします</p>
 
-The microphone is now attached to the character's hand! Now we can use the transform gizmo to adjust the attachment position:
+これで、マイクがキャラクターの手に取り付けられました。変換ギズモを使用して、マイクのサイズや取り付け位置を調整できます。
 
-![](/doc-img/en-getting-started-34.png)
-<p class="img-desc">Microphone attached to character's hand.</p>
+![](/doc-img/jp-getting-started-35.png)
+<p class="img-desc">マイクの取り付け位置を調整します</p>
 
-![](/doc-img/en-getting-started-35.png)
-<p class="img-desc">Adjust attachment position.</p>
+フルボディトラッキングまたはハンドトラッキングを設定している場合は、マイクが手に合わせて動くのを確認できるはずです！
 
-If you have set up full-body tracking or hand tracking, you should be able to see your microphone moving with your hand!
-
-![](/doc-img/en-getting-started-36.png)
-<p class="img-desc">Microphone moving with hand.</p>
+![](/doc-img/jp-getting-started-36.png)
+<p class="img-desc">マイクが手の動きに追従する</p>
 
 As you can see, each type of asset comes with many options. For example, you can change **Attach To Bone** to attach the microphone to the character's left hand instead, or change **Override Hand Pose** to make the character hold the microphone with a different hand pose:
 
