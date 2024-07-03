@@ -11,12 +11,12 @@ side-bar-position: 11
 BlendShapeとは、以下のように、ある位置から別の位置へ移動する頂点のセットで、3Dモデルのキャラクターアニメーション手法のひとつです。
 
 ![](/doc-img/zh-tutorials-18.gif)
-<p class="img-desc">参考: https://developpaper.com/unity-realizes-facial-expression-transition-and-switching-animation-tutorial-through-blendshape/</p>
+<p class="img-desc">参考: DevelopPaper</p>
 
 BlendShapeの値は 0 から 1 の間です。値が 0 の場合、頂点は移動しません。値が 1 の場合、頂点は以下に示すようにターゲット位置に移動します。
 
 ![](/doc-img/zh-tutorials-19.gif)
-<p class="img-desc">UnityのBlendShapeは 0～100 の値を取りますが、Warudo (およびほとんどの 3Dツール) のBlendShapeは 0～1 の値を取ることに注意してください。参考: https://developpaper.com/unity-realizes-facial-expression-transition-and-switching-animation-tutorial-through-blendshape/</p>
+<p class="img-desc">UnityのBlendShapeは 0～100 の値を取りますが、Warudo (およびほとんどの 3Dツール) のBlendShapeは 0～1 の値を取ることに注意してください。参考: DevelopPaper</p>
 
 モデル上のBlendShapeのリストは、モデラー (およびモデリングツール) によってまったく異なります。以下に、一般的なBlendShapeのリストをいくつか示します 。モデルによってはBlendShapeの数がこれより多い場合や少ない場合がありますので、あくまでご参考まで。
 
