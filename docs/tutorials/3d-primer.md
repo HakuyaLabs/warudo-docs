@@ -11,12 +11,12 @@ Below is a list of frequently asked questions about 3D VTubing; they are not spe
 A blendshape is a set of vertices moving from one position to another, like the following:
 
 ![](/doc-img/zh-tutorials-18.gif)
-<p class="img-desc">Reference: https://developpaper.com/unity-realizes-facial-expression-transition-and-switching-animation-tutorial-through-blendshape/</p>
+<p class="img-desc">Reference: DevelopPaper</p>
 
 A blendshape's value is between 0 and 1. When the value is 0, the vertices do not move. When the value is 1, the vertices move to the target position, as shown below:
 
 ![](/doc-img/zh-tutorials-19.gif)
-<p class="img-desc">Note that blendshapes in Unity takes values from 0-100, but in Warudo (and most 3D tools) blendshapes take values from 0-1. Reference: https://developpaper.com/unity-realizes-facial-expression-transition-and-switching-animation-tutorial-through-blendshape/</p>
+<p class="img-desc">Note that blendshapes in Unity takes values from 0-100, but in Warudo (and most 3D tools) blendshapes take values from 0-1. Reference: DevelopPaper</p>
 
 The list of blendshapes on a model is entirely up to the modeler (and the modeling tool). Below are a few lists of common blendshapes (for reference only; your model may have more or fewer blendshapes):
 
