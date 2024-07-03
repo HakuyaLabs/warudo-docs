@@ -14,9 +14,9 @@ Warudo HandbookはReactベースの[Docusaurus](https://docusaurus.io/)を使用
 Warudo Handbookはオープンソースプロジェクトです。もし理解が難しい部分があったり、新しいコンテンツを作成したり、独自のチュートリアルやガイドを提供したい場合は、GitHubのissueやDiscordで質問するか、GitHubプロジェクトに直接コードや翻訳を追加して貢献してください。あなたの名前はドキュメント下部にある貢献者リストに掲載されます！
 
 
-## 貢献に参加する
+## 貢献に参加する {#how-to-contribute}
 
-### GitHub Issueを使用して問題を報告し意見を述べる
+### GitHub Issueを使用して問題を報告し意見を述べる {#provide-feedback-and-suggestions-via-github-issues}
 
 GitHub Issueでのフィードバックは直接的で簡単です。ドキュメント内容に何か問題があれば、Issueを立てて修正提案をしてください。<br />
 https://github.com/HakuyaLabs/warudo-docs/issues
@@ -24,14 +24,14 @@ https://github.com/HakuyaLabs/warudo-docs/issues
 ここでのフィードバックはWarudoドキュメントに対するものであり、Warudoソフトウェア自体についての議論は、関連するDiscordチャンネルで行なってください。<br />
 https://discord.gg/warudo
 
-### コードを提出し貢献者になる
+### コードを提出し貢献者になる {#submit-code-and-become-a-contributor}
 
 Gitとフロントエンド開発の知識があれば、GitHubで直接pull requestを提出してコードを貢献できます。<br />
 知識がない場合でも問題ありません。以下に、ローカル環境でWarudo Handbookを実行し、修正する方法を記載します。
 
-## 技術詳細
+## 技術詳細 {#technical-details}
 
-### ディレクトリ構造
+### ディレクトリ構造 {#directory-structure}
 
 | Path | Content |
 |--|--|
@@ -48,7 +48,7 @@ Warudo Handbook左側のナビゲーションバー構造も英語版ファイ�
 :::
 
 
-### よく使うコマンド
+### よく使うコマンド {#commands}
 
 | Command | Description |
 |--|--|
@@ -60,7 +60,7 @@ Warudo Handbook左側のナビゲーションバー構造も英語版ファイ�
 | `yarn build` | 実行環境に静的ファイルを生成 |
 
  
-## ローカル環境での開発について
+## ローカル環境での開発について {#running-local-development-site}
 
 開発ツールに不慣れでも心配しないでください。気軽にチャレンジしてみましょう！
 
@@ -68,7 +68,7 @@ Warudo Handbook左側のナビゲーションバー構造も英語版ファイ�
 
 <summary>ローカル開発ドキュメントチュートリアル</summary>
 
-### 環境の準備
+### 環境の準備 {#prepare-environment}
 
 まず、必要な開発環境をダウンロードします。
 
@@ -82,7 +82,7 @@ Warudo Handbook左側のナビゲーションバー構造も英語版ファイ�
  - VSCode ダウンロード: https://code.visualstudio.com/  
 	<small>VSCodeは一般的な開発者向けエディタで、フロントエンドプロジェクトの開発に適しています。他の馴染みのあるエディタを使っても構いません。</small>
 
-### コマンドラインの使用
+### コマンドラインの使用 {#using-command-line}
 
  - Windows: ショートカットキーの`Win+R`を使用して`cmd`を実行し、コマンドプロンプトを開きます。
 
@@ -90,7 +90,7 @@ Warudo Handbook左側のナビゲーションバー構造も英語版ファイ�
 
 上記の開発環境をインストールした後、ターミナル上で`node -v`コマンドを使用して、インストールされているNode.jsのバージョンを確認できます。
 
-### GitHub Desktopでプロジェクトを追加
+### GitHub Desktopでプロジェクトを追加 {#set-up-the-project-using-github-desktop}
 
  - GitHubアカウントにログイン
 
@@ -105,7 +105,7 @@ Warudo Handbook左側のナビゲーションバー構造も英語版ファイ�
  - `Publish branch` をクリック  
    <small>これで自分のブランチがリモートリポジトリに反映され、編集を開始できます。</small>
 
-### ローカル環境でWarudo Handbookを実行
+### ローカル環境でWarudo Handbookを実行 {#run-local-site}
 
 まずターミナルを開きます：
 
@@ -128,14 +128,14 @@ Warudo Handbook左側のナビゲーションバー構造も英語版ファイ�
 これで準備が整い、ローカルマシン上で実行されるWarudo Handbookがブラウザに表示されるはずです。ドキュメント内容を変更して保存すると、ブラウザが自動的にページを更新します。  
 ドキュメント内容を編集して試してみてください！
 
-### 編集の開始
+### 編集の開始 {#start-editing}
 
  - Markdownファイルを編集し、ブラウザでリアルタイムにページを確認
 
 ほとんどのディレクトリ内のドキュメントは.mdおよび.mdx形式で保存されます。これは[Markdown](https://www.markdownguide.org/)形式のテキストで、いくつかの記述フォーマットコードを含むテキストファイルです。見栄えの良いドキュメントを作成するには、Markdownの書き方を研究してみてください。
 
 
-### 変更の提出とアップロード
+### 変更の提出とアップロード {#commit--upload-your-changes}
 
 変更を保存した後：
 
@@ -148,13 +148,13 @@ Warudo Handbook左側のナビゲーションバー構造も英語版ファイ�
 
  - ヨシ！これであなたの変更がみんなに見られるようになりました。
 
-### Warudo Handbookのメンテナンスメンバーに連絡し、変更をレビューして公開
+### Warudo Handbookのメンテナンスメンバーに連絡し、変更をレビューして公開 {#contact-warudo-handbook-maintenance-members-for-review-and-publication}
 
  - GitHub上でpull requestを提出し、ドキュメントのメンテナンスメンバーに連絡します。変更が受け入れられ、マージされると公開されます。
 
 </details>
 
-## ドキュメントにあなたの名前を追加する
+## ドキュメントにあなたの名前を追加する {#add-your-own-name}
 
 各ドキュメントの最下部には編集者を示すコードセクションがあります。ドキュメントを変更または完成させた後、ここにあなたの名前を追加することを忘れないでください。アバターアイコンは自動的にGitHub IDから取得されます。
 

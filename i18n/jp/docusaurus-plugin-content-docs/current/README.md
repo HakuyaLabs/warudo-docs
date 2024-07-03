@@ -6,14 +6,14 @@ sidebar_position: 10
 
 ![](/doc-img/intro-cover.jpg)
 
-## Warudoって何？
+## Warudoって何？ {#what-is-warudo}
 
 Warudoは、3D VTuberのライブ配信向けに設計されたアバターアニメーションソフトウェアです。
 [Steamワークショップ](https://steamcommunity.com/app/2079120/workshop/)で提供されている様々なアセットを利用できるだけでなく、[ブループリント](blueprints/overview)を使用してアバターのアクションを詳細にカスタマイズしたり、自作のMOD（[環境](modding/environment-mod.md)や[小道具](modding/prop-mod.md)）を導入することができます。さらに、[カスタムスクリプト](modding/mod-sdk#custom-scripts)を使用してソフトウェアの機能を独自に拡張することもできます。
 
 機能満載で柔軟性の高いWarudoは、3D VTuberを次のレベルに引き上げるために必要なすべてを備えています！
 
-## Warudoを選ぶ理由
+## Warudoを選ぶ理由 {#why-warudo}
 
 Warudoは、個人からプロユーザーまで幅広く使える、機能満載の3D VTuber向けソフトウェアです。[様々なモーションキャプチャシステム](mocap/overview.md)をサポートしているため、自宅でも本格的なモーションキャプチャスタジオでも利用が可能です。また、500種類以上の待機アニメーションからキャラクターのポージングを設定したり、ライブ配信プラットフォームとの統合、ノードベースのビジュアルスクリプティングシステムなど、幅広い機能を提供しています。
 
@@ -26,7 +26,7 @@ Warudoは拡張性も非常に高く、Unity互換の3Dアセットをインポ�
 - [Live2D風の腕の揺れを再現](https://twitter.com/hakuyalabs/status/1705754833838281181/) (ブループリントの使用例)
 - [VTuberのライブで3D空間に歌詞を表示](https://twitter.com/lucas_VTuber/status/1714576354983952486/) (スクリーン機能の使用例)
 
-## Warudoは無料ですか？
+## Warudoは無料ですか？ {#is-warudo-free}
 
 **配信活動以外の場合、Warudoを無料で使用できます。** たとえば、モデルのテスト、スクリーンショットの撮影、SNSへの投稿などです（Warudo内で録画されたコンテンツをストリーミング配信することは、配信活動とみなされます）。
 
@@ -37,11 +37,11 @@ Warudoは拡張性も非常に高く、Unity互換の3Dアセットをインポ�
 
 なお、VRChatのパブリックアバターなど、非独占的なVTuberモデルを使用する場合でも、VTuber IPの完全な権利が保持されます。ご自身の使用状況が条件を満たしているか不明な場合は、[info@warudo.app](mailto:info@warudo.app) までお問い合わせください。
 
-## 企業系VTuberをしています。どうすればWarudoを使用できますか？
+## 企業系VTuberをしています。どうすればWarudoを使用できますか？ {#i-am-a-corporate-vtuber-how-can-i-use-warudo}
 
 Steam版のWarudoは、好きなだけ評価およびテストできます。ただし、Warudoをライブ配信で使用する場合には、[Warudo Pro](pro.md)を購入する必要があります。
 
-## 他にも質問があります！
+## 他にも質問があります！ {#i-have-other-questions}
 
 [info@warudo.app](mailto:info@warudo.app)までご連絡いただくか、[Discordコミュニティ](https://discord.gg/warudo)にご参加ください！
 
