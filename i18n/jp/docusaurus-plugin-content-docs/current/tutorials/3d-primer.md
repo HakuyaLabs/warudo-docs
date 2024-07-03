@@ -219,7 +219,7 @@ BlendShapeを「表情」と呼ぶ人がいるかもしれません。しかし�
 混乱を避けるために、ここではBlendShapeと表情をそれぞれの名前で呼ぶことにします。
 :::
 
-## 「パーフェクトシンク（ARKit BlendShape）」とは何ですか？ {#arkit}
+## パーフェクトシンク（ARKit BlendShape）とは何ですか？ {#arkit}
 
 ARKit BlendShapeとは、AppleのARKitフェイストラッキングでサポートされている52個のパラメータを指します。これらのBlendShapeのリストは、[こちら](https://arkit-face-blendshapes.com/)で確認できます。これらのBlendShapeは、まばたき、笑顔、しかめ面、冷笑など、様々な顔の表情をカバーします。
 
