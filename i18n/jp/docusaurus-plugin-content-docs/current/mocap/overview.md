@@ -47,27 +47,27 @@ sidebar_position: 10
 
 ## 設定 {#setup}
 
-There are two ways to set up motion capture in Warudo. The first and the preferred way is to use the **Onboarding Assistant** asset that comes with every scene. Simply click **Basic Setup → Get Started** to start the onboarding process and follow the instructions.
+Warudoでモーションキャプチャを設定する方法は2つあります。推奨される方法は、すべてのシーンに付属する **「初心者ナビ」** アセットを使用することです。 **[基本設定] → [始める]** をクリックし、画面の指示に従ってください。
 
-![](/doc-img/en-getting-started-2.png)
-<p class="img-desc">Setting up motion capture in the onboarding assistant asset.</p>
+![](/doc-img/jp-getting-started-2.png)
+<p class="img-desc">初心者ナビでモーションキャプチャを設定します</p>
 
-After the onboarding process is complete, you can select the relevant motion capture assets to further customize your tracking. For example, if you are using iFacialMocap, you may notice Warudo adds some movement to your character's body when your head moves. If this is not desirable, you can set **Body Movement Intensity** to 0 in the **iFacialMocap Receiver** asset.
+初心者ナビの手順が完了したら、関連するモーションキャプチャアセットを選択して、トラッキングの設定をさらにカスタマイズできます。たとえば、iFacialMocapを使用している場合、頭が動くと同時にキャラクターの身体も動くようになっています。これが望ましくない場合、**iFacialMocap受信機**アセットで**身体の移動幅**を 0 に設定することで、身体の動きを抑えることができます。
 
-![](/doc-img/en-mocap-1.png)
-<p class="img-desc">Adjusting the body movement intensity of iFacialMocap.</p>
+![](/doc-img/jp-mocap-1.png)
+<p class="img-desc">iFacialMocapの体の動きの強さを調整</p>
 
-The second way to set up motion capture is to use **Character → Setup Motion Capture**. This allows you to set up face tracking and/or pose tracking directly. However, some checking steps in the onboarding process are also skipped.
+モーションキャプチャを設定する2つ目の方法は、**[キャラクター] → [モーションキャプチャーの設定]** を使用することです。この設定では、顔やポーズのトラッキングを直接設定できます。ただし、初心者ナビ設定の一部のチェック手順がスキップされます。
 
-![](/doc-img/en-mocap-2.png)
-<p class="img-desc">Setting up motion capture in the character asset.</p>
+![](/doc-img/jp-mocap-2.png)
+<p class="img-desc">キャラクターアセットでモーションキャプチャを設定</p>
 
-This method is useful if you need to set up multiple face tracking or pose tracking systems, since the onboarding assistant always remove the existing motion capture setup when you start a new onboarding process.
+この方法は、複数のフェイストラッキングシステムまたはポーズトラッキングシステムをセットアップする必要がある場合に便利です（新たに初心者ナビで設定を行なうと、既存のモーションキャプチャ設定が削除されてしまうため）。
 
-Whichever method you choose, corresponding tracking blueprints will be generated and added to your scene. For example, if you have chosen iFacialMocap for face tracking and MediaPipe for pose tracking, you will be able to see two blueprints generated: **Face Tracking - iFacialMocap** and **Pose Tracking - MediaPipe**. You can modify these blueprints to customize your tracking.
+どちらの方法を選択しても、対応するトラッキングのブループリントが生成され、シーンに追加されます。たとえば、顔のトラッキングに iFacialMocap を選択し、ポーズのトラッキングに MediaPipe を選択した場合、**「フェイストラッキング - iFacialMocap」** と **「ポーズトラッキング - MediaPipe」** の2つのブループリントが生成されます。これらのブループリントを変更して、トラッキングをカスタマイズできます。
 
 :::caution
-You should almost never create a motion capture asset manually, i.e., by clicking on **Add Asset** and selecting a motion capture asset, such as **iFacialMocap Receiver**. This is because the motion capture asset alone only receives or provides the tracking data, but does not connect the tracking data to your character, which needs to be done by blueprints. The onboarding assistant and the **Setup Motion Capture** function automatically create the necessary blueprints for you.
+**[アセットの追加]** をクリックして、**iFacialMocap受信機**などのモーションキャプチャアセットを手動で作成することはほとんどありません。なぜならモーションキャプチャアセットだけでは、トラッキングデータを受信または送信することしかできず、トラッキングデータをキャラクターに接続できないからです。トラッキングデータの接続はブループリントを介して行なう必要があります。**初心者ナビ**と**モーションキャプチャの設定**機能を使えば、必要なブループリントが自動的に作成されます。
 :::
 
 ## よくある質問 {#FAQ}
