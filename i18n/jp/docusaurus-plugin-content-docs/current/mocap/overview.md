@@ -74,15 +74,15 @@ Warudoでモーションキャプチャを設定する方法は2つあります�
 
 ### キャラクターが動きません
 
-If you are using a motion capture system that requires an external application, such as iFacialMocap, make sure the application is running and the tracking data is being sent to Warudo. Also, make sure your computer's firewall is not blocking Warudo from receiving the tracking data; you may need to add Warudo to the whitelist, or temporarily disable the firewall.
+iFacialMocapなどの外部アプリケーションを必要とするモーションキャプチャシステムを使用している場合は、アプリが実行されており、トラッキングデータが Warudoに送信されていることを確認してください。また、PCのファイアウォールがWarudoによるトラッキングデータの受信をブロックしていないことを確認してください。Warudoをホワイトリストに追加するか、ファイアウォールを一時的に無効にする必要がある場合があります。
 
-You may also want to set your network as a private network, as Windows may block incoming connections from public networks. See [this guide](https://support.microsoft.com/en-us/windows/make-a-wi-fi-network-public-or-private-in-windows-0460117d-8d3e-a7ac-f003-7a0da607448d) for more information.
+Windowsはパブリックネットワークからの着信接続をブロックする可能性があるため、ネットワークをプライベートネットワークとして設定することもできます。詳細については、[このガイド](https://support.microsoft.com/en-us/windows/make-a-wi-fi-network-public-or-private-in-windows-0460117d-8d3e-a7ac-f003-7a0da607448d)を参照してください。
 
-Some motion capture receivers have a **Port** option. Make sure the port number matches the port number in the external application.
+一部のモーションキャプチャレシーバーには**ポート**のオプション設定があります。ポート番号が外部アプリケーションのポート番号と一致していることを確認してください。
 
 ### トラッキングが敏感すぎる / 不安定すぎる
 
-Please go to the tracking blueprint (e.g., **Face Tracking - iFacialMocap**) and locate the **Smooth Rotation List** / **Smooth Position List** / **Smooth Transform** / **Smooth BlendShape List** nodes. Increase the **Smooth Time** value to make the tracking smoother, or decrease the value to make the tracking more responsive.
+トラッキングのブループリント (例: フェイストラッキング - iFacialMocap ) に移動し、**スムーズ回転リスト** / **スムーズ位置リスト** / **スムーズ変換** / **スムーズBlendShapeリスト** ノードを見つけてください。 **[スムーズ時間]** の値を増やすとトラッキングがスムーズになり、値を減らすとトラッキングの応答性が向上します。
 
 <AuthorBar authors={{
   creators: [
