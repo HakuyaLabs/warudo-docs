@@ -21,7 +21,7 @@ sidebar_position: 10
 * [Noitom Axis](./noitom)
 * [StretchSense Glove](./stretchsense)
 * [VMCプロトコル](./vmc)をサポートする外部アプリケーション（例: [VSeeFace](https://www.vseeface.icu/)、 [VirtualMotionCapture](https://vmc.info/)）
-  * VR トラッカーは、[VirtualMotionCapture](https://www.patreon.com/sh_akira)（支援版）を使用することでサポートされます
+  * VRトラッカーは、[VirtualMotionCapture（支援版）](https://www.patreon.com/sh_akira)を使用することでサポートされます
 
 [Warudo Pro](../pro.md)は、次のモーション キャプチャ システムもサポートしています。
 
@@ -31,18 +31,19 @@ sidebar_position: 10
 
 ## どのようなモーションキャプチャシステムを使うべきですか？ {#what-motion-capture-systems-should-i-use}
 
-If you are completely new to 3D VTubing, we recommend starting with [MediaPipe](./mediapipe) for both face tracking and hand tracking. MediaPipe is a motion capture system built into Warudo, and you only need a webcam to use it. If you happen to have an iPhone, we recommend using the [iFacialMocap](./ifacialmocap) app for face tracking instead, as it offers much higher accuracy than MediaPipe, and offloading face tracking to the iPhone also reduces the load on your computer.
+3D VTuberソフトを初めて使用する場合は、顔と手のトラッキングの両方に[MediaPipe](./mediapipe)を使用することをおすすめします。MediaPipeはWarudoに組み込まれているモーションキャプチャシステムで、Webカメラがあれば使用できます。iPhoneをお持ちの場合は、顔のトラッキングに[iFacialMocap](./ifacialmocap)アプリを使用することをおすすめします。MediaPipeよりも精度が高く、顔のトラッキングをiPhoneに任せると、コンピューターの負荷も軽減されます。
 
-If you are looking to improve your tracking quality, here are a few suggestions:
+トラッキングの精度を向上させたい場合は、次の提案も参考にしてください。
 
-* Use an iPhone for face tracking (via the [iFacialMocap](./ifacialmocap) app). This is also the best face tracking solution you can ever get. If you don't have an iPhone, you may consider looking into a used iPhone. As long as it is compatible with Face ID, it should work with iFacialMocap.
+* 顔のトラッキングには iPhone を使用します（[iFacialMocap](./ifacialmocap)アプリ経由）これは、現在利用できる最高のフェイストラッキングソリューションです。iPhoneをお持ちでない場合は、中古のiPhoneを検討してください。Face IDと互換性がある限り、iFacialMocapが動作するはずです。
 
 :::tip
-For best tracking quality, we recommend using an iPhone 12 or newer (iPhone mini also works). Older iPhones may have lower tracking quality.
+最高のトラッキング品質を得るには、iPhone 12以降（iPhone miniも可）の使用をおすすめします。古いiPhoneではトラッキング品質が低下する可能性があります。
 :::
-* If you find MediaPipe hand tracking not accurate enough, you may consider using a [Leap Motion Controller](./leap-motion) for hand tracking. You can use a [neck mount](https://www.etsy.com/market/leap_motion_mounting) to wear it on your neck, so that it can track your hands.
-* If you are looking for a full-body tracking solution, you may consider using [Sony Mocopi](./mocopi) or [VR trackers](./vmc.md). If you have the budget, you may also consider using a mocap suit, such as [Virdyn VDSuit](./virdyn), [Noitom Perception Neuron](./noitom), [Rokoko Smartsuit Pro](./rokoko), or [Xsens MVN Link](./xsens-mvn). You can add finger tracking to these mocap suits by using [StretchSense gloves](./stretchsense).
-* If you are looking for a more professional solution, you may consider using an optical tracking system, such as [Vicon](https://www.vicon.com/), [OptiTrack](https://optitrack.com/), or [Chingmu](https://www.chingmu.com/).
+
+* MediaPipeのハンド トラッキングの精度が十分でないと思われる場合は、ハンドトラッキングに[Leap Motion Controller](./leap-motion)の使用を検討してください。[ネックマウント](https://www.etsy.com/market/leap_motion_mounting)を使用して首に装着し、手をトラッキングすることができます。
+* フルトラッキングソリューションをお探しの場合は、[Sony Mocopi](./mocopi)、または[VRトラッカー](./vmc)の使用を検討してください。予算に余裕がある場合は、[Virdyn VDSuit](./virdyn)、 [Noitom Perception Neuron](./noitom)、 [Rokoko Smartsuit Pro](./rokoko)、 [Xsens MVN Link](./xsens-mvn)などのモーションキャプチャスーツの使用も検討してください。[StretchSense gloves](./stretchsense)を使用すると、これらのモーションキャプチャスーツに指のトラッキングを追加できます。 
+* より専門的なソリューションをお探しの場合は、[VICON](https://www.vicon.com/)、[OptiTrack](https://optitrack.com/)、[Chingmu](https://www.chingmu.com/)などの光学式モーションキャプチャシステムの使用を検討してください。
 
 ## 設定 {#setup}
 
