@@ -4,7 +4,7 @@ sidebar_position: 11
 
 # Warudo Pro
 
-## Warudo Proとは？
+## Warudo Proとは？ {#what-is-warudo-pro}
 
 Warudo Proは、法人ユーザー向けに提供しているWarudoのバージョンです。
 
@@ -14,7 +14,7 @@ Warudo Proの[最近の導入事例はこちら](https://twitter.com/hakuyalabs/
 
 詳細については、[info@warudo.app](mailto:info@warudo.app)までお問い合わせください。
 
-## 私は個人VTuberです。Warudo Proを購入できますか？
+## 私は個人VTuberです。Warudo Proを購入できますか？ {#i-am-an-indie-vtuber-can-i-purchase-warudo-pro}
 
 できます！以下の条件を満たす場合に限り、個人VTuber向けにWarudo Proを特別価格でご提供いたします。
 
