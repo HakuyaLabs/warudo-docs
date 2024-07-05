@@ -34,7 +34,7 @@ Warudoウィンドウの解像度は、Warudoのパフォーマンスに影響�
 
 ## MediaPipeトラッキング {#mediapipe-tracking}
 
-[MediaPipe](../mocap/mediapipe)ハンドトラッキングは、 **[MediaPipe Tracker] → [GPUアクセラレーション]** を有効にしているかどうかに応じて、CPUまたはGPUにかなりの負荷をかける可能性があります。パフォーマンスの問題が発生している場合は、MediaPipeハンドトラッキングをオフにするか、GPUアクセラレーションを無効にし、代わりにCPUトラッキングを使用してください。 
+[MediaPipe](../mocap/mediapipe)ハンドトラッキングは、 **[MediaPipeトラッカー] → [GPUアクセラレーション]** を有効にしているかどうかに応じて、CPUまたはGPUにかなりの負荷をかける可能性があります。パフォーマンスの問題が発生している場合は、MediaPipeハンドトラッキングをオフにするか、GPUアクセラレーションを無効にし、代わりにCPUトラッキングを使用してください。 
 
 ![](/doc-img/jp-mediapipe-gpu-acceleration-1.png)
 <p class="img-desc">MediaPipeのGPUアクセラレーションを無効にする</p>
