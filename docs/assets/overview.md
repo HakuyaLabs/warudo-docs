@@ -20,6 +20,7 @@ The toolbar has the following buttons:
 * **Remove Asset**: Remove the selected asset from the scene.
 * **Duplicate Asset**: Duplicate the selected asset.
 * **Rename Asset**: Rename the selected asset.
+* **Create Group**: Create group to organize asset. You can drag asset to manage the group.
 * **Import Asset**: Import an asset from a JSON string and add it to the scene.
 * **Import Into Selected Asset**: Import an asset from a JSON string and merge it into the selected asset.
 * **Export Asset**: Export the selected asset to a JSON string.
