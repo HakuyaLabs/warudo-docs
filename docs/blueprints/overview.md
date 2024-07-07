@@ -33,7 +33,7 @@ Blueprints in Warudo are not just a novelty; rather, they are a crucial part of 
 :::
 
 :::info
-If you are a developer, you will be happy to find out that you can extend Warudo's blueprint system by adding new node types! Please refer to the [Scripting](http://localhost:3002/docs/scripting/overview) section for more details.
+If you are a developer, you will be happy to find out that you can extend Warudo's blueprint system by adding new node types! Please refer to the [Scripting](../scripting/overview) section for more details.
 :::
 
 ## Interface
