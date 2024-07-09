@@ -267,38 +267,38 @@
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
   },
   "theme.SearchPage.existingResultsTitle": {
-    "message": "Search results for \"{query}\"",
+    "message": "\"{query}\" の検索結果",
     "description": "The search page title for non-empty query"
   },
   "theme.SearchPage.emptyResultsTitle": {
-    "message": "Search the documentation",
+    "message": "ドキュメントを検索する",
     "description": "The search page title for empty query"
   },
   "theme.SearchPage.searchContext.everywhere": {
     "message": "everywhere"
   },
   "theme.SearchPage.documentsFound.plurals": {
-    "message": "1 document found|{count} documents found",
+    "message": "{count} 件のドキュメントが見つかりました",
     "description": "Pluralized label for \"{count} documents found\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.SearchPage.noResultsText": {
-    "message": "No documents were found",
+    "message": "ドキュメントが見つかりませんでした。",
     "description": "The paragraph for empty search result"
   },
   "theme.SearchBar.noResultsText": {
-    "message": "No results"
+    "message": "一致するドキュメントが見つかりませんでした。"
   },
   "theme.SearchBar.seeAllOutsideContext": {
     "message": "See results outside {context}"
   },
   "theme.SearchBar.searchInContext": {
-    "message": "See all results in {context}"
+    "message": "{context} の検索結果をすべて見る"
   },
   "theme.SearchBar.seeAll": {
-    "message": "See all results"
+    "message": "検索結果をすべて見る"
   },
   "theme.SearchBar.label": {
-    "message": "Search",
+    "message": "検索",
     "description": "The ARIA label and placeholder for search button"
   },
   "theme.ErrorPageContent.tryAgain": {
