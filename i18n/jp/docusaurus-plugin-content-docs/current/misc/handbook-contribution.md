@@ -125,6 +125,11 @@ Warudo Handbook左側のナビゲーションバー構造も英語版ファイ�
    **`yarn start:jp`** 日本語版を起動  
    **`yarn start:all`** 異なるポートで複数の言語環境を起動
 
+:::caution
+
+ローカル環境での開発中（`yarn start`での起動）は検索が機能しません。検索関連の動作を確認する際は、 `yarn build` でドキュメントをビルド後、 **`yarn serve`** で起動してください（参考: [docusaurus-search-local](https://github.com/cmfcmf/docusaurus-search-local?tab=readme-ov-file#usage)）  
+:::
+
 これで準備が整い、ローカルマシン上で実行されるWarudo Handbookがブラウザに表示されるはずです。ドキュメント内容を変更して保存すると、ブラウザが自動的にページを更新します。  
 ドキュメント内容を編集して試してみてください！
 
