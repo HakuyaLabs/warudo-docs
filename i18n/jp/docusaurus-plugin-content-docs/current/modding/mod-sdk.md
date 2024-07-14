@@ -31,7 +31,7 @@ SDKをセットアップするには、まずUnityを正しくセットアップ
 
 ## カスタム C# スクリプト {#custom-scripts}
 
-WarudoのModがユニークなのは、[C#のMonoBehaviourスクリプト](https://docs.unity3d.com/ScriptReference/MonoBehaviour.html)を含めることができる点です。これにより、Modにインタラクティブな要素を追加できます。たとえば、キャラクターModにスクリプトを追加してキャラクターの耳をアニメーションさせたり、環境Modにスクリプトを追加して照明を制御したりすることができます。Warudoの組み込みコンポーネントと連携するには、[スクリプト](../scripting/overview)セクションを参照してください。
+WarudoのModがユニークなのは、[C#のMonoBehaviourスクリプト](https://docs.unity3d.com/ScriptReference/MonoBehaviour.html)を含めることができる点です。これにより、Modにインタラクティブな要素を追加できます。たとえば、キャラクターModにスクリプトを追加してキャラクターの耳をアニメーションさせたり、環境Modにスクリプトを追加して照明を制御したりすることができます。Warudoの組み込みコンポーネントと連携するには、[カスタムスクリプト](../scripting/overview)セクションを参照してください。
 
 Modフォルダに配置されたC#スクリプトはコンパイルされ、Modに含まれます。これらのスクリプトを通常のUnityプロジェクトと同様にキャラクターや道具、環境にアタッチすることができます。
 
