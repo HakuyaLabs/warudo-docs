@@ -42,7 +42,7 @@ Modフォルダに配置されたC#スクリプトはコンパイルされ、Mod
 * コンパイル済みDLLは現在サポートされていません。含めることができるのは`.cs`ソースファイルのみです。
 * `UnityEditor` 名前空間を参照するスクリプトはサポートされていません。
 
-Modにスクリプトを含める場合は Mod SettingsウィンドウでLog Levelを **[All]** に設定し **[Clear Console On Build]** のチェックを外すことをおすすめします。のチェックを外すことをおすすめします。
+Modにスクリプトを含める場合は、Mod SettingsウィンドウでLog Levelを **[All]** に設定し **[Clear Console On Build]** のチェックを外すことをおすすめします。
 
 ![](/doc-img/en-mod-13.png)
 
