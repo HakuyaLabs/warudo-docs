@@ -4,7 +4,7 @@ sidebar_position: 0
 
 # 概要
 
-Warudoのスクリプトシステムでは、あなたのVTuber活動向けに新しい[アセット](../assets/overview)と[ノード](../blueprints/overview)を追加するC#コードを記述することで、Warudoの機能を拡張できます。[プラグインMod](plugin-mod)を作成し、カスタムアセットとノードをSteamワークショップで共有することもできます。
+Warudoのスクリプトシステムは、あなたのVTuber活動向けに独自の[アセット](../assets/overview)と[ノード](../blueprints/overview)を追加するC#コードを記述することで、Warudoの機能を拡張できます。[プラグインMod](plugin-mod)を作成し、カスタムアセットとノードをSteamワークショップで共有することもできます。
 
 以下は、Warudoコミュニティによって作成された素晴らしいプラグインの一部です。
 
