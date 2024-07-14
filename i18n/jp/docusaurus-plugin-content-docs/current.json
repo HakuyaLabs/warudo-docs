@@ -32,7 +32,7 @@
     "description": "The label for category Modding in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Scripting": {
-    "message": "スクリプティング",
+    "message": "カスタムスクリプト",
     "description": "The label for category Scripting in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Miscellaneous": {
