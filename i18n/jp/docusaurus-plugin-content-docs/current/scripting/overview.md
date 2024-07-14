@@ -20,7 +20,7 @@ Warudoのスクリプトシステムでは、あなたのVTuber活動向けに�
 たとえば、WarudoのStream Deck連携は、実は組み込みプラグインです。ソースコードは[こちら](https://github.com/HakuyaLabs/WarudoPluginExamples)で公開していますので、参考にしてください。
 :::
 
-Warudoのスクリプトシステムがどのように機能するかを体験していただくために、トリガーされたときにキャラクターにランダムな表現を再生するカスタムノードの簡単な例を示します。
+Warudoのスクリプトシステムがどのように機能するかを体験していただくために、トリガーされたときにキャラクターにランダムな表情を再生するカスタムノードの簡単な例を紹介します。
 
 ![](/doc-img/en-scripting-overview.png)
 
@@ -57,7 +57,7 @@ public class CharacterPlayRandomExpressionNode : Node {
 }
 ```
 
-興味がありますか？ぜひ続きを読んでください！
+興味をそそられましたか？続きをお読みください！
 
 <AuthorBar authors={{
   creators: [
