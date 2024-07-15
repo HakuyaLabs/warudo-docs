@@ -28,7 +28,7 @@
     "description": "The label for category Nodes in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Modding": {
-    "message": "モッディング",
+    "message": "MOD",
     "description": "The label for category Modding in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Scripting": {
