@@ -1,0 +1,46 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.Tutorials": {
+    "message": "Tutorials",
+    "description": "The label for category Tutorials in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Motion Capture": {
+    "message": "Motion Capture",
+    "description": "The label for category Motion Capture in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Assets": {
+    "message": "Assets",
+    "description": "The label for category Assets in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Blueprints": {
+    "message": "Blueprints",
+    "description": "The label for category Blueprints in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Ready-to-Use Blueprints": {
+    "message": "Ready-to-Use Blueprints",
+    "description": "The label for category Ready-to-Use Blueprints in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Nodes": {
+    "message": "Nodes",
+    "description": "The label for category Nodes in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Modding": {
+    "message": "Modding",
+    "description": "The label for category Modding in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Scripting": {
+    "message": "Scripting",
+    "description": "The label for category Scripting in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Scripting API": {
+    "message": "Scripting API",
+    "description": "The label for category Scripting API in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Miscellaneous": {
+    "message": "Miscellaneous",
+    "description": "The label for category Miscellaneous in sidebar tutorialSidebar"
+  }
+}

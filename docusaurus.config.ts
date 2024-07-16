@@ -28,7 +28,7 @@ const config: Config = {
   // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en', 'zh', 'jp'],
+    locales: ['en', 'zh', 'jp', 'ko'],
     localeConfigs: {
       en: {
         label: 'English',
@@ -41,6 +41,10 @@ const config: Config = {
       jp: {
         label: '日本語',
         htmlLang: 'ja',
+      },
+      ko: {
+        label: '한국어',
+        htmlLang: 'ko',
       },
     },
   },
@@ -89,7 +93,7 @@ const config: Config = {
       '@easyops-cn/docusaurus-search-local',
       {
         hashed: true,
-        language: ["en", "zh", "jp"],
+        language: ["en", "zh", "jp", 'ko'],
       },
     ],
   ],
