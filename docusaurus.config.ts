@@ -88,16 +88,6 @@ const config: Config = {
     'docusaurus-plugin-image-zoom'
   ],
 
-  themes: [
-    [
-      '@easyops-cn/docusaurus-search-local',
-      {
-        hashed: true,
-        language: ["en", "zh", "jp", 'ko'],
-      },
-    ],
-  ],
-
   themeConfig:
     {
       image: 'img/favicon.png',
@@ -148,7 +138,21 @@ const config: Config = {
         config: {
           // options you can specify via https://github.com/francoischalifour/medium-zoom#usage
         }
-      }
+      },
+      algolia: {
+        appId: 'UVVN89W9VO',
+        apiKey: '019eab3095bb177f3955cd0fd397921d',
+        indexName: 'warudo',
+        contextualSearch: true,
+        // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
+        externalUrlRegex: 'external\\.com|domain\\.com',
+        // Optional: Algolia search parameters
+        searchParameters: {},
+        // Optional: path for search page that enabled by default (`false` to disable it)
+        searchPagePath: 'search',
+        // Optional: whether the insights feature is enabled or not on Docsearch (`false` by default)
+        insights: false,
+      },
     } satisfies Preset.ThemeConfig,
 };
 
