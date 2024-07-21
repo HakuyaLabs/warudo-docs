@@ -29,6 +29,10 @@ Mocopiアプリに戻り、メニューバーの **[モーション]** をタッ
 
 ![](/doc-img/jp-mocopi-1.png)
 
+Warudoがトラッキングデータを正常に受信できていれば、キャラクターに動きが反映されます。
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BXux7EK-V40?si=Q3dYZyAatuikJ5sA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## キャリブレーション {#calibration}
 
 Mocopiのキャリブレーションは、Mocopiアプリで行います。
