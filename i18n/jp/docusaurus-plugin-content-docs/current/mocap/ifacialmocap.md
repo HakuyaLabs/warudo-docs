@@ -19,7 +19,7 @@ iPhoneがFace IDに対応していない場合でも、A12以上のチップを�
 ## Setup
 
 :::tip
-の IPアドレスがわからない場合は、 **[iFacialMocap受信機]** アセットのプロパティ画面で確認できます。
+PCのIPアドレスがわからない場合は、 **[iFacialMocap受信機]** アセットのプロパティ画面で確認できます。
 
 ![](/doc-img/jp-ifacialmocap-1.png)
 
