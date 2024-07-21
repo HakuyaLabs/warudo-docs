@@ -16,8 +16,6 @@ Mocopiのキャリブレーション設定が完了したら、Mocopiアプリ�
 
 ![](/doc-img/jp-mocopi-2.png)
 
-
-
 :::tip
 
 PCのIPアドレスがわからない場合は、 **[Mocopi Receiver]** アセットのプロパティ画面で確認できます。
