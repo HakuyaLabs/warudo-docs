@@ -21,7 +21,7 @@ In addition to the built-in environments, you can download official and communit
 To set up an environment, simply select a **Source** as the model for the environment.
 
 :::tip
-It is recommended to turn off **Allow Lights To Affect Characters** so that you have more control over the lighting of your character using the [**Directional Light**](light) asset.
+It is recommended to turn off **Allow Lights To Affect Characters** so that you have more control over the lighting of your character using the [**Directional Light**](lights) asset.
 :::
 
 :::tip
