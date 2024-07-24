@@ -23,8 +23,8 @@ sidebar_position: 20
   * Viewport Bounds Random Position: 화면 어디에서나, 즉 카메라에서 소품이 던져지는 것을 시뮬레이션.
   * Screen Edge: 화면 가장자리 어디에서나, 즉 카메라 밖에서 소품이 던져지는 것을 시뮬레이션.
   * Above Character Head: 캐릭터 머리 바로 위.
-  * Scene Object: 다른 소품, 캐릭터, 또는 [앵커](../../assets/anchor)와 같은 화면 객체.
-  * World Position: 화면의 3D 지점.
+  * Scene Object: 다른 소품, 캐릭터, 또는 [앵커](../../assets/anchor)와 같은 씬 객체.
+  * World Position: 씬의 3D 지점.
   
   기본 값인 "Viewport Bounds Random Position"이 우리에게 잘 맞아요.
 * **To** 드롭다운에서 소품이 던져질 위치를 선택할 수 있어요. 다음 옵션 중에서 선택할 수 있어요:
@@ -35,7 +35,7 @@ sidebar_position: 20
   저는 "Human Body Bone"으로 변경하고 "Head" 뼈를 선택할 거예요. 그게 더 만족스러워 보이니까요.
 * **Scale**, **Mass**, **Speed** 그리고 **Gravity** 는 소품의 물리적 속성으로, 캐릭터가 소품에 어떻게 반응할지를 결정해요. 원하는 대로 조정할 수 있어요. 저는 Scale을 2로, Speed를 10으로 변경할 거예요.
 * **Launch Torque**와 **Randomize Launch Rotation**은 소품이 발사될 때의 회전을 결정해요.
-* **Alive Time**은 소품이 화면에 얼마나 오래 남아 있을지를 결정해요.
+* **Alive Time**은 소품이 씬에 얼마나 오래 남아 있을지를 결정해요.
 
 이제 Space를 누르면 소품이 캐릭터의 머리에 던져지고, 캐릭터가 이에 반응해요.
 

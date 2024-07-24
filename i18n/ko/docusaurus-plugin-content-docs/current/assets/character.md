@@ -110,7 +110,7 @@ Warudo에서는 세 가지 유형의 애니메이션이 있어요:
 
   <div className="video-box"><iframe class="bilibili-video" src="//player.bilibili.com/player.html?aid=985941728&bvid=BV1Zt4y1c7Re&cid=843191749&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe></div>
   <p class="img-desc">overlaying animations 데모. 출처: https://www.bilibili.com/video/BV1Zt4y1c7Re </p>
-* Transient animations: blueprint로 트리거되는 일회성 애니메이션. 예를 들어, Twitch 리딤을 받을 때 재생되는 짧은 춤 애니메이션이 이에 해당돼요. 자세한 내용은 [blueprint 튜토리얼](../blueprints/overview)을 참조하세요.
+* Transient animations: blueprint로 트리거되는 일회성 애니메이션. 예를 들어, 트위치 포인트 보상을 받을 때 재생되는 짧은 춤 애니메이션이 이에 해당돼요. 자세한 내용은 [blueprint 튜토리얼](../blueprints/overview)을 참조하세요.
 
 추가적으로 신체 애니메이션 외에도 **Breathing Animation**(호흡 애니메이션)과 **Swaying Animation**(흔들림 애니메이션)을 설정할 수 있으며, **Override Hand Poses**(손 포즈 덮어쓰기)도 설정할 수 있어요. 예를 들어, 캐릭터의 손을 평화 기호와 같은 특정 포즈로 설정할 수 있어요.
 

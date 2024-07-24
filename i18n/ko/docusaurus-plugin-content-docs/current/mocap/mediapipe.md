@@ -10,13 +10,13 @@ sidebar_position: 50
 
 MediaPipe는 Warudo에 내장되어 있어 추가 소프트웨어를 설치할 필요가 없어요. 대부분의 웹캠이 MediaPipe와 호환되지만, 작동에 문제가 있는 경우 아래의 [FAQ](#FAQ) 섹션을 참고하세요.
 
-MediaPipe는 CPU 또는 GPU에서 실행할 수 있어요. 더 나은 성능을 위해 GPU를 사용하는 것이 권장돼요. 기본적으로 MediaPipe는 이미 GPU에서 실행돼요. 대신 CPU를 사용하려면 **MediaPipe Tracker** asset으로 이동하여 **GPU Acceleration**을 비활성화하세요.
+MediaPipe는 CPU 또는 GPU에서 실행할 수 있어요. 더 나은 성능을 위해 GPU를 사용하는 것이 권장돼요. 기본적으로 MediaPipe는 이미 GPU에서 실행돼요. 대신 CPU를 사용하려면 **MediaPipe Tracker** 에셋으로 이동하여 **GPU Acceleration**을 비활성화하세요.
 
 :::tip
 많은 GPU 자원을 사용하는 게임을 할 때는 성능 문제를 피하기 위해 MediaPipe를 CPU로 실행하는 것이 좋을 수 있어요.
 :::
 
-MediaPipe를 손 추적에 사용하는 경우, 당신이 카메라 중앙에 위치하고 있으면서 손이 카메라 뷰에 완전히 보이는지 확인해 주세요. **MediaPipe Tracker** asset에서 **Show Camera**를 활성화하여 카메라 뷰를 볼 수 있어요. 아래 사진처럼 보여야 해요:
+MediaPipe를 손 추적에 사용하는 경우, 당신이 카메라 중앙에 위치하고 있으면서 손이 카메라 뷰에 완전히 보이는지 확인해 주세요. **MediaPipe Tracker** 에셋에서 **Show Camera**를 활성화하여 카메라 뷰를 볼 수 있어요. 아래 사진처럼 보여야 해요:
 
 ![](/doc-img/en-mediapipe-1.png)
 
@@ -28,13 +28,13 @@ MediaPipe를 손 추적에 사용하는 경우, 당신이 카메라 중앙에 �
 
 MediaPipe의 얼굴 추적을 보정하려면:
 * **Character → Motion Capture → Quick Calibration → Calibrate MediaPipe**를 클릭하거나,
-* **MediaPipe Tracker** asset에서 **Calibrate**를 클릭하세요.
+* **MediaPipe Tracker** 에셋에서 **Calibrate**를 클릭하세요.
 
 보정 중에는 정면을 바라보고 머리를 움직이지 않아야 해요. 보정 후에는 자유롭게 머리를 움직일 수 있어요.
 
 ### 손 추적
 
-MediaPipe의 손 추적을 보정하려면 **MediaPipe Tracker** asset에서 **Calibrate Hand Tracking**을 클릭하세요. 손바닥이 카메라를 향하게 하여 귀 옆에 한 손을 올리세요. 다른 손으로 **OK** 버튼을 눌러 보정하세요.
+MediaPipe의 손 추적을 보정하려면 **MediaPipe Tracker** 에셋에서 **Calibrate Hand Tracking**을 클릭하세요. 손바닥이 카메라를 향하게 하여 귀 옆에 한 손을 올리세요. 다른 손으로 **OK** 버튼을 눌러 보정하세요.
 
 ![](/doc-img/en-mediapipe-2.png)
 <p class="img-desc">보정 중에는 손바닥이 카메라를 향하도록 하고, 손가락을 약간 굽힌 채로 손을 편안한 자세로 두세요.</p>
@@ -60,7 +60,7 @@ MediaPipe의 손 추적을 보정하려면 **MediaPipe Tracker** asset에서 **C
 
 ### MediaPipe 트래커 창이 검게 나오거나 "Loading..."에서 멈춰 있어요.".
 
-일부 웹캠은 **GPU 가속**이 활성화된 경우에만 지원되며(e.g.,  [DroidCam](https://play.google.com/store/apps/details?id=com.dev47apps.droidcam\&hl=en\_US\&gl=US\&pli=1)과 같은 IP 카메라), 일부는 **GPU 가속**이 비활성화된 경우에만 지원돼요. **MediaPipe Tracker** asset에서 **GPU 가속**을 전환하여 문제가 해결되는지 확인해 보세요.
+일부 웹캠은 **GPU 가속**이 활성화된 경우에만 지원되며(e.g.,  [DroidCam](https://play.google.com/store/apps/details?id=com.dev47apps.droidcam\&hl=en\_US\&gl=US\&pli=1)과 같은 IP 카메라), 일부는 **GPU 가속**이 비활성화된 경우에만 지원돼요. **MediaPipe Tracker** 에셋에서 **GPU 가속**을 전환하여 문제가 해결되는지 확인해 보세요.
 
 또한, 일부 안티바이러스 소프트웨어가 Warudo의 카메라 접근을 차단할 수 있어요. 안티바이러스 소프트웨어의 카메라 보호 기능을 비활성화하거나 Warudo를 화이트리스트에 추가해 주세요.
 
@@ -72,7 +72,7 @@ MediaPipe의 손 추적을 보정하려면 **MediaPipe Tracker** asset에서 **C
 
 먼저, 웹캠이 실제로 30 FPS 이상으로 작동하고 있는지 확인하세요. [이 웹사이트](https://webcamtests.com/fps)를 사용하여 웹캠의 FPS를 확인할 수 있어요. 웹캠이 낮은 FPS로 작동 중이라면, 방이 너무 어두울 수 있어요. 방의 조명을 잘 조절해 보세요.
 
-웹캠이 30 FPS 이상으로 작동 중이지만, 트래커 창에서 훨씬 낮은 FPS가 표시되는 경우, **MediaPipe Tracker** asset에서 **GPU 가속**을 전환해 보세요.
+웹캠이 30 FPS 이상으로 작동 중이지만, 트래커 창에서 훨씬 낮은 FPS가 표시되는 경우, **MediaPipe Tracker** 에셋에서 **GPU 가속**을 전환해 보세요.
 
 :::tip
 추적 FPS는 보통 15-30 사이에요. 3D 게임을 플레이할 때는 추적 FPS가 약 10까지 떨어질 수 있어요.
