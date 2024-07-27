@@ -21,7 +21,7 @@ sidebar_position: 10
 * [Noitom Axis](./noitom)
 * [StretchSense Glove](./stretchsense)
 * [VMCプロトコル](./vmc)をサポートする外部アプリケーション（例: [VSeeFace](https://www.vseeface.icu/)、 [VirtualMotionCapture](https://vmc.info/)）
-  * VRトラッカーは、[VirtualMotionCapture（支援版）](https://www.patreon.com/sh_akira)を使用することでサポートされます
+  * VRトラッカーは、[VirtualMotionCapture有料版（支援版）](https://www.patreon.com/sh_akira)を使用してもサポートされます。
 
 [Warudo Pro](../pro.md)では、以下のモーションキャプチャシステムもサポートしています。
 
