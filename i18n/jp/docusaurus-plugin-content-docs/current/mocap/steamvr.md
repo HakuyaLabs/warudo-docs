@@ -32,7 +32,7 @@ Warudo で、新しい**SteamVR Prop Tracker**アセットを作成し、トラ�
 
 ## よくある質問 {#FAQ}
 
-よくある質問については、[「概要」](overview#FAQ)、[「顔トラッキングのカスタマイズ」](face-tracking#FAQ)、および[「ポーズトラッキングのカスタマイズ」](body-tracking#FAQ)を参照してください。
+よくある質問については、[「概要」](overview#FAQ)、[「フェイストラッキングのカスタマイズ」](face-tracking#FAQ)、および[「ポーズトラッキングのカスタマイズ」](body-tracking#FAQ)を参照してください。
 
 <AuthorBar authors={{
   creators: [

@@ -57,7 +57,7 @@ MediaPipeのフェイストラッキングは、次の方法で調整できま�
 
 ## よくある質問 {#FAQ}
 
-よくある質問については、[「概要」](overview#FAQ)、[「顔トラッキングのカスタマイズ」](face-tracking#FAQ)、および[「ポーズトラッキングのカスタマイズ」](body-tracking#FAQ)を参照してください。
+よくある質問については、[「概要」](overview#FAQ)、[「フェイストラッキングのカスタマイズ」](face-tracking#FAQ)、および[「ポーズトラッキングのカスタマイズ」](body-tracking#FAQ)を参照してください。
 
 ### MediaPipe トラッカー ウィンドウが黒くなり、「Loading...」のまま動きません
 
