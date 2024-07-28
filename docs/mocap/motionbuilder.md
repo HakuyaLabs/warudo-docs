@@ -8,7 +8,7 @@ sidebar_position: 510
 This feature is only available in [Warudo Pro](../pro).
 :::
 
-Body tracking via [Autodesk MotionBuilder](https://www.rokoko.com/), enabling you to receive motion data from optical motion capture systems (e.g., [Vicon](https://www.vicon.com/), [OptiTrack](https://optitrack.com/)) that has Autodesk MotionBuilder integration.
+Body tracking via [Autodesk MotionBuilder](https://www.autodesk.com/products/motionbuilder/), enabling you to receive motion data from optical motion capture systems (e.g., [Vicon](https://www.vicon.com/), [OptiTrack](https://optitrack.com/)) that has Autodesk MotionBuilder integration.
 
 In addition to character tracking, prop tracking is also supported. For example, you may want to track a chair or a handheld camera using your optical tracking system and stream the motion data to Warudo, animating a chair prop or camera in Warudo accordingly.
 
