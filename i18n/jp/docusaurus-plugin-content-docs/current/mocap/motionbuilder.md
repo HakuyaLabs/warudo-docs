@@ -8,7 +8,7 @@ sidebar_position: 510
 この機能は[Warudo Pro](../pro)でのみ利用可能です。
 :::
 
-[Autodesk MotionBuilder](https://www.rokoko.com/) を介したボディトラッキングにより、Autodesk MotionBuilderが統合された光学式モーションキャプチャシステム（[VICON](https://www.vicon.com/)、[OptiTrack](https://optitrack.com/)など）からモーションデータを受信できるようになります。
+[Autodesk MotionBuilder](https://www.autodesk.com/products/motionbuilder/) を介したボディトラッキングにより、Autodesk MotionBuilderが統合された光学式モーションキャプチャシステム（[VICON](https://www.vicon.com/)、[OptiTrack](https://optitrack.com/)など）からモーションデータを受信できるようになります。
 
 キャラクターのトラッキングに加えて、道具のトラッキングにも対応しています。たとえば、光学トラッキングシステムを使用して椅子や手持ちカメラをトラッキングし、そのモーションデータをWarudoにストリーミングして、それに合わせて椅子のpropやカメラをWarudoでアニメーションさせることができます。
 
