@@ -21,7 +21,7 @@ sidebar_position: 30
   
   온보딩 후, **Character → Motion Capture → Blueprint Navigation → Input Interfaces Animation Settings**를 클릭하여 키보드/터치패드 설정을 조정할 수 있어요.
   
-  키보드와 터치패드는 각 asset을 비활성화하여 개별적으로 끌 수 있어요:
+  키보드와 터치패드는 각 에셋을 비활성화하여 개별적으로 끌 수 있어요:
   
   ![](/doc-img/zh-keyboard-3.webp)
   :::danger
@@ -37,7 +37,7 @@ sidebar_position: 30
 
 ## 트래커 커스터마이징
 
-온보딩 후, 해당 포즈 추적 asset(e.g., MediaPipe Tracker, VMC Receiver)으로 이동하여 추적 데이터를 커스터마이즈할 수 있어요. 다음 옵션들을 사용할 수 있어요:
+온보딩 후, 해당 포즈 추적 에셋(예: MediaPipe Tracker, VMC Receiver)으로 이동하여 추적 데이터를 커스터마이즈할 수 있어요. 다음 옵션들을 사용할 수 있어요:
 
 * **Mirrored Tracking:** 활성화하면 Warudo가 추적 데이터를 미러링해요.
 * **Head Rotation Intensity/Offset:** 머리 회전의 강도와 오프셋을 조정해요.

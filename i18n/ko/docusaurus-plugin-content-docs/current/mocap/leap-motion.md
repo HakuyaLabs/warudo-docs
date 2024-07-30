@@ -16,7 +16,7 @@ Warudo는 Leap Motion Controller가 제공하는 모든 3가지 추적 모드를
 
 ## 보정 {#Calibration}
 
-일반적으로 Leap Motion Controller를 보정할 필요는 없어요. 하지만, **Leap Motion Controller** asset에서 **Controller Position Offset**, **Controller Rotation Offset**, 그리고 **Controller Scale**을 조정하여 추적을 조정할 수 있어요. 추적 시각화를 돕기 위해 화면에 가상 **Leap Motion Controller**가 표시될 거예요.
+일반적으로 Leap Motion Controller를 보정할 필요는 없어요. 하지만, **Leap Motion Controller** 에셋에서 **Controller Position Offset**, **Controller Rotation Offset**, 그리고 **Controller Scale**을 조정하여 추적을 조정할 수 있어요. 추적 시각화를 돕기 위해 씬에 가상 **Leap Motion Controller**가 표시될 거예요.
 
 ![](/doc-img/en-leapmotion-1.png)
 <p class="img-desc">버츄얼 Leap Motion Controller 조정.</p>
@@ -33,13 +33,13 @@ Warudo는 Leap Motion Controller가 제공하는 모든 3가지 추적 모드를
 
 일반적인 질문은 [개요](overview#FAQ) 그리고 [포즈 추적 커스터마이징](body-tracking#FAQ)을 참조 해주세요.
 
-### Leap Motion Tracker asset에서 "Tracker not started"라고 표시돼요.
+### Leap Motion Tracker 에셋에서 "Tracker not started"라고 표시돼요.
 
 최신 [Gemini 소프트웨어](https://leap2.ultraleap.com/gemini-downloads/)를 설치하고 백그라운드에서 실행 중인지 확인해 주세요.
 
 ### 모델의 손목/손가락이 부자연스러워 보여요.
 
-**Leap Motion Tracker** asset에서 **Fix Finger Orientations Weight** 옵션을 조정해 보세요. **Wrist Rotation Offset**과 **Global Finger Rotation Offset** 옵션도 조정해야 할 수도 있어요(왼쪽 체크박스를 선택하여 활성화).
+**Leap Motion Tracker** 에셋에서 **Fix Finger Orientations Weight** 옵션을 조정해 보세요. **Wrist Rotation Offset**과 **Global Finger Rotation Offset** 옵션도 조정해야 할 수도 있어요(왼쪽 체크박스를 선택하여 활성화).
 
 <AuthorBar authors={{
   creators: [

@@ -27,7 +27,7 @@ sidebar_position: 20
 
 ## 트래커 커스터마이징
 
-온보딩 후, 해당 얼굴 추적 asset(e.g., iFacialMocap Receiver, MediaPipe Tracker)으로 이동하여 추적 데이터를 커스터마이즈할 수 있어요. 다음 옵션들을 사용할 수 있어요:
+온보딩 후, 해당 얼굴 추적 에셋(예: iFacialMocap Receiver, MediaPipe Tracker)으로 이동하여 추적 데이터를 커스터마이즈할 수 있어요. 다음 옵션들을 사용할 수 있어요:
 
 * **Mirrored Tracking:** 활성화하면 Warudo가 추적 데이터를 미러링해요.
 * **[BlendShape](../tutorials/3d-primer#blendshape) Sensitivity:** 캐릭터의 얼굴 표정 민감도를 조정해요. 표정이 너무 미세하면 민감도를 높이고, 표정이 너무 과장되면 민감도를 낮추세요.
@@ -55,7 +55,7 @@ sidebar_position: 20
 
 ### 머리를 움직일 때 캐릭터의 몸도 움직여요. 이를 어떻게 비활성화하나요??
 
-이 문제는 모션 캡처 수신 asset의 **Body Movement Intensity** 옵션 때문이에요. 해당 값을 0으로 설정하면 몸 움직임을 비활성화할 수 있어요.
+이 문제는 모션 캡처 수신 에셋의 **Body Movement Intensity** 옵션 때문이에요. 해당 값을 0으로 설정하면 몸 움직임을 비활성화할 수 있어요.
 
 ### 립 싱크를 어떻게 활성화하나요?
 

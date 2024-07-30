@@ -19,7 +19,7 @@ iFacialMocap의 대안으로 [FaceMotion3D](https://apps.apple.com/us/app/facemo
 ## 설정
 
 :::tip
-컴퓨터의 IP를 모르는 경우, **iFacialMocap Receiver** asset의 설정 페이지에서 확인할 수 있어요.
+컴퓨터의 IP를 모르는 경우, **iFacialMocap Receiver** 에셋의 설정 페이지에서 확인할 수 있어요.
 
 ![](/doc-img/en-ifacialmocap-1.png)
 
@@ -46,7 +46,7 @@ FaceMotion3D 앱을 열고, 왼쪽 하단의 **설정(setting)** 아이콘을 �
 
 iFacialMocap의 추적을 보정하려면:
 * **Character → Motion Capture → Quick Calibration → Calibrate iFacialMocap**을 클릭하거나,
-* **iFacialMocap Receiver** asset에서 **Calibrate**를 클릭하세요.
+* **iFacialMocap Receiver** 에셋에서 **Calibrate**를 클릭하세요.
 
 보정 중에는 정면을 바라보고 머리를 움직이지 않아야 해요. 보정 후에는 자유롭게 머리를 움직일 수 있어요.
 

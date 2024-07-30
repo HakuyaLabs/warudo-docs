@@ -244,7 +244,7 @@ IK는 역운동학(Inverse Kinematics)을 의미해요. 애니메이터가 만�
 ![](/doc-img/zh-assets-character.gif)
 <p class="img-desc">출처：https://medium.com/unity3danimation/overview-of-inverse-kinematics-9769a43ba956</p>
 
-Warudo에서는 캐릭터 asset의 **Body IK**와 **Look At IK** 옵션을 조정하여 캐릭터의 팔다리가 목표 위치를 따르거나 목표 위치를 바라보도록 할 수 있어요.
+Warudo에서는 캐릭터 에셋의 **Body IK**와 **Look At IK** 옵션을 조정하여 캐릭터의 팔다리가 목표 위치를 따르거나 목표 위치를 바라보도록 할 수 있어요.
 
 <AuthorBar authors={{
   creators: [

@@ -13,7 +13,7 @@ sidebar_position: 80
 그런 다음, Mocopi 앱에서 설정 페이지로 들어가세요. **External device connection settings**에서 **Transfer format**으로 **mocopi UDP**를 선택하고, IP 주소에는 컴퓨터의 IP 주소를 입력하세요.
 
 :::tip
-컴퓨터의 IP를 모르는 경우, **Mocopi Receiver** asset의 설정 페이지에서 확인할 수 있어요.
+컴퓨터의 IP를 모르는 경우, **Mocopi Receiver** 에셋의 설정 페이지에서 확인할 수 있어요.
 
 ![](/doc-img/en-ifacialmocap-1.png)
 
