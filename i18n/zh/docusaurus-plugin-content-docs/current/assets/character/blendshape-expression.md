@@ -5,7 +5,7 @@ sidebar_position: 10
 
 # 表情
 
-* 导入 VRM 表情：如果模型是 VRM 格式，导入模型内置的所有 VRM [BlendShapeClip ](https://vrm.dev/en/univrm/blendshape/univrm\_blendshape.html)作为表情。
+* 导入 VRM 表情：如果模型是 VRM 格式，导入模型内置的所有 VRM [BlendShapeClip ](https://vrm.dev/en/univrm/blendshape/univrm_blendshape/)作为表情。
 * 生成按键绑定蓝图：根据当前配置好的表情，生成按键绑定蓝图。
 
 :::info
@@ -57,7 +57,7 @@ Alt+Z, Alt+X, Alt+C... Alt+/
           * 最小值：当此表情为激活状态时，受约束 BlendShape 的值不能小于此值。
           * 最大值：当此表情为激活状态时，受约束 BlendShape 的值不能大于此值。
       * 目标材质属性：
-        * 目前该选项仅为兼容 VRM BlendShapeClip 的 [MaterialValueBinding](https://vrm.dev/en/univrm/blendshape/univrm\_blendshape.html#id3)（用来修改模型某材质的属性，比如将衣服材质变透明实现换衣效果）。
+        * 目前该选项仅为兼容 VRM BlendShapeClip 的 [MaterialValueBinding](https://vrm.dev/en/univrm/blendshape/univrm_blendshape/#id3)（用来修改模型某材质的属性，比如将衣服材质变透明实现换衣效果）。
 * 默认 BlendShape 列表：模型默认设置的 BlendShape（除非被动捕数据覆盖）。
   * 列表元素：
     * 目标蒙皮网格：BlendShape 位于的蒙皮网格（Skinned Mesh）。

@@ -29,7 +29,7 @@ sidebar_position: 10
 
 ## 표현 {#expressions}
 
-표현은 얼굴 추적 외에도 캐릭터의 얼굴 표정을 제어하는 방법이에요. 캐릭터 asset은 VRM 표현 ([VRM BlendShapeClips](https://vrm.dev/en/univrm/blendshape/univrm\_blendshape.html)로도 알려져 있음)과 사용자 정의 표현 모두를 지원해요.
+표현은 얼굴 추적 외에도 캐릭터의 얼굴 표정을 제어하는 방법이에요. 캐릭터 asset은 VRM 표현 ([VRM BlendShapeClips](https://vrm.dev/en/univrm/blendshape/univrm_blendshape/)로도 알려져 있음)과 사용자 정의 표현 모두를 지원해요.
 
 온보딩 중에 Warudo는 캐릭터의 모든 VRM 표현을 자동으로 가져오고, 해당 표현에 단축키를 추가하는 blueprint를 생성해요. 또한, **Import VRM Expressions**를 클릭하여 VRM 표현을 수동으로 가져오고,  **Generate Key Binding Blueprint**를 클릭하여 키 바인딩을 위한 blueprint를 생성할 수도 있어요.
 

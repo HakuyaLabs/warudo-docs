@@ -45,9 +45,9 @@ To set up motion capture for your character, please refer to the [Motion Capture
 
 ## 表情 {#expressions}
 
-「表情」可以在面部捕捉的基础上进一步控制角色的面部表情。角色资源支持 VRM 表情（又名 [VRM BlendShapeClips](https://vrm.dev/en/univrm/blendshape/univrm\_blendshape.html)）以及自定义表情。
+「表情」可以在面部捕捉的基础上进一步控制角色的面部表情。角色资源支持 VRM 表情（又名 [VRM BlendShapeClips](https://vrm.dev/en/univrm/blendshape/univrm_blendshape/)）以及自定义表情。
 
-Expressions are a way to control the character's facial expressions on top of your face tracking. The character asset supports both VRM expressions (also known as [VRM BlendShapeClips](https://vrm.dev/en/univrm/blendshape/univrm\_blendshape.html)) and custom expressions.
+Expressions are a way to control the character's facial expressions on top of your face tracking. The character asset supports both VRM expressions (also known as [VRM BlendShapeClips](https://vrm.dev/en/univrm/blendshape/univrm_blendshape/)) and custom expressions.
 
 在新手向导中，Warudo 会自动导入角色的所有 VRM 表情，并生成对应热键的蓝图。你也可以点击**导入 VRM 表情**和**生成按键绑定蓝图**这两个按钮来手动完成对应的操作。
 
