@@ -29,7 +29,7 @@ To set up motion capture for your character, please refer to the [Motion Capture
 
 ## Expressions {#expressions}
 
-Expressions are a way to control the character's facial expressions on top of your face tracking. The character asset supports both VRM expressions (also known as [VRM BlendShapeClips](https://vrm.dev/en/univrm/blendshape/univrm\_blendshape.html)) and custom expressions.
+Expressions are a way to control the character's facial expressions on top of your face tracking. The character asset supports both VRM expressions (also known as [VRM BlendShapeClips](https://vrm.dev/en/univrm/blendshape/univrm_blendshape/)) and custom expressions.
 
 During onboarding, Warudo will automatically import all of the VRM expressions in your character, and generate a blueprint to add hotkeys for them. You can also import VRM expressions manually by clicking **Import VRM Expressions**, and generate a blueprint for key binding by clicking **Generate Key Binding Blueprint**.
 
