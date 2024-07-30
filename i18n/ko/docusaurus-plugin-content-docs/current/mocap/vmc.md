@@ -24,7 +24,7 @@ VR 트래커를 SteamVR에 연결했는지 확인하세요. 그런 다음, Virtu
 
 다음 예시는 [VSeeFace](https://www.vseeface.icu/)를 사용하여 VMC 데이터를 캐릭터에 적용하는 방법을 보여줘요. VMC를 지원하는 다른 소프트웨어도 유사한 방식으로 구성할 수 있어요.
 
-**General settings**에서 **OSC/VMC Protocol → Send datawith OSC/VMC protocol**이 체크되어 있는지 확인하세요. 기본 포트 39539는 Warudo의 VMC 수신기가 사용하는 기본 포트이기도 해요.
+**General settings**에서 **VMC Protocol → Send datawith VMC protocol**이 체크되어 있는지 확인하세요. 기본 포트 39539는 Warudo의 VMC 수신기가 사용하는 기본 포트이기도 해요.
 
 ![](/doc-img/zh-vmc-1.webp)
 

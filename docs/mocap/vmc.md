@@ -24,7 +24,7 @@ Make sure you have connected your VR trackers to SteamVR. Then, open VirtualMoti
 
 The following example demonstrates how to apply VMC data to the character using [VSeeFace](https://www.vseeface.icu/). Other software that supports VMC can be configured in a similar manner.
 
-In **General settings**, make sure **OSC/VMC Protocol → Send datawith OSC/VMC protocol** is checked. The default port 39539 is also the default port that Warudo's VMC receiver uses.
+In **General settings**, make sure **VMC Protocol → Send datawith VMC protocol** is checked. The default port 39539 is also the default port that Warudo's VMC receiver uses.
 
 ![](/doc-img/zh-vmc-1.webp)
 

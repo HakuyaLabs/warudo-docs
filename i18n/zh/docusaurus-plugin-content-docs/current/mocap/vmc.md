@@ -10,7 +10,7 @@ sidebar_position: 80
 
 以下使用 [VSeeFace ](https://www.vseeface.icu/)为例，演示怎样将 VMC 数据应用到角色上。其他支持 VMC 的软件可以通过类似方法配置。
 
-右上角点击设置 → 整体设置，勾选「OSC/VMC协议」->「发送配合OSC/VMC协议的数据」。默认 IP 是本机 IP；默认端口 39539 也是 Warudo 的 VMC 接收器默认接收的端口，所以如果你想将 VSeeFace 的动捕数据发送到在同一台电脑运行的 Warudo，那么这里的设置无需更改。
+右上角点击设置 → 整体设置，勾选「VMC协议」->「发送配合VMC协议的数据」。默认 IP 是本机 IP；默认端口 39539 也是 Warudo 的 VMC 接收器默认接收的端口，所以如果你想将 VSeeFace 的动捕数据发送到在同一台电脑运行的 Warudo，那么这里的设置无需更改。
 
 ![](/doc-img/zh-vmc-1.webp)
 
