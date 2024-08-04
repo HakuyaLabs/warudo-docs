@@ -32,7 +32,7 @@ sidebar_position: 10
 
 表情は、顔のトラッキングに加えてキャラクターの表情を制御する方法です。キャラクターアセットは、 VRM Expression（[VRM BlendShape](https://vrm.dev/en/univrm/blendshape/univrm_blendshape/)）とカスタム表情の両方をサポートしています。
 
-基本設定で、WarudoはキャラクターのすべてのVRM Expressionを自動的にインポートし、それらのホットキーを追加するためのブループリントが生成されます。また、**[VRM表情のインポート]** をクリックしてVRM Expressionを手動でインポートしたり、 **[キーバインディングブループリントの生成]** をクリックしてキーバインディングのブループリントを生成することもできます。
+基本設定で、WarudoはキャラクターのすべてのVRM Expressionを自動的にインポートし、それらのホットキーを追加するためのブループリントが生成されます。また、**[VRM表情のインポート]** をクリックしてVRM Expressionを手動でインポートしたり、 **[キーバインドブループリントの生成]** をクリックしてキーバインドのブループリントを生成することもできます。
 
 :::tip
 `.warudo`モデルを使用している場合でも、GameObjectに`VRMBlendShapeProxy`コンポーネントがあれば、WarudoはVRM Expressionをインポートすることができます。
@@ -202,40 +202,40 @@ Warudoには、3種類のアニメーションがあります。
 
 ## よくある質問 {#FAQ}
 
-### How can I trigger an expression automatically with face tracking?
+### フェイストラッキングで表情を自動的にトリガーするにはどうすればよいですか？
 
-You can use the **Trigger Conditions** feature to trigger an expression automatically. Please refer to the [Trigger Conditions](#trigger-conditions) section for more details.
+**トリガー条件（Trigger Conditions）** 機能を使用して表情を自動的にトリガーすることができます。詳細については、[トリガー条件](#trigger-conditions)セクションを参照してください。
 
-### The model's pose is too aggressive / too soft / the arms are sinking into the body / the arms are too far away from the body.
+### モデルのポーズがアグレッシブすぎる／柔らかすぎる／腕が身体に沈み込んでいる／腕が身体から離れすぎています
 
-Try setting **Animation → Additional Bone Offsets**. The rotation angle of the two shoulder joints actually quite affects the perception of the character's personality!
+**アニメーション → 余分なボーンオフセット** を設定してみてください。両肩関節の回転角度がキャラクターの個性に大きく影響します。
 
 <div style={{display: 'flex', justifyContent: 'space-between', gap: '1rem'}}>
 <div>
 <img src="/jp/doc-img/en-character-10.png"  />
-<p class="img-desc">Additional bone offsets disabled.</p>
+<p class="img-desc">余分なボーンオフセットが無効</p>
 </div>
 <div>
 <img src="/jp/doc-img/en-character-11.png"  />
-<p class="img-desc">Additional bone offsets enabled：LeftShoulder: (10, 0, -10), RightShoulder: (10, 0, 10).</p>
+<p class="img-desc">余分なボーンオフセットが有効：左肩: (10, 0, -10), 右肩: (10, 0, 10)</p>
 </div>
 </div>
 
-### How can I change the hotkey for an expression?
+### 表情のホットキーを変更するにはどうすればよいですか？
 
-Open the **Expression Key Bindings** blueprint and locate the **On Keystroke Pressed** node. Then, modify it as needed. For example, in the original blueprint, pressing Alt+1 will activate the `Joy` expression:
+**表情ボタンのバインド**ブループリントを開き、**[キーボードボタンを押したとき]** ノードを見つけます。そして、必要に応じて変更します。たとえば、元のブループリントでは、Alt+1を押すと`Joy`の表情がアクティブになります。
 
-![](/doc-img/en-expression-1.webp)
+![](/doc-img/jp-expression-1.png)
 
-The following changes the hotkey to Ctrl+Shift+T.
+以下の変更により、ホットキーが Ctrl+Shift+T に変更されます。
 
-![](/doc-img/en-expression-2.webp)
+![](/doc-img/jp-expression-2.png)
 
-### Can I enable an expression for a certain period of time and then automatically disable it after a while?
+### 表情を一定期間有効にし、しばらくすると自動的に無効にすることはできますか？
 
-To do this, enable **Is Transient** on the **Toggle Character Expression** node in the **Expression Key Bindings** blueprint. The duration of the expression will be determined by **Exit Delay** of each BlendShape in the expression.
+これを実現するには、**表情ボタンのバインド**ブループリントの **[キャラクターの表情を切り替え]** ノードで**AutoExit**を有効にします。表情の持続時間は、各BlendShapeの**フェードアウト遅延**によって決まります。
 
-![](/doc-img/en-expression-5.webp)
+![](/doc-img/jp-expression-5.png)
 
 <AuthorBar authors={{
   creators: [
