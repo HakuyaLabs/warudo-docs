@@ -23,10 +23,10 @@ sidebar_position: 10
 
 ## モーションキャプチャ {#mocap}
 
-To set up motion capture for your character, please refer to the [Motion Capture](../mocap/overview#setup) page. Once you have set up motion capture, you can calibrate tracking and access specific parts of the tracking blueprints directly in the character asset.
+キャラクターのモーションキャプチャを設定するには、[モーションキャプチャ](../mocap/overview#setup)ページを参照してください。モーションキャプチャを設定すると、トラッキングのキャリブレーションを行なったり、キャラクターアセット内で特定のトラッキングブループリントにアクセスできるようになります。
 
-![](/doc-img/en-character-1.png)
-<p class="img-desc">Quick calibration and blueprint navigation panels.</p>
+![](/doc-img/jp-character-1.png)
+<p class="img-desc">クイックキャリブレーションとブループリントナビゲーションパネル</p>
 
 ## 表情 {#expressions}
 
