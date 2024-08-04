@@ -186,19 +186,19 @@ Warudoには、3種類のアニメーションがあります。
 
 ## メッシュ
 
-You can toggle meshes and skinned meshes on the model.
+モデル上のメッシュおよびスキンメッシュを切り替えることができます。
 
 :::info
-Note that models exported by [VRoid Studio](https://vroid.com/en/studio) only have two meshes: `Body` and `Face`. More detailed models often split the character's clothes, accessories, tail, animal ears, etc. into separate meshes, for which this feature is useful, such as toggling the character's jacket.
+[VRoid Studio](https://vroid.com/studio)でエクスポートされたモデルには、`Body（身体）`と`Face（顔）`、`Hair（髪）`の3つのメッシュしかないことに注意してください。より詳細なモデルは、キャラクターの服、アクセサリー、尻尾、ケモミミなどを個別のメッシュに分割することが多く、この機能は例えばキャラクターのジャケットを切り替える際に便利です。
 :::
 
 :::tip
-To toggle meshes in blueprints, you can use the **Toggle Character Meshes** node.
+ブループリントでメッシュを切り替えるには、**キャラクターメッシュの切り替え**ノードを使用できます。
 :::
 
 ## スケーリング
 
-You can scale the character by using the **Transform → Scale** property. However, this may break features such as ragdoll, IK, and compatibility with some motion capture systems (e.g., [Leap Motion](../mocap/leap-motion)). If you need to scale the character, we recommend to scale the character in the 3D modeling software instead, i.e., before you have imported the model into Unity or Warudo.
+**変換 → スケール**プロパティを使用して、キャラクターを拡大縮小できます。ただし、これによりラグドール、IK、一部のモーションキャプチャシステム（[Leap Motion](../mocap/leap-motion)）との互換性などの機能が壊れる可能性があります。キャラクターを拡大縮小する必要がある場合は、モデルをUnityやWarudoにインポートする前に、3Dモデリングソフトウェアでスケールを調整することをおすすめします。
 
 ## よくある質問 {#FAQ}
 
