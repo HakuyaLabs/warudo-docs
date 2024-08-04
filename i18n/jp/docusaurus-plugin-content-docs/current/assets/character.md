@@ -172,17 +172,17 @@ Warudoには、3種類のアニメーションがあります。
 
 ## ラグドール
 
-Ragdoll allows your character to be hit by physics objects, and prevent the character from penetrating through objects in the scene.
+ラグドールは、キャラクターが物理オブジェクトに当たることを可能にしたり、キャラクターがシーン内のオブジェクトを貫通するのを防ぎます。
 
-**Muscle Spring** and **Muscle Damper** can be used to control the stiffness of the character's muscles. The greater they are, the stiffer the character's muscles are.
+**筋肉の弾力**と**筋肉ダンパー**を使用して、キャラクターの筋肉の硬さを制御できます。これらの値が大きいほど、キャラクターの筋肉は硬くなります。
 
-To prevent self-penetration, such as the character's hands penetrating through the body, you can enable **Internal Collisions**. For best results, you will need to adjust the colliders manually by clicking **Edit Ragdoll**.
+キャラクターの手が身体を貫通するなどの自己貫通を防ぐために、**内部衝突検出**を有効にすることができます。最良の結果を得るためには、**[ラグドールの編集]** をクリックしてコライダーを手動で調整する必要があります。
 
 :::caution
-Although enabling ragdoll can make the character look more realistic, it can also cause the character to behave in unexpected ways due to glitches in the physics engine. We recommend to only enable ragdoll when you are sure it is necessary.
+ラグドールを有効にすると、キャラクターがよりリアルに見えるようになりますが、物理エンジンの不具合により予期しない動作を引き起こす可能性もあります。ラグドールは必要な場合にのみ有効にすることをおすすめします。
 :::
 
-Note that some nodes temporarily enable ragdoll regardless of the asset setting. For example, the **Throw Prop At Character** node will temporarily enable ragdoll on the character when the prop hits the character.
+一部のノードは、アセット設定に関係なく一時的にラグドールを有効にします。例えば、**キャラクターにアイテムを投げる**ノードは、プロップがキャラクターに当たると一時的にキャラクターのラグドールを有効にします。
 
 ## メッシュ
 
