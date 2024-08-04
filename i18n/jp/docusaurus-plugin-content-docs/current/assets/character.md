@@ -126,13 +126,13 @@ Warudoには、3種類のアニメーションがあります。
 
 ## 視線IK {#look-ik}
 
-Look At IK is used to make the character look at a specified target in the scene, like the camera. This is useful for capturing the perfect selfie!
+視線IKは、キャラクターがシーン内の特定のターゲット（カメラなど）を見るようにするために使用されます。これは完璧な自撮りを撮るのに便利です！
 
 :::tip
-If you just want to maintain eye contact with your audience, we recommend to enable **Look At** when you set up face tracking instead (it is by default enabled). See [Customizing Face Tracking](../mocap/face-tracking) for more details.
+単にリスナーとの目線を合わせたい場合は、代わりにフェイストラッキングの設定時に**ターゲットを見る**を有効にすることをおすすめします（デフォルトで有効になっています）。詳細については、[フェイストラッキング](../mocap/face-tracking) のカスタマイズをご覧ください。
 :::
 
-To use Look At IK, simply enable it and set **Target** to the target that the character should look at. You can adjust the different weights to control how much the character's head, eyes, and body should rotate to look at the target. The **Clamp Weight** options can be used to limit the rotation of the head, eyes, and body. The greater they are, the smaller the range of rotation.
+視線IKを使用するには、設定を有効にし、**ターゲット**をキャラクターが見るべきターゲットに設定するだけです。ウェイトを調整して、キャラクターの頭、目、身体がターゲットを見るためにどの程度回転するかを制御できます。**ウェイトを固定する**オプションは、頭、目、身体の回転を制限するために使用できます。これらの値が大きいほど、回転の範囲は狭くなります。
 
 ## ボディIK {#body-ik}
 
