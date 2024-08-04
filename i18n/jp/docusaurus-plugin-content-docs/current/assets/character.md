@@ -30,59 +30,59 @@ sidebar_position: 10
 
 ## 表情 {#expressions}
 
-Expressions are a way to control the character's facial expressions on top of your face tracking. The character asset supports both VRM expressions (also known as [VRM BlendShapeClips](https://vrm.dev/en/univrm/blendshape/univrm_blendshape/)) and custom expressions.
+表情は、顔のトラッキングに加えてキャラクターの表情を制御する方法です。キャラクターアセットは、 VRM Expression（[VRM BlendShape](https://vrm.dev/en/univrm/blendshape/univrm_blendshape/)）とカスタム表情の両方をサポートしています。
 
-During onboarding, Warudo will automatically import all of the VRM expressions in your character, and generate a blueprint to add hotkeys for them. You can also import VRM expressions manually by clicking **Import VRM Expressions**, and generate a blueprint for key binding by clicking **Generate Key Binding Blueprint**.
+基本設定で、WarudoはキャラクターのすべてのVRM Expressionを自動的にインポートし、それらのホットキーを追加するためのブループリントが生成されます。また、**[VRM表情のインポート]** をクリックしてVRM Expressionを手動でインポートしたり、 **[キーバインディングブループリントの生成]** をクリックしてキーバインディングのブループリントを生成することもできます。
 
 :::tip
-If you are using a `.warudo` model, but there is a `VRMBlendShapeProxy` component on the GameObject, then Warudo will still be able to import the VRM expressions.
+`.warudo`モデルを使用している場合でも、GameObjectに`VRMBlendShapeProxy`コンポーネントがあれば、WarudoはVRM Expressionをインポートすることができます。
 :::
 
-You can expand each expression in the expression list to preview it (**Enter Expression**) and customize its settings.
+表情リストの各表情を展開して、**[キャラクターに表情をフェード]** でプレビューしながら、設定をカスタマイズできます。
 
-![](/doc-img/en-character-2.png)
-<p class="img-desc">Expanding an expression.</p>
+![](/doc-img/jp-character-2.png)
+<p class="img-desc">表情を拡張します</p>
 
-You can set the **Name** of the expression, which is used for identification in the blueprint. You can also set the **Layer** of the expression. When switching expressions, expressions on the same layer will fade out, while expressions on different layers can overlap.
+ブループリント内での識別に使用される表情の **[名前]** を設定できます。表情の **[レイヤー]** を設定することもできます。表情を切り替えると、同じレイヤーの表情はフェードアウトしますが、異なるレイヤーの表情は重ね合わせることができます。
 
 :::info
-When importing VRM expressions, the default BlendShapeClips (i.e. Joy, Angry, Sorrow, Fun/Surprised) in the VRM model will be placed on layer 0, while the BlendShapeClips added by the modeler will be placed on layer 1, 2, 3, etc.
+VRM  Expressionをインポートする場合、VRMモデル内のデフォルトの BlendShape (Joy、Angry、Sorrow、Fun/Surprised) はレイヤー 0 に配置され、モデラーによって追加されたBlendShapeはレイヤー 1、2、3 などに配置されます。
 :::
 
-If an expression already closes your model's eyes, you may want to **Disable Eye Blink Tracking** to prevent the eyes from closing further. Similarly, the **Disable Mouth Tracking** and **Disable Brow Tracking** options can be used to prevent the mouth and brow blendshapes from being controlled by face tracking.
+表情によってモデルの目がすでに閉じている場合は、それ以上目を閉じないようにするために、 **[瞬きトラッキングを無効化]** すると良いでしょう。同様に、**[口元トラッキングを無効にする]** オプションと **[眉毛トラッキングを無効にする]** オプションを使用すると、口と眉のBlendShapeがフェイストラッキングによって制御されるのを防ぐことができます。
 
-The **Target BlendShapes** list contains all of the blendshapes that will be controlled when this expression is active. You can add or remove blendshapes from this list, and customize the **Target Value**, **Enter Duration**, **Enter Easing**, **Enter Delay**, **Exit Duration**, **Exit Easing**, and **Exit Delay** for each blendshape.
+**[ターゲットBlendShapeリスト]** には、この表情がアクティブなときに制御されるすべてのBlendShapeが含まれています。このリストからBlendShapeを追加または削除したり、BlendShapeごとに **[目標値]** 、**[フェード時間]**、**[フェードインイージング]**、**[フェードイン遅延]**、**[フェードアウト時間]**、**[フェードアウトイージング]**、 **[フェードアウト遅延]** をカスタマイズすることができます。
 
-By default, Warudo uses a 0.4s fade-in and fade-out duration when switching expressions. You can customize the **Enter Duration** and **Exit Duration** for each blendshape in **Target BlendShapes**; alternatively, if you want to disable fading altogether, you can enable the **Is Binary** option.
+デフォルトでは、Warudoは表情の切り替え時に0.4秒のフェードインとフェードアウトの遅延を発生させます。各BlendShapeの **[フェードイン遅延]** と **[フェードアウト遅延]** は、**[ターゲットBlendShapeリスト]** からカスタマイズできます。また、フェードを完全に無効にしたい場合は、**[2値のみ]** オプションを有効にします。
 
 ### トリガー条件 {#trigger-conditions}
 
-Expressions are usually triggered by hotkeys, but you can also trigger an expression using just face tracking!
+表情は通常ホットキーによってトリガーされますが、フェイストラッキングだけで表情をトリガーすることもできます！
 
-To set up, add a new entry to the **Trigger Conditions** list. Set up the **Conditions** for your expression trigger, and customize other options as needed. For example, the below settings will trigger the expression when the `mouthSmileLeft` and `mouthSmileRight` blendshapes are both greater than 0.5.
+設定するには、トリガー条件（**Trigger Conditions**）リストに新しいエントリを追加します。表情トリガーの条件（**Conditions**）を設定し、必要に応じてその他のオプションをカスタマイズします。たとえば、以下の設定では、`mouthSmileLeft`と`mouthSmileRight`のBlendShapeの両方が 0.5 より大きい場合に表情をトリガーします。
 
 ![](/doc-img/en-character-4.png)
 
-You can have more than one entry in the **Trigger Conditions** list, and when any of the **Conditions** in an entry are met, the expression will be triggered.
+**Trigger Conditions**リストには、複数のエントリを設定できます。エントリ内のいずれかの条件（**Conditions**）が満たされると、表情がトリガーされます。
 
 :::info
-Note the conditions are based on model blendshapes, not face tracking blendshapes. If you are using an ARKit-compatible model, you can simply select the ARKit blendshapes as the conditions. Otherwise, you may need to find the corresponding model blendshapes that your face tracking uses.
+条件は、フェイストラッキングのBlendShapeではなく、モデルのBlendShapeに基づいていることに注意してください。ARKit対応モデルを使用している場合は、条件としてARKit BlendShapeを選択するだけです。それ以外の場合は、使用しているフェイストラッキングに対応するモデルのBlendShapeを見つける必要がある場合があります。
 :::
 
 ### 高度な設定
 
-The **Target Material Properties** list contains the Unity material properties controlled by this expression. Note you need to know the material name and the property name in advance; you can inspect these in Unity.
+**ターゲットマテリアルプロパティ**リストには、この表情で制御されるUnityマテリアルプロパティが含まれています。マテリアル名とプロパティ名を事前に知っておく必要があることに注意してください。これらはUnityで確認できます。
 
-The **Constrained BlendShapes** list contains all the blendshapes that will be constrained when this expression is active. Constraining blendshapes allows you to precisely control your character's facial expressions, ensuring the transition between blendshapes is always smooth. For example, if you want to make sure your model's mouth does not open more than a certain amount when the expression is active, you can add a new entry to this list, set the **Constrained BlendShape** to the mouth blendshape (e.g., `JawOpen`), and set the **Constrained Value Min** and **Constrained Value Max** to the desired range (e.g., 0 to 0.5).
+**制限付きBlendShape**リストには、この表情がアクティブなときに制限されるすべてのBlendShapeが含まれています。BlendShapeを制限すると、キャラクターの表情を正確に制御し、BlendShape間の遷移が常にスムーズになるようにすることができます。たとえば、表情がアクティブなときにモデルの口が一定量以上開かないようにしたい場合は、このリストに新しいエントリを追加し、**制約されたBlendShape**を口のBlendShape（例: `JawOpen`）に設定し、**制限の最小値**と**制限の最大値**を希望の範囲（例: 0 ～ 0.5）に設定します。
 
-Optionally, you can set the **Constraint BlendShape** to establish a mapping between it and the constrained blendshape. For example, the following settings will make the `JawOpen` blendshape value follow the `Smile` blendshape value such that when `Smile` is 0, `JawOpen` can take from 0 to 1, and when `Smile` is 1, `JawOpen` is constrained from 0 to 0.25.
+オプションとして、**制限BlendShape**を設定して、制約されたBlendShapeとの間にマッピングを確立することができます。例えば、以下の設定では、`JawOpen`のBlendShapeの値が`Smile`のBlendShapeの値に従い、`Smile`が0のときは`JawOpen`が0から1の範囲で変動し、`Smile`が1のときは`JawOpen`が0から0.25の範囲で制限されます。
 
 ![](/doc-img/en-character-3.png)
-<p class="img-desc">Constraining the `JawOpen` blendshape.</p>
+<p class="img-desc">`JawOpen` のBlendShapeを制限します</p>
 
-The **Toggle GameObjects** list contains all the child GameObjects that will be toggled when this expression is active. For example, you can use this to toggle the visibility of a particle effect when the character is smiling.
+**GameObjectを切り替える**リストには、この表情がアクティブなときに切り替えられるすべての子GameObjectが含まれています。例えば、キャラクターが笑っているときにパーティクルエフェクトの表示を切り替えるために使用できます。
 
-Finally, below the expression list, you will find **Default BlendShapes** and **Default Material Properties**, which are used when neither any expression nor face tracking is active.
+最後に、表情リストの下には表情もフェイストラッキングもアクティブでないときに使用される、**デフォルトのBlendShapeリスト**と**既定のマテリアルプロパティ**があります。
 
 ## アニメーション {#animation}
 
