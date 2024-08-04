@@ -136,37 +136,37 @@ Warudoには、3種類のアニメーションがあります。
 
 ## ボディIK {#body-ik}
 
-Body IK is used to make the character's spine or limbs follow a specified target in the scene.
+ボディIKは、キャラクターの背骨や手足がシーン内の特定のターゲットに従うようにするために使用されます。
 
 ![](/doc-img/zh-assets-character.gif)
-<p class="img-desc">Body IK in a nutshell.</p>
+<p class="img-desc">ボディIKの概要</p>
 
-To use Body IK, simply enable it for the spine or a hand/foot, and set **IK Target** to the target that the character should follow. The IK target is usually a [camera](camera), [prop](prop.md), or an [anchor](anchor.md). If you want to create a temporary anchor at the current position of the body part, you can click **Create Temporary IK Target Anchor At Current Position**. When you are done, you can click **Remove Temporary IK Target Anchor** to remove the temporary anchor.
+ボディIKを使用するには、単に背骨または手足に対して設定を有効にし、**IKターゲット**をキャラクターが従うべきターゲットに設定します。IKターゲットは通常、[カメラ](camera)、[道具](prop)、または[アンカー](anchor)です。身体の部位の現在位置に一時的なアンカーを作成したい場合は、**[現在位置に一時Ikターゲットアンカーを作成する]** をクリックします。作業が完了したら、**[一時Ikターゲットアンカーの削除]** をクリックして一時的なアンカーを削除します。
 
 :::tip
-Creating a temporary anchor allows you to fix the model's hands in an ideal position, preventing the hands from drifting left and right due to head movements. This can be quite useful for some poses.
+一時的なアンカーを作成すると、モデルの手を理想的な位置に固定し、頭の動きによって手が左右にずれるのを防ぐことができます。これは、特定のポーズで非常に便利です。
 
 <div style={{display: 'flex', justifyContent: 'space-between', gap: '1rem'}}>
 <div className="video-box"><video controls src="https://user-images.githubusercontent.com/3406505/196039288-aac4e485-c9f9-4686-948e-75f783586b25.mp4" />
-Before
+適用前
 </div>
 
 <div className="video-box"><video controls src="https://user-images.githubusercontent.com/3406505/196039290-13b91459-110d-4706-9c77-3516b1c3b175.mp4" />
-After
+適用後
 </div>
 </div>
 :::
 
-The **Bend Goal Target** and **Bend Goal Weight** options can be used to control the rotation of the elbows and knees. The **Bend Goal Target** is usually an [anchor](anchor.md).
+**肘のターゲット**および**肘のターゲットウェイト**オプションを使用して、肘や膝の回転を制御できます。**肘のターゲット**は通常、[アンカー](anchor)です。
 
 <div style={{display: 'flex', justifyContent: 'space-between', gap: '1rem'}}>
 <div>
 <img src="/jp/doc-img/en-character-8.png"  />
-<p class="img-desc">Bend goal disabled.</p>
+<p class="img-desc">肘のターゲットが無効</p>
 </div>
 <div>
 <img src="/jp/doc-img/en-character-9.png"  />
-<p class="img-desc">Bend goal enabled</p>
+<p class="img-desc">肘のターゲットが有効</p>
 </div>
 </div>
 
