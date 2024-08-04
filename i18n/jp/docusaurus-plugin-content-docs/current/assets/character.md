@@ -86,41 +86,42 @@ VRM  Expressionをインポートする場合、VRMモデル内のデフォル�
 
 ## アニメーション {#animation}
 
-Warudo supports playing animations on your character. Better yet, if you are using a compatible upper body tracking blueprint (e.g., [MediaPipe](../mocap/mediapipe.md), [RhyLive](../mocap/rhylive.md)), animations are automatically blended with motion capture, allowing you to interact with your audience in fun or intimate ways.
+Warudoは、キャラクターのアニメーション再生をサポートしています。さらに、[MediaPipe](../mocap/mediapipe.md)や[RhyLive](../mocap/rhylive.md)などの互換性のある上半身トラッキングブループリントを使用している場合、アニメーションはモーションキャプチャと自動的にブレンドされ、リスナーと楽しく親密な交流をすることができます。
 
 <div className="video-box"><video controls src="https://user-images.githubusercontent.com/3406505/180953465-7b91a347-452d-4c03-b860-45dc58ec0392.mp4" /></div>
-<p class="img-desc">Here, bending of the upper body comes from the idle animation, while the head and hand movements come from motion capture. When tracking of the hands is lost, the avatar's hands smoothly transitions into the idle animation.</p>
+<p class="img-desc">ここでは、上半身の曲げはスタンバイアニメーションから取得され、頭と手の動きはモーションキャプチャから取得されます。手のトラッキングが失われると、アバターの手はスムーズにスタンバイアニメーションに移行します。</p>
 
-In Warudo, there are three types of animations:
+Warudoには、3種類のアニメーションがあります。
 
-* **Idle Animation**: The default animation that plays when no other animations are playing.
+* **スタンバイアニメーション**: 他のアニメーションが再生されていないときに再生されるデフォルトのアニメーション。
 
-  ![](/doc-img/en-character-5.png)
-  <p class="img-desc">Selecting an idle animation.</p>
-* **Overlaying Animations**: Animations overlaid on top of the idle animation.
+  ![](/doc-img/jp-character-5.png)
+  <p class="img-desc">スタンバイアニメーションを選択します</p>
 
-  For example, let's say you like the "Cat" animation and want to use it. However, you also want your character to sit down on a bed. To combine the two animations, you can set **Idle Animation** to a sitting animation, while adding a new entry to the **Overlaying Animations** list, setting the **Animation** to "Cat", and click **Mask Upper Body** to ensure the "Cat" animation only affects the upper body.
+* **オーバーレイアニメーション**: スタンバイアニメーションの上に重ねて再生されるアニメーション。
 
-  ![](/doc-img/en-character-6.png)
-    <p class="img-desc">Combining the "Cat" animation with a sitting animation using overlaying animations.</p>
+例えば、[ネコ] アニメーションが気に入っていて、それを使用したいとします。しかし、キャラクターをベッドに座らせたいとも考えています。この2つのアニメーションを組み合わせるには、**スタンバイアニメーション**を座っているアニメーションに設定し、**オーバーレイアニメーション**リストに新しいエントリを追加して、**アニメーション**を [ネコ] に設定し、**[上半身をマスク]** をクリックして [ネコ] アニメーションが上半身のみに影響するようにします。
+
+  ![](/doc-img/jp-character-6.png)
+    <p class="img-desc">オーバーレイアニメーションを使用して、「ネコ」アニメーションと座っているアニメーションを組み合わせます。</p>
 
   ![](/doc-img/en-character-7.png)
-    <p class="img-desc">The "Cat" animation only affects the upper body.</p>
+    <p class="img-desc">「ネコ」アニメーションは上半身にのみ影響します。</p>
 
-  You can add as many overlaying animations as you want; each layer of animation can be assigned its own **Masked Body Parts**, **Weight** and **Speed**, allowing different parts of the body to play different animations. The lower an animation is in the list, the higher its priority.
+  オーバーレイアニメーションは好きなだけ追加できます。各アニメーションレイヤーには、それぞれの**マスクされた身体の部位**、**ウェイト**、**スピード**を割り当てることができ、身体の異なる部分に異なるアニメーションを再生させることができます。リストの下にあるアニメーションほど優先度が高くなります。
 
   <div className="video-box"><iframe class="bilibili-video" src="//player.bilibili.com/player.html?aid=985941728&bvid=BV1Zt4y1c7Re&cid=843191749&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe></div>
-  <p class="img-desc">Demo of overlaying animations. Source: https://www.bilibili.com/video/BV1Zt4y1c7Re </p>
-* Transient animations: One-shot animations that are triggered by blueprints——for example, a short dance animation that is played when you receive a Twitch redeem. Check out our [blueprint tutorials](../blueprints/overview) for more details.
+  <p class="img-desc">オーバーレイアニメーションのデモ。 出典: https://www.bilibili.com/video/BV1Zt4y1c7Re </p>
+* 一時的なアニメーション：ブループリントによってトリガーされる一回限りのアニメーションです。例えば、Twitchの引き換えを受け取ったときに再生される短いダンスアニメーションなどです。詳細については、[ブループリントのチュートリアル](../blueprints/overview)をご覧ください。
 
-In addition to body animations, you can also set up **Breathing Animation** and **Swaying Animation**, as well as **Override Hand Poses**, i.e., setting the pose of the character's hands to a specific pose, like a peace sign.
+身体のアニメーションに加えて、**呼吸アニメーション**や**揺れ動くアニメーション**、**手のジェスチャーの上書き**も設定できます。例えば、ピースサインのようにキャラクターの手を特定のポーズに設定することができます。
 
-Finally, you can use **Additional Bone Offsets** to make small adjustments to the character's posture; for example, if you want to make the character's head tilt a few degrees to one side.
+最後に、**余分なボーンオフセット**を使用してキャラクターの姿勢を微調整することができます。例えば、キャラクターの頭を数度片側に傾けるなどです。
 
 :::info
-By default, the priority of the idle animation, overlay animations, override hand poses, and [body IK](./#body-ik) are all **lower** than motion capture.
+デフォルトでは、スタンバイアニメーション、オーバーレイアニメーション、手のポーズの上書き、および[ボディIK](#body-ik)の優先度はすべてモーションキャプチャよりも**低く**設定されています。
 
-For example, even if you have set an override hand pose for your right hand, if your right hand is being tracked, say by MediaPipe, the model follows your right hand's pose instead of the override hand pose. To make the override hand pose take priority over motion capture, you can enable **High Priority** in the hand pose settings.
+例えば、右手に対して手のジェスチャーの上書きを設定していても、右手がMediaPipeなどでトラッキングされている場合、モデルは手のジェスチャーの上書きではなく、右手のトラッキングされたジェスチャーに従います。手のジェスチャーの上書きをモーションキャプチャよりも優先させるには、手のジェスチャー設定で**High Priority（高優先度）を有効**にすることができます。
 :::
 
 ## 視線IK {#look-ik}
@@ -140,7 +141,7 @@ Body IK is used to make the character's spine or limbs follow a specified target
 ![](/doc-img/zh-assets-character.gif)
 <p class="img-desc">Body IK in a nutshell.</p>
 
-To use Body IK, simply enable it for the spine or a hand/foot, and set **IK Target** to the target that the character should follow. The IK target is usually a [camera](camera.md), [prop](prop.md), or an [anchor](anchor.md). If you want to create a temporary anchor at the current position of the body part, you can click **Create Temporary IK Target Anchor At Current Position**. When you are done, you can click **Remove Temporary IK Target Anchor** to remove the temporary anchor.
+To use Body IK, simply enable it for the spine or a hand/foot, and set **IK Target** to the target that the character should follow. The IK target is usually a [camera](camera), [prop](prop.md), or an [anchor](anchor.md). If you want to create a temporary anchor at the current position of the body part, you can click **Create Temporary IK Target Anchor At Current Position**. When you are done, you can click **Remove Temporary IK Target Anchor** to remove the temporary anchor.
 
 :::tip
 Creating a temporary anchor allows you to fix the model's hands in an ideal position, preventing the hands from drifting left and right due to head movements. This can be quite useful for some poses.
