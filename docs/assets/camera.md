@@ -86,7 +86,7 @@ If you want to simulate the camera being held by a person, you can enable **Hand
 ## Post Processing Effects {#post-processing}
 
 :::info
-Note that the following post processing effects are not available when Universal RP is enabled in [Warudo Pro](../pro). Instead, you should use the [Post Processing Volume](../ppv) asset.
+Note that the following post processing effects are not available when Universal RP is enabled in [Warudo Pro](../pro). Instead, you should use the [Post Processing Volume](ppv) asset.
 :::
 
 ### Tonemapping & Color Grading
