@@ -61,7 +61,7 @@ Unity HubUnity Hub의 언어는 【Preferences】-【Appearance】에서 변경�
 1. [Unity Download Archive](https://unity.com/releases/editor/archive)로 이동합니다;
 2. **【Unity 2021.X】** 탭에서 【Unity **2021.3.18** (February 1, 2023)】을 찾습니다;
 3. 【Downloads (Win)】을 클릭합니다;
-4. **【Unity Editor (64-bit)】**를 선택합니다;
+4. <b>【Unity Editor (64-bit)】</b>를 선택합니다;
 5. 【 `UnitySetup 64-2021.3.18f1.exe` 】가 다운로드 완료될 때까지 기다립니다. (약 2.3 GiB 크기);
 
 ![](/doc-img/sdk-installation-9.png)

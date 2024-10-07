@@ -6,7 +6,7 @@ sidebar_position: 30
 
 ## Blueprint 커스터마이징
 
-온보딩 과정에서 **Customize Pose Tracking...**을 클릭하여 추적 Blueprint를 커스터마이즈할 수 있어요.
+온보딩 과정에서 <b>Customize Pose Tracking...</b>을 클릭하여 추적 Blueprint를 커스터마이즈할 수 있어요.
 
 ![](/doc-img/en-mocap-4.png)
 <p class="img-desc">포즈 추적 커스터마이징.</p>

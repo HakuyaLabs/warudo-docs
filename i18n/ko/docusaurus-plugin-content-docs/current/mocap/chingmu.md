@@ -46,7 +46,7 @@ Warudo에서 **Chingmu Avatar Rigidbody Receiver** 에셋을 생성하고, **Rig
 
 먼저 Warudo와 Chingmu Avatar에 동일한 모델을 로드했는지 확인하세요.
 
-또한, 모델은 정규화된 뼈대를 가져야 해요. 즉, 모델이 T-포즈일 때 모든 뼈가 회전값이 **(0, 0, 0)**이어야 해요. 자세한 내용은 [이 페이지](../misc/normalizing-model-bones)를 참조해 주세요.
+또한, 모델은 정규화된 뼈대를 가져야 해요. 즉, 모델이 T-포즈일 때 모든 뼈가 회전값이 <b>(0, 0, 0)</b>이어야 해요. 자세한 내용은 [이 페이지](../misc/normalizing-model-bones)를 참조해 주세요.
 
 ### 캐릭터가 움직이지 않아요.
 

@@ -6,7 +6,7 @@ sidebar_position: 20
 
 ## Blueprint 커스터마이징
 
-온보딩 과정에서 **Customize Face Tracking...**을 클릭해 추적 Blueprint를 커스터마이즈할 수 있어요.
+온보딩 과정에서 <b>Customize Face Tracking...</b>을 클릭해 추적 Blueprint를 커스터마이즈할 수 있어요.
 
 ![](/doc-img/en-mocap-3.png)
 <p class="img-desc">얼굴 추적 커스터마이징.</p>
@@ -59,7 +59,7 @@ sidebar_position: 20
 
 ### 립 싱크를 어떻게 활성화하나요?
 
-온보딩 과정에서 **Customize Face Tracking...**을 클릭하고 **Lip Sync**를 활성화하여 립 싱크를 설정할 수 있어요.
+온보딩 과정에서 <b>Customize Face Tracking...</b>을 클릭하고 **Lip Sync**를 활성화하여 립 싱크를 설정할 수 있어요.
 
 온보딩 후에는 **Character → Motion Capture → Blueprint Navigation → Lip Sync Settings**를 클릭하여 립 싱크 설정을 조정할 수 있어요.
 
