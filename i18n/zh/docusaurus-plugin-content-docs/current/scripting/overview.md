@@ -22,10 +22,13 @@ Warudo 的脚本系统允许您通过编写 C# 代码来扩展 Warudo 的功能�
 
 为了让您了解 Warudo 的脚本系统的工作原理，下面是一个自定义节点的简单示例，该节点在触发时角色会播放随机的表情动画：
 
-![](/doc-img/en-scripting-overview.png)
-<p class="img-desc">左边绿色节点：输入；右边绿色节点：输出；下：角色；</p>
+![](/doc-img/zh-scripting-overview.png)
 
-以及其相应的 C# 代码 `暂未翻译`：
+以及其相应的 C# 代码：
+
+:::tip
+若显示编译失败或节点中有文字显示乱码，尝试更改 C# 代码文件的编码格式为 UTF-8。
+:::
 
 ```csharp
 using UnityEngine;
@@ -33,32 +36,38 @@ using Warudo.Core.Attributes;
 using Warudo.Core.Graphs;
 using Warudo.Plugins.Core.Assets.Character;
 
-// Define a custom node type that will be shown in the note palette
-[NodeType(Id = "95cd88ae-bebe-4dc0-b52b-ba94799f08e9", Title = "Character Play Random Expression")]
-public class CharacterPlayRandomExpressionNode : Node {
+// 定义将显示在控制板中的自定义节点类型
+[NodeType(Id = "95cd88ae-bebe-4dc0-b52b-ba94799f08e9", Title = "随机播放角色表情")]
+public class CharacterPlayRandomExpressionNode : Node
+{
 
     [DataInput]
-    public CharacterAsset Character; // Let the user select a character
+    public CharacterAsset 角色; // 让用户选择一个角色资产
 
     [FlowInput]
-    public Continuation Enter() { // When the node is triggered via the "Enter" flow input
-        if (Character.Expressions.Length == 0) return Exit; // If the character has no expressions, exit
+    public Continuation Enter()
+    { //  “入口” 有流输入时触发节点
+        if (角色.Expressions.Length == 0) return Exit; // 如果角色没有表情，则退出
 
-        Character.ExitAllExpressions(); // Exit all current expressions
+        角色.ExitAllExpressions(); // 退出当前表情
 
-        var randomExpression = Character.Expressions[Random.Range(0, Character.Expressions.Length)];
-        Character.EnterExpression(randomExpression.Name, transient: false); // Play a random expression
-        
-        return Exit; // Continue the flow and trigger whatever connected to the "Exit" flow output
+        var randomExpression = 角色.Expressions[Random.Range(0, 角色.Expressions.Length)];
+        角色.EnterExpression(randomExpression.Name, transient: false); // 播放随机表情
+
+        return Exit; // 继续流并触发连接到 “出口” 的所以流输出
     }
-    
+
     [FlowOutput]
     public Continuation Exit;
-    
+
 }
 ```
 
 感兴趣吗？请[继续阅读](creating-your-first-script)！
+
+:::info
+在此节中，“Assets”在未被添加到场景时类比 Unity 中的叫法称其为“资产”，被添加到场景后翻译为“资源”。如，“角色资产导入到了直播场景中”“销毁场景中未被使用的资源”。
+:::
 
 :::tip
 翻译：很显然这个章节的学习需要一些编程基础，如果你拥有C#或Unity基础，学习这些就相当于了解一些API，但如果你连编程都不会，那我建议你先去学习Unity编程。
