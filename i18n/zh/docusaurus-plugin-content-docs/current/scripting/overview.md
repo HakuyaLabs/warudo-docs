@@ -2,6 +2,10 @@
 sidebar_position: 0
 ---
 
+:::info
+在此节中，“Assets”在未被添加到场景时类比 Unity 中的叫法称其为“资产”，被添加到场景后翻译为“资源”。如，“角色资产导入到了直播场景中”“销毁场景中未被使用的资源”。
+:::
+
 # 概述
 
 Warudo 的脚本系统允许您通过编写 C# 代码来扩展 Warudo 的功能，从而将新资产和节点添加到您的直播设置中。您可以通过创建[ Mod（Plugin mod）](plugin-mod)在 Steam 创意工坊上共享您的自定义[资产（Assets）](../assets/overview)和[节点（Nodes）](../blueprints/overview)。
@@ -22,13 +26,10 @@ Warudo 的脚本系统允许您通过编写 C# 代码来扩展 Warudo 的功能�
 
 为了让您了解 Warudo 的脚本系统的工作原理，下面是一个自定义节点的简单示例，该节点在触发时角色会播放随机的表情动画：
 
-![](/doc-img/zh-scripting-overview.png)
+![](/doc-img/zh-scripting-overview.jpg)
 
 以及其相应的 C# 代码：
 
-:::tip
-若显示编译失败或节点中有文字显示乱码，尝试更改 C# 代码文件的编码格式为 UTF-8。
-:::
 
 ```csharp
 using UnityEngine;
@@ -63,15 +64,11 @@ public class CharacterPlayRandomExpressionNode : Node
 }
 ```
 
-感兴趣吗？请[继续阅读](creating-your-first-script)！
-
-:::info
-在此节中，“Assets”在未被添加到场景时类比 Unity 中的叫法称其为“资产”，被添加到场景后翻译为“资源”。如，“角色资产导入到了直播场景中”“销毁场景中未被使用的资源”。
-:::
-
 :::tip
-翻译：很显然这个章节的学习需要一些编程基础，如果你拥有C#或Unity基础，学习这些就相当于了解一些API，但如果你连编程都不会，那我建议你先去学习Unity编程。
+若显示编译失败或节点中有文字显示乱码，尝试更改 C# 代码文件的编码格式为 UTF-8。
 :::
+
+感兴趣吗？请[继续阅读](creating-your-first-script)！
 
 <AuthorBar authors={{
 creators: [
