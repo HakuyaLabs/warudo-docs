@@ -5,13 +5,11 @@ sidebar_position: 0
 
 # 概述
 
-:::info
+:::tip
 此章节学习需要一些 C# 编程基础，英文文档对初学者理解有些困难，我在翻译中添加了一些额外教程。
-
-在此节中，“Assets”在未被添加到场景时类比 Unity 中的叫法称其为“资产”，被添加到场景后翻译为“资源”。如，“角色资产导入到了直播场景中” “销毁场景中未被使用的资源”。
 :::
 
-Warudo 的脚本系统允许您通过编写 C# 代码来扩展 Warudo 的功能，从而将新资产和节点添加到您的直播设置中。您可以通过创建[ Mod（Plugin mod）](plugin-mod)在 Steam 创意工坊上共享您的自定义[资产（Assets）](../assets/overview)和[节点（Nodes）](../blueprints/overview)。
+Warudo 的脚本系统允许您通过编写 C# 代码来扩展 Warudo 的功能，从而将新资源和节点添加到您的直播设置中。您可以通过创建[ Mod（Plugin mod）](plugin-mod)在 Steam 创意工坊上共享您的自定义[资源（Assets）](../assets/overview)和[节点（Nodes）](../blueprints/overview)。
 
 这是 Warudo 社区创建的一些精彩插件：
 
@@ -22,7 +20,7 @@ Warudo 的脚本系统允许您通过编写 C# 代码来扩展 Warudo 的功能�
 * [Streamer.bot 集成](https://steamcommunity.com/sharedfiles/filedetails/?id=3260939914&searchtext=)
 
 :::tip
-**Warudo 在构建时考虑了自定义脚本。** 事实上，Warudo 的全部功能都是与创建自定义节点、资产和插件时可用的相同 API（`Warudo.Core`命名空间）构建的。
+**Warudo 在构建时考虑了自定义脚本。** 事实上，Warudo 的全部功能都是与创建自定义节点、资源和插件时可用的相同 API（`Warudo.Core`命名空间）构建的。
 
 例如，Warudo 中的 Stream Deck 集成实际上是一个内置插件！我们在[此处](https://github.com/HakuyaLabs/WarudoPluginExamples)提供了其源代码供您参考。
 :::
@@ -46,7 +44,7 @@ public class CharacterPlayRandomExpressionNode : Node
 {
 
     [DataInput]
-    public CharacterAsset 角色; // 让用户选择一个角色资产
+    public CharacterAsset 角色; // 让用户选择一个角色资源
 
     [FlowInput]
     public Continuation Enter()
