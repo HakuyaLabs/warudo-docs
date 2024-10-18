@@ -31,7 +31,7 @@ Unity Hub는 서로 다른 버전의 Unity Editor와 그 버전의 프로젝트�
 로그인 후, Unity Hub는 자동으로 최신 장기 지원(LTS) 버전의 Unity Editor를 다운로드하라고 제안해요.
 하지만 Warudo는 이 버전을 사용하지 않으니, **Skip installation**를 클릭하는 것이 좋습니다.
 
-만약 해당 버전을 설치하고 싶다면, 설치 경로를 `...\<version>` (예를 들어, `D:\Softwares\Unity\2022.3.17f1`)로 변경하는 것을 강력히 권장해요.  
+만약 해당 버전을 설치하고 싶다면, 설치 경로를 `...\<version>` (예를 들어, `D:\Softwares\Unity\2021.3.18f1`)로 변경하는 것을 강력히 권장해요.  
 이렇게 하면 **여러 버전**의 Unity Editor를 더 편리하게 관리할 수 있고, 기본 설치 경로인 `C:\Program Files\Unity\Hub\Editor`를 사용하지 않게 됩니다.
 
 ![](/doc-img/sdk-installation-3.png)
@@ -97,7 +97,7 @@ Unity에 Warudo SDK를 설정하는 방법에는 두 가지가 있어요:
 
 [Warudo SDK 0.12.0 Modding Project.zip](https://docs.warudo.app/sdk/Warudo%20SDK%200.12.0%20Modding%20Project.zip)
 
-1. 위의 zip 파일을 **다운로드**한 후, 내용을 원하는 위치에 **압축 해제**하세요. 예를 들어, `D:\Softwares\Unity\2022.3.17f1\Projects\WarudoModding` 같은 경로로 해제할 수 있어요.
+1. 위의 zip 파일을 **다운로드**한 후, 내용을 원하는 위치에 **압축 해제**하세요. 예를 들어, `D:\Softwares\Unity\2021.3.18f1\Projects\WarudoModding` 같은 경로로 해제할 수 있어요.
 2. Unity Hub에서 **"Add"** 버튼을 클릭하고, 위에서 선택한 폴더를 선택하세요.
 3. 그 후 Unity가 프로젝트를 실행할 때까지 기다리세요. 프로젝트를 처음 열 때 Unity가 프로젝트를 설정하는 데 5-10분 정도 걸릴 수 있어요.
 
