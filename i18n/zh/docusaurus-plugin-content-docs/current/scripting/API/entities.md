@@ -37,30 +37,31 @@ sidebar_position: 2
     - **插件：** 当 Warudo 在启动时加载插件或热重载插件时调用。
     - **结构体：** 在创建父实体时调用，或者当用户将新的结构体添加到结构体数组时调用。
 - **`OnDestroy()`:** 在实体被销毁时调用。您可以在这里释放资源。
-    - **Assets:** Called when the asset is removed from the scene by the user, or when the scene is unloaded.
-    - **Nodes:** Called when the node is removed from the blueprint by the user, or when the scene is unloaded. Nodes are always destroyed _after_ assets.
-- **`Deserialize(TSerialized data)`:** Called when the entity is deserialized from a saved state. For example, this method is called on an asset when the scene is just opened and loaded. _You usually do not need to override this method._
-- **`Serialize()`:** Called when the entity needs to be serialized to a saved state. For example, this method is called on an asset when the scene is about to be saved, or need to be sent to the editor. _You usually do not need to override this method._
+    - **资产：** 当用户从场景中删除资产或卸载场景时调用。
+    - **节点：** 当用户从蓝图中删除节点或卸载场景时调用。节点总是在资产之后销毁。
+- **`Deserialize(TSerialized data)`:** 实体从存档状态转出时调用。例如，当刚刚打开并加载场景时，将对资产调用此方法。_您通常不需要调用此方法。_
+- **`Serialize()`:** 当实体需要转为存档状态时调用。例如，当场景即将保存或需要发送到编辑器时，将对资产调用此方法。_您通常不需要调用此方法。_
 
-Assets, nodes, and plugins have extra lifecycle stages:
+资产、节点和插件拥有另外几个生命周期阶段：
 
-- **`OnUpdate()`:** Called every frame when the entity is not destroyed. This is similar to Unity's `Update()` method.
-  - `OnPreUpdate()` and `OnPostUpdate()` are also provided. They are called before and after `OnUpdate()`, respectively.
-- **`OnLateUpdate()`:** Called every frame after `OnUpdate()`. This is similar to Unity's `LateUpdate()` method.
-- **`OnFixedUpdate()`:** Called every fixed frame. This is similar to Unity's `FixedUpdate()` method.
-- **`OnEndOfFrame()`:** Called at the end of the frame. This is similar to using Unity's [`WaitForEndOfFrame` coroutine](https://docs.unity3d.com/ScriptReference/WaitForEndOfFrame.html).
-- **`OnDrawGizmos()`:** Called when the entity should draw gizmos. This is similar to Unity's `OnDrawGizmos()` method.
+- **`OnUpdate()`:** 在实体未销毁时每一帧调用。这类似于 Unity 的 `Update()` 方法。
+  - `OnPreUpdate()` 和 `OnPostUpdate()` 分布在 `OnUpdate()` 之前和之后调用。
+- **`OnLateUpdate()`:** 在 `OnUpdate()` 之后的每一帧调用 。这类似于 Unity 的 `LateUpdate()` 方法。
+- **`OnFixedUpdate()`:** 在每个固定帧调用。这类似于 Unity 的  `FixedUpdate()` 方法。
+- **`OnEndOfFrame()`:** 在帧末调用。这类似于使用 Unity 的 [`WaitForEndOfFrame`](https://docs.unity3d.com/ScriptReference/WaitForEndOfFrame.html)。
+- **`OnDrawGizmos()`:** 当实体应绘制 Gizmo 时调用。这类似于 Unity 的 `OnDrawGizmos()` 方法。
 
 :::info
-The update order is as follows: plugins → assets → nodes.
+更新遵循以下顺序：插件 → 资产 → 节点。
 :::
 
-You can override these lifecycle methods to implement custom behavior for your entities. For example, if you want to run something on every frame, override the `OnUpdate()` method.
+您可以调用这些生命周期方法，以更方便地为实体增加自定义行为。例如，要在每一帧上运行某些内容，就可以调用 `OnUpdate()` 方法。
 
 <AuthorBar authors={{
 creators: [
 {name: 'HakuyaTira', github: 'TigerHix'},
 ],
 translators: [
+{name: 'Eco', github: 'EcoFur'},
 ],
 }} />
