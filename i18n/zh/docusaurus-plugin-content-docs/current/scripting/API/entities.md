@@ -21,7 +21,7 @@ sidebar_position: 2
 
 实体实例化后，Warudo 会自动为其分配一个 UUID（唯一标识符），此 UUID 用于标识场景中的实体，并与场景一起保存。您也可以通过 `Id` 属性获取 UUID。
 
-实体类可以包含常规 C# 字段和方法。但是，要与 Warudo 主窗口场景交互，您需要在实体中创建 [**端口和触发器**](ports-and-triggers)。所有实体都可以具有 [数据输入端口](ports-and-triggers#data-input-ports) 和 [触发器](ports-and-triggers#triggers)，而节点还可以具有 [数据输出端口](ports-and-triggers#data-output-ports) 、[流输入端口](ports-and-triggers#flow-input-ports) 和 [流输出端口](ports-and-triggers#flow-output-ports)。
+实体类可以包含常规 C# 字段和方法。但是，要与 Warudo 主窗口场景交互，您需要在实体中创建 [**端口和触发器**](ports-and-triggers)。所有实体都可以具有 [数据输入端口（Data input）](ports-and-triggers#data-input-ports) 和 [触发器（Trigger）](ports-and-triggers#triggers)，而节点还可以具有 [数据输出端口（Data output）](ports-and-triggers#data-output-ports) 、[流输入端口（Fliw input）](ports-and-triggers#flow-input-ports) 和 [流输出端口（Flow output）](ports-and-triggers#flow-output-ports)。
 
 ![](/doc-img/en-custom-node-1.png)
 
