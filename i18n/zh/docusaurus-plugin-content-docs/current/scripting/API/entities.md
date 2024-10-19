@@ -12,7 +12,7 @@ sidebar_position: 2
 - **结构数据：** 继承 `StructuredData` 来创建新的 [结构体](structured-data) 。结构体是一种复杂的数据类型，可用作节点、资产或插件中的“嵌入式”数据输入。
 
 :::info
-在创建您的[第一个脚本教程](../creating-your-first-script.md)中，我们创建了一个名为 `HelloWorldNode` 的自定义节点和一个名为 的 `CookieClickerAsset` 自定义资产。
+在[创建您的第一个脚本教程](../creating-your-first-script.md)中，我们创建了一个名为 `HelloWorldNode` 的自定义节点和一个名为 的 `CookieClickerAsset` 自定义资产。
 :::
 
 :::tip
