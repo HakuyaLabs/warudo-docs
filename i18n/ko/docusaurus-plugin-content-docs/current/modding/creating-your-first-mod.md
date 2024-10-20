@@ -17,13 +17,13 @@ Unity를 사용해 본 경험이 없다면, Unity 에디터에 익숙해지기 �
 :::
 
 
-## Tutorial
+## 튜토리얼
 
 새로운 모드를 만들려면 메뉴 바에서 **Warudo → New Mod**를 선택하세요:
 
 ![](/doc-img/en-mod-sdk-3.webp)
 
-**Mod Name**에 "WhiteCube"을 입력하고 **Create Mod!**을 클릭하세요:
+**Mod Name**에 "WhiteCube"을 입력하고 <b>Create Mod!</b>을 클릭하세요:
 
 ![](/doc-img/en-mod-1.png)
 
