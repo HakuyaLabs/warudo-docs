@@ -31,7 +31,7 @@ Unity Hub 是用于管理不同版本的 Unity Editor 和不同版本的项目�
 登录后会自动建议你下载最新的长期支持版本 (Long-Term Support, LTS) Unity Editor，  
 Warudo 不使用该版本，建议点击 **Skip installation**。  
 
-但是如果你确实想要安装该版本，也强烈建议将安装路径更改为 `...\<版本号>` （例如 `D:\Softwares\Unity\2022.3.17f1`），  
+但是如果你确实想要安装该版本，也强烈建议将安装路径更改为 `...\<版本号>` （例如 `D:\Softwares\Unity\2021.3.18f1`），  
 更方面后续管理**多版本**的 Unity Editor，  
 而**不要**使用默认的安装路径 `C:\Program Files\Unity\Hub\Editor` 。
 
@@ -99,7 +99,7 @@ Warudo 不使用该版本，建议点击 **Skip installation**。
 
 [Warudo SDK 0.12.0 Modding Project.zip](https://docs.warudo.app/sdk/Warudo%20SDK%200.12.0%20Modding%20Project.zip)
 
-1. **下载** 以上项目压缩包并将内容 **解压** 到自定义位置，例如 `D:\Softwares\Unity\2022.3.17f1\Projects\WarudoModding` ；
+1. **下载** 以上项目压缩包并将内容 **解压** 到自定义位置，例如 `D:\Softwares\Unity\2021.3.18f1\Projects\WarudoModding` ；
 2. 打开 【Unity Hub】，在【Projects】中选择【Open】；
 3. 找到刚才解压出来的文件夹并且打开，点击【Open】；
 4. 此时，【Warudo SDK 0.12.0 Modding Project】就会出现在 Projects 列表中，并且分配正确的版本号；  
