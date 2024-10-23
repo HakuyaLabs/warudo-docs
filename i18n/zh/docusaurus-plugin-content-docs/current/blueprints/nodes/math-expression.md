@@ -40,7 +40,6 @@ repeat => Mathf.Repeat(float, float)
 pingpong => Mathf.PingPong(float, float)
 ilerp => Mathf.InverseLerp(float, float, float)
 rand => Random.Range(float, float)
-randint => Random.Range(int, int)
 ```
 
 ## 详细表格
@@ -102,12 +101,6 @@ randint => Random.Range(int, int)
 | `pingpong(t, length)` | `Mathf.PingPong(t, length)`      | 对值 t 进行乒乓操作，使其永远不大于 length 且永远不小于 0。 |
 | `ilerp(from, to, t)`  | `Mathf.InverseLerp(from, to, t)` | 计算产生范围 \[from, to\] 内插值值的线性参数 t。            |
 | `rand(min, max)`      | `Random.Range(min, max)`         | 返回一个介于 min（含）和 max（含）之间的随机浮点数。        |
-| `randint(min, max)`   | `Random.Range(min, max)`         | 返回一个介于 min（含）和 max（不含）之间的随机整数。        |
-
-## URL
-
-更多细节，可以查看：  
-[HakuyaLabs/Mathfs: Expanded Math Functionality for Unity](https://github.com/HakuyaLabs/Mathfs)
 
 <AuthorBar authors={{
   creators: [
