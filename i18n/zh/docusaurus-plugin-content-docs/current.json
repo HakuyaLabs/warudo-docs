@@ -43,6 +43,10 @@
     "message": "自定义脚本",
     "description": "The label for category Scripting in sidebar tutorialSidebar"
   },
+  "sidebar.tutorialSidebar.category.Scripting API": {
+    "message": "脚本API",
+    "description": "The label for category Scripting in sidebar tutorialSidebar"
+  },
   "sidebar.tutorialSidebar.category.Miscellaneous": {
     "message": "其他",
     "description": "The label for category Miscellaneous in sidebar tutorialSidebar"
