@@ -122,7 +122,7 @@ public class CookieClickerAsset : Asset {
     [Description("Increase me to get more cookies each time!")]
     public int Multiplier = 1;
 
-    private int count;
+    private long count;
 
     [Trigger]
     public void GimmeCookie() {
