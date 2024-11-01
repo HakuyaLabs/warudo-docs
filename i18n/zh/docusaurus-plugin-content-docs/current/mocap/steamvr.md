@@ -7,13 +7,13 @@ sidebar_position: 68
 
 # SteamVR
 
-通过[SteamVR](https://store.steampowered.com/app/250820/SteamVR/)的解决方案进行VR追踪。
+通过 [SteamVR](https://store.steampowered.com/app/250820/SteamVR/) 的解决方案进行VR追踪。
 
 ## 设置
 
 ### 角色追踪
 
-Warudo 目前支持6点角色追踪。将[姿态追踪](body-tracking)设置为 SteamVR 后，转到 **SteamVR 角色追踪器** 并点击 **配置/校准** 按钮。您将看到一个追踪器列表，您可以将其分配给不同的身体部位。然后，您将需要摆 T-pose 来校准追踪器。
+Warudo 目前支持 6 点角色追踪。将[姿态追踪](body-tracking)设置为 SteamVR 后，转到 **SteamVR 角色追踪器** 并点击 **配置/校准** 按钮。您将看到一个追踪器列表，您可以将其分配给不同的身体部位。然后，您将需要摆 T-pose 来校准追踪器。
 
 :::tip
 我们将来会添加对 Elbow、Knee 和 Chest 追踪器的支持。
@@ -26,12 +26,12 @@ Warudo 目前支持6点角色追踪。将[姿态追踪](body-tracking)设置为 
 在 Warudo 中，创建新的 **SteamVR 道具追踪器** ，然后选择要进行追踪的 VR **设备** 。您可能还希望选择 **参考系** 作为您的角色资源。对于 **目标资源** ，选择您想控制的相机资源。
 
 :::tip
-如果要在蓝图中访问道具追踪数据，可以使用 **获取SteamVR道具追踪器数据** 节点。
+如果要在蓝图中访问道具追踪数据，可以使用 **获取 SteamVR 道具追踪器数据** 节点。
 :::
 
 ## 访问原始追踪器数据
 
-如果要在蓝图中访问原始追踪器数据，可以使用 **获取SteamVR设备数据** 。此节点会返回指定 VR 设备（如追踪器、控制器、HMD）的位置和旋转。
+如果要在蓝图中访问原始追踪器数据，可以使用 **获取 SteamVR 设备数据** 。此节点会返回指定 VR 设备（如追踪器、控制器、HMD）的位置和旋转。
 
 ## FAQ
 

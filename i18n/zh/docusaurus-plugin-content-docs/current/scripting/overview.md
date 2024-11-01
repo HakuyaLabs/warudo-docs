@@ -20,7 +20,7 @@ Warudo 的脚本系统允许您通过编写 C# 代码来扩展 Warudo 的功能�
 * [Streamer.bot 集成](https://steamcommunity.com/sharedfiles/filedetails/?id=3260939914&searchtext=)
 
 :::tip
-**Warudo 在构建时考虑了自定义脚本。** 事实上，Warudo 的全部功能都是与创建自定义节点、资源和插件时可用的相同 API（`Warudo.Core`命名空间）构建的。
+**Warudo 在构建时考虑了自定义脚本。** 事实上，Warudo 的全部功能都是与创建自定义节点、资源和插件时可用的相同 API（`Warudo.Core` 命名空间）构建的。
 
 例如，Warudo 中的 Stream Deck 集成实际上是一个内置插件！我们在[此处](https://github.com/HakuyaLabs/WarudoPluginExamples)提供了其源代码供您参考。
 :::
@@ -44,17 +44,17 @@ public class CharacterPlayRandomExpressionNode : Node
 {
 
     [DataInput]
-    public CharacterAsset 角色; // 让用户选择一个角色资源
+    public CharacterAsset Character; // 让用户选择一个角色资源
 
     [FlowInput]
     public Continuation Enter()
     { //  “入口” 有流输入时触发节点
-        if (角色.Expressions.Length == 0) return Exit; // 如果角色没有表情，则退出
+        if (Character.Expressions.Length == 0) return Exit; // 如果角色没有表情，则退出
 
-        角色.ExitAllExpressions(); // 退出当前表情
+        Character.ExitAllExpressions(); // 退出当前表情
 
-        var randomExpression = 角色.Expressions[Random.Range(0, 角色.Expressions.Length)];
-        角色.EnterExpression(randomExpression.Name, transient: false); // 播放随机表情
+        var randomExpression = Character.Expressions[Random.Range(0, Character.Expressions.Length)];
+        Character.EnterExpression(randomExpression.Name, transient: false); // 播放随机表情
 
         return Exit; // 继续流并触发连接到 “出口” 的所以流输出
     }
@@ -64,10 +64,6 @@ public class CharacterPlayRandomExpressionNode : Node
 
 }
 ```
-
-:::tip
-若显示编译失败或节点中有文字显示乱码，尝试更改 C# 代码文件的编码格式为 UTF-8。
-:::
 
 感兴趣吗？请[继续阅读](creating-your-first-script)！
 

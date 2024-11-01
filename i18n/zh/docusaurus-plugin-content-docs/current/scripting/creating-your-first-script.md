@@ -13,20 +13,13 @@ sidebar_position: 1
 <b>Let's do it!</b>
 
 :::info
-中国社区：[QQ](http://warudo.app/qq)，[Bilibili](https://space.bilibili.com/3494370867153597)。 ~~如果您有任何问题，我们的 [Discord 服务器](https://discord.gg/warudo)上有一个专门的 **#plugins-scripting** 频道，您可以在那里寻求帮助!~~
+中国社区：[QQ](http://warudo.app/qq)，[Bilibili](https://space.bilibili.com/3494370867153597)。 如果您有任何问题，我们的 [Discord 服务器](https://discord.gg/warudo)上有一个专门的 **#plugins-scripting** 频道，您可以在那里寻求帮助!
 :::
 
 ## 第 1 步：环境设置
+首先，确保您已安装 [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)。然后在编辑器窗口左下角菜单中打开 Warudo 数据文件夹，将[**此文件**](/scripts/Playground.csproj)下载到 `StreamingAssets\Playground` 文件夹并用您最喜欢的 C# IDE 打开（我们将使用 [JetBrains Rider](https://www.jetbrains.com/rider/)，但对于其他 IDE 如 [Visual Studio Code](https://code.visualstudio.com/) 也可以运行，只不过您可能需要安装 C# 语言扩展）。
 
-首先，确保您已安装 [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)和您喜欢的 C# IDE，本翻译使用 [Visual Studio](https://visualstudio.microsoft.com/zh-hans/) 进行演示。在 **Visual Studio Installer** 中安装 `.NET 桌面开发` 组件（此组件已包含 .NET 8 SDK）。
-![](/doc-img/zh-getting-started-playground-1.png)
-
-然后打开 Warudo 数据文件夹，将[此文件](/scripts/Playground.csproj)下载到 `StreamingAssets\Playground` 文件夹并用 Visual Studio 打开。
-
-![](/doc-img/zh-getting-started-playground-2.jpg)
-![](/doc-img/zh-getting-started-playground-3.webp)
-
-在 Visual Studio 中新建一个 `HelloWorldNode.cs` 脚本，将下面的代码复制进去（可能需要替换原始的结构代码）并保存。
+最后在 `StreamingAssets\Playground` 文件夹中新建一个 `HelloWorldNode.cs` 脚本，将下面的代码复制进去并保存。
 
 ```csharp
 using Warudo.Core;
@@ -83,13 +76,14 @@ public class HelloWorldNode : Node {
     // 这之间是新代码
     [DataInput]
     [IntegerSlider(1, 100)] 
-    public int 幸运数字 = 88;
+    [Label("幸运数字")]
+    public int LuckyNumber = 88;
     // 这之间是新代码
 
     [FlowInput]
     public Continuation Enter() {
         // 以下的代码被更改了
-        Context.Service.PromptMessage("Hello World!", "这个节点运行正常！我的幸运数字是：" + 幸运数字);
+        Context.Service.PromptMessage("Hello World!", "这个节点运行正常！我的幸运数字是：" + LuckyNumber);
         return Exit;
     }
         
@@ -129,14 +123,16 @@ public class CookieClickerAsset : Asset
     [DataInput]
     [IntegerSlider(1, 10)]
     [Description("增加我的数值使每次给的饼干变多！")]
-    public int 单次给的个数 = 1;
+    [Label("单次给的个数")]
+    public int Multiplier = 1;
 
     private int count;
 
     [Trigger]
-    public void 给我饼干()
+    [Label("给我饼干")]
+    public void GimmeCookie()
     {
-        count += 单次给的个数;
+        count += Multiplier;
         SetDataInput(nameof(Status), "你有" + count + "块饼干。", broadcast: true);
     }
 
@@ -157,7 +153,7 @@ public class CookieClickerAsset : Asset
 
 ![](/doc-img/zh-getting-started-playground-10.webp)
 
-并把它添加到场景中，有了这样有趣的脚本，谁还想直播呀！~~来学编程吧，哈哈哈哈~~
+并把它添加到场景中，有了这样有趣的脚本，谁还想直播呀！
 
 ![](/doc-img/zh-getting-started-playground-11.webp)
 

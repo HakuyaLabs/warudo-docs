@@ -1,4 +1,4 @@
-**[ENGLISHI](README.md)** / [简体中文](README_ZH.md)
+
 # Warudo Handbook
 
 ![Warudo handbook](https://docs.warudo.app/doc-img/intro-cover.jpg)
