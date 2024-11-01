@@ -126,7 +126,7 @@ public class CookieClickerAsset : Asset
     [Label("单次给的个数")]
     public int Multiplier = 1;
 
-    private int count;
+    private long count;
 
     [Trigger]
     [Label("给我饼干")]
