@@ -1,5 +1,5 @@
 ---
-sidebar_position: 100
+sidebar_position: 999
 ---
 
 # 动作录制器（导出 FBX / BVH）
