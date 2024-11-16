@@ -2,8 +2,15 @@
 sidebar_position: 30
 ---
 
-
 # 姿态追踪
+
+:::warning
+
+该页面尚未更新到最新，最新版本可以查看 [**英文版**](https://docs.warudo.app/docs/mocap/body-tracking) 。
+
+:::
+
+---
 
 Warudo 目前支持 5 种姿态捕捉方案。
 
