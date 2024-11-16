@@ -1,5 +1,5 @@
 ---
-sidebar_position: 70
+sidebar_position: 65
 ---
 
 # RhyLive
