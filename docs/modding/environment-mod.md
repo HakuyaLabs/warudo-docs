@@ -1,5 +1,6 @@
 ---
 sidebar_position: 15
+version: "2024.11.15"
 ---
 
 # Environment Mod
@@ -13,10 +14,17 @@ Any Unity [scene](https://docs.unity3d.com/Manual/CreatingScenes.html) can be im
 Set up your Unity scene as you like. Note that [Post Processing Stack v2](https://docs.unity3d.com/Packages/com.unity.postprocessing@3.3/manual/index.html) is supported, so you can add post-processing effects to your scene.
 
 We recommend you to optimize your scene, for example:
+
 * Don't use too many high-poly models;
 * Disable collision on models that don't need collision;
 * If only a small part of the scene will be visible in your streams, disable or remove the rest of the scene if possible;
 * Use as few realtime lights as possible, and use baked lights whenever possible.
+
+:::warning
+
+**Do not add more than one "Camera"** resource in the scene, otherwise it will increase the performance load of the environment and may even cause errors.
+
+:::
 
 ### Step 2: Bake Lighting (Optional)
 
@@ -24,8 +32,8 @@ We generally recommend to bake lighting in the scene, as it can significantly im
 
 :::warning
 
-Currently, the baking of the **"Standard"** materials is **not supported** in the Unity's Built-in Render Pipeline (BiRP).  
-If you need to bake lightmaps, it is recommended to use other materials for best results.
+Currently, the baking of the **"Standard"** materials is **not supported** in the Unity's Built-in Render Pipeline (BiRP).  
+If you need to bake lightmaps, it is recommended to use other materials for best results.
 
 :::
 
@@ -54,7 +62,7 @@ To ensure Bakery works correctly with Warudo, please follow these steps:
 1. Copy the `Bakery` folder into your mod folder (by default it should be at the `Assets` root);
 2. In Bakery settings, check **Use scene named output path**. This makes sure Bakery lightmaps are stored in the mod folder. For **Directional Mode**, you should choose one that would generate directional lightmaps, such as Dominant Direction or MonoSH;
 3. Click **Render** to render the lightmaps. Then, click **Render reflection probes** if you want to bake reflection probes as well;
-4. **Important:** Go to `Bakery/_tempScene` folder and delete the "_tempScene" Unity scene that was generated during baking.
+4. **Important:** Go to `Bakery/_tempScene` folder and delete the `_tempScene` Unity scene that was generated during baking.
 
 ### Step 3: Add `EnvironmentSettings` Script
 
@@ -77,9 +85,13 @@ Creating an environment mod is definitely trickier than creating other types of 
 * Did you make sure all the materials, shaders, etc. are included in the mod folder?
 * If you use baked lighting, did you make sure the lightmaps and the `LightingSettings` asset are included in the mod folder?
 * If you use baked lighting, did you make sure there is only **one** set of lightmaps and `LightingSettings` asset in the mod folder?
+
 :::caution
-Some users have reported that having multiple sets of lightmaps and `LightingSettings` assets can cause issues, _even if they are outside the mod folder_. Try deleting all except one set of lightmaps and `LightingSettings` asset if everything else fails.
+
+Some users have reported that having multiple sets of lightmaps and `LightingSettings` assets can cause issues, even if they are outside the mod folder. Try deleting all except one set of lightmaps and `LightingSettings` asset if everything else fails.
+
 :::
+
 * If you use baked lighting, was the lightmap directional mode set to Directional? (Or Dominant Direction / MonoSH if you use Bakery)
 * Did you have more than one Unity scene in the mod folder? If so, please delete the other scenes. (There may be scenes inside subfolders, so make sure to check all your subfolders!)
 * Did your scene have prefabs with unapplied changes? If so, please apply the changes. If you see the vertical lines (which means the changes could not be fully applied), right click on them and select **Prefab → Unpack Completely** to unpack the prefabs, and export the mod again.

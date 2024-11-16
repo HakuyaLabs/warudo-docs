@@ -2,7 +2,15 @@
 sidebar_position: 50
 ---
 
-# MediaPipe（Beta）
+# MediaPipe
+
+:::warning
+
+该页面尚未更新到最新，最新版本可以查看 [**英文版**](https://docs.warudo.app/docs/mocap/mediapipe) 。
+
+:::
+
+---
 
 基于摄像头的上半身动捕方案。优点是可动范围较大，手部能够前后移动；反应更为及时，可以捕捉到快速甩手、挥拳等。缺点是初次配置和校正需要一点点时间，并且稳定性相对 [RhyLive ](rhylive.md)略有不足。
 
