@@ -1,10 +1,11 @@
 ---
 sidebar_position: 1
+version: "2024.11.22"
 ---
 
 # Creating Your First Script
 
-There are two ways of scripting in Warudo: using **Playground**, or creating a [plugin mod](distribution.md). In this tutorial, we will look into using Playground to write your first custom node!
+There are two ways of scripting in Warudo: using **Playground**, or creating a plugin mod. In this tutorial, we will look into using Playground to write your first custom node!
 
 :::tip
 **What is playground?** Think of Playground as a sandbox where you can write and test your custom nodes and assets. Instead of compiling and packaging your C# code, you can write your code directly in the `Playground` directory in your Warudo data folder. This allows you to quickly iterate and test your code without the need to build mods or restart Warudo.
