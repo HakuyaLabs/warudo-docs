@@ -40,7 +40,6 @@ repeat => Mathf.Repeat(float, float)
 pingpong => Mathf.PingPong(float, float)
 ilerp => Mathf.InverseLerp(float, float, float)
 rand => Random.Range(float, float)
-randint => Random.Range(int, int)
 ```
 
 ## Detail Tables
@@ -103,7 +102,6 @@ randint => Random.Range(int, int)
 | `pingpong(t, length)` | `Mathf.PingPong(t, length)`      | Ping-pongs the value t so it's never larger than length and never less than 0.                       |
 | `ilerp(from, to, t)`  | `Mathf.InverseLerp(from, to, t)` | Calculates the linear parameter t that produces the interpolant value within the range \[from, to\]. |
 | `rand(min, max)`      | `Random.Range(min, max)`         | Returns a random float number between min (inclusive) and max (inclusive).                           |
-| `randint(min, max)`   | `Random.Range(min, max)`         | Returns a random integer number between min (inclusive) and max (exclusive).                         |
 
 <AuthorBar authors={{
   creators: [

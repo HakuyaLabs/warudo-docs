@@ -31,7 +31,7 @@ After installation, confirm that it can be opened correctly.
 After logging in, it will automatically suggest you download the latest Long-Term Support (LTS) version of the Unity Editor,  
 Warudo does not use this version, it is recommended to click **Skip installation**.
 
-But if you do indeed want to install that version, we strongly recommended you to change the installation path to `...\<version>` (for example, `D:\Softwares\Unity\2022.3.17f1`),  
+But if you do indeed want to install that version, we strongly recommended you to change the installation path to `...\<version>` (for example, `D:\Softwares\Unity\2021.3.18f1`),  
 to more conveniently manage **multiple versions** of the Unity Editor,  
 and **not** to use the default installation path `C:\Program Files\Unity\Hub\Editor`.
 
@@ -98,7 +98,7 @@ The second option is more suitable for updating an existing modding project.
 
 [Warudo SDK 0.12.0 Modding Project.zip](https://docs.warudo.app/sdk/Warudo%20SDK%200.12.0%20Modding%20Project.zip)
 
-1. **Download** the zip package file above and **Extract** the contents anywhere, say `D:\Softwares\Unity\2022.3.17f1\Projects\WarudoModding`.
+1. **Download** the zip package file above and **Extract** the contents anywhere, say `D:\Softwares\Unity\2021.3.18f1\Projects\WarudoModding`.
 2. In Unity Hub, click on **"Add"** and select the folder above.
 3. Then wait for Unity to launch the project. When you open the mod project for the first time, Unity can take 5-10 minutes to set up the project.
 
