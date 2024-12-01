@@ -1,8 +1,16 @@
 ---
-sidebar_position: 70
+sidebar_position: 65
 ---
 
 # RhyLive
+
+:::warning
+
+该页面尚未更新到最新，最新版本可以查看 [**英文版**](https://docs.warudo.app/docs/mocap/rhylive) 。
+
+:::
+
+---
 
 由[域动数字 RhythMo](https://rhythmo.cn/) 研发的基于苹果 ARKit 的面捕 +上半身捕捉方案，需要一台支持[面容 ID ](https://support.apple.com/zh-cn/HT208109)的 iOS 设备，并下载 [RhyLive ](https://apps.apple.com/us/app/rhylive/)App（免费）。可以捕捉 52 个 ARKit BlendShape，头部的旋转及上半身的姿态。
 

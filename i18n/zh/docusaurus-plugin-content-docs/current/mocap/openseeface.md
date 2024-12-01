@@ -1,8 +1,16 @@
 ---
-sidebar_position: 60
+sidebar_position: 55
 ---
 
-# OpenSeeFace（Beta）
+# OpenSeeFace
+
+:::warning
+
+该页面尚未更新到最新，最新版本可以查看 [**英文版**](https://docs.warudo.app/docs/mocap/openseeface) 。
+
+:::
+
+---
 
 基于摄像头的面捕方案。可以捕捉基本 BlendShape，以及头部的旋转和移动。和 [VSeeFace ](https://www.vseeface.icu/)的面捕效果大致相仿。
 

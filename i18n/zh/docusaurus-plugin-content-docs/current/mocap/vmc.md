@@ -1,8 +1,16 @@
 ---
-sidebar_position: 80
+sidebar_position: 500
 ---
 
 # VMC
+
+:::warning
+
+该页面尚未更新到最新，最新版本可以查看 [**英文版**](https://docs.warudo.app/docs/mocap/vmc) 。
+
+:::
+
+---
 
 由外部程序发送 [VirtualMotionCapture 数据](https://protocol.vmc.info/english)到 Warudo。
 
