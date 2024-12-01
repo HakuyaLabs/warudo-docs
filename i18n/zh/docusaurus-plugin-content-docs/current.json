@@ -15,22 +15,18 @@
     "message": "资源类型",
     "description": "The label for category Assets in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.角色": {
-    "message": "角色",
-    "description": "The label for category 角色 in sidebar tutorialSidebar"
-  },
   "sidebar.tutorialSidebar.category.Blueprints": {
     "message": "蓝图",
     "description": "The label for category Blueprints in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.Nodes": {
-    "message": "节点",
-    "description": "The label for category Nodes in sidebar tutorialSidebar"
-  },
-  "sidebar.tutorialSidebar.category.Advanced": {
-    "message": "高级",
-    "description": "The label for category Advanced in sidebar tutorialSidebar"
-  },
+        "sidebar.tutorialSidebar.category.Ready-to-Use Blueprints": {
+        "message": "即用型蓝图",
+        "description": "The label for category Ready-to-Use Blueprints in sidebar tutorialSidebar"
+      },
+      "sidebar.tutorialSidebar.category.Nodes": {
+        "message": "节点",
+        "description": "The label for category Nodes in sidebar tutorialSidebar"
+      },
   "sidebar.tutorialSidebar.category.Extensions": {
     "message": "拓展",
     "description": "The label for category Extensions in sidebar tutorialSidebar"
@@ -43,12 +39,12 @@
     "message": "自定义脚本",
     "description": "The label for category Scripting in sidebar tutorialSidebar"
   },
+      "sidebar.tutorialSidebar.category.Scripting API": {
+        "message": "脚本 API",
+        "description": "The label for category Scripting API in sidebar tutorialSidebar"
+      },
   "sidebar.tutorialSidebar.category.Miscellaneous": {
     "message": "其他",
     "description": "The label for category Miscellaneous in sidebar tutorialSidebar"
-  },
-  "sidebar.tutorialSidebar.category.Ready-to-Use Blueprints": {
-    "message": "Ready-to-Use Blueprints",
-    "description": "The label for category Ready-to-Use Blueprints in sidebar tutorialSidebar"
   }
 }
