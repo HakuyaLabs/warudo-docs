@@ -30,7 +30,7 @@ Here's a summary of the parameters:
 - **`Width`**: Optional. The width of the node, which is by default `1f`. A node with a width of `2f` will take up twice the space of a node with a width of `1f`.
 
 :::info
-Here are some common node categories you can use: `CATEGORY_ARITHMETIC`, `CATEGORY_ASSETS`, `CATEGORY_BLENDSHAPES`, `CATEGORY_CHARACTERS`, `CATEGORY_DATA`, `CATEGORY_DEBUG`, `CATEGORY_EVENTS`, `CATEGORY_FLOW`, `CATEGORY_INPUT`, `CATEGORY_MOTION_CAPTURE`, `CATEGORY_INTERACTIONS`.
+Here are some common node categories you can use: `CATEGORY_ARITHMETIC`, `CATEGORY_ASSETS`, `CATEGORY_BLENDSHAPES`, `CATEGORY_CHARACTERS`, `CATEGORY_DATA`, `CATEGORY_DEBUG`, `CATEGORY_EVENTS`, `CATEGORY_CONTROL_FLOW`, `CATEGORY_INPUT`, `CATEGORY_MOTION_CAPTURE`, `CATEGORY_INTERACTIONS`.
 
 You can also use your own category name, but the above categories are automatically localized to the user's language.
 :::
