@@ -1,5 +1,6 @@
 ---
 sidebar_position: 30
+version: "2024.12.10"
 ---
 
 # Nodes
@@ -11,6 +12,9 @@ Nodes are units of logic that can be connected together to create complex behavi
 You can create node types that can be instantiated and stored in a blueprint. A node type inherits from the `Node` type and is decorated with the `[NodeType]` attribute, like below:
 
 ```csharp
+using Warudo.Core.Attributes;
+using Warudo.Core.Graphs;
+
 [NodeType(
     Id = "c76b2fef-a7e7-4299-b942-e0b6dec52660",
     Title = "Hello World",
@@ -24,16 +28,50 @@ public class HelloWorldNode : Node {
 
 Here's a summary of the parameters:
 
-- **`Id`**: A unique identifier for the node type; you should [generate a new GUID](https://www.guidgenerator.com/online-guid-generator.aspx) for each new node type. Note that this is different from the node instance's UUID (`node.Id`).
-- **`Title`**: The name of the node type that will be displayed in the node palette.
-- **`Category`**: Optional. The group of the node in the node palette.
-- **`Width`**: Optional. The width of the node, which is by default `1f`. A node with a width of `2f` will take up twice the space of a node with a width of `1f`.
+| Parameters |   Type    | Data Type | Description                                                                                                                                                                                                                                                                  |
+|:---------- |:---------:|:---------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Id`       | Mandatory | `string`  | The **unique identifier** of this node class. <br/> You should [generate a new GUID](https://www.guidgenerator.com/online-guid-generator.aspx) for each new node type. <br/> **Note:** the `Id` of the node class is different from the UUID of a node instance (`node.Id`). |
+| `Title`    | Optional  | `string`  | The **name** of this node that will be displayed in the node palette.                                                                                                                                                                                                        |
+| `Category` | Optional  | `string`  | The **group** of this node in the node palette.                                                                                                                                                                                                                              |
+| `Width`    | Optional  |  `float`  | The **width** of this node, which is by default `1f`. <br/> A node with a width of `2f` will take up twice the space of a node with a width of `1f`.                                                                                                                         |
 
-:::info
-Here are some common node categories you can use: `CATEGORY_ARITHMETIC`, `CATEGORY_ASSETS`, `CATEGORY_BLENDSHAPES`, `CATEGORY_CHARACTERS`, `CATEGORY_DATA`, `CATEGORY_DEBUG`, `CATEGORY_EVENTS`, `CATEGORY_FLOW`, `CATEGORY_INPUT`, `CATEGORY_MOTION_CAPTURE`, `CATEGORY_INTERACTIONS`.
+:::info[ **About Category**]
 
-You can also use your own category name, but the above categories are automatically localized to the user's language.
+- You can use the built-in `Category` strings listed in the **Table** below.
+	- They will be automatically localized to the program's language.  
+- You can also use your own custom `Category` names.
+	- We strongly recommend doing this when you want to upload this node to the workshop.  
+	- And using the plugin name as the `Category`  allows users to more clearly know that the node they are using is from a plugin, and which plugin is the node from.
+
 :::
+
+**Table** The built-in `Category` strings and their localized text.
+
+| `Category`                      | en                   | zh_CN      | ja                     |
+|:------------------------------- |:-------------------- |:---------- |:---------------------- |
+| `CATEGORY_ACCESSORIES`          | Accessories          | 配件       | 付属品                 |
+| `CATEGORY_ANIMATION`            | Animation            | 动画       | アニメーション         |
+| `CATEGORY_ARITHMETIC`           | Arithmetic           | 运算       | 計算                   |
+| `CATEGORY_ASSETS`               | Asset                | 资源       | アセット               |
+| `CATEGORY_BLENDSHAPES`          | BlendShapes          | BlendShape | BlendShape             |
+| `CATEGORY_CHARACTERS`           | Characters           | 角色       | キャラクター           |
+| `CATEGORY_CINEMATOGRAPHY`       | Cinematography       | 摄影       | 撮影                   |
+| `CATEGORY_CONDITIONALS`         | Conditionals         | 条件       | 条件                   |
+| `CATEGORY_CONTROL_FLOW`         | Flow Control         | 流控制     | フローコントロール     |
+| `CATEGORY_DATA`                 | Data                 | 数据       | データ                 |
+| `CATEGORY_DEBUG`                | Debug                | 调试       | デバッグ               |
+| `CATEGORY_ENVIRONMENTS`         | Environment          | 环境       | 環境                   |
+| `CATEGORY_EVENTS`               | Events               | 事件       | イベント               |
+| `CATEGORY_EXTERNAL_INTEGRATION` | External Integration | 外部集成   | 外部統合               |
+| `CATEGORY_GRAPHS`               | Blueprints           | 蓝图       | ブループリント         |
+| `CATEGORY_INPUT`                | Input                | 输入       | –                      |
+| `CATEGORY_LIGHTS`               | Lights               | 光源       | ライト                 |
+| `CATEGORY_LITERALS`             | Literals             | 字面量     | リテラル               |
+| `CATEGORY_MOTION_CAPTURE`       | Motion Capture       | 动作捕捉   | モーションキャプチャー |
+| `CATEGORY_PROP`                 | Props                | 道具       | 道具                   |
+| `CATEGORY_SCENE`                | Scene                | 场景       | Scene                  |
+| `CATEGORY_SWITCHES`             | Switches             | 切换       | 切り替え               |
+| `CATEGORY_VARIABLES`            | Variables            | 变量       | 変量                   |
 
 ## Components
 
@@ -163,6 +201,7 @@ Spawn Local / Online Image Sticker.
 <AuthorBar authors={{
 creators: [
 {name: 'HakuyaTira', github: 'TigerHix'},
+{name: 'hanekit', github: 'hanekit'}
 ],
 translators: [
 ],

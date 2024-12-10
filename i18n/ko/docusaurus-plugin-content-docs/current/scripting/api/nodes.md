@@ -1,5 +1,6 @@
 ---
 sidebar_position: 30
+translate_from_version: "2024.06.16"
 ---
 
 # 노드
@@ -30,7 +31,7 @@ public class HelloWorldNode : Node {
 - **`Width`**: 선택 사항. 기본적으로 노드의 너비는 `1f`인데, `2f`로 설정하면 해당 노드는`1f`너비의 노드보다 두 배의 공간을 차지해요.
 
 :::info
-자주 사용되는 노드 카테고리: `CATEGORY_ARITHMETIC`, `CATEGORY_ASSETS`, `CATEGORY_BLENDSHAPES`, `CATEGORY_CHARACTERS`, `CATEGORY_DATA`, `CATEGORY_DEBUG`, `CATEGORY_EVENTS`, `CATEGORY_FLOW`, `CATEGORY_INPUT`, `CATEGORY_MOTION_CAPTURE`, `CATEGORY_INTERACTIONS`.
+자주 사용되는 노드 카테고리: `CATEGORY_ARITHMETIC`, `CATEGORY_ASSETS`, `CATEGORY_BLENDSHAPES`, `CATEGORY_CHARACTERS`, `CATEGORY_DATA`, `CATEGORY_DEBUG`, `CATEGORY_EVENTS`, `CATEGORY_CONTROL_FLOW`, `CATEGORY_INPUT`, `CATEGORY_MOTION_CAPTURE`, `CATEGORY_INTERACTIONS`.
 
 직접 카테고리 이름을 사용할 수도 있지만, 위 카테고리들은 사용자 언어로 자동으로 현지화돼요.
 :::
