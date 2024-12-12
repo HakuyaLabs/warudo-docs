@@ -1,5 +1,5 @@
 ---
-side-bar-position: 11
+sidebar_position: 11
 ---
 
 # 3D VTuber入門
