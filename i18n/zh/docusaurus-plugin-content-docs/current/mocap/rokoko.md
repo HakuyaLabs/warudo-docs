@@ -16,12 +16,16 @@ sidebar_position: 90
 
 ![](/doc-img/zh-rokoko-2.webp)
 
-:::注意
-Note: 你需要拥有 Rokoko Plus 或者 Pro 订阅才能将数据流分享到 Unity。
+:::note
+
+注意：你需要拥有 Rokoko Plus 或者 Pro 订阅才能将数据流分享到 Unity。
+
 :::
 
-:::更多信息
+:::info
+
 如有更多疑问，请您查阅 [Rokoko官方手册](https://support.rokoko.com/hc/en-us/articles/4410471183633-Getting-Started-Streaming-to-Unity).
+
 :::
 
 ## 校正
