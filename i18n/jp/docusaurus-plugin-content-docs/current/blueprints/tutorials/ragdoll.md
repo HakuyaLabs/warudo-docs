@@ -42,18 +42,18 @@ sidebar_position: 20
 
 ## ラグドールの起動 {#activating-ragdoll}
 
-But we wanted to ragdoll our character, not just make them flinch! Let's add a **Activate Character Ragdoll** node, and connect the **On Collide** flow output of the Throw Prop At Character node to the **Enter** flow input of the Activate Character Ragdoll node. Then, set the **Character** option to our character and **Launch Force** to (0, 300, -600).
+しかし、私たちはキャラクターをラグドール化したいのであって、ただキャラクターをひるませたいわけではありません。**キャラクターラグドールをアクティブにする**ノードを追加し、**キャラクターにアイテムを投げる**ノードの**オンコライド**フロー出力を、**キャラクターラグドールをアクティブにする**ノードの**入口**フロー入力に接続します。次に、**キャラクター**オプションで対象キャラクターを設定し、**突出力**を（0、300、-600）に設定します。
 
-![](/doc-img/en-blueprint-ragdoll-2.png)
+![](/doc-img/jp-blueprint-ragdoll-2.png)
 
 :::caution
-Note that we connect from the On Collide flow output, not the Exit output! This is because we want to activate the ragdoll _when_ the prop collides with the character. If we connect from the Exit output, the ragdoll will be activated immediately after the prop is thrown, which is not what we want.
+「出口」フロー出力からではなく「オンコライド」フロー出力から接続する点に注意してください。これは、小道具がキャラクターと衝突したときにラグドールを起動させたいからです。「出口」から接続すると、小道具が投げられた直後にラグドールが起動してしまい、望む動作になりません。
 :::
 
-Let's press Space again. The prop gets thrown, but this time, when it hits the character, the character is launched in the classic ragdoll fashion. You can even press Space multiple times to throw props at your character again, each time hitting them with more force. Awesome!
+もう一度スペースキーを押してみましょう。小道具が投げられますが、今度はキャラクターに当たったときに、キャラクターが古典的なラグドール方式で打ち上げられます。スペースキーを複数回押して、キャラクターに小道具を再び投げることもできます。そのたびに、より強い力で当たります。やったぜ！
 
 :::tip
-Other interaction nodes, such as **Launch Liquid At Character** and **Spawn Sticker From Local/Online Image**, can be configured similarly. Try to play around with them and see what you can come up with!
+**キャラクターに液体を発射する**、**ローカル/Web画像からステッカーを生成する**などの他のインタラクションノードも同様に設定できます。いろいろ試して、どんなことができるか見てみましょう！
 :::
 
 ## ラグドールのリセット {#resetting-ragdoll}
