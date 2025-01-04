@@ -42,7 +42,7 @@ sidebar_position: 20
 
 ## ラグドールの起動 {#activating-ragdoll}
 
-しかし、私たちはキャラクターをラグドール化したいのであって、ただキャラクターをひるませたいわけではありません。**キャラクターラグドールをアクティブにする**ノードを追加し、**キャラクターにアイテムを投げる**ノードの**オンコライド**フロー出力を、**キャラクターラグドールをアクティブにする**ノードの**入口**フロー入力に接続します。次に、**キャラクター**オプションで対象キャラクターを設定し、**突出力**を（0、300、-600）に設定します。
+しかし、私たちはキャラクターをラグドール化したいのであって、ただキャラクターをひるませたいわけではありません。**キャラクターラグドールをアクティブにする（Activate Character Ragdoll）**ノードを追加し、**キャラクターにアイテムを投げる**ノードの**オンコライド**フロー出力を、**キャラクターラグドールをアクティブにする**ノードの**入口**フロー入力に接続します。次に、**キャラクター**オプションで対象キャラクターを設定し、**突出力**を（0、300、-600）に設定します。
 
 ![](/doc-img/jp-blueprint-ragdoll-2.png)
 
@@ -58,11 +58,9 @@ sidebar_position: 20
 
 ## ラグドールのリセット {#resetting-ragdoll}
 
-キャラクターが5秒後にリセットされることに気付くでしょう。これはActivate Character Ragdollノードの**Reset Wait Time**オプションを調整することで変更できます。また、Auto ResetをNoに設定し、**Reset**フロー入力を手動でトリガーすることで、**自動リセット**を無効にすることもできます。例えば、以下のブループリントでは、**R**キーを押したときにのみキャラクターがリセットされます。
+キャラクターが5秒後にリセットされることに気付くでしょう。これは**キャラクターラグドールをアクティブにする**ノードの**待機時間をリセット**オプションを調整することで変更できます。また、**自動リセット**を**いいえ**に設定し、**リセット**フロー入力を手動でトリガーすることで、**自動リセット**を無効にすることもできます。例えば、以下のブループリントでは、**R**キーを押したときにのみキャラクターがリセットされます。
 
-You will notice that the character resets after 5 seconds, which can be changed by adjusting the **Reset Wait Time** option on the Activate Character Ragdoll node. You can also disable automatic resetting by setting **Auto Reset** to No, and trigger the **Reset** flow input manually. For example, the following blueprint will only reset the character when you press the **R** key.
-
-![](/doc-img/en-blueprint-ragdoll-3.png)
+![](/doc-img/jp-blueprint-ragdoll-3.png)
 
 <AuthorBar authors={{
   creators: [
