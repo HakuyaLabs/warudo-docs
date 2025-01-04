@@ -15,29 +15,30 @@ sidebar_position: 20
 
 ![](/doc-img/jp-blueprint-ragdoll-1.png)
 
-God, this node is huge. There are many options on the **Throw Prop At Character** node, so let's unpack it a bit.
+このノードは巨大です。**キャラクターにアイテムを投げる** ノードには多くのオプションがありますので、少し詳しく見ていきましょう。
 
-* **Impact Particle Source** and **Impact Particle Scale** determine the particle effect that is played when the prop hits the character; I will choose "Basic Impact 02" here, but you can open the preview gallery by clicking on the gallery icon to see all the available particles.
-* **Launch Sound Source**, **Impact Sound Source** and **Sound Volume** are pretty much self-explanatory. 
-* The **From** dropdown allows you to choose where the prop is thrown from. You can choose from the following options:
-  * Viewport Bounds Random Position: Anywhere on screen, i.e., simulating a prop being thrown from the camera.
-  * Screen Edge: Anywhere on the edge of the screen, i.e., simulating a prop being thrown from outside the camera.
-  * Above Character Head: Right above the character's head.
-  * Scene Object: A scene object, can be another prop, a character, or an [anchor](../../assets/anchor).
-  * World Position: A 3D point in the scene.
-  
-  The default "Viewport Bounds Random Position" works good for us.
-* The **To** dropdown allows you to choose where the prop is thrown to. You can choose from the following options:
-  * Body Random Position: Anywhere on the character's body.
-  * Human Body Bone: A standard bone on the character's body, e.g., the head, the left hand, etc.
-  * Transform Path: Any child transform of the character. For example, if you want to throw at your character's tail, you can choose the tail transform here.
-  
-  I will change this to "Human Body Bone" and choose the "Head" bone, since that seems more, well, satisfying.
-* **Scale**, **Mass**, **Speed** and **Gravity** are the physical properties of the prop and determine how the character reacts to the prop. You can adjust them to your liking; I will change Scale to 2 and Speed to 10.
-* **Launch Torque** and **Randomize Launch Rotation** determine the rotation of the prop when it is launched.
-* **Alive Time** determines how long the prop will stay in the scene before it disappears.
 
-Now, when you press Space, the prop will be thrown at our character's head, and our character reacts to it.
+* **衝突パーティクルソース** と **スケール** は、小道具がキャラクターに当たった際に再生されるパーティクル効果を決定します。ここでは「Basic Impact 02」を選択しますが、ギャラリーアイコンをクリックしてプレビューギャラリーを開き、利用可能なパーティクルをすべて確認することもできます。
+* **発射音ソース**、**衝突音ソース**、**サウンドボリューム**は、その名の通りです。
+* **出発点**のドロップダウンメニューでは、小道具が投げられる場所を選択できます。以下のオプションから選択できます。
+  * 視界境界ランダム座標：画面上の任意の位置、つまりカメラから小道具が投げられるようシミュレートします
+  * スクリーンエッジ：画面の端のどこか、すなわちカメラの外から小道具が投げ入れられるようシミュレートします
+  * キャラクターの頭上：キャラクターの頭の真上から落下します
+  * シーンオブジェクト：シーン上のオブジェクトを出発点とします。キャラクター、カメラ、指向性ライト、環境などを指定します
+  * ワールド位置：シーン内のワールド座標から出発点を指定します
+
+  デフォルトの「視界境界ランダム座標」が最適です。
+* ドロップダウンメニューの **到達点** では、小道具がどこに投げられるかを選択できます。以下のオプションから選択できます。
+  * ボディランダム位置：キャラクターの身体のどこかランダムな場所に投げられます　
+  * 人体骨格：キャラクターの身体の標準的なボーン、例えば頭部、左手などを指定します
+  * 変換パス：キャラクターの子トランスフォーム、例えば、キャラクターの尻尾に投げたい場合は、ここで尻尾のトランスフォームを選択できます
+
+  私はこれを「人体骨格」に変更し、「ヘッド」のボーンを選択します。違和感のないアクションになると思います。
+* **スケール**、**品質（質量）**、**スポード**、**重力**は、小道具の物理的特性であり、キャラクターが小道具にどのように反応するかを決定します。お好みに応じて調整できます。私はスケールを 2 に、速度を 10 に変更します。
+* **初期トルク**と**初期回転をランダム化**は、小道具が発射されたときの回転度合いを決定します。
+* **生存時間** は、小道具が消える前にシーン内に留まる時間を決定します。
+
+スペースキーを押すと、小道具がキャラクターの頭めがけて投げられ、キャラクターがそれに反応します。
 
 ## ラグドールの起動 {#activating-ragdoll}
 
