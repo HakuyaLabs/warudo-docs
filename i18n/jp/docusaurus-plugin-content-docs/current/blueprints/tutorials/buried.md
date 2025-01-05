@@ -17,30 +17,35 @@ sidebar_position: 30
 
 パフォーマンスの問題もあります。Warudoエディタは大量のノードを扱うようには設計されていません。1つのブループリントに100個以上のノードがあると、遅延が発生し始めます。そのため、可能な限り複数の小さなブループリントに分割することが望ましいです。
 
-## For Loop
+## 繰り返し処理 {#for-loop}
 
-Okay, let's create our blueprint! Spawning an animal plush is easy: just use the **Throw Prop At Character** node which we are already [familiar with](ragdoll.md). But how do we spawn multiple plushies?
+では、ブループリントを作成しましょう！動物のぬいぐるみを出現させるのは簡単です。すでに[おなじみの](./ragdoll) **キャラクターにアイテムを投げる（Throw Prop At Character）** ノードを使用するだけです。でも、複数のぬいぐるみを出現させるにはどうすればいいでしょうか？
 
-The answer is the **For Loop** node. As you may have guessed from the name, this node allows us to do something multiple times. But the explanation can wait. Go ahead and recreate the blueprint below. For the For Loop node, we have set **Last Index** to 100, **Interval** to 0.01; for the **Throw Prop At Character** node, we have set **Prop Source** to Tiger and **From** to Above Character Head, so that the tiger plushies will be falling onto the character's head.
+答えは、**Forサイクル（For Loop）** ノードです。名前から推測できるかもしれませんが、このノードは何かを複数回行うことを可能にします。しかし、説明は後回しにしましょう。まずは以下のブループリントを再現してみてください。Forサイクルノードでは、**ラストインデックス** を `100` に、**間隔** を `0.01` に設定しています。**キャラクターにアイテムを投げる** ノードでは、**アイテムのソース**を「トラ」に、**出発点**を「キャラクターの頭上」に設定しています。これにより、トラのぬいぐるみがキャラクターの頭上から落ちてくることになります。
 
-![](/doc-img/en-blueprint-buried-1.png)
+![](/doc-img/jp-blueprint-buried-1.png)
 
-We know what the other two nodes are doing: the On Keystroke Pressed node defines a Ctrl+Shift+Z hotkey, while the Throw Prop At Character node spawns a tiger prop and throws it at the character. But what is the For Loop node doing? Let's press Ctrl+Shift+Z and see what happens.
+他の2つのノードが何をしているかは分かりますね：**キーボードボタンを押したとき**ノードはホットキーとして `Ctrl+Shift+Z` を定義し、**キャラクターにアイテムを投げる**ノードはトラのプロップを生成してキャラクターに投げつけます。しかし、**Forサイクル**ノードは何をしているのでしょうか？`Ctrl+Shift+Z`を押して、何が起こるか見てみましょう。
 
-<div style={{width: '100%'}} className="video-box"><video controls loop src="/doc-img/buried-2.mp4" /></div>
-<p class="img-desc">Ouch.</p>
+<div style={{width: '100%'}} className="video-box"><video controls loop src="/jp/doc-img/buried-2.mp4" /></div>
+<p class="img-desc">痛い！</p>
 
-That's a lot of tigers for sure! But how many? Let's take a closer look at the For Loop node. In plain English, the node is saying: "For each number from **First Index** (1) to **Last Index** (100), on a 0.01s **Interval**, trigger the **Loop Body** flow output." Since the Loop Body flow output is connected to the Throw Prop At Character node, in other words, we are saying: "For each number from 1 to 100, spawn a tiger prop every 0.01s and throw it at the character;" or even more simply, "spawn 100 tiger props throughout 1 second and throw them at the character."
+たくさんのトラがいますね！でも、いったい何匹でしょうか？**Forサイクル**ノードをもう少し詳しく見てみましょう。
 
-![](/doc-img/en-blueprint-buried-3.png)
+簡単に言えば、このノードは次のように動作します： 「**ファーストインデックス**（1）から**ラストインデックス**（100）までの各数字について、0.01秒の**間隔**で、**ループボディ**フロー出力をトリガーする」
+
+ループボディフロー出力が**キャラクターにアイテムを投げる**ノードに接続されているので、言い換えれば、「1から100までの各数字について、0.01秒ごとにトラの小道具を生成してキャラクターに投げつける」ということになります。さらに簡単に言えば、「1秒間に100個のトラの小道具を生成してキャラクターに投げつける」ということです。
+
+![](/doc-img/jp-blueprint-buried-3.png)
 
 :::tip
-Can you guess what happens if we set **Last Index** to 1000 instead? And what if we set **Interval** to 0?
+
+**ラストインデックス** を `1000` に設定するとどうなるか、予想できますか？ また、**間隔** を `0` に設定するとどうなるでしょうか？
 :::
 
-To bury our character however, we need to turn them into a ragdoll. You know the drill: the **Activate Character Ragdoll** node. Here we set the **Launch Force** to (0, -100, 0), which launches the character downwards.
+しかし、キャラクターを埋めるには、ラグドールに変える必要があります。手順はご存知ですね。**キャラクターラグドールをアクティブにする**ノードです。ここでは、**突出力**を (0, -100, 0) に設定し、キャラクターを下方に押し出します。
 
-![](/doc-img/en-blueprint-buried-4.png)
+![](/doc-img/jp-blueprint-buried-4.png)
 
 ## Randomizing the Plushies
 
