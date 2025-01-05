@@ -47,20 +47,20 @@ sidebar_position: 30
 
 ![](/doc-img/jp-blueprint-buried-4.png)
 
-## Randomizing the Plushies
+## ぬいぐるみをランダムにする {#randomizing-the-plushies}
 
-So far everything is great, but there is one problem: all the plushies are tigers. What if we want to spawn all sorts of animals?
+ここまでは素晴らしいのですが、1つ問題があります：すべてのぬいぐるみがトラなのです。様々な種類の動物を出現させたい場合はどうすればよいでしょうか？
 
-Well, let's take a look at the **Throw Prop At Character** node. We have set the **Prop Source** to Tiger, but see that black dot next to it? It means that we can connect something to it. In other words, instead of selecting a prop from the dropdown ourselves, we can let a node decide which prop to spawn, as long as that node has a data output that gives us a prop. That's exactly what the **Get Random Prop** node does.
+**キャラクターにアイテムを投げる**ノードをよく見てみましょう。**アイテムソース**をトラに設定しましたが、その横にある黒い点に気づきましたか？これは、何かをそこに接続できることを意味します。つまり、自分でドロップダウンから小道具を選択する代わりに、ノードにどの小道具を出現させるかを決定させることができます。ただし、そのノードが小道具を提供するデータ出力を備えていることが条件となります。まさにこれが**ランダムアイテムの取得**ノードの役割です。
 
-![](/doc-img/en-blueprint-buried-2.png)
+![](/doc-img/jp-blueprint-buried-2.png)
 
-In the above, we have connected the **Prop Source** data output of the Get Random Prop node to the **Prop Source** data input of the Throw Prop At Character node. The Get Random Prop node does what it says: it randomly selects a prop from the **Props** list, or from any prop collection in the **Collections** list. In this case, we have added the "Quirky Animals" collection to the **Collections** list, so the Get Random Prop node will randomly select an animal plush prop, and output it to the Throw Prop At Character node.
+上記の例では、**ランダムアイテムの取得**ノードの**アイテムソース**データ出力を**キャラクターにアイテムを投げる**ノードの**アイテムソース**データ入力に接続しました。**ランダムアイテムの取得**ノードはその名の通りの動作をします：**アイテム**リストまたは**コレクション**リスト内の任意の小道具コレクションからランダムに小道具を選択します。この場合、**コレクション**リストに「へんてこりんな動物」コレクションを追加したので、**ランダムアイテムの取得**ノードはランダムに動物のぬいぐるみ小道具を選択し、それを**キャラクターにアイテムを投げる**ノードに出力します。
 
-Let's press Ctrl+Shift+Z again and see what happens. If everything goes well, you should see a bunch of different animals falling onto the character's head, burying the character under them. Fun stuff!
+もう一度`Ctrl+Shift+Z`を押して、何が起こるか見てみましょう。すべてがうまくいけば、様々な種類の動物がキャラクターの頭上に落ちてきて、キャラクターが動物たちに埋もれてしまうはずです。楽しいですね！
 
 :::info
-If you are interested in nitty-gritty technical details, the data inputs of a node are only evaluated (i.e., sourced from the connected data output) when the node is triggered. So, in this case, what happens behind the scenes is that the Get Random Prop node is triggered every time the Throw Prop At Character node is triggered (by the For Loop node), outputting a different prop each time.
+技術的な詳細に興味がある方のために説明すると、ノードのデータ入力は、ノードがトリガーされたときにのみ評価されます（つまり、接続されたデータ出力から取得されます）。この場合、裏側で起こっていることは、**キャラクターにアイテムを投げる**ノードが**Forサイクル**ノードによってトリガーされるたびに、**ランダムアイテムの取得**ノードもトリガーされ、毎回異なる小道具を出力しているのです。
 :::
 
 ## More on For Loop
