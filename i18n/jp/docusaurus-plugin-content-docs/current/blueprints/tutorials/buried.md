@@ -81,5 +81,6 @@ The **For Loop** node also has **On Loop End** and **Exit** flow outputs. The **
     {name: 'HakuyaTira', github: 'TigerHix'},
   ],
   translators: [
+    {name: '星影月夜', github: 'unsolublesugar'},
   ],
 }} />
