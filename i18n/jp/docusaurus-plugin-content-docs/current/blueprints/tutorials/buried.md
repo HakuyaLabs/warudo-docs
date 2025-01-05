@@ -9,13 +9,13 @@ sidebar_position: 30
 <div style={{width: '100%'}} className="video-box"><video controls loop src="/jp/doc-img/buried.mp4" /></div>
 <p class="img-desc">動物のぬいぐるみに埋もれる様子</p>
 
-## Multiple Blueprints
+## 複数のブループリント {#multiple-blueprints}
 
-If you have followed the previous tutorials, you may have noticed that we have been creating a new blueprint for each interaction. Couldn't we just add all the nodes to the same blueprint?
+これまでのチュートリアルを追っていただいている方はお気づきかもしれませんが、各インタラクションごとに新しいブループリントを作成してきました。すべてのノードを同じブループリントに追加することはできないのでしょうか？
 
-Indeed, technically speaking, if you can do something with multiple blueprints, you can also do it with a single blueprint. However, it is a good practice to keep things organized; with multiple smaller blueprints, you can temporarily disable a specific interaction without affecting the others. Furthermore, if you want to share your blueprints with others, it is much easier to share a single blueprint than a blueprint with a bunch of unrelated nodes.
+確かに、技術的には複数のブループリントでできることは、1つのブループリントでも実現できます。しかし、整理整頓を心がけることは良い習慣です。複数の小さなブループリントを使用することで、他のものに影響を与えず特定のインタラクションを一時的に無効にすることができます。さらに、ブループリントを他の人と共有したい場合、無関係なノードがたくさんあるブループリントよりも、単一のブループリントを共有する方がはるかに簡単です。
 
-There is also the performance concern. The Warudo editor is not exactly built for a large number of nodes; you will start to notice lag when you have more than 100 nodes in a single blueprint. So, it is always a good idea to split into multiple smaller blueprints whenever possible.
+パフォーマンスの問題もあります。Warudoエディタは大量のノードを扱うようには設計されていません。1つのブループリントに100個以上のノードがあると、遅延が発生し始めます。そのため、可能な限り複数の小さなブループリントに分割することが望ましいです。
 
 ## For Loop
 
