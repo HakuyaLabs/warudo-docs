@@ -17,10 +17,10 @@ sidebar_position: 20
 * **启用头部和身体运动:** 此选项开启时，Warudo 会尝试基于动捕数据来同时运动模型的头身部分。在您使用完整的全身动捕系统的情况下，此选项会被开播助手设置为**关闭**。
 * **头部待机动画 (自动眨眼/自动眼部动作/自动摇头):** 在开启状态下，Warudo 会给角色增加微小的头部、眼部动作。
 * **视线:** 此选项开启时，，您的角色视线会望向指定方向（默认指向摄像机位）。这样可以帮助您在任何机位下保持与观众的眼神交流并允许您的头部自由转动。
-* **Lip Sync**: If enabled, Warudo will animate your character's mouth based on your speech. You can choose to enable lip sync only when tracking is lost, or always enable it.
+* **Lip Sync**: 此选项开启时, Warudo将会依据你的说话声为角色模型做出口型变化。你可以选择始终启用或者在追踪丢失时启用.
 
 :::info
-These options above affect the generated blueprint; therefore, to change these options after the setup, you need to re-run the setup, or manually modify the face tracking blueprint. **Character → Motion Capture → Blueprint Navigation** provides shortcuts to the specific parts of the blueprint that you may want to modify:
+上面的选项会影响到生成的蓝图; 如果您要在设置后更改上述选项，你需要重新运行, 或者手动修改. **角色 → 动作捕捉 → 蓝图跳转** 提供了您可能需要修改蓝图特定部分的快捷方式:
 
 ![](/doc-img/en-mocap-6.png)
 :::
