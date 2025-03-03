@@ -4,26 +4,60 @@ sidebar_position: 30
 
 # 姿态追踪
 
-:::warning
+## 蓝图自定义
 
-该页面尚未更新到最新，最新版本可以查看 [**英文版**](https://docs.warudo.app/docs/mocap/body-tracking) 。
+在引导过程中，你可以点击 **姿态追踪进阶设置...** 来自定义追踪蓝图。
 
-:::
+![](/doc-img/en-mocap-4.png)
+<p class="img-desc">自定义姿态追踪。</p>
 
----
+### 上半身追踪器
 
-Warudo 目前支持 5 种姿态捕捉方案。
+对于上半身追踪器（例如 MediaPipe、RhyLive、Leap Motion），有以下选项可用：
 
-* [**MediaPipe**](mediapipe.md)：基于摄像头的上半身动捕方案。优点是可动范围较大，手部能够前后移动；反应更为及时，可以捕捉到快速甩手、挥拳等。缺点是初次配置和校正需要一点点时间，并且稳定性略有不足。<b style={{color: "green"}}>**可动性最佳。**</b>
-* [**RhyLive**](rhylive.md)：由[域动数字 RhythMo](https://rhythmo.cn/) 研发的上半身动捕方案，需要一台支持[面容 ID ](https://support.apple.com/zh-cn/HT208109)的 iOS 设备，并下载 [RhyLive ](https://apps.apple.com/us/app/rhylive/)App（免费）。缺点是长时间使用，设备会发热严重。
-* [**VMC**](vmc.md)：由外部程序发送 [VirtualMotionCapture 数据](https://protocol.vmc.info/english)到 Warudo。比如你想使用 VR 动捕（例如：SlimeVR、Mocopi 等），就可以使用 VirtualMotionCapture 软件，发送 VMC 数据给 Warudo。
-* [**Rokoko**](rokoko.md)：由 [Rokoko Studio](https://www.rokoko.com/products/studio) 发送全身动捕数据到 Warudo。
-* [**Xsens MVN**](xsens-mvn.md)：由 [Xsens MVN Analyze/Animate](https://base.xsens.com/s/motion-capture-mvn-software?language=en\_US) 发送全身动捕数据到 Warudo。
+* **使用键盘/触控板：** 是否在手部未被追踪的情况下，仍然使用键盘或触控板为角色生成动画。
+  
+  ![](/doc-img/zh-keyboard-1.webp)
+  
+  在引导完成后，您可以通过点击 **角色 → 动作捕捉 → 蓝图导航 → 输入设备动画设置** 来调整键盘/触控板设置。（启用了键盘/触控板才会跳出来这个设置选项，因为没选择的话对应的蓝图并不会生成）
+  
+  键盘和触控板可以分别通过禁用对应资源单独关闭：
+  
+  ![](/doc-img/zh-keyboard-3.webp)
+  :::danger
+  启用键盘时，请避免输入密码等敏感信息。
+  :::
+* **仅追踪手指：** 如果启用，该追踪系统将只追踪手指。如果你正在使用一个已经追踪手部的全身姿态追踪系统，这会非常有用。
+  
+### 全身追踪器
+
+对于全身追踪器，有以下选项可用：
+
+* **追踪全身 / 追踪身体部位：** 如果 **追踪全身** 设置为 **否**，则只有在 **追踪全身** 中选中的身体部位会被该追踪系统追踪。如果您正在使用多个全身姿态追踪系统，并希望使用不同的系统追踪不同的身体部位，这会很有帮助。
+  
+## 追踪器自定义
+
+在引导完成后，您可以前往对应的姿态追踪资源（例如 MediaPipe 追踪器、VMC 接收器）来自定义追踪数据本身。有以下选项可用：
+
+* **镜像追踪：** 如果启用，Warudo 将镜像追踪数据。
+* **头部旋转幅度/偏移：** 调整头部旋转的幅度和偏移。
+
+## 常见问题 {#FAQ}
+
+### 如何结合多个姿态追踪系统？
+
+如果您想设置次要姿态追踪，可以在引导过程中使用 **次要姿态追踪** 选项；如果你使用 VR 追踪器/Mocopi 进行主追踪，并希望使用 [MediaPipe](../mocap/mediapipe.md) ， [Leap Motion 控制器](../mocap/leap-motion.md) 或 [StretchSense 手套](../mocap/stretchsense.md) 添加手指追踪，这会很有帮助。
+
+![](/doc-img/en-getting-started-8.png)
+<p class="img-desc">设置次要姿态追踪。</p>
+
+如果你想结合两个以上的姿态追踪系统，可以先使用向导助手设置主姿态追踪，然后通过 **角色 → 配置动作捕捉** 设置后续的追踪系统，同时将 **追踪全身** 设置为 **否**，并将 **追踪身体部位** 设置为您希望用该系统追踪的具体身体部位。
 
 <AuthorBar authors={{
   creators: [
     {name: 'HakuyaTira', github: 'TigerHix'},
   ],
   translators: [
+    {name: 'zjy1412', github: 'zjy1412'},
   ],
 }} />

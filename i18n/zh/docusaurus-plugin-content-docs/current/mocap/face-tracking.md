@@ -6,73 +6,73 @@ sidebar_position: 20
 
 ## 蓝图自定义
 
-在开播准备环节，您可以点击 **面部追踪进阶设置…** 来对蓝图进行定制。
+在引导过程中，你可以点击 **面部追踪进阶设置...** 来自定义追踪蓝图。
 
 ![](/doc-img/en-mocap-3.png)
-<p class="img-desc">Customizing face tracking.</p>
+<p class="img-desc">自定义面部追踪。</p>
 
-目前我们提供以下几种选择:
+以下选项可供选择：
 
-* **BlendShape 映射:** 选择适合您模型的 BlendShape 映射。比如说，如果您的模型带有 "Perfect Sync"/ARKit Blendshape, 请您选择 **Arkit**; 如果您的模型是由MMD模型转换而来，请选择 **MMD** ;其他请选择 **VRM**。 Warudo 会尝试自动识别模型类型，但您也可以在这里手动更改类型。-
-* **启用头部和身体运动:** 此选项开启时，Warudo 会尝试基于动捕数据来同时运动模型的头身部分。在您使用完整的全身动捕系统的情况下，此选项会被开播助手设置为**关闭**。
-* **头部待机动画 (自动眨眼/自动眼部动作/自动摇头):** 在开启状态下，Warudo 会给角色增加微小的头部、眼部动作。
-* **视线:** 此选项开启时，，您的角色视线会望向指定方向（默认指向摄像机位）。这样可以帮助您在任何机位下保持与观众的眼神交流并允许您的头部自由转动。
-* **Lip Sync**: If enabled, Warudo will animate your character's mouth based on your speech. You can choose to enable lip sync only when tracking is lost, or always enable it.
+* **BlendShape 映射：** 选择适合你模型的 BlendShape 映射。例如，如果你的模型具有 "Perfect Sync"/ARKit BlendShapes，请选择 **ARKit**；如果你的模型是由 MMD 模型转换而来的，请选择 **MMD**；否则请选择 **VRM**。默认情况下，Warudo 会尝试自动识别 BlendShape 映射，但你可以在此处覆盖它。
+* **启用头部和身体移动：** 此选项开启时，Warudo 会根据动捕数据移动角色的头部和身体。此选项关闭时，则只会对脸部（BlendShapes 和眼球骨骼）进行动画处理。如果你使用的是已经追踪头部和身体的全身动捕系统，向导助手会自动将其设置为 **否**。
+* **头部待机动画（自动眨眼 / 自动眼部运动 / 自动头部运动）：** 如果启用，Warudo 将为角色添加细微的头部动作、眼球运动和眨眼效果。
+* **看向目标：** 如果启用，当你向前看时，角色将注视一个目标（默认为摄像机）。这使得角色/你在任何机位下都能与观众保持眼神交流，同时仍然允许角色/你自由环顾四周。
+* **唇形同步：** 如果启用，Warudo 将根据你说的话为角色的嘴部制作动画。你可以选择仅在追踪丢失时启用唇形同步，或者始终启用它。
 
 :::info
-These options above affect the generated blueprint; therefore, to change these options after the setup, you need to re-run the setup, or manually modify the face tracking blueprint. **Character → Motion Capture → Blueprint Navigation** provides shortcuts to the specific parts of the blueprint that you may want to modify:
+上述选项会影响生成的蓝图；因此，若要在设置完成后更改这些选项，你需要重新运行设置，或手动修改面部追踪蓝图。**角色 → 动作捕捉 → 蓝图跳转** 提供了指向你可能需要修改的蓝图特定部分的快捷方式：
 
 ![](/doc-img/en-mocap-6.png)
 :::
 
-## Tracker Customization
+## 追踪器自定义
 
-After onboarding, you can go to the corresponding face tracking asset (e.g., iFacialMocap Receiver, MediaPipe Tracker) to customize the tracking data itself. The following options are available:
+完成引导后，你可以进入相应的面部追踪资源（例如，iFacialMocap 接收器、MediaPipe 追踪器）来自定义追踪数据本身。以下选项可供选择：
 
-* **Mirrored Tracking:** If enabled, Warudo will mirror the tracking data.
-* **[BlendShape](../tutorials/3d-primer#blendshape) Sensitivity:** Adjust the sensitivity of the character's facial expressions. If your expressions are too subtle, increase the sensitivity; if your expressions are too exaggerated, decrease the sensitivity.
-* **Configure BlendShapes Mapping:** Adjust each individual blendshape's threshold and sensitivity. This is useful if you want to disable certain blendshapes, or if you want to adjust the sensitivity of each blendshape individually.
+* **镜像追踪：** 如果启用，Warudo 将镜像追踪数据。（左右翻转）
+* **全局[BlendShape](../tutorials/3d-primer#blendshape) 灵敏度：** 调整角色面部表情的灵敏度。如果你的表情过于微妙以至于摄像头没观察到，请增加灵敏度；与之相反，如果你的表情过于夸张刺激到了摄像头，那么请降低灵敏度。
+* **配置 BlendShapes 映射：** 调整每个单独 BlendShape 的阈值和灵敏度。如果你想禁用某些 BlendShapes，或者想单独调整每个 BlendShape 的灵敏度，此功能非常有用。
   ![](/doc-img/en-mocap-5.png)
-  The left two values are the range of the input blendshape value from the tracker, and the right two values are the range of the output blendshape value to the character. For example, if the input range is 0-1 and the output range is 0-2, then when the input blendshape value is 0.40, the output blendshape value will be 0.80.
-    - To disable a blendshape, set the top right value to 0.
-    - To make a blendshape more sensitive, increase the top right value; to make a blendshape less sensitive, decrease the top right value.
-    - To trigger a blendshape at a higher threshold (e.g., your character mouth is already slightly opened but your mouth is still closed), increase the bottom right value. To trigger a blendshape at a lower threshold, decrease the bottom right value.
-* **Head Movement/Rotation Intensity:** Adjust the intensity of the head movement/rotation.
-* **Body Movement Intensity:** Adjust the intensity of the automatic body movement due to head movement.
-* **Body Rotation Type:** Makes the body rotate naturally when the head rotates.
-  When set to None, the body will not rotate when the head rotates.
-  When set to Normal, the body rotates in the same direction as the head.
-  When set to Inverted, the body rotates in the same direction as the head on the X and Y axes, but in the opposite direction on the Z axis.
-  You can also set **Body Rotation Type** to Custom, which allows you to customize both the direction and magnitude of each rotation axis.
-* **Eye Movement Intensity:** Adjust the intensity of the pupil movement.
-* **Eye Blink Sensitivity:** Adjust the sensitivity of the eye blink; this is a shortcut for adjusting the sensitivity of the eye blink blendshape in **Configure BlendShapes Mapping**.
-* **Linked Eye Blinking:** If enabled, force both eyes to blink at the same time. Useful if your tracking is not accurate enough to blink each eye individually.
-* **Use Bones/BlendShapes for Eye Movement:** Whether to use eye bones or blendshapes for eye movement. If your model has eye bones, it is recommended to use eye bones, as they are more accurate and allow for [IK](../tutorials/3d-primer#IK). There are two cases where you may want to enable **Use BlendShapes For Eye Movement**:
-    - Your model does not have eye bones.
-    - Your model's eye blendshapes are supplementary to the eye bones, i.e., the eye blendshapes change the shape of the eyes, in addition to the eye bones moving the pupils. (Your modeler should be able to tell you whether this is the case.)
+  左边两个值是来自追踪器的输入 BlendShape 值范围，右边两个值是输出到角色的 BlendShape 值范围。例如，如果输入范围是 0-1，输出范围是 0-2，那么当输入 BlendShape 值为 0.40 时，输出 BlendShape 值将为 0.80。
+    - 要禁用某个 BlendShape，请将右上方的值设置为 0。
+    - 要使某个 BlendShape 更灵敏，请增加右上方的值；要使其不那么灵敏，请减少右上方的值。
+    - 要在更高的阈值下触发某个 BlendShape（例如，角色的嘴巴默认情况下是微微张开，而你的嘴巴通常是闭合着的，这能避免嘴巴的不自然闭合），请增加右下方的值。要在更低的阈值下触发某个 BlendShape，请减少右下方的值。
+* **头部移动/旋转幅度：** 调整头部移动/旋转的幅度。
+* **身体移动幅度：** 调整由于头部移动引起的身体运动的幅度。
+* **身体旋转类型：** 当头部旋转时，使身体自然旋转。
+  设置为无时，头部旋转时身体不会旋转。
+  设置为正常时，身体与头部同方向旋转。
+  设置为反转时，身体在 X 和 Y 轴上与头部同方向旋转，但在 Z 轴上反方向旋转。
+  你还可以将 **身体旋转类型** 设置为自定义，从而自定义每个旋转轴的方向和幅度。
+* **眼睛运动幅度：** 调整瞳孔运动的幅度。
+* **眨眼灵敏度：** 调整眨眼的灵敏度；这是在 **配置 BlendShapes 映射** 中调整眨眼 BlendShape 灵敏度的快捷方式。
+* **强制同时眨眼：** 如果启用，强制双眼同时眨眼。如果你的追踪不够准确，无法分别控制每只眼睛的眨眼，此功能非常有用。
+* **使用骨骼/BlendShapes 控制眼睛：** 是否使用眼球骨骼或 BlendShapes 控制眼睛。如果你的模型有眼球骨骼，建议使用眼球骨骼，因为它们更精确并支持 [IK](../tutorials/3d-primer#IK)。在以下两种情况下，你可能希望启用 **使用 BlendShapes 控制眼球运动**：
+    - 你的模型没有眼球骨骼。
+    - 你的模型的眼睛 BlendShapes 是对眼球骨骼的补充，即眼睛 BlendShapes 改变眼睛的形状，而眼球骨骼则移动瞳孔。（你的建模师应该能告诉你是否属于这种情况。）
 
-## Frequently Asked Questions {#FAQ}
+## 常见问题 {#FAQ}
 
-### When I move my head, my character's body also moves. How do I disable this?
+### 当我移动头部时，我的角色身体也跟着移动。如何禁用此功能？
 
-This is caused by the **Body Movement Intensity** option in the motion capture receiver asset. Set it to 0 to disable body movement.
+这是由动作捕捉接收器资源中的 **身体移动幅度** 选项引起的。将其设置为 0 即可禁用身体运动。
 
-### How do I enable lip sync?
+### 如何启用唇形同步？
 
-During the onboarding process, you can enable lip sync by clicking **Customize Face Tracking...** and enabling **Lip Sync**.
+在引导过程中，你可以通过点击 **面部追踪进阶设置...** 并启用 **唇形同步** 来启用该功能。
 
-You can adjust lip sync settings after onboarding by clicking **Character → Motion Capture → Blueprint Navigation → Lip Sync Settings**.
+完成引导后，你可以通过点击 **角色 → 动作捕捉 → 蓝图跳转 → 唇形同步设置** 来调整唇形同步。
 
-### My model's mouth is slightly open even when my mouth is closed.
+### 我的模型嘴巴在闭合时略微张开。
 
-This is usually caused by applying ARKit tracking on a non-ARKit-compatible model. To fix this, you can either:
+这通常是由于在非 ARKit 兼容模型上应用了 ARKit 追踪导致的。要解决此问题，你可以：
 
-* Add ["Perfect Sync" / ARKit blendshapes](../tutorials/3d-primer#arkit) to your model. This is recommended since ARKit-based face tracking is much more expressive, and you already have the tracking data.
-* Click **Configure BlendShapes Mapping** in the tracker asset, and increase the threshold (i.e., set the bottom right value to a negative number like `-0.25`) of the ARKit mouth blendshapes `jawOpen`, `mouthFunnel`, `mouthPucker`.
+* 为你的模型添加 ["Perfect Sync" / ARKit BlendShapes](../tutorials/3d-primer#arkit)。这是推荐的方法，因为基于 ARKit 的面部追踪更具表现力，并且你已经拥有追踪数据。
+* 在追踪器资源中点击 **配置 BlendShapes 映射**，并增加 ARKit 嘴部 BlendShapes `jawOpen`、`mouthFunnel`、`mouthPucker` 的阈值（即将右下方的值设置为负数，例如 `-0.25`）。
+  
+### 当我转动头部时，我的身体朝相反方向旋转。
 
-### My body rotates in the opposite direction when I turn my head.
-
-By default, **Body Rotation Type** is set to Inverted to mimic Live2D models and achieve a more anime look. If you want to disable this, set **Body Rotation Type** to Normal or None.
+默认情况下，**身体旋转类型** 设置为反转，以模仿 Live2D 模型并实现更二次元的效果。如果你想禁用此功能，请将 **身体旋转类型** 设置为正常（同向）或无。
 
 <AuthorBar authors={{
   creators: [
@@ -80,5 +80,6 @@ By default, **Body Rotation Type** is set to Inverted to mimic Live2D models and
   ],
   translators: [
     {name: 'MISSINGNO', github: 'MISSINGNO'},
+    {name: 'zjy1412', github: 'zjy1412'},
   ],
 }} />
