@@ -29,7 +29,7 @@ Unity로 가져올 수 있는 캐릭터 모델이라면 Warudo에 임포트할 �
 ![](/doc-img/en-character-mod-4.webp)
 
 :::tip
-캐릭터의 뼈대가 꼬이거나 비틀어진 것을 발견했다면 [뼈대 정상화](#normalize-bones) 섹션을 참고하세요.
+캐릭터의 뼈대가 꼬이거나 비틀어진 것을 발견했거나 모델의 전후 상태에서 시각적인 차이가 있다면, [뼈대 정상화](#normalize-bones) 섹션을 참고하세요.
 :::
 
 ### 3단계: 모드 내보내기
@@ -73,16 +73,28 @@ VRChat 모델을 재사용하는 경우, 모델과 함께 제공되는 Animator 
 
 ![](/doc-img/en-mod-11.png)
 
-캐릭터 설정 후 뼈대가 비틀린다면 모델의 뼈대가 정상화되지 않고 Warudo SDK가 모델을 손상시키지 않고 자동으로 뼈대를 정상화하는데 실패했을 가능성이 높아요. 이런 경우 FBX 모델을 Unity로 임포트 하기 전에 수동으로 뼈대를 정상화해야 해요.
+캐릭터 설정 후 뼈대가 비틀린다면 모델의 뼈대가 정상화되지 않고 Warudo SDK가 모델을 손상시키지 않고 자동으로 뼈대를 정상화하는데 실패했을 가능성이 높아요. 이런 경우 두 가지 해결책이 있어요:
 
-Blender나 Maya 같은 모델링 도구에서 뼈대를 정상화하는 여러 방법이 있지만, 가장 검증된 방법은 FBX 모델에서 [VRM](https://vrm.dev/en/univrm/) 모델을 생성한 후, VRM 모델을 Unity로 가져오는 거예요. VRM 모델은 뼈대가 정상화된 상태임이 보장되기 때문에 Warudo SDK로 캐릭터 설정을 한 후에도 뼈대가 비틀리지 않을 거예요.
+### 수동 정상화
 
-Blender 사용자인 경우, [Cats](https://github.com/absolute-quantum/cats-blender-plugin)의 **Set Rest Pose**옵션을 사용해 수동으로 뼈대를 정상화할 수 있어요. FBX를 내보낼 때는 다음 설정을 사용해야 해요:
+캐릭터를 직접 모델링한 경우, FBX 모델을 Unity에 가져오기 전에 수동으로 뼈대를 정상화하는 것을 추천해요.
+
+Blender나 Maya 같은 모델링 도구에서 뼈대를 정상화하는 여러 방법이 있지만, 가장 검증된 방법은 FBX 모델에서 [VRM](https://vrm.dev/en/univrm/) 모델을 생성한 후, VRM 모델을 Unity로 가져오는 거예요. VRM 모델은 뼈대가 정상화된 상태임이 보장되기 때문에 Warudo SDK로 캐릭터 설정을 한 후에도 뼈대가 비틀리지 않을 거예요. 다만, 이 방법의 단점은 FBX 모델을 수정할 때마다 VRM 모델을 새로 생성해야 한다는 점이에요.
+
+Blender 사용자인 경우, [Cats](https://github.com/absolute-quantum/cats-blender-plugin)의 **Set Rest Pose** 옵션을 사용해 수동으로 뼈대를 정상화할 수 있어요. FBX를 내보낼 때는 다음 설정을 사용해야 해요:
 
 ![](/doc-img/en-mod-15.png)
 <p class="img-desc">Credit: [@Kana_Fuyuko](https://twitter.com/Kana_Fuyuko)</p>
 
-Blender에 내장된 FBX 내보내기 기능은 올바른 뼈대 회전 값을 내보내지 못하는 문제가 알려져 있어요. 만약 이 방법이 잘 작동하지 않는다면 [Better FBX Importer & Exporter](https://blendermarket.com/products/better-fbx-importer--exporter)나 [Cats](https://github.com/absolute-quantum/cats-blender-plugin)와 같은 서드파티 애드온을 사용해 FBX 모델을 내보내는 것을 시도해 볼 수 있어요. 
+:::warning
+Blender에 내장된 FBX 내보내기 기능은 올바른 뼈대 회전 값을 내보내지 못하는 문제가 알려져 있어요. 만약 이 방법이 잘 작동하지 않는다면 [Better FBX Importer & Exporter](https://blendermarket.com/products/better-fbx-importer--exporter) (추천)나 [Cats](https://github.com/absolute-quantum/cats-blender-plugin)와 같은 서드파티 애드온을 사용해 FBX 모델을 내보내는 것을 시도해 볼 수 있어요.
+:::
+
+### Denormalized Avatar Exporter 사용
+
+[Denormalized Avatar Exporter]는 [@vr_hai](https://x.com/vr_hai)가 개발한 Unity 패키지로, VRChat용으로 제작된 아바타를 Warudo와 같은 VTubing 앱에서도 사용할 수 있도록 내보낼 수 있어요. 하지만 VRChat 모델이 아니더라도 정상화되지 않은 뼈대 문제를 해결하는 데 사용할 수 있어요.
+
+캐릭터를 직접 모델링하지 않았고, 뼈대 정상화 문제로 어려움을 겪고 있다면 이 툴을 사용하는 것을 추천해요. 자세한 내용은 [공식 문서](https://docs.hai-vr.dev/docs/products/denormalized-avatar-exporter#usage-in-warudo)를 참고하세요.
 
 <AuthorBar authors={{
   creators: [
