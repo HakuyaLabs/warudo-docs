@@ -59,9 +59,9 @@ Since Warudo allows you to package C# scripts into your mod, you can also use ot
 
 You may want to add custom animations to your character, such as changing hair color or flapping wings. Depending on the nature of your animation, you can use one of the following methods:
 
-* **Animation controls human bones only:** Create a [character animation mod](character-animation-mod) and play using any character animation nodes in Warudo or Character → Overlaying Animations.
+* **Animation controls human bones only:** Create a [character animation mod](character-animation-mod) and play using any character animation nodes in Warudo or Character → Overlaying Animations. You can also just put a raw Unity `.anim` file in the `CharacterAnimations` folder to use it.
 * **Animation controls material properties:** Use Warudo's character expression system (Character → Expressions).
-* **Animation controls non-bone transforms:** Add an [Animator Controller](https://docs.unity3d.com/Manual/class-AnimatorController.html) to the Animator component, and use [Feline's Animator Parameter Setter Nodes](https://steamcommunity.com/sharedfiles/filedetails/?id=3005732826&searchtext=animator+) to access the Animator Controller.
+* **Animation controls non-bone transforms:** Add an [Animator Controller](https://docs.unity3d.com/Manual/class-AnimatorController.html) to the Animator component, and use Warudo's built-in animator controller nodes to control Animator parameters.
 
 :::info
 If you are reusing a VRChat model, you can also just use the Animator Controller that comes with the model. However, the first 2 methods integrate better with Warudo's motion capture and animation system, thus are recommended.
