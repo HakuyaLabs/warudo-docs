@@ -59,7 +59,7 @@ Warudo는 모드에 C# 스크립트를 포함할 수 있기 때문에, 다른 �
 
 캐릭터에 머리 색깔 변경이나 날개 퍼덕임과 같은 커스텀 애니메이션을 추가하고 싶을 수 있어요. 애니메이션의 성격에 따라 다음 방법 중 하나를 사용할 수 있어요:
 
-* **애니메이션이 인체 뼈대만 제어하는 경우:** [캐릭터 애니메이션 모드](character-animation-mod)를 생성하고 Warudo의 캐릭터 애니메이션 노드나 Character → Overlaying Animations를 사용해 재생하세요.
+* **애니메이션이 인체 뼈대만 제어하는 경우:** [캐릭터 애니메이션 모드](character-animation-mod)를 생성하고 Warudo의 캐릭터 애니메이션 노드나 Character → Overlaying Animations를 사용해 재생하세요. Unity `.anim` 원본 파일을 `CharacterAnimations` 폴더에 직접 넣어서 사용할 수도 있습니다.
 * **애니메이션이 재질 속성을 제어하는 경우:** Warudo의 캐릭터 표현 시스템 (Character → Expressions)을 사용하세요.
 * **애니메이션 뼈대가 아닌 변형을 제어하는 경우:** Animator 컴포넌트에 [애니메이터 컨트롤러](https://docs.unity3d.com/kr/current/Manual/class-AnimatorController.html)를 추가하고, [Feline's Animator Parameter Setter Nodes](https://steamcommunity.com/sharedfiles/filedetails/?id=3005732826&searchtext=animator+)를 사용해 애니메이터 컨트롤러에 접근하세요.
 
