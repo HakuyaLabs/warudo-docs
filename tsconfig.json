@@ -4,5 +4,6 @@
   "compilerOptions": {
     "baseUrl": ".",
     "types": ["docusaurus-plugin-sass"],
+    "jsx": "react-jsx"
   }
 }
