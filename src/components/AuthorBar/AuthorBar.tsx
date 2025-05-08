@@ -1,5 +1,5 @@
 import Translate from '@docusaurus/Translate';
-import { useDoc } from '@docusaurus/theme-common/internal';
+import { useDoc } from '@docusaurus/plugin-content-docs/client';
 import dayjs from 'dayjs';
 import { useMemo } from 'react';
 import { IoCreateOutline } from 'react-icons/io5';
