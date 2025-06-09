@@ -2,9 +2,9 @@
 sidebar_position: 80
 ---
 
-# Data Input Watchers {#watchers}
+# Observadores de Data Input {#watchers}
 
-A menudo estás interesado en saber cuándo cambia el valor de un data input. Por ejemplo, digamos que tienes el siguiente código que permite al usuario seleccionar un archivo del directorio `MyPluginFiles` en la carpeta de datos:
+A menudo estás interesado en saber cuándo cambia el valor de un data input.Por ejemplo, digamos que tienes el siguiente código que permite al usuario seleccionar un archivo del directorio `MyPluginFiles` en la carpeta de datos:
 
 ```csharp
 [DataInput]

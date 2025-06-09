@@ -2,7 +2,7 @@
 sidebar_position: 100
 ---
 
-# Plugin Mod
+# Mod de Plugin
 
 A plugin mod is a type of [Warudo mod](../modding/mod-sdk) that adds custom assets and nodes to Warudo.
 
@@ -43,5 +43,6 @@ creators: [
 {name: 'HakuyaTira', github: 'TigerHix'},
 ],
 translators: [
+{name: 'かぐら', github: 'Arukaito'},
 ],
 }} />

@@ -10,9 +10,9 @@ Los ports y triggers pertenecen a [entities](entities) y son posiblemente la par
 
 ![](/doc-img/en-scripting-concepts-4.png)
 
-## Data Input Ports {#data-input-ports}
+## Ports de Entrada de Datos {#data-input-ports}
 
-Los data input ports se usan para proporcionar datos a una entity ya sea por el usuario (usando el editor) u otra entity. Los data inputs pueden ser de varios tipos, como strings, números, booleanos, o incluso tipos complejos como [structured data](structured-data.md) o arrays.
+Los data input ports se usan para proporcionar datos a una entity ya sea por el usuario (usando el editor) u otra entity.Los data inputs pueden ser de varios tipos, como strings, números, booleanos, o incluso tipos complejos como [structured data](structured-data.md) o arrays.
 
 Un data input se define como un campo público en una subclase de entity, decorado con el atributo `[DataInput]`. En el ejemplo [Getting Started](getting-started.md), vimos un `DataInput` que define un slider de número:
 
@@ -203,7 +203,7 @@ As mentioned in the [Attributes](#data-input-attributes) section, you can also u
 ```
 :::
 
-### Asset References {#asset-references}
+### Referencias de Assets {#asset-references}
 
 :::warning
 Asset references are only available in assets, nodes, and non-plugin structured data.
@@ -252,7 +252,7 @@ protected bool FilterCharacterAsset(CharacterAsset character) {
 }
 ```
 
-### Accessing Data Inputs Programmatically {#accessing-data-inputs}
+### Accediendo a Data Inputs Programáticamente {#accessing-data-inputs}
 
 Let's say you have an entity. There are two ways to read its data inputs:
 
@@ -285,7 +285,7 @@ You should use the first method only if:
 1. You are updating the data input extremely frequently, and you do not need to send every change to the editor, i.e., you will call `BroadcastDataInput(string key)` sporadically. This saves performance.
 2. You explicitly do not want to notify watchers of this data input. This is rare.
 
-## Data Output Ports
+## Ports de Salida de Datos
 
 Data output ports are node-specific and are used to provide data to other nodes. A data output is defined as a public method in a node subclass, decorated with the `[DataOutput]` attribute. The method can return any non-void type. Here is an example:
 
@@ -298,9 +298,9 @@ public int RandomNumber() {
 
 Data outputs support a subset of [data input attributes](#data-input-attributes): `[Label]`, `[HideLabel]`, `[Description]`, `[HiddenIf]`, and `[DisabledIf]`.
 
-## Flow Input Ports {#flow-inputs}
+## Ports de Entrada de Flujo {#flow-inputs}
 
-Flow input ports are node-specific and are used to receive flow signals from other nodes to trigger certain actions. A flow input is defined as a public method in a node subclass, decorated with the `[FlowInput]` attribute. The method must return a flow output `Continuation`. Here is an example:
+Flow input ports are node-specific and are used to receive flow signals from other nodes to trigger certain actions.A flow input is defined as a public method in a node subclass, decorated with the `[FlowInput]` attribute. The method must return a flow output `Continuation`. Here is an example:
 
 ```csharp
 [DataInput]
@@ -320,9 +320,9 @@ public Continuation ExitB;
 
 Flow inputs support a subset of [data input attributes](#data-input-attributes): `[Label]`, `[HideLabel]`, and `[Description]`. Note that if the method is named `Enter()` and without a `[Label]` attribute, the label will be automatically set to the word "Enter" localized in the editor's language.
 
-## Flow Output Ports
+## Ports de Salida de Flujo
 
-Flow output ports are node-specific and are used to send flow signals to other nodes. A flow output is defined as a public field in a node subclass, decorated with the `[FlowOutput]` attribute. The field must be of type `Continuation`. See [Flow Inputs](#flow-inputs) for an example.
+Flow output ports are node-specific and are used to send flow signals to other nodes.A flow output is defined as a public field in a node subclass, decorated with the `[FlowOutput]` attribute. The field must be of type `Continuation`. See [Flow Inputs](#flow-inputs) for an example.
 
 Flow outputs support a subset of [data input attributes](#data-input-attributes): `[Label]`, `[HideLabel]`, and `[Description`]. Note that if the field is named `Exit` and without a `[Label]` attribute, the label will be automatically set to the word "Exit" localized in the editor's language.
 
@@ -345,7 +345,7 @@ When the user clicks the button, the `ShowPopupMessage` method is called.
 
 Triggers support a subset of [data input attributes](#data-input-attributes): `[Label]`, `[HideLabel]`, `[Description]`, `[HiddenIf]`, `[DisabledIf]`, `[Section]`, and `[SectionHiddenIf]`.
 
-### Asynchronous Triggers
+### Triggers Asíncronos
 
 Trigger methods can be asynchronous. For example, if you want to show a message after a delay, you can use `UniTask`:
 
@@ -369,13 +369,13 @@ public async void ShowConfirmationDialog() {
 }
 ```
 
-### Invoking Triggers Programmatically
+### Invocando Triggers Programáticamente
 
-Similar to [accessing data inputs](#accessing-data-inputs), you can invoke triggers programmatically by calling the method directly or using the `void InvokeTrigger(string key)` method on the entity. For example, to invoke a trigger named `ShowPopupMessage`, you can use `entity.ShowPopupMessage()` or `entity.InvokeTrigger("ShowPopupMessage")`.
+Similar to [accessing data inputs](#accessing-data-inputs), you can invoke triggers programmatically by calling the method directly or using the `void InvokeTrigger(string key)` method on the entity.For example, to invoke a trigger named `ShowPopupMessage`, you can use `entity.ShowPopupMessage()` or `entity.InvokeTrigger("ShowPopupMessage")`.
 
-## Port Order
+## Orden de Ports
 
-By default, ports are automatically ordered based on their declaration order in the entity class. However, you can manually specify the order of ports by using the `order` parameter in the `[DataInput]`, `[DataOutput]`, `[FlowInput]`, `[FlowOutput]`, and `[Trigger]` attributes. For example:
+By default, ports are automatically ordered based on their declaration order in the entity class.However, you can manually specify the order of ports by using the `order` parameter in the `[DataInput]`, `[DataOutput]`, `[FlowInput]`, `[FlowOutput]`, and `[Trigger]` attributes. For example:
 
 ```csharp
 [DataInput(order = 1)]
@@ -385,9 +385,9 @@ public int MyNumber = 42;
 public string MyString = "Hello, World!"; // This will be displayed before MyNumber
 ```
 
-## Dynamic Ports
+## Ports Dinámicos
 
-Sometimes, you want to dynamically add or remove ports based on certain conditions. For example, the built-in **Multi Gate** node has a dynamic number of flow outputs (exits) based on the "Exit Count" data input.
+Sometimes, you want to dynamically add or remove ports based on certain conditions.For example, the built-in **Multi Gate** node has a dynamic number of flow outputs (exits) based on the "Exit Count" data input.
 
 To achieve this, you can access the underlying port collections at runtime:
 
@@ -409,9 +409,9 @@ You can find the full source code of the **Multi Gate** node [here](https://gist
 You should not add or remove ports frequently (i.e., on every frame), as it may cause performance issues.
 :::
 
-## Dynamic Port Properties
+## Propiedades de Ports Dinámicos
 
-You can also dynamically change the properties of a port, such as label, description, or type-specific properties. For example, consider the following:
+You can also dynamically change the properties of a port, such as label, description, or type-specific properties.For example, consider the following:
 
 ```csharp
 [DataInput]

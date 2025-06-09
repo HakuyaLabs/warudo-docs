@@ -73,13 +73,13 @@ Aquí hay un resumen de los parámetros:
 | `CATEGORY_SWITCHES`             | Switches             | 切换       | 切り替え               |
 | `CATEGORY_VARIABLES`            | Variables            | 变量       | 変量                   |
 
-## Components
+## Componentes
 
 A node type can define data inputs, data outputs, flow inputs, flow outputs, and triggers.
 
 ![](/doc-img/en-custom-node-1.png)
 
-## Lifecycle
+## Ciclo de Vida
 
 In addition to the lifecycle stages listed on the [Entities](entities#lifecycle) page, nodes have the following additional lifecycle stages:
 
@@ -204,5 +204,6 @@ creators: [
 {name: 'hanekit', github: 'hanekit'}
 ],
 translators: [
+{name: 'かぐら', github: 'Arukaito'},
 ],
 }} />

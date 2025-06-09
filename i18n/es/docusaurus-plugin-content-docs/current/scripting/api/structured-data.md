@@ -2,9 +2,9 @@
 sidebar_position: 60
 ---
 
-# Structured Data
+# Datos Estructurados
 
-Structured data es una forma de definir una estructura de datos embebida dentro de una entity. Son útiles para definir data inputs complejos que necesitan ser reutilizados dentro de la misma entity o a través de múltiples entities.
+Structured data es una forma de definir una estructura de datos embebida dentro de una entity.Son útiles para definir data inputs complejos que necesitan ser reutilizados dentro de la misma entity o a través de múltiples entities.
 
 ## Definición de Tipo
 
@@ -141,7 +141,7 @@ Cuando el usuario hace clic en el botón **+**, elementos de structured data son
 </div>
 </div>
 
-## Custom Initializer
+## Inicializador Personalizado
 
 Elements in a structured data array are automatically initialized by Warudo:
 
@@ -167,7 +167,7 @@ protected void InitializeTransform(MyTransformData transform) {
 
 When the user clicks the **+** button, the `InitializeTransform` method is called to initialize the new structured data element.
 
-## Programmatically Creating Structured Data
+## Creando Structured Data Programáticamente
 
 To manually populate the structured data array, or to add structured data elements programmatically, use the `StructuredData.Create<T>()` method:
 
@@ -202,7 +202,7 @@ public void AddNewRandomTransform() {
 Do not use `new MyTransformData()` to create structured data instances. Always use `StructuredData.Create<T>()` to ensure proper entity initialization.
 :::
 
-## Collapsible Structured Data
+## Structured Data Plegable
 
 Structured data can be collapsed to save space:
 
@@ -231,7 +231,7 @@ public override void OnUpdate() {
 }
 ```
 
-## Accessing Parent Entity
+## Accediendo a la Entity Padre
 
 If you need to access the parent entity from the structured data, you can change the base class to `StructuredData<TParent>` and use the `Parent` property, which is automatically casted to `TParent`. Using the `MyTransformData` example:
 
@@ -266,7 +266,7 @@ public class MyTransformData : StructuredData<MyTransformAsset> {
 }
 ```
 
-## Structured Data Input Dialog {#input}
+## Diálogo de Entrada de Structured Data {#input}
 
 A very common use case for structured data is to allow the user to input data in a dialog. Remember the onboarding assistant? Every popup window that showed up during the onboarding process was actually a structured data!
 
@@ -287,7 +287,7 @@ public async void PromptUserInput() {
 
 When combined with `[Markdown(primary: true)]` on string data inputs and `[CardSelect]` on enum data inputs, plus some clever use of `[HiddenIf]`, you will be able to create great-looking and user-friendly dialogs in your plugins!
 
-### Retry Dialog
+### Diálogo de Reintento
 
 You can "retry" the current dialog by calling `PromptStructuredDataInput` again with the current structured data:
 

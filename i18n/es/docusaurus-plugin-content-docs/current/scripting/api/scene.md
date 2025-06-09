@@ -2,9 +2,9 @@
 sidebar_position: 1
 ---
 
-# Scene
+# Escena
 
-Una scene es un archivo JSON que almacena una lista de assets, una lista de blueprints, y configuraciones de plugin específicas de esa escena. Cuando abres una escena guardada en el editor, los assets guardados son creados y deserializados (es decir, restaurados) primero; luego, los blueprints guardados son instanciados uno por uno, con nodos en cada uno creados y deserializados.
+Una scene es un archivo JSON que almacena una lista de assets, una lista de blueprints, y configuraciones de plugin específicas de esa escena.Cuando abres una escena guardada en el editor, los assets guardados son creados y deserializados (es decir, restaurados) primero; luego, los blueprints guardados son instanciados uno por uno, con nodos en cada uno creados y deserializados.
 
 :::info
 En el código base, los blueprints son llamados _graphs_.

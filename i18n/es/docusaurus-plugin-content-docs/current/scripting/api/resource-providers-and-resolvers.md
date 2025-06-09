@@ -2,9 +2,9 @@
 sidebar_position: 200
 ---
 
-# Resource Providers & Resolvers
+# Proveedores de Recursos 
 
-Los recursos en Warudo son cualquier dato externo que puede ser usado por assets y nodos. Por ejemplo, los recursos de personaje son los archivos `.vrm` y `.warudo` en el directorio `Characters`; los recursos de animación de personaje son las 500+ animaciones integradas proporcionadas por Warudo más cualquier [mod de animación de personaje](../../modding/character-animation-mod) personalizado en el directorio `CharacterAnimations`; los recursos de imagen de [pantalla](../../assets/screen) son los archivos de imagen en el directorio `Images`; y así sucesivamente.
+Los recursos en Warudo son cualquier dato externo que puede ser usado por assets y nodos.Por ejemplo, los recursos de personaje son los archivos `.vrm` y `.warudo` en el directorio `Characters`; los recursos de animación de personaje son las 500+ animaciones integradas proporcionadas por Warudo más cualquier [mod de animación de personaje](../../modding/character-animation-mod) personalizado en el directorio `CharacterAnimations`; los recursos de imagen de [pantalla](../../assets/screen) son los archivos de imagen en el directorio `Images`; y así sucesivamente.
 
 ## Visión General
 
@@ -93,7 +93,7 @@ Once the plugin is loaded, when you open the `Source` dropdown in a prop asset, 
 
 Selecting them will invoke the corresponding resource URI resolver to load the prop data. But no one knows how to resolve our URIs! Let's create a resolver for our URIs.
 
-## URI Resolver
+## Resolver de URI
 
 Add the following class to our plugin:
 
@@ -126,17 +126,17 @@ Context.ResourceManager.RegisterUriResolver(new PrimitivePropResourceUriResolver
 
 Once the plugin is reloaded, when you select a cube or a sphere in the prop asset, Warudo will create a cube or a sphere in the Unity scene!
 
-## Mod Collection
+## Colección de Mods
 
-A common use case of resource providers and resolvers is to provide a collection of mods. For example, if you have 100 prop prefabs in Unity and would like to use them in Warudo, compared to exporting 100 [prop mods](../../modding/prop-mod) to the `Props` directory, you can write a custom resource provider and resolver to load the prefabs directly from the plugin's mod folder (see [Loading Unity Assets](plugins#loading-unity-assets)). This comes with the added benefit that your users would be able to see all of your resources under the same category in the dropdown.
+A common use case of resource providers and resolvers is to provide a collection of mods.For example, if you have 100 prop prefabs in Unity and would like to use them in Warudo, compared to exporting 100 [prop mods](../../modding/prop-mod) to the `Props` directory, you can write a custom resource provider and resolver to load the prefabs directly from the plugin's mod folder (see [Loading Unity Assets](plugins#loading-unity-assets)). This comes with the added benefit that your users would be able to see all of your resources under the same category in the dropdown.
 
 :::tip
 For best practices on writing a mod collection plugin, please refer to the [Katana Animations](https://gist.github.com/TigerHix/2cb8052b0e8aeeb7f9cb796dc7edc6a3) sample plugin.
 :::
 
-## Custom Resource Types
+## Tipos de Recursos Personalizados
 
-Resources are designed to be generic, so you can use them for any type of data. For example, if you are writing a plugin that lets the user spawn an emote, you may want to create a custom resource type called `Emote`:
+Resources are designed to be generic, so you can use them for any type of data.For example, if you are writing a plugin that lets the user spawn an emote, you may want to create a custom resource type called `Emote`:
 
 ```csharp
 [AutoCompleteResource("Emote")]
@@ -161,9 +161,9 @@ Here is a list of built-in resource types used by the built-in assets:
 | `"Sound"`              | Play Sound, Throw Prop At Character      | `AudioClip`                                  |
 | `"Video"`              | Screen                                   | `string` (absolute file path)                |
 
-## Thumbnail Resolver
+## Resolver de Miniaturas
 
-When resource dropdowns are annotated with the `[PreviewGallery]` attribute, the user can click the "Preview Gallery" button to see a grid of thumbnails of the resources. This is useful when the resources are images, props, poses, or any other visual data.
+When resource dropdowns are annotated with the `[PreviewGallery]` attribute, the user can click the "Preview Gallery" button to see a grid of thumbnails of the resources.This is useful when the resources are images, props, poses, or any other visual data.
 
 To provide thumbnails, you need to implement the `IResourceUriThumbnailResolver` interface that asynchronously returns a `byte[]` of the thumbnail image data. Then, register the resolver in the plugin's `OnCreate` method:
 
