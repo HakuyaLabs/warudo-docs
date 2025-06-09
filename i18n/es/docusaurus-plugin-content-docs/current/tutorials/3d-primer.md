@@ -2,7 +2,7 @@
 sidebar_position: 11
 ---
 
-# 3D VTubing Primer
+# 3D VTubing para Novatos
 
 A continuación hay una lista de preguntas frecuentes sobre 3D VTubing; no son específicas de Warudo, ¡pero aún son útiles de saber!
 

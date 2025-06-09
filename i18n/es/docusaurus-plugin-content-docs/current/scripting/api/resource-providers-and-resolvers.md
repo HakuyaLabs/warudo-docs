@@ -71,7 +71,7 @@ public class PrimitivePropResourceProvider : IResourceProvider {
 }
 ```
 
-In the example above, we register a custom resource provider that provides two prop resources: a cube and a sphere. Note the `ProvideResources` method returns the list of resources only when the query is `"Prop"`; this is because the prop asset queries for prop resources with the query `"Prop"`, like this:
+En el ejemplo anterior, registramos un proveedor de recursos personalizado que proporciona dos recursos de utilería: un cubo y una esfera. Observa que el método `ProvideResources` devuelve la lista de recursos solo cuando la consulta es `"Prop"`; esto se debe a que el asset de utilería consulta los recursos de utilería con la consulta `"Prop"`, así:
 
 ```csharp
 // In the prop asset class
@@ -80,22 +80,22 @@ public string Source;
 ```
 
 :::tip
-A list of queries used by the built-in assets can be found in the [Built-in Resource Types](#built-in-resource-types) section.
+Una lista de las consultas utilizadas por los assets integrados se puede encontrar en la sección [Tipos de Recursos Integrados](#built-in-resource-types).
 :::
 
 :::tip
-We write the URIs like `prop://primitives/cube` because it is a convention to use the `prop://` scheme for prop resources, but you don't necessarily have to follow, especially if you will write a custom resolver for your resource URIs.
+Escribimos los URI como `prop://primitives/cube` porque es una convención usar el esquema `prop://` para los recursos de utilería, pero no necesariamente tienes que seguirla, especialmente si vas a escribir un resolver personalizado para tus URI de recursos.
 :::
 
-Once the plugin is loaded, when you open the `Source` dropdown in a prop asset, you should be able to see the two resources provided by our custom resource provider:
+Una vez que el plugin está cargado, cuando abres el menú desplegable `Source` en un asset de utilería, deberías poder ver los dos recursos proporcionados por nuestro proveedor de recursos personalizado:
 
 ![](/doc-img/en-resource-providers-2.png)
 
-Selecting them will invoke the corresponding resource URI resolver to load the prop data. But no one knows how to resolve our URIs! Let's create a resolver for our URIs.
+Seleccionarlos invocará el resolver de URI de recurso correspondiente para cargar los datos de la utilería. ¡Pero nadie sabe cómo resolver nuestros URI! Vamos a crear un resolver para nuestros URI.
 
 ## Resolver de URI
 
-Add the following class to our plugin:
+Agrega la siguiente clase a nuestro plugin:
 
 ```csharp
 public class PrimitivePropResourceUriResolver : IResourceUriResolver {
@@ -112,67 +112,67 @@ public class PrimitivePropResourceUriResolver : IResourceUriResolver {
 }
 ```
 
-The first few two lines check if the URI matches our custom format, i.e., `prop://primitives/xxx`. If so, we extract the last part of the URI (`path`) and create a cube or a sphere accordingly. We return a `GameObject` directly, because it is what the prop asset expects when it selects a prop resource.
+Las primeras dos líneas verifican si el URI coincide con nuestro formato personalizado, es decir, `prop://primitives/xxx`. Si es así, extraemos la última parte del URI (`path`) y creamos un cubo o una esfera en consecuencia. Devolvemos un `GameObject` directamente, porque es lo que espera el asset de utilería cuando selecciona un recurso de utilería.
 
 :::tip
-The returned object type must be compatible with the asset that uses the resource. For example, a character asset expects a `GameObject` when it selects a character resource, a screen asset expects a `ImageResource` when it selects an image resource, etc. A list of expected types for internal assets can be found in the [Built-in Resource Types](#built-in-resource-types) section.
+El tipo de objeto devuelto debe ser compatible con el asset que utiliza el recurso. Por ejemplo, un asset de personaje espera un `GameObject` cuando selecciona un recurso de personaje, un asset de pantalla espera un `ImageResource` cuando selecciona un recurso de imagen, etc. Una lista de los tipos esperados para los assets internos se puede encontrar en la sección [Tipos de Recursos Integrados](#built-in-resource-types).
 :::
 
-Now we just need to register it in the `OnCreate` method of the plugin:
+Ahora solo necesitamos registrarlo en el método `OnCreate` del plugin:
 
 ```csharp
 Context.ResourceManager.RegisterUriResolver(new PrimitivePropResourceUriResolver(), this);
 ```
 
-Once the plugin is reloaded, when you select a cube or a sphere in the prop asset, Warudo will create a cube or a sphere in the Unity scene!
+Una vez que el plugin se recarga, cuando seleccionas un cubo o una esfera en el asset de utilería, ¡Warudo creará un cubo o una esfera en la escena de Unity!
 
 ## Colección de Mods
 
-A common use case of resource providers and resolvers is to provide a collection of mods.For example, if you have 100 prop prefabs in Unity and would like to use them in Warudo, compared to exporting 100 [prop mods](../../modding/prop-mod) to the `Props` directory, you can write a custom resource provider and resolver to load the prefabs directly from the plugin's mod folder (see [Loading Unity Assets](plugins#loading-unity-assets)). This comes with the added benefit that your users would be able to see all of your resources under the same category in the dropdown.
+Un caso de uso común de los proveedores y resolvers de recursos es proporcionar una colección de mods. Por ejemplo, si tienes 100 prefabs de utilería en Unity y te gustaría usarlos en Warudo, en lugar de exportar 100 [mods de utilería](../../modding/prop-mod) al directorio `Props`, puedes escribir un proveedor y resolver de recursos personalizado para cargar los prefabs directamente desde la carpeta de mods del plugin (consulta [Cargar Assets de Unity](plugins#loading-unity-assets)). Esto tiene el beneficio adicional de que tus usuarios podrán ver todos tus recursos bajo la misma categoría en el menú desplegable.
 
 :::tip
-For best practices on writing a mod collection plugin, please refer to the [Katana Animations](https://gist.github.com/TigerHix/2cb8052b0e8aeeb7f9cb796dc7edc6a3) sample plugin.
+Para conocer las mejores prácticas sobre cómo escribir un plugin de colección de mods, consulta el plugin de ejemplo [Katana Animations](https://gist.github.com/TigerHix/2cb8052b0e8aeeb7f9cb796dc7edc6a3).
 :::
 
 ## Tipos de Recursos Personalizados
 
-Resources are designed to be generic, so you can use them for any type of data.For example, if you are writing a plugin that lets the user spawn an emote, you may want to create a custom resource type called `Emote`:
+Los recursos están diseñados para ser genéricos, por lo que puedes usarlos para cualquier tipo de datos. Por ejemplo, si estás escribiendo un plugin que permite al usuario generar un emote, es posible que desees crear un tipo de recurso personalizado llamado `Emote`:
 
 ```csharp
 [AutoCompleteResource("Emote")]
 public string Emote; // This will be used by the user to select the emote URI
 ```
 
-Then write a custom resource provider that provides a list of emote URIs (say `emote://xxx/yyy`) when the query is `"Emote"`, and a custom resource URI resolver that loads the emote data when the URI scheme matches your custom scheme.
+Luego, escribe un proveedor de recursos personalizado que proporcione una lista de URI de emotes (por ejemplo, `emote://xxx/yyy`) cuando la consulta sea `"Emote"`, y un resolver de URI de recurso personalizado que cargue los datos del emote cuando el esquema del URI coincida con tu esquema personalizado.
 
-## Built-in Resource Types {#built-in-resource-types}
+## Tipos de Recursos Integrados {#built-in-resource-types}
 
-Here is a list of built-in resource types used by the built-in assets:
+Aquí hay una lista de los tipos de recursos integrados utilizados por los assets integrados:
 
-| Query              | Example(s)                               | Expects                                    |
+| Consulta             | Ejemplo(s)                               | Espera                                     |
 |--------------------|------------------------------------------|--------------------------------------------|
-| `"Character"`          | Character                                | `GameObject `                                |
-| `"CharacterAnimation"` | Character, Play Character Idle Animation | `AnimationClip`                              |
-| `"Environment"`        | Environment                              | `Scene` or `ValueTuple<ModHost, Scene>`       |
-| `"Image"`              | Screen                                   | `Warudo.Plugins.Core.Utils.ImageResource`    |
-| `"Music"`              | Music Player                             | `string` (absolute file path)                |
-| `"Particle"`           | Throw Prop At Character                  | `GameObject`                                 |
-| `"Prop"`               | Prop                                     | `GameObject`                                 |
-| `"Sound"`              | Play Sound, Throw Prop At Character      | `AudioClip`                                  |
-| `"Video"`              | Screen                                   | `string` (absolute file path)                |
+| `"Character"`          | Personaje                                | `GameObject `                                |
+| `"CharacterAnimation"` | Personaje, Reproducir Animación Inactiva de Personaje | `AnimationClip`                              |
+| `"Environment"`        | Entorno                                  | `Scene` o `ValueTuple<ModHost, Scene>`       |
+| `"Image"`              | Pantalla                                   | `Warudo.Plugins.Core.Utils.ImageResource`    |
+| `"Music"`              | Reproductor de Música                      | `string` (ruta de archivo absoluta)          |
+| `"Particle"`           | Lanzar Utilería al Personaje             | `GameObject`                                 |
+| `"Prop"`               | Utilería                                 | `GameObject`                                 |
+| `"Sound"`              | Reproducir Sonido, Lanzar Utilería al Personaje | `AudioClip`                                  |
+| `"Video"`              | Pantalla                                   | `string` (ruta de archivo absoluta)          |
 
 ## Resolver de Miniaturas
 
-When resource dropdowns are annotated with the `[PreviewGallery]` attribute, the user can click the "Preview Gallery" button to see a grid of thumbnails of the resources.This is useful when the resources are images, props, poses, or any other visual data.
+Cuando los menús desplegables de recursos están anotados con el atributo `[PreviewGallery]`, el usuario puede hacer clic en el botón "Galería de Vistas Previas" para ver una cuadrícula de miniaturas de los recursos. Esto es útil cuando los recursos son imágenes, utilerías, poses o cualquier otro dato visual.
 
-To provide thumbnails, you need to implement the `IResourceUriThumbnailResolver` interface that asynchronously returns a `byte[]` of the thumbnail image data. Then, register the resolver in the plugin's `OnCreate` method:
+Para proporcionar miniaturas, necesitas implementar la interfaz `IResourceUriThumbnailResolver` que devuelve asincrónicamente un `byte[]` de los datos de la imagen en miniatura. Luego, registra el resolver en el método `OnCreate` del plugin:
 
 ```csharp
 Context.ResourceManager.RegisterUriThumbnailResolver(new MyUriThumbnailResolver(), this);
 ```
 
 :::tip
-For best experience, make sure your thumbnail images can be loaded within 50ms.
+Para una mejor experiencia, asegúrate de que tus imágenes en miniatura se puedan cargar en 50 ms.
 :::
 
 <AuthorBar authors={{
