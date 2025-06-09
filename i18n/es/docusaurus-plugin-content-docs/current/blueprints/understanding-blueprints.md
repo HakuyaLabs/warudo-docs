@@ -2,104 +2,104 @@
 sidebar_position: 10
 ---
 
-# Creating Your First Blueprint
+# Creando Tu Primer Blueprint
 
-It is completely normal to feel overwhelmed when you first open the node editor. There are so many nodes, and so many things you can do with them! But don't worry, we will walk you through the basics of blueprints in this section.
+Es completamente normal sentirse abrumado cuando abres el editor de nodos por primera vez. ¡Hay tantos nodos y tantas cosas que puedes hacer con ellos! Pero no te preocupes, te guiaremos a través de los conceptos básicos de los blueprints en esta sección.
 
-## Your First Blueprint
+## Tu Primer Blueprint
 
-Let's start with a simple example. Suppose you want to shake the camera when the Esc key is pressed. First, click the **Add Blueprint** button in the toolbar to add a new blueprint. You can optionally rename the blueprint to something more meaningful, e.g., "Shake Camera On Esc", but we can leave it for now.
+Comencemos con un ejemplo simple. Supón que quieres sacudir la cámara cuando se presiona la tecla Esc. Primero, haz clic en el botón **Add Blueprint** en la barra de herramientas para agregar un nuevo blueprint. Opcionalmente puedes renombrar el blueprint a algo más significativo, ej. "Shake Camera On Esc", pero podemos dejarlo por ahora.
 
 ![](/doc-img/en-understanding-blueprints-1.png)
-<p class="img-desc">Adding a new blueprint.</p>
+<p class="img-desc">Agregando un nuevo blueprint.</p>
 
-This is a beautiful blueprint, but it is also completely useless. We need to add some nodes to it. Type "on keystroke" in the search bar, and you should see the **On Keystroke Pressed** node. Drag it to the node editor, and you should see something like this:
+Este es un blueprint hermoso, pero también es completamente inútil. Necesitamos agregarle algunos nodos. Escribe "on keystroke" en la barra de búsqueda, y deberías ver el nodo **On Keystroke Pressed**. Arrástralo al editor de nodos, y deberías ver algo así:
 
 ![](/doc-img/en-understanding-blueprints-2.png)
-<p class="img-desc">Adding the On Keystroke Pressed node.</p>
+<p class="img-desc">Agregando el nodo On Keystroke Pressed.</p>
 
 :::tip
-If you have accidentally dragged the wrong node, you can click to select the node and press **Delete** to delete it. Alternatively, you can also use the **Undo** button.
+Si accidentalmente arrastraste el nodo equivocado, puedes hacer clic para seleccionar el nodo y presionar **Delete** para eliminarlo. Alternativamente, también puedes usar el botón **Undo**.
 :::
 
-Awesome! Now, we need to add a node that shakes the camera. Type "shake camera" in the search bar, and you should see the **Shake Camera** node. Drag it next to the On Keystroke Pressed node, and here's a challenge for you: try to connect the On Keystroke Pressed node to the Shake Camera node like below.
+¡Genial! Ahora, necesitamos agregar un nodo que sacuda la cámara. Escribe "shake camera" en la barra de búsqueda, y deberías ver el nodo **Shake Camera**. Arrástralo junto al nodo On Keystroke Pressed, y aquí tienes un desafío: intenta conectar el nodo On Keystroke Pressed al nodo Shake Camera como se muestra a continuación.
 
 ![](/doc-img/en-understanding-blueprints-3.png)
-<p class="img-desc">Adding the Shake Camera node and connecting it to the On Keystroke Pressed node.</p>
+<p class="img-desc">Agregando el nodo Shake Camera y conectándolo al nodo On Keystroke Pressed.</p>
 
-If you clicked on the green dot next to the **Exit** on the On Keystroke Pressed node and dragged it to the green dot next to the **Enter** on the Shake Camera node, congratulations! You have great intuition. By the way, you can remove the connection by clicking on either end of the connection and dragging it away.
+Si hiciste clic en el punto verde junto al **Exit** en el nodo On Keystroke Pressed y lo arrastraste al punto verde junto al **Enter** en el nodo Shake Camera, ¡felicitaciones! Tienes gran intuición. Por cierto, puedes eliminar la conexión haciendo clic en cualquier extremo de la conexión y arrastrándola lejos.
 
 :::tip
-The green dots on the right side of a node are called <b style={{color: "green"}}>flow outputs</b>, while the green dots on the left side of a node are called <b style={{color: "green"}}>flow inputs</b>. So, you just connected the **Exit** flow output of the On Keystroke Pressed node to the **Enter** flow input of the Shake Camera node.
+Los puntos verdes en el lado derecho de un nodo se llaman <b style={{color: "green"}}>salidas de flujo</b>, mientras que los puntos verdes en el lado izquierdo de un nodo se llaman <b style={{color: "green"}}>entradas de flujo</b>. Así que acabas de conectar la salida de flujo **Exit** del nodo On Keystroke Pressed a la entrada de flujo **Enter** del nodo Shake Camera.
 
-A flow connection determines the order in which the nodes are triggered. In this example, we are saying that when the On Keystroke Pressed node is triggered, the Shake Camera node should be triggered next.
+Una conexión de flujo determina el orden en que los nodos se activan. En este ejemplo, estamos diciendo que cuando el nodo On Keystroke Pressed se activa, el nodo Shake Camera debería activarse a continuación.
 :::
 
-We are done, right? Let's try to press the Esc key and see if the camera shakes.
+Ya terminamos, ¿verdad? Intentemos presionar la tecla Esc y veamos si la cámara se sacude.
 
-Huh, the camera didn't shake at all. I wonder why?
+Hmm, la cámara no se sacudió para nada. Me pregunto por qué.
 
-Let's take a closer look at the Shake Camera node. It has a **Camera** data input, but it is not set to anything! Let's select our camera from the dropdown:
+Echemos un vistazo más de cerca al nodo Shake Camera. ¡Tiene una entrada de datos **Camera**, pero no está configurada a nada! Seleccionemos nuestra cámara del menú desplegable:
 
 ![](/doc-img/en-understanding-blueprints-4.png)
-<p class="img-desc">Setting the **Camera** data input.</p>
+<p class="img-desc">Configurando la entrada de datos **Camera**.</p>
 
-Let's try to press the Esc key again. If the camera shakes, congratulations! You have successfully created your first blueprint.
+Intentemos presionar la tecla Esc nuevamente. Si la cámara se sacude, ¡felicitaciones! Has creado exitosamente tu primer blueprint.
 
-## Passing Data Between Nodes
+## Pasando Datos Entre Nodos
 
-Now, you may wonder what are these black dots next to the data inputs on the Shake Camera node. Indeed, they look suspiciously similar to the green dots next to the **Enter** flow input. Maybe they can _also_ be connected to something?
+Ahora, puedes preguntarte qué son estos puntos negros junto a las entradas de datos en el nodo Shake Camera. En efecto, se ven sospechosamente similares a los puntos verdes junto a la entrada de flujo **Enter**. ¿Tal vez también se pueden conectar a algo?
 
-Indeed, they can! Let's drag a **Get Main Camera** node from the node palette to the node editor, click the black dot next to the **Camera** data output of the Get Main Camera node, and drag it to the black dot next to the **Camera** data input of the Shake Camera node, like this:
+¡En efecto, sí pueden! Arrastremos un nodo **Get Main Camera** de la paleta de nodos al editor de nodos, hagamos clic en el punto negro junto a la salida de datos **Camera** del nodo Get Main Camera, y arrastrémoslo al punto negro junto a la entrada de datos **Camera** del nodo Shake Camera, así:
 
 ![](/doc-img/en-understanding-blueprints-5.png)
-<p class="img-desc">Connecting the Get Main Camera node to the Shake Camera node.</p>
+<p class="img-desc">Conectando el nodo Get Main Camera al nodo Shake Camera.</p>
 
 :::tip
-Recall that Warudo supports [multiple cameras](../assets/camera), and the main camera is the camera that is currently shown in the main window.
+Recuerda que Warudo soporta [múltiples cámaras](../assets/camera), y la cámara principal es la cámara que se muestra actualmente en la ventana principal.
 :::
 
-Try pressing the Esc key again. Hey, the camera still shakes! But this time, note that the **Camera** dropdown has disappeared. It means that the Shake Camera node is taking the camera from the Get Main Camera node instead, and the camera we selected from the dropdown is ignored (though technically they are the same camera anyway).
+Intenta presionar la tecla Esc nuevamente. ¡Oye, la cámara aún se sacude! Pero esta vez, nota que el menú desplegable **Camera** ha desaparecido. Significa que el nodo Shake Camera está tomando la cámara del nodo Get Main Camera en su lugar, y la cámara que seleccionamos del menú desplegable es ignorada (aunque técnicamente son la misma cámara de todas formas).
 
-Let's create another camera in the Assets tab, switch to that camera, and then press the Esc key again. You will note that the new camera is the one that shakes, not the one we selected from the dropdown!
+Creemos otra cámara en la pestaña Assets, cambiemos a esa cámara, y luego presionemos la tecla Esc nuevamente. ¡Notarás que la nueva cámara es la que se sacude, no la que seleccionamos del menú desplegable!
 
 :::tip
-Similar to <b style={{color: "green"}}>flow inputs/outputs</b>, the black dots on the right side of a node are called <b style={{color: "black"}}>data outputs</b>, while the black dots on the left side of a node are called <b style={{color: "black"}}>data inputs</b>. So, you just connected the **Camera** data output of the Get Main Camera node to the **Camera** data input of the Shake Camera node.
+Similar a las <b style={{color: "green"}}>entradas/salidas de flujo</b>, los puntos negros en el lado derecho de un nodo se llaman <b style={{color: "black"}}>salidas de datos</b>, mientras que los puntos negros en el lado izquierdo de un nodo se llaman <b style={{color: "black"}}>entradas de datos</b>. Así que acabas de conectar la salida de datos **Camera** del nodo Get Main Camera a la entrada de datos **Camera** del nodo Shake Camera.
 
-A data connection is responsible for passing data between nodes. In this example, we are saying that the **Camera** data input of the Shake Camera node should be set to the **Camera** data output of the Get Main Camera node, when the Shake Camera node is triggered.
+Una conexión de datos es responsable de pasar datos entre nodos. En este ejemplo, estamos diciendo que la entrada de datos **Camera** del nodo Shake Camera debería configurarse a la salida de datos **Camera** del nodo Get Main Camera, cuando el nodo Shake Camera se activa.
 :::
 
-Now, even though this is just a toy example, this is what creating a blueprint is all about: find the nodes that we need and connect them together, so that we can tell Warudo what to do (shake camera) when something happens (pressing Esc).
+Ahora, aunque este es solo un ejemplo de juguete, esto es de lo que se trata crear un blueprint: encontrar los nodos que necesitamos y conectarlos juntos, para que podamos decirle a Warudo qué hacer (sacudir cámara) cuando algo sucede (presionar Esc).
 
-Let's summarize what we have learned so far:
+Resumamos lo que hemos aprendido hasta ahora:
 
-* A blueprint consists of **nodes** and **connections**. Connections come in two types: <b style={{color: "green"}}>flow connections</b> and <b style={{color: "black"}}>data connections</b>, while each node can have both flow and data inputs and outputs. A data input can be either set directly on the node, or connected to a data output of another node.
+* Un blueprint consiste en **nodos** y **conexiones**. Las conexiones vienen en dos tipos: <b style={{color: "green"}}>conexiones de flujo</b> y <b style={{color: "black"}}>conexiones de datos</b>, mientras que cada nodo puede tener tanto entradas y salidas de flujo como de datos. Una entrada de datos puede configurarse directamente en el nodo, o conectarse a una salida de datos de otro nodo.
 
-* To create a connection, click on the input/output port and then drag it to another node's output/input. <b style={{color: "green"}}>Flow connections</b> determine the order in which the nodes are triggered, from left to right. <b style={{color: "black"}}>Data connections</b> are responsible for passing data between nodes, also from left to right.
+* Para crear una conexión, haz clic en el puerto de entrada/salida y luego arrástralo al puerto de salida/entrada de otro nodo. Las <b style={{color: "green"}}>conexiones de flujo</b> determinan el orden en que los nodos se activan, de izquierda a derecha. Las <b style={{color: "black"}}>conexiones de datos</b> son responsables de pasar datos entre nodos, también de izquierda a derecha.
 
 :::info
-A flow input can connect to multiple flow outputs, but a flow output can only connect to one flow input. Otherwise, it would be unclear which node should be triggered first.
+Una entrada de flujo puede conectarse a múltiples salidas de flujo, pero una salida de flujo solo puede conectarse a una entrada de flujo. De lo contrario, no estaría claro qué nodo debería activarse primero.
 
-Similarly, a data output can connect to multiple data inputs, but a data input can only connect to one data output. Otherwise, it would be unclear from which node the data should be passed.
+Similarmente, una salida de datos puede conectarse a múltiples entradas de datos, pero una entrada de datos solo puede conectarse a una salida de datos. De lo contrario, no estaría claro desde qué nodo deberían pasarse los datos.
 :::
 
-Feeling a bit overwhelmed? Don't worry, we will go through many more examples in the following sections.
+¿Te sientes un poco abrumado? No te preocupes, pasaremos por muchos más ejemplos en las siguientes secciones.
 
-## Data Types
+## Tipos de Datos
 
-As a side note, the data types of the two ends of a data connection must be compatible. In the example above, you cannot connect **Get Main Camera → Camera** (data type: camera asset) to **Shake Camera → Sustain Time** (data type: "float," the fancy way of saying a decimal number). You can hover on the port to see its data type:
+Como nota al margen, los tipos de datos de los dos extremos de una conexión de datos deben ser compatibles. En el ejemplo anterior, no puedes conectar **Get Main Camera → Camera** (tipo de datos: asset de cámara) a **Shake Camera → Sustain Time** (tipo de datos: "float," la forma elegante de decir un número decimal). Puedes pasar el cursor sobre el puerto para ver su tipo de datos:
 
 ![](/doc-img/en-blueprints-2.png)
-<p class="img-desc">Hovering on a port to see its data type.</p>
+<p class="img-desc">Pasando el cursor sobre un puerto para ver su tipo de datos.</p>
 
-Most of the time you don't need to worry about data types, because we all know a camera can't be a number!
+¡La mayoría de las veces no necesitas preocuparte por los tipos de datos, porque todos sabemos que una cámara no puede ser un número!
 
-## Disabling Blueprints
+## Deshabilitando Blueprints
 
-A blueprint can be disabled by clicking the eye icon next to the blueprint name. When a blueprint is disabled, the nodes in the blueprint will not receive events. For example, in the example above, if the Esc key is pressed when the blueprint is disabled, the On Keystroke Pressed node will not receive an event and the flow will not be triggered, and as a result the camera will not shake.
+Un blueprint puede deshabilitarse haciendo clic en el icono del ojo junto al nombre del blueprint. Cuando un blueprint está deshabilitado, los nodos en el blueprint no recibirán eventos. Por ejemplo, en el ejemplo anterior, si se presiona la tecla Esc cuando el blueprint está deshabilitado, el nodo On Keystroke Pressed no recibirá un evento y el flujo no se activará, y como resultado la cámara no se sacudirá.
 
 :::info
-You can determine if a flow is being triggered or if data is being passed by checking if there's a ball rolling on the connection:
+Puedes determinar si un flujo se está activando o si se están pasando datos verificando si hay una pelota rodando en la conexión:
 
 ![](/doc-img/en-blueprints-overview-5.webp)
 :::
@@ -109,5 +109,6 @@ You can determine if a flow is being triggered or if data is being passed by che
     {name: 'HakuyaTira', github: 'TigerHix'},
   ],
   translators: [
+    {name: 'かぐら', github: 'Arukaito'},
   ],
 }} />

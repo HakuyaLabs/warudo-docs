@@ -4,30 +4,31 @@ sidebar_position: 120
 
 # Noitom Axis
 
-Body tracking via [Noitom Axis Studio](https://neuronmocap.com/pages/axis-studio) or Axis Neuron. Requires a [Noitom Perception Neuron](https://neuronmocap.com/) suit.
+Seguimiento corporal a través de [Noitom Axis Studio](https://neuronmocap.com/pages/axis-studio) o Axis Neuron. Requiere un traje [Noitom Perception Neuron](https://neuronmocap.com/).
 
-## Setup
+## Configuración
 
-Open Noitom Axis Studio and enable BVH streaming in **Settings → BVH Broadcasting** (toggle the switch at the top right).
+Abre Noitom Axis Studio y habilita la transmisión BVH en **Settings → BVH Broadcasting** (cambia el interruptor en la esquina superior derecha).
 
 ![](/doc-img/en-noitom-1.png)
 
-## Calibration
+## Calibración
 
-Calibration of Noitom hardware is done in Noitom Axis Studio or Axis Neuron.
+La calibración del hardware de Noitom se realiza en Noitom Axis Studio o Axis Neuron.
 
-## Frequently Asked Questions
+## Preguntas Frecuentes
 
-Please refer to [Overview](overview#FAQ) and [Customizing Pose Tracking](body-tracking#FAQ) for common questions.
+Por favor consulta [Resumen](overview#FAQ) y [Personalizar Seguimiento de Pose](body-tracking#FAQ) para preguntas comunes.
 
-### My tracking drifts over time.
+### Mi seguimiento se va desviando con el tiempo.
 
-This is a common issue with inertial motion capture systems, which drift over time due to accumulated errors. To reduce the drift, make sure there are no magnetic or electrical interference near the tracking sensors.
+Este es un problema común con los sistemas de captura de movimiento inerciales, que se desvían con el tiempo debido a errores acumulativos. Para reducir la deriva, asegúrate de que no haya interferencia magnética o eléctrica cerca de los sensores de seguimiento.
 
 <AuthorBar authors={{
   creators: [
     {name: 'HakuyaTira', github: 'TigerHix'},
   ],
   translators: [
+    {name: 'かぐら (Arukaito)', github: 'Arukaito'},
   ],
 }} />

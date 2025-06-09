@@ -4,22 +4,22 @@ sidebar_position: 11
 
 # Warudo Pro
 
-## What is Warudo Pro?
+## ¿Qué es Warudo Pro?
 
-Warudo Pro is the version of Warudo that we offer to corporate users.
+Warudo Pro es la versión de Warudo que ofrecemos a usuarios corporativos.
 
-In addition to all the features of the Steam version, Warudo Pro adds support for Universal RP (URP), support for [NiloToon rendering](https://github.com/ColinLeung-NiloCat/UnityURPToonLitShaderExample#nilotoonurp-users-creations-public-media-not-nda-contents), as well as support for [Autodesk MotionBuilder and optical motion capture systems (e.g., Vicon, OptiTrack)](mocap/motionbuilder). Leveraging Warudo Pro's [Stage Director mode](assets/director) for cinematic camera control, users of Warudo Pro have been able to deliver industry-leading live 3D VTubing performances.
+Además de todas las características de la versión de Steam, Warudo Pro añade soporte para Universal RP (URP), soporte para [renderizado NiloToon](https://github.com/ColinLeung-NiloCat/UnityURPToonLitShaderExample#nilotoonurp-users-creations-public-media-not-nda-contents), así como soporte para [Autodesk MotionBuilder y sistemas de captura de movimiento ópticos (ej. Vicon, OptiTrack)](mocap/motionbuilder). Aprovechando el [modo Stage Director](assets/director) de Warudo Pro para control cinematográfico de cámara, los usuarios de Warudo Pro han logrado ofrecer actuaciones de VTubing 3D en vivo líderes en la industria.
 
-Here is a [recent example](https://twitter.com/hakuyalabs/status/1713191982162727037) of Warudo Pro in action.
+Aquí hay un [ejemplo reciente](https://twitter.com/hakuyalabs/status/1713191982162727037) de Warudo Pro en acción.
 
-For pricing and more details, please contact us: [info@warudo.app](mailto:info@warudo.app).
+Para precios y más detalles, por favor contáctanos: [info@warudo.app](mailto:info@warudo.app).
 
-## I am an indie VTuber. Can I purchase Warudo Pro?
+## Soy un VTuber independiente. ¿Puedo comprar Warudo Pro?
 
-Yes you can! We offer a special indie pricing for Warudo Pro, provided that you meet the following criteria:
+¡Sí puedes! Ofrecemos un precio especial para independientes para Warudo Pro, siempre que cumplas con los siguientes criterios:
 
-* the copyrights of your VTuber IP (Intellectual Property) are exclusively yours, and you possess ownership of your accounts on social/livestreaming platforms;
-* there are no contractual obligations requiring you to stream for X hours per week, unless such a contract is directly in agreement with a major livestreaming platform (e.g., Twitch, YouTube).
+* los derechos de autor de tu IP de VTuber (Propiedad Intelectual) son exclusivamente tuyos, y posees la propiedad de tus cuentas en plataformas sociales/de transmisión;
+* no hay obligaciones contractuales que te requieran transmitir por X horas por semana, a menos que dicho contrato esté directamente en acuerdo con una plataforma de transmisión importante (ej. Twitch, YouTube).
 
 <AuthorBar authors={{
   creators: [

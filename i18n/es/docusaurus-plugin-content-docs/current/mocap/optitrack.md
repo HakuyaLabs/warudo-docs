@@ -5,45 +5,46 @@ sidebar_position: 515
 # OptiTrack Motive
 
 :::info
-This feature is only available in [Warudo Pro](../pro).
+Esta característica solo está disponible en [Warudo Pro](../pro).
 :::
 
-Body tracking via [OptiTrack Motive](https://optitrack.com/software/motive/). Requires access to an [OptiTrack](https://chingmu.com) optical tracking system.
+Seguimiento corporal a través de [OptiTrack Motive](https://optitrack.com/software/motive/). Requiere acceso a un sistema de seguimiento óptico [OptiTrack](https://optitrack.com).
 
-In addition to character tracking, prop tracking is also supported. For example, you may want to track a chair or a handheld camera using your optical tracking system and stream the motion data to Warudo, animating a chair prop or camera in Warudo accordingly.
+Además del seguimiento de personaje, también se soporta el seguimiento de props. Por ejemplo, puedes querer rastrear una silla o una cámara de mano usando tu sistema de seguimiento óptico y transmitir los datos de movimiento a Warudo, animando un prop de silla o cámara en Warudo acordemente.
 
-## Setup
+## Configuración
 
-In Warudo, go to **Menu -> Settings -> OptiTrack**. Make sure the **Server Address** and **Local Address** are both correct. The Server Address should be the IP of the OptiTrack PC, and the Local Address should be the IP of the Warudo PC. If you run Warudo and OptiTrack Motive both on the same computer, enter `127.0.0.1` for both. Then, set **Enabled** to Yes. You should see a status message that says "Connected to OptiTrack Motive".
+En Warudo, ve a **Menu -> Settings -> OptiTrack**. Asegúrate de que la **Server Address** y **Local Address** sean ambas correctas. La Server Address debería ser la IP de la PC OptiTrack, y la Local Address debería ser la IP de la PC Warudo. Si ejecutas Warudo y OptiTrack Motive ambos en la misma computadora, ingresa `127.0.0.1` para ambos. Luego, establece **Enabled** en Yes. Deberías ver un mensaje de estado que dice "Connected to OptiTrack Motive".
 
 ![](/doc-img/en-optitrack-1.png)
 
-### Character Tracking
+### Seguimiento de Personaje
 
-To connect OptiTrack Motive to Warudo, please enable **Streaming** in OptiTrack Motive and set **Transmission Type** to **Unicast**. Please also select the correct IP in the Local Interface dropdown. This IP should have the same subnet as the PC running Warudo. If you run Warudo and OptiTrack Motive both on the same computer, select "loopback".
+Para conectar OptiTrack Motive a Warudo, por favor habilita **Streaming** en OptiTrack Motive y establece **Transmission Type** en **Unicast**. Por favor también selecciona la IP correcta en el menú desplegable Local Interface. Esta IP debería tener la misma subred que la PC ejecutando Warudo. Si ejecutas Warudo y OptiTrack Motive ambos en la misma computadora, selecciona "loopback".
 
 ![](/doc-img/en-optitrack-2.png)
 
-In the **OptiTrack Skeleton Receiver** asset, make sure the name matches the one in OptiTrack Motive:
+En el asset **OptiTrack Skeleton Receiver**, asegúrate de que el nombre coincida con el de OptiTrack Motive:
 
 ![](/doc-img/en-optitrack-3.png)
 
-### Prop Tracking
+### Seguimiento de Props
 
-In Warudo, create a new **OptiTrack Rigid Body Receiver** asset and set **OptiTrack Rigid Body ID** to the ID of the rigidbody that you would like to track. Then, for **Target Asset**, select the Warudo prop/camera that you would like to control.
+En Warudo, crea un nuevo asset **OptiTrack Rigid Body Receiver** y establece **OptiTrack Rigid Body ID** al ID del rigidbody que te gustaría rastrear. Luego, para **Target Asset**, selecciona el prop/cámara de Warudo que te gustaría controlar.
 
 :::tip
-If you would like to access prop tracking data in blueprints, you can use the **Get OptiTrack Rigid Body Receiver Data** node.
+Si te gustaría acceder a datos de seguimiento de props en blueprints, puedes usar el nodo **Get OptiTrack Rigid Body Receiver Data**.
 :::
 
-## Frequently Asked Questions
+## Preguntas Frecuentes
 
-Please refer to [Overview](overview#FAQ) and [Customizing Pose Tracking](body-tracking#FAQ) for common questions.
+Por favor consulta [Resumen](overview#FAQ) y [Personalizar Seguimiento de Pose](body-tracking#FAQ) para preguntas comunes.
 
 <AuthorBar authors={{
-creators: [
-{name: 'HakuyaTira', github: 'TigerHix'},
-],
-translators: [
-],
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+    {name: 'かぐら (Arukaito)', github: 'Arukaito'},
+  ],
 }} />

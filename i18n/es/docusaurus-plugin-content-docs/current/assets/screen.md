@@ -1,73 +1,97 @@
 ---
 sidebar_position: 60
 ---
-# Screen
+# Pantalla
 
-Capture your desktop or a window and display it in the scene just like OBS. You can also display images, videos and even webpages!
+Captura tu escritorio o una ventana y muéstrala en la escena igual que OBS. ¡También puedes mostrar imágenes, videos e incluso páginas web!
 
 ![](/doc-img/zh-screen-1.webp)
-<p class="img-desc">Curved screens!</p>
+<p class="img-desc">¡Pantallas curvas!</p>
 
-## Setup
+## Configuración
 
-Depending on the **Content Type** you set, a screen can display:
-* an image (**Image**)
-* a video (**Video**)
-* a webpage (**Browser**)
-* your desktop (**Display**)
-* a window (**Window**)
-* a NDI source (**NDI**)
-* a Spout source (**Spout**)
+Dependiendo del **Content Type** que configures, una pantalla puede mostrar:
+* una imagen (**Image**)
+* un video (**Video**)
+* una página web (**Browser**)
+* tu escritorio (**Display**)
+* una ventana (**Window**)
+* una fuente NDI (**NDI**)
+* una fuente Spout (**Spout**)
 
-So it is quite versatile!
+¡Así que es bastante versátil!
 
-## Content Types
+## Tipos de Contenido
 
-### Image
+### Imagen
 
-When **Content Type** is set to **Image**, you can specify an **Image Source** to display an image. The image can be a JPG, PNG, GIF, or WEBP file. Transparent images are supported.
+Cuando **Content Type** está configurado en **Image**, puedes especificar un **Image Source** para mostrar una imagen. La imagen puede ser un archivo JPG, PNG, GIF o WEBP. Las imágenes transparentes son soportadas.
 
 ### Video
 
-When **Content Type** is set to **Video**, you can specify a **Video Source** to display a video. Major video formats are supported; transparent MP4 videos are also supported. You can enable **Auto Play** to automatically play the video when the scene is loaded.
+Cuando **Content Type** está configurado en **Video**, puedes especificar un **Video Source** para mostrar un video. Los principales formatos de video son soportados; los videos MP4 transparentes también son soportados. Puedes habilitar **Auto Play** para reproducir automáticamente el video cuando se carga la escena.
 
-### Browser
+### Navegador
 
-When **Content Type** is set to **Browser**, you can specify a **URL** to display a webpage. You can also specify a **Custom CSS** stylesheet to be inserted into the webpage after loading. This allows you to place custom chat widgets in the 3D space:
+Cuando **Content Type** está configurado en **Browser**, puedes especificar una **URL** para mostrar una página web. También puedes especificar una hoja de estilo **Custom CSS** para insertarla en la página web después de cargar. Esto te permite colocar widgets de chat personalizados en el espacio 3D:
 
 ![](/doc-img/zh-screen-2.webp)
-<p class="img-desc">Live chat in 3D!</p>
+<p class="img-desc">¡Chat en vivo en 3D!</p>
 
-### Display
+### Monitor
 
-When **Content Type** is set to **Display**, you can specify a **Display** (monitor) to display. 
+Cuando **Content Type** está configurado en **Display**, puedes especificar un **Display** (monitor) para mostrar.
 
-### Window
+### Ventana
 
-When **Content Type** is set to **Window**, you can specify a **Window** to display. Note the window is captured using the window title, so if you have multiple windows with the same title, only one of them will be captured.
+Cuando **Content Type** está configurado en **Window**, puedes especificar una **Window** para mostrar. Ten en cuenta que la ventana se captura usando el título de la ventana, así que si tienes múltiples ventanas con el mismo título, solo una de ellas será capturada.
 
 ### NDI
 
-When **Content Type** is set to **NDI**, you can specify an **NDI Source** to display. This allows you to display the output of other applications that support NDI.
+Cuando **Content Type** está configurado en **NDI**, puedes especificar un **NDI Source** para mostrar. Esto te permite mostrar la salida de otras aplicaciones que soportan NDI.
 
 ### Spout
 
-When **Content Type** is set to **Spout**, you can specify a **Spout Source** to display. This allows you to display the output of other applications that support Spout.
+Cuando **Content Type** está configurado en **Spout**, puedes especificar un **Spout Source** para mostrar. Esto te permite mostrar la salida de otras aplicaciones que soportan Spout.
 
-## Appearance
+## Apariencia
 
-The screen is by default curved. You can disable **Bend** to make it flat. You can also adjust the **Bend Radius** to change the curvature of the screen. The **Thickness** controls the thickness of the screen; the side of the screen will display the edge color of the content.
+La pantalla es curvada por defecto. Puedes deshabilitar **Bend** para hacerla plana. También puedes ajustar el **Bend Radius** para cambiar la curvatura de la pantalla. El **Thickness** controla el grosor de la pantalla; el lado de la pantalla mostrará el color del borde del contenido.
 
-You can crop the four sides of the screen using the **Crop** settings; each value is a percentage of the screen's width/height. You can also make the four corners of the screen rounded by adjusting **Corner Radius**.
+Puedes recortar los cuatro lados de la pantalla usando la configuración **Crop**; cada valor es un porcentaje del ancho/alto de la pantalla. También puedes hacer que las cuatro esquinas de la pantalla sean redondeadas ajustando **Corner Radius**.
 
-**Tint** allows you to adjust the overall hue of the screen. When the tint's alpha is less than 1, the screen will become semi-transparent.
+**Tint** te permite ajustar el tono general de la pantalla. Cuando el alfa del tinte es menor que 1, la pantalla se volverá semi-transparente.
 
-You can set a **Chroma Key** color to make the corresponding color in the screen transparent. This is useful for displaying a collab partner's stream in the scene, for example.
+Puedes establecer un color **Chroma Key** para hacer transparente el color correspondiente en la pantalla. Esto es útil para mostrar el stream de un compañero de colaboración en la escena, por ejemplo.
 
 <AuthorBar authors={{
   creators: [
     {name: 'HakuyaTira', github: 'TigerHix'},
   ],
   translators: [
+    {name: 'かぐら', github: 'Arukaito'},
+  ],
+}} />
+
+### Spout
+
+Cuando **Content Type** está configurado en **Spout**, puedes especificar un **Spout Source** para mostrar. Esto te permite mostrar la salida de otras aplicaciones que soportan Spout.
+
+## Apariencia
+
+La pantalla es curvada por defecto. Puedes deshabilitar **Bend** para hacerla plana. También puedes ajustar el **Radio de Curvatura** para cambiar la curvatura de la pantalla. El **Grosor** controla el grosor de la pantalla; el lateral de la pantalla mostrará el color del borde del contenido.
+
+Puedes recortar los cuatro lados de la pantalla usando la configuración **Crop**; cada valor es un porcentaje del ancho/alto de la pantalla. También puedes hacer que las cuatro esquinas de la pantalla sean redondeadas ajustando **Radio de Esquina**.
+
+**Tint** te permite ajustar el matiz general de la pantalla. Cuando el alfa del tinte es menor que 1, la pantalla se volverá semi-transparente.
+
+Puedes establecer un color **Chroma Key** para hacer transparente el color correspondiente en la pantalla. Esto es útil para mostrar el stream de un compañero de colaboración en la escena, por ejemplo.
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+  ],
+  translators: [
+    {name: 'かぐら', github: 'Arukaito'},
   ],
 }} />

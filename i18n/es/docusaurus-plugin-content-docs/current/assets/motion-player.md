@@ -2,28 +2,29 @@
 sidebar_position: 81
 ---
 
-# Motion Player
+# Reproductor de Movimiento
 
 :::info
-This feature is currently in beta.
+Esta característica está actualmente en beta.
 :::
 
-The motion player allows you to playback WANIM animations recorded with the [motion recorder](motion-recorder).
+El reproductor de movimiento te permite reproducir animaciones WANIM grabadas con el [grabador de movimiento](motion-recorder).
 
 :::info
-Currently, only WANIM animations are supported. Support for FBX and BVH animations are planned.
+Actualmente, solo se admiten animaciones WANIM. El soporte para animaciones FBX y BVH está planeado.
 :::
 
-## Setup
+## Configuración {#setup}
 
-Select the **Character** that you would like to play the animation on. Select the **Animation** that you would like to play, and click the **Play** button to start playing the animation. You can loop the animation by enabling **Loop**.
+Selecciona el **Character** en el que te gustaría reproducir la animación. Selecciona la **Animation** que te gustaría reproducir, y haz clic en el botón **Play** para comenzar a reproducir la animación. Puedes repetir la animación habilitando **Loop**.
 
-You can exclude certain bones from the animation by adding them to the **Excluded Body Parts** or **Excluded Bones** list.
+Puedes excluir ciertos huesos de la animación agregándolos a la lista **Excluded Body Parts** o **Excluded Bones**.
 
 <AuthorBar authors={{
   creators: [
     {name: 'HakuyaTira', github: 'TigerHix'},
   ],
   translators: [
+    {name: 'かぐら', github: 'Arukaito'},
   ],
 }} />

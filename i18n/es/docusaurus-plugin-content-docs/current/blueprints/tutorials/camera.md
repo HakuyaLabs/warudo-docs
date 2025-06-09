@@ -2,133 +2,133 @@
 sidebar_position: 70
 ---
 
-# Animating the Camera
+# Animando la Cámara
 
-Enough fun with our character! Let's see how we can incorporate some cinematic camera movements into our stream. In this tutorial, we will learn how to add simple but effective camera animations.
+¡Suficiente diversión con nuestro personaje! Veamos cómo podemos incorporar algunos movimientos de cámara cinematográficos en nuestro stream. En este tutorial, aprenderemos cómo agregar animaciones de cámara simples pero efectivas.
 
 :::tip
-If you are a Warudo Pro user, you can also use the [director](../../assets/director) asset to create camera animations.
+Si eres un usuario de Warudo Pro, también puedes usar el asset [director](../../assets/director) para crear animaciones de cámara.
 :::
 
 <div style={{width: '100%'}} className="video-box"><video controls loop src="/doc-img/camera-2.mp4" /></div>
-<p class="img-desc">Our character is dancing, and the camera is moving along!</p>
+<p class="img-desc">¡Nuestro personaje está bailando, y la cámara se mueve junto!</p>
 
-## Animating an Orbit Character Camera
+## Animando una Cámara de Órbita de Personaje
 
-The protagonist of this tutorial is the **Camera Orbit Character** node. Let's drag it out to the node editor, and take a closer look:
+El protagonista de este tutorial es el nodo **Camera Orbit Character**. Arrastrémoslo al editor de nodos, y echemos un vistazo más de cerca:
 
 ![](/doc-img/en-blueprint-camera-1.png)
 
-The Camera Orbit Character node essentially records and replays the camera's parameters under the Orbit Character control mode. We will simply use our mouse to move the camera around, and let the node record where we move the camera to, how much we zoom in and pan around, etc. Then, we can trigger the node at anytime so that the camera moves to the recorded position and orientation.
+El nodo Camera Orbit Character esencialmente graba y reproduce los parámetros de la cámara bajo el modo de control Orbit Character. Simplemente usaremos nuestro ratón para mover la cámara alrededor, y dejaremos que el nodo grabe a dónde movemos la cámara, cuánto hacemos zoom y panorámica, etc. Luego, podemos activar el nodo en cualquier momento para que la cámara se mueva a la posición y orientación grabadas.
 
 :::info
-If you haven't yet, set **Camera → Control Mode** to **Orbit Character**.
+Si aún no lo has hecho, establece **Camera → Control Mode** a **Orbit Character**.
 :::
 
-Let's try it out! For example, I want to showcase my character's fluffy tail to my viewers, so I rotate the camera around to the back of my character:
+¡Probémoslo! Por ejemplo, quiero mostrar la cola esponjosa de mi personaje a mis espectadores, así que roto la cámara alrededor hacia la parte trasera de mi personaje:
 
 ![](/doc-img/en-blueprint-camera-2.png)
 
-Then, I click on the **Align Target With Main Camera** button on the node; the node then records the camera's position and orientation in the **Target** data input. Now, I can rotate my camera back to the front, but whenever I trigger the node, the camera will move to the back of my character and show my tail!
+Luego, hago clic en el botón **Align Target With Main Camera** en el nodo; el nodo entonces graba la posición y orientación de la cámara en la entrada de datos **Target**. Ahora, puedo rotar mi cámara de vuelta al frente, ¡pero cada vez que active el nodo, la cámara se moverá a la parte trasera de mi personaje y mostrará mi cola!
 
-We can easily come up with a blueprint like this:
+Podemos fácilmente crear un blueprint como este:
 
 ![](/doc-img/en-blueprint-camera-3.png)
 
-This allows me to press B to toggle between the front and back of my character anytime!
+¡Esto me permite presionar B para alternar entre el frente y la parte trasera de mi personaje en cualquier momento!
 
 <div style={{width: '100%'}} className="video-box"><video controls loop src="/doc-img/camera.mp4" /></div>
 <p class="img-desc"></p>
 
-Now it's your time! Try to create a camera blueprint of your own, and see what interesting camera movements you can come up with for your character.
+¡Ahora es tu turno! Intenta crear un blueprint de cámara propio, y ve qué movimientos de cámara interesantes puedes crear para tu personaje.
 
 :::tip
-Play around with the **Transition Time** and **Transition Easing** options to see how they affect the camera movement! For Transition Easing, **InOutSine** is a great starting choice for natural camera movements.
+¡Juega con las opciones **Transition Time** y **Transition Easing** para ver cómo afectan el movimiento de la cámara! Para Transition Easing, **InOutSine** es una gran opción inicial para movimientos de cámara naturales.
 :::
 
-## Looping the Animation
+## Bucleando la Animación
 
-Everything is great, but there is one problem: we need to manually trigger the back and forth animation. Is there a way to let the camera automatically move on its own?
+Todo está genial, pero hay un problema: necesitamos activar manualmente la animación de ida y vuelta. ¿Hay una forma de dejar que la cámara se mueva automáticamente por sí sola?
 
-Well yes, there is! Let's see how we can do this. First, set up two Camera Orbit Character nodes with two different camera positions and orientations. Here's what I have for the first node:
+¡Bueno sí, la hay! Veamos cómo podemos hacer esto. Primero, configura dos nodos Camera Orbit Character con dos posiciones y orientaciones de cámara diferentes. Esto es lo que tengo para el primer nodo:
 
 ![](/doc-img/en-blueprint-camera-4.png)
 
-And here's what I have for the second node:
+Y esto es lo que tengo para el segundo nodo:
 
 ![](/doc-img/en-blueprint-camera-5.png)
 
-So, triggering the first node moves the camera to the left side of my character, while triggering the second node moves the camera to the right side of my character. Now, if we want the camera to move to the left first, then to the right, all we need to do is to connect **On Transition End** to **Enter**, like below:
+Entonces, activar el primer nodo mueve la cámara al lado izquierdo de mi personaje, mientras que activar el segundo nodo mueve la cámara al lado derecho de mi personaje. Ahora, si queremos que la cámara se mueva a la izquierda primero, luego a la derecha, todo lo que necesitamos hacer es conectar **On Transition End** a **Enter**, como abajo:
 
 ![](/doc-img/en-blueprint-camera-13.png)
 
 :::info
-Note we are connecting from **On Transition End**, not **Exit**. This is because the Exit flow output is triggered when the node is triggered, i.e., when the camera starts moving, while the On Transition End flow output is triggered when the camera finishes moving.
+Nota que estamos conectando desde **On Transition End**, no **Exit**. Esto es porque la salida de flujo Exit se activa cuando el nodo se activa, es decir, cuando la cámara empieza a moverse, mientras que la salida de flujo On Transition End se activa cuando la cámara termina de moverse.
 :::
 
-Now, when we click on the left Camera Orbit Character node's Enter flow input, we will see the camera moving to the left side of our character, then automatically moving to the right side of our character. Looks good so far! What should we do next?
+Ahora, cuando hacemos clic en la entrada de flujo Enter del nodo Camera Orbit Character de la izquierda, veremos la cámara moviéndose al lado izquierdo de nuestro personaje, luego automáticamente moviéndose al lado derecho de nuestro personaje. ¡Se ve bien hasta ahora! ¿Qué deberíamos hacer después?
 
-"That's easy," you say. "I can just connect the right Camera Orbit Character node's On Transition End to the left Camera Orbit Character node's Enter, and we are done!"
+"Eso es fácil," dices. "¡Puedo simplemente conectar el On Transition End del nodo Camera Orbit Character derecho al Enter del nodo Camera Orbit Character izquierdo, y ya terminamos!"
 
-Well, not quite. If we try to do that:
+Bueno, no exactamente. Si intentamos hacer eso:
 
 ![](/doc-img/en-blueprint-camera-6.png)
 
-An error message will pop up!
+¡Aparecerá un mensaje de error!
 
 ![](/doc-img/en-blueprint-camera-7.png)
 
-We could not add this connection because it would create a loop in the blueprint, which is not allowed. This is to prevent accidental infinite loops, which would cause Warudo to freeze.
+No pudimos agregar esta conexión porque crearía un bucle en el blueprint, lo cual no está permitido. Esto es para prevenir bucles infinitos accidentales, que causarían que Warudo se congele.
 
 :::info
-To see what could happen if we allow loops, if both nodes have Transition Time set to 0, then the camera will move back and forth infinitely fast, causing Warudo to crash!
+Para ver qué podría pasar si permitimos bucles, si ambos nodos tienen Transition Time establecido a 0, ¡entonces la cámara se moverá de ida y vuelta infinitamente rápido, causando que Warudo se bloquee!
 :::
 
-But there's a way to get around this, using **functions**. A function is essentially an entry point that you can trigger from anywhere in the blueprint, even from other blueprints. Let's learn this by example; go ahead and add a **Define Function** node to the left of the left Camera Orbit Character node, and set the function **Name** to `AnimateCamera`:
+Pero hay una forma de sortear esto, usando **funciones**. Una función es esencialmente un punto de entrada que puedes activar desde cualquier lugar en el blueprint, incluso desde otros blueprints. Aprendamos esto con un ejemplo; ve y agrega un nodo **Define Function** a la izquierda del nodo Camera Orbit Character izquierdo, y establece el **Name** de la función a `AnimateCamera`:
 
 ![](/doc-img/en-blueprint-camera-8.png)
 
-We have just defined a function! Whenever the `AnimateCamera` function is triggered, it will trigger the first Camera Orbit Character node. How do we trigger this `AnimateCamera` function, though? Using the **Flow Function** node! Add it to the node editor, select our function from the dropdown, and try clicking on the Enter flow input:
+¡Acabamos de definir una función! Cada vez que se active la función `AnimateCamera`, activará el primer nodo Camera Orbit Character. ¿Pero cómo activamos esta función `AnimateCamera`? ¡Usando el nodo **Flow Function**! Agrégalo al editor de nodos, selecciona nuestra función del menú desplegable, e intenta hacer clic en la entrada de flujo Enter:
 
 ![](/doc-img/en-blueprint-camera-9.png)
 
-You should see the camera moves to the left side of your character, then automatically moves to the right side of your character. That means our function is working. Finally, let's trigger the function automatically when the right Camera Orbit Character node finishes moving. Connect **Camera Orbit Character → On Transition End** to **Flow Function → Enter**:
+Deberías ver que la cámara se mueve al lado izquierdo de tu personaje, luego automáticamente se mueve al lado derecho de tu personaje. Eso significa que nuestra función está funcionando. Finalmente, activemos la función automáticamente cuando el nodo Camera Orbit Character derecho termine de moverse. Conecta **Camera Orbit Character → On Transition End** a **Flow Function → Enter**:
 
 ![](/doc-img/en-blueprint-camera-10.png)
 
-Now, when we click on **Flow Function → Enter** again, the camera starts moving to the left side of our character, then automatically moves to the right side of our character, then automatically moves to the left side of our character, and so on. That's exactly what we want!
+Ahora, cuando hacemos clic en **Flow Function → Enter** nuevamente, la cámara empieza a moverse al lado izquierdo de nuestro personaje, luego automáticamente se mueve al lado derecho de nuestro personaje, luego automáticamente se mueve al lado izquierdo de nuestro personaje, y así sucesivamente. ¡Eso es exactamente lo que queremos!
 
-Note that the camera animation generated by the Camera Orbit Character node is immediately stopped when we try to take over the camera control. To start the animation more conveniently, we can assign a hotkey to the `AnimateCamera` function:
+Nota que la animación de cámara generada por el nodo Camera Orbit Character se detiene inmediatamente cuando intentamos tomar control de la cámara. Para iniciar la animación más convenientemente, podemos asignar una tecla de acceso rápido a la función `AnimateCamera`:
 
 ![](/doc-img/en-blueprint-camera-11.png)
 
-## Animating Other Camera Parameters
+## Animando Otros Parámetros de Cámara
 
-Besides the camera position and orientation, we can also animate other camera parameters, like the **Field of View**. For example, the below blueprint also starts a zooming animation when the camera starts moving:
+Además de la posición y orientación de la cámara, también podemos animar otros parámetros de cámara, como el **Field of View**. Por ejemplo, el blueprint de abajo también inicia una animación de zoom cuando la cámara empieza a moverse:
 
 ![](/doc-img/en-blueprint-camera-12.png)
 
-Feel free to experiment with other camera nodes!
+¡Siéntete libre de experimentar con otros nodos de cámara!
 
-## Animating a Free Look Camera
+## Animando una Cámara de Vista Libre
 
-So far we have animated the camera under the Orbit Character control mode, but some cinematic camera movements don't orbit around the character, or you simply want the camera move between two fixed positions regardless of where the character is. In this case, you can use the **Set Asset Transform** node:
+Hasta ahora hemos animado la cámara bajo el modo de control Orbit Character, pero algunos movimientos de cámara cinematográficos no orbitan alrededor del personaje, o simplemente quieres que la cámara se mueva entre dos posiciones fijas sin importar dónde esté el personaje. En este caso, puedes usar el nodo **Set Asset Transform**:
 
 ![](/doc-img/en-blueprint-camera-15.png)
 
-It works just like the Camera Orbit Character node, except that it records and replays the camera's parameters under the Free Look control mode. To record a target position and orientation, use the **Align Target With Asset** button.
+Funciona igual que el nodo Camera Orbit Character, excepto que graba y reproduce los parámetros de la cámara bajo el modo de control Free Look. Para grabar una posición y orientación objetivo, usa el botón **Align Target With Asset**.
 
 :::tip
-Note the node is called Set Asset Transform, not Set Camera Transform. That means you can also use this node to move and animate other assets, such as props and characters!
+Nota que el nodo se llama Set Asset Transform, no Set Camera Transform. ¡Eso significa que también puedes usar este nodo para mover y animar otros assets, como props y personajes!
 :::
 
-## Toggling between Cameras
+## Alternando entre Cámaras
 
-Did I mention there is a **Switch Main Camera** node? It does exactly what it says: it switches between two cameras with an optional fade transition. For example, the below blueprint switches between two cameras when I press Ctrl+1 and Ctrl+2:
+¿Mencioné que hay un nodo **Switch Main Camera**? Hace exactamente lo que dice: alterna entre dos cámaras con una transición de desvanecimiento opcional. Por ejemplo, el blueprint de abajo alterna entre dos cámaras cuando presiono Ctrl+1 y Ctrl+2:
 
 ![](/doc-img/en-blueprint-camera-14.png)
 
-Here's the result:
+Aquí está el resultado:
 
 <div style={{width: '100%'}} className="video-box"><video controls loop src="/doc-img/camera-3.mp4" /></div>
 
@@ -137,5 +137,6 @@ Here's the result:
     {name: 'HakuyaTira', github: 'TigerHix'},
   ],
   translators: [
+    {name: 'かぐら', github: 'Arukaito'},
   ],
 }} />

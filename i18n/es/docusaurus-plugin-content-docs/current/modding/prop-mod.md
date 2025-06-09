@@ -2,38 +2,39 @@
 sidebar_position: 40
 ---
 
-# Prop Mod
+# Mod de Prop
 
-A prop mod is any Unity [prefab](https://docs.unity3d.com/Manual/Prefabs.html) that is intended to be used as a prop in Warudo, such as a chair or a sword.
+Un mod de prop es cualquier [prefab](https://docs.unity3d.com/Manual/Prefabs.html) de Unity que está destinado a ser usado como prop en Warudo, como una silla o una espada.
 
-## Setup
+## Configuración
 
-### Step 1: Prepare Model
+### Paso 1: Preparar Modelo
 
-Import the prop model into the modding project. Place your prop in the scene, then adjust it to the desired position and rotation. Right click and select **Create Empty Parent** to create an empty GameObject as the root of the prop.
+Importa el modelo del prop al proyecto de modding. Coloca tu prop en la escena, luego ajústalo a la posición y rotación deseadas. Haz clic derecho y selecciona **Create Empty Parent** para crear un GameObject vacío como la raíz del prop.
 
 :::tip
-We create an empty parent because the prop asset uses the root GameObject's transform as the prop's transform. If you don't create an empty parent, the changes you make to the prop's transform will not be preserved.
+Creamos un padre vacío porque el asset del prop usa la transformación del GameObject raíz como la transformación del prop. Si no creas un padre vacío, los cambios que hagas a la transformación del prop no se preservarán.
 :::
 
-### Step 2: Setup Character Attachment (Optional)
+### Paso 2: Configurar Adjunto de Personaje (Opcional)
 
-If your prop is intended to be attached to a character (such as an accessory), you can place the `CharacterAttachmentSettings` script on the prefab to specify the default character bone to attach to. This way, if the users select a character for Prop → Transform Attachment → Attach To, the prop will be automatically attached to the specified character bone, instead of the default bone (head).
+Si tu prop está destinado a ser adjuntado a un personaje (como un accesorio), puedes colocar el script `CharacterAttachmentSettings` en el prefab para especificar el hueso de personaje por defecto al cual adjuntar. De esta manera, si los usuarios seleccionan un personaje para Prop → Transform Attachment → Attach To, el prop será automáticamente adjuntado al hueso de personaje especificado, en lugar del hueso por defecto (cabeza).
 
-You can also place the `CharacterAttachmentRotationConstraint` script on any child transform of the prop to specify the character bone to which the prop bone should be rotated together with. For example, the child transforms of a glove prop should rotate together with the character's finger bones.
+También puedes colocar el script `CharacterAttachmentRotationConstraint` en cualquier transformación hija del prop para especificar el hueso de personaje con el cual el hueso del prop debería rotar junto. Por ejemplo, las transformaciones hijas de un prop de guante deberían rotar junto con los huesos de dedos del personaje.
 
-### Step 3: Create Prefab
+### Paso 3: Crear Prefab
 
-Select the root GameObject of the prop and drag it to the mod folder to create a prefab. Name the prefab **"Prop"** and make sure it is placed in the mod folder (can be placed in any subfolder).
+Selecciona el GameObject raíz del prop y arrástralo a la carpeta del mod para crear un prefab. Nombra el prefab **"Prop"** y asegúrate de que esté colocado en la carpeta del mod (puede ser colocado en cualquier subcarpeta).
 
-### Step 4: Export Mod
+### Paso 4: Exportar Mod
 
-Select **Warudo → Build Mod** and make sure the generated `.warudo` file is put into the `Props` data folder.
+Selecciona **Warudo → Build Mod** y asegúrate de que el archivo `.warudo` generado se coloque en la carpeta de datos `Props`.
 
 <AuthorBar authors={{
   creators: [
     {name: 'HakuyaTira', github: 'TigerHix'},
   ],
   translators: [
+    {name: 'かぐら (Arukaito)', github: 'Arukaito'},
   ],
 }} />

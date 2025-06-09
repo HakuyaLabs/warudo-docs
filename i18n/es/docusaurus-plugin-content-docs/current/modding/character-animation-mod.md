@@ -2,40 +2,41 @@
 sidebar_position: 11
 ---
 
-# Character Animation Mod
+# Mod de Animación de Personaje
 
-Have some [Animation Clips](https://docs.unity3d.com/Manual/AnimationClips.html) that you want to use in Warudo? A character animation mod is what you need!
+¿Tienes algunos [Animation Clips](https://docs.unity3d.com/Manual/AnimationClips.html) que quieres usar en Warudo? ¡Un mod de animación de personaje es lo que necesitas!
 
 :::caution
-If you have an animation that animates non-bone transforms or material properties, you should consider other methods of adding these animations to your character. See [Character Mod](character-mod#animations) for details.
+Si tienes una animación que anima transformaciones que no son de huesos o propiedades de materiales, deberías considerar otros métodos para agregar estas animaciones a tu personaje. Consulta [Mod de Personaje](character-mod#animations) para más detalles.
 :::
 
-## Setup
+## Configuración {#setup}
 
-### Step 1: Prepare Animation Clip
+### Paso 1: Preparar Animation Clip
 
-If you already have an **Animation Clip** (indicated by a cyan triangle icon) in your project, great! You can skip this step.
+Si ya tienes un **Animation Clip** (indicado por un ícono de triángulo cian) en tu proyecto, ¡genial! Puedes omitir este paso.
 
-If your animation is a FBX file, first make sure **Animation Type** is set to Humanoid in the rig import settings:
+Si tu animación es un archivo FBX, primero asegúrate de que **Animation Type** esté establecido en Humanoid en la configuración de importación del rig:
 
 ![](/doc-img/en-mod-14.png)
 
-Then, expand the FBX file, select the inner **Animation Clip** (indicated by a cyan triangle icon), and press Ctrl+D to create a copy that is outside the FBX file.
+Luego, expande el archivo FBX, selecciona el **Animation Clip** interno (indicado por un ícono de triángulo cian), y presiona Ctrl+D para crear una copia que esté fuera del archivo FBX.
 
 ![](/doc-img/en-character-animation-mod-1.webp)
 
-### Step 2: Rename Animation Clip
+### Paso 2: Renombrar Animation Clip
 
-Rename the Animation Clip to **"Animation"**, and make sure it is placed in the mod folder (can be placed in any subfolder).
+Renombra el Animation Clip a **"Animation"**, y asegúrate de que esté colocado en la carpeta del mod (puede colocarse en cualquier subcarpeta).
 
-### Step 3: Export Mod
+### Paso 3: Exportar Mod
 
-Select **Warudo → Build Mod** and make sure the generated `.warudo` file is put into the `CharacterAnimations` data folder.
+Selecciona **Warudo → Build Mod** y asegúrate de que el archivo `.warudo` generado se coloque en la carpeta de datos `CharacterAnimations`.
 
 <AuthorBar authors={{
   creators: [
     {name: 'HakuyaTira', github: 'TigerHix'},
   ],
   translators: [
+    {name: 'かぐら', github: 'Arukaito'},
   ],
 }} />

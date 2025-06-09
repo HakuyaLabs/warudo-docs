@@ -14,21 +14,21 @@ Check out our [Creating Your First Plugin Mod](creating-your-first-plugin-mod) t
 This page discusses the general guidelines for creating a plugin mod. Please also refer to the [Plugins](api/plugins) scripting API page.
 :::
 
-## Environment Setup
+## Configuración del Entorno {#environment-setup}
 
-A plugin mod is just a regular mod that contains a C# script that inherits from `Plugin`. You can create a new mod by following the [Creating Your First Mod](../modding/creating-your-first-mod) tutorial. Then, create a new C# script in the mod folder and inherit from `Plugin`. If you have any custom asset or node types, make sure they are registered in the `AssetTypes` and `NodeTypes` properties of the `[PluginType]` attribute (see [Plugin API](api/plugins)).
+Un plugin mod es simplemente un mod regular que contiene un script C# que hereda de `Plugin`. Puedes crear un nuevo mod siguiendo el tutorial [Creando Tu Primer Mod](../modding/creating-your-first-mod). Luego, crea un nuevo script C# en la carpeta del mod y hereda de `Plugin`. Si tienes algún tipo de asset o nodo personalizado, asegúrate de que estén registrados en las propiedades `AssetTypes` y `NodeTypes` del atributo `[PluginType]` (consulta [API de Plugin](api/plugins)).
 
-## Including Unity Assets
+## Incluyendo Assets de Unity
 
-You can include Unity assets (e.g., prefabs, materials, textures) in your plugin mod by placing them in the mod folder. Warudo will automatically include these assets when exporting the mod.
+Puedes incluir assets de Unity (ej., prefabs, materiales, texturas) en tu plugin mod colocándolos en la carpeta del mod. Warudo automáticamente incluirá estos assets al exportar el mod.
 
 :::caution
-If your prefabs or materials use custom shaders or scripts, make sure to include those shaders or scripts in the mod folder as well.
+Si tus prefabs o materiales usan shaders o scripts personalizados, asegúrate de incluir esos shaders o scripts en la carpeta del mod también.
 :::
 
-Then, you can load these assets in scripts during runtime. See [Loading Unity Assets](api/plugins#loading-unity-assets) for more information.
+Luego, puedes cargar estos assets en scripts durante el tiempo de ejecución. Consulta [Cargando Assets de Unity](api/plugins#loading-unity-assets) para más información.
 
-## Limitations {#limitations}
+## Limitaciones {#limitations}
 
 Plugin mods have the following limitations:
 

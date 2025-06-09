@@ -2,24 +2,24 @@
 sidebar_position: 5
 ---
 
-# Upper Body Rotation
+# Rotación del Torso
 
 :::caution
-As of Warudo 0.12.0, this blueprint is no longer needed, as upper body rotation is now enabled by default. See [Customizing Face Tracking](../../mocap/face-tracking) for more information.
+A partir de Warudo 0.12.0, este blueprint ya no es necesario, ya que la rotación del torso ahora está habilitada por defecto. Consulta [Personalizando Seguimiento Facial](../../mocap/face-tracking) para más información.
 :::
 
-This blueprint allows you to add subtle but realistic upper body rotation to your character, adding nuance to your character's body expression.
+Este blueprint te permite agregar una rotación sutil pero realista del torso a tu personaje, agregando matices a la expresión corporal de tu personaje.
 
 <div style={{width: '100%'}} className="video-box"><video controls loop src="/doc-img/upper-body-rotation.mp4" /></div>
-<p class="img-desc">Naturally rotating the upper body when turning the head.</p>
+<p class="img-desc">Rotando naturalmente el torso al girar la cabeza.</p>
 
-## Prerequisites
+## Requisitos Previos
 
-You should have already set up face tracking for your character.
+Ya deberías haber configurado el seguimiento facial para tu personaje.
 
-## Setup
+## Configuración {#setup}
 
-Download the blueprint below and import it into your scene.
+Descarga el blueprint de abajo e impórtalo a tu escena.
 
 <a href="/blueprints/upper-body-rotation.json" target="_blank" download>
 <div className="file-box">
@@ -28,10 +28,10 @@ upper-body-rotation.json
 </p></div>
 </a>
 
-This blueprint should work out of the box. Follow the instructions on the **Comment** nodes to adjust the settings.
+Este blueprint debería funcionar directamente. Sigue las instrucciones en los nodos **Comment** para ajustar la configuración.
 
 :::tip
-If you have created another character asset, you may need to update the **Character** option on the nodes.
+Si has creado otro asset de personaje, es posible que necesites actualizar la opción **Character** en los nodos.
 :::
 
 <AuthorBar authors={{
@@ -39,5 +39,6 @@ If you have created another character asset, you may need to update the **Charac
     {name: 'HakuyaTira', github: 'TigerHix'},
   ],
   translators: [
+    {name: 'かぐら', github: 'Arukaito'},
   ],
 }} />

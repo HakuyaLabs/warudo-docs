@@ -2,27 +2,28 @@
 sidebar_position: 0
 ---
 
-# Overview
+# Visión General
 
 :::tip
-This section deep dives into Warudo's scripting APIs. You don't need to be familiar with every detail to start scripting in Warudo, but we recommend at the very least skimming through this section to get a sense of how things work!
+Esta sección profundiza en las APIs de scripting de Warudo. No necesitas estar familiarizado con cada detalle para comenzar a hacer scripts en Warudo, ¡pero recomendamos al menos echar un vistazo a esta sección para tener una idea de cómo funcionan las cosas!
 :::
 
-Warudo is two applications in one: the editor and the runtime (we called it the _main window_ in the non-programmer sections of this handbook). The editor is where you create and edit scenes: update asset and plugin settings, add and connect nodes in blueprints, etc. The runtime acts as a rendering/scripting engine and runs the scenes you create.
+Warudo son dos aplicaciones en una: el editor y el runtime (lo llamamos la _ventana principal_ en las secciones no programadoras de este manual). El editor es donde creas y editas escenas: actualizas configuraciones de assets y plugins, agregas y conectas nodos en blueprints, etc. El runtime actúa como un motor de renderizado/scripting y ejecuta las escenas que creas.
 
 ![](/doc-img/en-scripting-concepts-1.png)
-<p class="img-desc">The editor (right) and the runtime (left).</p>
+<p class="img-desc">El editor (derecha) y el runtime (izquierda).</p>
 
-The editor and runtime communicate with each other via a WebSocket connection. When you make changes in the editor, the changes are sent to the runtime, which then updates the scene accordingly. This architecture allows you to see the changes you make in real-time. Conversely, when you make changes in the runtime (e.g., changing a node's data input programmatically), the changes need to be sent back to the editor (see [Accessing Data Inputs](ports-and-triggers#accessing-data-inputs)).
+El editor y runtime se comunican entre sí a través de una conexión WebSocket. Cuando haces cambios en el editor, los cambios se envían al runtime, que luego actualiza la escena en consecuencia. Esta arquitectura te permite ver los cambios que haces en tiempo real. Por el contrario, cuando haces cambios en el runtime (ej., cambiar la entrada de datos de un nodo programáticamente), los cambios necesitan ser enviados de vuelta al editor (consulta [Accediendo Entradas de Datos](ports-and-triggers#accessing-data-inputs)).
 
-The Warudo runtime is built using [Unity 2021.3](https://unity.com/); however, the core framework is designed to be as engine-agnostic as possible, which allows nodes, assets, and plugins to interact with each other and with the user through a set of simple and clean APIs, as well as enabling features such as [hot-reloading](../playground).
+El runtime de Warudo está construido usando [Unity 2021.3](https://unity.com/); sin embargo, el framework central está diseñado para ser lo más agnóstico al motor posible, lo que permite que nodos, assets, y plugins interactúen entre sí y con el usuario a través de un conjunto de APIs simples y limpias, así como habilitando características como [recarga en caliente](../playground).
 
-Instead of writing C# classes that derive from `MonoBehaviour` in typical Unity projects, you will write classes that derive from Warudo's base classes such as `Node` and `Asset`. These classes are then instantiated and managed by Warudo's runtime. Then, inside these classes, you can call Unity APIs to interact with the Unity scene, such as creating GameObjects, adding components, etc.
+En lugar de escribir clases C# que deriven de `MonoBehaviour` en proyectos típicos de Unity, escribirás clases que deriven de las clases base de Warudo como `Node` y `Asset`. Estas clases son luego instanciadas y gestionadas por el runtime de Warudo. Luego, dentro de estas clases, puedes llamar APIs de Unity para interactuar con la escena de Unity, como crear GameObjects, agregar componentes, etc.
 
 <AuthorBar authors={{
 creators: [
 {name: 'HakuyaTira', github: 'TigerHix'},
 ],
 translators: [
+{name: 'かぐら', github: 'Arukaito'},
 ],
 }} />

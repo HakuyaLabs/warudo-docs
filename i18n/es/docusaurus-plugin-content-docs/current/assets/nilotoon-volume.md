@@ -2,88 +2,88 @@
 sidebar_position: 501
 ---
 
-# NiloToon Volume
+# Volumen NiloToon
 
 :::info
-This feature is only available in [Warudo Pro](../pro). To add a NiloToon volume to the scene, you must have Universal RP enabled in **Settings → URP**.
+Esta característica solo está disponible en [Warudo Pro](../pro). Para agregar un volumen NiloToon a la escena, debes tener Universal RP habilitado en **Settings → URP**.
 :::
 
-The NiloToon volume adds NiloToon-specific post processing effects to the scene.
+El volumen NiloToon agrega efectos de post-procesamiento específicos de NiloToon a la escena.
 
 <div style={{display: 'flex', justifyContent: 'space-between', gap: '1rem'}}>
 <div>
 <img src="/doc-img/en-nilotoon-off.png"  />
-<p class="img-desc">NiloToon volume disabled.</p>
+<p class="img-desc">Volumen NiloToon deshabilitado.</p>
 </div>
 <div>
 <img src="/doc-img/en-nilotoon-on.png"  />
-<p class="img-desc">NiloToon volume enabled.</p>
+<p class="img-desc">Volumen NiloToon habilitado.</p>
 </div>
 </div>
 
-Below we provide a brief overview of the post processing effects available; please refer to the NiloToon documentation for more details.
+A continuación proporcionamos una breve descripción general de los efectos de post-procesamiento disponibles; por favor consulta la documentación de NiloToon para más detalles.
 
-## Setup
+## Configuración {#setup}
 
-You can click **Import From Environment** to import the NiloToon post processing settings from the environment (if any). Then, you can adjust the post processing settings as you like. Note that for a setting to take effect, you must enable it by checking the checkbox next to it. This allows you to selectively override the NiloToon post processing settings from the environment.
+Puedes hacer clic en **Import From Environment** para importar la configuración de post-procesamiento de NiloToon del entorno (si la hay). Luego, puedes ajustar la configuración de post-procesamiento como gustes. Nota que para que una configuración tome efecto, debes habilitarla marcando la casilla de verificación junto a ella. Esto te permite anular selectivamente la configuración de post-procesamiento de NiloToon del entorno.
 
 ## Anime
 
-Adds an anime-style gradient to the camera view.
+Agrega un degradado estilo anime a la vista de la cámara.
 
 <div style={{display: 'flex', justifyContent: 'space-between', gap: '1rem'}}>
 <div>
 <img src="/doc-img/en-nilotoon-off.png"  />
-<p class="img-desc">Anime disabled.</p>
+<p class="img-desc">Anime deshabilitado.</p>
 </div>
 <div>
 <img src="/doc-img/en-nilotoon-anime.png"  />
-<p class="img-desc">Anime enabled.</p>
+<p class="img-desc">Anime habilitado.</p>
 </div>
 </div>
 
 ## Bloom
 
-Bloom is a post processing effect that makes bright areas of the scene "glow." You can separately apply bloom to the character and environment with different intensity and threshold values by overriding **Character Area Overrided Threshold** and **Character Area Overrided Intensity**.
+Bloom es un efecto de post-procesamiento que hace que las áreas brillantes de la escena "brillen". Puedes aplicar bloom por separado al personaje y al entorno con diferentes valores de intensidad y umbral anulando **Character Area Overrided Threshold** y **Character Area Overrided Intensity**.
 
 <div style={{display: 'flex', justifyContent: 'space-between', gap: '1rem'}}>
 <div>
 <img src="/doc-img/en-nilotoon-off.png"  />
-<p class="img-desc">Bloom disabled.</p>
+<p class="img-desc">Bloom deshabilitado.</p>
 </div>
 <div>
 <img src="/doc-img/en-nilotoon-bloom.png"  />
-<p class="img-desc">Bloom enabled.</p>
+<p class="img-desc">Bloom habilitado.</p>
 </div>
 </div>
 
-## Character Rendering
+## Renderizado de Personaje
 
-Overrides the NiloToon rendering settings for the character so that the rendering plays nice with the current environment.
+Anula la configuración de renderizado de NiloToon para el personaje para que el renderizado funcione bien con el entorno actual.
 
 <div style={{display: 'flex', justifyContent: 'space-between', gap: '1rem'}}>
 <div>
 <img src="/doc-img/en-nilotoon-off.png"  />
-<p class="img-desc">Character rendering override disabled.</p>
+<p class="img-desc">Anulación de renderizado de personaje deshabilitada.</p>
 </div>
 <div>
 <img src="/doc-img/en-nilotoon-character.png"  />
-<p class="img-desc">Character rendering override enabled.</p>
+<p class="img-desc">Anulación de renderizado de personaje habilitada.</p>
 </div>
 </div>
 
-## Shadow
+## Sombra
 
-Overrides the NiloToon shadow settings for the character.
+Anula la configuración de sombras de NiloToon para el personaje.
 
 <div style={{display: 'flex', justifyContent: 'space-between', gap: '1rem'}}>
 <div>
 <img src="/doc-img/en-nilotoon-off.png"  />
-<p class="img-desc">Shadow override disabled.</p>
+<p class="img-desc">Anulación de sombra deshabilitada.</p>
 </div>
 <div>
 <img src="/doc-img/en-nilotoon-shadow.png"  />
-<p class="img-desc">Shadow override enabled.</p>
+<p class="img-desc">Anulación de sombra habilitada.</p>
 </div>
 </div>
 
@@ -92,5 +92,6 @@ Overrides the NiloToon shadow settings for the character.
     {name: 'HakuyaTira', github: 'TigerHix'},
   ],
   translators: [
+    {name: 'かぐら', github: 'Arukaito'},
   ],
 }} />

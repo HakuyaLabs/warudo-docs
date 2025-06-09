@@ -3,27 +3,29 @@ sidebar_position: 1
 version: "2024.11.22"
 ---
 
-# Creating Your First Script
+# Creando Tu Primer Script
 
-There are two ways of scripting in Warudo: using **Playground**, or creating a plugin mod. In this tutorial, we will look into using Playground to write your first custom node!
+Hay dos formas de hacer scripting en Warudo: usando **Playground**, o creando un mod de plugin. En este tutorial, veremos cómo usar Playground para escribir tu primer nodo personalizado!
 
 :::tip
-**What is playground?** Think of Playground as a sandbox where you can write and test your custom nodes and assets. Instead of compiling and packaging your C# code, you can write your code directly in the `Playground` directory in your Warudo data folder. This allows you to quickly iterate and test your code without the need to build mods or restart Warudo.
+**¿Qué es playground?** Piensa en Playground como una caja de arena donde puedes escribir y probar tus nodos y assets personalizados. En lugar de compilar y empaquetar tu código C#, puedes escribir tu código directamente en el directorio `Playground` en tu carpeta de datos de Warudo. Esto te permite iterar rápidamente y probar tu código sin necesidad de construir mods o reiniciar Warudo.
 :::
 
-Without further ado, let's dive in!
+¡Sin más preámbulos, vamos a sumergirnos!
 
 :::info
-Keep in mind that if you have any questions, we have a dedicated **#plugins-scripting** channel on [our Discord server](https://discord.gg/warudo) where you can ask for help!
+Ten en cuenta que si tienes alguna pregunta, tenemos un canal dedicado **#plugins-scripting** en [nuestro servidor de Discord](https://discord.gg/warudo) donde puedes pedir ayuda!
 :::
 
-## Step 1: Environment Setup
+## Paso 1: Configuración del Entorno
 
-First, make sure you have [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) installed. Then, download the `.csproj` file [here](/scripts/Playground.csproj) and put it into the `Playground` directory inside your Warudo data folder (Menu → Open Data Folder). This file helps your IDE to provide code auto-completion and syntax highlighting.
+## Paso 1: Configuración del Entorno
 
-Open your favorite C# IDE - we will use [JetBrains Rider](https://www.jetbrains.com/rider/), but other IDEs such as [Visual Studio Code](https://code.visualstudio.com/) would work just fine (for Visual Studio Code, you may need to install the [C# language extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)). 
+Primero, asegúrate de tener [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) instalado. Luego, descarga el archivo `.csproj` [aquí](/scripts/Playground.csproj) y ponlo en el directorio `Playground` dentro de tu carpeta de datos de Warudo (Menú → Abrir Carpeta de Datos). Este archivo ayuda a tu IDE a proporcionar autocompletado de código y resaltado de sintaxis.
 
-Open the `Playground` directory in your IDE. Create a file called `HelloWorldNode.cs` in the directory, and paste the following into the file:
+Abre tu IDE de C# favorito - usaremos [JetBrains Rider](https://www.jetbrains.com/rider/), pero otros IDEs como [Visual Studio Code](https://code.visualstudio.com/) funcionarían perfectamente bien (para Visual Studio Code, podrías necesitar instalar la [extensión de lenguaje C#](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)). 
+
+Abre el directorio `Playground` en tu IDE. Crea un archivo llamado `HelloWorldNode.cs` en el directorio, y pega lo siguiente en el archivo:
 
 ```csharp
 using Warudo.Core;
@@ -45,29 +47,29 @@ public class HelloWorldNode : Node {
 }
 ```
 
-## Step 2: Custom Node
+## Paso 2: Nodo Personalizado
 
-Open Warudo. Upon startup, you should see a pop-up message (called a _toast_) like this:
+Abre Warudo. Al iniciar, deberías ver un mensaje emergente (llamado _toast_) como este:
 
 ![](/doc-img/en-getting-started-playground-1.png)
 
-This indicates the `HelloWorldNode.cs` has been successfully compiled and loaded, and since the code above defines a custom node, we see `Nodes: 1` in the message.
+Esto indica que el `HelloWorldNode.cs` ha sido compilado y cargado exitosamente, y como el código anterior define un nodo personalizado, vemos `Nodes: 1` en el mensaje.
 
-Go to the blueprints tab. Create a new blueprint and find the `Hello World` node in the node palette. Drag it out and you should see something like this:
+Ve a la pestaña de blueprints. Crea un nuevo blueprint y encuentra el nodo `Hello World` en la paleta de nodos. Arrástralo y deberías ver algo así:
 
 ![](/doc-img/en-getting-started-playground-2.png)
 
-Click on the `Enter` flow input, and you should see this message:
+Haz clic en la entrada de flujo `Enter`, y deberías ver este mensaje:
 
 ![](/doc-img/en-getting-started-playground-3.png)
 
-If all is working, congratulations! You have just created your very first Warudo node!
+Si todo está funcionando, ¡felicitaciones! ¡Acabas de crear tu primer nodo de Warudo!
 
-## Step 3: Hot Reload
+## Paso 3: Recarga en Caliente
 
-One thing awesome is that you don't need to restart Warudo every time you make code changes. In fact, Warudo automatically detects any changes you have made in the `Playground` directory and hot-reload your code!
+Una cosa increíble es que no necesitas reiniciar Warudo cada vez que haces cambios en el código. ¡De hecho, Warudo detecta automáticamente cualquier cambio que hayas hecho en el directorio `Playground` y recarga tu código en caliente!
 
-Let's see that in action. Go back to the `HelloWorldNode.cs` and paste the following new code (or update your existing code if you want to practice typing):
+Veámoslo en acción. Regresa al `HelloWorldNode.cs` y pega el siguiente código nuevo (o actualiza tu código existente si quieres practicar escribiendo):
 
 ```csharp
 using Warudo.Core;
@@ -77,15 +79,15 @@ using Warudo.Core.Graphs;
 [NodeType(Id = "c76b2fef-a7e7-4299-b942-e0b6dec52660", Title = "Hello World")]
 public class HelloWorldNode : Node {
 
-    // New code below
+    // Código nuevo abajo
     [DataInput]
     [IntegerSlider(1, 100)] 
     public int LuckyNumber = 42;
-    // New code above
+    // Código nuevo arriba
 
     [FlowInput]
     public Continuation Enter() {
-        // Changed code below
+        // Código cambiado abajo
         Context.Service.PromptMessage("Hello World!", "This node is working! My lucky number: " + LuckyNumber);
         return Exit;
     }
@@ -96,17 +98,17 @@ public class HelloWorldNode : Node {
 }
 ```
 
-Immediately after you press Ctrl+S, another toast message should appear, indicating the node has been successfully compiled and hot-reloaded. The node in the blueprint is also updated accordingly:
+Inmediatamente después de presionar Ctrl+S, debería aparecer otro mensaje toast, indicando que el nodo ha sido compilado y recargado en caliente exitosamente. El nodo en el blueprint también se actualiza en consecuencia:
 
 ![](/doc-img/en-getting-started-playground-4.png)
 
-Try set a lucky number and verify the node still works!
+¡Intenta establecer un número de la suerte y verifica que el nodo aún funciona!
 
 ![](/doc-img/en-getting-started-playground-5.png)
 
-## Step 4: Custom Asset
+## Paso 4: Asset Personalizado
 
-Warudo can also detect new `.cs` files. Let's try creating a custom asset this time. Create a file called `CookieClickerAsset.cs` in the `Playground` directory, and paste the following code:
+Warudo también puede detectar nuevos archivos `.cs`. Intentemos crear un asset personalizado esta vez. Crea un archivo llamado `CookieClickerAsset.cs` en el directorio `Playground`, y pega el siguiente código:
 
 ```csharp
 using Warudo.Core.Attributes;
@@ -139,26 +141,27 @@ public class CookieClickerAsset : Asset {
 }
 ```
 
-You should see a toast message that indicates one custom node (`HelloWorldNode.cs`) and one custom asset (`CookieClickerAsset.cs`) have been loaded:
+Deberías ver un mensaje toast que indica que un nodo personalizado (`HelloWorldNode.cs`) y un asset personalizado (`CookieClickerAsset.cs`) han sido cargados:
 
 ![](/doc-img/en-getting-started-playground-6.png)
 
-You can find the new asset in the **Add Asset** menu:
+Puedes encontrar el nuevo asset en el menú **Add Asset**:
 
 ![](/doc-img/en-getting-started-playground-7.png)
 
-Add it to your scene and have fun! Who needs VTubing when I can do this all day?
+¡Agrégalo a tu escena y diviértete! ¿Quién necesita VTubing cuando puedo hacer esto todo el día?
 
 ![](/doc-img/en-getting-started-playground-8.png)
 
-## Summary
+## Resumen
 
-In this short tutorial, we learned how to use Playground and took a glimpse into how custom nodes and assets work. In the next tutorial, we will see how to create a plugin mod to distribute the custom node and asset we have just created!
+En este breve tutorial, aprendimos cómo usar Playground y echamos un vistazo a cómo funcionan los nodos y assets personalizados. ¡En el siguiente tutorial, veremos cómo crear un mod de plugin para distribuir el nodo personalizado y el asset que acabamos de crear!
 
 <AuthorBar authors={{
 creators: [
 {name: 'HakuyaTira', github: 'TigerHix'},
 ],
 translators: [
+{name: 'かぐら', github: 'Arukaito'},
 ],
 }} />

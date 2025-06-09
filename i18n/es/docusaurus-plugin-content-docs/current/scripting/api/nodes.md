@@ -3,13 +3,13 @@ sidebar_position: 30
 version: "2024.12.10"
 ---
 
-# Nodes
+# Nodos
 
-Nodes are units of logic that can be connected together to create complex behaviors. They can be thought as functions in a program but with a visual representation.
+Los nodos son unidades de lógica que pueden conectarse entre sí para crear comportamientos complejos. Se pueden pensar como funciones en un programa pero con una representación visual.
 
-## Type Definition
+## Definición de Tipo
 
-You can create node types that can be instantiated and stored in a blueprint. A node type inherits from the `Node` type and is decorated with the `[NodeType]` attribute, like below:
+Puedes crear tipos de nodo que pueden ser instanciados y almacenados en un blueprint. Un tipo de nodo hereda del tipo `Node` y está decorado con el atributo `[NodeType]`, como se muestra abajo:
 
 ```csharp
 using Warudo.Core.Attributes;
@@ -26,14 +26,14 @@ public class HelloWorldNode : Node {
 }
 ```
 
-Here's a summary of the parameters:
+Aquí hay un resumen de los parámetros:
 
-| Parameters |   Type    | Data Type | Description                                                                                                                                                                                                                                                                  |
+| Parámetros |   Tipo    | Tipo de Dato | Descripción                                                                                                                                                                                                                                                                  |
 |:---------- |:---------:|:---------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Id`       | Mandatory | `string`  | The **unique identifier** of this node class. <br/> You should [generate a new GUID](https://www.guidgenerator.com/online-guid-generator.aspx) for each new node type. <br/> **Note:** the `Id` of the node class is different from the UUID of a node instance (`node.Id`). |
-| `Title`    | Optional  | `string`  | The **name** of this node that will be displayed in the node palette.                                                                                                                                                                                                        |
-| `Category` | Optional  | `string`  | The **group** of this node in the node palette.                                                                                                                                                                                                                              |
-| `Width`    | Optional  |  `float`  | The **width** of this node, which is by default `1f`. <br/> A node with a width of `2f` will take up twice the space of a node with a width of `1f`.                                                                                                                         |
+| `Id`       | Obligatorio | `string`  | El **identificador único** de esta clase de nodo. <br/> Debes [generar un nuevo GUID](https://www.guidgenerator.com/online-guid-generator.aspx) para cada nuevo tipo de nodo. <br/> **Nota:** el `Id` de la clase de nodo es diferente del UUID de una instancia de nodo (`node.Id`). |
+| `Title`    | Opcional  | `string`  | El **nombre** de este nodo que se mostrará en la paleta de nodos.                                                                                                                                                                                                        |
+| `Category` | Opcional  | `string`  | El **grupo** de este nodo en la paleta de nodos.                                                                                                                                                                                                                              |
+| `Width`    | Opcional  |  `float`  | El **ancho** de este nodo, que por defecto es `1f`. <br/> Un nodo con un ancho de `2f` ocupará el doble de espacio que un nodo con un ancho de `1f`.                                                                                                                         |
 
 :::info[ **About Category**]
 

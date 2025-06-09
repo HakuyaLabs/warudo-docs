@@ -2,68 +2,69 @@
 sidebar_position: 10
 ---
 
-# Overview
+# Resumen
 
 ![](/doc-img/blueprints-cover.jpg)
 
-Blueprints are a flexible and powerful visual scripting system enabling anyone to create unique interactions for their VTubing setup, utilizing concepts and tools that are typically reserved for programmers. Blueprints are created and edited using the Warudo editor, and all changes are reflected in realtime in the scene.
+Los blueprints son un sistema de scripting visual flexible y poderoso que permite a cualquiera crear interacciones únicas para su configuración de VTubing, utilizando conceptos y herramientas que típicamente están reservadas para programadores. Los blueprints se crean y editan usando el editor de Warudo, y todos los cambios se reflejan en tiempo real en la escena.
 
-A blueprint is, boiled down, a flowchart. It defines **"When X happens, do Y."** Let's take a look at some toy examples:
+Un blueprint es, básicamente, un diagrama de flujo. Define **"Cuando X sucede, hacer Y."** Veamos algunos ejemplos sencillos:
 
-* When I press the Esc key, shake the camera.
-* When I receive a Twitch message that contains "beep boop", play a beep boop sound.
-* When I yell out loud, my character is launched into the air.
+* Cuando presiono la tecla Esc, sacudir la cámara.
+* Cuando recibo un mensaje de Twitch que contiene "beep boop", reproducir un sonido beep boop.
+* Cuando grito fuerte, mi personaje es lanzado al aire.
 
-Uninspiring? How about:
+¿No es inspirador? ¿Qué tal estos?:
 
-* When I open my mouth, my character [starts fire breathing](https://twitter.com/MVjagaimo/status/1725869971845333173/video/1). (By [@MVjagaimo](https://twitter.com/MVjagaimo))
-* When I press a key, my character [walks to another place in the room, with the camera following the character](https://twitter.com/FelineEntity/status/1730225167572615582). (By [@FelineEntity](https://twitter.com/FelineEntity))
-* When I press WASD, my character [drives a truck around](https://twitter.com/sablokato/status/1731679138677768700). (By [@sablokato](https://twitter.com/sablokato))
-* When I receive a Twitch redeem, my character [spins and ragdolls into the air](https://twitter.com/Shellbunny_/status/1712629869488853260). (By [@Shellbunny_](https://twitter.com/Shellbunny_))
-* When I touch my index fingers together, a [electric spark is generated between them](https://twitter.com/hakuyalabs/status/1724364814158360767). (By [@HakuyaTira](https://twitter.com/hakuyatira))
-* When my character hits a prop with hand, the prop is [propelled away](https://twitter.com/FelineEntity/status/1727379837185319176). (By [@FelineEntity](https://twitter.com/FelineEntity))
-* When I push my hands together, the [Ring Fit prop is squeezed](https://twitter.com/VanJiha_Vtuber/status/1737645095095341397/video/1). (By [@VanJiha_Vtuber](https://twitter.com/VanJiha_Vtuber))
-* When I press buttons on my MIDI controller, the [buttons on my virtual MIDI controller light up](https://twitter.com/ChiuYukina/status/1734913824086729149). (By [@ChiuYukina](https://twitter.com/ChiuYukina))
+* Cuando abro mi boca, mi personaje [comienza a respirar fuego](https://twitter.com/MVjagaimo/status/1725869971845333173/video/1). (Por [@MVjagaimo](https://twitter.com/MVjagaimo))
+* Cuando presiono una tecla, mi personaje [camina a otro lugar en la habitación, con la cámara siguiendo al personaje](https://twitter.com/FelineEntity/status/1730225167572615582). (Por [@FelineEntity](https://twitter.com/FelineEntity))
+* Cuando presiono WASD, mi personaje [conduce un camión](https://twitter.com/sablokato/status/1731679138677768700). (Por [@sablokato](https://twitter.com/sablokato))
+* Cuando recibo un canje de Twitch, mi personaje [gira y cae como un muñeco de trapo al aire](https://twitter.com/Shellbunny_/status/1712629869488853260). (Por [@Shellbunny_](https://twitter.com/Shellbunny_))
+* Cuando toco mis dedos índices juntos, se [genera una chispa eléctrica entre ellos](https://twitter.com/hakuyalabs/status/1724364814158360767). (Por [@HakuyaTira](https://twitter.com/hakuyatira))
+* Cuando mi personaje golpea un prop con la mano, el prop es [impulsado lejos](https://twitter.com/FelineEntity/status/1727379837185319176). (Por [@FelineEntity](https://twitter.com/FelineEntity))
+* Cuando empujo mis manos juntas, el [prop Ring Fit es apretado](https://twitter.com/VanJiha_Vtuber/status/1737645095095341397/video/1). (Por [@VanJiha_Vtuber](https://twitter.com/VanJiha_Vtuber))
+* Cuando presiono botones en mi controlador MIDI, los [botones en mi controlador MIDI virtual se iluminan](https://twitter.com/ChiuYukina/status/1734913824086729149). (Por [@ChiuYukina](https://twitter.com/ChiuYukina))
   ...
 
-The possibilities are endless! You can find and share pre-made blueprints in our community [Discord](https://discord.gg/warudo), or create your own blueprints from scratch. This section of the handbook will guide you through the basics of blueprints, provide you with some examples to get you started, and dive into more advanced topics.
+¡Las posibilidades son infinitas! Puedes encontrar y compartir blueprints pre-hechos en nuestro [Discord](https://discord.gg/warudo) de la comunidad, o crear tus propios blueprints desde cero. Esta sección del manual te guiará a través de los conceptos básicos de los blueprints, te proporcionará algunos ejemplos para empezar, y profundizará en temas más avanzados.
 
 :::tip
-Blueprints in Warudo are not just a novelty; rather, they are a crucial part of its architecture. For example, motion capture in Warudo is implemented entirely using blueprints. This ensures continuous updates and improvements to the blueprint system, providing an expanding variety of node types for endless combination possibilities.
+Los blueprints en Warudo no son solo una novedad; más bien, son una parte crucial de su arquitectura. Por ejemplo, la captura de movimiento en Warudo está implementada completamente usando blueprints. Esto asegura actualizaciones y mejoras continuas al sistema de blueprints, proporcionando una variedad en expansión de tipos de nodos para posibilidades de combinación infinitas.
 :::
 
 :::info
-If you are a developer, you will be happy to find out that you can extend Warudo's blueprint system by adding new node types! Please refer to the [Scripting](../scripting/overview) section for more details.
+Si eres un desarrollador, te alegrará saber que puedes extender el sistema de blueprints de Warudo agregando nuevos tipos de nodos! Por favor consulta la sección [Scripting](../scripting/overview) para más detalles.
 :::
 
-## Interface
+## Interfaz
 
-In the **Blueprints** tab, you can see a list of all the blueprints in the scene. You can select a blueprint to edit it in the node editor; then, you can drag nodes from the **Node Palette** tab, or modify the properties of the selected blueprint in the **Properties** tab.
+En la pestaña **Blueprints**, puedes ver una lista de todos los blueprints en la escena. Puedes seleccionar un blueprint para editarlo en el editor de nodos; luego, puedes arrastrar nodos desde la pestaña **Node Palette**, o modificar las propiedades del blueprint seleccionado en la pestaña **Properties**.
 
 ![](/doc-img/en-blueprints-1.png)
-<p class="img-desc">Overview.</p>
+<p class="img-desc">Resumen.</p>
 
-The toolbar has the following buttons:
-* **Add Blueprint**: Add a new blueprint to the scene.
-* **Remove Blueprint**: Remove the selected blueprint from the scene.
-* **Duplicate Blueprint**: Duplicate the selected blueprint.
-* **Rename Blueprint**: Rename the selected blueprint.
-* **Format Blueprint**: Format the selected blueprint, i.e., automatically arrange the nodes.
-* **Import Blueprint From Clipboard**: Import a blueprint from the clipboard.
-* **Export Blueprint To Clipboard**: Export the selected blueprint to the clipboard.
-* **Import Blueprint From File**: Import a blueprint from a JSON file.
-* **Export Blueprint To File**: Export the selected blueprint to a JSON file.
+La barra de herramientas tiene los siguientes botones:
+* **Add Blueprint**: Agregar un nuevo blueprint a la escena.
+* **Remove Blueprint**: Eliminar el blueprint seleccionado de la escena.
+* **Duplicate Blueprint**: Duplicar el blueprint seleccionado.
+* **Rename Blueprint**: Renombrar el blueprint seleccionado.
+* **Format Blueprint**: Formatear el blueprint seleccionado, es decir, organizar automáticamente los nodos.
+* **Import Blueprint From Clipboard**: Importar un blueprint desde el portapapeles.
+* **Export Blueprint To Clipboard**: Exportar el blueprint seleccionado al portapapeles.
+* **Import Blueprint From File**: Importar un blueprint desde un archivo JSON.
+* **Export Blueprint To File**: Exportar el blueprint seleccionado a un archivo JSON.
 
 :::tip
-You can use the import/export feature to copy blueprints between scenes.
+Puedes usar la función de importar/exportar para copiar blueprints entre escenas.
 :::
 
-To navigate the node editor, you can use **Mouse LMB** to pan, **Mouse Wheel** to zoom, and **Mouse RMB** to select multiple nodes. When one or more nodes are selected, you can use **Mouse LMB** to drag them around, and **Delete** to delete them. You can also use **Ctrl+C** and **Ctrl+V** to copy and paste selected nodes.
+Para navegar en el editor de nodos, puedes usar **Botón Izquierdo del Mouse** para desplazarte, **Rueda del Mouse** para hacer zoom, y **Botón Derecho del Mouse** para seleccionar múltiples nodos. Cuando uno o más nodos están seleccionados, puedes usar **Botón Izquierdo del Mouse** para arrastrarlos, y **Delete** para eliminarlos. También puedes usar **Ctrl+C** y **Ctrl+V** para copiar y pegar nodos seleccionados.
 
 <AuthorBar authors={{
   creators: [
     {name: 'HakuyaTira', github: 'TigerHix'},
   ],
   translators: [
+    {name: 'かぐら (Arukaito)', github: 'Arukaito'}
   ],
 }} />

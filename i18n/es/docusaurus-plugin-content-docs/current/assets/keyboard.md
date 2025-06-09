@@ -2,19 +2,19 @@
 sidebar_position: 40
 ---
 
-# Keyboard/Trackpad
+# Teclado/Trackpad
 
-Keyboard and trackpad are special props that (when combined with a blueprint) can generate animations for the character using keyboard and touchpad, even when the hands are not motion captured.
+El teclado y trackpad son props especiales que (cuando se combinan con un blueprint) pueden generar animaciones para el personaje usando teclado y touchpad, incluso cuando las manos no están capturadas por mocap.
 
 ![](/doc-img/zh-keyboard-1.webp)
-<p class="img-desc">No hand tracking required!</p>
+<p class="img-desc">¡No se requiere seguimiento de manos!</p>
 
-## Setup
+## Configuración {#setup}
 
-To use keyboard/trackpad, simply enable **Use Keyboard/Trackpad** during the motion capture setup. Please refer to the [Customizing Pose Tracking](../mocap/body-tracking) page for more details.
+Para usar teclado/trackpad, simplemente habilita **Use Keyboard/Trackpad** durante la configuración de captura de movimiento. Por favor consulta la página [Personalizando Seguimiento de Pose](../mocap/body-tracking) para más detalles.
 
 :::info
-Currently, keyboard/trackpad are only supported for upper body tracking setups.
+Actualmente, teclado/trackpad solo son compatibles con configuraciones de seguimiento de torso.
 :::
 
 <AuthorBar authors={{
@@ -22,5 +22,6 @@ Currently, keyboard/trackpad are only supported for upper body tracking setups.
     {name: 'HakuyaTira', github: 'TigerHix'},
   ],
   translators: [
+    {name: 'かぐら', github: 'Arukaito'},
   ],
 }} />

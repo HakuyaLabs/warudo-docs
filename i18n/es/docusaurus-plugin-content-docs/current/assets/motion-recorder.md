@@ -2,21 +2,21 @@
 sidebar_position: 80
 ---
 
-# Motion Recorder
+# Grabador de Movimiento
 
-The motion recorder allows you to record the character's animation and output an animation file in FBX, BVH, or Warudo's WANIM format.
+El grabador de movimiento te permite grabar la animación del personaje y generar un archivo de animación en formato FBX, BVH, o WANIM de Warudo.
 
-## Setup
+## Configuración
 
-Select the **Character** that you would like to record. Select a **Target Frame Rate** and **Export Format**, and click **Start Recording** to start recording. You can press **Stop Recording** to stop recording at any time.
+Selecciona el **Personaje** que quieres grabar. Selecciona una **Velocidad de Fotogramas Objetivo** y **Formato de Exportación**, y haz clic en **Iniciar Grabación** para comenzar a grabar. Puedes presionar **Detener Grabación** para parar la grabación en cualquier momento.
 
-There are 3 export formats available:
-* **FBX**: Export to FBX format containing both the character's skeleton and blendshape data.
-* **BVH**: Export to BVH format containing only the character's skeleton data.
-* **WANIM**: Export to Warudo's WANIM format containing the character's skeleton and blendshape data, and character expressions triggered during recording. If you only need to playback the animation in Warudo, this is the recommended format.
+Hay 3 formatos de exportación disponibles:
+* **FBX**: Exportar a formato FBX que contiene tanto los datos del esqueleto del personaje como los blendshapes.
+* **BVH**: Exportar a formato BVH que contiene solo los datos del esqueleto del personaje.
+* **WANIM**: Exportar al formato WANIM de Warudo que contiene los datos del esqueleto y blendshapes del personaje, y las expresiones del personaje activadas durante la grabación. Si solo necesitas reproducir la animación en Warudo, este es el formato recomendado.
 
 :::caution
-Note that FBX exporting is experimental and most likely will ever work correctly on VRM models, or `.warudo` models from a FBX file without Maya-specific features (e.g., IK, constraints, etc.).
+Ten en cuenta que la exportación FBX es experimental y muy probablemente solo funcionará correctamente en modelos VRM, o modelos `.warudo` de un archivo FBX sin características específicas de Maya (p. ej., IK, restricciones, etc.).
 :::
 
 <AuthorBar authors={{
@@ -24,5 +24,6 @@ Note that FBX exporting is experimental and most likely will ever work correctly
     {name: 'HakuyaTira', github: 'TigerHix'},
   ],
   translators: [
+    {name: 'かぐら', github: 'Arukaito'},
   ],
 }} />

@@ -2,24 +2,24 @@
 sidebar_position: 50
 ---
 
-# VMC Sender
+# Transmisor VMC
 
-Send the animation data of a character to any software that supports the [VirtualMotionCapture protocol](https://protocol.vmc.info/english)!
+¡Envía los datos de animación de un personaje a cualquier software que soporte el [protocolo VirtualMotionCapture](https://protocol.vmc.info/english)!
 
 :::tip
-A list of compatible programs can be found [here](https://protocol.vmc.info/Reference).
+Se puede encontrar una lista de programas compatibles [aquí](https://protocol.vmc.info/Reference).
 :::
 
-## Properties
+## Propiedades
 
-* IP Address: To which IP address the data will be sent.
-* Port: To which port the data will be sent.
-* Character: Select the character whose animation data will be sent.
-* Send to VirtualMotionCapture: Whether data is being sent to [VirtualMotionCapture](https://akira.works/VirtualMotionCapture-en/) (the software with the same name, not the VMC protocol). This option must be enabled due to a bug in VirtualMotionCapture when parsing animation data.
-  * Calibrating (VirtualMotionCapture): Enable this option during T-Pose calibration in VirtualMotionCapture; disable it after.
+* Dirección IP: A qué dirección IP se enviarán los datos.
+* Puerto: A qué puerto se enviarán los datos.
+* Personaje: Selecciona el personaje cuyos datos de animación se enviarán.
+* Enviar a VirtualMotionCapture: Si los datos se están enviando a [VirtualMotionCapture](https://akira.works/VirtualMotionCapture-en/) (el software con el mismo nombre, no el protocolo VMC). Esta opción debe estar habilitada debido a un error en VirtualMotionCapture al analizar datos de animación.
+  * Calibrando (VirtualMotionCapture): Habilita esta opción durante la calibración T-Pose en VirtualMotionCapture; deshabilítala después.
 
 :::caution
-This function requires that all initial rotations of the bones in the model be 0, otherwise the data sent to other software may not be compatible. If your model is in [VRM format](https://vrm.dev/), then in most cases there should be no issue. However, in very rare cases, the modeler may not have checked the Enforce T-Pose option when exporting, and it can be fixed by re-exporting with this option checked.
+Esta función requiere que todas las rotaciones iniciales de los huesos en el modelo sean 0, de lo contrario los datos enviados a otro software pueden no ser compatibles. Si tu modelo está en [formato VRM](https://vrm.dev/), entonces en la mayoría de los casos no debería haber problema. Sin embargo, en casos muy raros, el modelador puede no haber marcado la opción Enforce T-Pose al exportar, y puede arreglarse re-exportando con esta opción marcada.
 :::
 
 <AuthorBar authors={{
@@ -27,5 +27,6 @@ This function requires that all initial rotations of the bones in the model be 0
     {name: 'HakuyaTira', github: 'TigerHix'},
   ],
   translators: [
+    {name: 'かぐら', github: 'Arukaito'},
   ],
 }} />

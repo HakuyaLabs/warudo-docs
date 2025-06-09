@@ -2,25 +2,26 @@
 sidebar_position: 42
 ---
 
-# Wind
+# Viento
 
-The wind asset is used to simulate wind in the scene. It can be used to make hair, clothes, and other objects with [VRM Spring Bones](https://vrm.dev/en/univrm/springbone/univrm_secondary/) or [Magica Cloth](https://magicasoft.jp/en/magica-cloth-2/) components react to wind.
+El asset de viento se usa para simular viento en la escena. Puede usarse para hacer que el cabello, la ropa, y otros objetos con componentes de [VRM Spring Bones](https://vrm.dev/en/univrm/springbone/univrm_secondary/) o [Magica Cloth](https://magicasoft.jp/en/magica-cloth-2/) reaccionen al viento.
 
 :::info
-How do I know if my model has VRM Spring Bones or Magica Cloth components? You can ask the model creator, but usually the rule of thumb is that if the model has moving hair or clothes, then it probably has VRM Spring Bones or Magica Cloth components. Note that only a `.warudo` model exported using the [Mod SDK](../modding/mod-sdk.md) can have Magica Cloth components.
+¿Cómo sé si mi modelo tiene componentes VRM Spring Bones o Magica Cloth? Puedes preguntarle al creador del modelo, pero usualmente la regla general es que si el modelo tiene cabello o ropa en movimiento, entonces probablemente tiene componentes VRM Spring Bones o Magica Cloth. Nota que solo un modelo `.warudo` exportado usando el [Mod SDK](../modding/mod-sdk.md) puede tener componentes Magica Cloth.
 :::
 
 ![](/doc-img/en-wind-1.png)
-<p class="img-desc">Wind blowing the character's hair and jacket.</p>
+<p class="img-desc">Viento soplando el cabello y la chaqueta del personaje.</p>
 
-## Setup
+## Configuración {#setup}
 
-Create a **Wind (VRM)** or **Wind (Magica Cloth)** asset depending on the type of physics components your model has. Then, play with the parameters to adjust the wind effect.
+Crea un asset **Wind (VRM)** o **Wind (Magica Cloth)** dependiendo del tipo de componentes de física que tenga tu modelo. Luego, juega con los parámetros para ajustar el efecto del viento.
 
 <AuthorBar authors={{
   creators: [
     {name: 'HakuyaTira', github: 'TigerHix'},
   ],
   translators: [
+    {name: 'かぐら', github: 'Arukaito'},
   ],
 }} />

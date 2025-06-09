@@ -2,36 +2,37 @@
 sidebar_position: 502
 ---
 
-# NiloToon Character Controller
+# Controlador de Personaje NiloToon
 
 :::info
-This feature is only available in [Warudo Pro](../pro). To add a NiloToon character controller to the scene, you must have Universal RP enabled in **Settings → URP**.
+Esta característica solo está disponible en [Warudo Pro](../pro). Para agregar un controlador de personaje NiloToon a la escena, debes tener Universal RP habilitado en **Settings → URP**.
 :::
 
-The NiloToon character controller allows you to adjust NiloToon settings on a character.
+El controlador de personaje NiloToon te permite ajustar la configuración de NiloToon en un personaje.
 
 <div style={{display: 'flex', justifyContent: 'space-between', gap: '1rem'}}>
 <div>
 <img src="/doc-img/en-nilotoon-char-color.png"  />
-<p class="img-desc">Coloring character in black and white.</p>
+<p class="img-desc">Coloreando personaje en blanco y negro.</p>
 </div>
 <div style={{width: '73%'}} className="video-box"><video controls loop src="/doc-img/en-nilotoon-char-dissolve.mp4" />
-<p>Dissolving the tail.</p>
+<p>Disolviendo la cola.</p>
 </div>
 </div>
 
-Please refer to the NiloToon documentation for more details.
+Por favor consulta la documentación de NiloToon para más detalles.
 
-## Setup
+## Configuración {#setup}
 
-Select the **Character** you want to adjust NiloToon settings for. If the character is configured with NiloToon, you will see its settings being read and shown in the asset.
+Selecciona el **Character** para el cual quieres ajustar la configuración de NiloToon. Si el personaje está configurado con NiloToon, verás su configuración siendo leída y mostrada en el asset.
 
-You can adjust the settings directly in the asset, or control them using the **Set Asset Property** node in [blueprints](../blueprints/overview).
+Puedes ajustar la configuración directamente en el asset, o controlarla usando el nodo **Set Asset Property** en [blueprints](../blueprints/overview).
 
 <AuthorBar authors={{
   creators: [
     {name: 'HakuyaTira', github: 'TigerHix'},
   ],
   translators: [
+    {name: 'かぐら', github: 'Arukaito'},
   ],
 }} />

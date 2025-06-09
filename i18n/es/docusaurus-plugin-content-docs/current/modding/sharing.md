@@ -2,30 +2,31 @@
 sidebar_position: 100
 ---
 
-# Sharing Your Mod
+# Compartiendo Tu Mod
 
-Once you have created a mod, you can share it with others by uploading it to our [Steam Workshop](https://steamcommunity.com/app/2079120/workshop/). It is just a few clicks away!
+Una vez que hayas creado un mod, puedes compartirlo con otros subiéndolo a nuestro [Steam Workshop](https://steamcommunity.com/app/2079120/workshop/). ¡Son solo unos pocos clics!
 
 ## Tutorial
 
-Go to the **Discover** tab and click on **Published Items → Create Item**:
+Ve a la pestaña **Discover** y haz clic en **Published Items → Create Item**:
 
 ![](/doc-img/en-sharing-mod-1.png)
 
-Fill out the upload form in the popup window:
+Completa el formulario de subida en la ventana emergente:
 
 ![](/doc-img/en-sharing-mod-2.png)
 
-In the **Files** list, you can add files to upload by clicking on the **+** button and selecting the file.
+En la lista **Files**, puedes agregar archivos para subir haciendo clic en el botón **+** y seleccionando el archivo.
 
 ![](/doc-img/en-sharing-mod-3.png)
 
-Once you are done, just click on **OK** and wait for the upload to finish. Easy, right?
+Una vez que hayas terminado, solo haz clic en **OK** y espera a que termine la subida. ¿Fácil, verdad?
 
 <AuthorBar authors={{
   creators: [
     {name: 'HakuyaTira', github: 'TigerHix'},
   ],
   translators: [
+    {name: 'かぐら (Arukaito)', github: 'Arukaito'}
   ],
 }} />

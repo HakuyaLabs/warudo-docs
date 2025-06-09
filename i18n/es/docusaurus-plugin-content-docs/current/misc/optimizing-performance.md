@@ -2,58 +2,58 @@
 sidebar_position: 10
 ---
 
-# Optimizing Performance
+# Optimizando Rendimiento
 
-Warudo should run smoothly on most PCs. However, if you are experiencing performance issues, especially when other games/applications are running simultaneously, you can try the following methods to improve performance.
+Warudo debería ejecutarse sin problemas en la mayoría de PCs. Sin embargo, si estás experimentando problemas de rendimiento, especialmente cuando otros juegos/aplicaciones se ejecutan simultáneamente, puedes probar los siguientes métodos para mejorar el rendimiento.
 
-## Window Resolution
+## Resolución de Ventana
 
-The resolution of the Warudo window is one of the most important factors affecting Warudo's performance. The higher the resolution, the lower the frame rate. You should almost never use 4K resolution unless you have a very powerful PC. The recommended resolution is 1920 x 1080, and most livestreaming platforms only support up to 1080p anyway.
+La resolución de la ventana de Warudo es uno de los factores más importantes que afecta el rendimiento de Warudo. Mientras más alta sea la resolución, menor será la tasa de frames. Casi nunca deberías usar resolución 4K a menos que tengas un PC muy potente. La resolución recomendada es 1920 x 1080, y la mayoría de plataformas de transmisión en vivo solo soportan hasta 1080p de todos modos.
 
-If 1920 x 1080 is still too demanding on your GPU, you can try 1280 x 720. You can manually set the resolution of the Warudo window by adjusting **Menu → Settings → Window Width/Height**.
+Si 1920 x 1080 sigue siendo muy demandante para tu GPU, puedes probar 1280 x 720. Puedes establecer manualmente la resolución de la ventana de Warudo ajustando **Menu → Settings → Window Width/Height**.
 
-## Environment
+## Entorno
 
-[Environments](../assets/environment), or the 3D backgrounds in Warudo, are also a major factor affecting performance. The more complex the environment, the lower the frame rate. For example, the [Tokyo City](https://steamcommunity.com/sharedfiles/filedetails/?id=3004012790) environment is known to be very demanding on most GPUs. You can try using a simpler environment, or even no environment at all.
+Los [Entornos](../assets/environment), o los fondos 3D en Warudo, también son un factor importante que afecta el rendimiento. Mientras más complejo sea el entorno, menor será la tasa de frames. Por ejemplo, el entorno [Tokyo City](https://steamcommunity.com/sharedfiles/filedetails/?id=3004012790) es conocido por ser muy demandante en la mayoría de GPUs. Puedes probar usar un entorno más simple, o incluso ningún entorno en absoluto.
 
-## Character
+## Personaje
 
-Are there too many mesh renderers on your character? Models exported from [VRoid Studio](https://vroid.com/en/studio) often have this problem if you forgot to optimize the export settings to reduce the mesh count. (We have seen models with 100+ meshes for the hair alone!) You can either re-export the model or combine the meshes in Blender.
+¿Hay demasiados mesh renderers en tu personaje? Los modelos exportados de [VRoid Studio](https://vroid.com/en/studio) a menudo tienen este problema si olvidaste optimizar la configuración de exportación para reducir el conteo de mallas. (¡Hemos visto modelos con más de 100 mallas solo para el cabello!) Puedes ya sea re-exportar el modelo o combinar las mallas en Blender.
 
-Similarly, make sure there aren't too many materials on your character.
+Similarmente, asegúrate de que no haya demasiados materiales en tu personaje.
 
-## Limit FPS
+## Limitar FPS
 
-If you are streaming to a platform that only supports 30 FPS, or you are running a heavy game along side Warudo, you can limit FPS to 30 to reduce the load on your GPU. You can do this by adjusting **Menu → Settings → Limit FPS**. If you have enabled VSync, turn it off first.
+Si estás transmitiendo a una plataforma que solo soporta 30 FPS, o estás ejecutando un juego pesado junto con Warudo, puedes limitar los FPS a 30 para reducir la carga en tu GPU. Puedes hacer esto ajustando **Menu → Settings → Limit FPS**. Si has habilitado VSync, apágalo primero.
 
-## MediaPipe Tracking
+## Seguimiento MediaPipe
 
-[MediaPipe](../mocap/mediapipe) hand tracking can be quite demanding on your CPU or GPU, depending on whether you have enabled **MediaPipe Tracker → GPU Acceleration**. If you are experiencing performance issues, try turning off MediaPipe hand tracking, or disable GPU acceleration to use CPU tracking instead.
+El seguimiento de manos de [MediaPipe](../mocap/mediapipe) puede ser bastante demandante en tu CPU o GPU, dependiendo de si has habilitado **MediaPipe Tracker → GPU Acceleration**. Si estás experimentando problemas de rendimiento, trata de desactivar el seguimiento de manos de MediaPipe, o deshabilita la aceleración GPU para usar seguimiento por CPU en su lugar.
 
-## Other Applications Fighting for GPU Resources
+## Otras Aplicaciones Compitiendo por Recursos de GPU
 
-If you are running a GPU-intensive game or application alongside Warudo such as Apex Legends, you may notice Warudo's frame rate drops significantly. This is because the other game/application requests a higher GPU priority, so Warudo is not able to render as smoothly as it should.
+Si estás ejecutando un juego o aplicación intensiva en GPU junto con Warudo como Apex Legends, puedes notar que la tasa de frames de Warudo baja significativamente. Esto es porque el otro juego/aplicación solicita una prioridad de GPU más alta, así que Warudo no puede renderizar tan suavemente como debería.
 
-To allow Warudo to have a higher GPU priority, first you must run Warudo as administrator. Go to your Steam library, right-click on Warudo and select **Manage → Browse local files**:
+Para permitir que Warudo tenga una prioridad de GPU más alta, primero debes ejecutar Warudo como administrador. Ve a tu biblioteca de Steam, haz clic derecho en Warudo y selecciona **Manage → Browse local files**:
 
 ![](/doc-img/zh-faq-1.webp)
 
-Right click on Warudo.exe and click on **Properties**:
+Haz clic derecho en Warudo.exe y haz clic en **Properties**:
 
 ![](/doc-img/zh-faq-2.webp)
 
-Then go to the **Compatibility** tab, check **Run this program as an administrator**, and click OK.
+Luego ve a la pestaña **Compatibility**, marca **Run this program as an administrator**, y haz clic en OK.
 
 ![](/doc-img/en-performance-1.png)
 
-Finally, open Warudo and enable **Menu → Settings → Increase GPU Priority**.
+Finalmente, abre Warudo y habilita **Menu → Settings → Increase GPU Priority**.
 
 :::caution
-Increased GPU priority for Warudo can in turn decrease frame rates of other 3D applications/games running simultaneously.
+El aumento de prioridad de GPU para Warudo puede a su vez disminuir las tasas de frames de otras aplicaciones/juegos 3D ejecutándose simultáneamente.
 :::
 
 :::info
-If you are experiencing performance issues with other applications/games, you can try to run them as administrator as well.
+Si estás experimentando problemas de rendimiento con otras aplicaciones/juegos, puedes probar ejecutarlos como administrador también.
 :::
 
 <AuthorBar authors={{
@@ -61,5 +61,6 @@ If you are experiencing performance issues with other applications/games, you ca
     {name: 'HakuyaTira', github: 'TigerHix'},
   ],
   translators: [
+    {name: 'かぐら', github: 'Arukaito'},
   ],
 }} />

@@ -6,19 +6,19 @@ sidebar_position: 11
 
 Below is a list of frequently asked questions about 3D VTubing; they are not specific to Warudo, but are still useful to know!
 
-## What is a blendshape? {#blendshape}
+## ¿Qué es un blendshape? {#blendshape}
 
-A blendshape is a set of vertices moving from one position to another, like the following:
+Un blendshape es un conjunto de vértices que se mueven de una posición a otra, como se muestra a continuación:
 
 ![](/doc-img/zh-tutorials-18.gif)
-<p class="img-desc">Reference: DevelopPaper</p>
+<p class="img-desc">Referencia: DevelopPaper</p>
 
-A blendshape's value is between 0 and 1. When the value is 0, the vertices do not move. When the value is 1, the vertices move to the target position, as shown below:
+El valor de un blendshape está entre 0 y 1. Cuando el valor es 0, los vértices no se mueven. Cuando el valor es 1, los vértices se mueven a la posición objetivo, como se muestra abajo:
 
 ![](/doc-img/zh-tutorials-19.gif)
-<p class="img-desc">Note that blendshapes in Unity takes values from 0-100, but in Warudo (and most 3D tools) blendshapes take values from 0-1. Reference: DevelopPaper</p>
+<p class="img-desc">Nota que los blendshapes en Unity toman valores de 0-100, pero en Warudo (y la mayoría de herramientas 3D) los blendshapes toman valores de 0-1. Referencia: DevelopPaper</p>
 
-The list of blendshapes on a model is entirely up to the modeler (and the modeling tool). Below are a few lists of common blendshapes (for reference only; your model may have more or fewer blendshapes):
+La lista de blendshapes en un modelo depende completamente del modelador (y la herramienta de modelado). A continuación hay algunas listas de blendshapes comunes (solo para referencia; tu modelo puede tener más o menos blendshapes):
 
 <details>
 
@@ -212,45 +212,46 @@ The list of blendshapes on a model is entirely up to the modeler (and the modeli
 </details>
 
 :::caution
-You may have heard others refer to blendshapes as "expressions." However, in Warudo (as well as other VTubing apps such as [VSeeFace](https://vseeface.icu)), an expression actually consists of multiple blendshape values. For example, the "crying" expression shown below is a specific combination of five blendshape values:
+Puede que hayas escuchado a otros referirse a los blendshapes como "expresiones". Sin embargo, en Warudo (así como en otras aplicaciones de VTubing como [VSeeFace](https://vseeface.icu)), una expresión en realidad consiste en múltiples valores de blendshape. Por ejemplo, la expresión de "llorar" mostrada abajo es una combinación específica de cinco valores de blendshape:
 
 ![](/doc-img/zh-tutorials-20.webp)
-To avoid confusion, we will stick to referring blendshapes and expressions by their respective names.
+Para evitar confusión, nos mantendremos refiriéndonos a los blendshapes y expresiones por sus nombres respectivos.
 :::
 
-## What are "Perfect Sync" / ARKit blendshapes? {#arkit}
+## ¿Qué son los blendshapes "Perfect Sync" / ARKit? {#arkit}
 
-ARKit blendshapes refer to the 52 parameters that are supported by Apple's ARKit face tracking. You can view a list of these blendshapes [here](https://arkit-face-blendshapes.com/). These blendshapes cover a wide range of facial expressions: blinking, smiling, frowning, sneering, etc.
+Los blendshapes ARKit se refieren a los 52 parámetros que son soportados por el seguimiento facial ARKit de Apple. Puedes ver una lista de estos blendshapes [aquí](https://arkit-face-blendshapes.com/). Estos blendshapes cubren una amplia gama de expresiones faciales: parpadear, sonreír, fruncir el ceño, despreciar, etc.
 
-In late 2020, Japanese developer [hinzka](https://hinzka.hatenablog.com/entry/2020/10/12/014540) coined the term "Perfect Sync" for the process of [automatically adding the 52 ARKit blendshapes to any VRoid model](https://hinzka.hatenablog.com/entry/2020/10/12/014540). This process is now widely used in the VTubing community, and "Perfect Sync" is often used interchangeably with "ARKit blendshapes."
+A finales de 2020, el desarrollador japonés [hinzka](https://hinzka.hatenablog.com/entry/2020/10/12/014540) acuñó el término "Perfect Sync" para el proceso de [agregar automáticamente los 52 blendshapes ARKit a cualquier modelo VRoid](https://hinzka.hatenablog.com/entry/2020/10/12/014540). Este proceso ahora se usa ampliamente en la comunidad VTubing, y "Perfect Sync" se usa a menudo de manera intercambiable con "blendshapes ARKit".
 
-We highly recommend adding ARKit blendshapes to your model, as it greatly improves the expressiveness of your model. If your model is created with VRoid Studio, you can use [HANA_Tool](https://booth.pm/en/items/2604269) to automatically add ARKit blendshapes to your model. Otherwise, you will need to manually add the blendshapes in modeling tools such as Blender or Maya.
+Recomendamos altamente agregar blendshapes ARKit a tu modelo, ya que mejora enormemente la expresividad de tu modelo. Si tu modelo fue creado con VRoid Studio, puedes usar [HANA_Tool](https://booth.pm/en/items/2604269) para agregar automáticamente blendshapes ARKit a tu modelo. De lo contrario, necesitarás agregar manualmente los blendshapes en herramientas de modelado como Blender o Maya.
 
-If you are not familiar with 3D modeling, many modelers offer the service to add ARKit blendshapes to your model. Feel free to ask in our [Discord](https://discord.gg/warudo) to find a modeler!
+Si no estás familiarizado con el modelado 3D, muchos modeladores ofrecen el servicio de agregar blendshapes ARKit a tu modelo. ¡Siéntete libre de preguntar en nuestro [Discord](https://discord.gg/warudo) para encontrar un modelador!
 
-## What is a shader? {#shader}
+## ¿Qué es un shader? {#shader}
 
-A shader determines how a model is rendered. For example, the following image shows the same model rendered with different shaders:
+Un shader determina cómo se renderiza un modelo. Por ejemplo, la siguiente imagen muestra el mismo modelo renderizado con diferentes shaders:
 
 ![](/doc-img/en-primer-1.png)
-<p class="img-desc">Source: [https://bibinbaleo.hatenablog.com/entry/2018/09/14/183700](https://bibinbaleo.hatenablog.com/entry/2018/09/14/183700)</p>
+<p class="img-desc">Fuente: [https://bibinbaleo.hatenablog.com/entry/2018/09/14/183700](https://bibinbaleo.hatenablog.com/entry/2018/09/14/183700)</p>
 
-In most 3D VTubing apps, only the Standard and MToon shaders are supported. (MToon shader is the default shader that VRM models use.) However, Warudo supports any shader that is compatible with Unity's built-in (legacy) rendering pipeline, such as [lilToon](https://lilxyzw.github.io/lilToon/#/) and [Poiyomi Shader](https://www.poiyomi.com/). For more information, please refer to the [Modding](../modding/mod-sdk) section.
+En la mayoría de aplicaciones de VTubing 3D, solo se soportan los shaders Standard y MToon. (El shader MToon es el shader predeterminado que usan los modelos VRM.) Sin embargo, Warudo soporta cualquier shader que sea compatible con el pipeline de renderizado integrado (legacy) de Unity, como [lilToon](https://lilxyzw.github.io/lilToon/#/) y [Poiyomi Shader](https://www.poiyomi.com/). Para más información, por favor consulta la sección [Modding](../modding/mod-sdk).
 
-## What is Inverse Kinematics (IK)? {#IK}
+## ¿Qué es la Cinemática Inversa (IK)? {#IK}
 
-IK stands for Inverse Kinematics. It can be understood as "making a part of the model rotate towards, or reach a desired position", without requiring an animation made by an animator. See below:
+IK significa Inverse Kinematics (Cinemática Inversa). Se puede entender como "hacer que una parte del modelo rote hacia, o alcance una posición deseada", sin requerir una animación hecha por un animador. Ve abajo:
 
 ![](/doc-img/zh-assets-character.gif)
-<p class="img-desc">Source：https://medium.com/unity3danimation/overview-of-inverse-kinematics-9769a43ba956</p>
+<p class="img-desc">Fuente：https://medium.com/unity3danimation/overview-of-inverse-kinematics-9769a43ba956</p>
 
-In Warudo, you can adjust the character asset's **Body IK** and **Look At IK** options to make the character's limbs follow a target position or look at a target position.
+En Warudo, puedes ajustar las opciones **Body IK** y **Look At IK** del asset de personaje para hacer que las extremidades del personaje sigan una posición objetivo o miren hacia una posición objetivo.
 
 <AuthorBar authors={{
   creators: [
     {name: 'HakuyaTira', github: 'TigerHix'},
   ],
   translators: [
+    {name: 'かぐら', github: 'Arukaito'},
   ],
 }} />
 

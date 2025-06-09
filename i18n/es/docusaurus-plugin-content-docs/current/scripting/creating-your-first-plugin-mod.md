@@ -2,35 +2,37 @@
 sidebar_position: 2
 ---
 
-# Creating Your First Plugin Mod
+# Creando Tu Primer Mod de Plugin
 
-In the last tutorial, we used [Playground](playground) to load a custom node and a custom asset. However, this comes with limitations: you aren't able to reference any Unity assets, so if you are looking to create a node that spawns a custom Unity particle prefab, you are out of luck with Playground.
+En el último tutorial, usamos [Playground](playground) para cargar un nodo personalizado y un asset personalizado. Sin embargo, esto viene con limitaciones: no puedes referenciar ningún asset de Unity, así que si estás buscando crear un nodo que genere un prefab de partículas personalizado de Unity, no tienes suerte con Playground.
 
-In this tutorial, we will use the [Warudo SDK](../modding/mod-sdk) to build a plugin mod that contains the `HelloWorldNode` and `CookieClickerAsset` we just created. A plugin mod not only allows you to store and reference Unity assets, but also allows you to distribute your custom nodes and assets to other users.
+En este tutorial, usaremos el [Warudo SDK](../modding/mod-sdk) para construir un mod de plugin que contenga el `HelloWorldNode` y `CookieClickerAsset` que acabamos de crear. Un mod de plugin no solo te permite almacenar y referenciar assets de Unity, sino que también te permite distribuir tus nodos y assets personalizados a otros usuarios.
 
-## Step 1: Create a Warudo SDK Project
+## Paso 1: Crear un Proyecto de Warudo SDK
 
-If you haven't yet, create a new Warudo SDK project by following the [Warudo SDK Installation](../modding/sdk-installation) guide. We also recommend following the [Creating Your First Mod](../modding/creating-your-first-mod) tutorial to get familiar with the Warudo SDK first.
+Si aún no lo has hecho, crea un nuevo proyecto de Warudo SDK siguiendo la guía de [Instalación del Warudo SDK](../modding/sdk-installation). También recomendamos seguir el tutorial [Creando Tu Primer Mod](../modding/creating-your-first-mod) para familiarizarte con el Warudo SDK primero.
 
 :::tip
-Building a plugin mod is extremely similar to building other types of mod! The only difference is that a plugin mod needs to contain a C# script that inherits from `Plugin`, as we will see below.
+¡Construir un mod de plugin es extremadamente similar a construir otros tipos de mod! La única diferencia es que un mod de plugin necesita contener un script de C# que herede de `Plugin`, como veremos a continuación.
 :::
 
-## Step 2: Create a New Mod
+## Paso 2: Crear un Nuevo Mod
 
-To create a new mod, go to the menu bar and select **Warudo → New Mod**:
+Para crear un nuevo mod, ve a la barra de menú y selecciona **Warudo → New Mod**:
 
 ![](/doc-img/en-mod-sdk-3.webp)
 
-Type "HelloWorldPlugin" in **Mod Name**, and click "Create Mod!":
+Escribe "HelloWorldPlugin" en **Mod Name**, y haz clic en "Create Mod!":
 
 ![](/doc-img/en-plugin-mod-1.png)
 
-You should see a folder for your mod has just been created under the Assets folder.
+Deberías ver que se acaba de crear una carpeta para tu mod en la carpeta Assets.
 
-## Step 3: Create a Plugin Script
+## Paso 3: Crear un Script de Plugin
 
-In the "HelloWorldPlugin" mod folder, right click and create a new C# script called `HelloWorldPlugin.cs`. Paste the following code into the script:
+## Paso 3: Crear un Script de Plugin
+
+En la carpeta del mod "HelloWorldPlugin", haz clic derecho y crea un nuevo script de C# llamado `HelloWorldPlugin.cs`. Pega el siguiente código en el script:
 
 ```csharp
 using UnityEngine;
@@ -56,9 +58,9 @@ public class HelloWorldPlugin : Plugin {
 }
 ```
 
-Copy the `HelloWorldNode.cs` and `CookieClickerAsset.cs` files from the [previous tutorial](creating-your-first-script) into the "HelloWorldPlugin" mod folder.
+Copia los archivos `HelloWorldNode.cs` y `CookieClickerAsset.cs` del [tutorial anterior](creating-your-first-script) a la carpeta del mod "HelloWorldPlugin".
 
-Your mod folder should now look like this:
+Tu carpeta del mod ahora debería verse así:
 
 <div style={{display: 'flex', justifyContent: 'space-between', gap: '1rem'}}>
 <div style={{width: '25%'}}>
@@ -66,53 +68,55 @@ Your mod folder should now look like this:
 </div>
 </div>
 
-## Step 4: Export the Plugin Mod
+## Paso 4: Exportar el Mod de Plugin
 
-We are almost done! Before exporting the mod, you can check the mod settings are correct in **Warudo → Mod Settings**. You can set the mod's name, version, author, and description, which should be the same as the `[PluginType]` parameters.
+¡Ya casi terminamos! Antes de exportar el mod, puedes verificar que la configuración del mod sea correcta en **Warudo → Mod Settings**. Puedes establecer el nombre del mod, versión, autor y descripción, que deberían ser los mismos que los parámetros de `[PluginType]`.
 
-By default, the **Mod Export Directory** is empty; in this case, the mod will be exported to the project's root folder. You can instead set it to the `Plugins` directory in Warudo's data folder, for example `C:\Program Files (x86)\Steam\steamapps\common\Warudo\Warudo_Data\StreamingAssets\Plugins`.
+Por defecto, el **Mod Export Directory** está vacío; en este caso, el mod será exportado a la carpeta raíz del proyecto. En su lugar puedes configurarlo al directorio `Plugins` en la carpeta de datos de Warudo, por ejemplo `C:\Program Files (x86)\Steam\steamapps\common\Warudo\Warudo_Data\StreamingAssets\Plugins`.
 
 :::warning
-Before exporting, close Warudo and delete `HelloWorldNode.cs` and `CookieClickerAsset.cs` from the `Playground` directory. This is to prevent conflicts between the Playground and the plugin mod.
+Antes de exportar, cierra Warudo y elimina `HelloWorldNode.cs` y `CookieClickerAsset.cs` del directorio `Playground`. Esto es para prevenir conflictos entre el Playground y el mod de plugin.
 :::
 
-Select **Warudo → Export Mod** to export the plugin mod. If everything goes well, you should see a `BUILD SUCCEEDED!` message in the console:
+Selecciona **Warudo → Export Mod** para exportar el mod de plugin. Si todo va bien, deberías ver un mensaje `BUILD SUCCEEDED!` en la consola:
 
 ![](/doc-img/en-plugin-mod-4.png)
 
-It is good to perform a sanity check to ensure the scripts in the mod folder are indeed compiled into the plugin mod. Scroll up in the console, and you should find the following line:
+Es bueno realizar una verificación de cordura para asegurar que los scripts en la carpeta del mod sean efectivamente compilados en el mod de plugin. Desplázate hacia arriba en la consola, y deberías encontrar la siguiente línea:
 
 ![](/doc-img/en-plugin-mod-5.png)
 
 :::warning
-If you do not see this line, your Unity project may not have been set up for C# scripting correctly. Please follow the steps in [this section](../modding/mod-sdk#custom-scripts) and try exporting the plugin mod again.
+Si no ves esta línea, tu proyecto de Unity podría no estar configurado correctamente para scripting de C#. Por favor sigue los pasos en [esta sección](../modding/mod-sdk#custom-scripts) e intenta exportar el mod de plugin nuevamente.
 :::
 
-Make sure the exported `HelloWorldPlugin.warudo` folder is in the `Plugins` directory in Warudo's data folder. You can now open Warudo and check if the plugin mod is loaded in the About dialog:
+Asegúrate de que la carpeta exportada `HelloWorldPlugin.warudo` esté en el directorio `Plugins` en la carpeta de datos de Warudo. Ahora puedes abrir Warudo y verificar si el mod de plugin está cargado en el diálogo About:
 
 ![](/doc-img/en-plugin-mod-3.png)
 
-And of course, the Cookie Clicker asset is now in the **Add Asset** menu, along with the Hello World node in the node palette:
+Y por supuesto, el asset Cookie Clicker ahora está en el menú **Add Asset**, junto con el nodo Hello World en la paleta de nodos:
 
 ![](/doc-img/en-getting-started-playground-7.png)
 
 ![](/doc-img/en-getting-started-playground-2.png)
 
-Voilà! Your first plugin mod in Warudo!
+¡Voilà! ¡Tu primer mod de plugin en Warudo!
 
-## Step 5: Load An Unity Asset
+## Paso 5: Cargar un Asset de Unity
 
-Now that you have a plugin mod, you can load custom Unity assets into Warudo! Let's try loading a Unity asset in the `CookieClickerAsset` script.
+## Paso 5: Cargar un Asset de Unity
 
-Download [Cartoon FX Remaster Free](https://assetstore.unity.com/packages/vfx/particles/cartoon-fx-remaster-free-109565) from the Unity Asset Store. Import the package into your Unity project. Then, select a particle prefab from the package, hold **Ctrl**, and drag it into the "HelloWorldPlugin" folder. We will use the "CFXR Explosion 1" prefab in this example.
+¡Ahora que tienes un mod de plugin, puedes cargar assets personalizados de Unity en Warudo! Intentemos cargar un asset de Unity en el script `CookieClickerAsset`.
+
+Descarga [Cartoon FX Remaster Free](https://assetstore.unity.com/packages/vfx/particles/cartoon-fx-remaster-free-109565) de la Unity Asset Store. Importa el paquete a tu proyecto de Unity. Luego, selecciona un prefab de partículas del paquete, mantén presionado **Ctrl**, y arrástralo a la carpeta "HelloWorldPlugin". Usaremos el prefab "CFXR Explosion 1" en este ejemplo.
 
 ![](/doc-img/en-plugin-mod-6.png)
 
-Rename the prefab into `Particle`. Your mod folder should now look like this:
+Renombra el prefab a `Particle`. Tu carpeta del mod ahora debería verse así:
 
 ![](/doc-img/en-plugin-mod-7.png)
 
-Open the `CookieClickerAsset.cs` script and replace with below:
+Abre el script `CookieClickerAsset.cs` y reemplázalo con lo siguiente:
 
 ```csharp
 using System;
@@ -135,20 +139,20 @@ public class CookieClickerAsset : Asset {
     public int Multiplier = 1;
 
     private int count;
-    private GameObject particlePrefab; // New field to store the particle prefab
+    private GameObject particlePrefab; // Nuevo campo para almacenar el prefab de partículas
 
     [Trigger]
-    public async void GimmeCookie() { // Note the async keyword
+    public async void GimmeCookie() { // Nota la palabra clave async
         count += Multiplier;
         SetDataInput(nameof(Status), "You have " + count + " cookie(s).", broadcast: true);
         
-        // Spawn the particle prefab Multiplier times
+        // Generar el prefab de partículas Multiplier veces
         for (var i = 0; i < Multiplier; i++) {
             var particle = Object.Instantiate(particlePrefab, Random.insideUnitSphere * 2f, Quaternion.identity);
             particle.SetActive(true);
-            Object.Destroy(particle, 3f); // Automatically destroy the cloned particle after 3 seconds
+            Object.Destroy(particle, 3f); // Destruir automáticamente la partícula clonada después de 3 segundos
 
-            await UniTask.Delay(TimeSpan.FromSeconds(0.2f)); // Delay 0.2 seconds before spawning the next particle
+            await UniTask.Delay(TimeSpan.FromSeconds(0.2f)); // Retrasar 0.2 segundos antes de generar la siguiente partícula
         }
     }
 
@@ -156,41 +160,42 @@ public class CookieClickerAsset : Asset {
         base.OnCreate();
         SetActive(true);
         
-        // Load the particle prefab from the mod folder. Change this path if your prefab is in a different folder
+        // Cargar el prefab de partículas de la carpeta del mod. Cambia esta ruta si tu prefab está en una carpeta diferente
         particlePrefab = Plugin.ModHost.Assets.Instantiate<GameObject>("Assets/HelloWorldPlugin/Particle.prefab");
-        // Disable it so that it doesn't show up in the scene
+        // Deshabilitarlo para que no aparezca en la escena
         particlePrefab.SetActive(false);
     }
 
 }
 ```
 
-Export the mod again. Warudo supports hot-reloading of plugins, so you can simply export the mod to the `Plugins` folder and see the changes in Warudo immediately!
+Exporta el mod nuevamente. ¡Warudo soporta recarga en caliente de plugins, así que simplemente puedes exportar el mod a la carpeta `Plugins` y ver los cambios en Warudo inmediatamente!
 
-Press the "Gimme Cookie" button in the Cookie Clicker asset, and you should see the particle prefab spawning in the scene:
+Presiona el botón "Gimme Cookie" en el asset Cookie Clicker, y deberías ver el prefab de partículas generándose en la escena:
 
 ![](/doc-img/en-plugin-mod-8.png)
 
 :::info
-For Warudo Pro users, please switch to the built-in rendering pipeline to view the particle effect. Alternatively, you can use a URP-compatible particle asset instead.
+Para usuarios de Warudo Pro, por favor cambia al pipeline de renderizado integrado para ver el efecto de partículas. Alternativamente, puedes usar un asset de partículas compatible con URP en su lugar.
 :::
 
-Isn't that cool you can do this in Warudo?
+¿No es genial que puedas hacer esto en Warudo?
 
-## Comparison to Playground
+## Comparación con Playground
 
-Creating a plugin mod is more powerful than using [Playground](playground), but it also has disadvantages:
+Crear un mod de plugin es más poderoso que usar [Playground](playground), pero también tiene desventajas:
 
-* Developing a plugin mod can be much slower, as you need to export the mod every time you make a change;
-* Playground can currently access more libraries used by Warudo, such as MessagePack, WebSocketSharp, etc. (we are working on improving this for plugin mods);
-* Plugin mods have more [security limitations](plugin-mod#limitations). For example, you cannot access the `System.IO` namespace (though we provide a [sandboxed file persistence API](api/io)).
+* Desarrollar un mod de plugin puede ser mucho más lento, ya que necesitas exportar el mod cada vez que haces un cambio;
+* Playground actualmente puede acceder a más librerías usadas por Warudo, como MessagePack, WebSocketSharp, etc. (estamos trabajando en mejorar esto para los mods de plugin);
+* Los mods de plugin tienen más [limitaciones de seguridad](plugin-mod#limitations). Por ejemplo, no puedes acceder al namespace `System.IO` (aunque proporcionamos una [API de persistencia de archivos en sandbox](api/io)).
 
-When to use a plugin mod or Playground depends on your use case. If you are prototyping a new feature or testing a new idea, Playground is a great tool to quickly iterate and see the results, especially if you don't need to reference Unity assets. If you work on custom development for VTubers, Playground is brilliant for implementing small, self-contained features for your clients. However, if you need to load custom Unity assets or distribute your custom nodes and assets on [our Steam Workshop](../modding/sharing), a plugin mod is the way to go. (Even still, you can use Playground to prototype your custom nodes and assets before moving them to a plugin mod!)
+Cuándo usar un mod de plugin o Playground depende de tu caso de uso. Si estás prototipando una nueva característica o probando una nueva idea, Playground es una gran herramienta para iterar rápidamente y ver los resultados, especialmente si no necesitas referenciar assets de Unity. Si trabajas en desarrollo personalizado para VTubers, Playground es brillante para implementar características pequeñas y autocontenidas para tus clientes. Sin embargo, si necesitas cargar assets personalizados de Unity o distribuir tus nodos y assets personalizados en [nuestro Steam Workshop](../modding/sharing), un mod de plugin es el camino a seguir. (¡Incluso así, puedes usar Playground para prototipar tus nodos y assets personalizados antes de moverlos a un mod de plugin!)
 
 <AuthorBar authors={{
 creators: [
 {name: 'HakuyaTira', github: 'TigerHix'},
 ],
 translators: [
+{name: 'かぐら', github: 'Arukaito'},
 ],
 }} />

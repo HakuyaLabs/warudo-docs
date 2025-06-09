@@ -2,31 +2,31 @@
 sidebar_position: 0
 ---
 
-# Overview
+# Resumen
 
 ![](/doc-img/assets-cover.jpg)
 
-Assets are the building blocks of Warudo. They are the components that make up your scene. For example, a character is an asset, a prop is an asset, and a camera is also an asset. Assets can be referenced in [blueprints](../blueprints/overview) to add further functionality to your scene.
+Los assets son los bloques de construcción de Warudo. Son los componentes que conforman tu escena. Por ejemplo, un personaje es un asset, un prop es un asset, y una cámara también es un asset. Los assets pueden ser referenciados en [blueprints](../blueprints/overview) para agregar funcionalidad adicional a tu escena.
 
-## Interface
+## Interfaz
 
-In the **Assets** tab, you can see a list of all assets in your scene. Once you select an asset, you can see its properties in the right panel.
+En la pestaña **Assets**, puedes ver una lista de todos los assets en tu escena. Una vez que selecciones un asset, puedes ver sus propiedades en el panel derecho.
 
 ![](/doc-img/en-assets-1.png)
-<p class="img-desc">Overview.</p>
+<p class="img-desc">Resumen.</p>
 
-The toolbar has the following buttons:
-* **Add Asset**: Add a new asset to the scene.
-* **Remove Asset**: Remove the selected asset from the scene.
-* **Duplicate Asset**: Duplicate the selected asset.
-* **Rename Asset**: Rename the selected asset.
-* **Create Group**: Create group to organize asset. You can drag asset to manage the group.
-* **Import Asset**: Import an asset from a JSON string and add it to the scene.
-* **Import Into Selected Asset**: Import an asset from a JSON string and merge it into the selected asset.
-* **Export Asset**: Export the selected asset to a JSON string.
+La barra de herramientas tiene los siguientes botones:
+* **Add Asset**: Agregar un nuevo asset a la escena.
+* **Remove Asset**: Eliminar el asset seleccionado de la escena.
+* **Duplicate Asset**: Duplicar el asset seleccionado.
+* **Rename Asset**: Renombrar el asset seleccionado.
+* **Create Group**: Crear grupo para organizar assets. Puedes arrastrar assets para gestionar el grupo.
+* **Import Asset**: Importar un asset desde una cadena JSON y agregarlo a la escena.
+* **Import Into Selected Asset**: Importar un asset desde una cadena JSON y fusionarlo con el asset seleccionado.
+* **Export Asset**: Exportar el asset seleccionado a una cadena JSON.
 
 :::tip
-You can use the import/export feature to copy assets between scenes.
+Puedes usar la función de importar/exportar para copiar assets entre escenas.
 :::
 
 <AuthorBar authors={{
@@ -34,5 +34,6 @@ You can use the import/export feature to copy assets between scenes.
     {name: 'HakuyaTira', github: 'TigerHix'},
   ],
   translators: [
+    {name: 'かぐら (Arukaito)', github: 'Arukaito'}
   ],
 }} />

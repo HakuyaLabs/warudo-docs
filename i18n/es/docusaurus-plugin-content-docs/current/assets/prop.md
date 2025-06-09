@@ -3,66 +3,67 @@ sidebar_position: 20
 ---
 # Prop
 
-A prop is a 3D model that can be placed freely within a scene or attached to a character as an accessory. Besides the built-in models, external models can be exported as `.warudo` format using the [Mod SDK](../modding/mod-sdk.md) and then loaded into Warudo.
+Un prop es un modelo 3D que puede ser colocado libremente dentro de una escena o adjuntado a un personaje como un accesorio. Además de los modelos integrados, los modelos externos pueden ser exportados como formato `.warudo` usando el [Mod SDK](../modding/mod-sdk.md) y luego cargados en Warudo.
 
 <div style={{display: 'flex', justifyContent: 'space-between', gap: '1rem'}}>
 <div style={{width: '48%'}}>
 <img src="/doc-img/zh-prop-1.webp"  />
-<p class="img-desc">Cat paws</p>
+<p class="img-desc">Patas de gato</p>
 </div>
 
 <div style={{width: '52%'}} className="video-box"><video controls src="/doc-img/zh-prop-1.mp4" />
-<p>The rose and fingertip particle effect are achieved using prop assets and character attachment settings.</p>
+<p>La rosa y el efecto de partículas en las puntas de los dedos se logran usando assets de prop y configuraciones de adjunto de personaje.</p>
 </div>
 </div>
 
 ## Steam Workshop
 
-In addition to the built-in props, you can download official and community props from Warudo's Steam Workshop. Click on the **Discover** tab and select the **Props** category:
+Además de los props integrados, puedes descargar props oficiales y de la comunidad desde el Steam Workshop de Warudo. Haz clic en la pestaña **Discover** y selecciona la categoría **Props**:
 
 ![](/doc-img/en-prop-3.png)
-<p class="img-desc">Browsing props from the Steam Workshop.</p>
+<p class="img-desc">Navegando props desde el Steam Workshop.</p>
 
-## Setup
+## Configuración
 
-To set up a prop, simply select a **Source** as the model for the prop. Then, use the transform gizmos to move/rotate/scale the prop, so that it is in the desired position.
+Para configurar un prop, simplemente selecciona un **Source** como el modelo para el prop. Luego, usa los gizmos de transformación para mover/rotar/escalar el prop, para que esté en la posición deseada.
 
 ![](/doc-img/en-prop-1.png)
-<p class="img-desc">The Christmas tree, Christmas hat, and electric piano here are all props.</p>
+<p class="img-desc">El árbol de Navidad, sombrero de Navidad, y piano eléctrico aquí son todos props.</p>
 
-## Transform Attachment
+## Adjunto de Transformación
 
-You can use the **Transform Attachment** settings to attach the prop to a character or other scene objects. This is useful for props that are held by the character, such as a sword or a microphone. When attached to a character's hand, you can also specify an **Override Hand Pose**, so that the character can tightly grip a sword, for example.
+Puedes usar las configuraciones de **Transform Attachment** para adjuntar el prop a un personaje u otros objetos de escena. Esto es útil para props que son sostenidos por el personaje, como una espada o un micrófono. Cuando se adjunta a la mano de un personaje, también puedes especificar un **Override Hand Pose**, para que el personaje pueda agarrar firmemente una espada, por ejemplo.
 
 ![](/doc-img/en-prop-2.png)
-<p class="img-desc">The katana prop is attached to the character's hand with **Override Hand Pose** set to **Grab**.</p>
+<p class="img-desc">El prop katana está adjuntado a la mano del personaje con **Override Hand Pose** establecido en **Grab**.</p>
 
-If you would like to attach the prop to a non-standard human body bone (e.g. the tail bone of your character), you can use the **Transform Path** for the **Attachment Type** option. This allows you to attach the prop to any transform in the model's hierarchy.
+Si te gustaría adjuntar el prop a un hueso de cuerpo humano no estándar (ej., el hueso de cola de tu personaje), puedes usar el **Transform Path** para la opción **Attachment Type**. Esto te permite adjuntar el prop a cualquier transformación en la jerarquía del modelo.
 
-## Collision Detection
+## Detección de Colisión
 
-By default, the colliders on the prop are disabled. You can enable **Collision Detection** to enable the colliders, which is useful when you have **Character → Ragdoll** enabled.
+Por defecto, los colisionadores en el prop están deshabilitados. Puedes habilitar **Collision Detection** para habilitar los colisionadores, lo cual es útil cuando tienes **Character → Ragdoll** habilitado.
 
 :::info
-Please note that not all built-in props have colliders.
+Por favor ten en cuenta que no todos los props integrados tienen colisionadores.
 :::
 
-## Meshes
+## Mallas
 
-Similar to the character asset, you can adjust **Default BlendShapes**, **Default Material Properties**, and toggle **Meshes** for the prop asset.
+Similar al asset de personaje, puedes ajustar **Default BlendShapes**, **Default Material Properties**, y alternar **Meshes** para el asset de prop.
 
-## Frequently Asked Questions
+## Preguntas Frecuentes
 
-### How can I throw a prop at my character when my stream viewers redeems a Twitch channel point reward / sends a Super Chat / ...?
+### ¿Cómo puedo lanzar un prop a mi personaje cuando mis viewers redimen una recompensa de puntos de canal de Twitch / envían un Super Chat / ...?
 
-Please use **Onboarding Assistant → Interactions Setup → Get Started** to set up interactions. During the setup process, you will have the option to specify the conditions for throwing a prop at your character, along with other fun interactions.
+Por favor usa **Onboarding Assistant → Interactions Setup → Get Started** para configurar interacciones. Durante el proceso de configuración, tendrás la opción de especificar las condiciones para lanzar un prop a tu personaje, junto con otras interacciones divertidas.
 
-Note that the "prop" thrown by the **Throw Prop At Character** node in the interactions blueprint is a temporary object; it is not a prop asset. A prop asset is a persistent model in the scene, and it does not have a physics body.
+Ten en cuenta que el "prop" lanzado por el nodo **Throw Prop At Character** en el blueprint de interacciones es un objeto temporal; no es un asset de prop. Un asset de prop es un modelo persistente en la escena, y no tiene un cuerpo de física.
 
 <AuthorBar authors={{
   creators: [
     {name: 'HakuyaTira', github: 'TigerHix'},
   ],
   translators: [
+    {name: 'かぐら (Arukaito)', github: 'Arukaito'},
   ],
 }} />

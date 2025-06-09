@@ -5,30 +5,30 @@ sidebar_position: 400
 # Director
 
 :::info
-This feature is only available in [Warudo Pro](../pro).
+Esta característica solo está disponible en [Warudo Pro](../pro).
 :::
 
-The director asset provides simple yet powerful cinematic camera control, enabling you to deliver high-quality live performances with ease.
+El asset director proporciona un control cinematográfico de cámara simple pero poderoso, permitiéndote entregar presentaciones en vivo de alta calidad con facilidad.
 
 ![](/doc-img/en-director-1.png)
-<p class="img-desc">The video switcher in the director.</p>
+<p class="img-desc">El conmutador de video en el director.</p>
 
 :::tip
-The director is based on Unity's [Cinemachine](https://unity.com/unity/features/editor/art-and-design/cinemachine), an award-winning procedural camera system. Users of Cinemachine should find most virtual camera concepts familiar.
+El director está basado en [Cinemachine](https://unity.com/unity/features/editor/art-and-design/cinemachine) de Unity, un sistema de cámara procedimental galardonado. Los usuarios de Cinemachine deberían encontrar familiares la mayoría de los conceptos de cámara virtual.
 :::
 
-## Setup
+## Configuración {#setup}
 
-A sample scene with a preconfigured director asset is included in your Pro license. We recommend you to start with this sample scene to get a feel of how the director works. Then, you can use the **Export Asset** button to export the director asset to a JSON string, and import it into your own scene using the **Import Asset** button.
+Una escena de muestra con un asset director preconfigurado está incluida en tu licencia Pro. Te recomendamos que comiences con esta escena de muestra para tener una idea de cómo funciona el director. Luego, puedes usar el botón **Export Asset** para exportar el asset director a una cadena JSON, e importarlo a tu propia escena usando el botón **Import Asset**.
 
-A director asset controls and animates a [camera](./camera) asset. You can select the camera you want to control in the **Camera** dropdown. To toggle the control of the camera between the director and the user (e.g., orbit character, free look), press **`** (the key above Tab).
+Un asset director controla y anima un asset de [cámara](./camera). Puedes seleccionar la cámara que quieres controlar en el menú desplegable **Camera**. Para alternar el control de la cámara entre el director y el usuario (ej., orbitar personaje, vista libre), presiona **`** (la tecla arriba de Tab).
 
-The **Virtual Cameras** list contains a list of virtual cameras that the director can switch between. A virtual camera determines how the camera is positioned, oriented, and animated, when the director switches to it. You can press the hotkey shown next to the virtual camera's name to switch to that virtual camera; you can also set the **Live Camera** option directly.
+La lista **Virtual Cameras** contiene una lista de cámaras virtuales entre las que el director puede cambiar. Una cámara virtual determina cómo se posiciona, orienta y anima la cámara, cuando el director cambia a ella. Puedes presionar la tecla de acceso rápido mostrada junto al nombre de la cámara virtual para cambiar a esa cámara virtual; también puedes establecer la opción **Live Camera** directamente.
 
 ![](/doc-img/en-director-2.png)
-<p class="img-desc">Press the hotkey to switch to the virtual camera.</p>
+<p class="img-desc">Presiona la tecla de acceso rápido para cambiar a la cámara virtual.</p>
 
-By default, the **Switcher** is enabled. The switcher UI provides an intuitive way to preview a grid of virtual cameras and switch between them. You can use **Left/Right Arrow** to go to the previous/next page, and **Mouse LMB** to switch to the selected virtual camera. Of course, you can still use the hotkeys to switch between virtual cameras.
+Por defecto, el **Switcher** está habilitado. La UI del conmutador proporciona una forma intuitiva de previsualizar una cuadrícula de cámaras virtuales y cambiar entre ellas. Puedes usar **Flecha Izquierda/Derecha** para ir a la página anterior/siguiente, y **Clic Izquierdo del Mouse** para cambiar a la cámara virtual seleccionada. Por supuesto, aún puedes usar las teclas de acceso rápido para cambiar entre cámaras virtuales.
 
 :::tip
 Enabling the switcher can affect performance. If you are experiencing low FPS, try to reduce the **Grid Size** and **Update Rate**, or disable the switcher altogether.
@@ -49,85 +49,86 @@ To add animation to the virtual camera, first enable **Camera Animation** and sp
 For example, if you want to animate the **Field Of View** of the camera from 35 to 60, first check the checkbox next to **Field Of View**. Then, in the **Offset** field, specify the offset from the default value, which is 25 in this case.
 
 ![](/doc-img/en-director-3.png)
-<p class="img-desc">Animating the field of view from 35 to 60.</p>
+<p class="img-desc">Animando el campo de visión de 35 a 60.</p>
 
-You can animate virtually any option in the virtual camera, including the camera's **Follow Offset**, **Look At Offset**, etc. See below sections for more details.
+Puedes animar virtualmente cualquier opción en la cámara virtual, incluyendo el **Follow Offset**, **Look At Offset**, etc. de la cámara. Consulta las secciones de abajo para más detalles.
 
-You can also set the **Loop Type** of the animation. **Play Once** means that the animation will only play once. **Repeat** means that the animation will loop indefinitely. **Back And Forth** means that the animation will play in a loop, but the direction of the animation will be reversed every time it reaches the end (using the above example, the field of view will animate from 35 to 60, then from 60 to 35, then from 35 to 60, and so on).
+También puedes establecer el **Loop Type** de la animación. **Play Once** significa que la animación solo se reproducirá una vez. **Repeat** significa que la animación se repetirá indefinidamente. **Back And Forth** significa que la animación se reproducirá en bucle, pero la dirección de la animación se invertirá cada vez que llegue al final (usando el ejemplo de arriba, el campo de visión animará de 35 a 60, luego de 60 a 35, luego de 35 a 60, y así sucesivamente).
 
-Finally, you can concatenate multiple camera animations by enabling **Auto Switch Camera On Animation End**. This allows you to create a sequence of camera animations that play one after another.
+Finalmente, puedes concatenar múltiples animaciones de cámara habilitando **Auto Switch Camera On Animation End**. Esto te permite crear una secuencia de animaciones de cámara que se reproducen una tras otra.
 
-### Field Of View
+### Campo de Visión
 
-The field of view of the camera, in degrees. A smaller field of view means a narrower view, and vice versa.
+El campo de visión de la cámara, en grados. Un campo de visión más pequeño significa una vista más estrecha, y viceversa.
 
 :::tip
-This is usually set to a low value (\<35) for concert scenes, mimicking lens that is commonly used in real-life concerts.
+Esto usualmente se establece en un valor bajo (\<35) para escenas de concierto, imitando lentes que se usan comúnmente en conciertos de la vida real.
 :::
 
-### Position
+### Posición
 
-The position of the camera.
+La posición de la cámara.
 
-* **Manual** mode allows you to specify the position directly.
-* **Follow Target** mode puts the camera at the same position as the **Target**; the target can be a character, prop, or anchor. You can use the **Damping** option to smooth out the movement of the camera.
-* **Transposer** mode puts the camera at the same position as the **Target**, but with an offset specified by the **Follow Offset** option. You can also set the **Binding Mode** (documentation [here](https://docs.unity.cn/Packages/com.unity.cinemachine@2.8/manual/CinemachineBindingModes.html)). Damping options are available for each translation/rotation axis.
-* **Orbital Transposer** mode is similar to the **Transposer** mode, but the camera is on an orbit around the target, with the position specified by **Angular Offset**.
+* El modo **Manual** te permite especificar la posición directamente.
+* El modo **Follow Target** pone la cámara en la misma posición que el **Target**; el objetivo puede ser un personaje, prop, o anchor. Puedes usar la opción **Damping** para suavizar el movimiento de la cámara.
+* El modo **Transposer** pone la cámara en la misma posición que el **Target**, pero con un desplazamiento especificado por la opción **Follow Offset**. También puedes establecer el **Binding Mode** (documentación [aquí](https://docs.unity.cn/Packages/com.unity.cinemachine@2.8/manual/CinemachineBindingModes.html)). Las opciones de amortiguación están disponibles para cada eje de traslación/rotación.
+* El modo **Orbital Transposer** es similar al modo **Transposer**, pero la cámara está en una órbita alrededor del objetivo, con la posición especificada por **Angular Offset**.
 
-In practice, **Manual**, **Transposer**, and **Orbital Transposer** are the most commonly used position modes.
+En la práctica, **Manual**, **Transposer**, y **Orbital Transposer** son los modos de posición más comúnmente usados.
 
 :::caution
-A common mistake is to set the **Target** to a character's bone (e.g., head). It may look fine when the character is not moving, but when the character moves, the camera will move rigorously with the character, causing a very shaky camera! To avoid this, you should set the **Target Character Mode** to **Root Position**, and enable **Fixed Rotation**. Or, even better in most cases, just use **Manual** position mode instead!
+Un error común es establecer el **Target** a un hueso del personaje (ej., cabeza). Puede verse bien cuando el personaje no se está moviendo, pero cuando el personaje se mueve, la cámara se moverá rigurosamente con el personaje, ¡causando una cámara muy temblorosa! Para evitar esto, deberías establecer el **Target Character Mode** en **Root Position**, y habilitar **Fixed Rotation**. O, aún mejor en la mayoría de los casos, ¡simplemente usa el modo de posición **Manual** en su lugar!
 :::
 
-### Orientation
+### Orientación
 
-The orientation of the camera.
+La orientación de la cámara.
 
-* **Manual** mode allows you to specify the orientation directly.
-* **Follow Target** mode puts the camera at the same orientation as the **Target**; the target can be a character, prop, or anchor. You can use the **Damping** option to smooth out the movement of the camera.
-* **First Person** mode allows you to look around using the mouse. Click on the **Set Initial Rotation** button to make sure the camera starts at the current orientation when the scene is loaded next time.
+* El modo **Manual** te permite especificar la orientación directamente.
+* El modo **Follow Target** pone la cámara en la misma orientación que el **Target**; el objetivo puede ser un personaje, prop, o anchor. Puedes usar la opción **Damping** para suavizar el movimiento de la cámara.
+* El modo **First Person** te permite mirar alrededor usando el mouse. Haz clic en el botón **Set Initial Rotation** para asegurarte de que la cámara comience en la orientación actual cuando la escena se cargue la próxima vez.
   :::caution
-  **First Person** orientation mode is not compatible with the **Switcher** UI at the moment. You must disable the **Switcher** to use **First Person** orientation mode.
+  El modo de orientación **First Person** no es compatible con la UI del **Switcher** en este momento. Debes deshabilitar el **Switcher** para usar el modo de orientación **First Person**.
   :::
-* **Hard Look At Character** mode enforces the camera to always look at the **Target**.
-* **Composer** mode rotates the camera to look at the **Target**, but with an offset specified by the **Look At Offset** option. Furthermore, you can change **Screen X** and **Screen Y** to put the target at a different position on the screen, other than the center.
-  - **Composition** parameters allow you to adjust the **Dead Zone**, **Soft Zone** and **Bias** of the camera composition, ensuring that the camera does not move too much when the target moves slightly.
-  - **Lookahead** parameters let the camera look ahead of the target, so that the camera can anticipate the target's movement.
+* El modo **Hard Look At Character** fuerza a la cámara a siempre mirar al **Target**.
+* El modo **Composer** rota la cámara para mirar al **Target**, pero con un desplazamiento especificado por la opción **Look At Offset**. Además, puedes cambiar **Screen X** y **Screen Y** para poner el objetivo en una posición diferente en la pantalla, diferente al centro.
+  - Los parámetros de **Composition** te permiten ajustar la **Dead Zone**, **Soft Zone** y **Bias** de la composición de la cámara, asegurando que la cámara no se mueva demasiado cuando el objetivo se mueve ligeramente.
+  - Los parámetros de **Lookahead** permiten que la cámara mire hacia adelante del objetivo, para que la cámara pueda anticipar el movimiento del objetivo.
   :::tip
-  Read this [blog post](https://blogs.unity3d.com/2019/07/24/understanding-cinemachine-fundamentals/) for a visual explanation of the composer.
+  Lee esta [entrada de blog](https://blogs.unity3d.com/2019/07/24/understanding-cinemachine-fundamentals/) para una explicación visual del composer.
   :::
 
-In practice, **Manual** and **Composer** are the most commonly used orientation modes.
+En la práctica, **Manual** y **Composer** son los modos de orientación más comúnmente usados.
 
 :::caution
-A common mistake is forgetting to set up the **Dead Zone** and **Soft Zone** in the **Composer** mode. This can cause the camera to move too much when the target moves only slightly, causing a very shaky camera! Note that you should set up the **Dead Zone** and **Soft Zone** after you have made sure the camera is in a good position.
+Un error común es olvidar configurar la **Dead Zone** y **Soft Zone** en el modo **Composer**. ¡Esto puede causar que la cámara se mueva demasiado cuando el objetivo se mueve solo ligeramente, causando una cámara muy temblorosa! Nota que deberías configurar la **Dead Zone** y **Soft Zone** después de que te hayas asegurado de que la cámara está en una buena posición.
 :::
 
 :::tip
-Fixed cameras with both **Position** and **Orientation** mode set to **Manual** are often more useful than you think——they can reduce the cognitive load of the viewers, ensuring they do not suffer from motion sickness. You can add **Handheld Movement** (see below) to make fixed cameras more natural.
+Las cámaras fijas con ambos modos **Position** y **Orientation** establecidos en **Manual** son a menudo más útiles de lo que piensas——pueden reducir la carga cognitiva de los espectadores, asegurando que no sufran de mareo por movimiento. Puedes agregar **Handheld Movement** (ver abajo) para hacer que las cámaras fijas sean más naturales.
 :::
 
-### Position/Orientation Offset
+### Desplazamiento de Posición/Orientación
 
-The offset from the default position/orientation of the camera. This is useful when you want to animate the camera's position/orientation from its current position/orientation.
+El desplazamiento desde la posición/orientación por defecto de la cámara. Esto es útil cuando quieres animar la posición/orientación de la cámara desde su posición/orientación actual.
 
-### Handheld Movement
+### Movimiento de Mano
 
-Simulates the camera being held by a person. This will add a slight shake to the camera's movement. You can adjust the **Intensity** and **Speed** to control the strength and speed of the shake.
+Simula que la cámara está siendo sostenida por una persona. Esto agregará un ligero temblor al movimiento de la cámara. Puedes ajustar la **Intensity** y **Speed** para controlar la fuerza y velocidad del temblor.
 
-### Collision Detection
+### Detección de Colisiones
 
-Enables collision detection for the camera, so that the camera will not go through walls or other colliders. You can adjust the **Camera Collision Radius** and **Damping** to control the size of the camera and the strength of the collision detection.
+Habilita la detección de colisiones para la cámara, para que la cámara no atraviese paredes u otros colliders. Puedes ajustar el **Camera Collision Radius** y **Damping** para controlar el tamaño de la cámara y la fuerza de la detección de colisiones.
 
-## Global Offsets
+## Desplazamientos Globales
 
-The **Global Offsets** section allows you to specify global offsets for all virtual cameras, including **Camera Animation Speed**, **Field Of View**, **Position**, **Orientation**, and **Zoom**. This can be especially useful for implementing effects such as zooming in and out based on audio volume, regardless of which virtual camera is currently active.
+La sección **Global Offsets** te permite especificar desplazamientos globales para todas las cámaras virtuales, incluyendo **Camera Animation Speed**, **Field Of View**, **Position**, **Orientation**, y **Zoom**. Esto puede ser especialmente útil para implementar efectos como acercar y alejar basado en el volumen de audio, independientemente de qué cámara virtual esté actualmente activa.
 
 <AuthorBar authors={{
   creators: [
     {name: 'HakuyaTira', github: 'TigerHix'},
   ],
   translators: [
+    {name: 'かぐら', github: 'Arukaito'},
   ],
 }} />

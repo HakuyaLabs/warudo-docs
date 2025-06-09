@@ -2,34 +2,35 @@
 sidebar_position: 1000
 ---
 
-# Debugging
+# Depuración
 
-Scripts not working as intended? Here's some debugging tips!
+¿Los scripts no funcionan como esperabas? ¡Aquí tienes algunos consejos de depuración!
 
-## Restart Warudo
+## Reiniciar Warudo
 
-As cliché as it sounds, restarting Warudo can solve a lot of issues, especially when your mods or scripts are hot-reloaded. Always try this first if you encounter a head-scratching issue.
+Por cliché que suene, reiniciar Warudo puede resolver muchos problemas, especialmente cuando tus mods o scripts se recargan en caliente. Siempre intenta esto primero si encuentras un problema desconcertante.
 
-## Logging
+## Registro de Logs
 
-You can use Unity's `Debug.Log` to print messages to the console as usual. You can access the logs folder by using **Menu → Open Logs Folder**. The `Player.log` file contains the current session's logs, while `Player-prev.log` contains the logs from the previous session.
+Puedes usar `Debug.Log` de Unity para imprimir mensajes a la consola como siempre. Puedes acceder a la carpeta de logs usando **Menu → Open Logs Folder**. El archivo `Player.log` contiene los logs de la sesión actual, mientras que `Player-prev.log` contiene los logs de la sesión anterior.
 
-## Enable Full Build Logs
+## Habilitar Logs de Compilación Completos
 
-If you are creating a [plugin mod](plugin-mod), we recommend to set **Log Level** to All and uncheck **Clear Console On Build** in the Mod Settings window:
+Si estás creando un [plugin mod](plugin-mod), recomendamos establecer **Log Level** a All y desmarcar **Clear Console On Build** en la ventana de Mod Settings:
 
 ![](/doc-img/en-mod-13.png)
 
-Please also refer to the [Modding](../modding/mod-sdk#custom-scripts) documentation.
+Por favor consulta también la documentación de [Modding](../modding/mod-sdk#custom-scripts).
 
-## Join the Discord
+## Únete al Discord
 
-If you are still having trouble, feel free to ask for help on our [Discord](https://discord.gg/warudo). We have a dedicated **#plugins-scripting** channel for anything related to scripting, and experienced folks there would be happy to help you diagnose the issue!
+Si aún tienes problemas, siéntete libre de pedir ayuda en nuestro [Discord](https://discord.gg/warudo). Tenemos un canal dedicado **#plugins-scripting** para cualquier cosa relacionada con scripting, ¡y las personas experimentadas allí estarán felices de ayudarte a diagnosticar el problema!
 
 <AuthorBar authors={{
 creators: [
 {name: 'HakuyaTira', github: 'TigerHix'},
 ],
 translators: [
+{name: 'かぐら', github: 'Arukaito'},
 ],
 }} />

@@ -2,68 +2,69 @@
 sidebar_position: 130
 ---
 
-# Generating Blueprints
+# Generando Blueprints
 
-When you [set up tracking](../../mocap/overview) in Warudo, you will notice that a tracking blueprint is generated. Generating blueprints can be useful especially if you want to preserve some flexibility for the user to modify the blueprint, instead of hard-coding the entire logic in a custom asset or plugin.
+Cuando [configuras seguimiento](../../mocap/overview) en Warudo, notarás que se genera un blueprint de seguimiento. Generar blueprints puede ser útil especialmente si quieres preservar algo de flexibilidad para que el usuario modifique el blueprint, en lugar de codificar toda la lógica en un asset personalizado o plugin.
 
-## By Code
+## Por Código
 
-The recommended way to generate blueprints is to use code. This allows you to control the generation (e.g., conditionally add or remove nodes), and it also ensures you are correctly referencing the node types. The downside is that it is more verbose to write.
+La forma recomendada de generar blueprints es usar código. Esto te permite controlar la generación (ej., agregar o quitar nodos condicionalmente), y también asegura que estés referenciando correctamente los tipos de nodo. La desventaja es que es más verboso de escribir.
 
-Here's a minimal example that generates a blueprint with two nodes: `On Update` and `Show Toast`. The `On Update` node is connected to the `Show Toast` node, so that the toast message is shown each frame.
+Aquí hay un ejemplo mínimo que genera un blueprint con dos nodos: `On Update` y `Show Toast`. El nodo `On Update` está conectado al nodo `Show Toast`, para que el mensaje toast se muestre cada frame.
 
 ```csharp
 var graph = new Graph {
     Name = "My Awesome Blueprint",
-    Enabled = true // Enable the blueprint by default
+    Enabled = true // Habilitar el blueprint por defecto
 };
 
-// Add two nodes: On Update and Show Toast
+// Agregar dos nodos: On Update y Show Toast
 var onUpdateNode = graph.AddNode<OnUpdateNode>();
 var toastNode = graph.AddNode<ShowToastNode>();
 toastNode.Header = "Hey!";
 toastNode.Caption = "This is a toast message!";
 
-// Connect the nodes so that the toast is shown each frame
+// Conectar los nodos para que el toast se muestre cada frame
 graph.AddFlowConnection(onUpdateNode, nameof(onUpdateNode.Exit), toastNode, nameof(toastNode.Enter));
 
-// Add the graph to the opened scene
+// Agregar el grafo a la escena abierta
 Context.OpenedScene.AddGraph(graph);
 
-// Send the updated scene to the editor
+// Enviar la escena actualizada al editor
 Context.Service.BroadcastOpenedScene();
 ```
 
 :::tip
-The editor automatically formats a blueprint if all nodes are at (0, 0) position. Therefore, you do not need to worry about correctly positioning the nodes. You can still access a node's position by using `node.GraphPosition`.
+El editor automáticamente formatea un blueprint si todos los nodos están en la posición (0, 0). Por lo tanto, no necesitas preocuparte por posicionar correctamente los nodos. Aún puedes acceder a la posición de un nodo usando `node.GraphPosition`.
 :::
 
 :::info
-Not all built-in node types are included in the Warudo SDK. If you are creating a plugin mod and want to reference a node type that is not included in the SDK, you can use the overloaded `AddNode(string nodeTypeId)` method to create a node by its type ID instead.
+No todos los tipos de nodo integrados están incluidos en el Warudo SDK. Si estás creando un plugin mod y quieres referenciar un tipo de nodo que no está incluido en el SDK, puedes usar el método sobrecargado `AddNode(string nodeTypeId)` para crear un nodo por su ID de tipo en su lugar.
 :::
 
-## By JSON
+## Por JSON
 
-The easier (but hacky) way to generate blueprints is to use the built-in "Import Blueprint From JSON" feature in the editor. You can create your blueprint in the editor, export it as JSON, and then store it into your plugin. Then, use the `Service` class to import the JSON file as a blueprint.
+La forma más fácil (pero hacky) de generar blueprints es usar la característica integrada "Import Blueprint From JSON" en el editor. Puedes crear tu blueprint en el editor, exportarlo como JSON, y luego almacenarlo en tu plugin. Luego, usa la clase `Service` para importar el archivo JSON como un blueprint.
 
 ```csharp
-var fileContents = "..."; // Assume this is the JSON file contents
-Context.Service.ImportGraph(fileContents); // Import the blueprint
-Context.Service.BroadcastOpenedScene(); // Send the updated scene to the editor
+var fileContents = "..."; // Asume que esto es el contenido del archivo JSON
+Context.Service.ImportGraph(fileContents); // Importar el blueprint
+Context.Service.BroadcastOpenedScene(); // Enviar la escena actualizada al editor
 ```
 
-Then you can access the generated blueprint by name:
+Luego puedes acceder al blueprint generado por nombre:
 
 ```csharp
 var graph = Context.OpenedScene.GetGraphs().Values.First(it => it.Name == "My Awesome Blueprint");
 ```
 
-As you can see, this is rather hacky and not recommended for production code. The JSON format may change in future versions, and it is not as flexible as generating blueprints by code.
+Como puedes ver, esto es bastante hacky y no se recomienda para código de producción. El formato JSON puede cambiar en versiones futuras, y no es tan flexible como generar blueprints por código.
 
 <AuthorBar authors={{
 creators: [
 {name: 'HakuyaTira', github: 'TigerHix'},
 ],
 translators: [
+{name: 'かぐら', github: 'Arukaito'},
 ],
 }} />

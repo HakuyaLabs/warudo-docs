@@ -2,41 +2,41 @@
 sidebar_position: 999
 ---
 
-# Localization
+# Localización
 
-Warudo comes with a built-in localization system that allows you to create multilingual plugins. 
+Warudo viene con un sistema de localización integrado que te permite crear plugins multiidioma.
 
-Currently, Warudo officially supports the following languages:
+Actualmente, Warudo soporta oficialmente los siguientes idiomas:
 
-| Language           | Code    |
+| Idioma             | Código  |
 |--------------------|---------|
-| English            | `en`    |
-| Simplified Chinese | `zh_CN` |
-| Japanese           | `ja`    |
+| Inglés             | `en`    |
+| Chino Simplificado | `zh_CN` |
+| Japonés            | `ja`    |
 
-## Localizing Strings
+## Localizando Cadenas
 
-All built-in localized strings are stored in the `Localizations` directory in the Warudo data folder. If you open any of the JSON files, you will see a list of key-value pairs, where the key is the string ID and the value is the localized string.
+Todas las cadenas localizadas integradas se almacenan en el directorio `Localizations` en la carpeta de datos de Warudo. Si abres cualquiera de los archivos JSON, verás una lista de pares clave-valor, donde la clave es el ID de la cadena y el valor es la cadena localizada.
 
-To get a localized string, simply call the extension method `Localized()` on a string ID:
+Para obtener una cadena localizada, simplemente llama al método de extensión `Localized()` en un ID de cadena:
 
 ```
-using Warudo.Core.Localization; // Import the namespace that contains the extension method
+using Warudo.Core.Localization; // Importa el namespace que contiene el método de extensión
 
-// Assume the user language is set to English
+// Asume que el idioma del usuario está configurado en inglés
 "FACE_TRACKING".Localized() // "Face Tracking"
 "ALIVE_TIME_DESCRIPTION".Localized() // "The prop will be destroyed after this time."
 ```
 
-Note if the string is not yet localized in the current language, the string will fall back to English; if the string is not found in English, the string ID will be returned.
+Ten en cuenta que si la cadena aún no está localizada en el idioma actual, la cadena volverá al inglés; si la cadena no se encuentra en inglés, se devolverá el ID de la cadena.
 
 :::tip
-Unity's `HumanBodyBones` enum can also be localized using the `Localized()` extension method. For example, `HumanBodyBones.Head.Localized()` will return "Head" in English and "头" in Simplified Chinese.
+El enum `HumanBodyBones` de Unity también puede ser localizado usando el método de extensión `Localized()`. Por ejemplo, `HumanBodyBones.Head.Localized()` devolverá "Head" en inglés y "头" en chino simplificado.
 :::
 
-## Adding Localizations
+## Agregando Localizaciones
 
-If you are creating a [plugin mod](../plugin-mod), the recommended way to add localizations is to create a directory called `Localizations` in your mod folder. Inside this directory, create a JSON file for each language you want to support. The JSON file should contain the localized strings in the following format:
+Si estás creando un [plugin mod](../plugin-mod), la forma recomendada de agregar localizaciones es crear un directorio llamado `Localizations` en tu carpeta de mod. Dentro de este directorio, crea un archivo JSON para cada idioma que quieras soportar. El archivo JSON debe contener las cadenas localizadas en el siguiente formato:
 
 ```json
 {
@@ -53,12 +53,12 @@ If you are creating a [plugin mod](../plugin-mod), the recommended way to add lo
 ```
 
 :::info
-You can also create one JSON file for each language.
+También puedes crear un archivo JSON para cada idioma.
 :::
 
-When the plugin is loaded, Warudo will automatically load the localized strings from the JSON files.
+Cuando el plugin es cargado, Warudo automáticamente cargará las cadenas localizadas de los archivos JSON.
 
-If you are not creating a plugin mod, you can also add localized strings directly using `Context.LocalizationManager`:
+Si no estás creando un plugin mod, también puedes agregar cadenas localizadas directamente usando `Context.LocalizationManager`:
 
 ```csharp
 var localizationManager = Context.LocalizationManager;
@@ -72,5 +72,6 @@ creators: [
 {name: 'HakuyaTira', github: 'TigerHix'},
 ],
 translators: [
+{name: 'かぐら', github: 'Arukaito'},
 ],
 }} />

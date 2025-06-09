@@ -2,44 +2,44 @@
 sidebar_position: 30
 ---
 
-# Live2D Eye Wiggle
+# Movimiento de Ojos Live2D
 
 :::caution
-As of Warudo 0.12.3, this blueprint is no longer needed; it is recommended to set up eye wiggle with the pendulum physics editor instead. See [Pendulum Physics](../../mocap/pendulum-physics) for more information.
+A partir de Warudo 0.12.3, este blueprint ya no es necesario; se recomienda configurar el movimiento de ojos con el editor de física de péndulo en su lugar. Consulta [Física de Péndulo](../../mocap/pendulum-physics) para más información.
 :::
 
-Eye wiggle is a common effect in Live2D models to make the character's eyes look more lively. This blueprint allows you to add this popular effect to your 3D model!
+El movimiento de ojos es un efecto común en modelos Live2D para hacer que los ojos del personaje se vean más vivos. ¡Este blueprint te permite agregar este popular efecto a tu modelo 3D!
 
 <div style={{width: '100%'}} className="video-box"><video controls loop src="/doc-img/eye-wiggle.mp4" /></div>
-<p class="img-desc">Live2D-like eye wiggle physics!</p>
+<p class="img-desc">¡Física de movimiento de ojos estilo Live2D!</p>
 
-## Prerequisites
+## Requisitos Previos
 
-To add wiggly eyes to your 3D model, you need to prepare blendshapes that separate the eye highlights from the eye pupil, like these:
+Para agregar ojos con movimiento a tu modelo 3D, necesitas preparar blendshapes que separen los brillos de los ojos de la pupila del ojo, como estos:
 
 <div className="video-box"><video loop controls src="https://user-images.githubusercontent.com/3406505/196832935-946222b5-e9a3-4efa-b9dc-7bdd04b9a3f2.mp4" /></div>
 <p class="img-desc"></p>
 
 :::tip
-If you have a VRoid model, you can use the blendshape data created by [頼鳥ミドリ (@yoridrill)](https://twitter.com/yoridrill) which can be added to your model with [HANA_Tool](https://booth.pm/en/items/2604269). Please refer to [this blog post](https://note.com/yoridrill/n/nfc15a0760a26).
+Si tienes un modelo VRoid, puedes usar los datos de blendshape creados por [頼鳥ミドリ (@yoridrill)](https://twitter.com/yoridrill) que se pueden agregar a tu modelo con [HANA_Tool](https://booth.pm/en/items/2604269). Por favor consulta [esta entrada de blog](https://note.com/yoridrill/n/nfc15a0760a26).
 :::
 
-This blueprint assumes you have the following six blendshapes:
+Este blueprint asume que tienes los siguientes seis blendshapes:
 
-* `highlight_down_left`: Left eye highlight translating downwards
-* `highlight_down_right`: Right eye highlight translating downwards
-* `highlight_rotate_left`: Left eye highlight rotating counterclockwise
-* `highlight_rotate_right`: Right eye highlight rotating clockwise
-* `highlight_scale_left`: Left eye highlight enlarging
-* `highlight_scale_right`: Right eye highlight enlarging
+* `highlight_down_left`: Brillo del ojo izquierdo trasladándose hacia abajo
+* `highlight_down_right`: Brillo del ojo derecho trasladándose hacia abajo
+* `highlight_rotate_left`: Brillo del ojo izquierdo rotando en sentido antihorario
+* `highlight_rotate_right`: Brillo del ojo derecho rotando en sentido horario
+* `highlight_scale_left`: Brillo del ojo izquierdo aumentando de tamaño
+* `highlight_scale_right`: Brillo del ojo derecho aumentando de tamaño
 
-If your blendshapes have different names, you can modify the blueprint accordingly.
+Si tus blendshapes tienen nombres diferentes, puedes modificar el blueprint en consecuencia.
 
-Finally, you should have already set up face tracking for your character.
+Finalmente, ya deberías haber configurado el seguimiento facial para tu personaje.
 
-## Setup
+## Configuración {#setup}
 
-Download the blueprint below and import it into your scene.
+Descarga el blueprint de abajo e impórtalo a tu escena.
 
 <a href="/blueprints/eye-wiggle.json" target="_blank" download>
 <div className="file-box">
@@ -48,29 +48,29 @@ eye-wiggle.json
 </p></div>
 </a>
 
-Follow the instructions on the **Comment** nodes to set up this blueprint.
+Sigue las instrucciones en los nodos **Comment** para configurar este blueprint.
 
 :::tip
-If you have created another character asset, you may need to update the **Character** option on the nodes.
+Si has creado otro asset de personaje, es posible que necesites actualizar la opción **Character** en los nodos.
 :::
 
-## Remarks
+## Observaciones
 
-The **"Float Pendulum Physics"** node works on the same principle as [the physics simulation of Live2D](https://docs.live2d.com/en/cubism-editor-manual/physics-operation/). By specifying a multi-segment pendulum (as shown below), the X coordinate of the topmost node of the pendulum is used as the input value, and the X coordinate of the bottommost node of the pendulum is used as the output value. The **Arms** option determines the length and physical properties of each segment of the pendulum.
+El nodo **"Float Pendulum Physics"** funciona bajo el mismo principio que [la simulación de física de Live2D](https://docs.live2d.com/en/cubism-editor-manual/physics-operation/). Al especificar un péndulo de múltiples segmentos (como se muestra abajo), la coordenada X del nodo superior del péndulo se usa como valor de entrada, y la coordenada X del nodo inferior del péndulo se usa como valor de salida. La opción **Arms** determina la longitud y propiedades físicas de cada segmento del péndulo.
 
 <div className="video-box"><video loop controls src="/doc-img/zh-blueprint-example-live2d-physics-video-4.mp4" />
 </div>
-<p class="img-desc">Source：<a href="https://docs.live2d.com/en/cubism-editor-manual/physical-operation-setting/" target="_blank">https://docs.live2d.com/en/cubism-editor-manual/physical-operation-setting/</a></p>
+<p class="img-desc">Fuente：<a href="https://docs.live2d.com/en/cubism-editor-manual/physical-operation-setting/" target="_blank">https://docs.live2d.com/en/cubism-editor-manual/physical-operation-setting/</a></p>
 
-You can preview the pendulum physics by setting **Visualize** to Yes:
+Puedes previsualizar la física del péndulo configurando **Visualize** en Sí:
 
 <div className="video-box"><video loop controls src="https://user-images.githubusercontent.com/3406505/196835467-8eec329f-176f-47ba-af4e-fb4d0c4361d6.mp4" /></div>
 <p class="img-desc"></p>
 
-This blueprint only implements the movement of one layer of highlights; however, multiple Float Pendulum Physics nodes and more layers of highlight blendshapes can be used to produce a more sophisticated eye wiggle effect.
+Este blueprint solo implementa el movimiento de una capa de brillos; sin embargo, se pueden usar múltiples nodos Float Pendulum Physics y más capas de blendshapes de brillos para producir un efecto de movimiento de ojos más sofisticado.
 
 :::tip
-Keep in mind that the "Float Pendulum Physics" node is not limited to just creating eye wiggle physics! Other physical effects seen in Live2D can be implemented in Warudo this way as well, such as arm bouncing physics.
+¡Ten en cuenta que el nodo "Float Pendulum Physics" no se limita solo a crear física de movimiento de ojos! Otros efectos físicos que se ven en Live2D también se pueden implementar en Warudo de esta manera, como la física de rebote de brazos.
 :::
 
 <AuthorBar authors={{
@@ -78,5 +78,6 @@ Keep in mind that the "Float Pendulum Physics" node is not limited to just creat
     {name: 'HakuyaTira', github: 'TigerHix'},
   ],
   translators: [
+    {name: 'かぐら', github: 'Arukaito'},
   ],
 }} />

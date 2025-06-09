@@ -2,38 +2,39 @@
 sidebar_position: 41
 ---
 
-# Directional/Point/Volumetric Light
+# Luz Direccional/Puntual/Volumétrica
 
-Light assets are used to illuminate the scene. There are three types of light assets:
-* **Directional Light**: A directional light that illuminates the entire scene from a specific direction.
-* **Point Light**: A point light that illuminates the scene from a specific point.
-* **Volumetric Light**: A spotlight that illuminates the scene from a specific point, with volumetric lighting effects.
+Los assets de luz se usan para iluminar la escena. Hay tres tipos de assets de luz:
+* **Directional Light**: Una luz direccional que ilumina toda la escena desde una dirección específica.
+* **Point Light**: Una luz puntual que ilumina la escena desde un punto específico.
+* **Volumetric Light**: Un foco que ilumina la escena desde un punto específico, con efectos de iluminación volumétrica.
 
 ![](/doc-img/en-light-1.png)
-<p class="img-desc">Volumetric light.</p>
+<p class="img-desc">Luz volumétrica.</p>
 
 :::info
-Light assets are great for illuminating characters or adjusting existing environmental lighting. However, it is not recommended to add too many lights to the scene, as this may cause performance issues.
+Los assets de luz son excelentes para iluminar personajes o ajustar la iluminación ambiental existente. Sin embargo, no se recomienda agregar demasiadas luces a la escena, ya que esto puede causar problemas de rendimiento.
 :::
 
-## Setup
+## Configuración
 
-By default, your scene should already have a directional light. To add a new light, use the **Add Asset** menu.
+Por defecto, tu escena ya debería tener una luz direccional. Para agregar una nueva luz, usa el menú **Add Asset**.
 
-You can adjust the position and rotation of the light asset using the transform gizmos. (Note that the position of a directional light does not matter.) The light's **Color** and **Intensity** can be changed in the asset settings, where you can also enable or disable the light from affecting characters, props, and the environment.
+Puedes ajustar la posición y rotación del asset de luz usando los gizmos de transformación. (Ten en cuenta que la posición de una luz direccional no importa.) El **Color** e **Intensity** de la luz pueden ser cambiados en las configuraciones del asset, donde también puedes habilitar o deshabilitar que la luz afecte a personajes, props y el entorno.
 
 :::tip
-When you are using an [environment](environment), we recommend turning off **Environment → Allow Lights To Affect Characters** and **Directional Light → Affect Environment**. Essentially, this means the environment lighting will not affect the character, and the directional light will not affect the environment. This gives you separate control over the character and environment lighting, which is usually desired.
+Cuando estés usando un [entorno](environment), recomendamos desactivar **Environment → Allow Lights To Affect Characters** y **Directional Light → Affect Environment**. Esencialmente, esto significa que la iluminación del entorno no afectará al personaje, y la luz direccional no afectará al entorno. Esto te da control separado sobre la iluminación del personaje y del entorno, lo cual usualmente es deseado.
 :::
 
-### Shadow
+### Sombra
 
-You can enable **Shadow** to make the light cast shadows. Note that in order to cast a character's shadow on the environment (e.g., the floor), you need to enable **Main Properties → Affect Environment**.
+Puedes habilitar **Shadow** para hacer que la luz proyecte sombras. Ten en cuenta que para proyectar la sombra de un personaje en el entorno (ej., el piso), necesitas habilitar **Main Properties → Affect Environment**.
 
 <AuthorBar authors={{
   creators: [
     {name: 'HakuyaTira', github: 'TigerHix'},
   ],
   translators: [
+    {name: 'かぐら (Arukaito)', github: 'Arukaito'},
   ],
 }} />

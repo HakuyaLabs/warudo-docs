@@ -2,63 +2,63 @@
 sidebar_position: 30
 ---
 
-# Tail
+# Cola
 
-Wag your tail! The tail asset animates the tail bones on your character. It can also be used to animate hierarchical bones on any character or [prop](prop).
+¡Menea tu cola! El asset de cola anima los huesos de la cola en tu personaje. También puede usarse para animar huesos jerárquicos en cualquier personaje o [prop](prop).
 
 <div style={{display: 'flex', justifyContent: 'space-between', gap: '1rem'}}>
 <div style={{width: '53.2%'}} className="video-box"><video controls loop src="/doc-img/en-tail-1.mp4" />
-<p>A waving tail.</p>
+<p>Una cola meciéndose.</p>
 </div>
 
 <div style={{width: '46.8%'}} className="video-box"><video controls loop src="/doc-img/zh-tail-2.mp4" />
-<p>You can also apply this asset to any hierarchical bones, such as animal ears.</p>
+<p>También puedes aplicar este asset a cualquier hueso jerárquico, como orejas de animal.</p>
 </div>
 </div>
 
-## Setup {#setup}
+## Configuración {#setup}
 
-To set up a tail, simply select a **Parent Asset** that the tail belongs to. Then, use the **Path** dropdown list to select the root bone of the tail.
+Para configurar una cola, simplemente selecciona un **Parent Asset** al que pertenece la cola. Luego, usa la lista desplegable **Path** para seleccionar el hueso raíz de la cola.
 
 :::info
-For best results, the tail should contain at least 4 bones.
+Para mejores resultados, la cola debería contener al menos 4 huesos.
 :::
 
-If a tail is moving in an unexpected way, use the **Reset Tail** button to reset the tail to its default state.
+Si una cola se está moviendo de una manera inesperada, usa el botón **Reset Tail** para restablecer la cola a su estado predeterminado.
 
-## Waving
+## Mecerse
 
-The waving feature allows the tail to wag on its own. You can customize the **Waving Speed** and **Waving Range** to make the tail wag faster or slower, and to a larger or smaller degree.
+La función de mecerse permite que la cola se mueva por sí sola. Puedes personalizar la **Waving Speed** y **Waving Range** para hacer que la cola se mueva más rápido o más lento, y en mayor o menor grado.
 
-## Physics
+## Física
 
-Advanced physics settings for the tail.
+Configuraciones avanzadas de física para la cola.
 
-* **Slithery**: 0 is more like a branch swaying in the wind, 1 is more suited for an animal's tail/tentacle.
-* **Curling**: Bendiness of each joint.
-* **Springiness**: The higher the value, the more elastic the tail.
-* **Reaction Speed**: The lower the value, the more resistance there is to movement, like being in water.
-* **Rotation Relevancy**: The lower the value, the more sluggish the tail feels, and the slower it returns to its original position.
-* **Gravity**: Force applied to the tail.
+* **Slithery**: 0 es más como una rama meciéndose en el viento, 1 es más adecuado para la cola/tentáculo de un animal.
+* **Curling**: Flexibilidad de cada articulación.
+* **Springiness**: Mientras más alto el valor, más elástica es la cola.
+* **Reaction Speed**: Mientras más bajo el valor, más resistencia hay al movimiento, como estar en el agua.
+* **Rotation Relevancy**: Mientras más bajo el valor, más lenta se siente la cola, y más lento regresa a su posición original.
+* **Gravity**: Fuerza aplicada a la cola.
 
-## Collision Detection
+## Detección de Colisión
 
-Collision detection prevents the tail from passing through other models in the scene. Currently, only collision detection with characters is supported. You should adjust the **Collider Radius** such that the tail doesn't collide with the character's body while not staying too far away from it.
+La detección de colisión previene que la cola pase a través de otros modelos en la escena. Actualmente, solo se soporta la detección de colisión con personajes. Debes ajustar el **Collider Radius** para que la cola no colisione con el cuerpo del personaje mientras no se queda muy lejos de él.
 
-## Inverse Kinematics
+## Cinemática Inversa
 
-Inverse Kinematics (IK) makes the tail follow a designated **IK Target** in the scene. **Angle Limit** is the maximum bend angle of each joint in the tail. If the tail cannot reach the IK target, you may need to increase this value.
+La Cinemática Inversa (IK) hace que la cola siga un **IK Target** designado en la escena. **Angle Limit** es el ángulo máximo de curvatura de cada articulación en la cola. Si la cola no puede alcanzar el objetivo IK, podrías necesitar aumentar este valor.
 
-## Additional Shaping
+## Forma Adicional
 
-Additional shaping parameters for the tail.
+Parámetros adicionales de forma para la cola.
 
-* **Rotation Offset**: Offset angle of the tail's rotation.
-* **Curving**: Additional bendiness of each joint in the tail.
-* **Length Multiplier**: Allows the tail to stretch and shrink.
+* **Rotation Offset**: Ángulo de desplazamiento de la rotación de la cola.
+* **Curving**: Flexibilidad adicional de cada articulación en la cola.
+* **Length Multiplier**: Permite que la cola se estire y se encoja.
 
 :::tip
-**Rotation Offset** is useful to make the tail point more upwards or downwards, especially when the model is sitting down. **Curving** is frequently used to make the tail more round or pointy.
+**Rotation Offset** es útil para hacer que la cola apunte más hacia arriba o hacia abajo, especialmente cuando el modelo está sentado. **Curving** se usa frecuentemente para hacer la cola más redonda o puntiaguda.
 :::
 
 <AuthorBar authors={{
@@ -66,5 +66,6 @@ Additional shaping parameters for the tail.
     {name: 'HakuyaTira', github: 'TigerHix'},
   ],
   translators: [
+    {name: 'かぐら', github: 'Arukaito'},
   ],
 }} />

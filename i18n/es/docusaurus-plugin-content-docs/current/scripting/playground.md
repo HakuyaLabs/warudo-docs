@@ -4,36 +4,36 @@ sidebar_position: 50
 
 # Playground
 
-Playground is a development environment in Warudo that allows you to load custom scripts without creating a [plugin mod](plugin-mod). C# scripts (`.cs` files) put in the `Playground` folder will be automatically compiled and loaded by Warudo, and any changes to the scripts will also be automatically reloaded.
+Playground es un entorno de desarrollo en Warudo que te permite cargar scripts personalizados sin crear un [plugin mod](plugin-mod). Los scripts C# (archivos `.cs`) colocados en la carpeta `Playground` serán automáticamente compilados y cargados por Warudo, y cualquier cambio en los scripts también será automáticamente recargado.
 
 :::tip
-Check out our [Creating Your First Script](creating-your-first-script) tutorial to get started with Playground!
+¡Revisa nuestro tutorial [Creando Tu Primer Script](creating-your-first-script) para comenzar con Playground!
 :::
 
-You can put any C# scripts in Playground, but for Warudo to recognize them, at least one class must inherit one of the [entity types](api/entities.md), i.e., a `Node`, an `Asset`, or a `Plugin`.
+Puedes colocar cualquier script C# en Playground, pero para que Warudo los reconozca, al menos una clase debe heredar uno de los [tipos de entidad](api/entities.md), es decir, un `Node`, un `Asset`, o un `Plugin`.
 
-## Environment Setup
+## Configuración del Entorno {#environment-setup}
 
-You do not need an IDE to use Playground, but it is recommended to use one for code completion and syntax highlighting. We recommend [JetBrains Rider](https://www.jetbrains.com/rider/) or [Visual Studio Code](https://code.visualstudio.com/).
+No necesitas un IDE para usar Playground, pero se recomienda usar uno para completado de código y resaltado de sintaxis. Recomendamos [JetBrains Rider](https://www.jetbrains.com/rider/) o [Visual Studio Code](https://code.visualstudio.com/).
 
-Then, download the `.csproj` file [here](/scripts/Playground.csproj) and put it into the `Playground` directory inside your Warudo data folder (Menu → Open Data Folder). Open the file with your IDE, and you are good to go!
+Luego, descarga el archivo `.csproj` [aquí](/scripts/Playground.csproj) y colócalo en el directorio `Playground` dentro de tu carpeta de datos de Warudo (Menú → Open Data Folder). Abre el archivo con tu IDE, ¡y listo!
 
-## Entity Hot-reloading
+## Recarga en Caliente de Entidades
 
-Hot-reloading works by serializing the entity data, unloading the old entity type, loading and instantiating the new entity type, and then deserializing the old entity data. This process usually takes only a few seconds.
+La recarga en caliente funciona serializando los datos de la entidad, descargando el tipo de entidad antiguo, cargando e instanciando el nuevo tipo de entidad, y luego deserializando los datos de la entidad antigua. Este proceso usualmente toma solo unos pocos segundos.
 
-When hot-reloading completes, you should see a toast message indicating how many assets, nodes, or plugins have been reloaded.
+Cuando la recarga en caliente se complete, deberías ver un mensaje toast indicando cuántos assets, nodos, o plugins han sido recargados.
 
 :::tip
-If you see an error, you can click on the toast message to see the compilation error.
+Si ves un error, puedes hacer clic en el mensaje toast para ver el error de compilación.
 :::
 
-## Limitations
+## Limitaciones
 
-Playground has the following limitations:
+Playground tiene las siguientes limitaciones:
 
-* You cannot (easily) use third-party DLLs or NuGet packages. We will improve this in the future.
-* You cannot add or reference Unity assets (e.g., prefabs, materials, textures) in Playground scripts (use [plugin mods](plugin-mod) instead).
+* No puedes (fácilmente) usar DLLs de terceros o paquetes NuGet. Mejoraremos esto en el futuro.
+* No puedes agregar o referenciar assets de Unity (ej., prefabs, materiales, texturas) en scripts de Playground (usa [plugin mods](plugin-mod) en su lugar).
 
 <AuthorBar authors={{
   creators: [
@@ -41,5 +41,6 @@ Playground has the following limitations:
     {name: 'hanekit', github: 'hanekit'}
   ],
   translators: [
+    {name: 'かぐら', github: 'Arukaito'},
   ],
 }} />

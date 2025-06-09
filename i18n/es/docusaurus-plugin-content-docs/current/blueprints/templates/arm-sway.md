@@ -2,20 +2,20 @@
 sidebar_position: 10
 ---
 
-# Live2D Arm Sway
+# Balanceo de Brazos Live2D
 
 :::caution
-As of Warudo 0.12.3, this blueprint is no longer needed, as arm sway is now enabled by default pendulum physics settings. See [Pendulum Physics](../../mocap/pendulum-physics) for more information. This blueprint is helpful as a reference for manually adding pendulum physics to your character using blueprints.
+A partir de Warudo 0.12.3, este blueprint ya no es necesario, ya que el balanceo de brazos ahora está habilitado por defecto con la configuración de física de péndulo. Consulta [Física de Péndulo](../../mocap/pendulum-physics) para más información. Este blueprint es útil como referencia para agregar manualmente física de péndulo a tu personaje usando blueprints.
 :::
 
-Arm sway is a common effect in Live2D models that adds a bit of life to the character by making the arms sway back and forth. This blueprint allows you to add this popular effect to your 3D model!
+El balanceo de brazos es un efecto común en modelos Live2D que añade un poco de vida al personaje haciendo que los brazos se balanceen de un lado a otro. ¡Este blueprint te permite agregar este popular efecto a tu modelo 3D!
 
 <div style={{width: '100%'}} className="video-box"><video controls loop src="/doc-img/arm-sway.mp4" /></div>
-<p class="img-desc">Live2D-like arm sway!</p>
+<p class="img-desc">¡Balanceo de brazos estilo Live2D!</p>
 
-## Setup
+## Configuración {#setup}
 
-Download the blueprint below and import it into your scene.
+Descarga el blueprint de abajo e impórtalo a tu escena.
 
 <a href="/blueprints/arm-sway.json" target="_blank" download>
 <div className="file-box">
@@ -24,10 +24,10 @@ arm-sway.json
 </p></div>
 </a>
 
-This blueprint should work out of the box. Follow the instructions on the **Comment** nodes to adjust the settings.
+Este blueprint debería funcionar directamente. Sigue las instrucciones en los nodos **Comment** para ajustar la configuración.
 
 :::tip
-If you have created another character asset, you may need to update the **Character** option on the nodes.
+Si has creado otro asset de personaje, es posible que necesites actualizar la opción **Character** en los nodos.
 :::
 
 <AuthorBar authors={{
@@ -35,5 +35,6 @@ If you have created another character asset, you may need to update the **Charac
     {name: 'HakuyaTira', github: 'TigerHix'},
   ],
   translators: [
+    {name: 'かぐら', github: 'Arukaito'},
   ],
 }} />

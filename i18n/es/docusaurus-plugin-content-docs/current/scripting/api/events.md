@@ -2,9 +2,9 @@
 sidebar_position: 90
 ---
 
-# Global Events {#events}
+# Eventos Globales {#events}
 
-Warudo contains a `EventBus` class that allows you to subscribe to and broadcast global events. To define a custom event class, inherit from the `Warudo.Core.Events.Event` class. For example:
+Warudo contiene una clase `EventBus` que te permite suscribirte y transmitir eventos globales. Para definir una clase de evento personalizada, hereda de la clase `Warudo.Core.Events.Event`. Por ejemplo:
 
 ```csharp
 public class MyEvent : Event {
@@ -15,7 +15,7 @@ public class MyEvent : Event {
 }
 ```
 
-To subscribe (listen) to an event:
+Para suscribirte (escuchar) a un evento:
 
 ```csharp
 Context.EventBus.Subscribe<MyEvent>(e => {
@@ -23,39 +23,40 @@ Context.EventBus.Subscribe<MyEvent>(e => {
 });
 ```
 
-To broadcast (fire) an event:
+Para transmitir (disparar) un evento:
 
 ```csharp
 Context.EventBus.Broadcast(new MyEvent("Hello, world!"));
 ```
 
-You should unsubscribe from events when you no longer need to listen to them:
+Deberías cancelar la suscripción de eventos cuando ya no necesites escucharlos:
 
 ```csharp
 var subscriptionId = Context.EventBus.Subscribe<MyEvent>(e => {
     Debug.Log(e.Message);
 });
-// Later
+// Más tarde
 Context.EventBus.Unsubscribe<MyEvent>(subscriptionId);
 ```
 
-### Subscribing Events In Entities
+### Suscribiendo Eventos en Entidades
 
-If you are writing code inside an entity type, you can use the `Subscribe` method directly to avoid handling event subscription IDs:
+Si estás escribiendo código dentro de un tipo de entidad, puedes usar el método `Subscribe` directamente para evitar manejar IDs de suscripción de eventos:
 
 ```csharp
-// Inside an entity type, i.e., asset, node, plugin, structured data
+// Dentro de un tipo de entidad, es decir, asset, node, plugin, structured data
 Subscribe<MyEvent>(e => {
     Debug.Log(e.Message);
 });
 ```
 
-The events are automatically unsubscribed when the entity is destroyed.
+Los eventos se cancelan automáticamente cuando la entidad es destruida.
 
 <AuthorBar authors={{
 creators: [
 {name: 'HakuyaTira', github: 'TigerHix'},
 ],
 translators: [
+{name: 'かぐら', github: 'Arukaito'},
 ],
 }} />

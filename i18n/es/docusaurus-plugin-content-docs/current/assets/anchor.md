@@ -2,23 +2,24 @@
 sidebar_position: 70
 ---
 
-# Anchor
+# Ancla
 
-An anchor is a 3D point in the scene, which can be used as the target for the character's [Look At IK](character/#look-ik) or [Body IK](character/#body-ik).
+Un ancla es un punto 3D en la escena, que puede usarse como objetivo para el [Look At IK](character/#look-ik) o [Body IK](character/#body-ik) del personaje.
 
-Some blueprint nodes also allow you to specify an anchor as the origin or destination. For example, the **Launch Liquid At Character** node by default launches the liquid from the main camera, but you can specify an anchor as the origin to launch the liquid from that anchor instead. Say you have the anchor attached to a hippo prop's mouth, then you can launch the liquid from the hippo's mouth.
+Algunos nodos de blueprint también te permiten especificar un ancla como origen o destino. Por ejemplo, el nodo **Launch Liquid At Character** por defecto lanza el líquido desde la cámara principal, pero puedes especificar un ancla como origen para lanzar el líquido desde esa ancla en su lugar. Digamos que tienes el ancla adjunta a la boca de un prop de hipopótamo, entonces puedes lanzar el líquido desde la boca del hipopótamo.
 
 ![](/doc-img/en-anchor-1.png)
-<p class="img-desc">The hippo prop has an anchor attached to its mouth, which is used as the origin of the liquid.</p>
+<p class="img-desc">El prop del hipopótamo tiene un ancla adjunta a su boca, que se usa como origen del líquido.</p>
 
-## Setup
+## Configuración
 
-To set up an anchor, first set the **Attach To** option if you want the anchor to be attached to a character or prop. Then, use the transform gizmos to move and rotate the anchor, so that it is in the desired position.
+Para configurar un ancla, primero establece la opción **Attach To** si quieres que el ancla esté adjunta a un personaje o prop. Luego, usa los gizmos de transformación para mover y rotar el ancla, para que esté en la posición deseada.
 
 <AuthorBar authors={{
   creators: [
     {name: 'HakuyaTira', github: 'TigerHix'},
   ],
   translators: [
+    {name: 'かぐら (Arukaito)', github: 'Arukaito'}
   ],
 }} />

@@ -2,13 +2,13 @@
 sidebar_position: 0
 ---
 
-# Overview
+# Resumen
 
-In this section, we provide some ready-to-use blueprints that you can just import into your scene and use right away! Technically, you don't need to read any of the other sections to use these blueprints, but we still recommend you to read [Creating Your First Blueprint](../understanding-blueprints) to get a better understanding of how blueprints work.
+En esta sección, proporcionamos algunos blueprints listos para usar que puedes simplemente importar a tu escena y usar de inmediato! Técnicamente, no necesitas leer ninguna de las otras secciones para usar estos blueprints, pero aún recomendamos que leas [Creando Tu Primer Blueprint](../understanding-blueprints) para obtener una mejor comprensión de cómo funcionan los blueprints.
 
-## Setup
+## Configuración
 
-To use any of the blueprints in this section, you can simply download the blueprint file and import it using the **Import Blueprint From File** button in the **Blueprints** tab:
+Para usar cualquiera de los blueprints en esta sección, simplemente puedes descargar el archivo del blueprint e importarlo usando el botón **Import Blueprint From File** en la pestaña **Blueprints**:
 
 ![](/doc-img/en-blueprint-templates-1.png)
 
@@ -17,5 +17,6 @@ To use any of the blueprints in this section, you can simply download the bluepr
     {name: 'HakuyaTira', github: 'TigerHix'},
   ],
   translators: [
+    {name: 'かぐら', github: 'Arukaito'},
   ],
 }} />

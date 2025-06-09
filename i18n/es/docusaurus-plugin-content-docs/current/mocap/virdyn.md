@@ -4,30 +4,31 @@ sidebar_position: 110
 
 # Virdyn Studio (VDMocapStudio)
 
-Body tracking via [VDMocapStudio](https://www.virdynm.com/virdyn-vdmocap-studio-motion-capture-software-system-for-vdsuit-full-product/). Requires a [VDSuit](https://www.virdynm.com/virdyn-vdsuit-full-for-full-body-function-inertia-motion-capture-suit-product/) suit.
+Seguimiento corporal a través de [VDMocapStudio](https://www.virdynm.com/virdyn-vdmocap-studio-motion-capture-software-system-for-vdsuit-full-product/). Requiere un traje [VDSuit](https://www.virdynm.com/virdyn-vdsuit-full-for-full-body-function-inertia-motion-capture-suit-product/).
 
-## Setup
+## Configuración
 
-Open VDMocapStudio and enable data streaming by clicking **Broadcast → OpenShare**. Make sure the IP selected is accessible from Warudo.
+Abre VDMocapStudio y habilita la transmisión de datos haciendo clic en **Broadcast → OpenShare**. Asegúrate de que la IP seleccionada sea accesible desde Warudo.
 
 ![](/doc-img/en-virdyn-1.png)
 
-## Calibration
+## Calibración
 
-Calibration of Virdyn hardware is done in VDMocapStudio. You can also use **Virdyn Studio Receiver → Calibrate Root Transform** to reset the character's root position and rotation in Warudo.
+La calibración del hardware de Virdyn se realiza en VDMocapStudio. También puedes usar **Virdyn Studio Receiver → Calibrate Root Transform** para restablecer la posición y rotación raíz del personaje en Warudo.
 
-## Frequently Asked Questions
+## Preguntas Frecuentes
 
-Please refer to [Overview](overview#FAQ) and [Customizing Pose Tracking](body-tracking#FAQ) for common questions.
+Por favor consulta [Resumen](overview#FAQ) y [Personalizar Seguimiento de Pose](body-tracking#FAQ) para preguntas comunes.
 
-### My tracking drifts over time.
+### Mi seguimiento se va desviando con el tiempo.
 
-This is a common issue with inertial motion capture systems, which drift over time due to accumulated errors. To reduce the drift, make sure there are no magnetic or electrical interference near the tracking sensors.
+Este es un problema común con los sistemas de captura de movimiento inerciales, que se desvían con el tiempo debido a errores acumulativos. Para reducir la deriva, asegúrate de que no haya interferencia magnética o eléctrica cerca de los sensores de seguimiento.
 
 <AuthorBar authors={{
   creators: [
     {name: 'HakuyaTira', github: 'TigerHix'},
   ],
   translators: [
+    {name: 'かぐら (Arukaito)', github: 'Arukaito'},
   ],
 }} />

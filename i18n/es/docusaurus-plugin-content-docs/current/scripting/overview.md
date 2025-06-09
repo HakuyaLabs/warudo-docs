@@ -2,11 +2,11 @@
 sidebar_position: 0
 ---
 
-# Overview
+# Resumen
 
-Warudo's scripting system allows you to extend Warudo's functionality by writing C# code that adds new [assets](../assets/overview) and [nodes](../blueprints/overview) to your VTubing setup. You can share your custom assets and nodes on the Steam workshop by creating a [plugin mod](plugin-mod).
+El sistema de scripting de Warudo te permite extender la funcionalidad de Warudo escribiendo código C# que agrega nuevos [assets](../assets/overview) y [nodos](../blueprints/overview) a tu configuración de VTubing. Puedes compartir tus assets y nodos personalizados en el workshop de Steam creando un [plugin mod](plugin-mod).
 
-Here are just a few wonderful plugins created by the Warudo community:
+Aquí hay solo algunos plugins maravillosos creados por la comunidad de Warudo:
 
 * [Feline's Headpat Node](https://steamcommunity.com/sharedfiles/filedetails/?id=3010238299&searchtext=)
 * [Input Receiver and Tools for Mouse/Pen/Gamepad](https://steamcommunity.com/sharedfiles/filedetails/?id=3221461980&searchtext=) 
@@ -15,16 +15,16 @@ Here are just a few wonderful plugins created by the Warudo community:
 * [Streamer.bot integration](https://steamcommunity.com/sharedfiles/filedetails/?id=3260939914&searchtext=)
 
 :::tip
-**Warudo is built with custom scripting in mind.** In fact, the entirety of Warudo's features is built with the same APIs (the `Warudo.Core` namespace) that are available to you when creating custom nodes, assets, and plugins.
+**Warudo está construido con scripting personalizado en mente.** De hecho, toda la funcionalidad de Warudo está construida con las mismas APIs (el namespace `Warudo.Core`) que están disponibles para ti cuando creas nodos, assets y plugins personalizados.
 
-For example, the Stream Deck integration in Warudo is actually a built-in plugin! We have made its source code available [here](https://github.com/HakuyaLabs/WarudoPluginExamples) for your reference.
+Por ejemplo, la integración de Stream Deck en Warudo es en realidad un plugin integrado! Hemos hecho su código fuente disponible [aquí](https://github.com/HakuyaLabs/WarudoPluginExamples) para tu referencia.
 :::
 
-To give you a taste of how Warudo's scripting system works, here is a simple example of a custom node that plays a random expression on a character when triggered:
+Para darte una muestra de cómo funciona el sistema de scripting de Warudo, aquí hay un ejemplo simple de un nodo personalizado que reproduce una expresión aleatoria en un personaje cuando se activa:
 
 ![](/doc-img/en-scripting-overview.png)
 
-And the corresponding C# code:
+Y el código C# correspondiente:
 
 ```csharp
 using UnityEngine;
@@ -32,23 +32,23 @@ using Warudo.Core.Attributes;
 using Warudo.Core.Graphs;
 using Warudo.Plugins.Core.Assets.Character;
 
-// Define a custom node type that will be shown in the note palette
+// Define un tipo de nodo personalizado que se mostrará en la paleta de nodos
 [NodeType(Id = "95cd88ae-bebe-4dc0-b52b-ba94799f08e9", Title = "Character Play Random Expression")]
 public class CharacterPlayRandomExpressionNode : Node {
 
     [DataInput]
-    public CharacterAsset Character; // Let the user select a character
+    public CharacterAsset Character; // Permite al usuario seleccionar un personaje
 
     [FlowInput]
-    public Continuation Enter() { // When the node is triggered via the "Enter" flow input
-        if (Character.Expressions.Length == 0) return Exit; // If the character has no expressions, exit
+    public Continuation Enter() { // Cuando el nodo se activa a través de la entrada de flujo "Enter"
+        if (Character.Expressions.Length == 0) return Exit; // Si el personaje no tiene expresiones, salir
 
-        Character.ExitAllExpressions(); // Exit all current expressions
+        Character.ExitAllExpressions(); // Salir de todas las expresiones actuales
 
         var randomExpression = Character.Expressions[Random.Range(0, Character.Expressions.Length)];
-        Character.EnterExpression(randomExpression.Name, transient: false); // Play a random expression
+        Character.EnterExpression(randomExpression.Name, transient: false); // Reproducir una expresión aleatoria
         
-        return Exit; // Continue the flow and trigger whatever connected to the "Exit" flow output
+        return Exit; // Continuar el flujo y activar lo que esté conectado a la salida de flujo "Exit"
     }
     
     [FlowOutput]
@@ -57,12 +57,13 @@ public class CharacterPlayRandomExpressionNode : Node {
 }
 ```
 
-Intrigued? Read on!
+¿Intrigado? ¡Sigue leyendo!
 
 <AuthorBar authors={{
 creators: [
 {name: 'HakuyaTira', github: 'TigerHix'},
 ],
 translators: [
+{name: 'かぐら (Arukaito)', github: 'Arukaito'}
 ],
 }} />

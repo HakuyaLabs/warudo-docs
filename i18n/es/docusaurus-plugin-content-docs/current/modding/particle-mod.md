@@ -2,30 +2,31 @@
 sidebar_position: 41
 ---
 
-# Particle Mod
+# Mod de Partículas
 
-A particle mod is usually a [particle system](https://docs.unity3d.com/Manual/PartSysReference.html) that can be used in nodes such as **Spawn Particle**.
+Un mod de partículas es generalmente un [sistema de partículas](https://docs.unity3d.com/Manual/PartSysReference.html) que puede usarse en nodos como **Spawn Particle**.
 
-## Setup
+## Configuración
 
-### Step 1: Prepare Model
+### Paso 1: Preparar Modelo
 
-Place your particle GameObject in the scene, then adjust it to the desired position and rotation. Right click and select **Create Empty Parent** to create an empty GameObject as the root of the prop.
+Coloca tu GameObject de partículas en la escena, luego ajústalo a la posición y rotación deseadas. Haz clic derecho y selecciona **Create Empty Parent** para crear un GameObject vacío como raíz del prop.
 
-Enter Play Mode and move the parent GameObject around; make sure the particle system is emitting particles as expected. If not, you may need to adjust the particle system's settings, such as setting **Simulation Space** to Local instead of World.
+Entra en Modo de Juego y mueve el GameObject padre; asegúrate de que el sistema de partículas esté emitiendo partículas como se espera. Si no es así, puede que necesites ajustar la configuración del sistema de partículas, como establecer **Simulation Space** en Local en lugar de World.
 
-### Step 2: Create Prefab
+### Paso 2: Crear Prefab
 
-Select the root particle GameObject and drag it to the mod folder to create a prefab. Name the prefab **"Particle"** and make sure it is placed in the mod folder (can be placed in any subfolder).
+Selecciona el GameObject de partículas raíz y arrástralo a la carpeta del mod para crear un prefab. Nombra el prefab **"Particle"** y asegúrate de que esté ubicado en la carpeta del mod (puede colocarse en cualquier subcarpeta).
 
-### Step 4: Export Mod
+### Paso 4: Exportar Mod
 
-Select **Warudo → Build Mod** and make sure the generated `.warudo` file is put into the `Particles` data folder.
+Selecciona **Warudo → Build Mod** y asegúrate de que el archivo `.warudo` generado se coloque en la carpeta de datos `Particles`.
 
 <AuthorBar authors={{
   creators: [
     {name: 'HakuyaTira', github: 'TigerHix'},
   ],
   translators: [
+    {name: 'かぐら (Arukaito)', github: 'Arukaito'}
   ],
 }} />

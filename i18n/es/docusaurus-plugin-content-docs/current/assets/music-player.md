@@ -2,48 +2,49 @@
 sidebar_position: 60
 ---
 
-# Music Player
+# Reproductor de Música
 
 :::info
-This feature is currently in beta.
+Esta característica está actualmente en beta.
 :::
 
-The music player asset is a simple music player that can play music files in Warudo. It can be useful for karaoke streams as it downloads and displays the lyrics for the currently playing song automatically.
+El asset del reproductor de música es un reproductor de música simple que puede reproducir archivos de música en Warudo. Puede ser útil para transmisiones de karaoke ya que descarga y muestra las letras de la canción que se está reproduciendo automáticamente.
 
 ![](/doc-img/en-music-player-1.png)
-<p class="img-desc">Playing music with lyrics.</p>
+<p class="img-desc">Reproduciendo música con letras.</p>
 
-## Setup
+## Configuración
 
-Click **Open Music Folder** to open the music folder. You can then copy your music files into the folder. The music player supports MP3, WAV, and OGG files.
+Haz clic en **Open Music Folder** para abrir la carpeta de música. Luego puedes copiar tus archivos de música en la carpeta. El reproductor de música soporta archivos MP3, WAV y OGG.
 
-The music player will automatically download lyrics for the currently playing song. If the lyrics do not match the song, you can  manually search for lyrics by clicking the **Search Online Lyrics** button, or put a `.lrc` lyrics file with the same name as the music file in the music folder.
+El reproductor de música descargará automáticamente las letras de la canción que se está reproduciendo. Si las letras no coinciden con la canción, puedes buscar manualmente las letras haciendo clic en el botón **Search Online Lyrics**, o poner un archivo de letras `.lrc` con el mismo nombre que el archivo de música en la carpeta de música.
 
 :::caution
-If you are using Universal RP, you must select a **Camera** to have the lyrics shown in the NDI/Spout/virtual camera output.
+Si estás usando Universal RP, debes seleccionar una **Camera** para que las letras se muestren en la salida NDI/Spout/cámara virtual.
 :::
 
 :::caution
-Note that the online lyrics feature may return results with bilingual lyrics, usually the original language and Chinese. We will be adding an option to only show lyrics in the original language in the future.
+Ten en cuenta que la función de letras en línea puede devolver resultados con letras bilingües, usualmente el idioma original y chino. Estaremos agregando una opción para mostrar solo letras en el idioma original en el futuro.
 :::
 
-## Title Image
+## Imagen de Título
 
-You can add a line at the beginning of the lyrics file to specify the title image. For example, if you have a song named `Music.mp3` and a title image named `Title.png`, you can add the following to `Music.lrc`:
+Puedes agregar una línea al comienzo del archivo de letras para especificar la imagen de título. Por ejemplo, si tienes una canción llamada `Music.mp3` y una imagen de título llamada `Title.png`, puedes agregar lo siguiente a `Music.lrc`:
 
 ```
 [warudo.title:00:22.50,1.5,5,1.5,0,0,1500,700]
 ```
 
-This tells Warudo to show your title image at 22.5 seconds into the song, with a fade in duration of 1.5 seconds, a duration of 5 seconds, and a fade out duration of 1.5 seconds. The last two numbers are the width and height of the title image in pixels.
+Esto le dice a Warudo que muestre tu imagen de título a los 22.5 segundos de la canción, con una duración de aparición gradual de 1.5 segundos, una duración de 5 segundos, y una duración de desaparición gradual de 1.5 segundos. Los últimos dos números son el ancho y alto de la imagen de título en píxeles.
 
 ![](/doc-img/en-music-player-2.png)
-<p class="img-desc">Showing a title image.</p>
+<p class="img-desc">Mostrando una imagen de título.</p>
 
 <AuthorBar authors={{
   creators: [
     {name: 'HakuyaTira', github: 'TigerHix'},
   ],
   translators: [
+    {name: 'かぐら (Arukaito)', github: 'Arukaito'}
   ],
 }} />
