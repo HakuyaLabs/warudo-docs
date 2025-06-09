@@ -4,7 +4,7 @@ sidebar_position: 11
 
 # 3D VTubing Primer
 
-Below is a list of frequently asked questions about 3D VTubing; they are not specific to Warudo, but are still useful to know!
+A continuación hay una lista de preguntas frecuentes sobre 3D VTubing; no son específicas de Warudo, ¡pero aún son útiles de saber!
 
 ## ¿Qué es un blendshape? {#blendshape}
 

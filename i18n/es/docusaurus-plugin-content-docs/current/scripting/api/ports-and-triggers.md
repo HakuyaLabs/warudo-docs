@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Ports & Triggers
 
-Ports and triggers belong to [entities](entities) and are arguably the most important part of Warudo scripting. They are used to pass data between entities, trigger actions, and provide user interaction in the editor.
+Los ports y triggers pertenecen a [entities](entities) y son posiblemente la parte más importante del scripting de Warudo. Se usan para pasar datos entre entities, activar acciones, y proporcionar interacción del usuario en el editor.
 
 ![](/doc-img/en-custom-node-1.png)
 
@@ -12,9 +12,9 @@ Ports and triggers belong to [entities](entities) and are arguably the most impo
 
 ## Data Input Ports {#data-input-ports}
 
-Data input ports are used to provide data to an entity by either the user (using the editor) or another entity. Data inputs can be of various types, such as strings, numbers, booleans, or even complex types like [structured data](structured-data.md) or arrays.
+Los data input ports se usan para proporcionar datos a una entity ya sea por el usuario (usando el editor) u otra entity. Los data inputs pueden ser de varios tipos, como strings, números, booleanos, o incluso tipos complejos como [structured data](structured-data.md) o arrays.
 
-A data input is defined as a public field in an entity subclass, decorated with the `[DataInput]` attribute. In the [Getting Started](getting-started.md) example, we saw a `DataInput` that defines a number slider:
+Un data input se define como un campo público en una subclase de entity, decorado con el atributo `[DataInput]`. En el ejemplo [Getting Started](getting-started.md), vimos un `DataInput` que define un slider de número:
 
 ```csharp
 [DataInput]
@@ -22,7 +22,7 @@ A data input is defined as a public field in an entity subclass, decorated with 
 public int LuckyNumber = 42;
 ```
 
-Here are a few more examples:
+Aquí hay algunos ejemplos más:
 
 - **String Input:**
   ```csharp
@@ -439,5 +439,6 @@ creators: [
 {name: 'HakuyaTira', github: 'TigerHix'},
 ],
 translators: [
+{name: 'かぐら', github: 'Arukaito'},
 ],
 }} />

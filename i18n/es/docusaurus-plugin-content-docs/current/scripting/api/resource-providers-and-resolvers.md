@@ -4,13 +4,13 @@ sidebar_position: 200
 
 # Resource Providers & Resolvers
 
-Resources in Warudo are any external data that can be used by assets and nodes. For example, character resources are the `.vrm` and `.warudo` files in the `Characters` directory; character animation resources are the 500+ built-in animations provided by Warudo plus any custom [character animation mods](../../modding/character-animation-mod) in the `CharacterAnimations` directory; [screen](../../assets/screen) image resources are the image files in the `Images` directory; and so on.
+Los recursos en Warudo son cualquier dato externo que puede ser usado por assets y nodos. Por ejemplo, los recursos de personaje son los archivos `.vrm` y `.warudo` en el directorio `Characters`; los recursos de animación de personaje son las 500+ animaciones integradas proporcionadas por Warudo más cualquier [mod de animación de personaje](../../modding/character-animation-mod) personalizado en el directorio `CharacterAnimations`; los recursos de imagen de [pantalla](../../assets/screen) son los archivos de imagen en el directorio `Images`; y así sucesivamente.
 
-## Overview
+## Visión General
 
-Internally, each resource is uniquely identified by a **resource URI**, which looks like `character://data/Characters/MyModel.vrm` or `character-animation://resources/Animations/AGIA/01_Idles/AGIA_Idle_generic_01`.
+Internamente, cada recurso es identificado únicamente por un **resource URI**, que se ve como `character://data/Characters/MyModel.vrm` o `character-animation://resources/Animations/AGIA/01_Idles/AGIA_Idle_generic_01`.
 
-When you open a resource dropdown such as the `Source` dropdown in the character asset, the dropdown queries **resource providers** to obtain a list of compatible resource URIs; in the case of the character asset, two resource providers will return results: one that look for files in the `Characters` directory, and the other that look for installed character mods installed from the Steam Workshop.
+Cuando abres un dropdown de recursos como el dropdown `Source` en el asset de personaje, el dropdown consulta **resource providers** para obtener una lista de resource URIs compatibles; en el caso del asset de personaje, dos resource providers devolverán resultados: uno que busca archivos en el directorio `Characters`, y el otro que busca mods de personaje instalados desde el Steam Workshop.
 
 <div style={{display: 'flex', justifyContent: 'space-between', gap: '1rem'}}>
 <div style={{width: '75%'}}>
@@ -18,13 +18,13 @@ When you open a resource dropdown such as the `Source` dropdown in the character
 </div>
 </div>
 
-When you select a resource URI, Warudo invokes the corresponding **resource URI resolver** to load the resource data. For example, a `.vrm` file and a `.warudo` file can be loaded by two different resolvers, but both resolvers return a `GameObject` (which is the character loaded into the Unity scene), so the character asset can treat them the same way.
+Cuando seleccionas un resource URI, Warudo invoca el **resource URI resolver** correspondiente para cargar los datos del recurso. Por ejemplo, un archivo `.vrm` y un archivo `.warudo` pueden ser cargados por dos resolvers diferentes, pero ambos resolvers devuelven un `GameObject` (que es el personaje cargado en la escena Unity), así que el asset de personaje puede tratarlos de la misma manera.
 
-Note that resource providers and resolvers must be registered by a [plugin](plugins). 
+Ten en cuenta que los resource providers y resolvers deben ser registrados por un [plugin](plugins).
 
 ## Provider
 
-Let's go through a toy plugin example to register a custom resource provider that provides prop resources which are just cubes and spheres.
+Vamos a revisar un ejemplo de plugin de juguete para registrar un resource provider personalizado que proporciona recursos de prop que son solo cubos y esferas.
 
 ```csharp
 using System;
@@ -180,5 +180,6 @@ creators: [
 {name: 'HakuyaTira', github: 'TigerHix'},
 ],
 translators: [
+{name: 'かぐら', github: 'Arukaito'},
 ],
 }} />

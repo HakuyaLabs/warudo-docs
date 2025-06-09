@@ -4,11 +4,11 @@ sidebar_position: 70
 
 # Mixins
 
-Mixins are a way to reuse code between different entities when inheritance is not an option. They can be thought of a collection of data inputs and triggers with optional, reusable logic.
+Los mixins son una forma de reutilizar código entre diferentes entities cuando la herencia no es una opción. Se pueden pensar como una colección de data inputs y triggers con lógica opcional y reutilizable.
 
-## Type Definition
+## Definición de Tipo
 
-You can create mixin types by inheriting from the `Mixin` type, like below:
+Puedes crear tipos de mixin heredando del tipo `Mixin`, como se muestra abajo:
 
 ```csharp
 public class PositionMixin : Mixin {
@@ -22,7 +22,7 @@ public class PositionMixin : Mixin {
 }
 ```
 
-Then you can now include this mixin in any entity subtype. For example, to include the `PositionMixin` in a custom asset:
+Entonces ahora puedes incluir este mixin en cualquier subtipo de entity. Por ejemplo, para incluir el `PositionMixin` en un asset personalizado:
 
 ```csharp
 [AssetType(...)]
@@ -34,7 +34,7 @@ public class PositionAsset : Asset {
 }
 ```
 
-Same as with assets, you can include mixins in nodes:
+Lo mismo que con los assets, puedes incluir mixins en nodos:
 
 ```csharp
 [NodeType(...)]
@@ -46,10 +46,10 @@ public class PositionNode : Node {
 }
 ```
 
-Remember to add the `[Mixin]` attribute. Also, you do not need to assign a value as it will be automatically instantiated when the entity is created. That means you can access the mixin's data inputs and triggers directly:
+Recuerda agregar el atributo `[Mixin]`. También, no necesitas asignar un valor ya que será instanciado automáticamente cuando la entity es creada. Eso significa que puedes acceder a los data inputs y triggers del mixin directamente:
 
 ```csharp
-// Within entity
+// Dentro de la entity
 public override void OnCreate() {
     base.OnCreate();
     var initialPosition = PositionMixin.Position;
@@ -57,47 +57,47 @@ public override void OnCreate() {
 }
 ```
 
-However, methods such as `SetDataInput` and `InvokeTrigger` are not available in the mixin itself. The data inputs and triggers still technically belong to the entity that includes the mixin, so you should write:
+Sin embargo, métodos como `SetDataInput` e `InvokeTrigger` no están disponibles en el mixin mismo. Los data inputs y triggers aún técnicamente pertenecen a la entity que incluye el mixin, así que debes escribir:
 
 ```csharp
-// Within entity
+// Dentro de la entity
 SetDataInput(nameof(PositionMixin.Position), new Vector3(1, 2, 3), broadcast: true);
 InvokeTrigger(nameof(PositionMixin.GeneratePosition));
 ```
 
-To access the entity and its methods within the mixin, use the `Owner` property:
+Para acceder a la entity y sus métodos dentro del mixin, usa la propiedad `Owner`:
 
 ```csharp
-// Within mixin
+// Dentro del mixin
 Position = new Vector3(9, 8, 7);
 Owner.BroadcastDataInput(nameof(Position));
 Owner.Watch(nameof(Position), OnPositionChanged);
 ```
 
-## Differences from Structured Data
+## Diferencias de Structured Data
 
-Mixins are similar to [structured data](structured-data) in that they can be included in entities and have data inputs and triggers. However, they work in very different ways:
+Los mixins son similares a [structured data](structured-data) en que pueden ser incluidos en entities y tienen data inputs y triggers. Sin embargo, funcionan de maneras muy diferentes:
 
-- A structured data is embedded and serialized in a data input; a mixin "flattens" its data inputs and triggers into the entity that includes it.
-- A structured data is "lighter" in the sense that it is designed to encapsulate data, not logic, so it doesn't have as much [lifecycle events](#behavioral-mixins) as a mixin.
-- You can have a structured data array in an entity, but you can only have one mixin of a specific type in an entity.
+- Un structured data está embebido y serializado en un data input; un mixin "aplana" sus data inputs y triggers en la entity que lo incluye.
+- Un structured data es "más ligero" en el sentido de que está diseñado para encapsular datos, no lógica, así que no tiene tantos [eventos del ciclo de vida](#behavioral-mixins) como un mixin.
+- Puedes tener un array de structured data en una entity, pero solo puedes tener un mixin de un tipo específico en una entity.
 
-If you are not sure which to use, we recommend to start with structured data first!
+Si no estás seguro de cuál usar, ¡recomendamos empezar con structured data primero!
 
 ## Behavioral Mixins {#behavioral-mixins}
 
-If you need entity lifecycle events in your mixin, you can inherit from `BehavioralMixin` instead of `Mixin`. This will allow you to override the following methods: `OnUpdate()`, `OnPreUpdate()`, `OnPostUpdate()`, `OnLateUpdate()`, `OnFixedUpdate()`, and `OnEndOfFrame()`. Refer to [Entities](entities#lifecycle) page for more information on entity lifecycle.
+Si necesitas eventos del ciclo de vida de entity en tu mixin, puedes heredar de `BehavioralMixin` en lugar de `Mixin`. Esto te permitirá sobrescribir los siguientes métodos: `OnUpdate()`, `OnPreUpdate()`, `OnPostUpdate()`, `OnLateUpdate()`, `OnFixedUpdate()`, y `OnEndOfFrame()`. Consulta la página [Entities](entities#lifecycle) para más información sobre el ciclo de vida de entities.
 
-## Built-in Mixins
+## Mixins Integrados
 
-Warudo provides several built-in mixins that you can use in your entities:
+Warudo proporciona varios mixins integrados que puedes usar en tus entities:
 
-- `Attachable`: Adds the ability to attach the entity's GameObject to another asset transform.
-- `PlaybackMixin`: Adds playback controls to the editor; used in the music player,  the MMD player, and the motion player.
-- `ToolbarItemMixin`: Adds a toolbar icon. This mixin is used in plugins to display an icon in the toolbar. Refer to the [Plugins](plugins) page for more information.
+- `Attachable`: Agrega la habilidad de adjuntar el GameObject de la entity a otro transform de asset.
+- `PlaybackMixin`: Agrega controles de reproducción al editor; usado en el reproductor de música, el reproductor MMD, y el reproductor de movimiento.
+- `ToolbarItemMixin`: Agrega un ícono de barra de herramientas. Este mixin se usa en plugins para mostrar un ícono en la barra de herramientas. Consulta la página [Plugins](plugins) para más información.
 
 :::warning
-Currently, built-in mixin types are not well-documented. We are working on improving this, but in the meantime, we recommend referring to their inheritors for usage examples.
+Actualmente, los tipos de mixin integrados no están bien documentados. Estamos trabajando en mejorar esto, pero mientras tanto, recomendamos consultar sus herederos para ejemplos de uso.
 :::
 
 <AuthorBar authors={{
@@ -105,5 +105,6 @@ creators: [
 {name: 'HakuyaTira', github: 'TigerHix'},
 ],
 translators: [
+{name: 'かぐら', github: 'Arukaito'},
 ],
 }} />

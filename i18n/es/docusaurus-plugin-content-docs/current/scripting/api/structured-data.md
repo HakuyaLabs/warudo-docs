@@ -4,11 +4,11 @@ sidebar_position: 60
 
 # Structured Data
 
-Structured data is a way to define an embedded data structure within an entity. They are useful for defining complex data inputs that need to be reused within the same entity or across multiple entities.
+Structured data es una forma de definir una estructura de datos embebida dentro de una entity. Son útiles para definir data inputs complejos que necesitan ser reutilizados dentro de la misma entity o a través de múltiples entities.
 
-## Type Definition
+## Definición de Tipo
 
-You can create structured data types by inheriting from the `StructuredData` type, like below:
+Puedes crear tipos de structured data heredando del tipo `StructuredData`, como se muestra abajo:
 
 ```csharp
 public class MyTransformData : StructuredData {
@@ -31,14 +31,14 @@ public class MyTransformData : StructuredData {
 }
 ```
 
-Then you can use this structured data type as any data input field's type in an entity:
+Entonces puedes usar este tipo de structured data como el tipo de cualquier campo de data input en una entity:
 
 ```csharp
 [DataInput]
 public MyTransformData MyTransform;
 ```
 
-Which looks like this:
+Lo cual se ve así:
 
 <div style={{display: 'flex', justifyContent: 'space-between', gap: '1rem'}}>
 <div style={{width: '50%'}}>
@@ -46,7 +46,7 @@ Which looks like this:
 </div>
 </div>
 
-Note that you do not need to assign a value to the structured data field as it will be automatically instantiated when the entity is created. That means you can access the structured data's data inputs directly:
+Ten en cuenta que no necesitas asignar un valor al campo de structured data ya que será instanciado automáticamente cuando la entity es creada. Eso significa que puedes acceder a los data inputs del structured data directamente:
 
 ```csharp
 public override void OnCreate() {
@@ -55,9 +55,9 @@ public override void OnCreate() {
 }
 ```
 
-## Components
+## Componentes
 
-A structured data type can define data inputs and triggers.
+Un tipo de structured data puede definir data inputs y triggers.
 
 <div style={{display: 'flex', justifyContent: 'space-between', gap: '1rem'}}>
 <div style={{width: '50%'}}>
@@ -65,39 +65,39 @@ A structured data type can define data inputs and triggers.
 </div>
 </div>
 
-## Lifecycle
+## Ciclo de Vida
 
-A structured data only has one additional lifecycle event `OnUpdate()`, other than the standard lifecycle events (e.g., `OnCreate()`) listed on the [Entities](entities#lifecycle) page. 
+Un structured data solo tiene un evento adicional del ciclo de vida `OnUpdate()`, además de los eventos estándar del ciclo de vida (ej., `OnCreate()`) listados en la página [Entities](entities#lifecycle).
 
 :::tip
-Structured data are best thought as data containers, so you should not perform complicated logic inside them. It is recommended to keep structured data as simple as possible and let the parent entity handle the heavy lifting.
+Los structured data se entienden mejor como contenedores de datos, así que no debes realizar lógica complicada dentro de ellos. Se recomienda mantener los structured data tan simples como sea posible y dejar que la entity padre maneje el trabajo pesado.
 :::
 
-## Updating Structured Data
+## Actualizando Structured Data
 
-Structured data are just entities, so you can update their data inputs like any other entity:
+Los structured data son solo entities, así que puedes actualizar sus data inputs como cualquier otra entity:
 
 ```csharp
 MyTransform.SetDataInput(nameof(MyTransform.Position), new Vector3(1, 2, 3), broadcast: true);
 
-// or
+// o
 
 MyTransform.Position = new Vector3(1, 2, 3);
 MyTransform.BroadcastDataInput(nameof(MyTransform.Position));
 ```
 
-When updating multiple data inputs, you can also just assign to the fields directly, and use the `Broadcast` method to broadcast all data inputs at once:
+Cuando actualices múltiples data inputs, también puedes simplemente asignar a los campos directamente, y usar el método `Broadcast` para transmitir todos los data inputs de una vez:
 
 ```csharp
 MyTransform.Position = new Vector3(1, 2, 3);
 MyTransform.Rotation = new Vector3(0, 0, 0);
 MyTransform.Scale = new Vector3(1, 1, 1);
-MyTransform.Broadcast(); // Or BroadcastDataInput(nameof(MyTransform));
+MyTransform.Broadcast(); // O BroadcastDataInput(nameof(MyTransform));
 ```
 
-## Nested Structured Data
+## Structured Data Anidados
 
-Structured data can be nested:
+Los structured data pueden ser anidados:
 
 ```csharp
 public class MyData1 : StructuredData {
@@ -118,14 +118,14 @@ public class MyData1 : StructuredData {
 
 ## Arrays
 
-You can also define arrays of structured data:
+También puedes definir arrays de structured data:
 
 ```csharp
 [DataInput]
 public MyTransformData[] MyTransforms;
 ```
 
-Note you do not need to initialize the array. Warudo will automatically initialize an empty array:
+Ten en cuenta que no necesitas inicializar el array. Warudo automáticamente inicializará un array vacío:
 
 <div style={{display: 'flex', justifyContent: 'space-between', gap: '1rem'}}>
 <div style={{width: '50%'}}>
@@ -133,7 +133,7 @@ Note you do not need to initialize the array. Warudo will automatically initiali
 </div>
 </div>
 
-When the user clicks the **+** button, structured data elements are appended to the array:
+Cuando el usuario hace clic en el botón **+**, elementos de structured data son agregados al array:
 
 <div style={{display: 'flex', justifyContent: 'space-between', gap: '1rem'}}>
 <div style={{width: '50%'}}>
@@ -297,20 +297,20 @@ public async void PromptUserInput() {
     var sd = await Context.Service.PromptStructuredDataInput<MyTransformData>("Customize Your Transform");
     if (sd == null) return; // The user clicked cancel
     
-    while (sd.Position == Vector3.zero) {
-        Context.Service.Toast(ToastSeverity.Error, "Invalid Input", "Position cannot be zero!");
-        sd = await Context.Service.PromptStructuredDataInput("Customize Your Transform", sd); // Note the second parameter
-        if (sd == null) return; // The user clicked cancel
+    while (sd.Position == Vector3.zero) {        Context.Service.Toast(ToastSeverity.Error, "Invalid Input", "Position cannot be zero!");
+        sd = await Context.Service.PromptStructuredDataInput("Customize Your Transform", sd); // Ten en cuenta el segundo parámetro
+        if (sd == null) return; // El usuario hizo clic en cancelar
     }
 }
 ```
 
-This saves the user's edits to the structured data while allowing them to correct the invalid inputs.
+Esto guarda las ediciones del usuario al structured data mientras les permite corregir las entradas inválidas.
 
 <AuthorBar authors={{
 creators: [
 {name: 'HakuyaTira', github: 'TigerHix'},
 ],
 translators: [
+{name: 'かぐら', github: 'Arukaito'},
 ],
 }} />

@@ -4,7 +4,7 @@ sidebar_position: 80
 
 # Data Input Watchers {#watchers}
 
-Often you are interested in knowing when the value of a data input changes. For example, let's say you have the following code that lets the user select a file from the `MyPluginFiles` directory in the data folder:
+A menudo estás interesado en saber cuándo cambia el valor de un data input. Por ejemplo, digamos que tienes el siguiente código que permite al usuario seleccionar un archivo del directorio `MyPluginFiles` en la carpeta de datos:
 
 ```csharp
 [DataInput]
@@ -19,7 +19,7 @@ protected async UniTask<AutoCompleteList> AutoCompletePluginFiles() {
 }
 ```
 
-You want to know when the user selects a new file. The naive way is to check the value of `SelectedFile` every frame, but this is inefficient and cumbersome. Instead, you can register a watcher in `OnCreate()`:
+Quieres saber cuándo el usuario selecciona un nuevo archivo. La forma ingenua es verificar el valor de `SelectedFile` cada frame, pero esto es ineficiente y engorroso. En su lugar, puedes registrar un watcher en `OnCreate()`:
 
 ```csharp
 protected override void OnCreate() {
@@ -29,21 +29,21 @@ protected override void OnCreate() {
 
 protected void OnSelectedFileChanged(string from, string to) {
     if (to == null) {
-        // The user has cleared the selected file
+        // El usuario ha limpiado el archivo seleccionado
     }
-    // More logic to handle the file change
+    // Más lógica para manejar el cambio de archivo
 }
 ```
 
-You can also watch another entity's data input by using the overloaded `Watch<T>(Entity otherEntity, string dataInputKey, Action<T, T> onChange, bool deep = true)` method.
+También puedes observar el data input de otra entity usando el método sobrecargado `Watch<T>(Entity otherEntity, string dataInputKey, Action<T, T> onChange, bool deep = true)`.
 
 :::tip
-Watchers are automatically unregistered when the entity is destroyed.
+Los watchers se desregistran automáticamente cuando la entity es destruida.
 :::
 
-## Watching Asset States
+## Observando Estados de Assets
 
-Sometimes, you want to watch more than just the value change. For example, consider the following simple asset that prints a message whenever the user selects a new `Character`:
+A veces, quieres observar más que solo el cambio de valor. Por ejemplo, considera el siguiente asset simple que imprime un mensaje cada vez que el usuario selecciona un nuevo `Character`:
 
 ```csharp
 [DataInput]
@@ -59,9 +59,9 @@ protected void OnCharacterChanged(CharacterAsset from, CharacterAsset to) {
 }
 ```
 
-However, the watcher is only triggered when the value of `Character` data input in the current asset changes; that means if the scene has two characters, the watcher is triggered when the user changes from one character to another. However, let's say there is only one character asset in the scene, and the user goes into the character asset and change the `Source` data input, then this watcher will not be triggered.
+Sin embargo, el watcher solo se activa cuando el valor del data input `Character` en el asset actual cambia; eso significa que si la escena tiene dos personajes, el watcher se activa cuando el usuario cambia de un personaje a otro. Sin embargo, digamos que solo hay un asset de personaje en la escena, y el usuario entra al asset de personaje y cambia el data input `Source`, entonces este watcher no se activará.
 
-In this case, you can use `WatchAsset`:
+En este caso, puedes usar `WatchAsset`:
 
 ```csharp
 protected override void OnCreate() {
@@ -74,17 +74,17 @@ protected void OnCharacterChanged() {
 }
 ```
 
-The watcher is now triggered both when the value of `Character` changes and when the `Source` data input of the `Character` asset changes.
+El watcher ahora se activa tanto cuando el valor de `Character` cambia como cuando el data input `Source` del asset `Character` cambia.
 
 :::info
-Why does this work? The `WatchAsset` method will additionally trigger the watcher when an asset's [active state](assets#active-state) changes. In Warudo, all assets that have a `Source` data input toggles the active state based on the `Source` data input. For example, `CharacterAsset` uses `Source` to load a .vrm model or .warudo character mod, `PropAsset` uses `Source` to load a .warudo prop mod, and so on. The active state is only `true` if the `Source` is successfully loaded.
+¿Por qué funciona esto? El método `WatchAsset` adicionalmente activará el watcher cuando el [estado activo](assets#active-state) de un asset cambie. En Warudo, todos los assets que tienen un data input `Source` cambian el estado activo basado en el data input `Source`. Por ejemplo, `CharacterAsset` usa `Source` para cargar un modelo .vrm o un mod de personaje .warudo, `PropAsset` usa `Source` para cargar un mod de prop .warudo, y así sucesivamente. El estado activo solo es `true` si el `Source` es cargado exitosamente.
 
-Say we have a currently active asset with a `Source` selected. When the user selects a new `Source`, the active state is set to `false` (triggering the watcher), and then if the new `Source` is successfully loaded, set to `true` again (triggering the watcher again). In the above code, only the second trigger will print the message, since when the first trigger is called, the character asset is not yet active.
+Digamos que tenemos un asset actualmente activo con un `Source` seleccionado. Cuando el usuario selecciona un nuevo `Source`, el estado activo se establece en `false` (activando el watcher), y luego si el nuevo `Source` es cargado exitosamente, se establece en `true` otra vez (activando el watcher nuevamente). En el código anterior, solo el segundo trigger imprimirá el mensaje, ya que cuando el primer trigger es llamado, el asset de personaje aún no está activo.
 :::
 
-## Watching Multiple Data Inputs
+## Observando Múltiples Data Inputs
 
-If you need to watch multiple data inputs and only care about executing a callback function when any of them changes, you can use the `WatchAll` method:
+Si necesitas observar múltiples data inputs y solo te importa ejecutar una función callback cuando cualquiera de ellos cambie, puedes usar el método `WatchAll`:
 
 ```csharp
 protected override void OnCreate() {
@@ -93,7 +93,7 @@ protected override void OnCreate() {
 }
 
 protected void OnAnyDataInputChanged() {
-    // Called when A, B, or C changes
+    // Llamado cuando A, B, o C cambian
 }
 ```
 
@@ -102,5 +102,6 @@ creators: [
 {name: 'HakuyaTira', github: 'TigerHix'},
 ],
 translators: [
+{name: 'かぐら', github: 'Arukaito'},
 ],
 }} />
