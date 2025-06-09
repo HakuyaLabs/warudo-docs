@@ -4,52 +4,53 @@ sidebar_position: 500
 
 # VMC
 
-Tracking via an external application, which sends data to Warudo via the [VirtualMotionCapture protocol](https://protocol.vmc.info/english). VR trackers are also supported using the paid (supporter) version of [VirtualMotionCapture](https://www.patreon.com/sh_akira).
+Seguimiento a través de una aplicación externa, que envía datos a Warudo vía el [protocolo VirtualMotionCapture](https://protocol.vmc.info/english). Los rastreadores VR también son soportados usando la versión de pago (supporter) de [VirtualMotionCapture](https://www.patreon.com/sh_akira).
 
-## Setup
+## Configuración
 
-### VR Trackers
+### Rastreadores VR
 
-First, make sure you have the paid (supporter) version of [**VirtualMotionCapture**](https://vmc.info/) installed. It can be downloaded from the developer's [Patreon](https://www.patreon.com/sh_akira) or [pixivFANBOX](https://akira.fanbox.cc/).
+Primero, asegúrate de tener la versión de pago (supporter) de [**VirtualMotionCapture**](https://vmc.info/) instalada. Puede ser descargada desde el [Patreon](https://www.patreon.com/sh_akira) o [pixivFANBOX](https://akira.fanbox.cc/) del desarrollador.
 
 :::tip
-What is the difference between VirtualMotionCapture and VMC? Simply put, they are the same thing, but they can refer to two different things. One is the original VirtualMotionCapture application, one is the protocol that is used by VirtualMotionCapture and other applications. (A protocol is basically how applications communicate with each other.) In this handbook, we use "VMC" to refer to the protocol, and "VirtualMotionCapture" to refer to the application.
+¿Cuál es la diferencia entre VirtualMotionCapture y VMC? Simplemente, son la misma cosa, pero pueden referirse a dos cosas diferentes. Una es la aplicación original VirtualMotionCapture, una es el protocolo que es usado por VirtualMotionCapture y otras aplicaciones. (Un protocolo es básicamente cómo las aplicaciones se comunican entre sí.) En este manual, usamos "VMC" para referirnos al protocolo, y "VirtualMotionCapture" para referirnos a la aplicación.
 :::
 
-Make sure you have connected your VR trackers to SteamVR. Then, open VirtualMotionCapture; load your VRM model, and perform calibration. Finally, check **Enable OSC motion sender** in **Settings → VMCProtocol Motion sender**. The default port 39539 is also the default port that Warudo's VMC receiver uses.
+Asegúrate de haber conectado tus rastreadores VR a SteamVR. Luego, abre VirtualMotionCapture; carga tu modelo VRM, y realiza la calibración. Finalmente, marca **Enable OSC motion sender** en **Settings → VMCProtocol Motion sender**. El puerto por defecto 39539 también es el puerto por defecto que usa el receptor VMC de Warudo.
 
 ![](/doc-img/en-vmc-1.png)
 
 ### VSeeFace
 
-The following example demonstrates how to apply VMC data to the character using [VSeeFace](https://www.vseeface.icu/). Other software that supports VMC can be configured in a similar manner.
+El siguiente ejemplo demuestra cómo aplicar datos VMC al personaje usando [VSeeFace](https://www.vseeface.icu/). Otro software que soporte VMC puede ser configurado de manera similar.
 
-In **General settings**, make sure **VMC Protocol → Send datawith VMC protocol** is checked. The default port 39539 is also the default port that Warudo's VMC receiver uses.
+En **General settings**, asegúrate de que **VMC Protocol → Send datawith VMC protocol** esté marcado. El puerto por defecto 39539 también es el puerto por defecto que usa el receptor VMC de Warudo.
 
 ![](/doc-img/zh-vmc-1.webp)
 
-### Other Applications
+### Otras Aplicaciones
 
-For other applications that support VMC, you can check the documentation of the application to see how to enable VMC tracking. Make sure you are sending to the correct port (default 39539).
+Para otras aplicaciones que soporten VMC, puedes verificar la documentación de la aplicación para ver cómo habilitar el seguimiento VMC. Asegúrate de estar enviando al puerto correcto (por defecto 39539).
 
-## Calibration
+## Calibración
 
-Calibration of VMC-compatible tracking systems is done in the external application.
+La calibración de sistemas de seguimiento compatibles con VMC se realiza en la aplicación externa.
 
-## Frequently Asked Questions
+## Preguntas Frecuentes
 
-Please refer to [Overview](overview#FAQ) and [Customizing Pose Tracking](body-tracking#FAQ) for common questions.
+Por favor consulta [Resumen](overview#FAQ) y [Personalizar Seguimiento de Pose](body-tracking#FAQ) para preguntas comunes.
 
-### My character is in extremely weird poses.
+### Mi personaje está en poses extremadamente extrañas.
 
-First, make sure you have loaded the same model in Warudo and the external application.
+Primero, asegúrate de haber cargado el mismo modelo en Warudo y en la aplicación externa.
 
-We also require the models to have normalized bones,  i.e., all bones on the model should have zero rotation (0, 0, 0) when the model is in T-pose. If your model is in [VRM format](https://vrm.dev/), then in most cases there should be no issue. However, in very rare cases, the modeler may not have checked the Enforce T-Pose option when exporting, and it can be fixed by re-exporting with this option checked. Please refer to [this page](../misc/normalizing-model-bones) for more details.
+También requerimos que los modelos tengan huesos normalizados, es decir, todos los huesos en el modelo deben tener rotación cero (0, 0, 0) cuando el modelo esté en T-pose. Si tu modelo está en [formato VRM](https://vrm.dev/), entonces en la mayoría de los casos no debería haber problemas. Sin embargo, en casos muy raros, el modelador puede no haber marcado la opción Enforce T-Pose al exportar, y puede ser corregido re-exportando con esta opción marcada. Por favor consulta [esta página](../misc/normalizing-model-bones) para más detalles.
 
 <AuthorBar authors={{
   creators: [
     {name: 'HakuyaTira', github: 'TigerHix'},
   ],
   translators: [
+    {name: 'かぐら (Arukaito)', github: 'Arukaito'},
   ],
 }} />

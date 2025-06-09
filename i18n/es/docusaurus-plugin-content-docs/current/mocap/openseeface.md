@@ -4,51 +4,51 @@ sidebar_position: 55
 
 # OpenSeeFace
 
-Webcam-based face tracking. Tracks a set of basic blendshapes, head rotation and head translation. Quality of face tracking is similar to that of [VSeeFace](https://www.vseeface.icu/).
+Seguimiento facial basado en webcam. Rastrea un conjunto de blendshapes básicos, rotación de cabeza y traslación de cabeza. La calidad del seguimiento facial es similar a la de [VSeeFace](https://www.vseeface.icu/).
 
 :::info
-OpenSeeFace is the face tracking technology used in [VSeeFace](https://www.vseeface.icu/), so users familiar with VSeeFace may find it quite familiar.
+OpenSeeFace es la tecnología de seguimiento facial usada en [VSeeFace](https://www.vseeface.icu/), por lo que los usuarios familiarizados con VSeeFace pueden encontrarla bastante familiar.
 :::
 
 :::caution
-We generally recommend using [MediaPipe](./mediapipe.md) for face tracking instead, which tracks more blendshapes and has better tracking quality. OpenSeeFace is mainly provided for users who cannot use MediaPipe for some reason.
+Generalmente recomendamos usar [MediaPipe](./mediapipe.md) para seguimiento facial en su lugar, que rastrea más blendshapes y tiene mejor calidad de seguimiento. OpenSeeFace se proporciona principalmente para usuarios que no pueden usar MediaPipe por alguna razón.
 :::
 
-## Setup
+## Configuración
 
-OpenSeeFace is built into Warudo, so you do not need to install any additional software.
+OpenSeeFace está integrado en Warudo, por lo que no necesitas instalar ningún software adicional.
 
 :::tip
-After OpenSeeFace tracker is started, it takes 10-15 seconds for internal calibration. During this time, the model's mouth and eyes may move randomly, which is normal.
+Después de que se inicia el rastreador OpenSeeFace, toma 10-15 segundos para la calibración interna. Durante este tiempo, la boca y los ojos del modelo pueden moverse aleatoriamente, lo cual es normal.
 :::
 
-## Calibration
+## Calibración
 
-You can calibrate OpenSeeFace's tracking by:
-* clicking **Character → Motion Capture → Quick Calibration → Calibrate OpenSeeFace**, or
-* clicking **Calibrate** in the **OpenSeeFace Tracker** asset.
+Puedes calibrar el seguimiento de OpenSeeFace:
+* haciendo clic en **Character → Motion Capture → Quick Calibration → Calibrate OpenSeeFace**, o
+* haciendo clic en **Calibrate** en el asset **OpenSeeFace Tracker**.
 
-During calibration, you should look straight ahead and keep your head still. After calibration, you can move your head freely.
+Durante la calibración, debes mirar hacia adelante y mantener tu cabeza quieta. Después de la calibración, puedes mover tu cabeza libremente.
 
-## Options
+## Opciones
 
-* **Eye Blinking Offset**: If you find the model's eyes are not fully closing, add 0.1 to the value until fit. Otherwise, subtract 0.1 from the value.&#x20;
-* **Eye Wide Sensitivity**: **Requires ARKit blendshapes to be present on the model.** Increasing this value makes the EyeWideLeft/EyeWideRight blendshapes easier to trigger.
-* **Eyebrow Movement Sensitivity**: **Requires ARKit blendshapes to be present on the model.** Increasing this value makes the eyebrow-related blendshapes easier to trigger.
-* **Mouth Left Right Sensitivity**: **Requires ARKit blendshapes to be present on the model.** Increasing this value makes the MouthLeft/MouthRight blendshapes easier to trigger.
-* **Mouth Open Threshold**: If you find the model's mouth opens too easily, add 0.1 to the value until fit. Otherwise, subtract 0.1 from the value.
-* **Mouth Open Sensitivity**: Increasing this value makes the JawOpen blendshape (or the "A" VRM animation clip) easier to trigger.
-* **Mouth Funnel Sensitivity**: Increasing this value makes the MouthFunnel blendshape (or the "O" VRM animation clip)  easier to trigger.
-* **Mouth Smile Sensitivity**: **Requires ARKit blendshapes to be present on the model.** Increasing this value makes the MouthSmileLeft/MouthSmileRight blendshapes easier to trigger.
-* **Body Movement Intensity**: The range of natural body movement that follows head movement.
+* **Eye Blinking Offset**: Si encuentras que los ojos del modelo no se están cerrando completamente, agrega 0.1 al valor hasta que encaje. De otra manera, resta 0.1 del valor.
+* **Eye Wide Sensitivity**: **Requiere que los blendshapes de ARKit estén presentes en el modelo.** Aumentar este valor hace que los blendshapes EyeWideLeft/EyeWideRight sean más fáciles de activar.
+* **Eyebrow Movement Sensitivity**: **Requiere que los blendshapes de ARKit estén presentes en el modelo.** Aumentar este valor hace que los blendshapes relacionados con las cejas sean más fáciles de activar.
+* **Mouth Left Right Sensitivity**: **Requiere que los blendshapes de ARKit estén presentes en el modelo.** Aumentar este valor hace que los blendshapes MouthLeft/MouthRight sean más fáciles de activar.
+* **Mouth Open Threshold**: Si encuentras que la boca del modelo se abre demasiado fácil, agrega 0.1 al valor hasta que encaje. De otra manera, resta 0.1 del valor.
+* **Mouth Open Sensitivity**: Aumentar este valor hace que el blendshape JawOpen (o el clip de animación VRM "A") sea más fácil de activar.
+* **Mouth Funnel Sensitivity**: Aumentar este valor hace que el blendshape MouthFunnel (o el clip de animación VRM "O") sea más fácil de activar.
+* **Mouth Smile Sensitivity**: **Requiere que los blendshapes de ARKit estén presentes en el modelo.** Aumentar este valor hace que los blendshapes MouthSmileLeft/MouthSmileRight sean más fáciles de activar.
+* **Body Movement Intensity**: El rango de movimiento corporal natural que sigue al movimiento de la cabeza.
 
-## Frequently Asked Questions {#FAQ}
+## Preguntas Frecuentes {#FAQ}
 
-Please refer to [Overview](overview#FAQ) and [Customizing Face Tracking](face-tracking#FAQ) for common questions.
+Por favor consulta [Resumen](overview#FAQ) y [Personalizar Seguimiento Facial](face-tracking#FAQ) para preguntas comunes.
 
-### An empty console window keeps popping up when I use OpenSeeFace, and my tracking is not working.
+### Una ventana de consola vacía sigue apareciendo cuando uso OpenSeeFace, y mi seguimiento no está funcionando.
 
-This is caused by a bug in Windows. To fix it, search **Terminal** in the Start Menu and open it. Click on the down arrow icon and select **Settings**. Select **Windows Console Host** for **Default terminal application** and click **Save**. Then, restart Warudo.
+Esto es causado por un error en Windows. Para solucionarlo, busca **Terminal** en el Menú de Inicio y ábrelo. Haz clic en el ícono de flecha hacia abajo y selecciona **Settings**. Selecciona **Windows Console Host** para **Default terminal application** y haz clic en **Save**. Luego, reinicia Warudo.
 
 ### I can see the OpenSeeFace tracker window, but my tracking is not working.
 
@@ -59,5 +59,6 @@ Some antivirus software may block Warudo from accessing the camera. Please disab
     {name: 'HakuyaTira', github: 'TigerHix'},
   ],
   translators: [
+    {name: 'かぐら (Arukaito)', github: 'Arukaito'},
   ],
 }} />

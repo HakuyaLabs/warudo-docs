@@ -4,60 +4,61 @@ sidebar_position: 60
 
 # iFacialMocap/FaceMotion3D
 
-ARKit-based face tracking. Requires a [Face ID](https://support.apple.com/en-us/HT208109)-compatible iOS device and the $5.99 [iFacialMocap](https://apps.apple.com/us/app/id1489470545) app. Tracks 52 ARKit blendshapes, head rotation and head translation.
+Seguimiento facial basado en ARKit. Requiere un dispositivo iOS compatible con [Face ID](https://support.apple.com/en-us/HT208109) y la aplicación [iFacialMocap](https://apps.apple.com/us/app/id1489470545) de $5.99. Rastrea 52 blendshapes de ARKit, rotación de cabeza y traslación de cabeza.
 
-An alternative to iFacialMocap is [FaceMotion3D](https://apps.apple.com/us/app/facemotion3d/id1507538005), which is $14.99 for a permanent license. It has more features than iFacialMocap, but in regard to face tracking for Warudo, the two apps are functionally equivalent.
+Una alternativa a iFacialMocap es [FaceMotion3D](https://apps.apple.com/us/app/facemotion3d/id1507538005), que cuesta $14.99 por una licencia permanente. Tiene más funciones que iFacialMocap, pero en cuanto al seguimiento facial para Warudo, ambas aplicaciones son funcionalmente equivalentes.
 
 :::tip
-For best tracking quality, we recommend using an iPhone 12 or newer (iPhone mini also works). Older iPhones may have lower tracking quality.
+Para obtener la mejor calidad de seguimiento, recomendamos usar un iPhone 12 o más reciente (iPhone mini también funciona). Los iPhones más antiguos pueden tener menor calidad de seguimiento.
 :::
 
 :::info
-If your iPhone is not compatible with Face ID, you may still be able to use iFacialMocap / FaceMotion3D if it has an A12 or higher chip and has been updated to iOS 14. However, the tracking quality may be subpar.
+Si tu iPhone no es compatible con Face ID, aún podrías usar iFacialMocap / FaceMotion3D si tiene un chip A12 o superior y ha sido actualizado a iOS 14. Sin embargo, la calidad del seguimiento puede ser deficiente.
 :::
 
-## Setup
+## Configuración
 
 :::tip
-If you do not know your computer's IP, you can check on the configuration page of the **iFacialMocap Receiver** asset.
+Si no conoces la IP de tu computadora, puedes verificarla en la página de configuración del asset **iFacialMocap Receiver**.
 
 ![](/doc-img/en-ifacialmocap-1.png)
 
-If multiple IPs are listed, you would need to try each one. Usually, the IP address assigned to your computer by your WiFi router starts with `192.168`. For example, in the above picture, you can first try `192.168.1.151`.
+Si se listan múltiples IPs, necesitarás probar cada una. Por lo general, la dirección IP asignada a tu computadora por tu router WiFi comienza con `192.168`. Por ejemplo, en la imagen de arriba, puedes probar primero `192.168.1.151`.
 :::
 
 ### iFacialMocap
 
-Open the iFacialMocap app, tap on the gear icon in the upper right corner to enter the settings interface. Tap on **Destination IP address** and enter your computer's IP address.
+Abre la aplicación iFacialMocap, toca el ícono de engranaje en la esquina superior derecha para entrar a la interfaz de configuración. Toca en **Destination IP address** e ingresa la dirección IP de tu computadora.
 
 ![](/doc-img/zh-ifacialmocap-1.webp)
 
-It's recommended to enable **Optimize for long-time streaming**, which can help reduce device overheating from prolonged use.
+Se recomienda habilitar **Optimize for long-time streaming**, lo cual puede ayudar a reducir el sobrecalentamiento del dispositivo por uso prolongado.
 
 ![](/doc-img/zh-ifacialmocap-3.webp)
 
 ### FaceMotion3D
 
-Open the FaceMotion3D app, tap on the **Setting** icon in the lower left corner to enter the settings interface. Tap on **Streaming settings**. Set **Software Name** to **Other**, and enable **Compatible with iFacialMocap**.
+Abre la aplicación FaceMotion3D, toca el ícono **Setting** en la esquina inferior izquierda para entrar a la interfaz de configuración. Toca en **Streaming settings**. Establece **Software Name** en **Other**, y habilita **Compatible with iFacialMocap**.
 
-Go back to the main interface, tap on the **Live** button in the upper left corner, select **Other** as the software, and enter your computer's IP address. Then, tap **Connect** to start streaming.
+Regresa a la interfaz principal, toca el botón **Live** en la esquina superior izquierda, selecciona **Other** como el software, e ingresa la dirección IP de tu computadora. Luego, toca **Connect** para comenzar la transmisión.
 
-## Calibration
+## Calibración
 
-You can calibrate iFacialMocap's tracking by:
-* clicking **Character → Motion Capture → Quick Calibration → Calibrate iFacialMocap**, or
-* clicking **Calibrate** in the **iFacialMocap Receiver** asset.
+Puedes calibrar el seguimiento de iFacialMocap:
+* haciendo clic en **Character → Motion Capture → Quick Calibration → Calibrate iFacialMocap**, o
+* haciendo clic en **Calibrate** en el asset **iFacialMocap Receiver**.
 
-During calibration, you should look straight ahead and keep your head still. After calibration, you can move your head freely.
+Durante la calibración, debes mirar hacia adelante y mantener tu cabeza quieta. Después de la calibración, puedes mover tu cabeza libremente.
 
-## Frequently Asked Questions
+## Preguntas Frecuentes
 
-Please refer to [Overview](overview#FAQ) and [Customizing Face Tracking](face-tracking#FAQ) for common questions.
+Por favor consulta [Overview](overview#FAQ) y [Customizing Face Tracking](face-tracking#FAQ) para preguntas comunes.
 
 <AuthorBar authors={{
   creators: [
     {name: 'HakuyaTira', github: 'TigerHix'},
   ],
   translators: [
+    {name: 'かぐら (h.o.r.o)', github: 'Arukaito'},
   ],
 }} />

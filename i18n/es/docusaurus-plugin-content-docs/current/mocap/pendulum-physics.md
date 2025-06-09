@@ -2,10 +2,10 @@
 sidebar_position: 35
 ---
 
-# Pendulum Physics
+# Física de Péndulo
 
 :::warning
-This page is a work in progress. For now, please refer to our [Twitter thread](https://x.com/hakuyalabs/status/1746886661051453444) for a quick overview of the feature.
+Esta página está en progreso. Por ahora, por favor consulta nuestro [hilo de Twitter](https://x.com/hakuyalabs/status/1746886661051453444) para un resumen rápido de la característica.
 :::
 
 <AuthorBar authors={{
@@ -13,5 +13,6 @@ This page is a work in progress. For now, please refer to our [Twitter thread](h
     {name: 'HakuyaTira', github: 'TigerHix'},
   ],
   translators: [
+    {name: 'かぐら (Arukaito)', github: 'Arukaito'},
   ],
 }} />

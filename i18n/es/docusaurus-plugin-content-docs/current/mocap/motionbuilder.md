@@ -5,73 +5,74 @@ sidebar_position: 510
 # Autodesk MotionBuilder
 
 :::info
-This feature is only available in [Warudo Pro](../pro).
+Esta característica solo está disponible en [Warudo Pro](../pro).
 :::
 
-Body tracking via [Autodesk MotionBuilder](https://www.autodesk.com/products/motionbuilder/), enabling you to receive motion data from optical motion capture systems (e.g., [Vicon](https://www.vicon.com/), [OptiTrack](https://optitrack.com/)) that has Autodesk MotionBuilder integration.
+Seguimiento corporal a través de [Autodesk MotionBuilder](https://www.autodesk.com/products/motionbuilder/), permitiéndote recibir datos de movimiento de sistemas de captura de movimiento ópticos (ej., [Vicon](https://www.vicon.com/), [OptiTrack](https://optitrack.com/)) que tienen integración con Autodesk MotionBuilder.
 
-In addition to character tracking, prop tracking is also supported. For example, you may want to track a chair or a handheld camera using your optical tracking system and stream the motion data to Warudo, animating a chair prop or camera in Warudo accordingly.
+Además del seguimiento de personaje, también se soporta el seguimiento de props. Por ejemplo, puedes querer rastrear una silla o una cámara de mano usando tu sistema de seguimiento óptico y transmitir los datos de movimiento a Warudo, animando un prop de silla o cámara en Warudo acordemente.
 
-## Setup
+## Configuración
 
 :::info
-Please make sure you are using Autodesk MotionBuilder 2020. If you need compatibility for a different version, please reach out to us (it can take a while before we can deliver a build).
+Por favor asegúrate de estar usando Autodesk MotionBuilder 2020. Si necesitas compatibilidad para una versión diferente, por favor contáctanos (puede tomar un tiempo antes de que podamos entregar una compilación).
 :::
 
-Make sure the **Mobu2Warudo** plugin is already installed. It is included in your Warudo Pro license.
+Asegúrate de que el plugin **Mobu2Warudo** ya esté instalado. Está incluido en tu licencia de Warudo Pro.
 
-### Character Tracking
+### Seguimiento de Personaje
 
-Open MotionBuilder and load the FBX file of your character, and characterize it. **The model must have normalized bones, i.e., all bones on the model should have zero rotation (0, 0, 0) when the model is in T-pose.** The model should also have identical bone hierarchy as the character model loaded in Warudo.
+Abre MotionBuilder y carga el archivo FBX de tu personaje, y caracterízalo. **El modelo debe tener huesos normalizados, es decir, todos los huesos en el modelo deben tener rotación cero (0, 0, 0) cuando el modelo esté en T-pose.** El modelo también debe tener jerarquía de huesos idéntica al modelo de personaje cargado en Warudo.
 
 :::info
-You can check if a FBX model has normalized bones by importing it into Unity and checking if the bone transforms have zero rotation.
+Puedes verificar si un modelo FBX tiene huesos normalizados importándolo a Unity y verificando si las transformaciones de huesos tienen rotación cero.
 :::
 
-Drag **Devices → Warudo Device** into the scene view.
+Arrastra **Devices → Warudo Device** hacia la vista de escena.
 
 ![](/doc-img/en-motionbuilder-1.png)
 
 :::caution
-If you cannot see "Warudo Device", it means the plugin failed to load. Please download and install [Microsoft Visual C++ Redistributable](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170) and restart MotionBuilder.
+Si no puedes ver "Warudo Device", significa que el plugin falló al cargar. Por favor descarga e instala [Microsoft Visual C++ Redistributable](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170) y reinicia MotionBuilder.
 :::
 
-Select **Devices → Warudo Device → Characters**, click **Add** to add a new row. Change the default name **MyCharacter** to the actual character name, and click the red box next to the "Online" text. It should turn green immediately, indicating that MotionBuilder is now streaming motion data to Warudo.
+Selecciona **Devices → Warudo Device → Characters**, haz clic en **Add** para agregar una nueva fila. Cambia el nombre por defecto **MyCharacter** al nombre real del personaje, y haz clic en la caja roja junto al texto "Online". Debería volverse verde inmediatamente, indicando que MotionBuilder ahora está transmitiendo datos de movimiento a Warudo.
 
 ![](/doc-img/en-motionbuilder-2.png)
 
-In Warudo, update **MotionBuilder Receiver → MotionBuilder Character Name** to the actual character name.
+En Warudo, actualiza **MotionBuilder Receiver → MotionBuilder Character Name** al nombre real del personaje.
 
-### Prop Tracking
+### Seguimiento de Props
 
-Select **Devices → Warudo Device → Props**, click **Add** to add a new row. Change the default name **MyProp** to the label name of the object that you would like to track. The object can be anywhere in the scene hierarchy. Click the red box next to the "Online" text to start tracking.
+Selecciona **Devices → Warudo Device → Props**, haz clic en **Add** para agregar una nueva fila. Cambia el nombre por defecto **MyProp** al nombre de etiqueta del objeto que te gustaría rastrear. El objeto puede estar en cualquier lugar de la jerarquía de escena. Haz clic en la caja roja junto al texto "Online" para comenzar el seguimiento.
 
-In Warudo, create a new **MotionBuilder Prop Receiver** asset and enter the tracked object name for **MotionBuilder Prop Name**. Then, for **Target Asset**, select the Warudo prop/camera that you would like to control.
+En Warudo, crea un nuevo asset **MotionBuilder Prop Receiver** e ingresa el nombre del objeto rastreado para **MotionBuilder Prop Name**. Luego, para **Target Asset**, selecciona el prop/cámara de Warudo que te gustaría controlar.
 
 :::tip
-If you would like to access prop tracking data in blueprints, you can use the **Get MotionBuilder Prop Receiver Data** node.
+Si te gustaría acceder a datos de seguimiento de props en blueprints, puedes usar el nodo **Get MotionBuilder Prop Receiver Data**.
 :::
 
-## Frequently Asked Questions
+## Preguntas Frecuentes
 
-Please refer to [Overview](overview#FAQ) and [Customizing Pose Tracking](body-tracking#FAQ) for common questions.
+Por favor consulta [Resumen](overview#FAQ) y [Personalizar Seguimiento de Pose](body-tracking#FAQ) para preguntas comunes.
 
-### My character is in extremely weird poses.
+### Mi personaje está en poses extremadamente extrañas.
 
-First, make sure you have loaded the same model in Warudo and Autodesk MotionBuilder.
+Primero, asegúrate de haber cargado el mismo modelo en Warudo y Autodesk MotionBuilder.
 
-We also require the models to have normalized bones,  i.e., all bones on the model should have zero rotation (0, 0, 0) when the model is in T-pose. Please refer to [this page](../misc/normalizing-model-bones) for more details.
+También requerimos que los modelos tengan huesos normalizados, es decir, todos los huesos en el modelo deben tener rotación cero (0, 0, 0) cuando el modelo esté en T-pose. Por favor consulta [esta página](../misc/normalizing-model-bones) para más detalles.
 
-### I have confirmed Autodesk MotionBuilder is streaming data to another PC running Warudo, but Warudo has not received any data.
+### He confirmado que Autodesk MotionBuilder está transmitiendo datos a otra PC ejecutando Warudo, pero Warudo no ha recibido ningún dato.
 
-Please make sure the network settings are correct, i.e., the two PCs are on the same network and can communicate with each other. You can try to ping in both directions to confirm.
+Por favor asegúrate de que la configuración de red sea correcta, es decir, las dos PCs están en la misma red y pueden comunicarse entre sí. Puedes intentar hacer ping en ambas direcciones para confirmar.
 
-Additionally, if your character has a rather large hierarchy, please check if the receiving PC has a large enough MTU (Maximum Transmission Unit) size to receive the data, and increase it if necessary. See [this page](https://answers.microsoft.com/en-us/windows/forum/all/how-to-change-mtu-settings-in-windows-10/5c36c250-a0e8-47ee-b01c-de22139dc297) for more details.
+Adicionalmente, si tu personaje tiene una jerarquía bastante grande, por favor verifica si la PC receptora tiene un tamaño MTU (Maximum Transmission Unit) lo suficientemente grande para recibir los datos, y auméntalo si es necesario. Ve [esta página](https://answers.microsoft.com/en-us/windows/forum/all/how-to-change-mtu-settings-in-windows-10/5c36c250-a0e8-47ee-b01c-de22139dc297) para más detalles.
 
 <AuthorBar authors={{
   creators: [
     {name: 'HakuyaTira', github: 'TigerHix'},
   ],
   translators: [
+    {name: 'かぐら (Arukaito)', github: 'Arukaito'},
   ],
 }} />

@@ -4,40 +4,41 @@ sidebar_position: 68
 
 # SteamVR
 
-Tracking via solving VR tracker data from [SteamVR](https://store.steampowered.com/app/250820/SteamVR/).
+Seguimiento a través de resolver datos de rastreador VR desde [SteamVR](https://store.steampowered.com/app/250820/SteamVR/).
 
-## Setup
+## Configuración
 
-### Character Tracking
+### Seguimiento de Personaje
 
-Warudo currently supports 6-point character tracking. After [setting up motion capture](body-tracking) to use SteamVR, go to the **SteamVR Character Tracker** asset and click the **Setup / Calibrate** button. You will see a list of trackers that you can assign to different body parts. Then, you will be asked to perform a T-pose to calibrate the trackers.
-
-:::tip
-We will add support for elbow, knee, and chest trackers in the future.
-:::
-
-After calibrating, you can expand each tracker to visualize the tracking sphere and adjust its **Position Offset** and **Rotation Offset**. This is especially useful if the trackers are not placed at the exact place on your body. For example, if your head tracker is put on top of your head, you should adjust the **Position Offset** to move the tracking sphere downwards, so that it matches your head position relative to the tracker.
-
-### Prop Tracking
-
-In Warudo, create a new **SteamVR Prop Tracker** asset and select the VR **Device** that you would like to track. You may also want to select the **Reference Frame** to be your character asset. Then, for **Target Asset**, select the Warudo prop/camera that you would like to control.
+Warudo actualmente soporta seguimiento de personaje de 6 puntos. Después de [configurar captura de movimiento](body-tracking) para usar SteamVR, ve al asset **SteamVR Character Tracker** y haz clic en el botón **Setup / Calibrate**. Verás una lista de rastreadores que puedes asignar a diferentes partes del cuerpo. Luego, se te pedirá realizar una T-pose para calibrar los rastreadores.
 
 :::tip
-If you would like to access prop tracking data in blueprints, you can use the **Get SteamVR Prop Tracker Data** node.
+Agregaremos soporte para rastreadores de codo, rodilla y pecho en el futuro.
 :::
 
-## Accessing Raw Device Data
+Después de calibrar, puedes expandir cada rastreador para visualizar la esfera de seguimiento y ajustar su **Position Offset** y **Rotation Offset**. Esto es especialmente útil si los rastreadores no están colocados en el lugar exacto de tu cuerpo. Por ejemplo, si tu rastreador de cabeza está puesto encima de tu cabeza, debes ajustar el **Position Offset** para mover la esfera de seguimiento hacia abajo, para que coincida con la posición de tu cabeza relativa al rastreador.
 
-If you would like to access raw device data in blueprints, you can use the **Get SteamVR Device Data** node. This node returns the position and rotation of the specified VR device (e.g., tracker, controller, HMD).
+### Seguimiento de Props
 
-## Frequently Asked Questions
+En Warudo, crea un nuevo asset **SteamVR Prop Tracker** y selecciona el **Device** VR que te gustaría rastrear. También es posible que quieras seleccionar el **Reference Frame** para que sea tu asset de personaje. Luego, para **Target Asset**, selecciona el prop/cámara de Warudo que te gustaría controlar.
 
-Please refer to [Overview](overview#FAQ) and [Customizing Pose Tracking](body-tracking#FAQ) for common questions.
+:::tip
+Si te gustaría acceder a datos de seguimiento de props en blueprints, puedes usar el nodo **Get SteamVR Prop Tracker Data**.
+:::
+
+## Acceder a Datos de Dispositivo Sin Procesar
+
+Si te gustaría acceder a datos de dispositivo sin procesar en blueprints, puedes usar el nodo **Get SteamVR Device Data**. Este nodo devuelve la posición y rotación del dispositivo VR especificado (ej., rastreador, controlador, HMD).
+
+## Preguntas Frecuentes
+
+Por favor consulta [Resumen](overview#FAQ) y [Personalizar Seguimiento de Pose](body-tracking#FAQ) para preguntas comunes.
 
 <AuthorBar authors={{
   creators: [
     {name: 'HakuyaTira', github: 'TigerHix'},
   ],
   translators: [
+    {name: 'かぐら (Arukaito)', github: 'Arukaito'},
   ],
 }} />

@@ -4,94 +4,95 @@ sidebar_position: 50
 
 # MediaPipe
 
-Webcam-based face and hand tracking. For face tracking, MediaPipe tracks 40+ ARKit blendshapes, head rotation and head translation. For pose tracking, MediaPipe tracks your wrist and fingers.
+Seguimiento facial y de manos basado en webcam. Para el seguimiento facial, MediaPipe rastrea más de 40 blendshapes de ARKit, rotación de cabeza y traslación de cabeza. Para el seguimiento de pose, MediaPipe rastrea tus muñecas y dedos.
 
-## Setup
+## Configuración
 
-MediaPipe is built into Warudo, so you do not need to install any additional software. Most webcams should work with MediaPipe, but if you have trouble getting it to work, refer to the [FAQ](#FAQ) section below.
+MediaPipe está integrado en Warudo, por lo que no necesitas instalar ningún software adicional. La mayoría de las webcams deberían funcionar con MediaPipe, pero si tienes problemas para hacerlo funcionar, consulta la sección de [Preguntas Frecuentes](#FAQ) más abajo.
 
-MediaPipe can be run either on CPU or GPU. GPU is recommended for better performance; by default, MediaPipe already runs on GPU. To use CPU instead, go to the **MediaPipe Tracker** asset and disable **GPU Acceleration**.
+MediaPipe puede ejecutarse tanto en CPU como en GPU. Se recomienda GPU para mejor rendimiento; por defecto, MediaPipe ya se ejecuta en GPU. Para usar CPU en su lugar, ve al asset **MediaPipe Tracker** y deshabilita **GPU Acceleration**.
 
 :::tip
-When to use CPU? If you are playing a game that uses a lot of GPU resources, you may want to use CPU for MediaPipe instead to avoid performance issues.
+¿Cuándo usar CPU? Si estás jugando un juego que usa muchos recursos de GPU, puede que quieras usar CPU para MediaPipe en su lugar para evitar problemas de rendimiento.
 :::
 
-If you use MediaPipe for hand tracking, please make sure you are at the camera center and your hands are fully visible in the camera view. You can enable **Show Camera** in the **MediaPipe Tracker** asset to see the camera view; it should look like this:
+Si usas MediaPipe para el seguimiento de manos, por favor asegúrate de estar en el centro de la cámara y que tus manos estén completamente visibles en la vista de la cámara. Puedes habilitar **Show Camera** en el asset **MediaPipe Tracker** para ver la vista de la cámara; debería verse así:
 
 ![](/doc-img/en-mediapipe-1.png)
 
-Usually, you should place the camera above the computer screen, with your head slightly above the center of the camera view. We also recommend calibrating hand tracking before use. See [Calibration](#Calibration) for details.
+Generalmente, deberías colocar la cámara arriba de la pantalla de la computadora, con tu cabeza ligeramente arriba del centro de la vista de la cámara. También recomendamos calibrar el seguimiento de manos antes del uso. Ve [Calibración](#Calibration) para detalles.
 
-## Calibration {#Calibration}
+## Calibración {#Calibration}
 
-### Face Tracking
+### Seguimiento Facial
 
-You can calibrate MediaPipe's face tracking by:
-* clicking **Character → Motion Capture → Quick Calibration → Calibrate MediaPipe**, or
-* clicking **Calibrate** in the **MediaPipe Tracker** asset.
+Puedes calibrar el seguimiento facial de MediaPipe:
+* haciendo clic en **Character → Motion Capture → Quick Calibration → Calibrate MediaPipe**, o
+* haciendo clic en **Calibrate** en el asset **MediaPipe Tracker**.
 
-During calibration, you should look straight ahead and keep your head still. After calibration, you can move your head freely.
+Durante la calibración, debes mirar hacia adelante y mantener tu cabeza quieta. Después de la calibración, puedes mover tu cabeza libremente.
 
-### Hand Tracking
+### Seguimiento de Manos
 
-You can calibrate MediaPipe's hand tracking by clicking **Calibrate Hand Tracking** in the **MediaPipe Tracker** asset. Raise one of your hands next to your ear with your palm facing the camera. Use your other hand to press **OK** to calibrate.
+Puedes calibrar el seguimiento de manos de MediaPipe haciendo clic en **Calibrate Hand Tracking** en el asset **MediaPipe Tracker**. Levanta una de tus manos junto a tu oreja con la palma mirando hacia la cámara. Usa tu otra mano para presionar **OK** para calibrar.
 
 ![](/doc-img/en-mediapipe-2.png)
-<p class="img-desc">During calibration, the hands should be in a relaxed posture with palm facing the camera, with fingers slightly bent if desired.</p>
+<p class="img-desc">Durante la calibración, las manos deben estar en una postura relajada con la palma mirando hacia la cámara, con los dedos ligeramente doblados si se desea.</p>
 
-If you find your hands are moving too fast or too slow, you can adjust the **Hand Movement Range** option. You can also adjust the **Hand Movement Offset** option, to move the hands closer to your head, for example.
+Si encuentras que tus manos se mueven demasiado rápido o demasiado lento, puedes ajustar la opción **Hand Movement Range**. También puedes ajustar la opción **Hand Movement Offset**, para mover las manos más cerca de tu cabeza, por ejemplo.
 
-## Options
+## Opciones
 
-* **Hand Movement Range**: The range of motion for the hands. X is left and right, Y is up and down, and Z is forward and backward.
-* **Hand Movement Offset**: The offset of the hand movement range. Positive X is a left offset, positive Y is an upward offset, and positive Z is a forward offset.
-* **Arm Swivel Offset**: Rotates the elbow inwards or outwards.
-* **Hand Horizontal Distance Compensation**: Brings the character's hands closer together, making it easier to make gestures like crossing fingers.
-* **Hand Y Threshold**: If the distance between the wrist and the top and bottom edges of the camera view is less than this value, the tracking of that hand is ignored. This helps to avoid jitter problems caused by unstable tracking.
-* **Camera Diagonal Field of View**: The field of view of the camera. An accurate value helps to estimate the depth of the hands. You can usually find the field of view listed by the manufacturer on the camera's store page.
-* **Hand Push Z Max**: The hands will be pushed forward to prevent clipping through the body. This value determines the maximum distance that the hands will be pushed forward.
-* **Hand Push Y Range**: The further down the hands are from the shoulders, the more they will be pushed forward. When the vertical distance from the hands to the shoulders is greater than or equal to this value, they will be pushed forward to the maximum.
-* **Hand Push Y Offset**: When this value is 0, the hands start to be pushed forward from the shoulders down. When this value is positive, the hands start to be pushed forward from above the shoulders.
-* **Shoulder Rotation Weight**: How much the shoulders should be rotated. 0 means no rotation, 1 means full rotation. Adjust this value until the shoulders look natural.
+* **Hand Movement Range**: El rango de movimiento para las manos. X es izquierda y derecha, Y es arriba y abajo, y Z es adelante y atrás.
+* **Hand Movement Offset**: El desplazamiento del rango de movimiento de las manos. X positivo es un desplazamiento a la izquierda, Y positivo es un desplazamiento hacia arriba, y Z positivo es un desplazamiento hacia adelante.
+* **Arm Swivel Offset**: Rota el codo hacia adentro o hacia afuera.
+* **Hand Horizontal Distance Compensation**: Acerca las manos del personaje, facilitando hacer gestos como cruzar los dedos.
+* **Hand Y Threshold**: Si la distancia entre la muñeca y los bordes superior e inferior de la vista de la cámara es menor que este valor, el seguimiento de esa mano se ignora. Esto ayuda a evitar problemas de temblor causados por seguimiento inestable.
+* **Camera Diagonal Field of View**: El campo de visión de la cámara. Un valor preciso ayuda a estimar la profundidad de las manos. Normalmente puedes encontrar el campo de visión listado por el fabricante en la página de la tienda de la cámara.
+* **Hand Push Z Max**: Las manos serán empujadas hacia adelante para prevenir que atraviesen el cuerpo. Este valor determina la distancia máxima que las manos serán empujadas hacia adelante.
+* **Hand Push Y Range**: Mientras más abajo estén las manos de los hombros, más serán empujadas hacia adelante. Cuando la distancia vertical de las manos a los hombros sea mayor o igual a este valor, serán empujadas hacia adelante al máximo.
+* **Hand Push Y Offset**: Cuando este valor es 0, las manos comienzan a ser empujadas hacia adelante desde los hombros hacia abajo. Cuando este valor es positivo, las manos comienzan a ser empujadas hacia adelante desde arriba de los hombros.
+* **Shoulder Rotation Weight**: Cuánto deberían rotar los hombros. 0 significa sin rotación, 1 significa rotación completa. Ajusta este valor hasta que los hombros se vean naturales.
 
-## Frequently Asked Questions {#FAQ}
+## Preguntas Frecuentes {#FAQ}
 
-Please refer to [Overview](overview#FAQ), [Customizing Face Tracking](face-tracking#FAQ), and [Customizing Pose Tracking](body-tracking#FAQ) for common questions.
+Por favor consulta [Overview](overview#FAQ), [Customizing Face Tracking](face-tracking#FAQ), y [Customizing Pose Tracking](body-tracking#FAQ) para preguntas comunes.
 
-### My MediaPipe tracker window is black / stuck at "Loading...".
+### Mi ventana del rastreador MediaPipe está negra / atascada en "Loading...".
 
-Some webcams are only supported when **GPU Acceleration** is enabled (e.g., IP cameras such as [DroidCam](https://play.google.com/store/apps/details?id=com.dev47apps.droidcam\&hl=en\_US\&gl=US\&pli=1)), while some are only supported when **GPU Acceleration** is disabled. You can try toggling **GPU Acceleration** in the **MediaPipe Tracker** asset to see if it fixes the issue.
+Algunas webcams solo son soportadas cuando **GPU Acceleration** está habilitado (p. ej., cámaras IP como [DroidCam](https://play.google.com/store/apps/details?id=com.dev47apps.droidcam\&hl=en\_US\&gl=US\&pli=1)), mientras que algunas solo son soportadas cuando **GPU Acceleration** está deshabilitado. Puedes intentar alternar **GPU Acceleration** en el asset **MediaPipe Tracker** para ver si soluciona el problema.
 
-Additionally, some antivirus software may block Warudo from accessing the camera. Please disable the camera protection function of your antivirus software, or add Warudo to the whitelist.
+Adicionalmente, algunos software antivirus pueden bloquear a Warudo de acceder a la cámara. Por favor deshabilita la función de protección de cámara de tu software antivirus, o agrega Warudo a la lista blanca.
 
-### I cannot puff my cheeks / stick out my tongue.
+### No puedo inflar mis mejillas / sacar mi lengua.
 
-This is a known limitation of MediaPipe; we are waiting for Google to [fix it](https://github.com/google/mediapipe/issues/4403).
+Esta es una limitación conocida de MediaPipe; estamos esperando a que Google lo [solucione](https://github.com/google/mediapipe/issues/4403).
 
-### My tracking is jittery.
+### Mi seguimiento está entrecortado.
 
-First, make sure your webcam is actually running at 30+ FPS. You can use [this website](https://webcamtests.com/fps) to check your webcam's FPS. If your webcam is running at a low FPS, your room may be too dark; make sure your room is well-lit.
+Primero, asegúrate de que tu webcam esté realmente ejecutándose a 30+ FPS. Puedes usar [este sitio web](https://webcamtests.com/fps) para verificar los FPS de tu webcam. Si tu webcam se está ejecutando a FPS bajos, tu habitación puede estar demasiado oscura; asegúrate de que tu habitación esté bien iluminada.
 
-If your webcam is running at 30+ FPS, but the tracker window shows a much lower FPS, try toggling **GPU Acceleration** in the **MediaPipe Tracker** asset.
+Si tu webcam se está ejecutando a 30+ FPS, pero la ventana del rastreador muestra FPS mucho más bajos, intenta alternar **GPU Acceleration** en el asset **MediaPipe Tracker**.
 
 :::tip
-The tracking FPS is usually between 15-30. When you are playing a 3D game, the tracking FPS may drop to ~10.
+Los FPS de seguimiento normalmente están entre 15-30. Cuando estás jugando un juego 3D, los FPS de seguimiento pueden bajar a ~10.
 :::
 
-### My tracking has frozen.
+### Mi seguimiento se ha congelado.
 
-If you are using a laptop, make sure it is plugged in and not running on battery.
+Si estás usando una laptop, asegúrate de que esté conectada y no funcionando con batería.
 
-### Should I use MediaPipe or [Leap Motion](leap-motion.md) for hand tracking?
+### ¿Debería usar MediaPipe o [Leap Motion](leap-motion.md) para el seguimiento de manos?
 
-We generally recommend to use a Leap Motion Controller 2 with a neck/chest mount for hand tracking, if you have the budget. Leap Motion tracking is generally more stable and uses less CPU/GPU resources than MediaPipe, especially when you are playing a 3D game.
+Generalmente recomendamos usar un Leap Motion Controller 2 con un soporte para cuello/pecho para el seguimiento de manos, si tienes el presupuesto. El seguimiento de Leap Motion es generalmente más estable y usa menos recursos de CPU/GPU que MediaPipe, especialmente cuando estás jugando un juego 3D.
 
-We do not recommend Leap Motion Controller 1 which tends to lose tracking easily.
+No recomendamos el Leap Motion Controller 1 que tiende a perder el seguimiento fácilmente.
 
 <AuthorBar authors={{
   creators: [
     {name: 'HakuyaTira', github: 'TigerHix'},
   ],
   translators: [
+    {name: 'かぐら (h.o.r.o)', github: 'Arukaito'},
   ],
 }} />

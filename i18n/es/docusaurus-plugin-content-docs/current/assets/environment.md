@@ -2,44 +2,45 @@
 sidebar_position: 40
 ---
 
-# Environment
+# Entorno
 
-Often referred to as a "3D background," an environment is a 3D scene that is displayed behind the characters. You can import your own environments using the [Mod SDK](../modding/mod-sdk.md).
+A menudo referido como un "fondo 3D", un entorno es una escena 3D que se muestra detrás de los personajes. Puedes importar tus propios entornos usando el [Mod SDK](../modding/mod-sdk.md).
 
 ![](/doc-img/zh-environment-1.webp)
-<p class="img-desc">The Onsen environment.</p>
+<p class="img-desc">El entorno Onsen.</p>
 
 ## Steam Workshop
 
-In addition to the built-in environments, you can download official and community environments from Warudo's Steam Workshop. Click on the **Discover** tab and select the **Environments** category:
+Además de los entornos integrados, puedes descargar entornos oficiales y de la comunidad desde el Steam Workshop de Warudo. Haz clic en la pestaña **Discover** y selecciona la categoría **Environments**:
 
 ![](/doc-img/en-environment-1.png)
-<p class="img-desc">Browsing environments from the Steam Workshop.</p>
+<p class="img-desc">Navegando entornos desde el Steam Workshop.</p>
 
-## Setup
+## Configuración
 
-To set up an environment, simply select a **Source** as the model for the environment.
+Para configurar un entorno, simplemente selecciona un **Source** como el modelo para el entorno.
 
 :::tip
-It is recommended to turn off **Allow Lights To Affect Characters** so that you have more control over the lighting of your character using the [**Directional Light**](lights) asset.
+Se recomienda desactivar **Allow Lights To Affect Characters** para que tengas más control sobre la iluminación de tu personaje usando el asset [**Directional Light**](lights).
 :::
 
 :::tip
-To build up the atmosphere of your scene, an environment is just the beginning. You should look into the post processing effects offered by the [camera](camera) asset, or in the case of Warudo Pro users using Universal RP, the [post processing volume](ppv) and [NiloToon volume](nilotoon-volume) assets. 
+Para construir la atmósfera de tu escena, un entorno es solo el comienzo. Deberías explorar los efectos de post-procesamiento ofrecidos por el asset [camera](camera), o en el caso de usuarios de Warudo Pro usando Universal RP, los assets [post processing volume](ppv) y [NiloToon volume](nilotoon-volume).
 :::
 
 :::caution
-Although you are allowed to move and rotate the environment, it is not recommended to do so; instead, you should move and rotate the character. This is because most environments are not designed to be moved or rotated, and doing so may cause visual glitches in the environment.
+Aunque se te permite mover y rotar el entorno, no se recomienda hacerlo; en su lugar, debes mover y rotar el personaje. Esto es porque la mayoría de los entornos no están diseñados para ser movidos o rotados, y hacerlo puede causar fallas visuales en el entorno.
 :::
 
-## Override Environment Settings
+## Anular Configuraciones del Entorno
 
-You can override the environment settings such as **Ambient Lighting Source**, **Environment Reflections Intensity**, etc. Note that not all these settings are supported by all environments; for example, if an environment use baked lighting, then **Ambient Lighting Source** will be ignored.
+Puedes anular las configuraciones del entorno como **Ambient Lighting Source**, **Environment Reflections Intensity**, etc. Ten en cuenta que no todas estas configuraciones son soportadas por todos los entornos; por ejemplo, si un entorno usa iluminación horneada, entonces **Ambient Lighting Source** será ignorado.
 
 <AuthorBar authors={{
   creators: [
     {name: 'HakuyaTira', github: 'TigerHix'},
   ],
   translators: [
+    {name: 'かぐら (Arukaito)', github: 'Arukaito'},
   ],
 }} />

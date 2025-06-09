@@ -2,63 +2,63 @@
 sidebar_position: 0
 ---
 
-# Overview
+# Resumen
 
 ![](/doc-img/mod-cover.jpg)
 
-Warudo provides a complete modding system that allows you to import your own 3D assets into Warudo, including:
+Warudo proporciona un sistema completo de modding que te permite importar tus propios assets 3D a Warudo, incluyendo:
 
-* [Characters](character-mod)
-* [Character Animations](character-animation-mod)
+* [Personajes](character-mod)
+* [Animaciones de Personaje](character-animation-mod)
 * [Props](prop-mod)
-* [Particles](particle-mod)
-* [Environments](environment-mod)
+* [Partículas](particle-mod)
+* [Entornos](environment-mod)
 
-Mods in Warudo are created using the **Warudo SDK**. A SDK is basically a fancy way of saying "a set of tools that help you create mods," in this case, our Unity project! Mods exported by the Warudo SDK have a `.warudo` file extension and can be recognized by Warudo when placed in the corresponding data folders. You can share your mod files with others directly, or upload to our [Steam Workshop](https://steamcommunity.com/app/2079120/workshop/) via the **Discover** tab.
+Los mods en Warudo se crean usando el **Warudo SDK**. Un SDK es básicamente una forma elegante de decir "un conjunto de herramientas que te ayudan a crear mods", ¡en este caso, nuestro proyecto de Unity! Los mods exportados por el Warudo SDK tienen una extensión de archivo `.warudo` y pueden ser reconocidos por Warudo cuando se colocan en las carpetas de datos correspondientes. Puedes compartir tus archivos de mod con otros directamente, o subirlos a nuestro [Steam Workshop](https://steamcommunity.com/app/2079120/workshop/) a través de la pestaña **Discover**.
 
 ![](/doc-img/en-mod-8.png)
-<p class="img-desc">Browsing and sharing mods in the Discover tab.</p>
+<p class="img-desc">Navegando y compartiendo mods en la pestaña Discover.</p>
 
-## Setup the SDK
+## Configurar el SDK
 
-To Setup the SDK, you need to setup Unity correctly first.  
-You can check the detailed steps at: [Unity & Warudo SDK Installation](sdk-installation.md)
+Para configurar el SDK, necesitas configurar Unity correctamente primero.  
+Puedes verificar los pasos detallados en: [Instalación de Unity y Warudo SDK](sdk-installation.md)
 
-## Custom Shaders {#custom-shaders}
+## Shaders Personalizados {#custom-shaders}
 
-You can use any shader that is compatible with Unity's built-in rendering pipeline, such as [lilToon](https://lilxyzw.github.io/lilToon/#/) and [Poiyomi Shader](https://www.poiyomi.com/).
+Puedes usar cualquier shader que sea compatible con el pipeline de renderizado integrado de Unity, como [lilToon](https://lilxyzw.github.io/lilToon/#/) y [Poiyomi Shader](https://www.poiyomi.com/).
 
-[Warudo Pro](../pro.md) also supports the [Universal Render Pipeline](https://docs.unity3d.com/Manual/com.unity.render-pipelines.universal.html) (URP), which allows you to use URP-compatible shaders.
+[Warudo Pro](../pro.md) también soporta el [Universal Render Pipeline](https://docs.unity3d.com/Manual/com.unity.render-pipelines.universal.html) (URP), que te permite usar shaders compatibles con URP.
 
-## Custom C# Scripts {#custom-scripts}
+## Scripts C# Personalizados {#custom-scripts}
 
-What makes Warudo mods unique is that they can include [C# MonoBehaviour scripts](https://docs.unity3d.com/ScriptReference/MonoBehaviour.html), enabling you to add interactivity to your mods. For example, you can add a script to your character mod to animate your character's ears, or add a script to your environment mod to control the lighting. To interact with Warudo's built-in components, please refer to the [Scripting](../scripting/overview) section.
+Lo que hace únicos a los mods de Warudo es que pueden incluir [scripts MonoBehaviour de C#](https://docs.unity3d.com/ScriptReference/MonoBehaviour.html), permitiéndote agregar interactividad a tus mods. Por ejemplo, puedes agregar un script a tu mod de personaje para animar las orejas de tu personaje, o agregar un script a tu mod de entorno para controlar la iluminación. Para interactuar con los componentes integrados de Warudo, por favor consulta la sección [Scripting](../scripting/overview).
 
-Any C# scripts placed in the mod folder will be compiled and included in the mod. You can attach these scripts to your character, prop, or environment just like how you would do in a normal Unity project.
+Cualquier script de C# colocado en la carpeta del mod será compilado e incluido en el mod. Puedes adjuntar estos scripts a tu personaje, prop o entorno tal como lo harías en un proyecto normal de Unity.
 
-However, please note the following limitations:
+Sin embargo, ten en cuenta las siguientes limitaciones:
 
-* [Assembly definitions (`.asmdef`)](https://docs.unity3d.com/Manual/ScriptCompilationAssemblyDefinitionFiles.html) are not currently supported. C# scripts covered by the assembly definitions will not be packaged into the mod.
-* [ScriptableObjects](https://docs.unity3d.com/ScriptReference/ScriptableObject.html) are not currently supported.
-* Compiled DLLs are not currently supported. You can only include `.cs` source files.
-* Any scripts that reference the `UnityEditor` namespace are not supported.
+* [Definiciones de ensamblado (`.asmdef`)](https://docs.unity3d.com/Manual/ScriptCompilationAssemblyDefinitionFiles.html) no están soportadas actualmente. Los scripts de C# cubiertos por las definiciones de ensamblado no serán empaquetados en el mod.
+* [ScriptableObjects](https://docs.unity3d.com/ScriptReference/ScriptableObject.html) no están soportados actualmente.
+* DLLs compilados no están soportados actualmente. Solo puedes incluir archivos fuente `.cs`.
+* Cualquier script que referencie el namespace `UnityEditor` no está soportado.
 
-If you are including scripts in your mod, we recommend to set **Log Level** to All and uncheck **Clear Console On Build** in the Mod Settings window:
+Si estás incluyendo scripts en tu mod, recomendamos establecer **Log Level** en All y desmarcar **Clear Console On Build** en la ventana de Configuración de Mod:
 
 ![](/doc-img/en-mod-13.png)
 
-This provides more information when building the mod, so you can check the console for any errors. If you have checked scripts are placed in the mod folder but the build log states that no scripts are found so the compilation is skipped, it is likely that `.csproj` files were not generated correctly in your project. You need to click on **Edit → Preferences → External Tools** and click **Regenerate project files**:
+Esto proporciona más información al construir el mod, para que puedas verificar la consola por cualquier error. Si has verificado que los scripts están colocados en la carpeta del mod pero el log de construcción establece que no se encontraron scripts por lo que la compilación se omite, es probable que los archivos `.csproj` no se generaron correctamente en tu proyecto. Necesitas hacer clic en **Edit → Preferences → External Tools** y hacer clic en **Regenerate project files**:
 
 ![](/doc-img/en-mod-12.png)
 
-Then, try building the mod again.
+Luego, intenta construir el mod nuevamente.
 
-## Backing Up Your Modding Project
+## Respaldo de tu Proyecto de Modding
 
-We recommend making a backup of your modding project regularly or use [Unity Version Control](https://unity.com/solutions/version-control). Especially, if you are creating mods regularly, you should back up the `Asset/Packages/UMod/ExportSettings.asset` file (note this file is not visible in the Unity editor). This file stores the mod export settings, such as the mod export directory and the mod icon. If you lose this file, you will need to manually create all your mods again.
+Recomendamos hacer un respaldo de tu proyecto de modding regularmente o usar [Unity Version Control](https://unity.com/solutions/version-control). Especialmente, si estás creando mods regularmente, debes respaldar el archivo `Asset/Packages/UMod/ExportSettings.asset` (nota que este archivo no es visible en el editor de Unity). Este archivo almacena las configuraciones de exportación de mod, como el directorio de exportación de mod y el ícono del mod. Si pierdes este archivo, necesitarás crear manualmente todos tus mods nuevamente.
 
 :::caution
-We have received reports that some users have lost their export setting after exporting a mod. This is currently under investigation. In the meantime, we recommend backing up the `ExportSettings.asset` file regularly.
+Hemos recibido reportes de que algunos usuarios han perdido su configuración de exportación después de exportar un mod. Esto está actualmente bajo investigación. Mientras tanto, recomendamos respaldar el archivo `ExportSettings.asset` regularmente.
 :::
 
 <AuthorBar authors={{
@@ -66,5 +66,6 @@ We have received reports that some users have lost their export setting after ex
     {name: 'HakuyaTira', github: 'TigerHix'},
   ],
   translators: [
+    {name: 'かぐら (Arukaito)', github: 'Arukaito'},
   ],
 }} />

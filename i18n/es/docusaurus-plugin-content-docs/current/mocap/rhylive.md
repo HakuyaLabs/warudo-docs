@@ -4,10 +4,10 @@ sidebar_position: 65
 
 # RhyLive
 
-ARKit-based face and upper body tracking. Requires a [Face ID](https://support.apple.com/en-us/HT208109)-compatible iOS device and the free [RhyLive](https://apps.apple.com/us/app/rhylive/) app. Tracks 52 ARKit blendshapes, head rotation, and hand movements.
+Seguimiento facial y de la parte superior del cuerpo basado en ARKit. Requiere un dispositivo iOS compatible con [Face ID](https://support.apple.com/en-us/HT208109) y la app gratuita [RhyLive](https://apps.apple.com/us/app/rhylive/). Rastrea 52 blendshapes de ARKit, rotación de cabeza y movimientos de manos.
 
 :::info
-RhyLive and iFacialMocap have similar accuracy when it comes to face tracking, but iFacialMocap is more flexible because it can track head movements, which allows the model to move more naturally. See the following comparison:
+RhyLive e iFacialMocap tienen precisión similar cuando se trata de seguimiento facial, pero iFacialMocap es más flexible porque puede rastrear movimientos de cabeza, lo que permite que el modelo se mueva más naturalmente. Ve la siguiente comparación:
 
 <div className="video-box"><video controls src="/doc-img/zh-rhylive-video-1.mp4" />
 <p>RhyLive</p>
@@ -18,54 +18,55 @@ RhyLive and iFacialMocap have similar accuracy when it comes to face tracking, b
 </div>
 :::
 
-## Setup
+## Configuración
 
-To use RhyLive on an iOS device, open the app and tap on the menu icon in the top left corner to enter the settings. If your computer and phone are connected to the same WiFi network, enter your computer's IP in the "IP" field and turn on the "无线" (Wireless) switch. Alternatively, you can connect your device to your computer using a USB cable and turn on the "有线" (Wired) switch ([iTunes](https://www.apple.com/itunes/) required).
+Para usar RhyLive en un dispositivo iOS, abre la app y toca el ícono de menú en la esquina superior izquierda para entrar a la configuración. Si tu computadora y teléfono están conectados a la misma red WiFi, ingresa la IP de tu computadora en el campo "IP" y enciende el interruptor "无线" (Inalámbrico). Alternativamente, puedes conectar tu dispositivo a tu computadora usando un cable USB y encender el interruptor "有线" (Cableado) ([iTunes](https://www.apple.com/itunes/) requerido).
 
 ![](/doc-img/zh-rhylive-1.webp)
 
 :::tip
-If you do not know your computer's IP, you can check on the configuration page of the **RhyLive Receiver** asset.
+Si no conoces la IP de tu computadora, puedes verificarla en la página de configuración del asset **RhyLive Receiver**.
 
 ![](/doc-img/en-ifacialmocap-1.png)
 
-If multiple IPs are listed, you would need to try each one. Usually, the IP address assigned to your computer by your WiFi router starts with `192.168`. For example, in the above picture, you can first try `192.168.1.151`.
+Si aparecen múltiples IPs listadas, necesitarías probar cada una. Usualmente, la dirección IP asignada a tu computadora por tu router WiFi comienza con `192.168`. Por ejemplo, en la imagen de arriba, puedes intentar primero `192.168.1.151`.
 :::
 
 :::info
-If you use the "Wired" option, you must open the RhyLive app, connect your iPhone to your PC before launching Warudo.
+Si usas la opción "Cableado", debes abrir la app RhyLive, conectar tu iPhone a tu PC antes de ejecutar Warudo.
 :::
 
-It is recommended to turn off "锁定弯腰" (Lock body bending) and turn on "隐藏模型" (Hide model). The former increases the range of motion of the model, while the latter helps reduce device overheating from prolonged use.
+Se recomienda desactivar "锁定弯腰" (Bloquear inclinación del cuerpo) y activar "隐藏模型" (Ocultar modelo). Lo primero aumenta el rango de movimiento del modelo, mientras que lo segundo ayuda a reducir el sobrecalentamiento del dispositivo por uso prolongado.
 
 ![](/doc-img/zh-rhylive-3.webp)
 
-## Calibration
+## Calibración
 
-You can calibrate RhyLive's tracking by:
-* clicking **Character → Motion Capture → Quick Calibration → Calibrate RhyLive**, or
-* clicking **Calibrate** in the **RhyLive Receiver** asset.
+Puedes calibrar el seguimiento de RhyLive:
+* haciendo clic en **Character → Motion Capture → Quick Calibration → Calibrate RhyLive**, o
+* haciendo clic en **Calibrate** en el asset **RhyLive Receiver**.
 
-During calibration, you should look straight ahead and keep your head still. After calibration, you can move your head freely.
+Durante la calibración, debes mirar hacia adelante y mantener tu cabeza quieta. Después de la calibración, puedes mover tu cabeza libremente.
 
-## Frequently Asked Questions
+## Preguntas Frecuentes
 
-Please refer to [Overview](overview#FAQ) and [Customizing Face Tracking](face-tracking#FAQ) for common questions.
+Por favor consulta [Resumen](overview#FAQ) y [Personalizar Seguimiento Facial](face-tracking#FAQ) para preguntas comunes.
 
-### I am using the "Wired" option and connected my iPhone to my computer via USB, but my character is not moving.
+### Estoy usando la opción "Cableado" y conecté mi iPhone a mi computadora vía USB, pero mi personaje no se está moviendo.
 
-Make sure [iTunes for Windows](https://support.apple.com/en-us/HT210384) is installed on your computer. If you have iTunes installed from Microsoft Store, you may need to uninstall it and install the version from Apple's website.
+Asegúrate de que [iTunes para Windows](https://support.apple.com/en-us/HT210384) esté instalado en tu computadora. Si tienes iTunes instalado desde Microsoft Store, puede que necesites desinstalarlo e instalar la versión del sitio web de Apple.
 
-Alternatively, you can try using the "Wireless" option instead.
+Alternativamente, puedes intentar usar la opción "Inalámbrico" en su lugar.
 
-### I am using the "Wireless" option and make sure my computer and iPhone are connected to the same WiFi network, but my character is not moving.
+### Estoy usando la opción "Inalámbrico" y me aseguré de que mi computadora e iPhone estén conectados a la misma red WiFi, pero mi personaje no se está moviendo.
 
-Please try to toggle off and on the "无线" (Wireless) switch in the RhyLive app, or restart the app.
+Por favor intenta desactivar y activar el interruptor "无线" (Inalámbrico) en la app RhyLive, o reinicia la app.
 
 <AuthorBar authors={{
   creators: [
     {name: 'HakuyaTira', github: 'TigerHix'},
   ],
   translators: [
+    {name: 'かぐら (Arukaito)', github: 'Arukaito'},
   ],
 }} />

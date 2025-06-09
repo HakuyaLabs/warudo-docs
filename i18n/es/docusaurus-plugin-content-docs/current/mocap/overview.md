@@ -2,16 +2,16 @@
 sidebar_position: 10
 ---
 
-# Overview
+# Resumen
 
 ![](/doc-img/mocap-cover.jpg)
 
-Whether you are streaming at home or at a professional mocap studio, Warudo has you covered. Currently, Warudo supports the following motion capture systems:
+Ya sea que estés transmitiendo desde casa o en un estudio de mocap profesional, Warudo te tiene cubierto. Actualmente, Warudo soporta los siguientes sistemas de captura de movimiento:
 
 * Webcam
-  * Built-in tracking via [MediaPipe](./mediapipe) or [OpenSeeFace](./openseeface).
+  * Seguimiento integrado a través de [MediaPipe](./mediapipe) o [OpenSeeFace](./openseeface).
 * iPhone
-  * Requires either [iFacialMocap / FaceMotion3D](./ifacialmocap) or [RhyLive](./rhylive) app to be installed on the iPhone.
+  * Requiere que esté instalada la aplicación [iFacialMocap / FaceMotion3D](./ifacialmocap) o [RhyLive](./rhylive) en el iPhone.
 * [SteamVR](./steamvr)
 * [Leap Motion Controller](./leap-motion)
 * [Sony Mocopi](./mocopi)
@@ -20,73 +20,74 @@ Whether you are streaming at home or at a professional mocap studio, Warudo has 
 * [Virdyn Studio (VDMocapStudio)](./virdyn)
 * [Noitom Axis](./noitom)
 * [StretchSense Glove](./stretchsense)
-* External applications that support the [VMC protocol](./vmc), e.g., [VSeeFace](https://www.vseeface.icu/), [VirtualMotionCapture](https://vmc.info/)
-  * VR trackers are supported using the paid (supporter) version of [VirtualMotionCapture](https://www.patreon.com/sh_akira).
+* Aplicaciones externas que soportan el [protocolo VMC](./vmc), p. ej., [VSeeFace](https://www.vseeface.icu/), [VirtualMotionCapture](https://vmc.info/)
+  * Los rastreadores VR son soportados usando la versión de pago (supporter) de [VirtualMotionCapture](https://www.patreon.com/sh_akira).
 
-[Warudo Pro](../pro.md) also supports the following motion capture systems:
+[Warudo Pro](../pro.md) también soporta los siguientes sistemas de captura de movimiento:
 
-* Any optical tracking system compatible with [Autodesk MotionBuilder](./motionbuilder), e.g., [Vicon](https://www.vicon.com/), [OptiTrack](https://optitrack.com/)
+* Cualquier sistema de seguimiento óptico compatible con [Autodesk MotionBuilder](./motionbuilder), p. ej., [Vicon](https://www.vicon.com/), [OptiTrack](https://optitrack.com/)
 * [OptiTrack Motive](./optitrack)
 * [Chingmu Avatar](./chingmu)
 
-## What motion capture systems should I use?
+## ¿Qué sistemas de captura de movimiento debería usar?
 
-If you are completely new to 3D VTubing, we recommend starting with [MediaPipe](./mediapipe) for both face tracking and hand tracking. MediaPipe is a motion capture system built into Warudo, and you only need a webcam to use it. If you happen to have an iPhone, we recommend using the [iFacialMocap](./ifacialmocap) app for face tracking instead, as it offers much higher accuracy than MediaPipe, and offloading face tracking to the iPhone also reduces the load on your computer.
+Si eres completamente nuevo en el VTubing 3D, recomendamos comenzar con [MediaPipe](./mediapipe) tanto para el seguimiento facial como para el seguimiento de manos. MediaPipe es un sistema de captura de movimiento integrado en Warudo, y solo necesitas una webcam para usarlo. Si tienes un iPhone, recomendamos usar la aplicación [iFacialMocap](./ifacialmocap) para el seguimiento facial en su lugar, ya que ofrece mucha mayor precisión que MediaPipe, y transferir el seguimiento facial al iPhone también reduce la carga en tu computadora.
 
-If you are looking to improve your tracking quality, here are a few suggestions:
+Si buscas mejorar la calidad de tu seguimiento, aquí tienes algunas sugerencias:
 
-* Use an iPhone for face tracking (via the [iFacialMocap](./ifacialmocap) app). This is also the best face tracking solution you can ever get. If you don't have an iPhone, you may consider looking into a used iPhone. As long as it is compatible with Face ID, it should work with iFacialMocap.
+* Usa un iPhone para el seguimiento facial (a través de la aplicación [iFacialMocap](./ifacialmocap)). Esta es también la mejor solución de seguimiento facial que puedes obtener. Si no tienes un iPhone, puedes considerar buscar un iPhone usado. Mientras sea compatible con Face ID, debería funcionar con iFacialMocap.
 
 :::tip
-For best tracking quality, we recommend using an iPhone 12 or newer (iPhone mini also works). Older iPhones may have lower tracking quality.
+Para obtener la mejor calidad de seguimiento, recomendamos usar un iPhone 12 o más reciente (iPhone mini también funciona). Los iPhones más antiguos pueden tener menor calidad de seguimiento.
 :::
-* If you find MediaPipe hand tracking not accurate enough, you may consider using a [Leap Motion Controller](./leap-motion) for hand tracking. You can use a [neck mount](https://www.etsy.com/market/leap_motion_mounting) to wear it on your neck, so that it can track your hands.
-* If you are looking for a full-body tracking solution, you may consider using [Sony Mocopi](./mocopi) or [VR trackers](./vmc.md). If you have the budget, you may also consider using a mocap suit, such as [Virdyn VDSuit](./virdyn), [Noitom Perception Neuron](./noitom), [Rokoko Smartsuit Pro](./rokoko), or [Xsens MVN Link](./xsens-mvn). You can add finger tracking to these mocap suits by using [StretchSense gloves](./stretchsense).
-* If you are looking for a more professional solution, you may consider using an optical tracking system, such as [Vicon](https://www.vicon.com/), [OptiTrack](https://optitrack.com/), or [Chingmu](https://www.chingmu.com/).
+* Si encuentras que el seguimiento de manos de MediaPipe no es lo suficientemente preciso, puedes considerar usar un [Leap Motion Controller](./leap-motion) para el seguimiento de manos. Puedes usar un [soporte para cuello](https://www.etsy.com/market/leap_motion_mounting) para llevarlo en tu cuello, de modo que pueda rastrear tus manos.
+* Si buscas una solución de seguimiento de cuerpo completo, puedes considerar usar [Sony Mocopi](./mocopi) o [rastreadores VR](./vmc.md). Si tienes el presupuesto, también puedes considerar usar un traje de mocap, como [Virdyn VDSuit](./virdyn), [Noitom Perception Neuron](./noitom), [Rokoko Smartsuit Pro](./rokoko), o [Xsens MVN Link](./xsens-mvn). Puedes agregar seguimiento de dedos a estos trajes de mocap usando [guantes StretchSense](./stretchsense).
+* Si buscas una solución más profesional, puedes considerar usar un sistema de seguimiento óptico, como [Vicon](https://www.vicon.com/), [OptiTrack](https://optitrack.com/), o [Chingmu](https://www.chingmu.com/).
 
-## Setup {#setup}
+## Configuración {#setup}
 
-There are two ways to set up motion capture in Warudo. The first and the preferred way is to use the **Onboarding Assistant** asset that comes with every scene. Simply click **Basic Setup → Get Started** to start the onboarding process and follow the instructions.
+Hay dos maneras de configurar la captura de movimiento en Warudo. La primera y preferida manera es usar el asset **Onboarding Assistant** que viene con cada escena. Simplemente haz clic en **Basic Setup → Get Started** para iniciar el proceso de incorporación y seguir las instrucciones.
 
 ![](/doc-img/en-getting-started-2.png)
-<p class="img-desc">Setting up motion capture in the onboarding assistant asset.</p>
+<p class="img-desc">Configurando la captura de movimiento en el asset del asistente de incorporación.</p>
 
-After the onboarding process is complete, you can select the relevant motion capture assets to further customize your tracking. For example, if you are using iFacialMocap, you may notice Warudo adds some movement to your character's body when your head moves. If this is not desirable, you can set **Body Movement Intensity** to 0 in the **iFacialMocap Receiver** asset.
+Después de que el proceso de incorporación esté completo, puedes seleccionar los assets de captura de movimiento relevantes para personalizar aún más tu seguimiento. Por ejemplo, si estás usando iFacialMocap, puedes notar que Warudo agrega algo de movimiento al cuerpo de tu personaje cuando tu cabeza se mueve. Si esto no es deseable, puedes establecer **Body Movement Intensity** en 0 en el asset **iFacialMocap Receiver**.
 
 ![](/doc-img/en-mocap-1.png)
-<p class="img-desc">Adjusting the body movement intensity of iFacialMocap.</p>
+<p class="img-desc">Ajustando la intensidad del movimiento corporal de iFacialMocap.</p>
 
-The second way to set up motion capture is to use **Character → Setup Motion Capture**. This allows you to set up face tracking and/or pose tracking directly. However, some checking steps in the onboarding process are also skipped.
+La segunda manera de configurar la captura de movimiento es usar **Character → Setup Motion Capture**. Esto te permite configurar el seguimiento facial y/o el seguimiento de pose directamente. Sin embargo, algunos pasos de verificación en el proceso de incorporación también se omiten.
 
 ![](/doc-img/en-mocap-2.png)
-<p class="img-desc">Setting up motion capture in the character asset.</p>
+<p class="img-desc">Configurando la captura de movimiento en el asset del personaje.</p>
 
-This method is useful if you need to set up multiple face tracking or pose tracking systems, since the onboarding assistant always remove the existing motion capture setup when you start a new onboarding process.
+Este método es útil si necesitas configurar múltiples sistemas de seguimiento facial o de seguimiento de pose, ya que el asistente de incorporación siempre elimina la configuración de captura de movimiento existente cuando inicias un nuevo proceso de incorporación.
 
-Whichever method you choose, corresponding tracking blueprints will be generated and added to your scene. For example, if you have chosen iFacialMocap for face tracking and MediaPipe for pose tracking, you will be able to see two blueprints generated: **Face Tracking - iFacialMocap** and **Pose Tracking - MediaPipe**. You can modify these blueprints to customize your tracking.
+Cualquiera que sea el método que elijas, los blueprints de seguimiento correspondientes serán generados y agregados a tu escena. Por ejemplo, si has elegido iFacialMocap para el seguimiento facial y MediaPipe para el seguimiento de pose, podrás ver dos blueprints generados: **Face Tracking - iFacialMocap** y **Pose Tracking - MediaPipe**. Puedes modificar estos blueprints para personalizar tu seguimiento.
 
 :::caution
-You should almost never create a motion capture asset manually, i.e., by clicking on **Add Asset** and selecting a motion capture asset, such as **iFacialMocap Receiver**. This is because the motion capture asset alone only receives or provides the tracking data, but does not connect the tracking data to your character, which needs to be done by blueprints. The onboarding assistant and the **Setup Motion Capture** function automatically create the necessary blueprints for you.
+Casi nunca deberías crear un asset de captura de movimiento manualmente, es decir, haciendo clic en **Add Asset** y seleccionando un asset de captura de movimiento, como **iFacialMocap Receiver**. Esto es porque el asset de captura de movimiento por sí solo solo recibe o proporciona los datos de seguimiento, pero no conecta los datos de seguimiento a tu personaje, lo cual necesita ser hecho por blueprints. El asistente de incorporación y la función **Setup Motion Capture** automáticamente crean los blueprints necesarios para ti.
 :::
 
-## Frequently Asked Questions {#FAQ}
+## Preguntas Frecuentes {#FAQ}
 
-### My character is not moving.
+### Mi personaje no se está moviendo.
 
-If you are using a motion capture system that requires an external application, such as iFacialMocap, make sure the application is running and the tracking data is being sent to Warudo. Also, make sure your computer's firewall is not blocking Warudo from receiving the tracking data; you may need to add Warudo to the whitelist, or temporarily disable the firewall.
+Si estás usando un sistema de captura de movimiento que requiere una aplicación externa, como iFacialMocap, asegúrate de que la aplicación esté ejecutándose y que los datos de seguimiento se estén enviando a Warudo. También, asegúrate de que el firewall de tu computadora no esté bloqueando a Warudo de recibir los datos de seguimiento; puede que necesites agregar Warudo a la lista blanca, o temporalmente deshabilitar el firewall.
 
-You may also want to set your network as a private network, as Windows may block incoming connections from public networks. See [this guide](https://support.microsoft.com/en-us/windows/make-a-wi-fi-network-public-or-private-in-windows-0460117d-8d3e-a7ac-f003-7a0da607448d) for more information.
+También puedes querer establecer tu red como una red privada, ya que Windows puede bloquear conexiones entrantes de redes públicas. Ve [esta guía](https://support.microsoft.com/en-us/windows/make-a-wi-fi-network-public-or-private-in-windows-0460117d-8d3e-a7ac-f003-7a0da607448d) para más información.
 
-Some motion capture receivers have a **Port** option. Make sure the port number matches the port number in the external application.
+Algunos receptores de captura de movimiento tienen una opción **Port**. Asegúrate de que el número de puerto coincida con el número de puerto en la aplicación externa.
 
-### My tracking is too smooth / too jittery.
+### Mi seguimiento es demasiado suave / demasiado entrecortado.
 
-Please go to the tracking blueprint (e.g., **Face Tracking - iFacialMocap**) and locate the **Smooth Rotation List** / **Smooth Position List** / **Smooth Transform** / **Smooth BlendShape List** nodes. Increase the **Smooth Time** value to make the tracking smoother, or decrease the value to make the tracking more responsive.
+Por favor ve al blueprint de seguimiento (p. ej., **Face Tracking - iFacialMocap**) y localiza los nodos **Smooth Rotation List** / **Smooth Position List** / **Smooth Transform** / **Smooth BlendShape List**. Aumenta el valor de **Smooth Time** para hacer el seguimiento más suave, o disminuye el valor para hacer el seguimiento más responsivo.
 
 <AuthorBar authors={{
   creators: [
     {name: 'HakuyaTira', github: 'TigerHix'},
   ],
   translators: [
+    {name: 'かぐら (h.o.r.o)', github: 'Arukaito'},
   ],
 }} />

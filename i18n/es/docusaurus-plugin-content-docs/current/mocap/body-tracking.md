@@ -2,61 +2,62 @@
 sidebar_position: 30
 ---
 
-# Customizing Pose Tracking
+# Personalizando el Seguimiento de Pose
 
-## Blueprint Customization
+## Personalización de Blueprint
 
-During the onboarding process, you can click **Customize Pose Tracking...** to customize the tracking blueprint.
+Durante el proceso de incorporación, puedes hacer clic en **Customize Pose Tracking...** para personalizar el blueprint de seguimiento.
 
 ![](/doc-img/en-mocap-4.png)
-<p class="img-desc">Customizing pose tracking.</p>
+<p class="img-desc">Personalizando el seguimiento de pose.</p>
 
-### Upper Body Trackers
+### Rastreadores de Parte Superior del Cuerpo
 
-For upper body trackers (e.g., MediaPipe, RhyLive, Leap Motion Controller), the following options are available:
+Para rastreadores de la parte superior del cuerpo (ej., MediaPipe, RhyLive, Leap Motion Controller), las siguientes opciones están disponibles:
 
-* **Use Keyboard/Trackpad:** Whether to generate animations for the character using a keyboard or trackpad, even when the hands are not tracked.
+* **Use Keyboard/Trackpad:** Si generar animaciones para el personaje usando un teclado o trackpad, incluso cuando las manos no están siendo rastreadas.
   
   ![](/doc-img/zh-keyboard-1.webp)
   
-  After onboarding, you can adjust the keyboard/touchpad settings by clicking **Character → Motion Capture → Blueprint Navigation → Input Interfaces Animation Settings**.
+  Después de la incorporación, puedes ajustar la configuración del teclado/touchpad haciendo clic en **Character → Motion Capture → Blueprint Navigation → Input Interfaces Animation Settings**.
   
-  The keyboard and touchpad can be turned off separately by disabling either asset:
+  El teclado y el touchpad pueden ser desactivados por separado deshabilitando cualquiera de los assets:
   
   ![](/doc-img/zh-keyboard-3.webp)
   :::danger
-  When the keyboard is enabled, please avoid entering sensitive information such as passwords.
+  Cuando el teclado está habilitado, por favor evita ingresar información sensible como contraseñas.
   :::
-* **Track Fingers Only:** If enabled, only the fingers will be tracked by this tracking system. This is useful if you are using a full-body pose tracking system that already tracks the hands.
+* **Track Fingers Only:** Si está habilitado, solo los dedos serán rastreados por este sistema de seguimiento. Esto es útil si estás usando un sistema de seguimiento de pose de cuerpo completo que ya rastrea las manos.
 
-### Full Body Trackers
+### Rastreadores de Cuerpo Completo
 
-For full body trackers, the following options are available:
+Para rastreadores de cuerpo completo, las siguientes opciones están disponibles:
 
-* **Track Full Body / Tracked Body Parts:** If **Track Full Body** is set to **No**, only the body parts that are selected in **Track Full Body** will be tracked by this tracking system. This is useful if you are using multiple full-body pose tracking systems, and want to use different systems to track different body parts.
+* **Track Full Body / Tracked Body Parts:** Si **Track Full Body** está establecido en **No**, solo las partes del cuerpo que están seleccionadas en **Track Full Body** serán rastreadas por este sistema de seguimiento. Esto es útil si estás usando múltiples sistemas de seguimiento de pose de cuerpo completo, y quieres usar diferentes sistemas para rastrear diferentes partes del cuerpo.
 
-## Tracker Customization
+## Personalización del Tracker
 
-After onboarding, you can go to the corresponding pose tracking asset (e.g., MediaPipe Tracker, VMC Receiver) to customize the tracking data itself. The following options are available:
+Después de la incorporación, puedes ir al asset de seguimiento de pose correspondiente (ej., MediaPipe Tracker, VMC Receiver) para personalizar los datos de seguimiento en sí. Las siguientes opciones están disponibles:
 
-* **Mirrored Tracking:** If enabled, Warudo will mirror the tracking data.
-* **Head Rotation Intensity/Offset:** Adjust the intensity and offset of the head rotation.
+* **Mirrored Tracking:** Si está habilitado, Warudo reflejará los datos de seguimiento.
+* **Head Rotation Intensity/Offset:** Ajustar la intensidad y desplazamiento de la rotación de cabeza.
 
-## Frequently Asked Questions {#FAQ}
+## Preguntas Frecuentes {#FAQ}
 
-### How can I combine multiple pose tracking systems?
+### ¿Cómo puedo combinar múltiples sistemas de seguimiento de pose?
 
-If you want to set up a secondary pose tracking, you can use the **Secondary Pose Tracking** option during the onboarding process; this is helpful if you are using VR trackers/Mocopi for primary tracking and would like to use [MediaPipe](../mocap/mediapipe.md) or [Leap Motion Controller](../mocap/leap-motion.md) or [StretchSense Gloves](../mocap/stretchsense.md) for added-on finger tracking.
+Si quieres configurar un seguimiento de pose secundario, puedes usar la opción **Secondary Pose Tracking** durante el proceso de incorporación; esto es útil si estás usando rastreadores VR/Mocopi para seguimiento primario y te gustaría usar [MediaPipe](../mocap/mediapipe.md) o [Leap Motion Controller](../mocap/leap-motion.md) o [StretchSense Gloves](../mocap/stretchsense.md) para seguimiento de dedos adicional.
 
 ![](/doc-img/en-getting-started-8.png)
-<p class="img-desc">Setting up secondary pose tracking.</p>
+<p class="img-desc">Configurando seguimiento de pose secundario.</p>
 
-If you want to combine more than two pose tracking systems, you can set up the primary pose tracking first using the onboarding assistant, and then set up the subsequent pose tracking systems using **Character → Setup Motion Capture** with **Track Full Body** set to **No** and **Tracked Body Parts** set to the specific body parts you want to track with that system.
+Si quieres combinar más de dos sistemas de seguimiento de pose, puedes configurar el seguimiento de pose primario primero usando el asistente de incorporación, y luego configurar los sistemas de seguimiento de pose subsecuentes usando **Character → Setup Motion Capture** con **Track Full Body** establecido en **No** y **Tracked Body Parts** establecido en las partes específicas del cuerpo que quieres rastrear con ese sistema.
 
 <AuthorBar authors={{
   creators: [
     {name: 'HakuyaTira', github: 'TigerHix'},
   ],
   translators: [
+    {name: 'かぐら (Arukaito)', github: 'Arukaito'},
   ],
 }} />

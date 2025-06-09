@@ -4,43 +4,44 @@ sidebar_position: 90
 
 # Rokoko
 
-Face & body tracking via [Rokoko](https://www.rokoko.com/).
+Seguimiento facial y corporal a través de [Rokoko](https://www.rokoko.com/).
 
-## Setup
+## Configuración
 
-Open Rokoko Studio and enable **Livestream → Activate streaming to Unity**:
+Abre Rokoko Studio y habilita **Livestream → Activate streaming to Unity**:
 
 ![](/doc-img/zh-rokoko-1.webp)
 
-Then, update **Profile Name** in the **Rokoko Receiver** asset to the Rokoko actor whose motion capture data you would like to receive:
+Luego, actualiza **Profile Name** en el asset **Rokoko Receiver** al actor de Rokoko cuyos datos de captura de movimiento te gustaría recibir:
 
 ![](/doc-img/zh-rokoko-2.webp)
 
 :::caution
-Note: You need a Rokoko Plus or Pro subscription to stream to Unity.
+Nota: Necesitas una suscripción Rokoko Plus o Pro para transmitir a Unity.
 :::
 
 :::info
-For more details, see the [official documentation](https://support.rokoko.com/hc/en-us/articles/4410471183633-Getting-Started-Streaming-to-Unity).
+Para más detalles, ve la [documentación oficial](https://support.rokoko.com/hc/en-us/articles/4410471183633-Getting-Started-Streaming-to-Unity).
 :::
 
-## Calibration
+## Calibración
 
-Calibration of Rokoko hardware is done in Rokoko Studio.
+La calibración del hardware de Rokoko se realiza en Rokoko Studio.
 
-## Frequently Asked Questions
+## Preguntas Frecuentes
 
-Please refer to [Overview](overview#FAQ) and [Customizing Pose Tracking](body-tracking#FAQ) for common questions.
+Por favor consulta [Resumen](overview#FAQ) y [Personalizar Seguimiento de Pose](body-tracking#FAQ) para preguntas comunes.
 
-### My tracking drifts over time.
+### Mi seguimiento se va desviando con el tiempo.
 
-This is a common issue with inertial motion capture systems, which drift over time due to accumulated errors. To reduce the drift, make sure there are no magnetic or electrical interference near the tracking sensors.
+Este es un problema común con los sistemas de captura de movimiento inerciales, que se desvían con el tiempo debido a errores acumulativos. Para reducir la deriva, asegúrate de que no haya interferencia magnética o eléctrica cerca de los sensores de seguimiento.
 
 <AuthorBar authors={{
   creators: [
     {name: 'HakuyaTira', github: 'TigerHix'},
   ],
   translators: [
+    {name: 'かぐら (Arukaito)', github: 'Arukaito'},
   ],
 }} />
 
