@@ -2,108 +2,108 @@
 sidebar_position: 100
 ---
 
-# Taking a Nap
+# Tomando una Siesta
 
-It is common to take a break during a stream. In Warudo, when your face is no longer tracked, your character will slowly transition back to an idle pose and expression. In this tutorial, we will make the character transition to a sleeping pose and expression instead, adding a bit of subtle realism to your character.
+Es común tomar un descanso durante un stream. En Warudo, cuando tu cara ya no es rastreada, tu personaje transicionará lentamente de vuelta a una pose y expresión idle. En este tutorial, haremos que el personaje transite a una pose y expresión de dormir en su lugar, agregando un poco de realismo sutil a tu personaje.
 
 <div style={{width: '100%'}} className="video-box"><video controls loop src="/doc-img/nap.mp4" /></div>
-<p class="img-desc">Sleeping on the job!</p>
+<p class="img-desc">¡Durmiendo en el trabajo!</p>
 
 :::info
-This tutorial assumes you are using iFacialMocap or MediaPipe for face tracking. Other face tracking systems may not work because they do not provide a signal when your face is no longer tracked.
+Este tutorial asume que estás usando iFacialMocap o MediaPipe para seguimiento facial. Otros sistemas de seguimiento facial pueden no funcionar porque no proporcionan una señal cuando tu cara ya no es rastreada.
 :::
 
-## The Face Tracking Blueprint
+## El Blueprint de Seguimiento Facial
 
-Let's open our face tracking blueprint! Depending on the blueprint options you have selected during the onboarding process, your blueprint may look different from the one below, but the general idea is the same. Also, they look equally terrifying—there's so many nodes and connections!
+¡Abramos nuestro blueprint de seguimiento facial! Dependiendo de las opciones de blueprint que hayas seleccionado durante el proceso de configuración inicial, tu blueprint puede verse diferente al de abajo, pero la idea general es la misma. Además, se ven igualmente aterradores—¡hay tantos nodos y conexiones!
 
 ![](/doc-img/en-blueprint-nap-1.png)
 
-We will not go through every node in this blueprint, but let's break it down into a few parts. First you should see this node sequence at the left:
+No revisaremos cada nodo en este blueprint, pero vamos a desglosarlo en algunas partes. Primero deberías ver esta secuencia de nodos a la izquierda:
 
 ![](/doc-img/en-blueprint-nap-2.png)
 
-This one is easy! You have already seen the On Disable Blueprint node in a [previous tutorial](balloon#resetting-bone-scale). It is triggered when the blueprint is disabled, and this face tracking blueprint is disabled when you turn off **Character → Motion Capture**. So, when you disable motion capture, the character's facial expression (blendshapes) is reset by the **Reset Character Tracking BlendShapes** node, and the character's bones (e.g., head, eyes) are reset by the **Reset Overridden Character Bones** node.
+¡Esta es fácil! Ya has visto el nodo On Disable Blueprint en un [tutorial anterior](balloon#resetting-bone-scale). Se activa cuando el blueprint se deshabilita, y este blueprint de seguimiento facial se deshabilita cuando apagas **Character → Motion Capture**. Entonces, cuando deshabilitas la captura de movimiento, la expresión facial del personaje (blendshapes) se reinicia por el nodo **Reset Character Tracking BlendShapes**, y los huesos del personaje (ej., cabeza, ojos) se reinician por el nodo **Reset Overridden Character Bones**.
 
-Now let's take a look on the right side of the blueprint:
+Ahora echemos un vistazo al lado derecho del blueprint:
 
 ![](/doc-img/en-blueprint-nap-3.png)
 
-You are already familiar with the [On Update node](balloon#on-update); it is triggered every frame Warudo is running. This node sequence is saying: for every frame, we want to update the character's blendshapes (**Set Character Tracking BlendShapes**), bones (**Override Character Bone Rotation Offsets**), and root position (**Override Character Root Position**). But what blendshapes? What bones? And what root position? These are the jobs of the nodes in the middle of the blueprint:
+Ya estás familiarizado con el [nodo On Update](balloon#on-update); se activa cada frame que Warudo está funcionando. Esta secuencia de nodos está diciendo: para cada frame, queremos actualizar los blendshapes del personaje (**Set Character Tracking BlendShapes**), huesos (**Override Character Bone Rotation Offsets**), y posición raíz (**Override Character Root Position**). ¿Pero qué blendshapes? ¿Qué huesos? ¿Y qué posición raíz? Estos son los trabajos de los nodos en el medio del blueprint:
 
 ![](/doc-img/en-blueprint-nap-16.png)
 
 ## Switch BlendShape List
 
-Fortunately, for the purpose of this tutorial, we only need to look at a few nodes. Locate the **Get iFacialMocap Receiver Data** node (or, if you are using MediaPipe, the **Get MediaPipe Receiver Data** node); this is the "source" node that provides face tracking data.
+Afortunadamente, para el propósito de este tutorial, solo necesitamos ver algunos nodos. Localiza el nodo **Get iFacialMocap Receiver Data** (o, si estás usando MediaPipe, el nodo **Get MediaPipe Receiver Data**); este es el nodo "fuente" que proporciona datos de seguimiento facial.
 
 ![](/doc-img/en-blueprint-nap-4.png)
 
-The node connections are currently too close to each other, so for clarity, let's move the Get iFacialMocap Receiver Data node towards the bottom left, like this:
+Las conexiones de nodos están actualmente muy cerca unas de otras, así que para claridad, movamos el nodo Get iFacialMocap Receiver Data hacia la parte inferior izquierda, así:
 
 ![](/doc-img/en-blueprint-nap-5.png)
 
-Zoom and pan the blueprint until you see the following 3 nodes: Get iFacialMocap Receiver Data, Empty BlendShape List, and Switch BlendShape List. Knowing nothing about the **Switch BlendShape List** node yet, just by inspecting the connections to it, can you guess what it does?
+Haz zoom y panorámica del blueprint hasta que veas los siguientes 3 nodos: Get iFacialMocap Receiver Data, Empty BlendShape List, y Switch BlendShape List. Sin saber nada sobre el nodo **Switch BlendShape List** aún, solo inspeccionando las conexiones a él, ¿puedes adivinar qué hace?
 
 ![](/doc-img/en-blueprint-nap-6.png)
 
-Let's figure this out. First, we see **Get iFacialMocap Receiver Data → Is Tracked** is connected to **Switch BlendShape List → Condition**. This means the Switch BlendShape List node cares about whether the face is tracked or not. If the face is tracked, the Condition is Yes; otherwise, the Condition is No.
+Descubramos esto. Primero, vemos que **Get iFacialMocap Receiver Data → Is Tracked** está conectado a **Switch BlendShape List → Condition**. Esto significa que el nodo Switch BlendShape List se preocupa por si la cara es rastreada o no. Si la cara es rastreada, la Condition es Yes; de lo contrario, la Condition es No.
 
-Next, we see **Empty BlendShape List → Output** is connected to **Switch BlendShape List → If False**, and **Get iFacialMocap Receiver Data → BlendShapes** is connected to **Switch BlendShape List → If True**. Hmm, I think I am starting to get it!
+Después, vemos que **Empty BlendShape List → Output** está conectado a **Switch BlendShape List → If False**, y **Get iFacialMocap Receiver Data → BlendShapes** está conectado a **Switch BlendShape List → If True**. ¡Hmm, creo que estoy empezando a entenderlo!
 
-Indeed, the Switch BlendShape List node essentially checks if the face is tracked at the moment; if the face is tracked, it will pass the tracking blendshapes to the output, reflecting our facial expression on the character; otherwise, it will pass an empty blendshape list to the output, resulting the character not having any facial expression at all.
+En efecto, el nodo Switch BlendShape List esencialmente verifica si la cara está siendo rastreada en el momento; si la cara es rastreada, pasará los blendshapes de seguimiento a la salida, reflejando nuestra expresión facial en el personaje; de lo contrario, pasará una lista vacía de blendshapes a la salida, resultando en que el personaje no tenga ninguna expresión facial.
 
-What makes this node even more powerful is its ability to switch between two blendshape lists with _smooth transitions_: the **To True/False Transition Time**, **To True/False Transition Delay**, and **To True/False Transition Easing** options allow you to precisely control how the character's facial expression changes when the face becomes tracked or untracked. For example, if To False Transition Time is set to 0.5 seconds and To False Transition Delay is set to 1 second, then 1 second after your face is no longer tracked, the character's facial expression will smoothly transition to the empty blendshape list (i.e., a natural expression) in 0.5 seconds!
+Lo que hace este nodo aún más poderoso es su capacidad de cambiar entre dos listas de blendshapes con _transiciones suaves_: las opciones **To True/False Transition Time**, **To True/False Transition Delay**, y **To True/False Transition Easing** te permiten controlar precisamente cómo cambia la expresión facial del personaje cuando la cara es rastreada o no rastreada. Por ejemplo, si To False Transition Time está configurado a 0.5 segundos y To False Transition Delay está configurado a 1 segundo, entonces 1 segundo después de que tu cara ya no sea rastreada, la expresión facial del personaje transicionará suavemente a la lista vacía de blendshapes (es decir, una expresión natural) ¡en 0.5 segundos!
 
-Anyway, if we want to change the character's expression when our face is no longer tracked, we can just modify the input to Switch BlendShape List → If False, which is currently a mere empty blendshape list. We can add a **BlendShape List Set BlendShape** node in between to add a blendshape to the list:
+De cualquier manera, si queremos cambiar la expresión del personaje cuando nuestra cara ya no es rastreada, podemos simplemente modificar la entrada a Switch BlendShape List → If False, que actualmente es apenas una lista vacía de blendshapes. Podemos agregar un nodo **BlendShape List Set BlendShape** en el medio para agregar un blendshape a la lista:
 
 ![](/doc-img/en-blueprint-nap-7.png)
 
-In the above example, I am creating a blendshape list with only one entry: `Blink` set to 1. This blendshape list will be passed to the output whenever face tracking is lost, resulting in the character closing their eyes.
+En el ejemplo de arriba, estoy creando una lista de blendshapes con solo una entrada: `Blink` configurado a 1. Esta lista de blendshapes será pasada a la salida cada vez que se pierda el seguimiento facial, resultando en que el personaje cierre los ojos.
 
 :::tip
-If your character does not have a `Blink` blendshape, you can use the blinking blendshapes that come with your character, for example, `eyeBlinkLeft` and `eyeBlinkRight`. To set multiple blendshapes, simply add another BlendShape List Set BlendShape node in between.
+Si tu personaje no tiene un blendshape `Blink`, puedes usar los blendshapes de parpadeo que vienen con tu personaje, por ejemplo, `eyeBlinkLeft` y `eyeBlinkRight`. Para configurar múltiples blendshapes, simplemente agrega otro nodo BlendShape List Set BlendShape en el medio.
 :::
 
-Now try to put your hand in front of your iPhone's front camera to block face tracing (or if you are using MediaPipe, just move your face away from the camera), and you should see your character closing their eyes!
+Ahora intenta poner tu mano frente a la cámara frontal de tu iPhone para bloquear el rastreo facial (o si estás usando MediaPipe, simplemente aleja tu cara de la cámara), ¡y deberías ver a tu personaje cerrar los ojos!
 
 ![](/doc-img/en-blueprint-nap-13.png)
 
-The default settings will close the eyes quite fast, so you may want to adjust the **To False Transition Time** and **To False Transition Delay** options to make the transition more natural. I have set them to 2 and 1 seconds respectively:
+Las configuraciones predeterminadas cerrarán los ojos bastante rápido, así que podrías querer ajustar las opciones **To False Transition Time** y **To False Transition Delay** para hacer la transición más natural. Las he configurado a 2 y 1 segundos respectivamente:
 
 ![](/doc-img/en-blueprint-nap-8.png)
 
 ## Switch Rotation List
 
-:::info
-Before reading this section, if you have enabled idle head animation during the onboarding process (which is by default enabled when not tracking), you need to disable it first. Locate the **Generate Idle Head Animation** node and set **Enabled** to No:
+:::tip
+Antes de leer esta sección, si has habilitado la animación idle de cabeza durante el proceso de configuración inicial (que está habilitada por defecto cuando no se está rastreando), necesitas deshabilitarla primero. Localiza el nodo **Generate Idle Head Animation** y configura **Enabled** a No:
 
 ![](/doc-img/en-blueprint-nap-12.png)
 :::
 
 
-To make the character transition to a sleeping pose, such as tilting their head to the side, the process is actually very similar to what we have just done. Let's once again move the Get iFacialMocap Receiver Data node towards the bottom:
+Para hacer que el personaje transite a una pose de dormir, como inclinar la cabeza hacia un lado, el proceso es en realidad muy similar a lo que acabamos de hacer. Movamos una vez más el nodo Get iFacialMocap Receiver Data hacia abajo:
 
 ![](/doc-img/en-blueprint-nap-9.png)
 
-Until you can see the **Default Character Rotation List** and **Switch Rotation List** nodes on the right:
+Hasta que puedas ver los nodos **Default Character Rotation List** y **Switch Rotation List** a la derecha:
 
 ![](/doc-img/en-blueprint-nap-10.png)
 ![](/doc-img/en-blueprint-nap-11.png)
 
-A 3D character's pose is defined by how much each bone is rotated, which is why instead of blendshapes, we are seeing "bone rotations" everywhere. The Switch Rotation List node here checks if the face is tracked, and passes the bone rotation data (i.e., head movement) to the output if the face is tracked, and passes the default rotation list (i.e., head does not move at all) to the output otherwise.
+La pose de un personaje 3D está definida por cuánto está rotado cada hueso, por lo que en lugar de blendshapes, estamos viendo "rotaciones de huesos" en todas partes. El nodo Switch Rotation List aquí verifica si la cara está siendo rastreada, y pasa los datos de rotación de huesos (es decir, movimiento de cabeza) a la salida si la cara es rastreada, y pasa la lista de rotación predeterminada (es decir, la cabeza no se mueve en absoluto) a la salida de lo contrario.
 
-To tilt the head to the side, we can simply add an **Offset Character Bone Rotation List** node in between to offset the head's rotation:
+Para inclinar la cabeza hacia un lado, podemos simplemente agregar un nodo **Offset Character Bone Rotation List** en el medio para compensar la rotación de la cabeza:
 
 ![](/doc-img/en-blueprint-nap-15.png)
 
-I have added **Head** to the **Character Bones** list and set **Rotation Offset** to (15, 0, -20), which means the head will be rotated 15 degrees to the front and 20 degrees to the right. You are of course welcome to adjust the rotation to your liking, or even add more bones to the list to make the character's sleeping pose more complex!
+He agregado **Head** a la lista **Character Bones** y configuré **Rotation Offset** a (15, 0, -20), lo que significa que la cabeza será rotada 15 grados hacia adelante y 20 grados hacia la derecha. ¡Por supuesto eres bienvenido a ajustar la rotación a tu gusto, o incluso agregar más huesos a la lista para hacer la pose de dormir del personaje más compleja!
 
 :::tip
-Instead of manually entering the numbers, you can click and drag the X/Y/Z labels left and right to adjust the numbers. This trick works for any number input!
+En lugar de ingresar manualmente los números, puedes hacer clic y arrastrar las etiquetas X/Y/Z hacia la izquierda y derecha para ajustar los números. ¡Este truco funciona para cualquier entrada numérica!
 :::
 
-Now when your face is no longer tracked, your character will tilt their head to the side!
+¡Ahora cuando tu cara ya no sea rastreada, tu personaje inclinará la cabeza hacia un lado!
 
 ![](/doc-img/en-blueprint-nap-14.png)
 
@@ -113,5 +113,6 @@ Now when your face is no longer tracked, your character will tilt their head to 
     {name: 'HakuyaTira', github: 'TigerHix'},
   ],
   translators: [
+    {name: 'かぐら', github: 'Arukaito'},
   ],
 }} />

@@ -2,109 +2,112 @@
 sidebar_position: 40
 ---
 
-# Karaoke Time
+# Hora de Karaoke
 
-Who doesn't love to karaoke on stream? But now we are in the 3D world, let's add some realism by making our character hold a microphone. This tutorial will show you how to do just that: toggling a singing pose and a microphone prop with a hotkey.
+¿A quién no le gusta hacer karaoke en stream? Pero ahora que estamos en el mundo 3D, agreguemos algo de realismo haciendo que nuestro personaje sostenga un micrófono. Este tutorial te mostrará cómo hacer exactamente eso: alternar una pose de cantar y un prop de micrófono con una tecla de acceso rápido.
 
 <div style={{width: '100%'}} className="video-box"><video controls loop src="/doc-img/karaoke.mp4" /></div>
-<p class="img-desc">Singing my heart out!</p>
+<p class="img-desc">¡Cantando con todo mi corazón!</p>
 
 :::tip
-If you want to use this karaoke room environment, you can download it from our Steam Workshop using the **Discover** tab in Warudo.
+Si quieres usar este ambiente de sala de karaoke, puedes descargarlo desde nuestro Steam Workshop usando la pestaña **Discover** en Warudo.
 :::
 
-## Playing Idle Animations
+## Reproduciendo Animaciones Idle
 
-First, add a microphone prop and attach it to your character's left hand. Refer to the [Getting Started](../../tutorials/readme-1.md#assets-tab) tutorial if you are not sure how to do this. Then, in the prop asset, set **Enabled** to No to hide the microphone for now.
+Primero, agrega un prop de micrófono y adjúntalo a la mano izquierda de tu personaje. Consulta el tutorial de [Empezando](../../tutorials/readme-1.md#assets-tab) si no estás seguro de cómo hacer esto. Luego, en el asset del prop, configura **Enabled** a No para ocultar el micrófono por ahora.
 
-Next, try to recreate the blueprint below using the On Keystroke Pressed node that we are already very familiar with, with two new nodes: **Toggle Asset Enabled** and **Play Character Idle Animation**. (Their names are pretty telling, aren't they?) Remember to set **Toggle Asset Enabled → Asset** to the microphone prop, and **Play Character Idle Animation → Animation** to a singing pose. I am using "010_0970," but feel free to experiment with other poses.
+Después, trata de recrear el blueprint de abajo usando el nodo On Keystroke Pressed que ya conocemos muy bien, con dos nodos nuevos: **Toggle Asset Enabled** y **Play Character Idle Animation**. (Sus nombres son bastante reveladores, ¿no es así?) Recuerda configurar **Toggle Asset Enabled → Asset** al prop del micrófono, y **Play Character Idle Animation → Animation** a una pose de cantar. Estoy usando "010_0970," pero siéntete libre de experimentar con otras poses.
 
 ![](/doc-img/en-blueprint-karaoke-1.png)
 
-There you go! Now when I press the hotkey M, the microphone appears, and my character lifts it up, ready to sing. 
+¡Ahí tienes! Ahora cuando presiono la tecla de acceso rápido M, el micrófono aparece, y mi personaje lo levanta, listo para cantar.
 
 <div style={{width: '100%'}} className="video-box"><video controls loop src="/doc-img/karaoke-2.mp4" /></div>
 
-This is too easy for you, so let's make it more interesting. Can you think of a way to play a "whoosh" sound effect when the microphone appears?
+Esto es demasiado fácil para ti, así que hagámoslo más interesante. ¿Puedes pensar en una manera de reproducir un efecto de sonido "whoosh" cuando aparece el micrófono?
 
-"That's easy," you say. You type "sound" in the search bar, and ah-ha! There is a **Play Sound** node. You add it to the node editor, set the **Sound Source** to a whoosh sound effect, and connect it next to the Play Character Idle Animation node:
+"Eso es fácil," dices. Escribes "sound" en la barra de búsqueda, y ¡ah-ha! Hay un nodo **Play Sound**. Lo agregas al editor de nodos, configuras el **Sound Source** a un efecto de sonido whoosh, y lo conectas junto al nodo Play Character Idle Animation:
 
 ![](/doc-img/en-blueprint-karaoke-2.png)
 
-You press M, and the sound plays just fine. Great job! But notice that the sound effect is played regardless of whether you are putting out the microphone or putting it away. Is there a way to only play the sound effect when you are putting out the microphone?
+Presionas M, y el sonido se reproduce bien. ¡Buen trabajo! Pero nota que el efecto de sonido se reproduce sin importar si estás sacando el micrófono o guardándolo. ¿Hay una manera de reproducir el efecto de sonido solo cuando estás sacando el micrófono?
 
 ## Flip Flop
 
-The answer is the **Flip Flop** node. Usually, nodes have an Enter flow input and an Exit flow output; but the Flip Flop node is special: it has two Exit flow outputs, **A** and **B**. The first time the Flip Flop node is triggered, it will trigger a flow at **A**; the second time it is triggered, it will trigger a flow at **B**; the third time it is triggered, it will trigger a flow at **A** again; and so on. In other words, the Flip Flop node will alternate between **A** and **B** every time it is triggered.
+La respuesta es el nodo **Flip Flop**. Usualmente, los nodos tienen una entrada de flujo Enter y una salida de flujo Exit; pero el nodo Flip Flop es especial: tiene dos salidas de flujo Exit, **A** y **B**. La primera vez que el nodo Flip Flop es activado, activará un flujo en **A**; la segunda vez que es activado, activará un flujo en **B**; la tercera vez que es activado, activará un flujo en **A** otra vez; y así sucesivamente. En otras palabras, el nodo Flip Flop alternará entre **A** y **B** cada vez que sea activado.
 
-That's convenient. Let's restructure our blueprint like below!
+Eso es conveniente. ¡Reestructuremos nuestro blueprint como el de abajo!
 
 ![](/doc-img/en-blueprint-karaoke-3.png)
 
-Now the sound effect will only play when you are putting out the microphone!
+¡Ahora el efecto de sonido solo se reproducirá cuando estés sacando el micrófono!
 
-## Animation Profiles
+## Perfiles de Animación
 
-It is cute and all, but there is a limitation of using the Play Character Idle Animation node: you can only select a pre-defined pose/animation. For example, I want my character to only lift their left hand and nothing else, but there is no such pose in the list. That's when **Character → Overlaying Animations** come in handy.
+Es lindo y todo, pero hay una limitación de usar el nodo Play Character Idle Animation: solo puedes seleccionar una pose/animación predefinida. Por ejemplo, quiero que mi personaje solo levante su mano izquierda y nada más, pero no hay tal pose en la lista. Ahí es cuando **Character → Overlaying Animations** viene útil.
 
-Open the character asset, set **Idle Animation** to Generic to reset to default pose, and scroll down to **Overlaying Animations**. Click the **+** button to add a new entry to the list, and select "010_0970" from the **Animation** dropdown:
+Abre el asset del personaje, configura **Idle Animation** a Generic para resetear a la pose predeterminada, y desplázate hacia abajo a **Overlaying Animations**. Haz clic en el botón **+** para agregar una nueva entrada a la lista, y selecciona "010_0970" del menú desplegable **Animation**:
 
 ![](/doc-img/en-blueprint-karaoke-8.png)
 
-The character poses as expected:
+El personaje se posa como se esperaba:
 
 ![](/doc-img/en-blueprint-karaoke-9.png)
 
-Now, in order to only lift the left hand, we set **Masked** to Yes, and add **Left Arm** to the **Masked Body Parts** list, like below:
+Ahora, para solo levantar la mano izquierda, configuramos **Masked** a Yes, y agregamos **Left Arm** a la lista **Masked Body Parts**, como abajo:
 
 ![](/doc-img/en-blueprint-karaoke-4.png)
 
-You should also adjust the **Weight** option until you are satisfied with the pose. In this case, I set it to 0.88; this varies from character to character though.
+También deberías ajustar la opción **Weight** hasta que estés satisfecho con la pose. En este caso, la configuré a 0.88; esto varía de personaje a personaje sin embargo.
 
-Now the character only lifts their left hand:
+Ahora el personaje solo levanta su mano izquierda:
 
 ![](/doc-img/en-blueprint-karaoke-5.png)
 
-But how can we trigger this pose from a blueprint? Well, we need to first save an animation profile. An animation profile is essentially a snapshot of the character's current animation settings, i.e., Idle Animation, Overlaying Animations, Override Hand Poses, etc. Let's click the **Save Animation Profile** button:
+¿Pero cómo podemos activar esta pose desde un blueprint? Bueno, necesitamos primero guardar un perfil de animación. Un perfil de animación es esencialmente una captura de las configuraciones de animación actuales del personaje, es decir, Idle Animation, Overlaying Animations, Override Hand Poses, etc. Hagamos clic en el botón **Save Animation Profile**:
 
 ![](/doc-img/en-blueprint-karaoke-6.png)
 
-Give it a name, e.g., "LeftHandMic," and click **OK**:
+![](/doc-img/en-blueprint-karaoke-6.png)
+
+Dale un nombre, por ejemplo, "LeftHandMic," y haz clic en **OK**:
 
 ![](/doc-img/en-blueprint-karaoke-7.png)
 
-Now that we have saved an animation profile, we can use the **Load Animation Profile** button to load it at anytime!
+¡Ahora que hemos guardado un perfil de animación, podemos usar el botón **Load Animation Profile** para cargarlo en cualquier momento!
 
-We will soon see how we can do this from a blueprint, but first, let's create another animation profile for the idle pose. I am keeping it simple: I just clear the Overlaying Animations list, and set Idle Animation to Generic. You are of course welcome to create a custom idle pose!
+Pronto veremos cómo podemos hacer esto desde un blueprint, pero primero, creemos otro perfil de animación para la pose idle. Lo mantengo simple: solo limpio la lista Overlaying Animations, y configuro Idle Animation a Generic. ¡Por supuesto eres bienvenido a crear una pose idle personalizada!
 
-Save another animation profile named "Idle," and we are ready to go! Go to our blueprint, and replace the "Play Character Idle Animation" nodes with the "Load Animation Profile" nodes. Remember to select the correct profiles from the **Profile** dropdown:
+Guarda otro perfil de animación llamado "Idle," ¡y estamos listos para continuar! Ve a nuestro blueprint, y reemplaza los nodos "Play Character Idle Animation" con los nodos "Load Animation Profile". Recuerda seleccionar los perfiles correctos del menú desplegable **Profile**:
 
 ![](/doc-img/en-blueprint-karaoke-10.png)
 
-Now, when I press M, the "LeftHandMic" animation profile will load, and when I press M again, the "Idle" animation profile will load!
+¡Ahora, cuando presiono M, el perfil de animación "LeftHandMic" se cargará, y cuando presiono M otra vez, el perfil de animación "Idle" se cargará!
 
 :::tip
-The above is just a simple example of how you can use overlaying animations and animation profiles; the takeaway is that they allow you to mix and match different poses and animations, so that you can pose your character however you want.
+Lo de arriba es solo un ejemplo simple de cómo puedes usar animaciones superpuestas y perfiles de animación; la lección es que te permiten mezclar y combinar diferentes poses y animaciones, para que puedas posar tu personaje como quieras.
 :::
 
-## Delaying Flows
+## Retrasando Flujos
 
-Finally, let's fix a small issue. Note that when your character put away the microphone, the microphone disappears immediately. It would be more realistic if the microphone disappears after the character has put it away. How can we do that?
+Finalmente, arreglemos un pequeño problema. Nota que cuando tu personaje guarda el micrófono, el micrófono desaparece inmediatamente. Sería más realista si el micrófono desaparece después de que el personaje lo haya guardado. ¿Cómo podemos hacer eso?
 
 :::tip
-Hint: You can use the **Delay Control Flow** node to achieve this. Give it a try before reading on!
+Pista: Puedes usar el nodo **Delay Control Flow** para lograr esto. ¡Inténtalo antes de seguir leyendo!
 :::
 
-Here's a simple solution: we simply flip the order of the Toggle Asset Enabled and Play Character Idle Animation nodes, and add a Delay Control Flow node in between. We set the **Delay** to 1s, so that the microphone will disappear 1s after the character has put it away.
+Aquí hay una solución simple: simplemente volteamos el orden de los nodos Toggle Asset Enabled y Play Character Idle Animation, y agregamos un nodo Delay Control Flow en el medio. Configuramos el **Delay** a 1s, para que el micrófono desaparezca 1s después de que el personaje lo haya guardado.
 
 ![](/doc-img/en-blueprint-karaoke-11.png)
 
-The Delay Control Flow node only triggers a flow at the Exit after the specified delay. Using this node, you can create sequences of events that happen one after another. For example, you can use it to make your character dance for 5s, when you suddenly drop a bunch of props on their head, with an explosion particle effect played at the end. It is all up to your imagination!
+El nodo Delay Control Flow solo activa un flujo en el Exit después del retraso especificado. Usando este nodo, puedes crear secuencias de eventos que suceden uno tras otro. Por ejemplo, puedes usarlo para hacer que tu personaje baile por 5s, cuando de repente dejas caer un montón de props en su cabeza, con un efecto de partícula de explosión reproduciéndose al final. ¡Todo depende de tu imaginación!
 
 <AuthorBar authors={{
   creators: [
     {name: 'HakuyaTira', github: 'TigerHix'},
   ],
   translators: [
+    {name: 'かぐら', github: 'Arukaito'},
   ],
 }} />

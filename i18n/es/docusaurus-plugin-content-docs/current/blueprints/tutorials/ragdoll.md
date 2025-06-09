@@ -2,62 +2,62 @@
 sidebar_position: 20
 ---
 
-# Launched into the Sky
+# Lanzado al Cielo
 
-Want to get launched into the sky? Me neither. But it's fun, so let's do it anyway! In this tutorial, we will learn how to activate ragdoll physics on your character when they are hit by a prop.
+¿Quieres ser lanzado al cielo? Yo tampoco. ¡Pero es divertido, así que hagámoslo de todos modos! En este tutorial, aprenderemos cómo activar la física ragdoll en tu personaje cuando sea golpeado por un prop.
 
 <div style={{width: '100%'}} className="video-box"><video controls loop src="/doc-img/ragdoll.mp4" /></div>
-<p class="img-desc">Ragdolling your character.</p>
+<p class="img-desc">Haciendo ragdoll a tu personaje.</p>
 
-## Throwing Props
+## Lanzando Props
 
-Let's create a new blueprint. For the trigger, we will once again use the **On Keystroke Pressed** node, but you can use any event node you want. I will set the hotkey to **Space** just for ease of testing. Then, add a **Throw Prop At Character** node right next to it, and connect the nodes like below. Set the **Character** option to our character, and the **Prop Source** option to the prop model you want to throw at your character (I will choose "Sea Lion").
+Creemos un nuevo blueprint. Para el activador, usaremos una vez más el nodo **On Keystroke Pressed**, pero puedes usar cualquier nodo de evento que quieras. Estableceré la tecla de acceso rápido a **Space** solo para facilitar las pruebas. Luego, agrega un nodo **Throw Prop At Character** justo al lado, y conecta los nodos como abajo. Establece la opción **Character** a nuestro personaje, y la opción **Prop Source** al modelo de prop que quieres lanzar a tu personaje (elegiré "Sea Lion").
 
 ![](/doc-img/en-blueprint-ragdoll-1.png)
 
-God, this node is huge. There are many options on the **Throw Prop At Character** node, so let's unpack it a bit.
+Dios, este nodo es enorme. Hay muchas opciones en el nodo **Throw Prop At Character**, así que vamos a desglosarlo un poco.
 
-* **Impact Particle Source** and **Impact Particle Scale** determine the particle effect that is played when the prop hits the character; I will choose "Basic Impact 02" here, but you can open the preview gallery by clicking on the gallery icon to see all the available particles.
-* **Launch Sound Source**, **Impact Sound Source** and **Sound Volume** are pretty much self-explanatory. 
-* The **From** dropdown allows you to choose where the prop is thrown from. You can choose from the following options:
-  * Viewport Bounds Random Position: Anywhere on screen, i.e., simulating a prop being thrown from the camera.
-  * Screen Edge: Anywhere on the edge of the screen, i.e., simulating a prop being thrown from outside the camera.
-  * Above Character Head: Right above the character's head.
-  * Scene Object: A scene object, can be another prop, a character, or an [anchor](../../assets/anchor).
-  * World Position: A 3D point in the scene.
+* **Impact Particle Source** e **Impact Particle Scale** determinan el efecto de partículas que se reproduce cuando el prop golpea al personaje; elegiré "Basic Impact 02" aquí, pero puedes abrir la galería de vista previa haciendo clic en el ícono de galería para ver todas las partículas disponibles.
+* **Launch Sound Source**, **Impact Sound Source** y **Sound Volume** son bastante autoexplicativos.
+* El menú desplegable **From** te permite elegir desde dónde se lanza el prop. Puedes elegir de las siguientes opciones:
+  * Viewport Bounds Random Position: En cualquier lugar de la pantalla, es decir, simulando un prop siendo lanzado desde la cámara.
+  * Screen Edge: En cualquier lugar del borde de la pantalla, es decir, simulando un prop siendo lanzado desde fuera de la cámara.
+  * Above Character Head: Justo arriba de la cabeza del personaje.
+  * Scene Object: Un objeto de escena, puede ser otro prop, un personaje, o un [anchor](../../assets/anchor).
+  * World Position: Un punto 3D en la escena.
   
-  The default "Viewport Bounds Random Position" works good for us.
-* The **To** dropdown allows you to choose where the prop is thrown to. You can choose from the following options:
-  * Body Random Position: Anywhere on the character's body.
-  * Human Body Bone: A standard bone on the character's body, e.g., the head, the left hand, etc.
-  * Transform Path: Any child transform of the character. For example, if you want to throw at your character's tail, you can choose the tail transform here.
+  El predeterminado "Viewport Bounds Random Position" funciona bien para nosotros.
+* El menú desplegable **To** te permite elegir hacia dónde se lanza el prop. Puedes elegir de las siguientes opciones:
+  * Body Random Position: En cualquier lugar del cuerpo del personaje.
+    * Human Body Bone: Un hueso estándar en el cuerpo del personaje, ej., la cabeza, la mano izquierda, etc.
+  * Transform Path: Cualquier transform hijo del personaje. Por ejemplo, si quieres lanzar a la cola de tu personaje, puedes elegir el transform de la cola aquí.
   
-  I will change this to "Human Body Bone" and choose the "Head" bone, since that seems more, well, satisfying.
-* **Scale**, **Mass**, **Speed** and **Gravity** are the physical properties of the prop and determine how the character reacts to the prop. You can adjust them to your liking; I will change Scale to 2 and Speed to 10.
-* **Launch Torque** and **Randomize Launch Rotation** determine the rotation of the prop when it is launched.
-* **Alive Time** determines how long the prop will stay in the scene before it disappears.
+  Cambiaré esto a "Human Body Bone" y elegiré el hueso "Head", ya que eso parece más, bueno, satisfactorio.
+* **Scale**, **Mass**, **Speed** y **Gravity** son las propiedades físicas del prop y determinan cómo reacciona el personaje al prop. Puedes ajustarlas a tu gusto; cambiaré Scale a 2 y Speed a 10.
+* **Launch Torque** y **Randomize Launch Rotation** determinan la rotación del prop cuando se lanza.
+* **Alive Time** determina cuánto tiempo permanecerá el prop en la escena antes de que desaparezca.
 
-Now, when you press Space, the prop will be thrown at our character's head, and our character reacts to it.
+Ahora, cuando presiones Space, el prop será lanzado a la cabeza de nuestro personaje, y nuestro personaje reacciona a ello.
 
-## Activating Ragdoll
+## Activando Ragdoll
 
-But we wanted to ragdoll our character, not just make them flinch! Let's add a **Activate Character Ragdoll** node, and connect the **On Collide** flow output of the Throw Prop At Character node to the **Enter** flow input of the Activate Character Ragdoll node. Then, set the **Character** option to our character and **Launch Force** to (0, 300, -600).
+¡Pero queríamos hacer ragdoll a nuestro personaje, no solo hacer que se estremezca! Agreguemos un nodo **Activate Character Ragdoll**, y conectemos la salida de flujo **On Collide** del nodo Throw Prop At Character a la entrada de flujo **Enter** del nodo Activate Character Ragdoll. Luego, establece la opción **Character** a nuestro personaje y **Launch Force** a (0, 300, -600).
 
 ![](/doc-img/en-blueprint-ragdoll-2.png)
 
 :::caution
-Note that we connect from the On Collide flow output, not the Exit output! This is because we want to activate the ragdoll _when_ the prop collides with the character. If we connect from the Exit output, the ragdoll will be activated immediately after the prop is thrown, which is not what we want.
+¡Nota que conectamos desde la salida de flujo On Collide, no la salida Exit! Esto es porque queremos activar el ragdoll _cuando_ el prop colisiona con el personaje. Si conectamos desde la salida Exit, el ragdoll se activará inmediatamente después de que se lance el prop, lo cual no es lo que queremos.
 :::
 
-Let's press Space again. The prop gets thrown, but this time, when it hits the character, the character is launched in the classic ragdoll fashion. You can even press Space multiple times to throw props at your character again, each time hitting them with more force. Awesome!
+Presionemos Space nuevamente. El prop se lanza, pero esta vez, cuando golpea al personaje, el personaje es lanzado en la clásica moda ragdoll. Incluso puedes presionar Space múltiples veces para lanzar props a tu personaje nuevamente, cada vez golpeándolos con más fuerza. ¡Genial!
 
 :::tip
-Other interaction nodes, such as **Launch Liquid At Character** and **Spawn Sticker From Local/Online Image**, can be configured similarly. Try to play around with them and see what you can come up with!
+Otros nodos de interacción, como **Launch Liquid At Character** y **Spawn Sticker From Local/Online Image**, pueden configurarse de manera similar. ¡Intenta jugar con ellos y ve qué puedes crear!
 :::
 
-## Resetting Ragdoll
+## Reiniciando Ragdoll
 
-You will notice that the character resets after 5 seconds, which can be changed by adjusting the **Reset Wait Time** option on the Activate Character Ragdoll node. You can also disable automatic resetting by setting **Auto Reset** to No, and trigger the **Reset** flow input manually. For example, the following blueprint will only reset the character when you press the **R** key.
+Notarás que el personaje se reinicia después de 5 segundos, lo cual se puede cambiar ajustando la opción **Reset Wait Time** en el nodo Activate Character Ragdoll. También puedes deshabilitar el reinicio automático estableciendo **Auto Reset** a No, y activar la entrada de flujo **Reset** manualmente. Por ejemplo, el siguiente blueprint solo reiniciará el personaje cuando presiones la tecla **R**.
 
 ![](/doc-img/en-blueprint-ragdoll-3.png)
 
@@ -66,5 +66,6 @@ You will notice that the character resets after 5 seconds, which can be changed 
     {name: 'HakuyaTira', github: 'TigerHix'},
   ],
   translators: [
+    {name: 'かぐら', github: 'Arukaito'},
   ],
 }} />

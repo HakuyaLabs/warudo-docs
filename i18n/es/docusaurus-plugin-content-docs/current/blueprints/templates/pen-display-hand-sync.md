@@ -2,26 +2,26 @@
 sidebar_position: 3
 ---
 
-# Pen Display Hand Sync
-## Introduction
+# Sincronización de Mano con Tableta de Dibujo
+## Introducción
 
 ![](/doc-img/pen-display-hand-sync-9.png)
 
-This page provides an example scene to help you **build your own live for drawing or designing**.  
-It will allow you to **hold the pen** and have it **follow your cursor in the screen asset** perfectly in the Warudo world!
+Esta página proporciona una escena de ejemplo para ayudarte a **construir tu propio live para dibujo o diseño**.  
+¡Te permitirá **sostener el lápiz** y hacer que **siga tu cursor en el asset de pantalla** perfectamente en el mundo de Warudo!
 
 <div style={{width: '100%'}} className="video-box">
 <video controls loop src="/doc-img/pen-display-hand-sync-10.mp4" />
 </div>
-<p class="img-desc">Showcase!</p>
+<p class="img-desc">¡Demostración!</p>
 
-## Tutorials
+## Tutoriales
 
-###  Step 1 - Preparation
+###  Paso 1 - Preparación
 
-1. First, you need to subscribe the following items in Steam workshop to continue the following tutorials:
+1. Primero, necesitas suscribirte a los siguientes elementos en Steam workshop para continuar con los siguientes tutoriales:
 
-	| Item        | Steam workshop URL                                                                         |
+	| Elemento    | URL de Steam workshop                                                                      |
 	|:----------- |:------------------------------------------------------------------------------------------ |
 	| Environment | [🔗 Loft Apartment](https://steamcommunity.com/sharedfiles/filedetails/?id=3033191267)        |
 	| Character   | [🔗 VRoid Avatar Sample A](https://steamcommunity.com/sharedfiles/filedetails/?id=3003820352) |
@@ -29,7 +29,7 @@ It will allow you to **hold the pen** and have it **follow your cursor in the sc
 	| Prop 2      | [🔗 Drawing Tablet Set](https://steamcommunity.com/sharedfiles/filedetails/?id=3146409616)    |
 	| Node        | [🔗 Mouse Position Nodes](https://steamcommunity.com/sharedfiles/filedetails/?id=3159188937)  |
 
-2. Next, you need to download the following file and put it into the `<WARUDO_DATA_FOLDER>\Scenes` folder:
+2. Después, necesitas descargar el siguiente archivo y ponerlo en la carpeta `<WARUDO_DATA_FOLDER>\Scenes`:
 
 <ol style={{ "list-style-type": "none" }}><li>
 <ul><li>
@@ -42,152 +42,150 @@ It will allow you to **hold the pen** and have it **follow your cursor in the sc
 </li></ul>
 </li></ol>
 
-3. Then, you can open the scene you downloaded by the `Open scene` option in Warudo.
+3. Luego, puedes abrir la escena que descargaste usando la opción `Open scene` en Warudo.
 
-:::warning[For Warudo Pro Users]
+:::warning[Para Usuarios de Warudo Pro]
 
-You need to switch URP (Nilotoon) to BiRP to follow this tutorial.  
-You can switch it back after the configuration is complete, and replace the environment and  character to URP version.
+Necesitas cambiar de URP (Nilotoon) a BiRP para seguir este tutorial.  
+Puedes cambiarlo de vuelta después de que la configuración esté completa, y reemplazar el environment y character a la versión URP.
 
 :::
 
-### Step 2 - Assign Display (For Multi-Display Users)
+### Paso 2 - Asignar Pantalla (Para Usuarios de Multi-Pantalla)
 
-1. Determine the monitor you want the Warudo main window to locate.  
-(called **Monitor A**)
-2. Determine the monitor you want to display in Warudo.  
-(called **Monitor B**)
+1. Determina el monitor donde quieres que se ubique la ventana principal de Warudo.  
+(llamado **Monitor A**)
+2. Determina el monitor que quieres mostrar en Warudo.  
+(llamado **Monitor B**)
 
-If Monitor A = Monitor B, you can directly skip to **step 3**, otherwise:
+Si Monitor A = Monitor B, puedes saltar directamente al **paso 3**, de lo contrario:
 
-3. ✨ Change the `Output Offset X/Y` values in the `Mouse Position Relative To Screen` node to make sure the `Output` is `(0,0)` when your mouse is locate at the the **upper left corner** of Monitor B.
+3. ✨ Cambia los valores `Output Offset X/Y` en el nodo `Mouse Position Relative To Screen` para asegurarte de que el `Output` sea `(0,0)` cuando tu mouse esté ubicado en la **esquina superior izquierda** del Monitor B.
 
 	![](/doc-img/pen-display-hand-sync-1.png)
 
-:::tip[How to determine your offset values]
+:::tip[Cómo determinar tus valores de offset]
 
-1. Move your mouse to the **upper left corner** of Monitor B. 
-2. Input the ❗ **Opposite Value** ❗ of `Output` now into `Output Offset X/Y`.  
-**e.g.** If the Output is (1920, -1080) when the mouse is at the upper left corner, you need to fill:  
+1. Mueve tu mouse a la **esquina superior izquierda** del Monitor B. 
+2. Ingresa el ❗ **Valor Opuesto** ❗ del `Output` actual en `Output Offset X/Y`.  
+**ej.** Si el Output es (1920, -1080) cuando el mouse está en la esquina superior izquierda, necesitas completar:
 `Output Offset X` = `-1920`  
 `Output Offset Y` = `+1080`
-3. Verify the ✨ step again.
+3. Verifica el ✨ paso otra vez.
 
 :::
 
 :::warning
 
-Every time you change your selection of Monitor A or B, you need to re-adjust the offset values.
+Cada vez que cambies tu selección del Monitor A o B, necesitas re-ajustar los valores de offset.
 
 :::
 
-### Step 3 - Enter Display Resolution
+### Paso 3 - Ingresar Resolución de Pantalla
 
-Input the resolution (in pixel) of **Monitor B** in the `Decompose Vector2` node.
+Ingresa la resolución (en píxeles) del **Monitor B** en el nodo `Decompose Vector2`.
 
 ![](/doc-img/pen-display-hand-sync-2.png)
 
-:::note[Common 16:9 resolutions]
+:::note[Resoluciones 16:9 comunes]
 
-| Size  |  X   |  Y   |
-|:-----:|:----:|:----:|
-| 1080p | 1920 | 1080 |
-|  2K   | 2560 | 1440 |
-|  4K   | 3840 | 2160 |
-|   ⋯   |  ⋯   |  ⋯   |
+| Tamaño |  X   |  Y   |
+|:------:|:----:|:----:|
+| 1080p  | 1920 | 1080 |
+|   2K   | 2560 | 1440 |
+|   4K   | 3840 | 2160 |
+|   ⋯    |  ⋯   |  ⋯   |
 
 :::
 
-### Step 4 - Select Display
+### Paso 4 - Seleccionar Pantalla
 
-Select the **Display for Monitor B** as the `Content` - `Display` in `Prop - Drawing Screen`.
+Selecciona la **Pantalla para Monitor B** como el `Content` - `Display` en `Prop - Drawing Screen`.
 
 ![](/doc-img/pen-display-hand-sync-3.png)
 
-### Step 5 - (Optional) Customize Assets
+### Paso 5 - (Opcional) Personalizar Assets
 
 :::info
 
-**We recommend skipping this step for the first try.**
+**Recomendamos saltarse este paso para el primer intento.**
 
 :::
 
-You can use the **Onboarding Assistant** to configure your own character, environment, and motion capture.
+Puedes usar el **Asistente de Configuración** para configurar tu propio personaje, entorno, y captura de movimiento.
 
-You can also customize the positions of the character and screen.
+También puedes personalizar las posiciones del personaje y la pantalla.
 
-For different characters, you may need to adjust the values of **`Trnasform` - `Position`** in **`Anchor - Right Hand IK`** to make the character hold the pen better.
+Para diferentes personajes, es posible que necesites ajustar los valores de **`Transform` - `Position`** en **`Anchor - Right Hand IK`** para hacer que el personaje sostenga mejor el lápiz.
 
 :::warning
 
-You need to **disable the `Finger Movements` pendulum physics in your motion capture settings!**  
+¡Necesitas **deshabilitar la física de péndulo de `Finger Movements` en tus configuraciones de captura de movimiento!**  
 
 ![](/doc-img/pen-display-hand-sync-6.png)
 
-- We also recommend turning off other body-related pendulum physics ( like `Arm Movements` and `Body Lean`).
+- También recomendamos desactivar otras físicas de péndulo relacionadas con el cuerpo (como `Arm Movements` y `Body Lean`).
 
 :::
 
-### Step 6 - Calibrate Mapping
+### Paso 6 - Calibrar Mapeo
 
-Adjust the **`X`** and **`Y`** values in the `Scale` of `Prop - Calibration Border`, respectively.   
-Make sure that the screen fits the **Inner Edge** of the red box as perfectly as possible.
+Ajusta los valores **`X`** e **`Y`** en el `Scale` de `Prop - Calibration Border`, respectivamente.   
+Asegúrate de que la pantalla se ajuste al **Borde Interior** de la caja roja lo más perfectamente posible.
 
 :::note
 
-You need to unlock the 🔗 **`Uniform Scaling`** before adjusting scale each time.
+Necesitas desbloquear el 🔗 **`Uniform Scaling`** antes de ajustar la escala cada vez.
 
 :::
 
 ![](/doc-img/pen-display-hand-sync-4.png)
 
-### Step 7 - Hide Calibration Border
+### Paso 7 - Ocultar Borde de Calibración
 
-Finally, you can hide the **`Prop - Calibration Border`** asset by switch its `Enabled` option to `No`.
+Finalmente, puedes ocultar el asset **`Prop - Calibration Border`** cambiando su opción `Enabled` a `No`.
 
 ![](/doc-img/pen-display-hand-sync-5.png)
 
 :::warning
 
-Do not delete `Prop - Calibration Border`, if so, you will not be able to calibrate next time.
+No borres `Prop - Calibration Border`, si lo haces, no podrás calibrar la próxima vez.
 
 :::
 
-## Things to note
+## Cosas a tener en cuenta
 
-- You may need to change **`Mirrored Tracking`** or **`Invert Hands`** in the motion capture asset to choose the tracking method you prefer.
+- Es posible que necesites cambiar **`Mirrored Tracking`** o **`Invert Hands`** en el asset de captura de movimiento para elegir el método de seguimiento que prefieras.
 
-- If you want to change the selection of Monitor A or Monitor B, you need to repeat Step 2–6.
+- Si quieres cambiar la selección del Monitor A o Monitor B, necesitas repetir los Pasos 2–6.
 
-- You can adjust the thickness of **`Prop - Drawing Screen`** or enable and adjust the scale of **`Prop - Tablet`** to further increase the realism.
+- Puedes ajustar el grosor de **`Prop - Drawing Screen`** o habilitar y ajustar la escala de **`Prop - Tablet`** para incrementar aún más el realismo.
 
-## Known Issues
+## Problemas Conocidos
 
-### Hand-Pen Clipping
+### Intersección Mano-Lápiz
 
-Since the first priority of this blueprint is to **align the pen tip with the cursor**, limited by the implementation principle of hand IK, when the hand is too far away from the screen center, the pen may not fit your hand perfectly.
+Ya que la primera prioridad de este blueprint es **alinear la punta del lápiz con el cursor**, limitado por el principio de implementación del IK de mano, cuando la mano está muy lejos del centro de la pantalla, el lápiz puede no ajustarse perfectamente a tu mano.
 
-So we recommend not to adjust the scale of screen too large.
-
+Así que recomendamos no ajustar la escala de la pantalla demasiado grande.
 
 ![](/doc-img/pen-display-hand-sync-7.png)
 
-Binding the pen to the finger bone can avoid this problem, but the pen will not be able to perfectly follow the cursor, which is more suitable for pen tablet rather than pen display.  
-(This scene currently does not support this mode)
+Vincular el lápiz al hueso del dedo puede evitar este problema, pero el lápiz no podrá seguir perfectamente el cursor, lo cual es más adecuado para tableta de lápiz en lugar de pantalla de lápiz.  
+(Esta escena actualmente no soporta este modo)
 
-### Display Disappear
+### Desaparición de Pantalla
 
-If you click the close button in the upper right corner of the Warudo main window but without exiting, the screen will disappear (Because the option list of display becomes null).
+Si haces clic en el botón de cerrar en la esquina superior derecha de la ventana principal de Warudo pero sin salir, la pantalla desaparecerá (Porque la lista de opciones de pantalla se vuelve nula).
 
-This is a bug waiting to be fixed, and currently can only be solved by exiting warudo and reopening it. (You can still save your changes)
-
+Este es un error esperando ser arreglado, y actualmente solo puede ser resuelto saliendo de warudo y reabriéndolo. (Aún puedes guardar tus cambios)
 
 ![](/doc-img/pen-display-hand-sync-8.png)
 
 <AuthorBar authors={{
   creators: [
     {name: 'hanekit', github: 'hanekit'},
-  ],
-  translators: [
+  ],  translators: [
+    {name: 'かぐら', github: 'Arukaito'},
   ],
 }} />

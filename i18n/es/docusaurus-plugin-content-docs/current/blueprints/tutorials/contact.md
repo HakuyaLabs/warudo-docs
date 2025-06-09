@@ -2,91 +2,92 @@
 sidebar_position: 130
 ---
 
-# Spark It Up
+# Encendiéndolo
 
-Time to spark up your stream! This tutorial introduces you to Warudo's powerful contact system, which allows you to trigger a variety of fun effects when objects are in _contact_ with other objects.
+¡Es hora de encender tu stream! Este tutorial te introduce al poderoso sistema de contacto de Warudo, que te permite activar una variedad de efectos divertidos cuando los objetos están en _contacto_ con otros objetos.
 
 <div style={{width: '100%'}} className="video-box"><video controls loop src="/doc-img/contact.mp4" /></div>
-<p class="img-desc">Generating sparks between the fingers and pulling out a katana using the contact system.</p>
+<p class="img-desc">Generando chispas entre los dedos y sacando una katana usando el sistema de contacto.</p>
 
 :::info
-You need hand tracking or full-body tracking for this tutorial. For hand tracking, [MediaPipe](../../mocap/mediapipe) should be fine, but we recommend using [Leap Motion](../../mocap/leap-motion) for better accuracy.
+Necesitas seguimiento de manos o seguimiento de cuerpo completo para este tutorial. Para seguimiento de manos, [MediaPipe](../../mocap/mediapipe) debería estar bien, pero recomendamos usar [Leap Motion](../../mocap/leap-motion) para mejor precisión.
 :::
 
-## Contact System
+## Sistema de Contacto
 
-The contact system is simple in concept: when two objects are in contact, you can trigger a flow. One example is detecting when the fingertips of our index fingers are in contact, and then generating sparks between them. Let's see how we can implement this!
+El sistema de contacto es simple en concepto: cuando dos objetos están en contacto, puedes activar un flujo. Un ejemplo es detectar cuando las puntas de nuestros dedos índice están en contacto, y luego generar chispas entre ellos. ¡Veamos cómo podemos implementar esto!
 
-First, let's take a look at the **On Contact** node. You won't believe it, but this node alone is the entire contact system! In essence, this node automatically checks whether the objects in **Contact Senders** are in contact with the objects in **Contact Receivers**, and trigger the **On Contact Enter** (the instant the objects are in contact), **On Contact Stay** (while the objects are in contact), and **On Contact Exit** (the instant the objects are no longer in contact) flow outputs accordingly.
+Primero, echemos un vistazo al nodo **On Contact**. ¡No lo creerás, pero este nodo solo es todo el sistema de contacto! En esencia, este nodo automáticamente verifica si los objetos en **Contact Senders** están en contacto con los objetos en **Contact Receivers**, y activa las salidas de flujo **On Contact Enter** (el instante que los objetos están en contacto), **On Contact Stay** (mientras los objetos están en contacto), y **On Contact Exit** (el instante que los objetos ya no están en contacto) en consecuencia.
 
 ![](/doc-img/en-blueprint-contact-2.png)
 
-Let's add an entry to **Contact Senders** and configure like below:
+Agreguemos una entrada a **Contact Senders** y configuremos como abajo:
 
 ![](/doc-img/en-blueprint-contact-4.png)
 
-Now when you raise your right hand, you should see a red sphere appear at the tip of your index finger:
+Ahora cuando levantes tu mano derecha, deberías ver una esfera roja aparecer en la punta de tu dedo índice:
 
 ![](/doc-img/en-blueprint-contact-3.png)
 
-Next, let's add an entry to **Contact Receivers** and configure like below:
+Después, agreguemos una entrada a **Contact Receivers** y configuremos como abajo:
 
 ![](/doc-img/en-blueprint-contact-5.png)
 
-Raise your hands, and you should see a green sphere appear at the tip of your left index finger:
+Levanta tus manos, y deberías ver una esfera verde aparecer en la punta de tu dedo índice izquierdo:
 
 ![](/doc-img/en-blueprint-contact-6.png)
 
-Now the only thing left to do is to actually generate the electric sparks! Fortunately, we can use the **Spawn Particle** node to do just that. Add it to the node editor, select your favorite particle (I am using "Basic Impact 3") in the **Source** option as well as selecting a suitable **Scale** (I am using 0.1). Then, connect **On Contact → On Contact Stay** to **Spawn Particle → Enter**, and connect **On Contact → Contact Position** to **Spawn Particle → Position Offset**, like below:
+¡Ahora lo único que queda por hacer es generar las chispas eléctricas! Afortunadamente, podemos usar el nodo **Spawn Particle** para hacer exactamente eso. Agrégalo al editor de nodos, selecciona tu partícula favorita (estoy usando "Basic Impact 3") en la opción **Source** así como seleccionar una **Scale** adecuada (estoy usando 0.1). Luego, conecta **On Contact → On Contact Stay** a **Spawn Particle → Enter**, y conecta **On Contact → Contact Position** a **Spawn Particle → Position Offset**, como abajo:
 
 ![](/doc-img/en-blueprint-contact-7.png)
 
-Now when you put your hands together, you should see sparks flying between your fingertips! That's easier than you thought, right?
+¡Ahora cuando juntes tus manos, deberías ver chispas volando entre las puntas de tus dedos! Eso es más fácil de lo que pensaste, ¿verdad?
 
 ![](/doc-img/en-blueprint-contact-1.png)
 
 :::tip
-After you are done with the settings, you can set **Visualized** to No to hide the red and green spheres.
+Después de que termines con las configuraciones, puedes configurar **Visualized** a No para ocultar las esferas rojas y verdes.
 :::
 
 ## Throttle Flow
 
-You may notice the particles are generated at a very high rate, resulting in a very dense spark effect. This is because the **On Contact Stay** flow output is triggered every frame the objects are in contact—if you are running Warudo at 60 FPS, then 60 particles will be generated every second!
+Puedes notar que las partículas se generan a una tasa muy alta, resultando en un efecto de chispas muy denso. Esto es porque la salida de flujo **On Contact Stay** es activada cada frame que los objetos están en contacto—¡si estás corriendo Warudo a 60 FPS, entonces 60 partículas serán generadas cada segundo!
 
-To reduce the flow rate, we can use the **Throttle Flow** node. A throttle is a valve that regulates the flow rate of water, and the Throttle Flow node does the same thing: it regulates the flow rate of a flow output. In the following example, the Throttle Flow node with **Interval** set to 0.1 second will only trigger the flow output at most once every 0.1 second:
+Para reducir la tasa de flujo, podemos usar el nodo **Throttle Flow**. Un throttle es una válvula que regula la tasa de flujo de agua, y el nodo Throttle Flow hace la misma cosa: regula la tasa de flujo de una salida de flujo. En el siguiente ejemplo, el nodo Throttle Flow con **Interval** configurado a 0.1 segundo solo activará la salida de flujo como máximo una vez cada 0.1 segundo:
 
 ![](/doc-img/en-blueprint-contact-8.png)
 
-You can adjust the interval to your liking. For example, if you want to generate sparks at a rate of 20 sparks per second, you can set the interval to 0.05 instead.
+Puedes ajustar el intervalo a tu gusto. Por ejemplo, si quieres generar chispas a una tasa de 20 chispas por segundo, puedes configurar el intervalo a 0.05 en su lugar.
 
-## Pulling Out a Katana
+## Sacando una Katana
 
-Let's look at another example: pulling out a katana from behind our back! Add a katana prop (or a sword, a knife, or any other weapon you like), and attach it to the character's left hand like below:
+¡Veamos otro ejemplo: sacando una katana de detrás de nuestra espalda! Agrega un prop de katana (o una espada, un cuchillo, o cualquier otra arma que te guste), y adjúntala a la mano izquierda del personaje como abajo:
 
 ![](/doc-img/en-blueprint-contact-9.png)
 
-Hide the katana for now by setting **Prop → Enabled** to No. Now let's set up our contact system: on a new On Contact node, add the following to the Contact Senders list:
+Oculta la katana por ahora configurando **Prop → Enabled** a No. Ahora configuremos nuestro sistema de contacto: en un nuevo nodo On Contact, agrega lo siguiente a la lista Contact Senders:
 
 ![](/doc-img/en-blueprint-contact-12.png)
 
-And add the following to the Contact Receivers list:
+Y agrega lo siguiente a la lista Contact Receivers:
 
 ![](/doc-img/en-blueprint-contact-13.png)
 
-You should see a red sphere at your right shoulder, and a green sphere at your left hand. Adjust the **Position Offset** options until you can comfortably reach the red sphere with your hand (green sphere).
+Deberías ver una esfera roja en tu hombro derecho, y una esfera verde en tu mano izquierda. Ajusta las opciones **Position Offset** hasta que puedas alcanzar cómodamente la esfera roja con tu mano (esfera verde).
 
 ![](/doc-img/en-blueprint-contact-11.png)
 
-Finally, we just need to add a **Toggle Asset Enabled** whenever our hand is in contact with our shoulder:
+Finalmente, solo necesitamos agregar un **Toggle Asset Enabled** cada vez que nuestra mano esté en contacto con nuestro hombro:
 
 ![](/doc-img/en-blueprint-contact-10.png)
 
-Now when you reach your left hand to your right shoulder, you should see the katana appear in your hand! You can also add a **Play Sound** node to play a sound effect when the katana appears, or a particle, or anything you like—that's the beauty of the contact system!
+¡Ahora cuando alcances tu mano izquierda a tu hombro derecho, deberías ver la katana aparecer en tu mano! También puedes agregar un nodo **Play Sound** para reproducir un efecto de sonido cuando la katana aparece, o una partícula, o cualquier cosa que te guste—¡esa es la belleza del sistema de contacto!
 
 <AuthorBar authors={{
   creators: [
     {name: 'HakuyaTira', github: 'TigerHix'},
   ],
   translators: [
+    {name: 'かぐら', github: 'Arukaito'},
   ],
 }} />

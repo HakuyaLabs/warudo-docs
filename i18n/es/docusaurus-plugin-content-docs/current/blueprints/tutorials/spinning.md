@@ -2,127 +2,128 @@
 sidebar_position: 110
 ---
 
-# Chair Spinning
+# Girando en Silla
 
-Ever wanted to spin around in a chair like a child? Now you can! This tutorial shows you how to add controllable spinning to your character and chair.
+¿Alguna vez quisiste girar en una silla como un niño? ¡Ahora puedes! Este tutorial te muestra cómo agregar giro controlable a tu personaje y silla.
 
 <div style={{width: '100%'}} className="video-box"><video controls loop src="/doc-img/spinning.mp4" /></div>
-<p class="img-desc">Dizzy dizzy!</p>
+<p class="img-desc">¡Mareado mareado!</p>
 
-## Preparing the Chair Prop
+## Preparando el Prop de Silla
 
-Technically you don't need a chair prop for this tutorial, but it will be more fun if you have one. You can download our Computer Chair prop from the Steam Workshop using the **Discover** tab in Warudo. (Of course, you can also import your own chair prop using our [Mod SDK](../../modding/mod-sdk)!)
+Técnicamente no necesitas un prop de silla para este tutorial, pero será más divertido si tienes uno. Puedes descargar nuestro prop Computer Chair del Steam Workshop usando la pestaña **Discover** en Warudo. (¡Por supuesto, también puedes importar tu propio prop de silla usando nuestro [Mod SDK](../../modding/mod-sdk)!)
 
 ![](/doc-img/en-blueprint-spinning-16.png)
 
-Set up your character and chair prop so that the character is sitting on the chair:
+Configura tu personaje y prop de silla para que el personaje esté sentado en la silla:
 
 ![](/doc-img/en-blueprint-spinning-1.png)
 
-## Rotating Our Character
+## Rotando Nuestro Personaje
 
-You might remember the Set Asset Transform node from the [Animating the Camera](camera) tutorial. However, since we only care about the rotation of the character, we can use the **Set Asset Rotation** node instead. (Recall that a transform is a combination of position, rotation, and scale.) Can you guess what the following node does when triggered?
+Puedes recordar el nodo Set Asset Transform del tutorial [Animando la Cámara](camera). Sin embargo, ya que solo nos importa la rotación del personaje, podemos usar el nodo **Set Asset Rotation** en su lugar. (Recuerda que un transform es una combinación de posición, rotación y escala.) ¿Puedes adivinar qué hace el siguiente nodo cuando es activado?
 
 ![](/doc-img/en-blueprint-spinning-2.png)
 
-It rotates the character to (0, 180, 0). Since the Y axis is pointing up, you can imagine the character rotated 180 degrees by a pole going through their head and coming out of their feet. The result is they are now facing the back of the chair!
+Rota el personaje a (0, 180, 0). Ya que el eje Y está apuntando hacia arriba, puedes imaginar el personaje rotado 180 grados por un poste pasando por su cabeza y saliendo por sus pies. ¡El resultado es que ahora están mirando hacia la parte trasera de la silla!
 
 :::tip
-Can you guess what happens if you rotate the character to (180, 0, 0)? What about (0, 0, 180)? Try it out!
+¿Puedes adivinar qué pasa si rotas el personaje a (180, 0, 0)? ¿Qué tal (0, 0, 180)? ¡Inténtalo!
 :::
 
 ![](/doc-img/en-blueprint-spinning-3.png)
 
-By now, you should probably intuitively know our next step: we need to connect something to the **Rotation** data input of this node. This _something_ should be a value that changes over time, so that the character rotates over time. You may think of using [variables](squashing#variables), but there is an easier way.
+Para ahora, probablemente deberías saber intuitivamente nuestro siguiente paso: necesitamos conectar algo a la entrada de datos **Rotation** de este nodo. Este _algo_ debería ser un valor que cambie con el tiempo, para que el personaje rote con el tiempo. Puedes pensar en usar [variables](squashing#variables), pero hay una manera más fácil.
 
-Let's think about this for a moment. Say the character originally has rotation (0, 0, 0). We want to rotate them to (0, 180, 0). How do we do that? Well, we can directly rotate them to (0, 180, 0), but that's just a sudden change in rotation like above, which is not very interesting. Maybe we will take one more step in between: rotate to (0, 90, 0) first, then to (0, 180, 0) a few moments later. Or even more steps in between: (0, 30, 0), (0, 60, 0), (0, 90, 0), (0, 120, 0), (0, 150, 0), (0, 180, 0). How about even more steps? (0, 10, 0), (0, 20, 0), (0, 30, 0), ..., (0, 180, 0). The gist is: as long as we have enough steps, it will look like the character is rotating smoothly!
+Pensemos sobre esto por un momento. Digamos que el personaje originalmente tiene rotación (0, 0, 0). Queremos rotarlos a (0, 180, 0). ¿Cómo hacemos eso? Bueno, podemos rotarlos directamente a (0, 180, 0), pero eso es solo un cambio súbito en rotación como arriba, lo cual no es muy interesante. Tal vez tomaremos un paso más en el medio: rotar a (0, 90, 0) primero, luego a (0, 180, 0) unos momentos después. O incluso más pasos en el medio: (0, 30, 0), (0, 60, 0), (0, 90, 0), (0, 120, 0), (0, 150, 0), (0, 180, 0). ¿Qué tal incluso más pasos? (0, 10, 0), (0, 20, 0), (0, 30, 0), ..., (0, 180, 0). La esencia es: ¡mientras tengamos suficientes pasos, se verá como si el personaje estuviera rotando suavemente!
 
-Now when we look at this sequence: (0, 10, 0), (0, 20, 0), (0, 30, 0), ..., (0, 180, 0), we can see that the Y axis is increasing by 10 every step. In other words, for every step, as long as you tell me the current rotation, I will tell you the next rotation: just add 10 to the Y axis!
+Ahora cuando vemos esta secuencia: (0, 10, 0), (0, 20, 0), (0, 30, 0), ..., (0, 180, 0), podemos ver que el eje Y está aumentando por 10 cada paso. En otras palabras, para cada paso, mientras me digas la rotación actual, ¡te diré la siguiente rotación: solo agregar 10 al eje Y!
 
-This is exactly what the below blueprint does:
+Esto es exactamente lo que hace el siguiente blueprint:
 
 ![](/doc-img/en-blueprint-spinning-5.png)
 
-Let's unpack this. We are saying that instead of a fixed rotation, we want to use a changing rotation. This changing rotation is based on the character's current rotation; the current rotation (X, Y, Z) is decomposed into three numbers X, Y, Z, so we can read each number (the **Decompose Vector3** node); we add 10 to Y (the **Float Addition** node); then, we create a new rotation (X, Y, Z) with our new Y, while X and Z remain 0 (the **Vector3** node); finally, we set the character's rotation to the new rotation (the **Set Asset Rotation** node).
+Desglosemos esto. Estamos diciendo que en lugar de una rotación fija, queremos usar una rotación cambiante. Esta rotación cambiante está basada en la rotación actual del personaje; la rotación actual (X, Y, Z) se descompone en tres números X, Y, Z, así podemos leer cada número (el nodo **Decompose Vector3**); agregamos 10 a Y (el nodo **Float Addition**); luego, creamos una nueva rotación (X, Y, Z) con nuestro nuevo Y, mientras X y Z permanecen 0 (el nodo **Vector3**); finalmente, configuramos la rotación del personaje a la nueva rotación (el nodo **Set Asset Rotation**).
 
-Try to click on the Enter flow input of the Set Asset Rotation node, and you will find that the character rotates by 10 degrees every time you click it!
+¡Trata de hacer clic en la entrada de flujo Enter del nodo Set Asset Rotation, y encontrarás que el personaje rota por 10 grados cada vez que haces clic!
 
-To make the character rotate automatically, we can simply use the **On Update** node which is triggered every frame:
+Para hacer que el personaje rote automáticamente, podemos simplemente usar el nodo **On Update** que es activado cada frame:
 
 ![](/doc-img/en-blueprint-spinning-6.png)
 
 :::tip
-What should you change if you want the character to spin faster? What about slower? Can you think of a way to control the spinning speed by hotkeys? (Hint: you can use a [variable](squashing#variables) to store the spinning speed.)
+¿Qué deberías cambiar si quieres que el personaje gire más rápido? ¿Qué tal más lento? ¿Puedes pensar en una manera de controlar la velocidad de giro por teclas de acceso rápido? (Pista: puedes usar una [variable](squashing#variables) para almacenar la velocidad de giro.)
 :::
 
-But that rotates the character only, so let's rotate the chair as well:
+Pero eso rota solo el personaje, así que rotemos la silla también:
 
 ![](/doc-img/en-blueprint-spinning-7.png)
 
-Now both our character and chair spin like a top!
+¡Ahora tanto nuestro personaje como silla giran como un trompo!
 
 ![](/doc-img/en-blueprint-spinning-8.png)
 
 :::info
-The chair prop you selected should by default have the same orientation as the character; otherwise, you may need additional nodes to rotate the chair to the correct orientation.
+El prop de silla que seleccionaste debería por defecto tener la misma orientación que el personaje; de lo contrario, puedes necesitar nodos adicionales para rotar la silla a la orientación correcta.
 :::
 
 ## Gate
 
-Now our character is spinning at full speed, how do we make it stop? Well, we can disconnect the On Update node:
+Ahora nuestro personaje está girando a toda velocidad, ¿cómo lo hacemos parar? Bueno, podemos desconectar el nodo On Update:
 
 ![](/doc-img/en-blueprint-spinning-9.png)
 
-That's not convenient, though. We can also disable the blueprint, but let's try an alternative approach: let's find a way to stop the flow from the On Update node.
+Eso no es conveniente, sin embargo. También podemos deshabilitar el blueprint, pero intentemos un enfoque alternativo: encontremos una manera de parar el flujo del nodo On Update.
 
-Imagine you live in a castle, and you want to stop the _flow_ of people entering your castle. What will you do? Build a _gate_!
+Imagina que vives in un castillo, y quieres parar el _flujo_ de gente entrando a tu castillo. ¿Qué harías? ¡Construir una _puerta_!
 
-Similarly, we can use... the **Gate** node to stop the _flow_ of the On Update node:
+Similarmente, podemos usar... el nodo **Gate** para parar el _flujo_ del nodo On Update:
 
 ![](/doc-img/en-blueprint-spinning-10.png)
 
-The Gate node is very appropriately named: a flow that passes through the Enter flow input is only allowed to pass through the Exit flow output if the gate is "open." By default, the gate is opened (**Opened** is set to Yes), but if you click the **Close** flow input, the gate will close (**Opened** is set to No), and no flow will be allowed to pass through the Exit flow output.
+El nodo Gate tiene un nombre muy apropiado: un flujo que pasa por la entrada de flujo Enter solo se permite pasar por la salida de flujo Exit si la puerta está "abierta." Por defecto, la puerta está abierta (**Opened** está configurado a Yes), pero si haces clic en la entrada de flujo **Close**, la puerta se cerrará (**Opened** está configurado a No), y ningún flujo se permitirá pasar por la salida de flujo Exit.
 
 ![](/doc-img/en-blueprint-spinning-11.png)
 
-This means we can set up a hotkey to toggle the gate! Using the below blueprint, I can press R to toggle the gate at anytime, and the character will start or stop spinning accordingly:
+¡Esto significa que podemos configurar una tecla de acceso rápido para alternar la puerta! Usando el siguiente blueprint, puedo presionar R para alternar la puerta en cualquier momento, y el personaje empezará o parará de girar en consecuencia:
 
 ![](/doc-img/en-blueprint-spinning-12.png)
 
-## Resetting Rotation
+## Reseteando Rotación
 
-One problem with what we have so far is that when you press R to stop the spinning, the character and chair will stop immediately, even if they are in the middle of a spin. We probably want to rotate them back to their original rotation.
+Un problema con lo que tenemos hasta ahora es que cuando presionas R para parar el giro, el personaje y silla pararán inmediatamente, incluso si están en el medio de un giro. Probablemente queremos rotarlos de vuelta a su rotación original.
 
-Let's add the below nodes to fix this:
+Agreguemos los siguientes nodos para arreglar esto:
 
 ![](/doc-img/en-blueprint-spinning-13.png)
 
-What they do is simple: when we press T, smoothly rotate the character and chair back to the original rotation. Note that **Transition Time** is set to 0.5 and **Transition Easing** is set to OutBack, which allows for a little bit of "bounce" at the end of the transition.
+Lo que hacen es simple: cuando presionamos T, rotar suavemente el personaje y silla de vuelta a la rotación original. Nota que **Transition Time** está configurado a 0.5 y **Transition Easing** está configurado a OutBack, lo que permite un poco de "rebote" al final de la transición.
 
-But wait, why are we rotating to (0, 360, 0)? Why don't we just set the rotation to (0, 0, 0)? This is because the Set Asset Rotation node will always rotate the shortest distance to the target rotation. Imagine you are currently rotated clockwise by 90 degrees; if you want to rotate back to 0 degrees, you can either rotate counterclockwise by 90 degrees, or rotate clockwise by 270 degrees. The Set Asset Rotation node will always choose the shortest distance, which is rotating counterclockwise by 90 degrees. But when you spin on a chair, you don't think about the shortest distance; you just want to keep rotating clockwise until you are back to the original rotation!
+¿Pero espera, por qué estamos rotando a (0, 360, 0)? ¿Por qué no simplemente configuramos la rotación a (0, 0, 0)? Esto es porque el nodo Set Asset Rotation siempre rotará la distancia más corta a la rotación objetivo. Imagina que actualmente estás rotado en sentido horario por 90 grados; si quieres rotar de vuelta a 0 grados, puedes ya sea rotar en sentido anti-horario por 90 grados, o rotar en sentido horario por 270 grados. El nodo Set Asset Rotation siempre elegirá la distancia más corta, que es rotar en sentido anti-horario por 90 grados. ¡Pero cuando giras en una silla, no piensas sobre la distancia más corta; solo quieres seguir rotando en sentido horario hasta que estés de vuelta a la rotación original!
 
-Therefore, we "trick" the Set Asset Rotation node by setting the target rotation to (0, 360, 0), and since the rotation returned by the Get Asset Rotation node is always smaller than or equal to 360 degrees, the Set Asset Rotation node will always rotate clockwise to 360 degrees.
+Por lo tanto, "engañamos" al nodo Set Asset Rotation configurando la rotación objetivo a (0, 360, 0), y ya que la rotación devuelta por el nodo Get Asset Rotation siempre es menor o igual a 360 grados, el nodo Set Asset Rotation siempre rotará en sentido horario a 360 grados.
 
 ## Sequence
 
-This is almost perfect, except for one tiny thing. Right now, if we want to stop spinning, we need to first press R, then press T. Can't we make it so that we only need to press R to stop rotating?
+Esto es casi perfecto, excepto por una cosa pequeña. En este momento, si queremos parar de girar, necesitamos primero presionar R, luego presionar T. ¿No podemos hacer que solo necesitemos presionar R para parar de rotar?
 
-At first glance, this seems a simple task. We are quite familiar with the Flip Flop node, which alternates between two flow outputs. So, we just need to alternate between "opening the gate and start spinning," and "closing the gate and stop spinning, but also rotate back to the original rotation." The former is easy: we can just connect Flip Flop → A to Gate → Open.
+A primera vista, esto parece una tarea simple. Estamos bastante familiarizados con el nodo Flip Flop, que alterna entre dos salidas de flujo. Así, solo necesitamos alternar entre "abrir la puerta y empezar a girar," y "cerrar la puerta y parar de girar, pero también rotar de vuelta a la rotación original." Lo primero es fácil: podemos solo conectar Flip Flop → A a Gate → Open.
 
-But what about the latter? If we connect Flip Flop → B to Gate → Close, how do we also trigger the Set Asset Rotation node to rotate back to the original rotation? Remember, a flow output can only be connected to one flow input, so we can't connect Flip Flop → B to both Gate → Close and Set Asset Rotation → Enter.
+¿Pero qué tal lo segundo? Si conectamos Flip Flop → B a Gate → Close, ¿cómo también activamos el nodo Set Asset Rotation para rotar de vuelta a la rotación original? Recuerda, una salida de flujo solo puede ser conectada a una entrada de flujo, así que no podemos conectar Flip Flop → B tanto a Gate → Close como a Set Asset Rotation → Enter.
 
 ![](/doc-img/en-blueprint-spinning-14.png)
 
-That is when we need the **Sequence** node. The Sequence node has a variable number of flow outputs; when it is triggered, it will trigger each flow output in order. Using the Sequence node, we can now close the gate first, then rotate back to the original rotation:
+Ahí es cuando necesitamos el nodo **Sequence**. El nodo Sequence tiene un número variable de salidas de flujo; cuando es activado, activará cada salida de flujo en orden. Usando el nodo Sequence, ahora podemos cerrar la puerta primero, luego rotar de vuelta a la rotación original:
 
 ![](/doc-img/en-blueprint-spinning-15.png)
 
-Now you only need to press R to start or gracefully stop spinning!
+¡Ahora solo necesitas presionar R para empezar o parar graciosamente el giro!
 
 <AuthorBar authors={{
   creators: [
     {name: 'HakuyaTira', github: 'TigerHix'},
   ],
   translators: [
+    {name: 'かぐら', github: 'Arukaito'},
   ],
 }} />

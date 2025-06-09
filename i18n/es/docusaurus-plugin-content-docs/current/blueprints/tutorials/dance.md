@@ -2,125 +2,126 @@
 sidebar_position: 50
 ---
 
-# Dance Dance Dance
+# Baila Baila Baila
 
-Looking for a fun way to thank your viewers for their support? In this tutorial, we will make the character dance when you receive a donation, be it a YouTube Super Chat or a Twitch redeem.
+¿Buscas una forma divertida de agradecer a tus espectadores por su apoyo? En este tutorial, haremos que el personaje baile cuando recibas una donación, ya sea un Super Chat de YouTube o un redeem de Twitch.
 
 <div style={{width: '100%'}} className="video-box"><video controls loop src="/doc-img/dance.mp4" /></div>
-<p class="img-desc">Dance to thank your viewers for their support!</p>
+<p class="img-desc">¡Baila para agradecer a tus espectadores por su apoyo!</p>
 
-## Connecting to Streaming Platforms
+## Conectando a Plataformas de Streaming
 
-Before we get started, you need to use the onboarding assistant to connect Warudo to your Twitch, YouTube or Bilibili account. If you haven't done so, please refer to the [Getting Started](../../tutorials/readme-1#interaction-setup) tutorial. We will assume you stream on Twitch in this tutorial, but the steps are similar for other platforms.
+Antes de empezar, necesitas usar el asistente de configuración inicial para conectar Warudo a tu cuenta de Twitch, YouTube o Bilibili. Si no lo has hecho, por favor consulta el tutorial [Comenzando](../../tutorials/readme-1#interaction-setup). Asumiremos que haces streaming en Twitch en este tutorial, pero los pasos son similares para otras plataformas.
 
 :::tip
-You can also use third-party integration such as [Streamer.bot](Streamer.bot) that can send a WebSocket message to Warudo when you receive a donation or other stream events. In that case, you don't need to use the onboarding assistant.
+También puedes usar integraciones de terceros como [Streamer.bot](Streamer.bot) que pueden enviar un mensaje WebSocket a Warudo cuando recibes una donación u otros eventos de stream. En ese caso, no necesitas usar el asistente de configuración inicial.
 :::
 
-Let's start with a minimal example: when I receive a Twitch redeem, I want my character to dance. We need only two nodes:
+Empecemos con un ejemplo mínimo: cuando recibo un redeem de Twitch, quiero que mi personaje baile. Necesitamos solo dos nodos:
 
 ![](/doc-img/en-blueprint-dance-1.png)
 
 :::info
-The **Play Character One Shot Overlay Animation** node plays a one-shot animation on the character, so instead of switching the character's idle animation, the animation is played on top of the playing idle animation. When the animation ends, the character will automatically return to the idle animation.
+El nodo **Play Character One Shot Overlay Animation** reproduce una animación de una sola vez en el personaje, así que en lugar de cambiar la animación idle del personaje, la animación se reproduce encima de la animación idle que se está reproduciendo. Cuando la animación termina, el personaje automáticamente regresará a la animación idle.
 :::
 
 :::tip
-Instead of the **On Twitch Channel Points Redeemed** node, you can of course use any event node you want. For example, if you are streaming on YouTube, you may use the **On YouTube Super Chat Received** node instead. Or, if you are using a third-party integration that can communicate using WebSockets, you may use the **On WebSocket Message Received** node.
+En lugar del nodo **On Twitch Channel Points Redeemed**, por supuesto puedes usar cualquier nodo de evento que quieras. Por ejemplo, si haces streaming en YouTube, podrías usar el nodo **On YouTube Super Chat Received** en su lugar. O, si estás usando una integración de terceros que puede comunicarse usando WebSockets, podrías usar el nodo **On WebSocket Message Received**.
 :::
 
-How do we test it? Well, we can just wait for someone to redeem a Twitch reward, but that's not very efficient. Instead, Warudo allows you to trigger a node manually. Click on the **Enter** flow input of the Play Character One Shot Overlay Animation node:
+¿Cómo lo probamos? Bueno, podemos simplemente esperar a que alguien redimiera un reward de Twitch, pero eso no es muy eficiente. En su lugar, Warudo te permite activar un nodo manualmente. Haz clic en la entrada de flujo **Enter** del nodo Play Character One Shot Overlay Animation:
 
 ![](/doc-img/en-blueprint-dance-2.png)
 
-Your character should now start dancing!
+¡Tu personaje ahora debería empezar a bailar!
 
-## If Branch
+## Rama If
 
-Right now, our character starts dancing no matter which Twitch redeem we receive. But what if we want to dance only when we receive a specific redeem named "Dance"? Introducing the **If Branch** node—let's add it in between the two nodes, like this:
+Ahora mismo, nuestro personaje empieza a bailar sin importar qué redeem de Twitch recibamos. Pero ¿qué tal si queremos bailar solo cuando recibamos un redeem específico llamado "Dance"? Te presento el nodo **If Branch**—agreguémoslo entre los dos nodos, así:
 
 ![](/doc-img/en-blueprint-dance-3.png)
 
-Like the Flip Flop node we have seen before, the If Branch node has two flow outputs, **If True** and **If False**. Instead of alternating between the two flow outputs, the flow output that is triggered depends on the value of the **Condition** data input. If the Condition is Yes, the If True flow output is triggered; otherwise, the If False flow output is triggered.
+Como el nodo Flip Flop que hemos visto antes, el nodo If Branch tiene dos salidas de flujo, **If True** y **If False**. En lugar de alternar entre las dos salidas de flujo, la salida de flujo que se activa depende del valor de la entrada de datos **Condition**. Si la Condition es Yes, la salida de flujo If True se activa; de lo contrario, la salida de flujo If False se activa.
 
-To test this, we can click on the Enter flow input of the If Branch node. Since the Condition is currently set to No, the If False flow output is triggered, but nothing comes after it, so nothing happens.
+Para probar esto, podemos hacer clic en la entrada de flujo Enter del nodo If Branch. Como la Condition está actualmente establecida en No, la salida de flujo If False se activa, pero no hay nada después de ella, así que no pasa nada.
 
-Let's set the Condition to Yes, and click on the Enter flow input again. This time, the If True flow output is triggered, and the character starts dancing!
+Establecemos la Condition en Yes, y hacemos clic en la entrada de flujo Enter nuevamente. Esta vez, la salida de flujo If True se activa, ¡y el personaje empieza a bailar!
 
-Now, the only thing left to do is to set the Condition to something meaningful. In this case, we want to check if the Twitch redeem name is equal to "Dance". There's a node to do exactly that: the **String Equal** node. Add it to the node editor, and connect **String Equal → Output Boolean** data output to **If Branch → Condition**, like below:
+Ahora, lo único que queda por hacer es establecer la Condition a algo significativo. En este caso, queremos verificar si el nombre del redeem de Twitch es igual a "Dance". Hay un nodo para hacer exactamente eso: el nodo **String Equal**. Agrégalo al editor de nodos, y conecta la salida de datos **String Equal → Output Boolean** a **If Branch → Condition**, como abajo:
 
 ![](/doc-img/en-blueprint-dance-4.png)
 
-The String Equal node is quite simple: it compares two strings, outputs Yes if they are equal, and No otherwise. (A string is a fancy way of saying "text.") In this case, we connect **On Twitch Channel Points Redeemed → Reward Title** to **String Equal → A**, and set **String Equal → B** to "Dance". So, when the String Equal node is triggered, it will check if the Twitch redeem name is equal to "Dance", and pass the result to the If Branch node. (A boolean is a fancy way of saying "yes or no.")
+El nodo String Equal es bastante simple: compara dos strings, emite Yes si son iguales, y No de lo contrario. (Un string es una forma elegante de decir "texto".) En este caso, conectamos **On Twitch Channel Points Redeemed → Reward Title** a **String Equal → A**, y establecemos **String Equal → B** a "Dance". Entonces, cuando el nodo String Equal se activa, verificará si el nombre del redeem de Twitch es igual a "Dance", y pasará el resultado al nodo If Branch. (Un boolean es una forma elegante de decir "sí o no".)
 
 :::tip
-You can also connect Reward Title to B, and set A to "Dance". The order does not matter in this case.
+También puedes conectar Reward Title a B, y establecer A a "Dance". El orden no importa en este caso.
 :::
 
 ![](/doc-img/en-blueprint-dance-5.png)
 
-There you go! Try redeeming the "Dance" reward on your Twitch channel, and your character should start dancing!
+¡Ahí tienes! Intenta redimir el reward "Dance" en tu canal de Twitch, ¡y tu personaje debería empezar a bailar!
 
-## Randomizing the Dance
+## Aleatorizando el Baile
 
-What if we want to pick a random dance animation instead of always playing the same one? Well, if you still remember the Get Random Prop node from the [previous tutorial](buried), it is not surprising that there is also a **Get Random Character Animation** node. Thus, we can set up our blueprint like below:
+¿Qué tal si queremos elegir una animación de baile aleatoria en lugar de siempre reproducir la misma? Bueno, si aún recuerdas el nodo Get Random Prop del [tutorial anterior](buried), no es sorprendente que también haya un nodo **Get Random Character Animation**. Así, podemos configurar nuestro blueprint como abajo:
 
 ![](/doc-img/en-blueprint-dance-6.png)
 
-When the Play One Shot Overlay Animation node is triggered, the Get Random Character Animation node will be triggered and output a random animation from the **Character Animations** list, in my case, any of "Short Dance 1", "Short Dance 2" and "Short Dance 3".
+Cuando el nodo Play One Shot Overlay Animation se activa, el nodo Get Random Character Animation se activará y emitirá una animación aleatoria de la lista **Character Animations**, en mi caso, cualquiera de "Short Dance 1", "Short Dance 2" y "Short Dance 3".
 
-## Randomizing the Outcome
+## Aleatorizando el Resultado
 
-As a VTuber, you may want to keep an element of surprise when you receive a donation. Instead of just starting a dance, maybe you want to have a chance to do something else, like [launching yourself into the air](ragdoll) or [spawning a bunch of plushies](buried). Let's try to implement this!
+Como VTuber, puede que quieras mantener un elemento de sorpresa cuando recibes una donación. En lugar de solo empezar a bailar, tal vez quieras tener una posibilidad de hacer algo más, como [lanzarte al aire](ragdoll) o [generar un montón de peluches](buried). ¡Intentemos implementar esto!
 
 :::tip
-Below we have removed the **Get Random Character Animation** node for simplicity, but you can keep it if you want.
+Abajo hemos removido el nodo **Get Random Character Animation** por simplicidad, pero puedes mantenerlo si quieres.
 :::
 
-First, let's remove the connection between If Branch ↔ Play Character One Shot Overlay Animation. Add a **Switch On Integer** node right after the If Branch node, and add 3 entries to the **Cases** list, like this:
+Primero, removamos la conexión entre If Branch ↔ Play Character One Shot Overlay Animation. Agrega un nodo **Switch On Integer** justo después del nodo If Branch, y agrega 3 entradas a la lista **Cases**, así:
 
 ![](/doc-img/en-blueprint-dance-7.png)
 
-The Switch On Integer node works like this: when the node is triggered, it will check the value of the **Input Integer** data input, and trigger the corresponding flow output. For example, if Input Integer is 1, the flow output labeled 1 will be triggered; if Input Integer is 2, the flow output labeled 2 will be triggered; and so on.
+El nodo Switch On Integer funciona así: cuando el nodo se activa, verificará el valor de la entrada de datos **Input Integer**, y activará la salida de flujo correspondiente. Por ejemplo, si Input Integer es 1, la salida de flujo etiquetada 1 se activará; si Input Integer es 2, la salida de flujo etiquetada 2 se activará; y así sucesivamente.
 
-Let's connect each flow output to a different outcome. For example, I have connected the flow output labeled 1 to the Play Character One Shot Overlay Animation node, 2 to a **Play Sounds** node, and 3 to a **Spawn Particle** node. Remember to set the **Source** option of both nodes:
+Conectemos cada salida de flujo a un resultado diferente. Por ejemplo, he conectado la salida de flujo etiquetada 1 al nodo Play Character One Shot Overlay Animation, 2 a un nodo **Play Sounds**, y 3 a un nodo **Spawn Particle**. Recuerda establecer la opción **Source** de ambos nodos:
 
 ![](/doc-img/en-blueprint-dance-8.png)
 
-Now let's test it! Manually set **Switch On Integer → Input Integer** to any number between 1 and 3, and click on the Enter flow input. If everything goes well, you should see the corresponding node being triggered.
+¡Ahora probémoslo! Establece manualmente **Switch On Integer → Input Integer** a cualquier número entre 1 y 3, y haz clic en la entrada de flujo Enter. Si todo va bien, deberías ver el nodo correspondiente siendo activado.
 
 ![](/doc-img/en-blueprint-dance-9.png)
 
-The last thing we need to do is to randomize the Input Integer. You may have already guessed it: there is a **Generate Random Integer** node! We set **Value Min** to 1 and **Value Max** to 3, so that it outputs an integer between 1 and 3.
+Lo último que necesitamos hacer es aleatorizar el Input Integer. Puede que ya lo hayas adivinado: ¡hay un nodo **Generate Random Integer**! Establecemos **Value Min** a 1 y **Value Max** a 3, para que emita un entero entre 1 y 3.
 
 ![](/doc-img/en-blueprint-dance-10.png)
 
-Below is the final blueprint. Now go have some fun with your viewers!
+Abajo está el blueprint final. ¡Ahora ve a divertirte con tus espectadores!
 
 ![](/doc-img/en-blueprint-dance-11.png)
 
-## More on If Branch
+## Más sobre Rama If
 
-We used the String Equal node for the If Branch condition, but there are other conditions you can use. For example, you can use the **Integer Greater Than Or Equal** node to check if **On Twitch Channel Points Redeemed → Reward Cost** is greater than or equal to 1,000, such that the character will dance whenever you receive a Twitch redeem that costs 1,000 points or more.
+Usamos el nodo String Equal para la condición de If Branch, pero hay otras condiciones que puedes usar. Por ejemplo, puedes usar el nodo **Integer Greater Than Or Equal** para verificar si **On Twitch Channel Points Redeemed → Reward Cost** es mayor o igual a 1,000, de tal manera que el personaje bailará cada vez que recibas un redeem de Twitch que cueste 1,000 puntos o más.
 
-You can also combine multiple conditions using the **Boolean AND** and **Boolean OR** nodes. The following blueprint checks if the Twitch redeem name is equal to "DJ", **_and_** if the redeemed user has "bot" in their name:
+También puedes combinar múltiples condiciones usando los nodos **Boolean AND** y **Boolean OR**. El siguiente blueprint verifica si el nombre del redeem de Twitch es igual a "DJ", **_y_** si el usuario que redimió tiene "bot" en su nombre:
 
 ![](/doc-img/en-blueprint-dance-12.png)
 
-The following blueprint will make the character dance when you receive a Twitch redeem that costs 500 points or more, **_or_** when that redeem comes from the user "hakuyatira":
+El siguiente blueprint hará que el personaje baile cuando recibas un redeem de Twitch que cueste 500 puntos o más, **_o_** cuando ese redeem venga del usuario "hakuyatira":
 
 ![](/doc-img/en-blueprint-dance-13.png)
 
-## Interaction Blueprints
+## Blueprints de Interacción
 
-If you have used the onboarding assistant to set up an interaction blueprint, you may have noticed it is doing very similar things as the blueprint we have just created! It may contain more nodes, but the core logic is the same: when you receive a stream event, do something interesting.
+Si has usado el asistente de configuración inicial para configurar un blueprint de interacción, ¡puede que hayas notado que está haciendo cosas muy similares al blueprint que acabamos de crear! Puede contener más nodos, pero la lógica central es la misma: cuando recibes un evento de stream, haz algo interesante.
 
-With your newfound knowledge, you can now create your own interaction blueprints! Feel free to incorporate what you have learned from the previous tutorials and create something unique for your channel. Or, if you are still looking for more funsies, read on!
+Con tu nuevo conocimiento, ¡ahora puedes crear tus propios blueprints de interacción! Siéntete libre de incorporar lo que has aprendido de los tutoriales anteriores y crear algo único para tu canal. O, si aún buscas más diversión, ¡sigue leyendo!
 
 <AuthorBar authors={{
   creators: [
     {name: 'HakuyaTira', github: 'TigerHix'},
   ],
   translators: [
+    {name: 'かぐら', github: 'Arukaito'},
   ],
 }} />

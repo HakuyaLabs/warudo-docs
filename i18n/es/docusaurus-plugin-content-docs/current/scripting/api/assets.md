@@ -4,11 +4,11 @@ sidebar_position: 40
 
 # Assets
 
-Assets are self-contained objects that implement a feature or a behavior in the scene. Different from nodes, an asset usually encapsulates a more complex logic. They can be thought of classes in a program and are more similar to Unity's `MonoBehaviour`.
+Los assets son objetos autocontenidos que implementan una característica o comportamiento en la escena. A diferencia de los nodos, un asset usualmente encapsula una lógica más compleja. Se pueden pensar como clases en un programa y son más similares al `MonoBehaviour` de Unity.
 
-## Type Definition
+## Definición de Tipo
 
-You can create asset types that can be instantiated and stored in the scene. An asset type inherits from the `Asset` type and is decorated with the `[AssetType]` attribute, like below:
+Puedes crear tipos de asset que pueden ser instanciados y almacenados en la escena. Un tipo de asset hereda del tipo `Asset` y está decorado con el atributo `[AssetType]`, como se muestra abajo:
 
 ```csharp
 [AssetType(
@@ -18,38 +18,38 @@ You can create asset types that can be instantiated and stored in the scene. An 
     Singleton = false
 )]
 public class HelloWorldAsset : Asset {
-    // Asset implementation
+    // Implementación del Asset
 }
 ```
 
-Here's a summary of the parameters:
+Aquí hay un resumen de los parámetros:
 
-- **`Id`**: A unique identifier for the asset type; you should [generate a new GUID](https://www.guidgenerator.com/online-guid-generator.aspx) for each new asset type. Note that this is different from the asset instance's UUID (`asset.Id`).
-- **`Title`**: The name of the asset type that will be displayed in the *Add Asset* menu.
-- **`Category`**: Optional. The group of the asset in the *Add Asset* menu.
-- **`Singleton`**: Optional. If set to `true`, only one instance of the asset can exist in the scene. Default is `false`.
+- **`Id`**: Un identificador único para el tipo de asset; debes [generar un nuevo GUID](https://www.guidgenerator.com/online-guid-generator.aspx) para cada nuevo tipo de asset. Ten en cuenta que esto es diferente del UUID de la instancia del asset (`asset.Id`).
+- **`Title`**: El nombre del tipo de asset que se mostrará en el menú *Add Asset*.
+- **`Category`**: Opcional. El grupo del asset en el menú *Add Asset*.
+- **`Singleton`**: Opcional. Si se establece en `true`, solo una instancia del asset puede existir en la escena. Por defecto es `false`.
 
 :::info
-Here are some common asset categories you can use: `CATEGORY_INPUT`, `CATEGORY_CHARACTERS`, `CATEGORY_PROP`, `CATEGORY_ACCESSORY`, `CATEGORY_ENVIRONMENT`, `CATEGORY_CINEMATOGRAPHY`, `CATEGORY_EXTERNAL_INTERACTION`, `CATEGORY_MOTION_CAPTURE`.
+Aquí hay algunas categorías de asset comunes que puedes usar: `CATEGORY_INPUT`, `CATEGORY_CHARACTERS`, `CATEGORY_PROP`, `CATEGORY_ACCESSORY`, `CATEGORY_ENVIRONMENT`, `CATEGORY_CINEMATOGRAPHY`, `CATEGORY_EXTERNAL_INTERACTION`, `CATEGORY_MOTION_CAPTURE`.
 :::
 
-## Components
+## Componentes
 
-An asset type can define data inputs and triggers. Unlike nodes, assets do not have data outputs or flow inputs/outputs.
+Un tipo de asset puede definir data inputs y triggers. A diferencia de los nodos, los assets no tienen data outputs o flow inputs/outputs.
 
 ![](/doc-img/en-scripting-concepts-4.png)
 
-## Lifecycle
+## Ciclo de Vida
 
-Assets have the lifecycle stages listed on the [Entities](entities#lifecycle) page. You can override these methods to perform various tasks; for example, `OnUpdate()` is called every frame, similar to Unity's `Update()` method.
+Los assets tienen las etapas del ciclo de vida listadas en la página [Entities](entities#lifecycle). Puedes sobrescribir estos métodos para realizar varias tareas; por ejemplo, `OnUpdate()` es llamado cada frame, similar al método `Update()` de Unity.
 
-## Active State {#active-state}
+## Estado Activo {#active-state}
 
-Different from nodes, assets have an active state that inform whether the asset is "active", or ready to use. For example, when a character asset does not have a `Source` selected, it is shown as inactive in the editor.
+A diferencia de los nodos, los assets tienen un estado activo que informa si el asset está "activo", o listo para usar. Por ejemplo, cuando un asset de personaje no tiene un `Source` seleccionado, se muestra como inactivo en el editor.
 
 ![](/doc-img/en-custom-asset-1.png)
 
-By default, assets are **NOT** active when they are created. You can set the active state of an asset by calling `SetActive(bool state)`. For example, if your asset is always ready to use, you can set it to active in the `OnCreate` method:
+Por defecto, los assets **NO** están activos cuando son creados. Puedes establecer el estado activo de un asset llamando a `SetActive(bool state)`. Por ejemplo, si tu asset siempre está listo para usar, puedes establecerlo como activo en el método `OnCreate`:
 
 ```csharp
 public override void OnCreate() {
@@ -58,7 +58,7 @@ public override void OnCreate() {
 }
 ```
 
-If your asset only works when connected to an external server, e.g., a remote tracking device, you can set it to active only if the connection is successfully established:
+Si tu asset solo funciona cuando está conectado a un servidor externo, por ejemplo, un dispositivo de seguimiento remoto, puedes establecerlo como activo solo si la conexión se establece exitosamente:
 
 ```csharp
 [DataInput]
@@ -81,12 +81,12 @@ protected void ResetConnection() {
 ```
 
 :::tip
-Determining whether your asset is "ready to use" is entirely up to you. The convention that Warudo's internal assets use is that an asset is active when all data inputs required for the asset to function properly are set.
+Determinar si tu asset está "listo para usar" depende completamente de ti. La convención que usan los assets internos de Warudo es que un asset está activo cuando todos los data inputs requeridos para que el asset funcione correctamente están establecidos.
 :::
 
-## Creating GameObjects
+## Creando GameObjects
 
-You can create GameObjects in the (Unity) scene anytime you want. For example, the following asset creates a cube GameObject when the asset is created, and destroys it when the asset is destroyed:
+Puedes crear GameObjects en la escena (Unity) cuando quieras. Por ejemplo, el siguiente asset crea un GameObject cubo cuando el asset es creado, y lo destruye cuando el asset es destruido:
 
 ```csharp
 private GameObject gameObject;
@@ -102,7 +102,7 @@ public override void OnDestroy() {
 }
 ```
 
-However, the user cannot move this cube around, since there are no data inputs that control the cube! You can add data inputs to control the cube's position, scale, etc., but an easier way is to inherit from the `GameObjectAsset` type:
+Sin embargo, el usuario no puede mover este cubo, ¡ya que no hay data inputs que controlen el cubo! Puedes agregar data inputs para controlar la posición del cubo, escala, etc., pero una forma más fácil es heredar del tipo `GameObjectAsset`:
 
 ```csharp
 using UnityEngine;
@@ -121,53 +121,54 @@ public class MyAwesomeCubeAsset : GameObjectAsset {
 }
 ```
 
-The `GameObjectAsset` handles creating and destroying the GameObject for you, and it comes with a `Transform` data input that allows the user to control the GameObject's position, rotation, and scale:
+El `GameObjectAsset` maneja la creación y destrucción del GameObject por ti, y viene con un data input `Transform` que permite al usuario controlar la posición, rotación y escala del GameObject:
 
 ![](/doc-img/en-custom-asset-2.png)
 
 :::tip
-When to use `GameObjectAsset`? If your asset is "something that can be moved by the user in the (Unity) scene", then it's probably a good idea to inherit from `GameObjectAsset`.
+¿Cuándo usar `GameObjectAsset`? Si tu asset es "algo que puede ser movido por el usuario en la escena (Unity)", entonces probablemente sea una buena idea heredar de `GameObjectAsset`.
 :::
 
-## Events
+## Eventos
 
-The `Asset` type invokes the following events that you can listen to:
+El tipo `Asset` invoca los siguientes eventos a los que puedes escuchar:
 
-- **`OnActiveStateChange`**: Called when the active state of the asset changes.
-- **`OnSelectedStateChange`**: Called when the asset is selected or deselected in the editor.
-- **`OnNameChange`**: Called when the name of the asset changes.
+- **`OnActiveStateChange`**: Llamado cuando el estado activo del asset cambia.
+- **`OnSelectedStateChange`**: Llamado cuando el asset es seleccionado o deseleccionado en el editor.
+- **`OnNameChange`**: Llamado cuando el nombre del asset cambia.
 
-For example, the built-in [Leap Motion tracking](../../mocap/leap-motion) asset listens to the `OnSelectedStateChange` event to display a Leap Motion controller model in the (Unity) scene when the asset is selected.
+Por ejemplo, el asset integrado de [seguimiento Leap Motion](../../mocap/leap-motion) escucha al evento `OnSelectedStateChange` para mostrar un modelo del controlador Leap Motion en la escena (Unity) cuando el asset es seleccionado.
 
 ```csharp
 public override void OnCreate() {
     base.OnCreate();
     OnSelectedStateChange.AddListener(selected => {
         if (selected) {
-            // Show the model
+            // Mostrar el modelo
         } else {
-            // Hide the model
+            // Ocultar el modelo
         }
     });
 }
 ```
 
-## Code Examples
+## Ejemplos de Código
 
-### Basic
+### Básico
 
 - [AnchorAsset.cs](https://gist.github.com/TigerHix/c549e984df0be34cfd6f8f50e741aab2)  
-Attachable / GameObjectAsset example.
+Ejemplo de Attachable / GameObjectAsset.
 
-### Advanced
+### Avanzado
 
 - [CharacterPoserAsset.cs](https://gist.github.com/TigerHix/8413f8e10e508f37bb946d8802ee4e0b)  
-Custom asset to pose your character with IK anchors.
+Asset personalizado para posar tu personaje con anchors IK.
 
 <AuthorBar authors={{
 creators: [
 {name: 'HakuyaTira', github: 'TigerHix'},
 ],
 translators: [
+{name: 'かぐら', github: 'Arukaito'},
 ],
 }} />

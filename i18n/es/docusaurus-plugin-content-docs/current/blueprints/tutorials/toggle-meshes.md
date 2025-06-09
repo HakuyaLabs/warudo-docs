@@ -2,57 +2,58 @@
 sidebar_position: 10
 ---
 
-# Toggling Clothing & Accessories
+# Alternando Ropa y Accesorios
 
-Often character models will have multiple meshes for different clothing and accessories. This tutorial will show you how to toggle these meshes on and off using hotkeys.
+A menudo los modelos de personajes tendrán múltiples meshes para diferentes ropas y accesorios. Este tutorial te mostrará cómo alternar estos meshes encendidos y apagados usando teclas de acceso rápido.
 
 <div style={{width: '100%'}} className="video-box"><video controls loop src="/doc-img/toggle-meshes.mp4" /></div>
-<p class="img-desc">Toggling character meshes with hotkeys.</p>
+<p class="img-desc">Alternando meshes de personaje con teclas de acceso rápido.</p>
 
-## Toggling Meshes
+## Alternando Meshes
 
-Without further ado, let's get started! First, let's create a new blueprint. Just like in the [Creating Your First Blueprint](../understanding-blueprints.md) tutorial, we need to add a **On Keystroke Pressed** node. I will set the hotkey to **Ctrl+Shift+J** (J for "jacket"), but you can use whatever you want.
+¡Sin más preámbulos, empecemos! Primero, vamos a crear un nuevo blueprint. Justo como en el tutorial [Creando Tu Primer Blueprint](../understanding-blueprints.md), necesitamos agregar un nodo **On Keystroke Pressed**. Configuraré la tecla de acceso rápido a **Ctrl+Shift+J** (J por "jacket"), pero puedes usar lo que quieras.
 
 ![](/doc-img/en-blueprint-toggle-meshes-1.png)
 
-Next, we need to add a **Toggle Character Meshes** node——the name is pretty self-explanatory, isn't it? Add it to the blueprint, and connect the nodes like so:
+Después, necesitamos agregar un nodo **Toggle Character Meshes**——el nombre se explica por sí mismo, ¿no es así? Agrégalo al blueprint, y conecta los nodos así:
 
 ![](/doc-img/en-blueprint-toggle-meshes-2.png)
 
-Select your character from the **Character** dropdown. Then, click the **+** button to add a new entry to the **Meshes** list, and select the mesh you want to toggle. In this case, I want to toggle my character's jacket, so I select the "jacket" mesh. You can add as many meshes as you want to this list.
+Selecciona tu personaje del menú desplegable **Character**. Luego, haz clic en el botón **+** para agregar una nueva entrada a la lista **Meshes**, y selecciona el mesh que quieres alternar. En este caso, quiero alternar la chaqueta de mi personaje, así que selecciono el mesh "jacket". Puedes agregar tantos meshes como quieras a esta lista.
 
 :::info
-Note that models exported by [VRoid Studio](https://vroid.com/en/studio) only have two meshes: `Body` and `Face`. More detailed models often split the character's clothes, accessories, tail, animal ears, etc. into separate meshes. If you have no clothing or accessories to toggle, you can either skip this tutorial, or follow through to toggle your entire body mesh just for fun!
+Nota que los modelos exportados por [VRoid Studio](https://vroid.com/en/studio) solo tienen dos meshes: `Body` y `Face`. Los modelos más detallados a menudo dividen la ropa del personaje, accesorios, cola, orejas de animal, etc. en meshes separados. Si no tienes ropa o accesorios para alternar, puedes saltarte este tutorial, ¡o seguir adelante para alternar todo el mesh de tu cuerpo solo por diversión!
 :::
 
-Hey, can you believe it? We are already done! Now, when I press **Ctrl+Shift+J**, my character's jacket will be toggled on and off.
+Oye, ¿puedes creerlo? ¡Ya terminamos! Ahora, cuando presione **Ctrl+Shift+J**, la chaqueta de mi personaje se alternará encendida y apagada.
 
-## Copy & Paste
+## Copiar y Pegar
 
-I want to set up a hotkey for toggling my headphones as well. Instead of dragging out the nodes again, let's just copy and paste the nodes we already have. Hold **Mouse RMB** and drag a box around the nodes to select them like so:
+Quiero configurar una tecla de acceso rápido para alternar mis audífonos también. En lugar de arrastrar los nodos otra vez, simplemente copiemos y peguemos los nodos que ya tenemos. Mantén **Mouse RMB** y arrastra una caja alrededor de los nodos para seleccionarlos así:
 
 ![](/doc-img/en-blueprint-toggle-meshes-3.png)
 
-Then, press **Ctrl+C** to copy the nodes, and **Ctrl+V** to paste them. The nodes will be pasted at the location of your mouse cursor. I am changing the hotkey to **Ctrl+Shift+H** (H for "headphones"), and selecting the "headphones" mesh from the dropdown, but you can of course set these to whatever you want.
+Luego, presiona **Ctrl+C** para copiar los nodos, y **Ctrl+V** para pegarlos. Los nodos serán pegados en la ubicación de tu cursor del mouse. Estoy cambiando la tecla de acceso rápido a **Ctrl+Shift+H** (H por "headphones"), y seleccionando el mesh "headphones" del menú desplegable, pero por supuesto puedes configurar estos a lo que quieras.
 
 ![](/doc-img/en-blueprint-toggle-meshes-4.png)
 
-Now, when I press **Ctrl+Shift+H**, my character's headphones will be toggled on and off.
+Ahora, cuando presione **Ctrl+Shift+H**, los audífonos de mi personaje se alternarán encendidos y apagados.
 
-## Event Nodes
+## Nodos de Evento
 
-Nodes like the On Keystroke Pressed node are called **event nodes**. Event nodes do not have an **Enter** flow input, so you cannot trigger them; they are triggered by Warudo automatically, in this case, when you press the hotkey.
+Los nodos como el nodo On Keystroke Pressed son llamados **nodos de evento**. Los nodos de evento no tienen una entrada de flujo **Enter**, así que no puedes activarlos; son activados por Warudo automáticamente, en este caso, cuando presionas la tecla de acceso rápido.
 
-There are other event nodes. like the **On YouTube Super Chat Received** node. If you have connected Warudo to your YouTube stream, this node is triggered when you receive a Super Chat. In the below example, I am using the **On YouTube Super Chat Received** node to toggle my character's jacket when I receive a Super Chat.
+Hay otros nodos de evento, como el nodo **On YouTube Super Chat Received**. Si has conectado Warudo a tu stream de YouTube, este nodo es activado cuando recibes un Super Chat. En el ejemplo de abajo, estoy usando el nodo **On YouTube Super Chat Received** para alternar la chaqueta de mi personaje cuando recibo un Super Chat.
 
 ![](/doc-img/en-blueprint-toggle-meshes-5.png)
 
-This "if X, then Y" paradigm is the foundation of blueprints. The X is an event, like pressing a hotkey or receiving a Super Chat, and the Y is all sorts of interesting interactions, like making your character dance, or ragdolling your character. In fact, that's exactly what we will look into in the next tutorial...
+Este paradigma "si X, entonces Y" es la fundación de los blueprints. La X es un evento, como presionar una tecla de acceso rápido o recibir un Super Chat, y la Y son todo tipo de interacciones interesantes, como hacer que tu personaje baile, o hacer ragdoll a tu personaje. De hecho, eso es exactamente lo que veremos en el siguiente tutorial...
 
 <AuthorBar authors={{
   creators: [
     {name: 'HakuyaTira', github: 'TigerHix'},
   ],
   translators: [
+    {name: 'かぐら', github: 'Arukaito'},
   ],
 }} />

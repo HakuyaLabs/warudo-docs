@@ -26,5 +26,6 @@ Para precios y más detalles, por favor contáctanos: [info@warudo.app](mailto:i
     {name: 'HakuyaTira', github: 'TigerHix'},
   ],
   translators: [
+    {name: 'かぐら', github: 'Arukaito'},
   ],
 }} />

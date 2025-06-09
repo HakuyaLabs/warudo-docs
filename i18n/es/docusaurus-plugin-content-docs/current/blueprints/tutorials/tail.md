@@ -2,91 +2,92 @@
 sidebar_position: 140
 ---
 
-# Grabbing the Tail
+# Agarrando la Cola
 
-Does your character have a tail? If so, this tutorial is for you! In this tutorial, we will make our character grab their tail when we press a hotkey.
+¿Tu personaje tiene cola? ¡Si es así, este tutorial es para ti! En este tutorial, haremos que nuestro personaje agarre su cola cuando presionemos una tecla de acceso rápido.
 
 <div style={{width: '100%'}} className="video-box"><video controls loop src="/doc-img/tail.mp4" /></div>
-<p class="img-desc">Gonna grab that tail!</p>
+<p class="img-desc">¡Voy a agarrar esa cola!</p>
 
 :::tip
-If your character doesn't have a tail, that's fine too! You can read the tutorial anyway and learn how to use the **Set Asset Property** and **Invoke Asset Trigger** nodes.
+Si tu personaje no tiene cola, ¡eso también está bien! Puedes leer el tutorial de todos modos y aprender cómo usar los nodos **Set Asset Property** e **Invoke Asset Trigger**.
 :::
 
-## Tail IK
+## IK de Cola
 
-Before we start working on the blueprint, let's set up our scene first! First, create an [Anchor](../../assets/anchor) asset and attach it to the character's right hand:
+¡Antes de empezar a trabajar en el blueprint, configuremos nuestra escena primero! Primero, crea un asset [Anchor](../../assets/anchor) y adjúntalo a la mano derecha del personaje:
 
 ![](/doc-img/en-blueprint-tail-2.png)
 
-This will be helpful later when we want to point the tail to our character's right hand.
+Esto será útil más tarde cuando queramos apuntar la cola hacia la mano derecha de nuestro personaje.
 
-Next, create a [Tail](../../assets/tail) asset and [set it up](../../assets/tail#setup) on your character. In the **Inverse Kinematics** section, set **Enabled** to Yes, and set **IK Target** to the anchor we just created:
+Después, crea un asset [Tail](../../assets/tail) y [configúralo](../../assets/tail#setup) en tu personaje. En la sección **Inverse Kinematics**, establece **Enabled** a Yes, y establece **IK Target** al anchor que acabamos de crear:
 
 ![](/doc-img/en-blueprint-tail-3.png)
 
 :::info
-If you have already created a tail, notice that you need to disable waving and additional shaping for this tutorial.
+Si ya has creado una cola, nota que necesitas deshabilitar waving y additional shaping para este tutorial.
 :::
 
-This sets up the tail to use inverse kinematics (IK) to point to the anchor. In other words, the tail will always try to reach our character's right hand, like this:
+Esto configura la cola para usar cinemática inversa (IK) para apuntar al anchor. En otras palabras, la cola siempre intentará alcanzar la mano derecha de nuestro personaje, así:
 
 ![](/doc-img/en-blueprint-tail-1.png)
 
 ## Set Asset Property
 
-Currently, to toggle between grabbing and not grabbing the tail, we need to manually turn on/off **Tail → Inverse Kinematics → Enabled**.
+Actualmente, para alternar entre agarrar y no agarrar la cola, necesitamos activar/desactivar manualmente **Tail → Inverse Kinematics → Enabled**.
 
 ![](/doc-img/en-blueprint-tail-4.png)
 
-Is there a way to do this in a blueprint? The bad news is, there isn't a node called "Toggle Tail IK" or anything like that. The good news is, the powerful and versatile **Set Asset Property** node can do exactly what we want!
+¿Hay una forma de hacer esto en un blueprint? La mala noticia es que no hay un nodo llamado "Toggle Tail IK" o algo así. ¡La buena noticia es que el poderoso y versátil nodo **Set Asset Property** puede hacer exactamente lo que queremos!
 
-Just like its name suggests, the Set Asset Property node sets a property (option) of an asset. We can simply select the Inverse Kinematics → Enabled property from the **Data Path** dropdown after selecting the tail asset from the **Asset** dropdown:
+Como su nombre sugiere, el nodo Set Asset Property establece una propiedad (opción) de un asset. Simplemente podemos seleccionar la propiedad Inverse Kinematics → Enabled del menú desplegable **Data Path** después de seleccionar el asset de cola del menú desplegable **Asset**:
 
 ![](/doc-img/en-blueprint-tail-9.png)
 
-Then, instead of specifying a **Target Value**, we can just set **Toggle** to Yes so that the node will toggle the property between Yes and No every time it is triggered:
+Luego, en lugar de especificar un **Target Value**, podemos simplemente establecer **Toggle** a Yes para que el nodo alterne la propiedad entre Yes y No cada vez que se active:
 
 ![](/doc-img/en-blueprint-tail-5.png)
 
-Now when we press Ctrl+Shift+X, the tail IK will be toggled on/off! Simple, isn't it?
+¡Ahora cuando presionemos Ctrl+Shift+X, el IK de la cola se alternará encendido/apagado! Simple, ¿no?
 
-Toggling the tail IK is nice, but you may notice that the IK is instantly turned on/off. It would be better if we can gradually turn on/off the IK, so that the tail will gradually reach the hand instead of instantly reaching the hand.
+Alternar el IK de la cola está bien, pero puede que notes que el IK se activa/desactiva instantáneamente. Sería mejor si pudiéramos gradualmente activar/desactivar el IK, para que la cola gradualmente alcance la mano en lugar de alcanzar instantáneamente la mano.
 
-To do this, we can set **Tail → Inverse Kinematics → Enabled** to Yes, and control the **Tail → Inverse Kinematics → Weight** option instead:
+Para hacer esto, podemos establecer **Tail → Inverse Kinematics → Enabled** a Yes, y controlar la opción **Tail → Inverse Kinematics → Weight** en su lugar:
 
 ![](/doc-img/en-blueprint-tail-6.png)
 
-If you drag the weight from 0 to 1, you will see the tail gradually reaching the hand. How do we do this in a blueprint? Well, the **Set Asset Property** node again! This time we select the Tail → Inverse Kinematics → Weight property:
+Si arrastras el weight de 0 a 1, verás la cola gradualmente alcanzando la mano. ¿Cómo hacemos esto en un blueprint? ¡Bueno, el nodo **Set Asset Property** nuevamente! Esta vez seleccionamos la propiedad Tail → Inverse Kinematics → Weight:
 
 ![](/doc-img/en-blueprint-tail-8.png)
 
-And we set **Target Value** to 1 and 0 respectively on the two nodes. Recall that the Flip Flop node will alternate between its two Exit flow outputs every time it is triggered, so when we press Ctrl+Shift+X, the tail IK will gradually turn on/off.
+Y establecemos **Target Value** a 1 y 0 respectivamente en los dos nodos. Recuerda que el nodo Flip Flop alternará entre sus dos salidas de flujo Exit cada vez que se active, así que cuando presionemos Ctrl+Shift+X, el IK de la cola gradualmente se activará/desactivará.
 
 ![](/doc-img/en-blueprint-tail-7.png)
 
 :::tip
-As you can see, the Set Asset Property node can set almost anything you see in the Assets tab! Sometimes, it can even replace a dedicated node. For example, the Set Asset Property node can set the **Enabled** option of a prop, so it seems like you don't need to use the **Toggle Asset Enabled** node anymore.
+Como puedes ver, ¡el nodo Set Asset Property puede establecer casi cualquier cosa que veas en la pestaña Assets! Algunas veces, incluso puede reemplazar un nodo dedicado. Por ejemplo, el nodo Set Asset Property puede establecer la opción **Enabled** de un prop, así que parece que ya no necesitas usar el nodo **Toggle Asset Enabled**.
 
-However, since Set Asset Property is more general, its performance is worse than dedicated nodes like Toggle Asset Enabled. You should especially be careful to not trigger a Set Asset Property node too frequently (such as after an **On Update** node), or it may cause performance issues. The rule of thumb is, if there is a dedicated node for what you want to do, use it instead of Set Asset Property.
+Sin embargo, como Set Asset Property es más general, su rendimiento es peor que los nodos dedicados como Toggle Asset Enabled. Debes tener especial cuidado de no activar un nodo Set Asset Property muy frecuentemente (como después de un nodo **On Update**), o puede causar problemas de rendimiento. La regla general es, si hay un nodo dedicado para lo que quieres hacer, úsalo en lugar de Set Asset Property.
 :::
 
 ## Invoke Asset Trigger
 
-Now we know how to automate slider adjustments and switch toggling, but how do we automate button clicking? For example, is there a way to automatically "click" the **Tail → Reset Tail** button with a hotkey?
+Ahora sabemos cómo automatizar ajustes de deslizadores y alternancia de interruptores, pero ¿cómo automatizamos clics de botones? Por ejemplo, ¿hay una forma de automáticamente "hacer clic" en el botón **Tail → Reset Tail** con una tecla de acceso rápido?
 
 ![](/doc-img/en-blueprint-tail-11.png)
 
-There is! The **Invoke Asset Trigger** node can do exactly that. It is similar to the Set Asset Property node, but instead of setting a property, it invokes a trigger (button) of an asset. We can select the Tail → Reset Tail trigger from the **Trigger Path** dropdown:
+¡La hay! El nodo **Invoke Asset Trigger** puede hacer exactamente eso. Es similar al nodo Set Asset Property, pero en lugar de establecer una propiedad, invoca un trigger (botón) de un asset. Podemos seleccionar el trigger Tail → Reset Tail del menú desplegable **Trigger Path**:
 
 ![](/doc-img/en-blueprint-tail-10.png)
 
-There are quite a few buttons in Warudo, so this node can come in handy at times! For example, if you use iFacialMocap or MediaPipe for face tracking, I personally find it useful to assign a hotkey to **iFacialMocap Receiver / MediaPipe Tracker → Calibrate** so that I can calibrate my face tracking with a hotkey.
+¡Hay bastantes botones en Warudo, así que este nodo puede ser útil a veces! Por ejemplo, si usas iFacialMocap o MediaPipe para seguimiento facial, personalmente encuentro útil asignar una tecla de acceso rápido a **iFacialMocap Receiver / MediaPipe Tracker → Calibrate** para poder calibrar mi seguimiento facial con una tecla de acceso rápido.
 
 <AuthorBar authors={{
   creators: [
     {name: 'HakuyaTira', github: 'TigerHix'},
   ],
   translators: [
+    {name: 'かぐら', github: 'Arukaito'},
   ],
 }} />

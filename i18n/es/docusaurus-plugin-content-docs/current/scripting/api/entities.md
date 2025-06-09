@@ -4,63 +4,64 @@ sidebar_position: 2
 
 # Entities
 
-An entity is an object that is persistent in a [scene](scene) (e.g., nodes, assets) or across scenes (e.g., plugins). Scripting in Warudo is all about defining your own entity types and interacting with the Warudo runtime. You can define your own entity type by inheriting a base class provided by Warudo:
+Una entity es un objeto que es persistente en una [escena](scene) (ej., nodos, assets) o a través de escenas (ej., plugins). La programación en Warudo se trata completamente de definir tus propios tipos de entity e interactuar con el runtime de Warudo. Puedes definir tu propio tipo de entity heredando de una clase base proporcionada por Warudo:
 
-- **Node:** Inherit from `Node` to create a new node type. A node type can define data inputs, data outputs, flow inputs, flow outputs, and triggers. A node is instantiated by dragging it from the node palette to the blueprint editor; the node instance is saved along with the blueprint.
-- **Asset:** Inherit from `Asset` to create a new asset type. An asset type can define data inputs and triggers. An asset is instantiated by using the *Add Asset* menu; the asset instance is saved along with the scene.
-- **Plugin:** Inherit from `Plugin` to create a new plugin type. A plugin type can define data inputs and triggers. A plugin is loaded when Warudo starts, or when the plugin is hot-reloaded. There is only one plugin instance per plugin type, and data inputs are saved across scenes.
-- **Structured Data:** Inherit from `StructuredData` to create a new [structured data](structured-data) type. Structured data is a complex data type that can be used as an "embedded" data input in nodes, assets, or plugins.
+- **Node:** Hereda de `Node` para crear un nuevo tipo de nodo. Un tipo de nodo puede definir data inputs, data outputs, flow inputs, flow outputs, y triggers. Un nodo es instanciado arrastrándolo desde la paleta de nodos al editor de blueprint; la instancia del nodo se guarda junto con el blueprint.
+- **Asset:** Hereda de `Asset` para crear un nuevo tipo de asset. Un tipo de asset puede definir data inputs y triggers. Un asset es instanciado usando el menú *Add Asset*; la instancia del asset se guarda junto con la escena.
+- **Plugin:** Hereda de `Plugin` para crear un nuevo tipo de plugin. Un tipo de plugin puede definir data inputs y triggers. Un plugin es cargado cuando Warudo inicia, o cuando el plugin es recargado en caliente. Solo hay una instancia de plugin por tipo de plugin, y los data inputs se guardan a través de escenas.
+- **Structured Data:** Hereda de `StructuredData` para crear un nuevo tipo de [structured data](structured-data). Structured data es un tipo de datos complejo que puede ser usado como un data input "embebido" en nodos, assets, o plugins.
 
 :::info
-In the [Creating Your First Script](../creating-your-first-script.md) tutorial, we created a custom node type called `HelloWorldNode` and a custom asset type called `CookieClickerAsset`.
+En el tutorial [Creating Your First Script](../creating-your-first-script.md), creamos un tipo de nodo personalizado llamado `HelloWorldNode` y un tipo de asset personalizado llamado `CookieClickerAsset`.
 :::
 
 :::tip
-The concept of entities is loosely similar to Unity's MonoBehaviour, but with a more structured approach.
+El concepto de entities es vagamente similar al MonoBehaviour de Unity, pero con un enfoque más estructurado.
 :::
 
-After an entity is instantiated, it is automatically assigned a UUID (unique identifier) by Warudo. You can access it via the `Id` property. This UUID is then used to identify the entity in the scene, and is saved along with the scene.
+Después de que una entity es instanciada, se le asigna automáticamente un UUID (identificador único) por Warudo. Puedes acceder a él vía la propiedad `Id`. Este UUID es entonces usado para identificar la entity en la escena, y se guarda junto con la escena.
 
-An entity type can contain regular C# fields and methods. However, to interface with the Warudo runtime, you need to create [**ports and triggers**](ports-and-triggers) in the entity. All entities can have [data input ports](ports-and-triggers#data-input-ports) and [triggers](ports-and-triggers#triggers), while nodes can additionally have [data output ports](ports-and-triggers#data-output-ports), [flow input ports](ports-and-triggers#flow-input-ports), and [flow output ports](ports-and-triggers#flow-output-ports).
+Un tipo de entity puede contener campos y métodos regulares de C#. Sin embargo, para interfaz con el runtime de Warudo, necesitas crear [**ports y triggers**](ports-and-triggers) en la entity. Todas las entities pueden tener [data input ports](ports-and-triggers#data-input-ports) y [triggers](ports-and-triggers#triggers), mientras que los nodos pueden adicionalmente tener [data output ports](ports-and-triggers#data-output-ports), [flow input ports](ports-and-triggers#flow-input-ports), y [flow output ports](ports-and-triggers#flow-output-ports).
 
 ![](/doc-img/en-custom-node-1.png)
 
 ![](/doc-img/en-scripting-concepts-4.png)
 
-## Lifecycle {#lifecycle}
+## Ciclo de Vida {#lifecycle}
 
-An entity has a lifecycle that consists of several stages:
+Una entity tiene un ciclo de vida que consiste en varias etapas:
 
-- **`OnCreate()`:** Called when the entity is created. This is where you should initialize the instance fields, subscribe to events, etc.
-    - **Assets:** Called when a new asset is added to the scene by the user, or when the scene is loaded.
-    - **Nodes:** Called when a new node is added to the blueprint by the user, or when the scene is loaded. Nodes are always created _after_ assets.
-    - **Plugins:** Called when the plugin is loaded by Warudo on startup, or when the plugin is hot-reloaded.
-    - **Structured Data:** Called when the parent entity is created, or when the user adds a new structured data to an array of structured data.
-- **`OnDestroy()`:** Called when the entity is destroyed. This is where you should release resources, etc.
-    - **Assets:** Called when the asset is removed from the scene by the user, or when the scene is unloaded.
-    - **Nodes:** Called when the node is removed from the blueprint by the user, or when the scene is unloaded. Nodes are always destroyed _after_ assets.
-- **`Deserialize(TSerialized data)`:** Called when the entity is deserialized from a saved state. For example, this method is called on an asset when the scene is just opened and loaded. _You usually do not need to override this method._
-- **`Serialize()`:** Called when the entity needs to be serialized to a saved state. For example, this method is called on an asset when the scene is about to be saved, or need to be sent to the editor. _You usually do not need to override this method._
+- **`OnCreate()`:** Llamado cuando la entity es creada. Aquí es donde debes inicializar los campos de instancia, suscribirte a eventos, etc.
+    - **Assets:** Llamado cuando un nuevo asset es agregado a la escena por el usuario, o cuando la escena es cargada.
+    - **Nodes:** Llamado cuando un nuevo nodo es agregado al blueprint por el usuario, o cuando la escena es cargada. Los nodos siempre son creados _después_ de los assets.
+    - **Plugins:** Llamado cuando el plugin es cargado por Warudo al inicio, o cuando el plugin es recargado en caliente.
+    - **Structured Data:** Llamado cuando la entity padre es creada, o cuando el usuario agrega un nuevo structured data a un array de structured data.
+- **`OnDestroy()`:** Llamado cuando la entity es destruida. Aquí es donde debes liberar recursos, etc.
+    - **Assets:** Llamado cuando el asset es removido de la escena por el usuario, o cuando la escena es descargada.
+    - **Nodes:** Llamado cuando el nodo es removido del blueprint por el usuario, o cuando la escena es descargada. Los nodos siempre son destruidos _después_ de los assets.
+- **`Deserialize(TSerialized data)`:** Llamado cuando la entity es deserializada desde un estado guardado. Por ejemplo, este método es llamado en un asset cuando la escena es apenas abierta y cargada. _Usualmente no necesitas sobrescribir este método._
+- **`Serialize()`:** Llamado cuando la entity necesita ser serializada a un estado guardado. Por ejemplo, este método es llamado en un asset cuando la escena está a punto de ser guardada, o necesita ser enviada al editor. _Usualmente no necesitas sobrescribir este método._
 
-Assets, nodes, and plugins have extra lifecycle stages:
+Assets, nodos, y plugins tienen etapas extras del ciclo de vida:
 
-- **`OnUpdate()`:** Called every frame when the entity is not destroyed. This is similar to Unity's `Update()` method.
-  - `OnPreUpdate()` and `OnPostUpdate()` are also provided. They are called before and after `OnUpdate()`, respectively.
-- **`OnLateUpdate()`:** Called every frame after `OnUpdate()`. This is similar to Unity's `LateUpdate()` method.
-- **`OnFixedUpdate()`:** Called every fixed frame. This is similar to Unity's `FixedUpdate()` method.
-- **`OnEndOfFrame()`:** Called at the end of the frame. This is similar to using Unity's [`WaitForEndOfFrame` coroutine](https://docs.unity3d.com/ScriptReference/WaitForEndOfFrame.html).
-- **`OnDrawGizmos()`:** Called when the entity should draw gizmos. This is similar to Unity's `OnDrawGizmos()` method.
+- **`OnUpdate()`:** Llamado cada frame cuando la entity no está destruida. Esto es similar al método `Update()` de Unity.
+  - `OnPreUpdate()` y `OnPostUpdate()` también se proporcionan. Son llamados antes y después de `OnUpdate()`, respectivamente.
+- **`OnLateUpdate()`:** Llamado cada frame después de `OnUpdate()`. Esto es similar al método `LateUpdate()` de Unity.
+- **`OnFixedUpdate()`:** Llamado cada frame fijo. Esto es similar al método `FixedUpdate()` de Unity.
+- **`OnEndOfFrame()`:** Llamado al final del frame. Esto es similar a usar la [`WaitForEndOfFrame` coroutine](https://docs.unity3d.com/ScriptReference/WaitForEndOfFrame.html) de Unity.
+- **`OnDrawGizmos()`:** Llamado cuando la entity debe dibujar gizmos. Esto es similar al método `OnDrawGizmos()` de Unity.
 
 :::info
-The update order is as follows: plugins → assets → nodes.
+El orden de actualización es el siguiente: plugins → assets → nodos.
 :::
 
-You can override these lifecycle methods to implement custom behavior for your entities. For example, if you want to run something on every frame, override the `OnUpdate()` method.
+Puedes sobrescribir estos métodos del ciclo de vida para implementar comportamiento personalizado para tus entities. Por ejemplo, si quieres ejecutar algo en cada frame, sobrescribe el método `OnUpdate()`.
 
 <AuthorBar authors={{
 creators: [
 {name: 'HakuyaTira', github: 'TigerHix'},
 ],
 translators: [
+{name: 'かぐら', github: 'Arukaito'},
 ],
 }} />
