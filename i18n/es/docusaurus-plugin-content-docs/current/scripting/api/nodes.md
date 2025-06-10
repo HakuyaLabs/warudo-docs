@@ -86,7 +86,7 @@ In addition to the lifecycle stages listed on the [Entities](entities#lifecycle)
 - **`OnAllNodesDeserialized()`:** Called after all nodes in the belonging blueprint are deserialized. This is useful when you need to access other nodes in the same blueprint.
 - **`OnUserAddToScene()`:** Called when the node is just instantiated in the blueprint editor, by the user dragging it from the node palette.
 
-## Triggering Flows
+## Activando Flujos
 
 You can trigger an output flow by returning the `Continuation` of the flow output in a flow input method. For example:
 
@@ -124,7 +124,7 @@ public Continuation Enter() {
 }
 ```
 
-## Non-Serializable Data Inputs & Outputs
+## Data Inputs y Outputs No Serializables
 
 One thing special about nodes is that they can have non-serializable data inputs and outputs (you can't do that in assets or plugins - they will just not display at all). This allows nodes to pass, e.g., Unity objects like `GameObject` or `Texture2D` between each other and process them.
 
@@ -140,7 +140,7 @@ public object MyGenericOutput() => ...
 
 Data output port of any type can be connected to `MyGenericInput` (the value will just be upcast to `object`). Conversely, `MyGenericOutput` can be connected to any data input port, but the value received by the input port will be `null` if the input port type is not compatible with the underlying type of what `MyGenericOutput` returns.
 
-## Type Converters
+## Convertidores de Tipos
 
 When connecting nodes, you will notice Warudo will automatically convert the data type if possible. For example, it is possible to connect a `float` output to an `int` input - the value is simply truncated.
 
@@ -165,9 +165,9 @@ public override void OnCreate() {
 You should not register type converters in your node type's `OnCreate` - you will register them each time a node instance is created!
 :::
 
-## Code Examples
+## Ejemplos de Código
 
-### Basic
+### Básico
 
 - [ExampleNode.cs](https://github.com/HakuyaLabs/WarudoPlaygroundExamples/blob/master/ExampleNode.cs)  
 Standard example of node, showing the basic format of various node components.
@@ -184,7 +184,7 @@ Character Animation (source) node.
 - [SmoothTransformNode.cs](https://gist.github.com/TigerHix/eaf8e05e5e1b687b8265420b9943903d)  
 Smooth Transform node.
 
-### Advanced
+### Avanzado
 
 - [FindAssetByTypeNode.cs](https://gist.github.com/TigerHix/ab3522bb25669457cc583abc4fb025d2)  
 AutoCompleteList (Dropdown) example.

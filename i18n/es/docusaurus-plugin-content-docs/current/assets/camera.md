@@ -38,7 +38,7 @@ Debes usar NDI si necesitas dar salida de Warudo a otro dispositivo dentro de la
 :::
 
 :::tip
-Todos los métodos de salida soportan salida de transparencia. Para habilitar fondo transparente, simplemente habilita **Basic Properties → Transparent Background**.
+Todos los métodos de salida soportan salida de transparencia. Para habilitar fondo transparente, simplemente habilita **Propiedades Básicas → Transparent Background**.
 
 Cuando uses salida Spout en OBS, establece el **Composite Mode** en las propiedades de Spout2 Capture a **Premultiplied Alpha** para habilitar transparencia.
 

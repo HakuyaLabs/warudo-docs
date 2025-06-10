@@ -395,7 +395,7 @@ Recomendamos usar el método **Spout**, ya que tiene latencia cero y el mejor re
 <p class="img-desc">Salida Spout a OBS Studio.</p>
 
 :::tip
-Todos los métodos de salida soportan salida de transparencia. Para habilitar fondo transparente, simplemente ve al asset de la cámara y habilita **Basic Properties → Transparent Background**.
+Todos los métodos de salida soportan salida de transparencia. Para habilitar fondo transparente, simplemente ve al asset de la cámara y habilita **Propiedades Básicas → Transparent Background**.
 :::
 
 ## Guardar y Cargar Escenas
