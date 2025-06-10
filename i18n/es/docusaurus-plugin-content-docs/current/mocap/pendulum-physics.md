@@ -11,8 +11,7 @@ Esta página está en progreso. Por ahora, por favor consulta nuestro [hilo de T
 <AuthorBar authors={{
   creators: [
     {name: 'HakuyaTira', github: 'TigerHix'},
-  ],
-  translators: [
-    {name: 'かぐら (Arukaito)', github: 'Arukaito'},
+  ],  translators: [
+    {name: 'かぐら', github: 'Arukaito'},
   ],
 }} />

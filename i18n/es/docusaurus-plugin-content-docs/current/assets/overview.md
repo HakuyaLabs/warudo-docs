@@ -32,8 +32,7 @@ Puedes usar la función de importar/exportar para copiar assets entre escenas.
 <AuthorBar authors={{
   creators: [
     {name: 'HakuyaTira', github: 'TigerHix'},
-  ],
-  translators: [
-    {name: 'かぐら (Arukaito)', github: 'Arukaito'}
+  ],  translators: [
+    {name: 'かぐら', github: 'Arukaito'}
   ],
 }} />

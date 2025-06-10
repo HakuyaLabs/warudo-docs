@@ -86,8 +86,7 @@ Por favor ve al blueprint de seguimiento (p. ej., **Face Tracking - iFacialMocap
 <AuthorBar authors={{
   creators: [
     {name: 'HakuyaTira', github: 'TigerHix'},
-  ],
-  translators: [
-    {name: 'かぐら (h.o.r.o)', github: 'Arukaito'},
+  ],  translators: [
+    {name: 'かぐら', github: 'Arukaito'},
   ],
 }} />

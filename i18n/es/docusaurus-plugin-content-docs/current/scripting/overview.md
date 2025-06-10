@@ -64,6 +64,6 @@ creators: [
 {name: 'HakuyaTira', github: 'TigerHix'},
 ],
 translators: [
-{name: 'かぐら (Arukaito)', github: 'Arukaito'}
+{name: 'かぐら', github: 'Arukaito'}
 ],
 }} />

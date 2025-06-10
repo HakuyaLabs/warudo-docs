@@ -43,8 +43,7 @@ Esto le dice a Warudo que muestre tu imagen de título a los 22.5 segundos de la
 <AuthorBar authors={{
   creators: [
     {name: 'HakuyaTira', github: 'TigerHix'},
-  ],
-  translators: [
-    {name: 'かぐら (Arukaito)', github: 'Arukaito'}
+  ],  translators: [
+    {name: 'かぐら', github: 'Arukaito'}
   ],
 }} />

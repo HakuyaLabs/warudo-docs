@@ -77,8 +77,7 @@ Por defecto, **Body Rotation Type** está establecido en Inverted para imitar mo
 <AuthorBar authors={{
   creators: [
     {name: 'HakuyaTira', github: 'TigerHix'},
-  ],
-  translators: [
-    {name: 'かぐら (h.o.r.o)', github: 'Arukaito'},
+  ],  translators: [
+    {name: 'かぐら', github: 'Arukaito'},
   ],
 }} />

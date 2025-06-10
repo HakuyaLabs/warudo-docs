@@ -39,8 +39,7 @@ Puedes anular las configuraciones del entorno como **Ambient Lighting Source**, 
 <AuthorBar authors={{
   creators: [
     {name: 'HakuyaTira', github: 'TigerHix'},
-  ],
-  translators: [
-    {name: 'かぐら (Arukaito)', github: 'Arukaito'},
+  ],  translators: [
+    {name: 'かぐら', github: 'Arukaito'},
   ],
 }} />

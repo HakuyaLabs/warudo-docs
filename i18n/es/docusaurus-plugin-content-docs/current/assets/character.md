@@ -238,8 +238,7 @@ Para hacer esto, habilita **Is Transient** en el nodo **Toggle Character Express
 <AuthorBar authors={{
   creators: [
     {name: 'HakuyaTira', github: 'TigerHix'},
-  ],
-  translators: [
-    {name: 'かぐら (Arukaito)', github: 'Arukaito'},
+  ],  translators: [
+    {name: 'かぐら', github: 'Arukaito'},
   ],
 }} />

@@ -49,6 +49,6 @@ Por favor contáctanos en [info@warudo.app](mailto:info@warudo.app), o únete a 
     {name: 'HakuyaTira', github: 'TigerHix'},
   ],
   translators: [
-    {name: 'かぐら (h.o.r.o)', github: 'Arukaito'},
+    {name: 'かぐら', github: 'Arukaito'},
   ],
 }} />

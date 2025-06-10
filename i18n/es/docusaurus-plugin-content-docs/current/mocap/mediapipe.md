@@ -93,6 +93,6 @@ No recomendamos el Leap Motion Controller 1 que tiende a perder el seguimiento f
     {name: 'HakuyaTira', github: 'TigerHix'},
   ],
   translators: [
-    {name: 'かぐら (h.o.r.o)', github: 'Arukaito'},
+    {name: 'かぐら', github: 'Arukaito'},
   ],
 }} />

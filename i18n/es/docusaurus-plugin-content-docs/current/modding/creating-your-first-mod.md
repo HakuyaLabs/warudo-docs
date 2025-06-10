@@ -87,8 +87,7 @@ Ten en cuenta que la recarga en caliente puede no siempre funcionar como se espe
 <AuthorBar authors={{
   creators: [
     {name: 'HakuyaTira', github: 'TigerHix'},
-  ],
-  translators: [
-    {name: 'かぐら (Arukaito)', github: 'Arukaito'}
+  ],  translators: [
+    {name: 'かぐら', github: 'Arukaito'}
   ],
 }} />

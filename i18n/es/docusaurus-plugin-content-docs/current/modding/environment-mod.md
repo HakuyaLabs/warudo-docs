@@ -102,8 +102,7 @@ Algunos usuarios han reportado que tener múltiples conjuntos de lightmaps y ass
   creators: [
     {name: 'HakuyaTira', github: 'TigerHix'},
     {name: 'hanekit', github: 'hanekit'}
-  ],
-  translators: [
-    {name: 'かぐら (Arukaito)', github: 'Arukaito'}
+  ],  translators: [
+    {name: 'かぐら', github: 'Arukaito'}
   ],
 }} />

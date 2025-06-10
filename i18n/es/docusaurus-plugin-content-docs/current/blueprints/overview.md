@@ -63,8 +63,7 @@ Para navegar en el editor de nodos, puedes usar **Botón Izquierdo del Mouse** p
 <AuthorBar authors={{
   creators: [
     {name: 'HakuyaTira', github: 'TigerHix'},
-  ],
-  translators: [
-    {name: 'かぐら (Arukaito)', github: 'Arukaito'}
+  ],  translators: [
+    {name: 'かぐら', github: 'Arukaito'}
   ],
 }} />
