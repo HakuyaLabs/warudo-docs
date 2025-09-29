@@ -1,5 +1,6 @@
 ---
 sidebar_position: 60
+translate_from_version: 2024-08-02
 ---
 
 # iFacialMocap/FaceMotion3D
