@@ -148,6 +148,9 @@ Los elementos en un array de datos estructurados se inicializan automáticamente
 ```csharp
 [DataInput]
 public MyTransformData[] MyTransforms; // Each MyTransforms[i].Scale is initialized to (1, 1, 1)
+```
+
+Sin embargo, a veces puede que quieras inicializar el nuevo elemento con valores dinámicos. Podemos usar el atributo [StructuredDataInitializer] para especificar un método que será llamado para inicializar el dato estructurado:
 
 ```csharp
 [DataInput]
@@ -162,7 +165,7 @@ protected void InitializeTransform(MyTransformData transform) {
 }
 ```
 
-When the user clicks the **+** button, the `InitializeTransform` method is called to initialize the new structured data element.
+Cuando el usuario hace clic en el botón **+**, se llama al método InitializeTransform para inicializar el nuevo elemento de datos estructurados.
 
 ## Creando Structured Data Programáticamente
 
