@@ -8,7 +8,7 @@
     "description": "The alt text of navbar logo"
   },
   "item.label.文档": {
-    "message": "文档",
+    "message": "Documentación",
     "description": "Navbar item with label 文档"
   },
   "item.label.GitHub": {
