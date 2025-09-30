@@ -143,14 +143,11 @@ Cuando el usuario hace clic en el botón **+**, elementos de structured data son
 
 ## Inicializador Personalizado
 
-Elements in a structured data array are automatically initialized by Warudo:
+Los elementos en un array de datos estructurados se inicializan automáticamente por Warudo:
 
 ```csharp
 [DataInput]
 public MyTransformData[] MyTransforms; // Each MyTransforms[i].Scale is initialized to (1, 1, 1)
-```
-
-However, sometimes you may want to initialize the new element with dynamic values. We can use the `[StructuredDataInitializer]` attribute to specify a method that will be called to initialize the structured data:
 
 ```csharp
 [DataInput]
