@@ -4,14 +4,14 @@ sidebar_position: 100
 
 # Mod de Plugin
 
-A plugin mod is a type of [Warudo mod](../modding/mod-sdk) that adds custom assets and nodes to Warudo.
+Un mod de plugin es un tipo de [mod de Warudo](../modding/mod-sdk) que agrega assets y nodos personalizados a Warudo.
 
 :::tip
-Check out our [Creating Your First Plugin Mod](creating-your-first-plugin-mod) tutorial to get started with creating a plugin mod!
+¡Consulta nuestro tutorial [Creando tu primer mod de plugin](creating-your-first-plugin-mod) para comenzar a crear un mod de plugin!
 :::
 
 :::info
-This page discusses the general guidelines for creating a plugin mod. Please also refer to the [Plugins](api/plugins) scripting API page.
+Esta página discute las pautas generales para crear un mod de plugin. Por favor, consulta también la página de la API de scripting de [Plugins](api/plugins).
 :::
 
 ## Configuración del Entorno {#environment-setup}
