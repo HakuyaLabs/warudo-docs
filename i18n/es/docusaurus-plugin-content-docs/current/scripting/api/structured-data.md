@@ -166,7 +166,7 @@ When the user clicks the **+** button, the `InitializeTransform` method is calle
 
 ## Creando Structured Data Programáticamente
 
-To manually populate the structured data array, or to add structured data elements programmatically, use the `StructuredData.Create<T>()` method:
+Para rellenar manualmente el array de datos estructurados, o para agregar elementos de datos estructurados de forma programática, utiliza el método `StructuredData.Create<T>()`:
 
 ```csharp
 public override void OnCreate() {
