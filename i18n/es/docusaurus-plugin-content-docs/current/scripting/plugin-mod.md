@@ -30,13 +30,13 @@ Luego, puedes cargar estos assets en scripts durante el tiempo de ejecución. Co
 
 ## Limitaciones {#limitations}
 
-Plugin mods have the following limitations:
+Los mods de plugin tienen las siguientes limitaciones:
 
-- You cannot use third-party DLLs or NuGet packages.
-- You cannot export C# scripts that are part of an assembly, i.e., you cannot have any `.asmdef` files in your mod folder.
-- You cannot use reflection (`System.Reflection`) or access the file system (`System.IO`).
-  * To invoke methods on `MonoBehaviour` components, consider using Unity's [`SendMessage`](https://docs.unity3d.com/ScriptReference/GameObject.SendMessage.html) or [`BroadcastMessage`](https://docs.unity3d.com/ScriptReference/Component.BroadcastMessage.html) methods.
-  * To store and retrieve data, see [Saving and Loading Data](api/io).
+- No puedes usar DLLs de terceros ni paquetes NuGet.
+- No puedes exportar scripts C# que formen parte de un ensamblado, es decir, no puedes tener archivos `.asmdef` en la carpeta de tu mod.
+- No puedes usar reflexión (`System.Reflection`) ni acceder al sistema de archivos (`System.IO`).
+  * Para invocar métodos en componentes `MonoBehaviour`, considera usar los métodos [`SendMessage`](https://docs.unity3d.com/ScriptReference/GameObject.SendMessage.html) o [`BroadcastMessage`](https://docs.unity3d.com/ScriptReference/Component.BroadcastMessage.html) de Unity.
+  * Para almacenar y recuperar datos, consulta [Guardado y Carga de Datos](api/io).
 
 <AuthorBar authors={{
 creators: [
