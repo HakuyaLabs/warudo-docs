@@ -81,13 +81,13 @@ If you modeled the character yourself, we recommend you manually normalize the b
 
 There are many ways to normalize bones in modeling tools such as Blender or Maya; however, the most tried-and-tested way is creating a [VRM](https://vrm.dev/en/univrm/) model from the FBX model, and then importing the VRM model into Unity. Since VRM models are guaranteed to have normalized bones, you can be sure that the bones will not be twisted after setting up the character using Warudo SDK. The downside to this is that you will have to create a VRM model for every iteration of your FBX, which can be troublesome.
 
-If you are a Blender user and looking to manually normalize the bones, you can use the **Set Rest Pose** option from [Cats](https://github.com/absolute-quantum/cats-blender-plugin). When you export the FBX, you should use the below settings:
+If you are a Blender user and looking to manually normalize the bones, you can use the **Set Rest Pose** option from [Cats](https://cats.neoneko.xyz/). When you export the FBX, you should use the below settings:
 
 ![](/doc-img/en-mod-15.png)
 <p class="img-desc">Credit: [@Kana_Fuyuko](https://twitter.com/Kana_Fuyuko)</p>
 
 :::warning
-Blender's built-in FBX exporter is known to have issues with not exporting the correct bone rotations; if you are having trouble, consider using a third-party add-on such as [Better FBX Importer & Exporter](https://blendermarket.com/products/better-fbx-importer--exporter) (Recommended) or [Cats](https://github.com/absolute-quantum/cats-blender-plugin) to export the FBX model. 
+Blender's built-in FBX exporter is known to have issues with not exporting the correct bone rotations; if you are having trouble, consider using a third-party add-on such as [Better FBX Importer & Exporter](https://blendermarket.com/products/better-fbx-importer--exporter) (Recommended) or [Cats](https://cats.neoneko.xyz/) to export the FBX model. 
 :::
 
 ### Using Denormalized Avatar Exporter
