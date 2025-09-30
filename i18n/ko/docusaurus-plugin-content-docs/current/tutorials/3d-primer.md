@@ -1,5 +1,6 @@
 ---
 sidebar_position: 11
+translate_from_version: 2024-12-11
 ---
 
 # 3D VTubing 기초

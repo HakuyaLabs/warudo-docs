@@ -1,5 +1,6 @@
 ---
 sidebar_position: 11
+version: 2025-09-29
 ---
 
 # 3D VTubing Primer
@@ -18,10 +19,96 @@ A blendshape's value is between 0 and 1. When the value is 0, the vertices do no
 ![](/doc-img/zh-tutorials-19.gif)
 <p class="img-desc">Note that blendshapes in Unity takes values from 0-100, but in Warudo (and most 3D tools) blendshapes take values from 0-1. Reference: DevelopPaper</p>
 
+:::warning[About facial capture blendshapes]
+
+When using facial capture, Warudo will use the official naming conventions to identify the blendshapes on your character model.
+
+If you find that your model *won't perform facial capture*, it may be due to incorrect blendshape naming.  
+Please modify the blendshape naming conventions according to the appropriate table below.  
+Note that **uppercase and lowercase letters must match the conventions**.
+
+- If you are using a model with **ARKit** blendshapes, please ensure that the naming conventions follow the ARKit conventions below.
+For example, the blinking blendshapes should be named "eyeBlinkLeft" and "eyeBlinkRight."
+
+- If you are using a **VRM model without ARKit blendshapes**, please ensure that the naming conventions follow the VRM 0.X conventions below.
+For example, the blinking blendshapes should be named "Blink_L" and "Blink_R."
+
+:::
+
 The list of blendshapes on a model is entirely up to the modeler (and the modeling tool). Below are a few lists of common blendshapes (for reference only; your model may have more or fewer blendshapes):
 
 <details>
+<summary>ARKit-compatible (Perfect Sync) models</summary>
 
+* eyeBlinkLeft
+* eyeLookDownLeft
+* eyeLookInLeft
+* eyeLookOutLeft
+* eyeLookUpLeft
+* eyeSquintLeft
+* eyeWideLeft
+* eyeBlinkRight
+* eyeLookDownRight
+* eyeLookInRight
+* eyeLookOutRight
+* eyeLookUpRight
+* eyeSquintRight
+* eyeWideRight
+* jawForward
+* jawLeft
+* jawRight
+* jawOpen
+* mouthClose
+* mouthFunnel
+* mouthPucker
+* mouthLeft
+* mouthRight
+* mouthSmileLeft
+* mouthSmileRight
+* mouthFrownLeft
+* mouthFrownRight
+* mouthDimpleLeft
+* mouthDimpleRight
+* mouthStretchLeft
+* mouthStretchRight
+* mouthRollLower
+* mouthRollUpper
+* mouthShrugLower
+* mouthShrugUpper
+* mouthPressLeft
+* mouthPressRight
+* mouthLowerDownLeft
+* mouthLowerDownRight
+* mouthUpperUpLeft
+* mouthUpperUpRight
+* browDownLeft
+* browDownRight
+* browInnerUp
+* browOuterUpLeft
+* browOuterUpRight
+* cheekPuff
+* cheekSquintLeft
+* cheekSquintRight
+* noseSneerLeft
+* noseSneerRight
+* tongueOut
+
+</details>
+
+<details>
+<summary>VRM 0.x models</summary>
+
+- A
+- I
+- U
+- E
+- O
+- Blink_L
+- Blink_R
+
+</details>
+
+<details>
 <summary>VRoid Studio models</summary>
 
 * Fcl\_ALL\_Neutral
@@ -85,7 +172,6 @@ The list of blendshapes on a model is entirely up to the modeler (and the modeli
 </details>
 
 <details>
-
 <summary>MMD models</summary>
 
 * 真面目
@@ -149,65 +235,6 @@ The list of blendshapes on a model is entirely up to the modeler (and the modeli
 * 頬染め
 * 照れ
 * 赤面
-
-</details>
-
-<details>
-
-<summary>ARKit-compatible (Perfect Sync) models</summary>
-
-* eyeBlinkLeft
-* eyeLookDownLeft
-* eyeLookInLeft
-* eyeLookOutLeft
-* eyeLookUpLeft
-* eyeSquintLeft
-* eyeWideLeft
-* eyeBlinkRight
-* eyeLookDownRight
-* eyeLookInRight
-* eyeLookOutRight
-* eyeLookUpRight
-* eyeSquintRight
-* eyeWideRight
-* jawForward
-* jawLeft
-* jawRight
-* jawOpen
-* mouthClose
-* mouthFunnel
-* mouthPucker
-* mouthLeft
-* mouthRight
-* mouthSmileLeft
-* mouthSmileRight
-* mouthFrownLeft
-* mouthFrownRight
-* mouthDimpleLeft
-* mouthDimpleRight
-* mouthStretchLeft
-* mouthStretchRight
-* mouthRollLower
-* mouthRollUpper
-* mouthShrugLower
-* mouthShrugUpper
-* mouthPressLeft
-* mouthPressRight
-* mouthLowerDownLeft
-* mouthLowerDownRight
-* mouthUpperUpLeft
-* mouthUpperUpRight
-* browDownLeft
-* browDownRight
-* browInnerUp
-* browOuterUpLeft
-* browOuterUpRight
-* cheekPuff
-* cheekSquintLeft
-* cheekSquintRight
-* noseSneerLeft
-* noseSneerRight
-* tongueOut
 
 </details>
 

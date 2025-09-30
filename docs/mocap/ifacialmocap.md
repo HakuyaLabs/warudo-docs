@@ -1,8 +1,9 @@
 ---
 sidebar_position: 60
+version: 2025-09-29
 ---
 
-# iFacialMocap/FaceMotion3D
+# iFacialMocap / FaceMotion3D
 
 ARKit-based face tracking. Requires a [Face ID](https://support.apple.com/en-us/HT208109)-compatible iOS device and the $5.99 [iFacialMocap](https://apps.apple.com/us/app/id1489470545) app. Tracks 52 ARKit blendshapes, head rotation and head translation.
 
@@ -53,6 +54,30 @@ During calibration, you should look straight ahead and keep your head still. Aft
 ## Frequently Asked Questions
 
 Please refer to [Overview](overview#FAQ) and [Customizing Face Tracking](face-tracking#FAQ) for common questions.
+
+If you meet any of below situations:
+
+- Can not connect to the PC  
+- iFacialmocap cannot send data to Warudo  
+- The facial capture cannot move the model after using the Onboarding Assistance  
+- Encountered a sudden loss of face capture  
+- The iPhone device suddenly disconnects from the pc
+
+Please check the following points in order:
+
+1. **Admin**: Run Warudo in administrator mode
+2. **Port**: Check the input port
+3. **IP**: Check whether the input IP is consistent
+4. **Blendshapes Naming**: Check model Blendshapes naming, make sure they contain correct naming and lower/uppercase (The model needs to have Arkit standard Blendshapes, see the following list**: https**://docs.warudo.app/docs/tutorials/3d-primer)
+5. **Same Wifi**: Confirm that the mobile device and PC device use the same Wifi
+6. **Private Network**: Confirm that the Private Network is used
+7. **Firewall**: Add Warudo to the whitelist of the computer firewall; try to turn off the firewall and see if you can connect normally after restarting the app (if successful, please remember to re-open the firewall)
+8. **App Setting**: Check that all parameters in "Allow iFacialmocap To Access" in iPhone Settings > iFacialmocap are all enabled, and manually re-enable these settings
+9. **Camera Occupation**: Check whether there are other apps occupying the phone camera (such as VTubeStudio)
+10. **Apple security settings**: Under the phone settings, check if the iFacialmocap/Rhylive app has full access for connection
+11. **Restart**: Reopen the iFacialmocap APP multiple times
+12. **iTunes**: Install iTunes on the computer and restart the APP and Warudo
+13. **Expired Devices**:  iFacialmocap may cannot be used properly on some old devices (like iPhoneX). This may be because the phone system is too old, or the app cannot continue to work on this device.
 
 <AuthorBar authors={{
   creators: [

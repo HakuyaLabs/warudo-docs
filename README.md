@@ -1,4 +1,3 @@
-
 # Warudo Handbook
 
 ![Warudo handbook](https://docs.warudo.app/doc-img/intro-cover.jpg)
@@ -10,15 +9,15 @@ The main purpose of this repository is to provide comprehensive beginner-friendl
 
 The Warudo handbook proudly uses using [Docusaurus](https://docusaurus.io/) to create website which is maked by JavaScript Markdown and so much more great staffs.
 
-## Getting started
-[https://docs.warudo.app/](https://docs.warudo.app/)
+## Getting Started
 
-## Issues / Feedback / Suggestions / Report bug
+[Introduction to Warudo | Warudo Handbook](https://docs.warudo.app/docs)
+
+## Issues / Feedback / Suggestions / Bug Reports
 
 Any suggestions or questions about Warudo Handbook, feel free to create issues on GitHub.  
-https://github.com/HakuyaLabs/warudo-docs/issues
- 
-## Contribution
+[Issues · HakuyaLabs/warudo-docs](https://github.com/HakuyaLabs/warudo-docs/issues)
 
-Contribution guide  
-https://docs.warudo.app/docs/misc/handbook-contribution
+## Contribution Guide
+
+[Document Contribution | Warudo Handbook](https://docs.warudo.app/docs/misc/handbook-contribution)

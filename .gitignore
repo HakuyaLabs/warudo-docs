@@ -33,4 +33,5 @@ yarn-error.log*
 
 # Obsidian
 .obsidian
+*.base
 _obsidian_database_.md
