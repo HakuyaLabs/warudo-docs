@@ -31,6 +31,11 @@ yarn-error.log*
 !.yarn/sdks
 !.yarn/versions
 
+# C# build output
+**/bin/
+**/obj/
+*.sln
+
 # Obsidian
 .obsidian
 *.base
