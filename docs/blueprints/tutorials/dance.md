@@ -11,7 +11,7 @@ Looking for a fun way to thank your viewers for their support? In this tutorial,
 
 ## Connecting to Streaming Platforms
 
-Before we get started, you need to use the onboarding assistant to connect Warudo to your Twitch, YouTube or Bilibili account. If you haven't done so, please refer to the [Getting Started](../../tutorials/readme-1#interaction-setup) tutorial. We will assume you stream on Twitch in this tutorial, but the steps are similar for other platforms.
+Before we get started, you need to use the onboarding assistant to connect Warudo to your Twitch, YouTube or Bilibili account. If you haven't done so, please refer to the [Getting Started](../../tutorials/getting-started.md#interaction-setup) tutorial. We will assume you stream on Twitch in this tutorial, but the steps are similar for other platforms.
 
 :::tip
 You can also use third-party integration such as [Streamer.bot](Streamer.bot) that can send a WebSocket message to Warudo when you receive a donation or other stream events. In that case, you don't need to use the onboarding assistant.

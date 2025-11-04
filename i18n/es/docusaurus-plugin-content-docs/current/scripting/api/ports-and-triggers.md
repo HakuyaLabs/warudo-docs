@@ -14,7 +14,7 @@ Los ports y triggers pertenecen a [entities](entities) y son posiblemente la par
 
 Los data input ports se usan para proporcionar datos a una entity ya sea por el usuario (usando el editor) u otra entity.Los data inputs pueden ser de varios tipos, como strings, números, booleanos, o incluso tipos complejos como [structured data](structured-data.md) o arrays.
 
-Un data input se define como un campo público en una subclase de entity, decorado con el atributo `[DataInput]`. En el ejemplo [Comenzando](getting-started.md), vimos un `DataInput` que define un slider de número:
+Un data input se define como un campo público en una subclase de entity, decorado con el atributo `[DataInput]`. En el ejemplo [Creando Tu Primer Script](../creating-your-first-script.md), vimos un `DataInput` que define un slider de número:
 
 ```csharp
 [DataInput]

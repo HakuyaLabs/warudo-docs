@@ -15,7 +15,7 @@ Si quieres usar este ambiente de sala de karaoke, puedes descargarlo desde nuest
 
 ## Reproduciendo Animaciones Idle
 
-Primero, agrega un prop de micrófono y adjúntalo a la mano izquierda de tu personaje. Consulta el tutorial de [Empezando](../../tutorials/readme-1.md#assets-tab) si no estás seguro de cómo hacer esto. Luego, en el asset del prop, configura **Enabled** a No para ocultar el micrófono por ahora.
+Primero, agrega un prop de micrófono y adjúntalo a la mano izquierda de tu personaje. Consulta el tutorial de [Empezando](../../tutorials/getting-started.md#assets-tab) si no estás seguro de cómo hacer esto. Luego, en el asset del prop, configura **Enabled** a No para ocultar el micrófono por ahora.
 
 Después, trata de recrear el blueprint de abajo usando el nodo On Keystroke Pressed que ya conocemos muy bien, con dos nodos nuevos: **Toggle Asset Enabled** y **Play Character Idle Animation**. (Sus nombres son bastante reveladores, ¿no es así?) Recuerda configurar **Toggle Asset Enabled → Asset** al prop del micrófono, y **Play Character Idle Animation → Animation** a una pose de cantar. Estoy usando "010_0970," pero siéntete libre de experimentar con otras poses.
 

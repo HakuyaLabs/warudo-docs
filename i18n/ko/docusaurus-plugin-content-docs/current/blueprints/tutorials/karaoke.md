@@ -15,7 +15,7 @@ sidebar_position: 40
 
 ## 기본 애니메이션 재생하기
 
-먼저, 마이크 소품을 추가하고 캐릭터의 왼손에 부착하세요. 어떻게 하는지 잘 모르겠다면 [시작하기](../../tutorials/readme-1.md#assets-tab) 튜토리얼을 참조하세요. 그런 다음, 소품 에셋에서 **Enabled**를 No로 설정하여 마이크를 일단 숨깁니다.
+먼저, 마이크 소품을 추가하고 캐릭터의 왼손에 부착하세요. 어떻게 하는지 잘 모르겠다면 [시작하기](../../tutorials/getting-started.md#assets-tab) 튜토리얼을 참조하세요. 그런 다음, 소품 에셋에서 **Enabled**를 No로 설정하여 마이크를 일단 숨깁니다.
 
 이제 우리가 익숙한 On Keystroke Pressed 노드를 사용하여 아래의 blueprint를 재현해보세요. 여기에는 두 개의 새로운 노드가 추가돼요: **Toggle Asset Enabled**와 **Play Character Idle Animation**. (이름만 봐도 기능을 알 수 있죠?) **Toggle Asset Enabled → Asset**에는 마이크 소품을 설정하고, **Play Character Idle Animation → Animation**에는 노래하는 포즈를 설정하세요. 저는 "010_0970"을 사용했지만, 다른 포즈를 실험해 봐도 좋아요.
 

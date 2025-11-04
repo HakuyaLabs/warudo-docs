@@ -1,6 +1,6 @@
 ---
 sidebar_position: 60
-version: 2025-09-29
+version: 2025-10-30
 ---
 
 # iFacialMocap / FaceMotion3D
@@ -68,7 +68,7 @@ Please check the following points in order:
 1. **Admin**: Run Warudo in administrator mode
 2. **Port**: Check the input port
 3. **IP**: Check whether the input IP is consistent
-4. **Blendshapes Naming**: Check model Blendshapes naming, make sure they contain correct naming and lower/uppercase (The model needs to have Arkit standard Blendshapes, see the following list**: https**://docs.warudo.app/docs/tutorials/3d-primer)
+4. **Blendshapes Naming**: Check model Blendshapes naming, make sure they contain correct naming and lower/uppercase (The model needs to have Arkit standard Blendshapes, check: [3D VTubing Primer](../tutorials/3d-primer))
 5. **Same Wifi**: Confirm that the mobile device and PC device use the same Wifi
 6. **Private Network**: Confirm that the Private Network is used
 7. **Firewall**: Add Warudo to the whitelist of the computer firewall; try to turn off the firewall and see if you can connect normally after restarting the app (if successful, please remember to re-open the firewall)

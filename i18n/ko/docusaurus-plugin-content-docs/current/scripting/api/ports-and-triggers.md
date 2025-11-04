@@ -14,7 +14,7 @@ sidebar_position: 2
 
 데이터 인풋 포트는 사용자가 에디터를 통해 제공하는 데이터를 받거나, 다른 엔티티로부터 데이터를 받을 때 사용돼요. 데이터 인풋은 다양한 타입을 가질 수 있는데, 문자열, 숫자, 불리언 같은 기본적인 타입부터 [구조화된 데이터](structured-data.md)나 배열 같은 복잡한 타입도 지원해요.
 
-데이터 인풋은 `[DataInput]` 속성으로 표시되며, 엔티티 서브클래스의 public 필드로 정의돼요. [시작하기](getting-started.md) 예제에서 우리는 숫자 슬라이더를 정의하는 `DataInput`을 보았죠:
+데이터 인풋은 `[DataInput]` 속성으로 표시되며, 엔티티 서브클래스의 public 필드로 정의돼요. [당신의 첫 스크립트를 만들어보세요](../creating-your-first-script.md) 예제에서 우리는 숫자 슬라이더를 정의하는 `DataInput`을 보았죠:
 
 ```csharp
 [DataInput]
