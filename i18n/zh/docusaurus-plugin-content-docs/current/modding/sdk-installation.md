@@ -55,21 +55,20 @@ Warudo 不使用该版本，建议点击 **Skip installation**。
 
 ## Step 2 - 安装 Unity Editor
 
-接下来，你需要下载 Unity Editor 的安装包，且版本必须严格为 **Unity 2021.3.18f1** 。
+接下来，你需要下载 Unity Editor 的安装包，且版本必须严格为 **Unity 2021.3.45f2** 。
 
 该版本不能使用 Unity Hub 直接下载，你需要：
 
 1. 前往 [Unity Download Archive](https://unity.com/releases/editor/archive) ；
-2. 在 **【Unity 2021.X】** 选项卡 下，找到【Unity **2021.3.18** (February 1, 2023)】 ；
+2. 在 **【Unity 2021.X】** 选项卡 下，找到【Unity **2021.3.45f2** (3 Oct, 2025)】 ；
 3. 点击 【Downloads (Win)】；
 4. 选择 **【Unity Editor (64-bit)】**；
-5. 等待【 `UnitySteup 64-2021.3.18f1.exe` 】下载完成 （大小约 2.3 GiB）；
+5. 等待【 `UnitySteup 64-2021.3.45f2.exe` 】下载完成 （大小约 2.3 GiB）；
 
 ![](/doc-img/sdk-installation-9.png)
 
-接下来，运行 `UnitySteup 64-2021.3.18f1.exe` 开始安装。
-
-此时默认安装位置为 `C:\Program Files\Unity 2021.3.18f1`，你可以自行修改，但是建议在路径中**保留版本号**，以避免版本冲突。
+接下来，运行 `UnitySteup 64-2021.3.45f2.exe` 开始安装。
+此时默认安装位置为 `C:\Program Files\Unity 2021.3.45f2`，你可以自行修改，但是建议在路径中**保留版本号**，以避免版本冲突。
 
 该安装会消耗较长时间，请耐心等待。
 
@@ -80,7 +79,7 @@ Warudo 不使用该版本，建议点击 **Skip installation**。
 3. 找到刚才选择的安装路径，然后进入【Editor】子文件夹，找到【Unity.exe】；
 4. 选择后点击【选择编辑器 (Select Editor)】。
 
-此时，在 Unity Hub 中便能正确地显示出 `2021.3.18f1` 版本的 Unity.exe
+此时，在 Unity Hub 中便能正确地显示出 `2021.3.45f2` 版本的 Unity.exe
 
 ![](/doc-img/sdk-installation-10.png)
 
@@ -89,20 +88,69 @@ Warudo 不使用该版本，建议点击 **Skip installation**。
 
 在 Unity 中设置 Warudo SDK 有两种方法：
 
-- 下载我们的模组项目模板；
-- 手动将 SDK .unitypackage 导入到您的项目中。
+- 使用 Unity Package Manager 导入
+- 下载我们的模组项目模板
 
-我们推荐第一个选项，因为它更容易且不易出错。  
-第二个选项更适合更新现有的 modding 项目。
+我们推荐第一个选项，因为它可以轻易保持您的工程与 Warudo Mod SDK 的最新版本同步。  
+如果您与 Github 之间连接不佳，可以尝试使用第二个选项。
 
-### 方法一 直接导入模板项目（推荐）
+### 方法一 使用 Unity Package Manager 导入（推荐）
 
-[Warudo SDK 0.12.0 Modding Project.zip](https://docs.warudo.app/sdk/Warudo%20SDK%200.12.0%20Modding%20Project.zip)
+:::tip
 
-1. **下载** 以上项目压缩包并将内容 **解压** 到自定义位置，例如 `D:\Softwares\Unity\2021.3.18f1\Projects\WarudoModding` ；
+使用该方法可以保持您的工程与 Warudo Mod SDK 的最新版本同步。
+
+:::
+
+打开 Unity 项目后，点击菜单栏上的 **Window → Package Manager** 。在 Package Manager 窗口中，点击左上角的 **+** 按钮，选择 **Add package from git URL...** 。
+在弹出的对话框中，输入以下 URL：
+
+```
+https://github.com/HakuyaLabs/Warudo-Mod-Tools.git#0.14.3
+```
+
+:::tip
+
+如果您与 Github 之间的网络连接不佳，也可以下载该仓库的 tarball 文件并在 Package Manager 中选择 **Add package from tarball...** 进行导入。
+
+<a href="/sdk/Warudo-Mod-Tool-0.14.3.tar.gz" target="_blank">
+<div className="file-box">
+<p>
+Warudo-Mod-Tool-0.14.3.tar.gz
+</p></div>
+</a>
+
+:::
+
+点击 **Add** 按钮，Unity 将开始从 GitHub 下载并安装 Warudo SDK 包。
+
+如果弹出询问 Prebuilt packages 的对话框或转换文件，选择 **Yes** 。
+
+返回 Unity 等待加载完成。
+
+:::caution
+
+如果您遇到消息错误 `An error occurred while resolving packages / Error adding package`，
+单击它会显示类似以下内容的消息： 
+`No 'git' executable was found. Please install Git on your system then restart Unity and Unity Hub`，
+这意味着您的系统上尚未安装 Git。
+![](/doc-img/en-mod-sdk-1.webp)
+要解决此问题，您需要从 https://git-scm.com/download 下载 Git，然后重新启动 Unity 和 Unity Hub。
+
+:::
+
+确认 **File → Build Settings... → Player Settings... → Other Settings** 中的 **Api Compatibility Level** 被设置为 `.NET Framework`，并将 **Assembly Version Validation** 取消选中。
+
+![](/doc-img/en-mod-sdk-2.webp)
+
+### 方法二 直接导入模板项目
+
+[Warudo SDK 0.14.3 Modding Project.zip](https://docs.warudo.app/sdk/Warudo%20SDK%200.12.0%20Modding%20Project.zip)
+
+1. **下载** 以上项目压缩包并将内容 **解压** 到自定义位置，例如 `D:\Softwares\Unity\2021.3.45f2\Projects\WarudoModding` ；
 2. 打开 【Unity Hub】，在【Projects】中选择【Open】；
 3. 找到刚才解压出来的文件夹并且打开，点击【Open】；
-4. 此时，【Warudo SDK 0.12.0 Modding Project】就会出现在 Projects 列表中，并且分配正确的版本号；  
+4. 此时，【Warudo SDK 0.14.3 Modding Project】就会出现在 Projects 列表中，并且分配正确的版本号；  
 （如果此时在版本号右侧出现了黄色感叹号，说明项目存在问题，建议重新检查第二步是否安装了**完全一致**的版本号。）
 6. Unity 此时可能会自动开始打开该项目，第一次打开可能会进行 Importing，会消耗一段时间，请耐心等待。
 
@@ -123,73 +171,19 @@ Warudo 不使用该版本，建议点击 **Skip installation**。
 
 :::
 
-### 方法二 手动导入 `*.unitypackage` （不推荐）
-
-:::caution
-
-仅当您要**更新现有模组项目**时才应使用此选项，或者在极少数方法一不适合您的情况下。
-
-:::
-
-打开 Unity 项目后，打开 Unity 项目文件夹下的 `Packages/manifest.json` 文件（注意，该文件在 Unity 编辑器中不可见），并在 `dependencies` 部分添加以下 **9** 个依赖项：
-
-```
-{
-  "dependencies": {
-    "com.unity.burst": "1.7.2",
-    "com.unity.cinemachine": "2.8.9",
-    "com.unity.collections": "1.4.0",
-    "com.unity.postprocessing": "3.2.2",
-    "com.unity.nuget.newtonsoft-json": "3.0.2",
-    "com.vrmc.gltf": "https://github.com/vrm-c/UniVRM.git?path=/Assets/UniGLTF#v0.107.0",
-    "com.vrmc.univrm": "https://github.com/vrm-c/UniVRM.git?path=/Assets/VRM#v0.107.0",
-    "com.vrmc.vrmshaders": "https://github.com/vrm-c/UniVRM.git?path=/Assets/VRMShaders#v0.107.0",
-    "com.cysharp.unitask": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask",
-    // ...
-```
-
-返回 Unity 并等待项目重新加载；确保没有 errors 。
-
-:::caution
-
-如果您遇到消息错误 `An error occurred while resolving packages / Error adding package`，
-单击它会显示类似以下内容的消息： 
-`No 'git' executable was found. Please install Git on your system then restart Unity and Unity Hub`，
-这意味着您的系统上尚未安装 Git。
-![](/doc-img/en-mod-sdk-1.webp)
-要解决此问题，您需要从 https://git-scm.com/download 下载 Git，然后重新启动 Unity 和 Unity Hub。
-
-:::
-
-确认 **File → Build Settings... → Player Settings... → Other Settings** 中的 **Api Compatibility Level** 被设置为 `.NET Framework`。
-
-![](/doc-img/en-mod-sdk-2.webp)
-
-下载以下 `.unitypackage` 并将其导入到您的 Unity 项目中：
-
-<a href="/sdk/Warudo SDK 0.12.0.unitypackage" target="_blank">
-<div className="file-box">
-<p>
-Warudo SDK 0.12.0.unitypackage
-</p></div>
-</a>
 
 :::caution
 
 如果您要导入到**已经存在**的项目安装了以下任一项：
 
-* [Animancer](https://assetstore.unity.com/packages/tools/animation/animancer-pro-116514)
 * [Dynamic Bones](https://assetstore.unity.com/packages/tools/animation/dynamic-bone-16743)
 * [Final IK](https://assetstore.unity.com/packages/tools/animation/final-ik-14290)
-* [Magica Cloth](https://assetstore.unity.com/packages/tools/physics/magica-cloth-160144)
 * [PuppetMaster](https://assetstore.unity.com/packages/tools/physics/puppetmaster-48977)
 
 请取消选中导入的相应文件夹，否则您的组件将被 stub files 替换：
 
-* `Plugins/Animancer`
 * `Packages/DynamicBone`
 * `Plugins/RootMotion/FinalIK`
-* `Plugins/MagicaCloth`
 * `Plugins/RootMotion/PuppetMaster`
 
 :::
