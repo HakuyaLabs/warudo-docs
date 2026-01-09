@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-translate_from_version: "2024.11.22"
+translate_from_version: 2024-11-22
 ---
 
 # 创建您的第一个脚本

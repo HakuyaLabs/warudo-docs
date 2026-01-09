@@ -11,7 +11,7 @@ sidebar_position: 50
 
 ## 스트리밍 플랫폼 연결하기
 
-시작하기 전에, Warudo를 Twitch, YouTube 또는 Bilibili 계정에 연결해야 해요. 이를 위해 Onboarding Assistant를 사용하세요. 아직 연결하지 않았다면 [시작하기](../../tutorials/readme-1#interaction-setup) 튜토리얼을 참조하세요. 이 튜토리얼에서는 Twitch에서 스트리밍한다고 가정하지만 다른 플랫폼에서도 비슷한 절차로 진행할 수 있어요.
+시작하기 전에, Warudo를 Twitch, YouTube 또는 Bilibili 계정에 연결해야 해요. 이를 위해 Onboarding Assistant를 사용하세요. 아직 연결하지 않았다면 [시작하기](../../tutorials/getting-started.md#interaction-setup) 튜토리얼을 참조하세요. 이 튜토리얼에서는 Twitch에서 스트리밍한다고 가정하지만 다른 플랫폼에서도 비슷한 절차로 진행할 수 있어요.
 
 :::tip
 [Streamer.bot](Streamer.bot)과 같은 서드파티 통합을 사용하여, 도네이션이나 다른 스트림 이벤트를 받을 때 웹소켓 메시지를 Warudo로 보낼 수 있어요. 이 경우 Onboarding Assistant를 사용할 필요가 없어요.

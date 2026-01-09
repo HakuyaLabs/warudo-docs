@@ -1,6 +1,6 @@
 ---
 sidebar_position: 30
-version: "2024.12.10"
+version: 2024-12-10
 ---
 
 # Nodos

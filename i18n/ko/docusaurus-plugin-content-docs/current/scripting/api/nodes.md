@@ -1,6 +1,6 @@
 ---
 sidebar_position: 30
-translate_from_version: "2024.06.16"
+translate_from_version: 2024-06-16
 ---
 
 # 노드
