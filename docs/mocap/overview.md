@@ -25,9 +25,10 @@ Whether you are streaming at home or at a professional mocap studio, Warudo has 
 
 [Warudo Pro](../pro.md) also supports the following motion capture systems:
 
-* Any optical tracking system compatible with [Autodesk MotionBuilder](./motionbuilder), e.g., [Vicon](https://www.vicon.com/), [OptiTrack](https://optitrack.com/)
+* [Vicon Shogun](./vicon)
 * [OptiTrack Motive](./optitrack)
 * [Chingmu Avatar](./chingmu)
+* Any tracking system compatible with [Autodesk MotionBuilder](./motionbuilder)
 
 ## What motion capture systems should I use?
 
