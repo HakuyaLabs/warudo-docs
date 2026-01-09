@@ -1,6 +1,6 @@
 ---
 sidebar_position: 15
-translate_from_version: "2024.11.15"
+translate_from_version: 2024-11-15
 ---
 
 # 环境 Mod
