@@ -18,6 +18,12 @@ sidebar_position: 10
 
 ![](/doc-img/en-character-mod-2.webp)
 
+:::caution
+
+注意，模型必须具有完整的骨骼结构，缺少手指或面部骨骼的模型将无法正常工作。
+
+:::
+
 ### 步骤 2：配置角色
 
 将角色放入场景并选中它。在菜单栏中选择 **Warudo → Setup Character...**，然后在弹出的窗口中选择 **Setup selected GameObject as character mod**：
