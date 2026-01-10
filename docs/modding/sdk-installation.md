@@ -98,7 +98,7 @@ We strongly recommend the Package Manager method because it makes it easy to kee
 Open your Unity project, then choose **Window → Package Manager**. In the Package Manager window click the **+** button (top-left) and choose **Add package from git URL...**. Enter the following URL:
 
 ```
-https://github.com/HakuyaLabs/Warudo-Mod-Tools.git#0.14.3
+https://github.com/HakuyaLabs/Warudo-Mod-Tool.git#0.14.3
 ```
 
 If you cannot access GitHub reliably, you can download a tarball and use **Add package from tarball...** instead:
