@@ -106,7 +106,7 @@ Warudo 不使用该版本，建议点击 **Skip installation**。
 在弹出的对话框中，输入以下 URL：
 
 ```
-https://github.com/HakuyaLabs/Warudo-Mod-Tools.git#0.14.3
+https://github.com/HakuyaLabs/Warudo-Mod-Tool.git#0.14.3
 ```
 
 :::tip
