@@ -102,6 +102,10 @@ Warudo 不使用该版本，建议点击 **Skip installation**。
 
 :::
 
+确认 **File → Build Settings... → Player Settings... → Other Settings** 中的 **Api Compatibility Level** 被设置为 `.NET Framework`，并将 **Assembly Version Validation** 取消选中。
+
+![](/doc-img/en-mod-sdk-2.webp)
+
 打开 Unity 项目后，点击菜单栏上的 **Window → Package Manager** 。在 Package Manager 窗口中，点击左上角的 **+** 按钮，选择 **Add package from git URL...** 。
 在弹出的对话框中，输入以下 URL：
 
@@ -139,9 +143,6 @@ Warudo-Mod-Tool-0.14.3.5.tgz
 
 :::
 
-确认 **File → Build Settings... → Player Settings... → Other Settings** 中的 **Api Compatibility Level** 被设置为 `.NET Framework`，并将 **Assembly Version Validation** 取消选中。
-
-![](/doc-img/en-mod-sdk-2.webp)
 
 ### 方法二 直接导入模板项目
 
