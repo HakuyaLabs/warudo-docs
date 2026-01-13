@@ -1,5 +1,6 @@
 ---
 sidebar_position: 10
+version: 2024-07-30
 ---
 
 # Character

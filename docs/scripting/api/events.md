@@ -1,5 +1,6 @@
 ---
 sidebar_position: 90
+version: 2024-06-16
 ---
 
 # Global Events {#events}

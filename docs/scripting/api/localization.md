@@ -1,5 +1,6 @@
 ---
 sidebar_position: 999
+version: 2024-06-16
 ---
 
 # Localization

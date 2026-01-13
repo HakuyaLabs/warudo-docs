@@ -1,6 +1,6 @@
 ---
 sidebar_position: 10
-translate_from_version: 2026-01-09
+version: 2026-01-09
 ---
 
 # Transition Easing

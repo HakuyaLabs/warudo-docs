@@ -1,5 +1,6 @@
 ---
 sidebar_position: 510
+version: 2025-11-04
 ---
 
 # Autodesk MotionBuilder

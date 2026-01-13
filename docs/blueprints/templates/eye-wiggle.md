@@ -1,5 +1,6 @@
 ---
 sidebar_position: 30
+version: 2024-06-14
 ---
 
 # Live2D Eye Wiggle

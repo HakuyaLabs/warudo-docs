@@ -1,5 +1,6 @@
 ---
 sidebar_position: 60
+version: 2024-06-16
 ---
 
 # Structured Data

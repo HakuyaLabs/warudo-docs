@@ -1,5 +1,6 @@
 ---
 sidebar_position: 512
+version: 2025-11-04
 ---
 
 # Vicon Shogun
@@ -66,4 +67,3 @@ Confirm that the subject in Shogun uses a skeleton compatible with your Warudo c
   translators: [
   ],
 }} />
-

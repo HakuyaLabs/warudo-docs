@@ -1,5 +1,6 @@
 ---
 sidebar_position: 110
+version: 2024-06-14
 ---
 
 # Chair Spinning
