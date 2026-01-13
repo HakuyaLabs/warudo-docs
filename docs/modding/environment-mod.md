@@ -1,6 +1,6 @@
 ---
 sidebar_position: 15
-version: "2024.11.15"
+version: 2024-11-15
 ---
 
 # Environment Mod

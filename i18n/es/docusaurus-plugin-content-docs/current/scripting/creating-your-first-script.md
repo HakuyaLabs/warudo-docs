@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-version: "2024.11.22"
+version: 2024-11-22
 ---
 
 # Creando Tu Primer Script
