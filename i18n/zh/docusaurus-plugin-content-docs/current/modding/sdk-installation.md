@@ -113,10 +113,10 @@ https://github.com/HakuyaLabs/Warudo-Mod-Tool.git#0.14.3
 
 如果您与 Github 之间的网络连接不佳，也可以下载该仓库的 tarball 文件并在 Package Manager 中选择 **Add package from tarball...** 进行导入。
 
-<a href="/sdk/Warudo-Mod-Tool-0.14.3.tar.gz" target="_blank">
+<a href="/sdk/Warudo-Mod-Tool-0.14.3.tgz" target="_blank">
 <div className="file-box">
 <p>
-Warudo-Mod-Tool-0.14.3.tar.gz
+Warudo-Mod-Tool-0.14.3.tgz
 </p></div>
 </a>
 
