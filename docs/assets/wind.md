@@ -1,5 +1,6 @@
 ---
 sidebar_position: 42
+version: 2024-07-23
 ---
 
 # Wind

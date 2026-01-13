@@ -1,5 +1,6 @@
 ---
 sidebar_position: 35
+version: 2024-06-16
 ---
 
 # Pendulum Physics

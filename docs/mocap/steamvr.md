@@ -1,5 +1,6 @@
 ---
 sidebar_position: 68
+version: 2024-06-16
 ---
 
 # SteamVR

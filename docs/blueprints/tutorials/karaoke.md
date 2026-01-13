@@ -1,5 +1,6 @@
 ---
 sidebar_position: 40
+version: 2025-10-30
 ---
 
 # Karaoke Time

@@ -280,4 +280,3 @@ In Warudo, you can adjust the character asset's **Body IK** and **Look At IK** o
   translators: [
   ],
 }} />
-

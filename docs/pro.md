@@ -1,5 +1,6 @@
 ---
 sidebar_position: 11
+version: 2024-06-14
 ---
 
 # Warudo Pro

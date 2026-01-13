@@ -1,5 +1,6 @@
 ---
 sidebar_position: 50
+version: 2025-10-30
 ---
 
 # Dance Dance Dance

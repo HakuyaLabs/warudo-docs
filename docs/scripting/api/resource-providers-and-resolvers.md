@@ -1,5 +1,6 @@
 ---
 sidebar_position: 200
+version: 2024-06-17
 ---
 
 # Resource Providers & Resolvers

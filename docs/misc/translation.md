@@ -1,7 +1,8 @@
 ---
+description: Contribute to Warudo’s multilingual translation project
 sidebar_position: 30
 title: Translating Warudo
-description: Contribute to Warudo’s multilingual translation project
+version: 2025-10-07
 ---
 
 Warudo’s localization is powered by community contributions.  

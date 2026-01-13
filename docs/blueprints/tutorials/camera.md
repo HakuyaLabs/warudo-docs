@@ -1,5 +1,6 @@
 ---
 sidebar_position: 70
+version: 2024-06-14
 ---
 
 # Animating the Camera

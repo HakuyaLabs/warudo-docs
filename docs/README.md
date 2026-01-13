@@ -1,5 +1,6 @@
 ---
 sidebar_position: 10
+version: 2024-06-17
 ---
 
 # Introduction to Warudo

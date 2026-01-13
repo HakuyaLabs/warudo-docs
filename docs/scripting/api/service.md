@@ -1,5 +1,6 @@
 ---
 sidebar_position: 75
+version: 2024-06-16
 ---
 
 # Communicating with the Editor {#service}
