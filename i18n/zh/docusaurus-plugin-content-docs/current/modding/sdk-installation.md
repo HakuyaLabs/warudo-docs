@@ -106,17 +106,17 @@ Warudo 不使用该版本，建议点击 **Skip installation**。
 在弹出的对话框中，输入以下 URL：
 
 ```
-https://github.com/HakuyaLabs/Warudo-Mod-Tool.git#0.14.3
+https://github.com/HakuyaLabs/Warudo-Mod-Tool.git#0.14.3.5
 ```
 
 :::tip
 
 如果您与 Github 之间的网络连接不佳，也可以下载该仓库的 tarball 文件并在 Package Manager 中选择 **Add package from tarball...** 进行导入。
 
-<a href="/sdk/Warudo-Mod-Tool-0.14.3.tgz" target="_blank">
+<a href="/sdk/Warudo-Mod-Tool-0.14.3.5.tgz" target="_blank">
 <div className="file-box">
 <p>
-Warudo-Mod-Tool-0.14.3.tgz
+Warudo-Mod-Tool-0.14.3.5.tgz
 </p></div>
 </a>
 
