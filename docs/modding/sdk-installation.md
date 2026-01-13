@@ -95,6 +95,10 @@ We strongly recommend the Package Manager method because it makes it easy to kee
 
 ### Method A — Unity Package Manager (recommended)
 
+Before installation, confirm **File → Build Settings... → Player Settings... → Other Settings → Api Compatibility Level** is set to **.NET Framework**, and **Assembly Version Validation** is unchecked.
+
+![](/doc-img/en-mod-sdk-2.webp)
+
 Open your Unity project, then choose **Window → Package Manager**. In the Package Manager window click the **+** button (top-left) and choose **Add package from git URL...**. Enter the following URL:
 
 ```
@@ -114,10 +118,6 @@ If you see an error like `No 'git' executable was found. Please install Git on y
 ![](/doc-img/en-mod-sdk-1.webp)
 
 :::
-
-After installation, confirm **File → Build Settings... → Player Settings... → Other Settings → Api Compatibility Level** is set to **.NET Framework**, and **Assembly Version Validation** is unchecked.
-
-![](/doc-img/en-mod-sdk-2.webp)
 
 ### Method B — Modding Project Template
 
