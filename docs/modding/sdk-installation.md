@@ -103,7 +103,7 @@ https://github.com/HakuyaLabs/Warudo-Mod-Tool.git#0.14.3
 
 If you cannot access GitHub reliably, you can download a tarball and use **Add package from tarball...** instead:
 
-<a href="/sdk/Warudo-Mod-Tool-0.14.3.tar.gz" target="_blank">Warudo-Mod-Tool-0.14.3.tar.gz</a>
+<a href="/sdk/Warudo-Mod-Tool-0.14.3.tgz" target="_blank">Warudo-Mod-Tool-0.14.3.tgz</a>
 
 Click **Add** and Unity will download and install the package. If Unity prompts about prebuilt packages or conversion, choose **Yes** and wait for the package to import.
 
