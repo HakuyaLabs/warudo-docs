@@ -102,7 +102,7 @@ Warudo 不使用该版本，建议点击 **Skip installation**。
 
 :::
 
-确认 **File → Build Settings... → Player Settings... → Other Settings** 中的 **Api Compatibility Level** 被设置为 `.NET Framework`，并将 **Assembly Version Validation** 取消选中。
+确认 **File → Build Settings... → Player Settings... → Other Settings** (也可以通过 **Edit → Project Settings → Player → Other Settings**) 中的 **Api Compatibility Level** 被设置为 `.NET Framework`，并将 **Assembly Version Validation** 取消选中。
 
 ![](/doc-img/en-mod-sdk-2.webp)
 
@@ -146,12 +146,12 @@ Warudo-Mod-Tool-0.14.3.5.tgz
 
 ### 方法二 直接导入模板项目
 
-[Warudo SDK 0.14.3 Modding Project.zip](https://docs.warudo.app/sdk/Warudo%20SDK%200.12.0%20Modding%20Project.zip)
+[Warudo SDK 0.14.3.5 Modding Project.zip](https://files.warudo.app/modsdk/Warudo%20SDK%200.14.3.5%20Modding%20Project.zip)
 
 1. **下载** 以上项目压缩包并将内容 **解压** 到自定义位置，例如 `D:\Softwares\Unity\2021.3.45f2\Projects\WarudoModding` ；
 2. 打开 【Unity Hub】，在【Projects】中选择【Open】；
 3. 找到刚才解压出来的文件夹并且打开，点击【Open】；
-4. 此时，【Warudo SDK 0.14.3 Modding Project】就会出现在 Projects 列表中，并且分配正确的版本号；  
+4. 此时，【Warudo SDK 0.14.3.5 Modding Project】就会出现在 Projects 列表中，并且分配正确的版本号；  
 （如果此时在版本号右侧出现了黄色感叹号，说明项目存在问题，建议重新检查第二步是否安装了**完全一致**的版本号。）
 6. Unity 此时可能会自动开始打开该项目，第一次打开可能会进行 Importing，会消耗一段时间，请耐心等待。
 
