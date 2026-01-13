@@ -95,7 +95,7 @@ We strongly recommend the Package Manager method because it makes it easy to kee
 
 ### Method A — Unity Package Manager (recommended)
 
-Before installation, confirm **File → Build Settings... → Player Settings... → Other Settings → Api Compatibility Level** is set to **.NET Framework**, and **Assembly Version Validation** is unchecked.
+Before installation, confirm **File → Build Settings... → Player Settings... → Other Settings → Api Compatibility Level** (also accessible via **Edit → Project Settings → Player → Other Settings**) is set to **.NET Framework**, and **Assembly Version Validation** is unchecked.
 
 ![](/doc-img/en-mod-sdk-2.webp)
 
@@ -121,7 +121,7 @@ If you see an error like `No 'git' executable was found. Please install Git on y
 
 ### Method B — Modding Project Template
 
-[Warudo SDK 0.14.3 Modding Project.zip](https://docs.warudo.app/sdk/Warudo%20SDK%200.14.3%20Modding%20Project.zip)
+[Warudo SDK 0.14.3.5 Modding Project.zip](https://files.warudo.app/modsdk/Warudo%20SDK%200.14.3.5%20Modding%20Project.zip)
 
 1. Download and extract the zip to a folder (for example `D:\Softwares\Unity\2021.3.45f2\Projects\WarudoModding`).
 2. In Unity Hub click **Add** (or **Open**) and select that folder.
