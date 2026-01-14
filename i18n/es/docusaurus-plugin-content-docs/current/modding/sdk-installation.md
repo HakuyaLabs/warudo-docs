@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+translate_from_version: 2024-10-18
 ---
 
 # Instalación de Unity y Warudo SDK
@@ -21,7 +22,7 @@ Unity Hub es un software usado para gestionar diferentes versiones del Editor de
 
 Abre el [**sitio web oficial de Unity**](https://unity.com/download) y haz clic en una de las dos cajas rojas en la imagen de abajo para descargar Unity Hub. La descarga puede requerir registrar una cuenta de Unity.
 
-![](/doc-img/sdk-installation-13.png)
+![](/doc-img/en-sdk-installation-1.png)
 
 Ejecuta el UnityHubSetup.exe descargado e instálalo en tu ruta preferida.  
 Después de la instalación, confirma que se puede abrir correctamente.

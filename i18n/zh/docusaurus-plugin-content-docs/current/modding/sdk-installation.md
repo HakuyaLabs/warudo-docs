@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+translate_from_version: 2026-01-13
 ---
 
 # Unity & Warudo SDK 安装
@@ -21,7 +22,7 @@ Unity Hub 是用于管理不同版本的 Unity Editor 和不同版本的项目�
 
 打开 [**Unity 官网**](https://unity.com/cn/download) 可在下图中两个红框处选一点击，下载可能需要注册 Unity 帐号。
 
-![](/doc-img/sdk-installation-1.png)
+![](/doc-img/zh-doc-img/zh-sdk-installation-1.png)
 
 运行下载好的 UnityHubSteup.exe，安装到你习惯的路径。  
 安装完毕后，确认可以正确打开。

@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-version: 2026-01-13
+version: 2026-01-14
 ---
 
 # Unity & Warudo SDK Installation
@@ -22,7 +22,7 @@ Unity Hub is a software used to manage different versions of the Unity Editor an
 
 Open the [**Unity official website**](https://unity.com/download) and click one of the two red boxes in the image below to download Unity Hub. Downloading may require registering a Unity account.
 
-![](/doc-img/sdk-installation-13.png)
+![](/doc-img/en-sdk-installation-1.png)
 
 Run the downloaded UnityHubSetup.exe and install it to your preferred path.  
 After installation, confirm that it can be opened correctly.
@@ -56,31 +56,32 @@ You can change the language of Unity Hub in 【Preferences】-【Appearance】.
 
 ## Step 2 - Install Unity Editor
 
-Next, you need to download the installer of Unity Editor, and the version must strictly be **Unity 2021.3.45f2**.
+Next, you need to download the installer of Unity Editor, and the version must strictly be **2021.3.45f2**.
 
 This specific patch release is required for compatibility with the Warudo SDK and cannot be substituted. To install it:
 
 1. Go to [Unity Download Archive](https://unity.com/releases/editor/archive);
-2. Under the **Unity 2021.X** tab, find **Unity 2021.3.45f2 (3 Oct, 2025)**;
-3. Click **Downloads (Win)**;
-4. Select **Unity Editor (64-bit)** and download the installer (file name similar to `UnitySetup 64-2021.3.45f2.exe`, ~2–3 GiB);
-
+2. Under the **2021** tab, find Version **2021.3.45f2 (Oct 3, 2025)**;
+3. Click **INSTALL**;
 ![](/doc-img/sdk-installation-9.png)
+4. The browser will try to open your Unity Hub, choose **Open**;
+5. In the opened Unity Hub window, click **Continue**, then click **Install**;
+6. The installation can take a long time, please be patient.
 
-Run the downloaded installer to start installation.
+**If `4.` failed or you want to install it manually, back to `2.` , then:**
 
-The default installation location may be `C:\Program Files\Unity 2021.3.45f2`; you may change it, but we recommend including the version number in the path (for example `D:\Softwares\Unity\2021.3.45f2`) to avoid confusion when managing multiple Unity versions.
+3. Click **See all**;
+4. Click **Windows** to download the installer (file name similar to `UnitySetup64-2021.3.45f2.exe`, ~3–4 GiB);
+![](/doc-img/sdk-installation-13.png)
+5. Run the downloaded installer to start installation.  
+The default installation location may be `C:\Program Files\Unity 2021.3.45f2`; you may change it, but we recommend including the version number in the path (for example `D:\Softwares\Unity\2021.3.45f2`) to avoid confusion when managing multiple Unity versions.  
+The installation can take a long time, please be patient.
+6. After installation:  Open Unity Hub;
+7. Go to **Installs → Locate**;
+8. Browse to the editor folder you installed and select `Unity.exe` inside the `Editor` subfolder;
+9. Click **Select Editor**.
 
-The installation can take a long time; please be patient.
-
-After installation:
-
-1. Open Unity Hub;
-2. Go to **Installs → Locate**;
-3. Browse to the editor folder you installed and select `Unity.exe` inside the `Editor` subfolder;
-4. Click **Select Editor**.
-
-The selected Unity version (2021.3.45f2) should now appear in Unity Hub.
+After the above steps, the required Unity version (2021.3.45f2) should now appear in Unity Hub.
 
 ![](/doc-img/sdk-installation-10.png)
 
@@ -96,7 +97,8 @@ We strongly recommend the Package Manager method because it makes it easy to kee
 
 ### Method A — Unity Package Manager (recommended)
 
-Before installation, confirm **File → Build Settings... → Player Settings... → Other Settings → Api Compatibility Level** (also accessible via **Edit → Project Settings → Player → Other Settings**) is set to **.NET Framework**, and **Assembly Version Validation** is unchecked.
+Before installation, confirm **File → Build Settings... → Player Settings... → Other Settings → Api Compatibility Level** is set to **.NET Framework**, and **Assembly Version Validation** is unchecked.  
+(This page is also accessible via **Edit → Project Settings → Player → Other Settings**)
 
 ![](/doc-img/en-mod-sdk-2.webp)
 
@@ -108,14 +110,13 @@ https://github.com/HakuyaLabs/Warudo-Mod-Tool.git#0.14.3.5
 
 If you cannot access GitHub reliably, you can download a tarball and use **Add package from tarball...** instead:
 
-<a href="/sdk/Warudo-Mod-Tool-0.14.3.5.tgz" target="_blank">Warudo-Mod-Tool-0.14.3.5.tgz</a>
+<p><a href="/sdk/Warudo-Mod-Tool-0.14.3.5.tgz" target="_blank">Warudo-Mod-Tool-0.14.3.5.tgz</a></p>
 
 Click **Add** and Unity will download and install the package. If Unity prompts about prebuilt packages or conversion, choose **Yes** and wait for the package to import.
 
 :::caution
 
-If you see an error like `No 'git' executable was found. Please install Git on your system then restart Unity and Unity Hub`, then Git is not installed on your system. Install Git from https://git-scm.com/download, then restart Unity and Unity Hub.
-
+If you see an error like `No 'git' executable was found. Please install Git on your system then restart Unity and Unity Hub`, then Git is not installed on your system. Install Git from https://git-scm.com/download, then restart Unity and Unity Hub.  
 ![](/doc-img/en-mod-sdk-1.webp)
 
 :::
@@ -156,6 +157,5 @@ If everything imported without Errors, you can start with [creating your first m
     {name: 'hanekit', github: 'hanekit'}
   ],
   translators: [
-    {name: 'hanekit', github: 'hanekit'}
   ],
 }} />
