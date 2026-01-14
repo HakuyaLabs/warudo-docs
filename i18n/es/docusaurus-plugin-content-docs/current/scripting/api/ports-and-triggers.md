@@ -1,5 +1,6 @@
 ---
 sidebar_position: 2
+translate_from_version: 2026-01-14
 ---
 
 # Ports y Triggers
@@ -18,18 +19,21 @@ Un data input se define como un campo público en una subclase de entity, decora
 
 ```csharp
 [DataInput]
-[IntegerSlider(1, 100)] 
+[IntegerSlider(1, 100)]
 public int LuckyNumber = 42;
 ```
 
 Aquí hay algunos ejemplos más:
 
 - **String Input:**
+
   ```csharp
   [DataInput]
   public string MyName = "Alice";
   ```
+
 - **Enum Input:** (Shown as a dropdown in the editor)
+
   ```csharp
   public enum Color {
       Red,
@@ -40,7 +44,9 @@ Aquí hay algunos ejemplos más:
   [DataInput]
   public Color MyColor = Color.Red;
   ```
+
 - **Array Input:** (Shown as an editable list in the editor)
+
   ```csharp
   [DataInput]
   public float[] MyFavoriteNumbers = new float[] { 3.14f, 2.718f };
@@ -72,7 +78,7 @@ public class ToStringNode : Node {
 
     [DataInput]
     public object A; // Not serialized
-    
+
     [DataOutput]
     [Label("OUTPUT_STRING")]
     public string Result() {
@@ -125,13 +131,14 @@ Data input ports can be annotated with attributes to provide additional context 
 - `[Disabled]`: Specifies that the data input should be always disabled (non-editable). This is useful for array data inputs that have a constant length, or for visualizing data inputs that are always programmatically set, etc.
 - `[Section(string title)]`: Specifies that the data input and all subsequent data inputs should be displayed in a new section with the specified title, unless another section is specified.
 - `[SectionHiddenIf(string methodName)]`: Requires attribute `[Section]`. Specifies that the section should be hidden if the specified method returns `true`. The method must be a `public` or `protected` method in the entity class that returns a `bool`. The `@if` and `@is` conditions are also supported.
-- `[Markdown(bool primary = false)]`: Specifies that the data input should be displayed as a Markdown text and cannot be edited. The data input must be of type `string`. If `primary` is `true`, the text will be displayed in a larger font size without a color background.
+- `[Markdown(bool Primary = false)]`: Specifies that the data input should be displayed as a Markdown text and cannot be edited. The data input must be of type `string`. If `primary` is `true`, the text will be displayed in a larger font size without a color background. See [Text Block](#text-block) for details.
 
 :::info
 `[HiddenIf]` and `[DisabledIf]` attributes are evaluated every frame when the asset or node is visible in the editor. Therefore, you should avoid using expensive operations in these methods.
 :::
 
 Some attributes are specific to certain data input types:
+
 - `[IntegerSlider(int min, int max, int step = 1)]`: Requires data type `int` or `int[]`. Specifies that the data input should be displayed as an integer slider with the specified range.
 - `[FloatSlider(float min, float max, float step = 0.01f)]`: Requires data type `float` or `float[]`. Specifies that the data input should be displayed as a float slider with the specified range.
 - `[AutoCompleteResource(string resourceType, string defaultLabel = null)]`: Requires data type `string`. Specifies that the data input should be displayed as an auto-complete list of resources of the specified type. For example, the "Character → Default Idle Animation" data input is defined as `[AutoCompleteResource("CharacterAnimation")]`. Please refer to the [Resource Providers & Resolvers](resource-providers-and-resolvers.md) page for more information.
@@ -242,7 +249,7 @@ You can check if the asset is `null` or inactive by using `asset.IsNullOrInactiv
 
 What if you want to filter the list of assets shown in the dropdown? You can use the `[AssetFilter(string methodName)]` attribute to specify a method that is used to filter the assets in the scene. The method must be a `public` or `protected` method that receives a parameter of the asset type and returns a `bool`. For example:
 
-```csharp 
+```csharp
 [DataInput]
 [AssetFilter(nameof(FilterCharacterAsset))]
 public CharacterAsset MyCharacter;
@@ -298,7 +305,7 @@ public int RandomNumber() {
 
 Data outputs support a subset of [data input attributes](#data-input-attributes): `[Label]`, `[HideLabel]`, `[Description]`, `[HiddenIf]`, and `[DisabledIf]`.
 
-## Ports de Entrada de Flujo {#flow-inputs}
+## Ports de Entrada de Flujo {#flow-input-ports}
 
 Flow input ports are node-specific and are used to receive flow signals from other nodes to trigger certain actions.A flow input is defined as a public method in a node subclass, decorated with the `[FlowInput]` attribute. The method must return a flow output `Continuation`. Here is an example:
 
@@ -322,9 +329,97 @@ Flow inputs support a subset of [data input attributes](#data-input-attributes):
 
 ## Ports de Salida de Flujo
 
-Flow output ports are node-specific and are used to send flow signals to other nodes.A flow output is defined as a public field in a node subclass, decorated with the `[FlowOutput]` attribute. The field must be of type `Continuation`. See [Flow Inputs](#flow-inputs) for an example.
+Flow output ports are node-specific and are used to send flow signals to other nodes.A flow output is defined as a public field in a node subclass, decorated with the `[FlowOutput]` attribute. The field must be of type `Continuation`. See [Flow Input Ports](#flow-input-ports) for an example.
 
 Flow outputs support a subset of [data input attributes](#data-input-attributes): `[Label]`, `[HideLabel]`, and `[Description`]. Note that if the field is named `Exit` and without a `[Label]` attribute, the label will be automatically set to the word "Exit" localized in the editor's language.
+
+## Text Block {#text-block}
+
+A text block is defined as a public string field in an entity subclass, decorated with the `[Markdown]` attribute.
+
+There are two styles of text blocks:
+
+- with background: `[Markdown]` ;
+- and without background `[Markdown(Primary = true)]` .
+
+Text block support basic **Markdown syntax** and use strict line-break mode. That is:
+
+- A single `\n` does not create a line break and is treated like a space;
+- Two spaces followed by `\n` (i.e. `␠␠\n`) create a line break without starting a new paragraph;
+- Two consecutive `\n` (i.e. `\n\n`) create a line break and start a new paragraph.
+
+Text block also supports **embedded HTML**, such as:
+
+```csharp
+[Markdown]
+public string TextWithHtml = "Hello <p style='color: red;'>Hello</p> Hello";
+```
+
+You can modify the string variable and then use `BroadcastDataInput` to update the display of the text block:
+
+```csharp
+MarkdownVariable = "New Text";
+BroadcastDataInput(nameof(MarkdownVariable));
+```
+
+We recommend using `Watch` or `WatchAll` in `OnCreate()` to update the text block.  
+Only update the text block in `OnUpdate()` when necessary, as doing so incurs higher performance overhead.
+
+Note:  The attributes of `DataInput` such as `[HiddenIf(string methodName)]` also apply to text blocks.
+
+Here is a detailed example:
+
+```csharp
+using UnityEngine;
+using Warudo.Core.Attributes;
+using Warudo.Core.Graphs;
+
+[NodeType(
+     Id = "Markdown-Example-Node",
+     Title = "Markdown Example Node",
+     Category = "Examples")]
+public class MarkdownExampleNode : Node {
+
+    [Markdown]
+    public string Markdown = "### Title\n\nHello1\nHello2  \nHello3\n\n<p style='color: red;'>Hello4</p>\n\n- list1\n- list2\n\n**bold** *italic* `code`";
+
+    [Markdown(Primary = true)]
+    public string MarkdownPrimary = "### Title\n\nHello1\nHello2  \nHello3\n\n<p style='color: red;'>Hello4</p>\n\n- list1\n- list2\n\n**bold** *italic* `code`";
+
+    [DataInput]
+    [FloatSlider(0, 1)]
+    public float A = 0.5f;
+
+    [DataInput]
+    [FloatSlider(0, 1)]
+    public float B = 0.5f;
+
+    [Markdown(Primary = true)]
+    public string MarkdownDynamicPrimary = "A: 0.5  \nB: 0.5";
+
+    protected override void OnCreate() {
+        base.OnCreate();
+        WatchAll(new[] {
+            nameof(A),
+            nameof(B),
+        }, () => {
+            MarkdownDynamicPrimary = "A: " + A.ToString() + "  \nB: " + B.ToString();
+            BroadcastDataInput(nameof(MarkdownDynamicPrimary));
+        });
+    }
+
+    [Markdown]
+    public string MarkdownDynamic = "";
+
+    public override void OnUpdate() {
+        base.OnUpdate();
+        string time = "RealTime: " + Time.time.ToString();
+
+        MarkdownDynamic = time;
+        BroadcastDataInput(nameof(MarkdownDynamic));
+    }
+}
+```
 
 ## Triggers
 
@@ -437,6 +532,7 @@ BroadcastDataInputProperties(nameof(CurrentItem)); // Notify the editor that the
 <AuthorBar authors={{
 creators: [
 {name: 'HakuyaTira', github: 'TigerHix'},
+{name: 'hanekit', github: 'hanekit'},
 ],
 translators: [
 {name: 'かぐら', github: 'Arukaito'},

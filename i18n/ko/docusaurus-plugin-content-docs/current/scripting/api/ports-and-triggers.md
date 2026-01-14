@@ -1,5 +1,6 @@
 ---
 sidebar_position: 2
+translate_from_version: 2026-01-14
 ---
 
 # 포트 & 트리거
@@ -18,18 +19,21 @@ sidebar_position: 2
 
 ```csharp
 [DataInput]
-[IntegerSlider(1, 100)] 
+[IntegerSlider(1, 100)]
 public int LuckyNumber = 42;
 ```
 
 다양한 예시가 있어요:
 
 - **스트링 인풋:**
+
   ```csharp
   [DataInput]
   public string MyName = "Alice";
   ```
+
 - **열거형 인풋:** (에디터에서 드롭다운으로 표시)
+
   ```csharp
   public enum Color {
       Red,
@@ -40,7 +44,9 @@ public int LuckyNumber = 42;
   [DataInput]
   public Color MyColor = Color.Red;
   ```
+
 - **배열 인풋:** (에디터에서 수정 가능한 리스트로 표시)
+
   ```csharp
   [DataInput]
   public float[] MyFavoriteNumbers = new float[] { 3.14f, 2.718f };
@@ -72,7 +78,7 @@ public class ToStringNode : Node {
 
     [DataInput]
     public object A; // Not serialized
-    
+
     [DataOutput]
     [Label("OUTPUT_STRING")]
     public string Result() {
@@ -125,13 +131,14 @@ public class ToStringNode : Node {
 - `[Disabled]`: 데이터 인풋이 항상 비활성화(편집 불가)되도록 지정해요. 예를 들어, 고정된 길이의 배열 데이터 인풋이거나, 항상 프로그래밍적으로 설정되는 데이터 인풋을 시각화할 때 유용해요.
 - `[Section(string title)]`: 새로운 섹션과 함께 데이터 인풋 및 모든 후속 데이터 인풋이 표시되도록 지정해요. 다른 섹션이 지정되지 않는 한 계속 유지돼요.
 - `[SectionHiddenIf(string methodName)]`: `[Section]` 속성이 필요해요. 지정된 메서드가 `true`를 반환하면 섹션이 숨겨지도록 지정해요. 메서드는 `public` 또는 `protected` 메서드여야 하며, `bool`을 반환해야 해요. `@if` 및 `@is` 조건도 지원해요.
-- `[Markdown(bool primary = false)]`: 데이터 인풋이 Markdown 텍스트로 표시되며 편집할 수 없도록 지정해요. 데이터 인풋은 `string` 타입이어야 해요. `primary`가 `true`면, 더 큰 글씨 크기와 배경색 없이 텍스트가 표시돼요.
+- `[Markdown(bool Primary = false)]`: 데이터 인풋이 Markdown 텍스트로 표시되며 편집할 수 없도록 지정해요. 데이터 인풋은 `string` 타입이어야 해요. `primary`가 `true`면, 더 큰 글씨 크기와 배경색 없이 텍스트가 표시돼요. See [Text Block](#text-block) for details.
 
 :::info
 `[HiddenIf]` 및 `[DisabledIf]` 속성은 에셋이나 노드가 편집기에서 보일 때 매 프레임 평가돼요. 따라서 이러한 메서드에서 성능 소모가 큰 연산은 피하는 것이 좋아요.
 :::
 
 일부 속성은 특정 데이터 인풋 타입에만 적용돼요:
+
 - `[IntegerSlider(int min, int max, int step = 1)]`: 데이터 타입이 `int` 또는 `int[]`이어야 해요. 지정된 범위를 가진 정수 슬라이더로 데이터 인풋을 표시하도록 지정해요.
 - `[FloatSlider(float min, float max, float step = 0.01f)]`: 데이터 타입이 `float` 또는 `float[]`이어야 해요. 지정된 범위를 가진 실수 슬라이더로 데이터 인풋을 표시하도록 지정해요.
 - `[AutoCompleteResource(string resourceType, string defaultLabel = null)]`: 데이터 타입이 `string`이어야 해요. 지정된 리소스 유형의 자동완성 리스트로 데이터 인풋을 표시하도록 지정해요. 예를 들어 "Character → Default Idle Animation" 데이터 인풋은 `[AutoCompleteResource("CharacterAnimation")]`으로 정의돼요. 자세한 내용은 `[리소스 프로바이더 및 리졸버]` 페이지를 참조하세요.(resource-providers-and-resolvers.md) page for more information.
@@ -242,7 +249,7 @@ public Continuation Enter() {
 
 에셋을 드롭다운 목록에서 필터링하고 싶다면 어떻게 해야 할까요? `[AssetFilter(string methodName)]` 속성을 사용해 씬에 있는 에셋을 필터링할 메서드를 지정할 수 있어요. 메서드는 해당 에셋 타입의 파라미터를 받아 `bool` 값을 반환하는 `public` 또는 `protected` 메서드여야 해요. 예를 들어:
 
-```csharp 
+```csharp
 [DataInput]
 [AssetFilter(nameof(FilterCharacterAsset))]
 public CharacterAsset MyCharacter;
@@ -298,7 +305,7 @@ public int RandomNumber() {
 
 데이터 아웃풋은 일부 [데이터 인풋 속성](#data-input-attributes)을 지원해요: `[Label]`, `[HideLabel]`, `[Description]`, `[HiddenIf]`, `[DisabledIf]`.
 
-## 플로우 인풋 포트 {#flow-inputs}
+## 플로우 인풋 포트 {#flow-input-ports}
 
 플로우 인풋 포트는 다른 노드로부터 플로우 신호를 받아 특정 작업을 실행하는 데 사용돼요. 플로우 인풋은 노드 하위 클래스에서 `[FlowInput]` 속성으로 정의된 공개 메서드로 정의되며, 해당 메서드는 `Continuation`이라는 플로우 아웃풋을 반환해야 해요. 다음은 예시예요:
 
@@ -322,9 +329,97 @@ public Continuation ExitB;
 
 ## 플로우 아웃풋 포트
 
-플로우 아웃풋 포트는 다른 노드로 플로우 신호를 보내는 데 사용돼요. 플로우 아웃풋은 노드 하위 클래스에서 `[FlowOutput]` 속성으로 정의된 공개 필드로 정의되며, 필드는 `Continuation` 타입이어야 해요. [플로우 인풋](#flow-inputs)의 예시에서 볼 수 있어요.
+플로우 아웃풋 포트는 다른 노드로 플로우 신호를 보내는 데 사용돼요. 플로우 아웃풋은 노드 하위 클래스에서 `[FlowOutput]` 속성으로 정의된 공개 필드로 정의되며, 필드는 `Continuation` 타입이어야 해요. [플로우 인풋 포트](#flow-input-ports)의 예시에서 볼 수 있어요.
 
 플로우 아웃풋은 일부 [데이터 인풋 속성](#data-input-attributes)을 지원해요: `[Label]`, `[HideLabel]`,`[Description]`. 필드 이름이 `Exit`이고 `[Label]` 속성이 없으면, 에디터의 언어로 'Exit'이라는 단어로 자동 설정돼요.
+
+## Text Block {#text-block}
+
+A text block is defined as a public string field in an entity subclass, decorated with the `[Markdown]` attribute.
+
+There are two styles of text blocks:
+
+- with background: `[Markdown]` ;
+- and without background `[Markdown(Primary = true)]` .
+
+Text block support basic **Markdown syntax** and use strict line-break mode. That is:
+
+- A single `\n` does not create a line break and is treated like a space;
+- Two spaces followed by `\n` (i.e. `␠␠\n`) create a line break without starting a new paragraph;
+- Two consecutive `\n` (i.e. `\n\n`) create a line break and start a new paragraph.
+
+Text block also supports **embedded HTML**, such as:
+
+```csharp
+[Markdown]
+public string TextWithHtml = "Hello <p style='color: red;'>Hello</p> Hello";
+```
+
+You can modify the string variable and then use `BroadcastDataInput` to update the display of the text block:
+
+```csharp
+MarkdownVariable = "New Text";
+BroadcastDataInput(nameof(MarkdownVariable));
+```
+
+We recommend using `Watch` or `WatchAll` in `OnCreate()` to update the text block.  
+Only update the text block in `OnUpdate()` when necessary, as doing so incurs higher performance overhead.
+
+Note:  The attributes of `DataInput` such as `[HiddenIf(string methodName)]` also apply to text blocks.
+
+Here is a detailed example:
+
+```csharp
+using UnityEngine;
+using Warudo.Core.Attributes;
+using Warudo.Core.Graphs;
+
+[NodeType(
+     Id = "Markdown-Example-Node",
+     Title = "Markdown Example Node",
+     Category = "Examples")]
+public class MarkdownExampleNode : Node {
+
+    [Markdown]
+    public string Markdown = "### Title\n\nHello1\nHello2  \nHello3\n\n<p style='color: red;'>Hello4</p>\n\n- list1\n- list2\n\n**bold** *italic* `code`";
+
+    [Markdown(Primary = true)]
+    public string MarkdownPrimary = "### Title\n\nHello1\nHello2  \nHello3\n\n<p style='color: red;'>Hello4</p>\n\n- list1\n- list2\n\n**bold** *italic* `code`";
+
+    [DataInput]
+    [FloatSlider(0, 1)]
+    public float A = 0.5f;
+
+    [DataInput]
+    [FloatSlider(0, 1)]
+    public float B = 0.5f;
+
+    [Markdown(Primary = true)]
+    public string MarkdownDynamicPrimary = "A: 0.5  \nB: 0.5";
+
+    protected override void OnCreate() {
+        base.OnCreate();
+        WatchAll(new[] {
+            nameof(A),
+            nameof(B),
+        }, () => {
+            MarkdownDynamicPrimary = "A: " + A.ToString() + "  \nB: " + B.ToString();
+            BroadcastDataInput(nameof(MarkdownDynamicPrimary));
+        });
+    }
+
+    [Markdown]
+    public string MarkdownDynamic = "";
+
+    public override void OnUpdate() {
+        base.OnUpdate();
+        string time = "RealTime: " + Time.time.ToString();
+
+        MarkdownDynamic = time;
+        BroadcastDataInput(nameof(MarkdownDynamic));
+    }
+}
+```
 
 ## 트리거
 
@@ -437,6 +532,7 @@ BroadcastDataInputProperties(nameof(CurrentItem)); // Notify the editor that the
 <AuthorBar authors={{
 creators: [
 {name: 'HakuyaTira', github: 'TigerHix'},
+{name: 'hanekit', github: 'hanekit'},
 ],
 translators: [
     {name: 'Willycho', github: 'Willycho'},
