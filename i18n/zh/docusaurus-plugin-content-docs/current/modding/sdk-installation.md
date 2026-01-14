@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-translate_from_version: 2026-01-13
+translate_from_version: 2026-01-14
 ---
 
 # Unity & Warudo SDK 安装
@@ -17,7 +17,7 @@ translate_from_version: 2026-01-13
 
 ## Step 1 - 安装 Unity Hub
 
-首先，你需要下载 **Unity Hub**（一般最新版本即可），  
+首先，你需要下载 **Unity Hub**（一般最新版本即可）。  
 Unity Hub 是用于管理不同版本的 Unity Editor 和不同版本的项目的软件。
 
 打开 [**Unity 官网**](https://unity.com/cn/download) 可在下图中两个红框处选一点击，下载可能需要注册 Unity 帐号。
@@ -56,31 +56,32 @@ Warudo 不使用该版本，建议点击 **Skip installation**。
 
 ## Step 2 - 安装 Unity Editor
 
-接下来，你需要下载 Unity Editor 的安装包，且版本必须严格为 **Unity 2021.3.45f2** 。
+接下来，你需要下载 Unity Editor 的安装包，且版本必须严格为 **2021.3.45f2** 。
 
-该版本不能使用 Unity Hub 直接下载，你需要：
+此特定补丁版本是与 Warudo SDK 兼容所必需的，不可替代。安装方法如下：
 
 1. 前往 [Unity Download Archive](https://unity.com/releases/editor/archive) ；
-2. 在 **【Unity 2021.X】** 选项卡 下，找到【Unity **2021.3.45f2** (3 Oct, 2025)】 ；
-3. 点击 【Downloads (Win)】；
-4. 选择 **【Unity Editor (64-bit)】**；
-5. 等待【 `UnitySteup 64-2021.3.45f2.exe` 】下载完成 （大小约 2.3 GiB）；
-
+2. 在 **【2021】** 选项卡 下，找到版本【**2021.3.45f2** (2025年10月3日)】 ；
+3. 点击 【INSTALL】；
 ![](/doc-img/sdk-installation-9.png)
+4. 浏览器会尝试打开 Unity Hub，选择“打开Unity Hub”；
+5. 在打开的 Unity Hub 窗口中，点击“继续”，然后点击“安装”；
+6. 安装过程可能需要较长时间，请耐心等待。
 
-接下来，运行 `UnitySteup 64-2021.3.45f2.exe` 开始安装。
-此时默认安装位置为 `C:\Program Files\Unity 2021.3.45f2`，你可以自行修改，但是建议在路径中**保留版本号**，以避免版本冲突。
+**如果步骤 4 失败或您想手动安装，请返回步骤 2，然后：**
 
-该安装会消耗较长时间，请耐心等待。
+3. 点击“See all”；
+4. 点击“Windows”下载安装程序（文件名类似于 `UnitySetup64-2021.3.45f2.exe`，大小约为 3-4 GiB）；
+![](/doc-img/sdk-installation-13.png)
+5. 运行下载的安装程序开始安装。
+默认安装位置可能是 `C:\Program Files\Unity 2021.3.45f2`；您可以更改安装位置，但我们建议在路径中包含版本号（例如 `D:\Softwares\Unity\2021.3.45f2`），以便在管理多个 Unity 版本时避免混淆。
+安装过程可能需要较长时间，请耐心等待。
+6. 安装完成后：打开 Unity Hub；
+7. 点击【安装 (Installs)】-【选择位置 (Locate)】；
+8. 找到刚才选择的安装路径，然后进入【Editor】子文件夹，找到【Unity.exe】；
+9. 选择后点击【选择编辑器 (Select Editor)】。
 
-安装完毕后，你需要：
-
-1. 打开 Unity Hub；
-2. 点击【安装 (Installs)】-【选择位置 (Locate)】；
-3. 找到刚才选择的安装路径，然后进入【Editor】子文件夹，找到【Unity.exe】；
-4. 选择后点击【选择编辑器 (Select Editor)】。
-
-此时，在 Unity Hub 中便能正确地显示出 `2021.3.45f2` 版本的 Unity.exe
+完成以上步骤后，所需的 Unity 版本（2021.3.45f2）应该会出现在 Unity Hub 中。
 
 ![](/doc-img/sdk-installation-10.png)
 
@@ -103,7 +104,8 @@ Warudo 不使用该版本，建议点击 **Skip installation**。
 
 :::
 
-确认 **File → Build Settings... → Player Settings... → Other Settings** (也可以通过 **Edit → Project Settings → Player → Other Settings**) 中的 **Api Compatibility Level** 被设置为 `.NET Framework`，并将 **Assembly Version Validation** 取消选中。
+首先，需要确认 **File → Build Settings... → Player Settings... → Other Settings** 中的 **Api Compatibility Level** 被设置为 `.NET Framework`，并将 **Assembly Version Validation** 取消选中。
+(该设置也可以通过 **Edit → Project Settings → Player → Other Settings** 到达)
 
 ![](/doc-img/en-mod-sdk-2.webp)
 
@@ -114,36 +116,26 @@ Warudo 不使用该版本，建议点击 **Skip installation**。
 https://github.com/HakuyaLabs/Warudo-Mod-Tool.git#0.14.3.5
 ```
 
-:::tip
+如果您与 Github 之间的网络连接不佳，也可以下载该仓库的 tarball 文件：
 
-如果您与 Github 之间的网络连接不佳，也可以下载该仓库的 tarball 文件并在 Package Manager 中选择 **Add package from tarball...** 进行导入。
-
-<a href="/sdk/Warudo-Mod-Tool-0.14.3.5.tgz" target="_blank">
 <div className="file-box">
-<p>
-Warudo-Mod-Tool-0.14.3.5.tgz
-</p></div>
-</a>
+<a href="/sdk/Warudo-Mod-Tool-0.14.3.5.tgz" target="_blank">Warudo-Mod-Tool-0.14.3.5.tgz</a>
+</div>
 
-:::
+并在 Package Manager 中选择 **Add package from tarball...** 进行导入。
 
-点击 **Add** 按钮，Unity 将开始从 GitHub 下载并安装 Warudo SDK 包。
-
-如果弹出询问 Prebuilt packages 的对话框或转换文件，选择 **Yes** 。
-
-返回 Unity 等待加载完成。
+点击 **Add** 按钮，Unity 将开始从 GitHub 下载并安装 Warudo SDK 包。如果弹出询问 Prebuilt packages 的对话框或转换文件，选择 **Yes** 。返回 Unity 等待加载完成。
 
 :::caution
 
 如果您遇到消息错误 `An error occurred while resolving packages / Error adding package`，
-单击它会显示类似以下内容的消息： 
+单击它会显示类似以下内容的消息：
 `No 'git' executable was found. Please install Git on your system then restart Unity and Unity Hub`，
 这意味着您的系统上尚未安装 Git。
 ![](/doc-img/en-mod-sdk-1.webp)
 要解决此问题，您需要从 https://git-scm.com/download 下载 Git，然后重新启动 Unity 和 Unity Hub。
 
 :::
-
 
 ### 方法二 直接导入模板项目
 

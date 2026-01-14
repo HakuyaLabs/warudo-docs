@@ -5,6 +5,15 @@ translate_from_version: 2024-10-18
 
 # Instalación de Unity y Warudo SDK
 
+:::warning
+
+This translation may be **out of date**.  
+Please refer to the **English version** for the latest information.
+
+:::
+
+---
+
 Esta página te guiará para instalar el **Editor de Unity** y el **Warudo SDK** paso a paso.
 
 ---
