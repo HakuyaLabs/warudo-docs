@@ -101,7 +101,7 @@ Bakery가 Warudo에서 제대로 작동하도록 하기 위해서는 아래 단�
 <AuthorBar authors={{
   creators: [
     {name: 'HakuyaTira', github: 'TigerHix'},
-    {name: 'hanekit', github: 'hanekit'}
+    {name: 'Hane', github: 'hanekit'}
   ],
   translators: [
     {name: 'Willycho', github: 'Willycho'},

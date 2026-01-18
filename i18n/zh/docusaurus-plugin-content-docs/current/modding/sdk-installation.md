@@ -198,9 +198,9 @@ https://github.com/HakuyaLabs/Warudo-Mod-Tool.git#0.14.3.5
 <AuthorBar authors={{
   creators: [
     {name: 'HakuyaTira', github: 'TigerHix'},
-    {name: 'hanekit', github: 'hanekit'}
+    {name: 'Hane', github: 'hanekit'}
   ],
   translators: [
-    {name: 'hanekit', github: 'hanekit'}
+    {name: 'Hane', github: 'hanekit'}
   ],
 }} />

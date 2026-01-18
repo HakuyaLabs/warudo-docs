@@ -101,9 +101,9 @@ translate_from_version: 2024-11-15
 <AuthorBar authors={{
   creators: [
     {name: 'HakuyaTira', github: 'TigerHix'},
-    {name: 'hanekit', github: 'hanekit'}
+    {name: 'Hane', github: 'hanekit'}
   ],
   translators: [
-    {name: 'hanekit', github: 'hanekit'}
+    {name: 'Hane', github: 'hanekit'}
   ],
 }} />

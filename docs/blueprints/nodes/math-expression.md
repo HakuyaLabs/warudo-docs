@@ -106,7 +106,7 @@ rand => Random.Range(float, float)
 
 <AuthorBar authors={{
   creators: [
-    {name: 'hanekit', github: 'hanekit'},
+    {name: 'Hane', github: 'hanekit'},
   ],
   translators: [
   ],
