@@ -8,7 +8,7 @@ translate_from_version: 2024-06-18
 在 Warudo 中，Playground 是一个允许你加载自定义脚本，而无需创建 [插件 Mod](plugin-mod) 的开发环境。Warudo 会自动编译并加载放置在 `Playground` 文件夹中的 C# 脚本 (`.cs` 文件)，并且对脚本的任何更改也会自动重新加载。
 
 :::tip
-查看我们的 [创建您的第一个脚本](creating-your-first-script) 教程来开始尝试 Playground！
+查看我们的 [创建你的第一个脚本](creating-your-first-script) 教程来开始尝试 Playground！
 :::
 
 你可以在 Playground 中放入任何 C# 脚本，但为了让 Warudo 识别，需要存在至少一个继承于 [实体 (Entities)](api/entities.md) 的类，即一个 `Node`、`Asset` 或 `Plugin`。

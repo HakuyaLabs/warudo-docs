@@ -8,13 +8,13 @@ sidebar_position: 110
 
 ## 初始设置
 
-请先打开 [VDMocapStudio](https://www.virdynm.com/virdyn-vdmocap-studio-motion-capture-software-system-for-vdsuit-full-product/) 软件，点击软件中的 **Broadcast → OpenShare** 以打开数据串流，并请确保您选择的IP地址能被Warudo访问。
+请先打开 [VDMocapStudio](https://www.virdynm.com/virdyn-vdmocap-studio-motion-capture-software-system-for-vdsuit-full-product/) 软件，点击软件中的 **Broadcast → OpenShare** 以打开数据串流，并请确保你选择的 IP 地址能被 Warudo 访问。
 
 ![](/doc-img/en-virdyn-1.png)
 
 ## 校正
 
-Virdyn硬件的校正需要在VDMocapStudio中完成。你也可以使用Warudo中的 **Virdyn Studio Receiver → Calibrate Root Transform** 功能，来将角色重置为默认的位置和方向。
+Virdyn 硬件的校正需要在 VDMocapStudio 中完成。你也可以使用 Warudo 中的 **Virdyn Studio Receiver → Calibrate Root Transform** 功能，来将角色重置为默认的位置和方向。
 
 ## 常见问题
 

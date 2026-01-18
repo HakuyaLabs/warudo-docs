@@ -8,11 +8,11 @@ sidebar_position: 90
 
 ## 初始设定
 
-打开Rokoko并开启 **Livestream → Activate streaming to Unity**:
+打开 Rokoko 并开启 **Livestream → Activate streaming to Unity**:
 
 ![](/doc-img/zh-rokoko-1.webp)
 
-然后，在 **Rokoko 接收器** 组件中将 **Profile Name** 更新为您想要接收动捕数据的Rokoko actor的名字。
+然后，在 **Rokoko 接收器** 组件中将 **Profile Name** 更新为你想要接收动捕数据的 Rokoko actor 的名字。
 
 ![](/doc-img/zh-rokoko-2.webp)
 
@@ -24,13 +24,13 @@ sidebar_position: 90
 
 :::info
 
-如有更多疑问，请您查阅 [Rokoko官方手册](https://support.rokoko.com/hc/en-us/articles/4410471183633-Getting-Started-Streaming-to-Unity).
+如有更多疑问，请查阅 [Rokoko官方手册](https://support.rokoko.com/hc/en-us/articles/4410471183633-Getting-Started-Streaming-to-Unity).
 
 :::
 
 ## 校正
 
-Rokoko 动捕硬件的校正需要在 Rokoko Studio中进行。
+Rokoko 动捕硬件的校正需要在 Rokoko Studio 中进行。
 
 ## 常见问题{#FAQ}
 
