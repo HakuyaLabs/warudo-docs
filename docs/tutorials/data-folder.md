@@ -136,7 +136,7 @@ This folder is used to store the **image** files.
 
 You can use the image files in the following scenarios:
 - “**Spawn Sticker From Local Image**” Node – “**Image Source**” Port – “**Get Random Local Image**” Node – “**Images**” Port
-- “**Screen**” Asset – “**Image Source**” Option (“**Content Type**” should be “**Image**”)
+- “[**Screen**](/docs/assets/screen)” Asset – “**Image Source**” Option (“**Content Type**” should be “**Image**”)
 - “**Discover**” Panel – “**Published Items**” Tab – “**Create Item**” – “**Preview Image**” Option
 
 ### LipSyncProfiles
@@ -183,7 +183,7 @@ You can also open this folder directly using the “**Open Music Folder**” but
 **Supported Format:** [Warudo Particle Mod](/docs/modding/particle-mod) (`*.warudo`)
 
 You can use the files in the following scenarios:
-- “**Prop**” Asset – “**Source**” Option
+- “[**Prop**](/docs/assets/prop)” Asset– “**Source**” Option
 - “**Particle Source**” Node – “**Value**” Port
 - “**Get Random Particle**” Node – “**Particles**” Port
 - “**Spawn Particle**” Node – “**Source**” Port
@@ -216,7 +216,7 @@ Please check: [Playground](/docs/scripting/playground)
 **Supported Format:** [Warudo Prop Mod](/docs/modding/prop-mod) (`*.warudo`)
 
 You can use the files in the following scenarios:
-- “**Prop**” Asset – “**Source**” Option
+- “[**Prop**](/docs/assets/prop)” Asset– “**Source**” Option
 - “**Prop Source**” Node – “**Value**” Port
 - “**Get Random Prop**” Node – “**Props**” Port
 - “**Throw Prop**” Node – “**Prop Source**” Port
@@ -262,7 +262,7 @@ This folder is used to store the **video** files.
 **Supported Formats:** Video formats
 
 You can use the image files in the following scenarios:
-- “**Screen**” Asset – “**Video Source**” Option (“**Content Type**” should be “**Video**”)
+- “[**Screen**](/docs/assets/screen)” Asset – “**Video Source**” Option (“**Content Type**” should be “**Video**”)
 
 ## Additional Subfolders
 
