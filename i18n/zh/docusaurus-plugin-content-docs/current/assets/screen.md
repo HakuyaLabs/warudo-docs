@@ -1,5 +1,6 @@
 ---
 sidebar_position: 60
+translate_from_version: 2023-09-30
 ---
 
 # 屏幕

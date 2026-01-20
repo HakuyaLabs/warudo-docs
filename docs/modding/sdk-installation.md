@@ -158,7 +158,7 @@ If everything imported without Errors, you can start with [creating your first m
 <AuthorBar authors={{
   creators: [
     {name: 'HakuyaTira', github: 'TigerHix'},
-    {name: 'hanekit', github: 'hanekit'}
+    {name: 'Hane', github: 'hanekit'}
   ],
   translators: [
   ],

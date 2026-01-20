@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # 场景 (Scene)
 
-场景是一个 JSON 文件，用于存储该场景的资源列表、蓝图列表和插件设置。当您在编辑器中打开已保存的场景时，将首先创建并转出存档状态的资源，然后逐个将保存的蓝图实例化，并创建和转出存档状态中的每个蓝图节点。
+场景是一个 JSON 文件，用于存储该场景的资源列表、蓝图列表和插件设置。当你在编辑器中打开已保存的场景时，将首先创建并转出存档状态的资源，然后逐个将保存的蓝图实例化，并创建和转出存档状态中的每个蓝图节点。
 
 :::info
 在代码中，蓝图被称为 _graphs_.
@@ -12,7 +12,7 @@ sidebar_position: 1
 
 ## 访问场景数据
 
-您可以使用 `Context.OpenedScene` 访问当前打开的场景的数据。然后，您可以访问场景中的资源、蓝图等：
+你可以使用 `Context.OpenedScene` 访问当前打开的场景的数据。然后，你可以访问场景中的资源、蓝图等：
 
 ```csharp
 var scene = Context.OpenedScene;
@@ -22,7 +22,7 @@ var characterAssets = scene.GetAssets<CharacterAsset>();
 var blueprints = scene.GetGraphs();
 ```
 
-您可以实例化新资源或节点：
+你可以实例化新资源或节点：
 
 ```csharp
 var newCharacterAsset = scene.AddAsset<CharacterAsset>(); // 实例化新的角色资源

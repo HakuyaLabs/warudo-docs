@@ -39,7 +39,7 @@ Playground has the following limitations:
 <AuthorBar authors={{
   creators: [
     {name: 'HakuyaTira', github: 'TigerHix'},
-    {name: 'hanekit', github: 'hanekit'}
+    {name: 'Hane', github: 'hanekit'}
   ],
   translators: [
   ],

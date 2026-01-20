@@ -11,9 +11,9 @@ For a detailed explanation of the effect of each option, please refer to: [Easin
 
 <AuthorBar authors={{
   creators: [
-    {name: 'hanekit', github: 'hanekit'},
+    {name: 'Hane', github: 'hanekit'},
   ],
   translators: [
-    {name: 'hanekit', github: 'hanekit'},
+    {name: 'Hane', github: 'hanekit'},
   ],
 }} />

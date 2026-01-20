@@ -1,5 +1,6 @@
 ---
 sidebar_position: 60
+translate_from_version: 2023-12-27
 ---
 # 스크린
 

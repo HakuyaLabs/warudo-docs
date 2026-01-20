@@ -187,7 +187,7 @@ This is a bug waiting to be fixed, and currently can only be solved by exiting w
 
 <AuthorBar authors={{
   creators: [
-    {name: 'hanekit', github: 'hanekit'},
+    {name: 'Hane', github: 'hanekit'},
   ],
   translators: [
   ],
