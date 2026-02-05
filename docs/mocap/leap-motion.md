@@ -1,5 +1,6 @@
 ---
 sidebar_position: 70
+version: 2024-06-18
 ---
 
 # Leap Motion Controller

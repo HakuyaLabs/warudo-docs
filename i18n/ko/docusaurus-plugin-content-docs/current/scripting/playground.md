@@ -38,7 +38,7 @@ Playground에는 다음과 같은 제한이 있어요:
 <AuthorBar authors={{
   creators: [
     {name: 'HakuyaTira', github: 'TigerHix'},
-    {name: 'hanekit', github: 'hanekit'}
+    {name: 'Hane', github: 'hanekit'}
   ],
   translators: [
     {name: 'Willycho', github: 'Willycho'}

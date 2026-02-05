@@ -11,9 +11,9 @@ version: 2026-01-09
 
 <AuthorBar authors={{
   creators: [
-    {name: 'hanekit', github: 'hanekit'},
+    {name: 'Hane', github: 'hanekit'},
   ],
   translators: [
-    {name: 'hanekit', github: 'hanekit'},
+    {name: 'Hane', github: 'hanekit'},
   ],
 }} />

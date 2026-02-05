@@ -1,5 +1,6 @@
 ---
 sidebar_position: 50
+version: 2024-08-06
 ---
 
 # Camera

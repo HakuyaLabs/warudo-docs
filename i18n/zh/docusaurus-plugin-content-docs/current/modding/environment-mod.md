@@ -59,9 +59,9 @@ translate_from_version: 2024-11-15
 
 为了确保 Bakery 与 Warudo 正常工作，请按照以下步骤操作：
 
-1. 将 Bakery 文件夹复制到您的 mod 文件夹中（默认情况下它应该位于 Assets 根目录下）；
-2. 在烘焙设置中，检查 **Use scene named output path**。这可确保 Bakery 光照贴图存储在 Mod 文件夹中。对于 **Directional Mode**，您应该选择一种能够生成 irectional lightmaps 的模式，例如 Dominant Direction 或 MonoSH；
-3. 点击 **Render** 以渲染光照贴图。然后，如果您还想烘焙反射探针，再点击 **Render reflection probes** ；
+1. 将 Bakery 文件夹复制到你的 mod 文件夹中（默认情况下它应该位于 Assets 根目录下）；
+2. 在烘焙设置中，检查 **Use scene named output path**。这可确保 Bakery 光照贴图存储在 Mod 文件夹中。对于 **Directional Mode**，你应该选择一种能够生成 irectional lightmaps 的模式，例如 Dominant Direction 或 MonoSH；
+3. 点击 **Render** 以渲染光照贴图。然后，如果你还想烘焙反射探针，再点击 **Render reflection probes** ；
 4. **重要**：转到 `Bakery/_tempScene` 文件夹并删除烘焙过程中生成的名为 `_tempScene` 的 Unity 场景。
 
 ### 步骤 3：添加 `EnvironmentSettings` 脚本
@@ -101,9 +101,9 @@ translate_from_version: 2024-11-15
 <AuthorBar authors={{
   creators: [
     {name: 'HakuyaTira', github: 'TigerHix'},
-    {name: 'hanekit', github: 'hanekit'}
+    {name: 'Hane', github: 'hanekit'}
   ],
   translators: [
-    {name: 'hanekit', github: 'hanekit'}
+    {name: 'Hane', github: 'hanekit'}
   ],
 }} />

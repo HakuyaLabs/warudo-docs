@@ -1,5 +1,6 @@
 ---
 sidebar_position: 130
+version: 2024-06-18
 ---
 
 # StretchSense Glove

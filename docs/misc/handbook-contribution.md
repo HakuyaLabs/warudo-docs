@@ -1,5 +1,6 @@
 ---
 sidebar_position: 20
+version: 2024-06-27
 ---
 
 # Document Contribution
@@ -15,16 +16,13 @@ The Warudo handbook proudly uses [Docusaurus](https://docusaurus.io/) as site fr
 
 The Warudo handbook is open-source project. If you find anything hard to understand or want to provide new content, such as tutorials or guidance, feel free to create issues on GitHub, or directly contribute by submitting code or translations to the GitHub project. Your name will appear in the contributors list at the bottom of the documentation!
 
-
 ## How to Contribute
 
 ### Provide Feedback and Suggestions via GitHub Issues
 
-Providing feedback directly through GitHub Issues is a straightforward and simple way. We have set up some issue templates to help submit issues.<br />
-https://github.com/HakuyaLabs/warudo-docs/issues
+Providing feedback directly through GitHub Issues is a straightforward and simple way. We have set up some issue templates to help submit issues: https://github.com/HakuyaLabs/warudo-docs/issues .
 
-tips: The feedback here is for the Warudo handbook site. For discussions about the Warudo software itself, feel free to join Discord channels.<br />
-https://discord.gg/warudo
+Tip: The feedback here is for the Warudo handbook site. For discussions about the Warudo software itself, feel free to join Discord channels: https://discord.gg/warudo .
 
 ### Submit Code and Become a Contributor
 
@@ -51,8 +49,6 @@ It's recommended to copy every file in `/docs` folder to `/i18n/[lang]/docusauru
 
 :::
 
-
-
 ### Commands
 
 | Command | Description |
@@ -64,34 +60,28 @@ It's recommended to copy every file in `/docs` folder to `/i18n/[lang]/docusauru
 | `yarn start:all` | Start multi-version at different port |
 |`yarn build` | Build site |
 
- 
 ## Running local development site
 
 If you are not familiar with dev staff, don't worry, let's get start.
 
-
 <details>
-
 <summary>Document development tutorial</summary>
 
 ### Prepare environment
 
-First, download the runtime. 
+First, download the runtime.
 
  - Node.js download: https://nodejs.org/en/download/  
 	<small>Node.js is the programming language we used. </small> <br />
-	<small>Select LTS version - installer (.msi/.exe for Windows, .pkg for macOS).</small> 
-
+	<small>Select LTS version - installer (.msi/.exe for Windows, .pkg for macOS).</small>
  - GitHub Desktop download: https://desktop.github.com/  
     <small>GitHub Desktop is a great version control software for us to manage and commit changes.</small>
-
  - VSCode download: https://code.visualstudio.com/  
 	<small>VSCode is a common editor that works great for front-end sites like this one, you can also use other text editors.</small>
 
 ### Using command line
 
  - For Windows, use `Win+R` and enter `cmd` to open the terminal.
-
  - For macOS, use the `Terminal` app in your lunchpad.
 
 After installation, you should able to use the `node -v` command to see node.js version on the terminal.
@@ -99,15 +89,11 @@ After installation, you should able to use the `node -v` command to see node.js 
 ### Set up the project using GitHub desktop
 
  - Login Github account
-
  - Search for `HakuyaLabs/warudo-docs` 
-
  - Clone project  
    <small>Then the project has been downloaded to your computer.</small>
-
  - Click `Current branch` - `New branch` - input name - `Create branch`    
    <small>So that you can edit files in your independent branch.</small>
-
  - Click `Publish branch`  
    <small>Event one should see your branch and you are ready to start edit.</small>
 
@@ -117,15 +103,12 @@ Open the terminal.
 
  - **`cd <path_for_your_dev_folder>`**  
    <small>Jump into the folder where we place site files.</small>
-
- - **`corepack enable`**   
+ - **`corepack enable`**  
    <small>That set up package manager we used for node.js.</small><br />
    <small>*Usually you just need run this command once.*</small>
-
  - **`yarn`**  
    <small>Install dependencies.</small><br />
    <small>*When project dependencies (package.json) updated, re-run this command is necessary.*</small>
-
  - **`yarn start:en`** Start EN version  
    **`yarn start:zh`** Start ZH version  
    **`yarn start:all`** Start multi-version at different port  
@@ -138,22 +121,19 @@ Try it out, and go ahead start editing document files!
 
  - Edit markdown files and check live page in browser
 
-Most document files are saved as .md or .mdx, known as [Markdown](https://www.markdownguide.org/) files,   
+Most document files are saved as .md or .mdx, known as [Markdown](https://www.markdownguide.org/) files,
 which is just plain text with some formate code in it.
 
 ### Commit & Upload your changes
 
-After saving all the files that you changed.   
+After saving all the files that you changed.
 
  - Open the Github desktop, then you can see all the changes on the left side.  
   Check all the changed files you want to commit.  
-  Enter a summary, and click `Commit`.  
-
+  Enter a summary, and click `Commit`.
  - You have committed your changes and you should see it in the `History` panel.  
-
  - But it is just on your computer right now.  
   To publish to Github, click `Push Origin`.  
-
  - Yay! Everyone should see it on github.
 
  ### Contact Warudo Handbook Maintenance Members for Review and Publication
@@ -165,6 +145,7 @@ After saving all the files that you changed.
 ## Add Your Own Name
 
 At the bottom of each document, there is a section of code that marks the editors of the document. When you modify or complete a document, don't forget to add your name here. The avatar will be automatically fetched through your GitHub ID.
+
 ```
 <AuthorBar authors={{
   creators: [

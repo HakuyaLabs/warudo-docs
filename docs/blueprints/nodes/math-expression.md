@@ -1,5 +1,6 @@
 ---
 sidebar_position: 100
+version: 2024-10-23
 ---
 
 # Math Expression
@@ -105,7 +106,7 @@ rand => Random.Range(float, float)
 
 <AuthorBar authors={{
   creators: [
-    {name: 'hanekit', github: 'hanekit'},
+    {name: 'Hane', github: 'hanekit'},
   ],
   translators: [
   ],

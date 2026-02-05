@@ -1,8 +1,18 @@
 ---
 sidebar_position: 1
+translate_from_version: 2024-10-18
 ---
 
 # Unity & Warudo SDK 설치
+
+:::warning
+
+This translation may be **out of date**.  
+Please refer to the **English version** for the latest information.
+
+:::
+
+---
 
 이 페이지에서는 **Unity Editor**와 **Warudo SDK**를 단계별로 설치하는 방법을 안내할거에요.
 
@@ -21,7 +31,7 @@ Unity Hub는 서로 다른 버전의 Unity Editor와 그 버전의 프로젝트�
 
 [**Unity 공식 웹사이트**](https://unity.com/download)를 열고 아래 이미지의 빨간 상자 중 하나를 클릭해서 Unity Hub를 다운로드하세요. 다운로드를 진행하려면 Unity 계정이 필요할 수 있어요.
 
-![](/doc-img/sdk-installation-13.png)
+![](/doc-img/en-sdk-installation-1.png)
 
 다운로드한 UnityHubSetup.exe 파일을 실행해 원하는 경로에 설치하세요.
 설치 후, Unity Hub가 정상적으로 열리는지 확인해 주세요.

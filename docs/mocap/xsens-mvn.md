@@ -1,5 +1,6 @@
 ---
 sidebar_position: 100
+version: 2024-06-18
 ---
 
 # Xsens MVN

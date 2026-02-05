@@ -1,5 +1,6 @@
 ---
 sidebar_position: 41
+version: 2024-06-14
 ---
 
 # Directional/Point/Volumetric Light

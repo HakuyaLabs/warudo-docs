@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1000
+version: 2024-06-16
 ---
 
 # Debugging

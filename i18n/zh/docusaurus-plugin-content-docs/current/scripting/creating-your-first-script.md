@@ -3,9 +3,9 @@ sidebar_position: 1
 translate_from_version: 2024-11-22
 ---
 
-# 创建您的第一个脚本
+# 创建你的第一个脚本
 
-在 Warudo 中有两种方式编写脚本：使用 **Playground** 或创建插件 Mod。在本教程中，我们将探究如何使用 Playground 编写您的第一个自定义节点！
+在 Warudo 中有两种方式编写脚本：使用 **Playground** 或创建插件 Mod。在本教程中，我们将探究如何使用 Playground 编写你的第一个自定义节点！
 
 :::tip
 **什么是 playground？** Playground 可以被看成一个沙盒，您可以在其中编写和测试自定义节点和资源。您可以直接在 Warudo 数据文件夹中 `Playground` 文件夹编写代码，而不需要编译和打包 C# 代码。这使您可以快速迭代和测试您的代码，而无需构建 Mod 或重启 Warudo。
@@ -64,7 +64,7 @@ public class HelloWorldNode : Node {
 
 ![](/doc-img/zh-creating-your-first-script-3.webp)
 
-如果一切正常，恭喜！您刚刚创建了您的第一个 Warudo 节点！
+如果一切正常，恭喜！您刚刚创建了你的第一个 Warudo 节点！
 
 ## 第 3 步：热重载
 

@@ -12,7 +12,7 @@ sidebar_position: 100
 
 ![](/doc-img/zh-xens-1.webp)
 
-然后在 **Xsens MVN 接收器**素材中更新您想要接收动捕信息的**演员 ID** 。默认选项是1。
+然后在 **Xsens MVN 接收器**素材中更新你想要接收动捕信息的**演员 ID** 。默认选项是1。
 
 :::注意！
 提示: 你需要一个MVN Animate Plus 或者 Pro来使用网络串流功能。

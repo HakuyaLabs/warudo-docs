@@ -1,5 +1,6 @@
 ---
 sidebar_position: 80
+version: 2024-06-14
 ---
 
 # Motion Recorder

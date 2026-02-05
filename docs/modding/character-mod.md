@@ -1,5 +1,6 @@
 ---
 sidebar_position: 10
+version: 2025-05-25
 ---
 
 # Character Mod

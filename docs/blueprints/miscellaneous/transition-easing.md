@@ -1,6 +1,6 @@
 ---
 sidebar_position: 10
-translate_from_version: 2026-01-09
+version: 2026-01-09
 ---
 
 # Transition Easing
@@ -11,9 +11,9 @@ For a detailed explanation of the effect of each option, please refer to: [Easin
 
 <AuthorBar authors={{
   creators: [
-    {name: 'hanekit', github: 'hanekit'},
+    {name: 'Hane', github: 'hanekit'},
   ],
   translators: [
-    {name: 'hanekit', github: 'hanekit'},
+    {name: 'Hane', github: 'hanekit'},
   ],
 }} />

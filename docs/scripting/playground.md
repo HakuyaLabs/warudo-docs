@@ -1,5 +1,6 @@
 ---
 sidebar_position: 50
+version: 2024-06-18
 ---
 
 # Playground
@@ -38,7 +39,7 @@ Playground has the following limitations:
 <AuthorBar authors={{
   creators: [
     {name: 'HakuyaTira', github: 'TigerHix'},
-    {name: 'hanekit', github: 'hanekit'}
+    {name: 'Hane', github: 'hanekit'}
   ],
   translators: [
   ],

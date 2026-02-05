@@ -184,7 +184,7 @@ Este es un error esperando ser arreglado, y actualmente solo puede ser resuelto 
 
 <AuthorBar authors={{
   creators: [
-    {name: 'hanekit', github: 'hanekit'},
+    {name: 'Hane', github: 'hanekit'},
   ],  translators: [
     {name: 'かぐら', github: 'Arukaito'},
   ],

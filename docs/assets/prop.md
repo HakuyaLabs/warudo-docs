@@ -1,6 +1,8 @@
 ---
 sidebar_position: 20
+version: 2024-06-14
 ---
+
 # Prop
 
 A prop is a 3D model that can be placed freely within a scene or attached to a character as an accessory. Besides the built-in models, external models can be exported as `.warudo` format using the [Mod SDK](../modding/mod-sdk.md) and then loaded into Warudo.

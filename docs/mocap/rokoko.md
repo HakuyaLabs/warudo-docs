@@ -1,5 +1,6 @@
 ---
 sidebar_position: 90
+version: 2024-06-18
 ---
 
 # Rokoko
@@ -43,4 +44,3 @@ This is a common issue with inertial motion capture systems, which drift over ti
   translators: [
   ],
 }} />
-

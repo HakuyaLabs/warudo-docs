@@ -1,6 +1,8 @@
 ---
 sidebar_position: 60
+version: 2023-12-27
 ---
+
 # Screen
 
 Capture your desktop or a window and display it in the scene just like OBS. You can also display images, videos and even webpages!

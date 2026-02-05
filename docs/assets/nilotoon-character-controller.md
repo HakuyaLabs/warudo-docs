@@ -1,5 +1,6 @@
 ---
 sidebar_position: 502
+version: 2024-06-14
 ---
 
 # NiloToon Character Controller
