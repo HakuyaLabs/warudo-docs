@@ -102,12 +102,12 @@ Before installation, confirm **File → Build Settings... → Player Settings...
 Open your Unity project, then choose **Window → Package Manager**. In the Package Manager window click the **+** button (top-left) and choose **Add package from git URL...**. Enter the following URL:
 
 ```
-https://github.com/HakuyaLabs/Warudo-Mod-Tool.git#0.14.3.5
+https://github.com/HakuyaLabs/Warudo-Mod-Tool.git#0.14.3.10
 ```
 
 If you cannot access GitHub reliably, you can download a tarball and use **Add package from tarball...** instead:
 
-<a href="/sdk/Warudo-Mod-Tool-0.14.3.5.tgz" target="_blank">Warudo-Mod-Tool-0.14.3.5.tgz</a>
+<a href="/sdk/Warudo-Mod-Tool-0.14.3.10.tgz" target="_blank">Warudo-Mod-Tool-0.14.3.10.tgz</a>
 
 Click **Add** and Unity will download and install the package. If Unity prompts about prebuilt packages or conversion, choose **Yes** and wait for the package to import.
 
@@ -121,7 +121,7 @@ If you see an error like `No 'git' executable was found. Please install Git on y
 
 ### Method B — Modding Project Template
 
-[Warudo SDK 0.14.3.5 Modding Project.zip](https://files.warudo.app/modsdk/Warudo%20SDK%200.14.3.5%20Modding%20Project.zip)
+[Warudo SDK 0.14.3.10 Modding Project.zip](https://files.warudo.app/modsdk/Warudo%20SDK%200.14.3.10%20Modding%20Project.zip)
 
 1. Download and extract the zip to a folder (for example `D:\Softwares\Unity\2021.3.45f2\Projects\WarudoModding`).
 2. In Unity Hub click **Add** (or **Open**) and select that folder.
