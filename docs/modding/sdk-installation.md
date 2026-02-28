@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-version: 2026-01-14
+version: 2026-02-28
 ---
 
 # Unity & Warudo SDK Installation
@@ -155,6 +155,22 @@ If you import the SDK into an **existing** project that already contains any of 
 :::
 
 If everything imported without Errors, you can start with [creating your first mod](creating-your-first-mod).
+
+---
+
+## Version History
+
+### Warudo SDK 0.14.3.10 (Latest)
+
+- Unity Version: **2021.3.45f2** (Oct 3, 2025)
+- Unity Package Tarball: [Warudo-Mod-Tool-0.14.3.10.tgz](https://docs.warudo.app/sdk/Warudo-Mod-Tool-0.14.3.10.tgz)
+- Unity Project: [Warudo SDK 0.14.3.10 Modding Project.zip](https://files.warudo.app/modsdk/Warudo%20SDK%200.14.3.10%20Modding%20Project.zip)
+
+### Warudo SDK 0.12.0
+
+- Unity Version: **2021.3.18** (Feb 1, 2023)
+- Unity Package File: [Warudo SDK 0.12.0.unitypackage](https://docs.warudo.app/sdk/Warudo%20SDK%200.12.0.unitypackage)
+- Unity Project: [Warudo SDK 0.12.0 Modding Project.zip](https://docs.warudo.app/sdk/Warudo%20SDK%200.12.0%20Modding%20Project.zip)
 
 <AuthorBar authors={{
   creators: [

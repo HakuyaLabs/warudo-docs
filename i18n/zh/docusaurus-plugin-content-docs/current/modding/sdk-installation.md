@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-translate_from_version: 2026-01-14
+translate_from_version: 2026-02-28
 ---
 
 # Unity & Warudo SDK 安装
@@ -82,6 +82,9 @@ Warudo 不使用该版本，建议点击 **Skip installation**。
 9. 选择后点击【选择编辑器 (Select Editor)】。
 
 完成以上步骤后，所需的 Unity 版本（2021.3.45f2）应该会出现在 Unity Hub 中。
+
+如果你发现安装到的版本带有 `c1` 后缀，代表你下载到了地区版本，但该区别通常不会影响使用。  
+你可以尝试使用上文的 `exe` 安装方法进行安装避免该版本。
 
 ![](/doc-img/sdk-installation-10.png)
 
@@ -194,6 +197,22 @@ https://github.com/HakuyaLabs/Warudo-Mod-Tool.git#0.14.3.10
 如果仍然存在问题，请通过 [Discord](https://discord.gg/warudo) 或者 QQ 频道 与我们联系。
 
 :::
+
+---
+
+## 版本历史
+
+### Warudo SDK 0.14.3.10 (Latest)
+
+- Unity Version: **2021.3.45f2** (Oct 3, 2025)
+- Unity Package Tarball: [Warudo-Mod-Tool-0.14.3.10.tgz](https://docs.warudo.app/sdk/Warudo-Mod-Tool-0.14.3.10.tgz)
+- Unity Project: [Warudo SDK 0.14.3.10 Modding Project.zip](https://files.warudo.app/modsdk/Warudo%20SDK%200.14.3.10%20Modding%20Project.zip)
+
+### Warudo SDK 0.12.0
+
+- Unity Version: **2021.3.18** (Feb 1, 2023)
+- Unity Package File: [Warudo SDK 0.12.0.unitypackage](https://docs.warudo.app/sdk/Warudo%20SDK%200.12.0.unitypackage)
+- Unity Project: [Warudo SDK 0.12.0 Modding Project.zip](https://docs.warudo.app/sdk/Warudo%20SDK%200.12.0%20Modding%20Project.zip)
 
 <AuthorBar authors={{
   creators: [
