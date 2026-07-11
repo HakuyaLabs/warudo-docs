@@ -135,7 +135,8 @@ This folder is used to store the **image** files.
 **Supported Format:** Image formats
 
 You can use the image files in the following scenarios:
-- “**Spawn Sticker From Local Image**” Node – “**Image Source**” Port – “**Get Random Local Image**” Node – “**Images**” Port
+- “**Spawn Sticker From Local Image**” Node – “**Image Source**” Port
+- “**Get Random Local Image**” Node – “**Images**” Port
 - “[**Screen**](/docs/assets/screen)” Asset – “**Image Source**” Option (“**Content Type**” should be “**Image**”)
 - “**Discover**” Panel – “**Published Items**” Tab – “**Create Item**” – “**Preview Image**” Option
 
@@ -221,7 +222,7 @@ You can use the files in the following scenarios:
 - “**Get Random Prop**” Node – “**Props**” Port
 - “**Throw Prop**” Node – “**Prop Source**” Port
 
-You can also open this folder directly using the “**Open Music Folder**” button in the “**Music Player**” Asset.
+You can find this folder by selecting **Menu → Open Data Folder** and opening the `Props` folder.
 
 ### Scenes
 
@@ -261,7 +262,7 @@ This folder is used to store the **video** files.
 
 **Supported Formats:** Video formats
 
-You can use the image files in the following scenarios:
+You can use the video files in the following scenarios:
 - “[**Screen**](/docs/assets/screen)” Asset – “**Video Source**” Option (“**Content Type**” should be “**Video**”)
 
 ## Additional Subfolders

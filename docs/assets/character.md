@@ -118,7 +118,7 @@ In addition to body animations, you can also set up **Breathing Animation** and 
 Finally, you can use **Additional Bone Offsets** to make small adjustments to the character's posture; for example, if you want to make the character's head tilt a few degrees to one side.
 
 :::info
-By default, the priority of the idle animation, overlay animations, override hand poses, and [body IK](./#body-ik) are all **lower** than motion capture.
+By default, the priority of the idle animation, overlay animations, override hand poses, and [body IK](#body-ik) are all **lower** than motion capture.
 
 For example, even if you have set an override hand pose for your right hand, if your right hand is being tracked, say by MediaPipe, the model follows your right hand's pose instead of the override hand pose. To make the override hand pose take priority over motion capture, you can enable **High Priority** in the hand pose settings.
 :::
