@@ -59,7 +59,7 @@ Warudo Handbook左側のナビゲーションバー構造も英語版ファイ�
 | `yarn start:all` | 異なるポートで複数の言語ドキュメントを同時に実行 |
 | `yarn build` | 実行環境に静的ファイルを生成 |
 
- 
+
 ## ローカル環境での開発について {#running-local-development-site}
 
 開発ツールに不慣れでも心配しないでください。気軽にチャレンジしてみましょう！
@@ -72,14 +72,14 @@ Warudo Handbook左側のナビゲーションバー構造も英語版ファイ�
 
 まず、必要な開発環境をダウンロードします。
 
- - Node.js ダウンロード: https://nodejs.org/en/download/  
+ - Node.js ダウンロード: https://nodejs.org/en/download/
 	<small>Node.jsはWarudo Handbookの開発に必要なプログラミング言語です。</small> <br />
-	<small>LTSバージョンを選択してインストールします（.msi/.exeはWindows用、.pkgはmacOS用）</small> 
+	<small>LTSバージョンを選択してインストールします（.msi/.exeはWindows用、.pkgはmacOS用）</small>
 
- - GitHub Desktop ダウンロード: https://desktop.github.com/  
+ - GitHub Desktop ダウンロード: https://desktop.github.com/
     <small>GitHub DesktopはGitHub公式のバージョン管理ツールで、コードの提出やブランチのマージを直接行うのに役立ちます。</small>
 
- - VSCode ダウンロード: https://code.visualstudio.com/  
+ - VSCode ダウンロード: https://code.visualstudio.com/
 	<small>VSCodeは一般的な開発者向けエディタで、フロントエンドプロジェクトの開発に適しています。他の馴染みのあるエディタを使っても構いません。</small>
 
 ### コマンドラインの使用 {#using-command-line}
@@ -96,41 +96,41 @@ Warudo Handbook左側のナビゲーションバー構造も英語版ファイ�
 
  - `HakuyaLabs/warudo-docs`リポジトリを検索
 
- - ローカル環境にプロジェクトをクローン  
+ - ローカル環境にプロジェクトをクローン
    <small>これでWarudo Handbookのコードがあなたのマシンにダウンロードされました。</small>
 
- - `Current branch` - `New branch` - ブランチ名を入力 - `Create branch` をクリック    
+ - `Current branch` - `New branch` - ブランチ名を入力 - `Create branch` をクリック
    <small>ブランチはGitの概念で、自分のブランチ上でファイルの内容を変更しても他の人の作業に影響を与えません。</small>
 
- - `Publish branch` をクリック  
+ - `Publish branch` をクリック
    <small>これで自分のブランチがリモートリポジトリに反映され、編集を開始できます。</small>
 
 ### ローカル環境でWarudo Handbookを実行 {#run-local-site}
 
 まずターミナルを開きます：
 
- - **`cd <プロジェクトディレクトリのパス>`**  
+ - **`cd <プロジェクトディレクトリのパス>`**
    <small>Warudo Handbookのプロジェクトディレクトリに移動します。</small>
 
- - **`corepack enable`**   
+ - **`corepack enable`**
    <small>Node.jsのパッケージマネージャーを設定します。</small><br />
    <small>*基本的にはこのコマンドは一度有効にすれば、その後は実行する必要はありません。</small>
 
- - **`yarn`**  
+ - **`yarn`**
    <small>依存関係のパッケージをインストールします。</small><br />
    <small>*プロジェクトのpackage.json依存ファイルが更新された場合は、このコマンドを再度実行して依存関係をインストールします。</small>
 
- - **`yarn start:en`** 英語版を起動  
-   **`yarn start:zh`** 中国語版を起動  
-   **`yarn start:jp`** 日本語版を起動  
+ - **`yarn start:en`** 英語版を起動
+   **`yarn start:zh`** 中国語版を起動
+   **`yarn start:jp`** 日本語版を起動
    **`yarn start:all`** 異なるポートで複数の言語環境を起動
 
 :::caution
 
-ローカル環境での開発中（`yarn start`での起動）は検索が機能しません。検索関連の動作を確認する際は、 `yarn build` でドキュメントをビルド後、 **`yarn serve`** で起動してください（参考: [docusaurus-search-local](https://github.com/cmfcmf/docusaurus-search-local?tab=readme-ov-file#usage)）  
+ローカル環境での開発中（`yarn start`での起動）は検索が機能しません。検索関連の動作を確認する際は、 `yarn build` でドキュメントをビルド後、 **`yarn serve`** で起動してください（参考: [docusaurus-search-local](https://github.com/cmfcmf/docusaurus-search-local?tab=readme-ov-file#usage)）
 :::
 
-これで準備が整い、ローカルマシン上で実行されるWarudo Handbookがブラウザに表示されるはずです。ドキュメント内容を変更して保存すると、ブラウザが自動的にページを更新します。  
+これで準備が整い、ローカルマシン上で実行されるWarudo Handbookがブラウザに表示されるはずです。ドキュメント内容を変更して保存すると、ブラウザが自動的にページを更新します。
 ドキュメント内容を編集して試してみてください！
 
 ### 編集の開始 {#start-editing}
@@ -144,7 +144,7 @@ Warudo Handbook左側のナビゲーションバー構造も英語版ファイ�
 
 変更を保存した後：
 
- - GitHub Desktopを開くと、左側のサイドバーにすべての変更が表示されます。提出したい変更ファイルをすべて選択します。 
+ - GitHub Desktopを開くと、左側のサイドバーにすべての変更が表示されます。提出したい変更ファイルをすべて選択します。
   Descriptionの入力欄に変更内容の説明を入力し（例：ドキュメントxxの翻訳を追加）、 `Commit` をクリックします。
 
  - これで今回の変更が提出され、履歴リストに表示されるはずです。
