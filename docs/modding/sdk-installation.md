@@ -105,11 +105,10 @@ Before installation, confirm **File → Build Settings... → Player Settings...
 Open your Unity project, then choose **Window → Package Manager**. In the Package Manager window click the **+** button (top-left) and choose **Add package from git URL...**. Enter the following URL:
 
 ```
-https://github.com/HakuyaLabs/Warudo-Mod-Tool.git#0.14.3.10
+https://github.com/HakuyaLabs/Warudo-Mod-Tool/releases/tag/0.14.5.1
 ```
 
 If you cannot access GitHub reliably, you can download a tarball:
-
 
 <div className="file-box">
 <a href="/sdk/Warudo-Mod-Tool-0.14.3.10.tgz" target="_blank">Warudo-Mod-Tool-0.14.3.10.tgz</a>
@@ -160,7 +159,12 @@ If everything imported without Errors, you can start with [creating your first m
 
 ## Version History
 
-### Warudo SDK 0.14.3.10 (Latest)
+### Warudo SDK 0.14.5.1 (Latest)
+- Unity Version: **2021.3.45f2** (Oct 3, 2025)
+- Unity Package Tarball: [Warudo-Mod-Tool-0.14.5.1.tgz ](https://github.com/HakuyaLabs/Warudo-Mod-Tool/releases/tag/0.14.5.1)
+- Unity Project:
+
+### Warudo SDK 0.14.3.10
 
 - Unity Version: **2021.3.45f2** (Oct 3, 2025)
 - Unity Package Tarball: [Warudo-Mod-Tool-0.14.3.10.tgz](https://docs.warudo.app/sdk/Warudo-Mod-Tool-0.14.3.10.tgz)
