@@ -113,7 +113,7 @@ Warudo 不使用该版本，建议点击 **Skip installation**。
 在弹出的对话框中，输入以下 URL：
 
 ```
-https://github.com/HakuyaLabs/Warudo-Mod-Tool.git#0.14.3.10
+https://github.com/HakuyaLabs/Warudo-Mod-Tool.git#upm/latest
 ```
 
 如果您与 Github 之间的网络连接不佳，也可以下载该仓库的 tarball 文件：
@@ -137,16 +137,23 @@ https://github.com/HakuyaLabs/Warudo-Mod-Tool.git#0.14.3.10
 
 :::
 
+
+:::tip
+
+如果您通过 Package Manager 安装了 Warudo SDK，请选中该包并点击 **Update**，即可升级到最新版本。
+
+:::
+
 ### 方法二 直接导入模板项目
 
-[Warudo SDK 0.14.3.10 Modding Project.zip](https://files.warudo.app/modsdk/Warudo%20SDK%200.14.3.10%20Modding%20Project.zip)
+[Warudo SDK 0.14.5.1 Modding Project.zip](https://files.warudo.app/modsdk/Warudo%20SDK%200.14.5.1%20Modding%20Project.zip)
 
-1. **下载** 以上项目压缩包并将内容 **解压** 到自定义位置，例如 `D:\Softwares\Unity\2021.3.45f2\Projects\WarudoModding` ；
-2. 打开 【Unity Hub】，在【Projects】中选择【Open】；
-3. 找到刚才解压出来的文件夹并且打开，点击【Open】；
-4. 此时，【Warudo SDK 0.14.3.10 Modding Project】就会出现在 Projects 列表中，并且分配正确的版本号；  
-（如果此时在版本号右侧出现了黄色感叹号，说明项目存在问题，建议重新检查第二步是否安装了**完全一致**的版本号。）
-6. Unity 此时可能会自动开始打开该项目，第一次打开可能会进行 Importing，会消耗一段时间，请耐心等待。
+1. **下载**上述项目压缩包，并将内容**解压**到自定义位置，例如 `D:\Softwares\Unity\2021.3.45f2\Projects\WarudoModding`。
+2. 打开 **Unity Hub**，在 **Projects** 页面中选择 **Open**。
+3. 选择刚刚解压的项目文件夹，然后点击 **Open**。
+4. **Warudo SDK 0.14.5.1 Modding Project** 将出现在 Projects 列表中，并显示对应的 Unity 版本。
+5. 如果版本号右侧出现黄色感叹号，请确认您安装的 Unity 版本与本文要求的版本**完全一致**。
+6. Unity 可能会自动打开该项目。首次打开时需要导入资源，可能耗时较长，请耐心等待。
 
 ![](/doc-img/sdk-installation-11.png)
 
