@@ -1,5 +1,6 @@
 ---
 sidebar_position: 30
+translate_from_version: 2026-08-11
 ---
 
 # Mod 开发限制

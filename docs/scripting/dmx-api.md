@@ -1,6 +1,6 @@
 ---
 sidebar_position: 15
-version: 2026-01-14
+version: 2026-08-11
 ---
 
 # DMX Lighting Control

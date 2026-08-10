@@ -1,6 +1,6 @@
 ---
 sidebar_position: 30
-version: 2026-01-14
+version: 2026-08-11
 ---
 
 # Mod Development Limitations

@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-translate_from_version: 2026-02-28
+translate_from_version: 2026-08-11
 ---
 
 # Unity & Warudo SDK 安装
