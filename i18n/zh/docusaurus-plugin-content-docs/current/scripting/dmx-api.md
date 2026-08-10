@@ -1,6 +1,5 @@
 ---
 sidebar_position: 15
-translate_from_version: 2026-01-14
 ---
 
 # DMX 灯光控制
@@ -107,3 +106,11 @@ Art-Net 接收器默认使用多播地址 `239.255.0.1:6454`。
 ![](/doc-img/art-net-remap-channel.png)
 
 重映射会在数据发送给 Mod 之前生效，因此 Mod 接收到的是重映射后的通道数据。
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'LiYin', github: 'cubesky'}
+  ],
+  translators: [
+  ],
+}} />

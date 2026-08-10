@@ -1,6 +1,5 @@
 ---
 sidebar_position: 30
-translate_from_version: 2026-01-14
 ---
 
 # Mod 开发限制
@@ -72,5 +71,7 @@ P/Invoke 已被全局禁用。
 <AuthorBar authors={{
   creators: [
     {name: 'LiYin', github: 'cubesky'}
-  ]
+  ],
+  translators: [
+  ],
 }} />

@@ -107,3 +107,11 @@ Disable **Send Channel Data Directly**, then edit the channel remapping table:
 ![](/doc-img/art-net-remap-channel.png)
 
 Remapping is applied before the data is sent to the mod, so the mod receives the remapped channel data.
+
+<AuthorBar authors={{
+  creators: [
+    {name: 'LiYin', github: 'cubesky'}
+  ],
+  translators: [
+  ],
+}} />
