@@ -1,5 +1,6 @@
 ---
 sidebar_position: 510
+translate_from_version: 2026-08-11
 ---
 
 # Autodesk MotionBuilder
@@ -32,9 +33,10 @@ FBXモデルに正規化されたボーンがあるかどうかを確認する�
 
 ![](/doc-img/en-motionbuilder-1.png)
 
-:::caution
+:::warning
 
 「Warudo Device」が表示されない場合は、プラグインの読み込みに失敗したことを意味します。[Microsoft Visual C++ Redistributable](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170) をダウンロードしてインストールし、MotionBuilderを再起動してください。
+
 :::
 
 **Devices → Warudo Device → Characters** を選択し、**Add** をクリックして新しい行を追加します。 デフォルト名の **MyCharacter** を実際のキャラクター名に変更し、[Online] テキストの横にある赤いボックスをクリックします。 ボックスがすぐに緑色に変わり、MotionBuilderがWarudoにモーションデータをストリーミングしていることを示します。

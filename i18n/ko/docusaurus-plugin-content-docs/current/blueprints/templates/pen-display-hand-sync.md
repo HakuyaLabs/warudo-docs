@@ -1,9 +1,10 @@
 ---
 sidebar_position: 3
-version: 2024-08-28
+translate_from_version: 2026-08-11
 ---
 
 # 펜 디스플레이 손 동기화
+
 ## 소개
 
 ![](/doc-img/pen-display-hand-sync-9.png)
@@ -39,7 +40,7 @@ version: 2024-08-28
     href="/scenes/Warudo_PenDisplay_SampleScene_v20240828.json"
     download="Warudo_PenDisplay_SampleScene_v20240828.json">
       🔗 Warudo_PenDisplay_SampleScene_v20240828.json
-    </a> 
+    </a>
 </li></ul>
 </li></ol>
 

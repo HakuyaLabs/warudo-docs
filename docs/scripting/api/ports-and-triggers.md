@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
-version: 2026-01-14
+version: 2026-08-11
 ---
 
 # Ports & Triggers
@@ -213,7 +213,9 @@ As mentioned in the [Attributes](#data-input-attributes) section, you can also u
 ### Asset References {#asset-references}
 
 :::warning
+
 Asset references are only available in assets, nodes, and non-plugin structured data.
+
 :::
 
 A data input can be used to reference another asset in the current scene. For example, the following code defines a data input that references a `CharacterAsset`:

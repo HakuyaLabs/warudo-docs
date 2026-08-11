@@ -1,5 +1,6 @@
 ---
 sidebar_position: 515
+translate_from_version: 2026-08-11
 ---
 
 # OptiTrack Motive
@@ -24,7 +25,7 @@ OptiTrack Motive를 Warudo에 연결하려면, OptiTrack Motive에서 **Streamin
 
 ![](/doc-img/en-optitrack-2.png)
 
-**OptiTrack Skeleton Receiver** 에셋에서, 이름이 OptiTrack Motive에서 사용된 이름과 일치하는지 확인하세요.
+그런 다음 [Onboarding Assistant](../tutorials/getting-started)(또는 **Character → Setup Motion Capture** 실행)를 사용하여 포즈 추적에 **OptiTrack Motive**를 선택하세요. 설정이 완료되면 씬에 **OptiTrack Skeleton Receiver** 에셋이 표시됩니다. **OptiTrack Skeleton Name** 필드가 OptiTrack Motive의 이름과 일치하는지 확인하세요:
 
 ![](/doc-img/en-optitrack-3.png)
 

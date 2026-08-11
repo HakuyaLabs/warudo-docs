@@ -1,5 +1,6 @@
 ---
 sidebar_position: 510
+translate_from_version: 2026-08-11
 ---
 
 # Autodesk MotionBuilder
@@ -32,8 +33,10 @@ Arrastra **Devices → Warudo Device** hacia la vista de escena.
 
 ![](/doc-img/en-motionbuilder-1.png)
 
-:::caution
+:::warning
+
 Si no puedes ver "Warudo Device", significa que el plugin falló al cargar. Por favor descarga e instala [Microsoft Visual C++ Redistributable](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170) y reinicia MotionBuilder.
+
 :::
 
 Selecciona **Devices → Warudo Device → Characters**, haz clic en **Add** para agregar una nueva fila. Cambia el nombre por defecto **MyCharacter** al nombre real del personaje, y haz clic en la caja roja junto al texto "Online". Debería volverse verde inmediatamente, indicando que MotionBuilder ahora está transmitiendo datos de movimiento a Warudo.
@@ -60,7 +63,7 @@ Por favor consulta [Resumen](overview#FAQ) y [Personalizar Seguimiento de Pose](
 
 Primero, asegúrate de haber cargado el mismo modelo en Warudo y Autodesk MotionBuilder.
 
-También requerimos que los modelos tengan huesos normalizados, es decir, todos los huesos en el modelo deben tener rotación cero (0, 0, 0) cuando el modelo esté en T-pose. Por favor consulta [esta página](../misc/normalizing-model-bones) para más detalles.
+También requerimos que los modelos tengan huesos normalizados, es decir, todos los huesos en el modelo deben tener rotación cero (0, 0, 0) cuando el modelo esté en T-pose. Por favor consulta [esta página](../modding/character-mod#normalize-bones) para más detalles.
 
 ### He confirmado que Autodesk MotionBuilder está transmitiendo datos a otra PC ejecutando Warudo, pero Warudo no ha recibido ningún dato.
 

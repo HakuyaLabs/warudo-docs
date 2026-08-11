@@ -1,6 +1,6 @@
 ---
 sidebar_position: 510
-version: 2025-11-04
+version: 2026-08-11
 ---
 
 # Autodesk MotionBuilder
@@ -33,8 +33,10 @@ Drag **Devices → Warudo Device** into the scene view.
 
 ![](/doc-img/en-motionbuilder-1.png)
 
-:::caution
+:::warning
+
 If you cannot see "Warudo Device", it means the plugin failed to load. Please download and install [Microsoft Visual C++ Redistributable](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170) and restart MotionBuilder.
+
 :::
 
 Select **Devices → Warudo Device → Characters**, click **Add** to add a new row. Change the default name **MyCharacter** to the actual character name, and click the red box next to the "Online" text. It should turn green immediately, indicating that MotionBuilder is now streaming motion data to Warudo.

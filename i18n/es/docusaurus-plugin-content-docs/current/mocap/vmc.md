@@ -1,5 +1,6 @@
 ---
 sidebar_position: 500
+translate_from_version: 2026-08-11
 ---
 
 # VMC
@@ -44,7 +45,7 @@ Por favor consulta [Resumen](overview#FAQ) y [Personalizar Seguimiento de Pose](
 
 Primero, asegúrate de haber cargado el mismo modelo en Warudo y en la aplicación externa.
 
-También requerimos que los modelos tengan huesos normalizados, es decir, todos los huesos en el modelo deben tener rotación cero (0, 0, 0) cuando el modelo esté en T-pose. Si tu modelo está en [formato VRM](https://vrm.dev/), entonces en la mayoría de los casos no debería haber problemas. Sin embargo, en casos muy raros, el modelador puede no haber marcado la opción Enforce T-Pose al exportar, y puede ser corregido re-exportando con esta opción marcada. Por favor consulta [esta página](../misc/normalizing-model-bones) para más detalles.
+También requerimos que los modelos tengan huesos normalizados, es decir, todos los huesos en el modelo deben tener rotación cero (0, 0, 0) cuando el modelo esté en T-pose. Si tu modelo está en [formato VRM](https://vrm.dev/), entonces en la mayoría de los casos no debería haber problemas. Sin embargo, en casos muy raros, el modelador puede no haber marcado la opción Enforce T-Pose al exportar, y puede ser corregido re-exportando con esta opción marcada. Por favor consulta [esta página](../modding/character-mod#normalize-bones) para más detalles.
 
 <AuthorBar authors={{
   creators: [

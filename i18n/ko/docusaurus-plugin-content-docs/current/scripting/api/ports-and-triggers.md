@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
-translate_from_version: 2026-01-14
+translate_from_version: 2026-08-11
 ---
 
 # 포트 & 트리거
@@ -284,7 +284,7 @@ BroadcastDataInput(nameof(MyNumber));
 
 하지만 이 경우에는 두 번째 방법을 사용하는 것이 **깅력하게 권장**되는데, 이유는 두 가지에요:
 
-1. 데이터 인풋의 변경 사항이 [관찰자](operations#watchers)에게 통지된다는 점.
+1. 데이터 인풋의 변경 사항이 [관찰자](watchers)에게 통지된다는 점.
 2. `broadcast` 파라미터를 `true`로 설정하면, 변경 사항이 에디터에 전송돼요. 그렇지 않으면 `BroadcastDataInput(string key)`를 사용해 수동으로 에디터에 변경 사항을 전송해야 해요.
 
 첫 번째 방법은 다음과 같은 경우에만 사용해야 해요:

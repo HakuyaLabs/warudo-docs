@@ -1,5 +1,6 @@
 ---
 sidebar_position: 80
+translate_from_version: 2026-08-11
 ---
 
 # 풍선 머리
@@ -53,11 +54,11 @@ Warudo가 노드를 연결하지 못하게 하고 있어요! 무슨 일이 일�
 
 일단 **Vector3** 옵션을 (2, 2, 2)로 설정하고, 위처럼 노드를 연결한 다음 볼을 부풀렸을 때 어떤 일이 일어나는지 확인해 봅시다.
 
-엥, 아무 일도 일어나지 않나요...? 그 이유는 Get Character Bone Scale 노드가 트리거되지 않았기 때문이에요! 지금은 그냥 수동으로 트리거해 봅시다. 볼을 다시 부풀리고, 이번에는 **Get Character Bone Scale → Enter**를 클릭하세요. 캐릭터의 머리가 커지는 것을 볼 수 있을 거예요!
+엥, 아무 일도 일어나지 않나요...? 그 이유는 Set Character Bone Scale 노드가 트리거되지 않았기 때문이에요! 지금은 그냥 수동으로 트리거해 봅시다. 볼을 다시 부풀리고, 이번에는 **Set Character Bone Scale → Enter**를 클릭하세요. 캐릭터의 머리가 커지는 것을 볼 수 있을 거예요!
 
 ![](/doc-img/en-blueprint-balloon-5.png)
 
-하지만 문제가 하나 있어요: 볼을 부풀리는 것을 멈추고 다시 **Get Character Bone Scale → Enter**를 클릭하면, 캐릭터의 머리가 이렇게 되어버릴 거예요:
+하지만 문제가 하나 있어요: 볼을 부풀리는 것을 멈추고 다시 **Set Character Bone Scale → Enter**를 클릭하면, 캐릭터의 머리가 이렇게 되어버릴 거예요:
 
 ![](/doc-img/en-blueprint-balloon-6.png)
 
@@ -81,14 +82,14 @@ Warudo가 노드를 연결하지 못하게 하고 있어요! 무슨 일이 일�
 
 ## 업데이트 {#on-update}
 
-Get Character Bone Scale 노드를 수동으로 트리거하는 게 저만큼이나 귀찮았기를 바랐어요. 실제로 매번 캐릭터의 머리를 부풀릴 때마다 blueprint를 클릭할 수는 없겠죠. 자동으로 노드를 트리거할 방법이 있다면 좋을 텐데... 잠깐만요, 정말 방법이 있네요?
+Set Character Bone Scale 노드를 수동으로 트리거하는 게 저만큼이나 귀찮았기를 바랐어요. 실제로 매번 캐릭터의 머리를 부풀릴 때마다 blueprint를 클릭할 수는 없겠죠. 자동으로 노드를 트리거할 방법이 있다면 좋을 텐데... 잠깐만요, 정말 방법이 있네요?
 
 ![](/doc-img/en-blueprint-balloon-9.png)
 
 **On Update** 노드는 Warudo가 실행 중일 때 매 프레임마다 트리거되는 이벤트 노드예요. 예를 들어, Warudo가 60 FPS로 실행 중이라면, On Update 노드는 초당 60번 트리거됩니다. 덕분에 초당 60번 클릭하지 않아도 되니 다행이죠. 휴.
 
 :::tip
-Get Character Bone Scale 노드 이후에 노드를 추가하여 볼을 부풀릴 때 더 많은 효과를 트리거할 수 있다는 점을 기억하세요! **Set Character BlendShape** 노드를 추가해 볼을 부풀릴 때 캐릭터의 블렌드셰이프를 활성화해 보세요. 힌트: Set Character BlendShape → Target Value는 0과 1 사이의 소수이므로, Get Character BlendShape → Value를 직접 연결할 수 있어요.
+Set Character Bone Scale 노드 이후에 노드를 추가하여 볼을 부풀릴 때 더 많은 효과를 트리거할 수 있다는 점을 기억하세요! **Set Character BlendShape** 노드를 추가해 볼을 부풀릴 때 캐릭터의 블렌드셰이프를 활성화해 보세요. 힌트: Set Character BlendShape → Target Value는 0과 1 사이의 소수이므로, Get Character BlendShape → Value를 직접 연결할 수 있어요.
 :::
 
 ## 뼈대 스케일 초기화 {#resetting-bone-scale}

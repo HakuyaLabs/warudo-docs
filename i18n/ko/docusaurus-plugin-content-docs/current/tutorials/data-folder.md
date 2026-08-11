@@ -1,6 +1,6 @@
 ---
 sidebar_position: 40
-version: 2026-01-19
+translate_from_version: 2026-08-11
 ---
 
 # 데이터 폴더
@@ -135,7 +135,8 @@ Warudo의 데이터 폴더는 `StreamingAssets`라는 이름의 폴더로, Warud
 **지원 형식:** 이미지 형식
 
 이미지 파일은 다음 시나리오에서 사용할 수 있어요:
-- "**Spawn Sticker From Local Image**" 노드 – "**Image Source**" 포트 – "**Get Random Local Image**" 노드 – "**Images**" 포트
+- "**Spawn Sticker From Local Image**" 노드 – "**Image Source**" 포트
+- "**Get Random Local Image**" 노드 – "**Images**" 포트
 - "[**Screen**](/docs/assets/screen)" 에셋 – "**Image Source**" 옵션 ("**Content Type**"이 "**Image**"여야 해요)
 - "**Discover**" 패널 – "**Published Items**" 탭 – "**Create Item**" – "**Preview Image**" 옵션
 
@@ -221,7 +222,7 @@ Warudo Animation Data 파일은 "**Motion Recorder**" 에셋으로 생성할 수
 - "**Get Random Prop**" 노드 – "**Props**" 포트
 - "**Throw Prop**" 노드 – "**Prop Source**" 포트
 
-"[**Prop**](/docs/assets/prop)" 에셋에서 "**Open Props Folder**" 버튼을 사용하면 이 폴더를 직접 열 수도 있어요.
+**Menu → Open Data Folder**를 선택한 다음 `Props` 폴더를 열면 이 폴더를 찾을 수 있어요.
 
 ### Scenes
 
@@ -267,7 +268,9 @@ Warudo Animation Data 파일은 "**Motion Recorder**" 에셋으로 생성할 수
 ## 추가 하위 폴더
 
 :::tip
+
 Steam 워크샵의 일부 플러그인은 `StreamingAssets` 아래에 추가 하위 폴더를 생성할 수도 있어요.
+
 :::
 
 Warudo와 관련된 파일을 더 잘 관리하기 위해 다음 하위 폴더를 만드는 것도 권장해요:

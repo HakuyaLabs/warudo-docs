@@ -1,5 +1,6 @@
 ---
 sidebar_position: 11
+translate_from_version: 2026-08-11
 ---
 
 # Mod 互操作性
@@ -30,7 +31,7 @@ public class AModAsset: Asset {
 }
 ```
 
-:::tips
+:::tip
 
 这相当于调用
 ```csharp
@@ -66,7 +67,7 @@ public class BModAsset: Asset {
 
 在上述代码中，`ConnectSlot` 的第一个参数 `"AMod.Asset"` 是信号发送方的类型 ID，可以是 `Plugin`/`Asset`/`Node` 的任意一种类型 ID。`MyEventOnA` 和 `MyEventOnB` 只要内部结构相同即可互通。
 
-:::tips
+:::tip
 
 这相当于调用
 ```csharp
@@ -183,7 +184,7 @@ else
 }
 ```
 
-:::tips
+:::tip
 
 与信号类似，命令的请求与响应类型只要内部结构相同即可互通。
 

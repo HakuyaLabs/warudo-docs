@@ -1,5 +1,6 @@
 ---
 sidebar_position: 10
+translate_from_version: 2026-08-11
 ---
 
 # 캐릭터
@@ -117,7 +118,7 @@ Warudo에서는 세 가지 유형의 애니메이션이 있어요:
 마지막으로, **Additional Bone Offsets**을 사용하여 캐릭터의 자세를 약간 조정할 수 있어요. 예를 들어, 캐릭터의 머리를 한쪽으로 몇 도 기울이고 싶을 때 사용할 수 있어요.
 
 :::info
-기본적으로, idle animation, overlay animations, override hand poses, 그리고 [body IK](./#body-ik)의 우선순위는 모두 모션 캡처보다 **낮아요.**
+기본적으로, idle animation, overlay animations, override hand poses, 그리고 [body IK](#body-ik)의 우선순위는 모두 모션 캡처보다 **낮아요.**
 
 예를 들어, 오른손에 대한 override hand pose를 설정했더라도, MediaPipe와 같은 추적 시스템으로 오른손이 추적되고 있다면, 모델은 override hand pose 대신 오른손의 실제 포즈를 따르게 돼요. override hand pose가 모션 캡처보다 우선순위를 갖도록 하려면, hand pose 설정에서 **High Priority**(높은 우선순위)를 활성화할 수 있어요.
 :::
@@ -176,8 +177,10 @@ After
 
 자체 관통(캐릭터의 손이 몸을 관통하는 것)을 방지하려면 **Internal Collisions**를 활성화하세요. 최상의 결과를 위해 **Edit Ragdoll**을 클릭하여 콜라이더를 수동으로 조정해야 해요.
 
-:::caution
+:::warning
+
 래그돌을 활성화하면 캐릭터가 더 현실적으로 보일 수 있지만, 물리 엔진의 결함으로 인해 캐릭터가 예기치 않게 행동할 수도 있어요. 필요할 때만 래그돌을 활성화하는 것을 추천해요.
+
 :::
 
 일부 노드는 asset 설정과 상관없이 임시로 래그돌을 활성화한다는 점을 유의하세요. 예를 들어, **Throw Prop At Character** 노드는 소품이 캐릭터를 맞힐 때 캐릭터에 임시로 래그돌을 활성화해요.

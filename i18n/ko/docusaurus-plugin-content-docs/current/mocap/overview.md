@@ -1,5 +1,6 @@
 ---
 sidebar_position: 10
+translate_from_version: 2025-11-04
 ---
 
 # 개요

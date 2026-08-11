@@ -1,12 +1,13 @@
 ---
 sidebar_position: 110
+translate_from_version: 2026-08-11
 ---
 
 # 데이터 저장 및 불러오기 {#io}
 
 ## 데이터 인풋 사용
 
-엔티티의 [데이터 인풋](ports-and-triggers#data-inputs)은 자동으로 직렬화됩니다. 즉, 커스텀 에셋이나 노드에 데이터를 저장해야 할 경우, 가장 좋은 방법은 단순히 데이터 인풋을 정의하는 것입니다:
+엔티티의 [데이터 인풋](ports-and-triggers#data-input-ports)은 자동으로 직렬화됩니다. 즉, 커스텀 에셋이나 노드에 데이터를 저장해야 할 경우, 가장 좋은 방법은 단순히 데이터 인풋을 정의하는 것입니다:
 
 ```csharp
 [DataInput]

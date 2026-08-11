@@ -1,5 +1,6 @@
 ---
 sidebar_position: 80
+translate_from_version: 2026-08-11
 ---
 
 # Cabeza de Globo
@@ -53,11 +54,11 @@ Este nodo toma un Vector3 (es decir, tres números decimales X, Y, y Z) y un flo
 
 Por ahora, establece la opción **Vector3** a (2, 2, 2) y conecta los nodos juntos como arriba, y veamos qué pasa cuando inflamos nuestras mejillas.
 
-¿Eh, no está pasando nada...? ¡Eso es porque el nodo Get Character Bone Scale nunca se activa! Por ahora, vamos a activarlo manualmente. Infla tus mejillas nuevamente, pero esta vez también haz clic en **Get Character Bone Scale → Enter**. ¡Deberías ver que la cabeza de tu personaje se hace más grande!
+¿Eh, no está pasando nada...? ¡Eso es porque el nodo Set Character Bone Scale nunca se activa! Por ahora, vamos a activarlo manualmente. Infla tus mejillas nuevamente, pero esta vez también haz clic en **Set Character Bone Scale → Enter**. ¡Deberías ver que la cabeza de tu personaje se hace más grande!
 
 ![](/doc-img/en-blueprint-balloon-5.png)
 
-Pero aquí hay un problema: si dejas de inflar tus mejillas y haces clic en **Get Character Bone Scale → Enter** nuevamente, la cabeza de tu personaje se verá así:
+Pero aquí hay un problema: si dejas de inflar tus mejillas y haces clic en **Set Character Bone Scale → Enter** nuevamente, la cabeza de tu personaje se verá así:
 
 ![](/doc-img/en-blueprint-balloon-6.png)
 
@@ -81,14 +82,14 @@ Para ver por qué esto funciona, repasemos los cálculos nuevamente. Cuando infl
 
 ## En Actualización {#on-update}
 
-Espero que hayas odiado activar manualmente el nodo Get Character Bone Scale tanto como yo. De hecho, no podemos estar haciendo clic en nuestro blueprint cada vez que queremos inflar la cabeza de nuestro personaje. Si tan solo hubiera una forma de activar automáticamente el nodo... ¿Espera, la hay?
+Espero que hayas odiado activar manualmente el nodo Set Character Bone Scale tanto como yo. De hecho, no podemos estar haciendo clic en nuestro blueprint cada vez que queremos inflar la cabeza de nuestro personaje. Si tan solo hubiera una forma de activar automáticamente el nodo... ¿Espera, la hay?
 
 ![](/doc-img/en-blueprint-balloon-9.png)
 
 El nodo **On Update** es un nodo de evento que se activa cada frame cuando Warudo está funcionando. Por ejemplo, si Warudo funciona a 60 FPS, entonces el nodo On Update se activará 60 veces por segundo. Este nodo nos salvó de hacer clic 60 veces por segundo, uf.
 
 :::tip
-¡Recuerda que puedes agregar nodos después del nodo Get Character Bone Scale para activar más efectos usando tus mejillas! Intenta agregar un nodo **Set Character BlendShape** para activar un blendshape en tu personaje cuando infles tus mejillas. Pista: Set Character BlendShape → Target Value es un número decimal entre 0 y 1, así que puedes conectar Get Character BlendShape → Value directamente a él.
+¡Recuerda que puedes agregar nodos después del nodo Set Character Bone Scale para activar más efectos usando tus mejillas! Intenta agregar un nodo **Set Character BlendShape** para activar un blendshape en tu personaje cuando infles tus mejillas. Pista: Set Character BlendShape → Target Value es un número decimal entre 0 y 1, así que puedes conectar Get Character BlendShape → Value directamente a él.
 :::
 
 ## Reiniciando Escala de Hueso {#resetting-bone-scale}
