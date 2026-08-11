@@ -1,12 +1,14 @@
 ---
 sidebar_position: 512
-version: 2025-11-04
+translate_from_version: 2026-08-11
 ---
 
 # Vicon Shogun
 
 :::info
+
 이 기능은 [Warudo Pro](../pro)에서만 사용할 수 있어요.
+
 :::
 
 [Vicon Shogun](https://www.vicon.com/software/shogun/)을 통한 바디 트래킹. [Vicon](https://www.vicon.com) 광학 트래킹 시스템에 대한 접근이 필요해요.
@@ -23,10 +25,12 @@ Warudo에서 **Menu → Settings → Vicon**으로 이동하세요. **Server Add
 
 ### 캐릭터 추적
 
-Vicon Shogun을 Warudo에 연결하려면, [Onboarding Assistant](../tutorials/readme-1) (또는 **Character → Setup Motion Capture** 실행)를 사용하고 포즈 추적으로 **Vicon Shogun**을 선택하세요. 설정이 완료되면 씬에 **Vicon Subject Receiver** 에셋이 표시될 거예요. **Vicon Subject Name** 필드가 Shogun의 이름과 일치하는지 확인하세요.
+Vicon Shogun을 Warudo에 연결하려면, [Onboarding Assistant](../tutorials/getting-started) (또는 **Character → Setup Motion Capture** 실행)를 사용하고 포즈 추적으로 **Vicon Shogun**을 선택하세요. 설정이 완료되면 씬에 **Vicon Subject Receiver** 에셋이 표시될 거예요. **Vicon Subject Name** 필드가 Shogun의 이름과 일치하는지 확인하세요.
 
 :::tip
+
 Warudo 캐릭터의 본 이름이 Shogun 스켈레톤에서 사용하는 이름과 다른 경우, **Vicon Receiver** 에셋의 **Override Bone Names**를 사용하여 특정 휴머노이드 본을 Shogun에서 제공하는 이름에 매핑할 수 있어요.
+
 :::
 
 ![](/doc-img/en-vicon-2.jpg)
@@ -36,17 +40,21 @@ Warudo 캐릭터의 본 이름이 Shogun 스켈레톤에서 사용하는 이름�
 Warudo에서 **Vicon Prop Receiver** 에셋을 생성하세요. **Vicon Prop Name**을 Shogun Live의 리지드 바디 라벨로 설정하고, **Target Asset**에서 Warudo 소품 또는 카메라를 선택하세요.
 
 :::info
+
 Warudo 소품 파일의 계층 구조는 Shogun의 것과 일치해야 하며, 루트 트랜스폼의 이름은 `root`여야 해요. 그렇지 않으면 Warudo가 루트 트랜스폼을 생성하지만, 하위 트랜스폼이 완전히 미러링되지 않을 수 있어요.
+
 :::
 
 :::tip
+
 blueprint에서 추적 데이터에 접근하려면, **Get Vicon Subject Receiver Data** 또는 **Get Vicon Prop Receiver Data** 노드를 사용할 수 있어요.
+
 :::
 
 ## 고급 옵션
 
 * **Root Rotation Offset**: 캐릭터나 소품이 Vicon 좌표 프레임과 다른 전방 방향을 향하고 있는 경우 정적 오프셋을 적용해요. 일반적으로 이 설정을 변경할 필요는 없어요.
-* **Use Pre Fetch**: 지연 시간에 민감한 설정을 위해 Vicon Shogun에서 버퍼링된 프레임을 요청해요.
+* **Use Pre Fetch**: 지연 시간에 민감한 설정을 부드럽게 처리하기 위해 Vicon Shogun에서 버퍼링된 프레임을 요청해요.
 
 ## 자주 묻는 질문
 

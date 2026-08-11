@@ -1,6 +1,6 @@
 ---
 sidebar_position: 10
-version: 2026-01-09
+translate_from_version: 2026-01-09
 ---
 
 # 트랜지션 이징

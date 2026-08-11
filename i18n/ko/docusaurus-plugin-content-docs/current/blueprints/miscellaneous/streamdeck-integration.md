@@ -1,6 +1,6 @@
 ---
 sidebar_position: 30
-version: 2026-01-23
+translate_from_version: 2026-01-23
 ---
 
 # Stream Deck 연동
@@ -42,9 +42,11 @@ Warudo는 Stream Deck과 관련된 세 가지 노드를 제공해요:
 5. 이를 선택하세요. 이제 Stream Deck에서 해당 액션을 누르면 Warudo의 해당 노드가 트리거될 거예요!
 ![](/doc-img/streamdeck-integration-6.png)
 
-:::caution
+:::warning
+
 드롭다운에 옵션이 표시되지 않고, 노드 유형과 액션 유형이 일치하는 것을 확인했다면, Stream Deck과 Warudo 간의 연결이 올바르게 설정되지 않았을 수 있어요.
 두 애플리케이션을 모두 재시작하거나, 컴퓨터를 재부팅하거나, 최신 버전으로 업데이트해 보세요. 이 방법으로 문제가 해결될 수 있어요.
+
 :::
 
 세 가지 노드/액션 유형의 차이점은 아래에서 설명할게요.
