@@ -1,5 +1,6 @@
 ---
 sidebar_position: 10
+translate_from_version: 2025-11-04
 ---
 
 # 概要
@@ -21,13 +22,14 @@ sidebar_position: 10
 * [Noitom Axis](./noitom)
 * [StretchSense Glove](./stretchsense)
 * [VMCプロトコル](./vmc)をサポートする外部アプリケーション（例: [VSeeFace](https://www.vseeface.icu/)、 [VirtualMotionCapture](https://vmc.info/)）
-  * VRトラッカーは、[VirtualMotionCapture有料版（支援版）](https://www.patreon.com/sh_akira)を使用してもサポートされます。
+  * VRトラッカーは、[VirtualMotionCaptureの有料版（支援者向け）](https://www.patreon.com/sh_akira)で利用できます。
 
 [Warudo Pro](../pro.md)では、以下のモーションキャプチャシステムもサポートしています。
 
-* [Autodesk MotionBuilder](./motionbuilder)互換性のある光学トラッキングシステム（例:  [VICON](https://www.vicon.com/)、[OptiTrack](https://optitrack.com/)）
+* [Vicon Shogun](./vicon)
 * [OptiTrack Motive](./optitrack)
 * [Chingmu Avatar](./chingmu)
+* [Autodesk MotionBuilder](./motionbuilder)と互換性のあるトラッキングシステム
 
 ## どのようなモーションキャプチャシステムを使うべきですか？ {#what-motion-capture-systems-should-i-use}
 
@@ -42,7 +44,7 @@ sidebar_position: 10
 :::
 
 * MediaPipeのハンドトラッキングの精度が十分でないと思われる場合は、ハンドトラッキングに[Leap Motion Controller](./leap-motion)の使用を検討してください。[ネックマウント](https://www.etsy.com/market/leap_motion_mounting)を使用して首に装着し、手をトラッキングすることができます。
-* フルトラッキングソリューションをお探しの場合は、[Sony Mocopi](./mocopi)、または[VRトラッカー](./vmc)の使用を検討してください。予算に余裕がある場合は、[Virdyn VDSuit](./virdyn)、 [Noitom Perception Neuron](./noitom)、 [Rokoko Smartsuit Pro](./rokoko)、 [Xsens MVN Link](./xsens-mvn)などのモーションキャプチャスーツの使用も検討してください。[StretchSense gloves](./stretchsense)を使用すると、これらのモーションキャプチャスーツに指のトラッキングを追加できます。 
+* フルトラッキングソリューションをお探しの場合は、[Sony Mocopi](./mocopi)、または[VRトラッカー](./vmc.md)の使用を検討してください。予算に余裕がある場合は、[Virdyn VDSuit](./virdyn)、 [Noitom Perception Neuron](./noitom)、 [Rokoko Smartsuit Pro](./rokoko)、 [Xsens MVN Link](./xsens-mvn)などのモーションキャプチャスーツの使用も検討してください。[StretchSense gloves](./stretchsense)を使用すると、これらのモーションキャプチャスーツに指のトラッキングを追加できます。
 * より専門的なソリューションをお探しの場合は、[VICON](https://www.vicon.com/)、[OptiTrack](https://optitrack.com/)、[Chingmu](https://www.chingmu.com/)などの光学式モーションキャプチャシステムの使用を検討してください。
 
 ## 設定 {#setup}
@@ -82,7 +84,7 @@ Windowsはパブリックネットワークからの着信接続をブロック�
 
 ### トラッキングが敏感すぎる / 不安定すぎる
 
-トラッキングのブループリント (例: フェイストラッキング - iFacialMocap ) に移動し、**スムーズ回転リスト** / **スムーズ位置リスト** / **スムーズ変換** / **スムーズBlendShapeリスト** ノードを見つけてください。 **[スムーズ時間]** の値を増やすとトラッキングがスムーズになり、値を減らすとトラッキングの応答性が向上します。
+トラッキング用ブループリント（例: フェイストラッキング - iFacialMocap）を開き、**スムーズ回転リスト** / **スムーズ位置リスト** / **スムーズ変換** / **スムーズBlendShapeリスト** ノードを見つけてください。 **[スムーズ時間]** の値を増やすとトラッキングがスムーズになり、値を減らすとトラッキングの応答性が向上します。
 
 <AuthorBar authors={{
   creators: [
@@ -90,5 +92,6 @@ Windowsはパブリックネットワークからの着信接続をブロック�
   ],
   translators: [
     {name: '星影月夜', github: 'unsolublesugar'},
+    {name: 'そらみかん', github: 'soramikan'},
   ],
 }} />
