@@ -25,9 +25,10 @@ sidebar_position: 10
 
 [Warudo Pro](../pro.md)는 다음 모션 캡처 시스템도 지원해요:
 
-* [Autodesk MotionBuilder](./motionbuilder)와 호환되는 모든 광학 추적 시스템, e.g., [Vicon](https://www.vicon.com/), [OptiTrack](https://optitrack.com/)
+* [Vicon Shogun](./vicon)
 * [OptiTrack Motive](./optitrack)
 * [Chingmu Avatar](./chingmu)
+* [Autodesk MotionBuilder](./motionbuilder)와 호환되는 모든 추적 시스템
 
 ## 어떤 모션 캡처 시스템을 사용해야 하나요?
 
@@ -89,5 +90,6 @@ Warudo에서 모션 캡처를 설정하는 두 가지 방법이 있어요. 첫 �
   ],
   translators: [
     {name: 'Willycho', github: 'Willycho'},
+    {name: 'Onev', github: 'OneVth'},
   ],
 }} />
