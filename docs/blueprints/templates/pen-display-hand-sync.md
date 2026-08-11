@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3
-version: 2024-08-28
+version: 2026-08-11
 ---
 
 # Pen Display Hand Sync

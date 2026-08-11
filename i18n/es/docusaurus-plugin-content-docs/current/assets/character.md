@@ -1,5 +1,6 @@
 ---
 sidebar_position: 10
+translate_from_version: 2026-08-11
 ---
 
 # Personaje
@@ -117,7 +118,7 @@ Además de las animaciones del cuerpo, también puedes configurar **Breathing An
 Finalmente, puedes usar **Additional Bone Offsets** para hacer pequeños ajustes a la postura del personaje; por ejemplo, si quieres hacer que la cabeza del personaje se incline unos grados hacia un lado.
 
 :::info
-Por defecto, la prioridad de la animación de reposo, animaciones superpuestas, poses de mano sobrescritas, y [body IK](./#body-ik) son todas **menores** que la captura de movimiento.
+Por defecto, la prioridad de la animación de reposo, animaciones superpuestas, poses de mano sobrescritas, y [body IK](#body-ik) son todas **menores** que la captura de movimiento.
 
 Por ejemplo, incluso si has establecido una pose de mano sobrescrita para tu mano derecha, si tu mano derecha está siendo rastreada, digamos por MediaPipe, el modelo sigue la pose de tu mano derecha en lugar de la pose de mano sobrescrita. Para hacer que la pose de mano sobrescrita tenga prioridad sobre la captura de movimiento, puedes habilitar **High Priority** en la configuración de la pose de mano.
 :::
@@ -176,8 +177,10 @@ Ragdoll permite que tu personaje sea golpeado por objetos físicos, y evita que 
 
 Para evitar auto-penetración, como las manos del personaje penetrando a través del cuerpo, puedes habilitar **Internal Collisions**. Para mejores resultados, necesitarás ajustar los coliders manualmente haciendo clic en **Edit Ragdoll**.
 
-:::caution
+:::warning
+
 Aunque habilitar ragdoll puede hacer que el personaje se vea más realista, también puede causar que el personaje se comporte de maneras inesperadas debido a fallas en el motor de física. Recomendamos solo habilitar ragdoll cuando estés seguro de que es necesario.
+
 :::
 
 Ten en cuenta que algunos nodos habilitan temporalmente ragdoll independientemente de la configuración del asset. Por ejemplo, el nodo **Throw Prop At Character** habilitará temporalmente ragdoll en el personaje cuando el prop golpee al personaje.

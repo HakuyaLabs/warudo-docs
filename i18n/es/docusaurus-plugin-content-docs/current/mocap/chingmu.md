@@ -1,5 +1,6 @@
 ---
 sidebar_position: 520
+translate_from_version: 2026-08-11
 ---
 
 # Chingmu Avatar
@@ -46,7 +47,7 @@ Por favor consulta [Resumen](overview#FAQ) y [Personalizar Seguimiento de Pose](
 
 Primero, asegúrate de haber cargado el mismo modelo en Warudo y Chingmu Avatar.
 
-También requerimos que los modelos tengan huesos normalizados, es decir, todos los huesos en el modelo deben tener rotación cero (0, 0, 0) cuando el modelo esté en T-pose. Por favor consulta [esta página](../misc/normalizing-model-bones) para más detalles.
+También requerimos que los modelos tengan huesos normalizados, es decir, todos los huesos en el modelo deben tener rotación cero (0, 0, 0) cuando el modelo esté en T-pose. Por favor consulta [esta página](../modding/character-mod#normalize-bones) para más detalles.
 
 ### Mi personaje no se está moviendo.
 

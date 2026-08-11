@@ -1,6 +1,6 @@
 ---
 sidebar_position: 10
-version: 2024-07-30
+version: 2026-08-11
 ---
 
 # Character
@@ -177,8 +177,10 @@ Ragdoll allows your character to be hit by physics objects, and prevent the char
 
 To prevent self-penetration, such as the character's hands penetrating through the body, you can enable **Internal Collisions**. For best results, you will need to adjust the colliders manually by clicking **Edit Ragdoll**.
 
-:::caution
+:::warning
+
 Although enabling ragdoll can make the character look more realistic, it can also cause the character to behave in unexpected ways due to glitches in the physics engine. We recommend to only enable ragdoll when you are sure it is necessary.
+
 :::
 
 Note that some nodes temporarily enable ragdoll regardless of the asset setting. For example, the **Throw Prop At Character** node will temporarily enable ragdoll on the character when the prop hits the character.

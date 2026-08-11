@@ -1,12 +1,13 @@
 ---
 sidebar_position: 110
+translate_from_version: 2026-08-11
 ---
 
 # Guardando y Cargando Datos {#io}
 
 ## Usando Data Inputs
 
-Los [Data inputs](ports-and-triggers#data-inputs) en entities son serializados automáticamente. Eso significa que si necesitas almacenar algún dato en tu asset o nodo personalizado, la mejor forma es simplemente definir un data input:
+Los [Data inputs](ports-and-triggers#data-input-ports) en entities son serializados automáticamente. Eso significa que si necesitas almacenar algún dato en tu asset o nodo personalizado, la mejor forma es simplemente definir un data input:
 
 ```csharp
 [DataInput]

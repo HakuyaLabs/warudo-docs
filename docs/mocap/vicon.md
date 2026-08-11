@@ -1,6 +1,6 @@
 ---
 sidebar_position: 512
-version: 2025-11-04
+version: 2026-08-11
 ---
 
 # Vicon Shogun

@@ -1,5 +1,6 @@
 ---
 sidebar_position: 50
+translate_from_version: 2026-08-11
 ---
 
 # Baila Baila Baila
@@ -14,7 +15,7 @@ sidebar_position: 50
 Antes de empezar, necesitas usar el asistente de configuración inicial para conectar Warudo a tu cuenta de Twitch, YouTube o Bilibili. Si no lo has hecho, por favor consulta el tutorial [Comenzando](../../tutorials/getting-started.md#interaction-setup). Asumiremos que haces streaming en Twitch en este tutorial, pero los pasos son similares para otras plataformas.
 
 :::tip
-También puedes usar integraciones de terceros como [Streamer.bot](Streamer.bot) que pueden enviar un mensaje WebSocket a Warudo cuando recibes una donación u otros eventos de stream. En ese caso, no necesitas usar el asistente de configuración inicial.
+También puedes usar integraciones de terceros como [Streamer.bot](https://streamer.bot) que pueden enviar un mensaje WebSocket a Warudo cuando recibes una donación u otros eventos de stream. En ese caso, no necesitas usar el asistente de configuración inicial.
 :::
 
 Empecemos con un ejemplo mínimo: cuando recibo un redeem de Twitch, quiero que mi personaje baile. Necesitamos solo dos nodos:

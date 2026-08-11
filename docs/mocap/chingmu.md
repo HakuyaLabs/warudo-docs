@@ -1,6 +1,6 @@
 ---
 sidebar_position: 520
-version: 2024-06-14
+version: 2026-08-11
 ---
 
 # Chingmu Avatar

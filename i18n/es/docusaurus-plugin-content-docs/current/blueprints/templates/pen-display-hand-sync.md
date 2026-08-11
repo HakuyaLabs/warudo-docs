@@ -1,8 +1,10 @@
 ---
 sidebar_position: 3
+translate_from_version: 2026-08-11
 ---
 
 # Sincronización de Mano con Tableta de Dibujo
+
 ## Introducción
 
 ![](/doc-img/pen-display-hand-sync-9.png)

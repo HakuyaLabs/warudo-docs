@@ -1,5 +1,6 @@
 ---
 sidebar_position: 500
+translate_from_version: 2026-08-11
 ---
 
 # VMC
@@ -22,8 +23,10 @@ sidebar_position: 500
 
 ![](/doc-img/zh-vmc-1.webp)
 
-:::caution
-此功能要求模型所有关节的初始旋转皆为 0，否则发送到其他软件的数据可能无法兼容。如果你的模型是 [VRM 格式](https://vrm.dev/)，那么绝大多数情况下是没有问题的——极少数情况是模型师导出时没有勾选 Enforce T-Pose 选项，重新导出即可。
+:::warning
+
+此功能要求模型所有关节的初始旋转皆为 0，否则发送到其他软件的数据可能无法兼容。如果你的模型是 [VRM 格式](https://vrm.dev/)，那么绝大多数情况下是没有问题的——极少数情况是模型师导出时没有勾选 Enforce T-Pose 选项，重新导出即可。详情请参阅[此页面](../modding/character-mod#normalize-bones)。
+
 :::
 
 ## 属性

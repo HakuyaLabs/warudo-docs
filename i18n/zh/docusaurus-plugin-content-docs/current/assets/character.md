@@ -1,5 +1,6 @@
 ---
 sidebar_position: 10
+translate_from_version: 2026-08-11
 ---
 
 # 角色
@@ -125,7 +126,7 @@ In addition to body animations, you can also set up **Breathing Animation** and 
 Finally, you can use **Additional Bone Offsets** to make small adjustments to the character's posture; for example, if you want to make the character's head tilt a few degrees to one side.
 
 :::info
-By default, the priority of the idle animation, overlay animations, override hand poses, and [body IK](./#body-ik) are all **lower** than motion capture.
+By default, the priority of the idle animation, overlay animations, override hand poses, and [body IK](#body-ik) are all **lower** than motion capture.
 
 For example, even if you have set an override hand pose for your right hand, if your right hand is being tracked, say by MediaPipe, the model follows your right hand's pose instead of the override hand pose. To make the override hand pose take priority over motion capture, you can enable **High Priority** in the hand pose settings.
 :::
@@ -184,8 +185,10 @@ Ragdoll allows your character to be hit by physics objects, and prevent the char
 
 To prevent self-penetration, such as the character's hands penetrating through the body, you can enable **Internal Collisions**. For best results, you will need to adjust the colliders manually by clicking **Edit Ragdoll**.
 
-:::caution
+:::warning
+
 Although enabling ragdoll can make the character look more realistic, it can also cause the character to behave in unexpected ways due to glitches in the physics engine. We recommend to only enable ragdoll when you are sure it is necessary.
+
 :::
 
 Note that some nodes temporarily enable ragdoll regardless of the asset setting. For example, the **Throw Prop At Character** node will temporarily enable ragdoll on the character when the prop hits the character.
