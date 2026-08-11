@@ -47,7 +47,7 @@ Please refer to [Overview](overview#FAQ) and [Customizing Pose Tracking](body-tr
 
 First, make sure you have loaded the same model in Warudo and Chingmu Avatar.
 
-We also require the models to have normalized bones,  i.e., all bones on the model should have zero rotation (0, 0, 0) when the model is in T-pose. Please refer to [this page](../misc/normalizing-model-bones) for more details.
+We also require the models to have normalized bones,  i.e., all bones on the model should have zero rotation (0, 0, 0) when the model is in T-pose. Please refer to [this page](../modding/character-mod#normalize-bones) for more details.
 
 ### My character is not moving.
 

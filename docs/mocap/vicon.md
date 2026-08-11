@@ -23,7 +23,7 @@ Set **Enabled** to Yes. You should see a status message that says "Connected to 
 
 ### Character Tracking
 
-To connect Vicon Shogun to Warudo, use the [Onboarding Assistant](../tutorials/readme-1) (or run **Character → Setup Motion Capture**) and select **Vicon Shogun** for pose tracking. After the setup is complete, you should be able to see a **Vicon Subject Receiver** asset in your scene. Make sure the **Vicon Subject Name** field matches the one in Shogun.
+To connect Vicon Shogun to Warudo, use the [Onboarding Assistant](../tutorials/getting-started) (or run **Character → Setup Motion Capture**) and select **Vicon Shogun** for pose tracking. After the setup is complete, you should be able to see a **Vicon Subject Receiver** asset in your scene. Make sure the **Vicon Subject Name** field matches the one in Shogun.
 
 :::tip
 If your Warudo character has different bone names than the ones used in the Shogun skeleton, use **Override Bone Names** on the **Vicon Receiver** asset to map specific humanoid bones to the names exposed by Shogun.

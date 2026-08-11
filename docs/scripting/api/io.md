@@ -7,7 +7,7 @@ version: 2024-06-16
 
 ## Using Data Inputs
 
-[Data inputs](ports-and-triggers#data-inputs) in entities are automatically serialized. That means if you need to store any data in your custom asset or node, the best way is to simply define a data input:
+[Data inputs](ports-and-triggers#data-input-ports) in entities are automatically serialized. That means if you need to store any data in your custom asset or node, the best way is to simply define a data input:
 
 ```csharp
 [DataInput]

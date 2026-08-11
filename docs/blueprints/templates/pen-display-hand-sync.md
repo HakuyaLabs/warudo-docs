@@ -117,7 +117,7 @@ You can use the **Onboarding Assistant** to configure your own character, enviro
 
 You can also customize the positions of the character and screen.
 
-For different characters, you may need to adjust the values of **`Trnasform` - `Position`** in **`Anchor - Right Hand IK`** to make the character hold the pen better.
+For different characters, you may need to adjust the values of **`Transform` - `Position`** in **`Anchor - Right Hand IK`** to make the character hold the pen better.
 
 :::warning
 

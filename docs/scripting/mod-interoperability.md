@@ -31,7 +31,7 @@ public class AModAsset: Asset {
 }
 ```
 
-:::tips
+:::tip
 This is equivalent to calling
 ```csharp
 Context.PluginRouter.EmitSignal(this, new MyEventOnA {
@@ -66,7 +66,7 @@ public class BModAsset: Asset {
 
 In the example above, the first argument to `ConnectSlot` (`"AMod.Asset"`) is the type ID of the signal sender — it can be any `Plugin`/`Asset`/`Node` type ID. `MyEventOnA` and `MyEventOnB` are interoperable as long as their internal structure is the same.
 
-:::tips
+:::tip
 This is equivalent to calling
 ```csharp
 var link = Context.PluginRouter.ConnectSlot<MyEventOnB>(this, "AMod.Asset", (e, s) => {
@@ -180,7 +180,7 @@ else
 }
 ```
 
-:::tips
+:::tip
 
 Like signals, command request and response types are interoperable as long as their internal structure matches.
 

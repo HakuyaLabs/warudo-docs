@@ -54,11 +54,11 @@ This node takes a Vector3 (i.e., three decimal numbers X, Y, and Z) and a float 
 
 For now, let's set the **Vector3** option to (2, 2, 2) and connect the nodes together like above, and see what happens when we puff our cheeks.
 
-Huh, nothing is happening...? That is because the Get Character Bone Scale node is never triggered! For now, let's just manually trigger it. Puff your cheeks again, but this time also click on **Get Character Bone Scale → Enter**. You should see your character's head grow bigger!
+Huh, nothing is happening...? That is because the Set Character Bone Scale node is never triggered! For now, let's just manually trigger it. Puff your cheeks again, but this time also click on **Set Character Bone Scale → Enter**. You should see your character's head grow bigger!
 
 ![](/doc-img/en-blueprint-balloon-5.png)
 
-But here's a problem: if you stop puffing your cheeks and click on **Get Character Bone Scale → Enter** again, your character's head will become like this:
+But here's a problem: if you stop puffing your cheeks and click on **Set Character Bone Scale → Enter** again, your character's head will become like this:
 
 ![](/doc-img/en-blueprint-balloon-6.png)
 
@@ -82,14 +82,14 @@ To see why this works, let's run through the calculations again. When we puff ou
 
 ## On Update {#on-update}
 
-I hope you hated manually triggering the Get Character Bone Scale node as much as I did. Indeed, we can't be clicking in our blueprint every time we want to inflate our character's head. Only if there is a way to automatically trigger the node... Wait, there is?
+I hope you hated manually triggering the Set Character Bone Scale node as much as I did. Indeed, we can't be clicking in our blueprint every time we want to inflate our character's head. Only if there is a way to automatically trigger the node... Wait, there is?
 
 ![](/doc-img/en-blueprint-balloon-9.png)
 
 The **On Update** node is an event node that is triggered every frame when Warudo is running. For instance, if Warudo runs at 60 FPS, then the On Update node will be triggered 60 times per second. This node saved us from clicking 60 times per second, whew.
 
 :::tip
-Remember you can add nodes after the Get Character Bone Scale node to trigger more effects using your cheeks! Try to add a **Set Character BlendShape** node to activate a blendshape on your character when you puff your cheeks. Hint: Set Character BlendShape → Target Value is a decimal number between 0 and 1, so you can connect Get Character BlendShape → Value directly to it.
+Remember you can add nodes after the Set Character Bone Scale node to trigger more effects using your cheeks! Try to add a **Set Character BlendShape** node to activate a blendshape on your character when you puff your cheeks. Hint: Set Character BlendShape → Target Value is a decimal number between 0 and 1, so you can connect Get Character BlendShape → Value directly to it.
 :::
 
 ## Resetting Bone Scale {#resetting-bone-scale}

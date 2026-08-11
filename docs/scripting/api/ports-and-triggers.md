@@ -284,7 +284,7 @@ BroadcastDataInput(nameof(MyNumber));
 
 However, in this case, the second method is **strongly recommended** due to two reasons:
 
-1. It ensures [watchers](operations#watchers) of this data input are notified of the change.
+1. It ensures [watchers](watchers) of this data input are notified of the change.
 2. By setting the `broadcast` parameter to `true`, the change is sent to the editor. Otherwise, you need to use `BroadcastDataInput(string key)` to manually send the change to the editor.
 
 You should use the first method only if:
