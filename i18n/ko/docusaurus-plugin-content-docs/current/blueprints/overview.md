@@ -1,5 +1,6 @@
 ---
 sidebar_position: 10
+translate_from_version: 2026-07-30
 ---
 
 # 개요
@@ -29,11 +30,15 @@ Blueprint는 간단히 말해 플로우차트예요. 이를 정의하자면 **"X
 가능성은 무궁무진해요! 우리 커뮤니티 [Discord](https://discord.gg/warudo)에서 미리 만들어진 blueprint를 찾고 공유하거나, 직접 새로운 blueprint를 만들어보세요. 이 핸드북 섹션은 blueprint의 기본 사항을 안내하고, 시작할 수 있는 몇 가지 예시를 제공하며, 더 고급 주제로 심화해 나갈 거예요.
 
 :::tip
+
 Warudo에서 Blueprints는 단순한 신기함을 넘어서, 시스템 구조의 핵심적인 부분이에요. 예를 들어, Warudo의 모션 캡처는 전적으로 Blueprints를 사용해 구현돼요. 이는 Blueprints 시스템의 지속적인 업데이트와 개선을 보장하며, 끝없는 조합 가능성을 위한 다양한 노드 유형을 제공해요.
+
 :::
 
 :::info
+
 개발자라면 Warudo의 blueprint 시스템에 새로운 노드 유형을 추가하여 확장할 수 있다는 점이 반가울 거예요! 자세한 내용은 [Scripting](../scripting/overview) 섹션을 참조하세요.
+
 :::
 
 ## 인터페이스
@@ -41,21 +46,26 @@ Warudo에서 Blueprints는 단순한 신기함을 넘어서, 시스템 구조의
 **Blueprints** 탭에서 씬에 있는 모든 blueprint 목록을 볼 수 있어요. 편집할 blueprint를 선택하면 노드 편집기에서 편집할 수 있어요. 그런 다음, **Node Palette** 탭에서 노드를 드래그하거나 **Properties** 탭에서 선택한 blueprint의 속성을 수정할 수 있어요.
 
 ![](/doc-img/en-blueprints-1.png)
+
 <p class="img-desc">개요.</p>
 
 툴바에는 다음 버튼들이 있어요:
-* **Add Blueprint**: 씬에 새로운 blueprint를 추가해요.
-* **Remove Blueprint**: 선택한 blueprint를 씬에서 제거해요.
-* **Duplicate Blueprint**: 선택한 blueprint를 복제해요.
-* **Rename Blueprint**: 선택한 blueprint의 이름을 변경해요..
-* **Format Blueprint**: 선택한 blueprint를 정리해요, 즉 노드를 자동으로 배치해요.
-* **Import Blueprint From Clipboard**: 클립보드에서 blueprint를 가져와요.
-* **Export Blueprint To Clipboard**: 선택한 blueprint를 클립보드로 내보내요.
-* **Import Blueprint From File**: JSON 파일에서 blueprint를 가져와요.
-* **Export Blueprint To File**: 선택한 blueprint를 JSON 파일로 내보내요.
+
+* **Add blueprint**: 씬에 새로운 blueprint를 추가해요.
+* **Remove blueprint**: 선택한 blueprint를 씬에서 제거해요.
+* **Duplicate blueprint**: 선택한 blueprint를 복제해요.
+* **Rename blueprint**: 선택한 blueprint의 이름을 변경해요..
+* **Create group**: blueprint를 정리할 그룹을 생성해요. blueprint를 드래그하여 그룹을 관리할 수 있어요.
+* **Format blueprint**: 선택한 blueprint를 정리해요, 즉 노드를 자동으로 배치해요.
+* **Import blueprint from clipboard**: 클립보드에서 blueprint를 가져와요.
+* **Export blueprint to clipboard**: 선택한 blueprint를 클립보드로 내보내요.
+* **Import blueprint from file**: JSON 파일에서 blueprint를 가져와요.
+* **Export blueprint to file**: 선택한 blueprint를 JSON 파일로 내보내요.
 
 :::tip
+
 import/export 기능을 사용하여 씬 간에 blueprints를 복사할 수 있어요.
+
 :::
 
 노드 편집기를 탐색하려면, **마우스 왼쪽 버튼**을 사용하여 이동하고, **마우스 휠**로 확대/축소하며, **마우스 오른쪽 버튼**으로 여러 노드를 선택할 수 있어요. 하나 이상의 노드를 선택한 상태에서 **마우스 왼쪽 버튼**을 사용하여 노드를 드래그할 수 있으며, **Delete** 키를 눌러 삭제할 수 있어요. 또한, **Ctrl+C**와 **Ctrl+V**를 사용하여 선택한 노드를 복사하고 붙여넣을 수 있어요.

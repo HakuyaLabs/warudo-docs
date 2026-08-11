@@ -1,5 +1,6 @@
 ---
 sidebar_position: 15
+translate_from_version: 2026-08-11
 ---
 
 # DMX 灯光控制

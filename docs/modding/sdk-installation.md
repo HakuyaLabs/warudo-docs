@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-version: 2026-02-28
+version: 2026-08-11
 ---
 
 # Unity & Warudo SDK Installation
@@ -15,12 +15,18 @@ Currently only **64-bit Windows** systems are supported.
 
 :::
 
+:::note
+
+Unity website and Unity Hub changes over time, so some labels and locations may differ slightly from the screenshots on this page.
+
+:::
+
 ## Step 1 - Install Unity Hub
 
 Firstly, you need to download **Unity Hub** (usually the latest version is OK).  
-Unity Hub is a software used to manage different versions of the Unity Editor and projects at these different versions.
+Unity Hub is a application used to manage different versions of the Unity Editor and projects created with them.
 
-Open the [**Unity official website**](https://unity.com/download) and click one of the two red boxes in the image below to download Unity Hub. Downloading may require registering a Unity account.
+Open the [**Unity official website**](https://unity.com) and click one of the two red boxes in the image below to download Unity Hub. Downloading may require registering a Unity account.
 
 ![](/doc-img/en-sdk-installation-1.png)
 
@@ -29,16 +35,16 @@ After installation, confirm that it can be opened correctly.
 
 ![](/doc-img/sdk-installation-2.png)
 
-After logging in, it will automatically suggest you download the latest Long-Term Support (LTS) version of the Unity Editor,  
+After you log in, Unity Hub may suggest installing the latest Long-Term Support (LTS) version of the Unity Editor.  
 Warudo does not use this version, it is recommended to click **Skip installation**.
 
-But if you do indeed want to install that version, we strongly recommended you to change the installation path to `...\<version>` (for example, `D:\Softwares\Unity\2021.3.18f1`),  
+But if you do indeed want to install that version, we strongly recommend that you change the installation path to `...\<version>` (for example, `D:\Softwares\Unity\2021.3.18f1`),  
 to more conveniently manage **multiple versions** of the Unity Editor,  
 and **not** to use the default installation path `C:\Program Files\Unity\Hub\Editor`.
 
 ![](/doc-img/sdk-installation-3.png)
 
-If you meet the terms for Unity's Personal Edition, you can choose to activate and obtain a personal license here.
+If you are eligible for Unity Personal, you can activate a personal license here.
 
 ![](/doc-img/sdk-installation-4.png)
 
@@ -50,7 +56,7 @@ If you skipped activation in the previous step or activation failed, you can als
 
 ![](/doc-img/sdk-installation-7.png)
 
-You can change the language of Unity Hub in 【Preferences】-【Appearance】.
+You can change the language of Unity Hub under **Preferences → Appearance**.
 
 ![](/doc-img/sdk-installation-8.png)
 
@@ -66,9 +72,9 @@ This specific patch release is required for compatibility with the Warudo SDK an
 ![](/doc-img/sdk-installation-9.png)
 4. The browser will try to open your Unity Hub, choose **Open**;
 5. In the opened Unity Hub window, click **Continue**, then click **Install**;
-6. The installation can take a long time, please be patient.
+6. The installation can take a long time, so please be patient.
 
-**If `4.` failed or you want to install it manually, back to `2.` , then:**
+**If `4.` fails, or you prefer to install Unity manually, return to `2.`, and continue as follows:**
 
 3. Click **See all**;
 4. Click **Windows** to download the installer (file name similar to `UnitySetup64-2021.3.45f2.exe`, ~3–4 GiB);
@@ -85,7 +91,6 @@ After the above steps, the required Unity version (2021.3.45f2) should now appea
 
 ![](/doc-img/sdk-installation-10.png)
 
-
 ## Step 3 - Download & Import Warudo SDK
 
 There are two ways to set up the Warudo SDK in Unity:
@@ -93,16 +98,24 @@ There are two ways to set up the Warudo SDK in Unity:
 - Use the Unity Package Manager to import the package (recommended)
 - Download our modding project template
 
-We strongly recommend the Package Manager method because it makes it easy to keep your project in sync with the latest Warudo Mod SDK releases. If your connection to GitHub is unreliable, you can fall back to the template project.
+We strongly recommend the Package Manager method because it makes it easy to keep your project in sync with the latest Warudo Mod SDK releases.  
+If your connection to GitHub is unreliable, you can fall back to the template project.
 
 ### Method A — Unity Package Manager (recommended)
+
+:::tip
+
+Use this method to keep your project up-to-date with the latest version of the Warudo Mod SDK.
+
+:::
 
 Before installation, confirm **File → Build Settings... → Player Settings... → Other Settings → Api Compatibility Level** is set to **.NET Framework**, and **Assembly Version Validation** is unchecked.  
 (This page is also accessible via **Edit → Project Settings → Player → Other Settings**)
 
 ![](/doc-img/en-mod-sdk-2.webp)
 
-Open your Unity project, then choose **Window → Package Manager**. In the Package Manager window click the **+** button (top-left) and choose **Add package from git URL...**. Enter the following URL:
+Open your Unity project, then choose **Window → Package Manager**. In the Package Manager window, click the **+** button (top-left) and choose **Add package from git URL...**.
+Enter the following URL:
 
 ```
 https://github.com/HakuyaLabs/Warudo-Mod-Tool.git#upm/latest
@@ -110,22 +123,20 @@ https://github.com/HakuyaLabs/Warudo-Mod-Tool.git#upm/latest
 
 If you cannot access GitHub reliably, you can download a tarball:
 
-
 <div className="file-box">
-<a href="/sdk/Warudo-Mod-Tool-0.14.3.10.tgz" target="_blank">Warudo-Mod-Tool-0.14.3.10.tgz</a>
+<a href="/sdk/Warudo-Mod-Tool-0.14.5.1.tgz" target="_blank">Warudo-Mod-Tool-0.14.5.1.tgz</a>
 </div>
 
 and use **Add package from tarball...** instead.
 
 Click **Add** and Unity will download and install the package. If Unity prompts about prebuilt packages or conversion, choose **Yes** and wait for the package to import.
 
-:::caution
+:::warning
 
 If you see an error like `No 'git' executable was found. Please install Git on your system then restart Unity and Unity Hub`, then Git is not installed on your system. Install Git from https://git-scm.com/download, then restart Unity and Unity Hub.  
 ![](/doc-img/en-mod-sdk-1.webp)
 
 :::
-
 
 :::tip
 
@@ -151,13 +162,13 @@ If you see Errors in the Console, try clicking **Clear** and re-checking. If pro
 
 :::
 
-:::caution
+:::warning
 
 If you import the SDK into an **existing** project that already contains any of the following assets, uncheck the corresponding folders during import to avoid replacing them with stub files:
 
-- Dynamic Bones → `Packages/DynamicBone`
-- Final IK → `Plugins/RootMotion/FinalIK`
-- PuppetMaster → `Plugins/RootMotion/PuppetMaster`
+- [Dynamic Bones](https://assetstore.unity.com/packages/tools/animation/dynamic-bone-16743) → `Packages/DynamicBone`
+- [Final IK](https://assetstore.unity.com/packages/tools/animation/final-ik-14290) → `Plugins/RootMotion/FinalIK`
+- [PuppetMaster](https://assetstore.unity.com/packages/tools/physics/puppetmaster-48977) → `Plugins/RootMotion/PuppetMaster`
 
 :::
 
@@ -167,22 +178,29 @@ If everything imported without Errors, you can start with [creating your first m
 
 ## Version History
 
-### Warudo SDK 0.14.3.10 (Latest)
+### Warudo SDK 0.14.5.1 (Latest)
 
 - Unity Version: **2021.3.45f2** (Oct 3, 2025)
-- Unity Package Tarball: [Warudo-Mod-Tool-0.14.3.10.tgz](https://docs.warudo.app/sdk/Warudo-Mod-Tool-0.14.3.10.tgz)
+- Unity Package (Tarball): [Warudo-Mod-Tool-0.14.5.1.tgz](https://docs.warudo.app/sdk/Warudo-Mod-Tool-0.14.5.1.tgz)
+- Unity Project: [Warudo SDK 0.14.5.1 Modding Project.zip](https://files.warudo.app/modsdk/Warudo%20SDK%200.14.5.1%20Modding%20Project.zip)
+
+### Warudo SDK 0.14.3.10
+
+- Unity Version: **2021.3.45f2** (Oct 3, 2025)
+- Unity Package (Tarball): [Warudo-Mod-Tool-0.14.3.10.tgz](https://docs.warudo.app/sdk/Warudo-Mod-Tool-0.14.3.10.tgz)
 - Unity Project: [Warudo SDK 0.14.3.10 Modding Project.zip](https://files.warudo.app/modsdk/Warudo%20SDK%200.14.3.10%20Modding%20Project.zip)
 
 ### Warudo SDK 0.12.0
 
-- Unity Version: **2021.3.18** (Feb 1, 2023)
-- Unity Package File: [Warudo SDK 0.12.0.unitypackage](https://docs.warudo.app/sdk/Warudo%20SDK%200.12.0.unitypackage)
+- Unity Version: **2021.3.18f1** (Feb 1, 2023)
+- Unity Package (File): [Warudo SDK 0.12.0.unitypackage](https://docs.warudo.app/sdk/Warudo%20SDK%200.12.0.unitypackage)
 - Unity Project: [Warudo SDK 0.12.0 Modding Project.zip](https://docs.warudo.app/sdk/Warudo%20SDK%200.12.0%20Modding%20Project.zip)
 
 <AuthorBar authors={{
   creators: [
     {name: 'HakuyaTira', github: 'TigerHix'},
-    {name: 'Hane', github: 'hanekit'}
+    {name: 'Hane', github: 'hanekit'},
+    {name: 'LiYin', github: 'cubesky'},
   ],
   translators: [
   ],

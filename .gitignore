@@ -43,3 +43,7 @@ _obsidian_database_.md
 
 # Localization
 *.ref.*.md
+
+# Agents
+AGENTS.md
+GLOSSARY.md

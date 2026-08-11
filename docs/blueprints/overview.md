@@ -1,6 +1,6 @@
 ---
 sidebar_position: 10
-version: 2024-07-08
+version: 2026-07-30
 ---
 
 # Overview
@@ -30,11 +30,15 @@ Uninspiring? How about:
 The possibilities are endless! You can find and share pre-made blueprints in our community [Discord](https://discord.gg/warudo), or create your own blueprints from scratch. This section of the handbook will guide you through the basics of blueprints, provide you with some examples to get you started, and dive into more advanced topics.
 
 :::tip
+
 Blueprints in Warudo are not just a novelty; rather, they are a crucial part of its architecture. For example, motion capture in Warudo is implemented entirely using blueprints. This ensures continuous updates and improvements to the blueprint system, providing an expanding variety of node types for endless combination possibilities.
+
 :::
 
 :::info
+
 If you are a developer, you will be happy to find out that you can extend Warudo's blueprint system by adding new node types! Please refer to the [Scripting](../scripting/overview) section for more details.
+
 :::
 
 ## Interface
@@ -42,21 +46,26 @@ If you are a developer, you will be happy to find out that you can extend Warudo
 In the **Blueprints** tab, you can see a list of all the blueprints in the scene. You can select a blueprint to edit it in the node editor; then, you can drag nodes from the **Node Palette** tab, or modify the properties of the selected blueprint in the **Properties** tab.
 
 ![](/doc-img/en-blueprints-1.png)
+
 <p class="img-desc">Overview.</p>
 
 The toolbar has the following buttons:
-* **Add Blueprint**: Add a new blueprint to the scene.
-* **Remove Blueprint**: Remove the selected blueprint from the scene.
-* **Duplicate Blueprint**: Duplicate the selected blueprint.
-* **Rename Blueprint**: Rename the selected blueprint.
-* **Format Blueprint**: Format the selected blueprint, i.e., automatically arrange the nodes.
-* **Import Blueprint From Clipboard**: Import a blueprint from the clipboard.
-* **Export Blueprint To Clipboard**: Export the selected blueprint to the clipboard.
-* **Import Blueprint From File**: Import a blueprint from a JSON file.
-* **Export Blueprint To File**: Export the selected blueprint to a JSON file.
+
+* **Add blueprint**: Add a new blueprint to the scene.
+* **Remove blueprint**: Remove the selected blueprint from the scene.
+* **Duplicate blueprint**: Duplicate the selected blueprint.
+* **Rename blueprint**: Rename the selected blueprint.
+* **Create group**: Create a group to organize blueprints. You can manage groups by dragging blueprints.
+* **Format blueprint**: Format the selected blueprint, i.e., automatically arrange the nodes.
+* **Import blueprint from clipboard**: Import a blueprint from the clipboard.
+* **Export blueprint to clipboard**: Export the selected blueprint to the clipboard.
+* **Import blueprint from file**: Import a blueprint from a JSON file.
+* **Export blueprint to file**: Export the selected blueprint to a JSON file.
 
 :::tip
+
 You can use the import/export feature to copy blueprints between scenes.
+
 :::
 
 To navigate the node editor, you can use **Mouse LMB** to pan, **Mouse Wheel** to zoom, and **Mouse RMB** to select multiple nodes. When one or more nodes are selected, you can use **Mouse LMB** to drag them around, and **Delete** to delete them. You can also use **Ctrl+C** and **Ctrl+V** to copy and paste selected nodes.
