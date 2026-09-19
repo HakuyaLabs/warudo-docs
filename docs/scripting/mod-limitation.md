@@ -45,7 +45,25 @@ For security or technical reasons, the current version restricts mods from acces
 * `UnityEngine.Application.Quit`
 * `UMod.ModHost.AllLoadedModHosts`
 * `UMod.ModHost.AllModHosts`
-* `UnityEngine.Application.OpenURL` (use `Warudo.Core.Utils.ApplicationHelper.SafeOpenURL` instead)
+
+### Members with Modified Runtime Behavior
+
+This version introduces a new security mechanism. Some Unity APIs will be removed from the restricted API list, but calls to these APIs will still be subject to certain restrictions. We will continue working to make more APIs available.
+
+* `UnityEngine.Application.OpenURL`
+  (The deprecated restricted API `Warudo.Core.Utils.ApplicationHelper.SafeOpenURL` now directly calls `UnityEngine.Application.OpenURL` without modification.)
+
+  * This API now only allows the `http`, `https`, `mailto`, and `file` protocols.
+  * The URL must be a fully qualified URL.
+  * When using the `file` protocol, only existing files and directories located within the Warudo data directory may be accessed.
+  * Access to the `Binaries`, `Clients`, `Playground`, and `Plugins` directories within the Warudo data directory, including all of their subdirectories, is prohibited.
+  * Parent-directory traversal using paths such as `.` or `..` is prohibited.
+
+### Members Allowed in Relaxed Mode
+
+As this version introduces a new mod loading mechanism, certain potentially risky APIs may now be used with the user's consent.
+
+*None yet.*
 
 :::caution
 

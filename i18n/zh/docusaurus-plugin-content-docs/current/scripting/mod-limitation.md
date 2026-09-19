@@ -45,7 +45,21 @@ translate_from_version: 2026-08-11
 * `UnityEngine.Application.Quit`
 * `UMod.ModHost.AllLoadedModHosts`
 * `UMod.ModHost.AllModHosts`
-* `UnityEngine.Application.OpenURL`（请改用 `Warudo.Core.Utils.ApplicationHelper.SafeOpenURL`）
+
+### 运行时行为有修改的成员
+当前版本引入新的安全机制，部分 Unity API 将被移出限制。但这些 API 的调用将具有某些限制。我们将努力开放更多 API。
+
+* `UnityEngine.Application.OpenURL`（已弃用的受限 API `Warudo.Core.Utils.ApplicationHelper.SafeOpenURL` 现在已原样调用 `UnityEngine.Application.OpenURL`）
+  * 该 API 现在仅允许访问 `http/https` `mailto` `file` 协议
+  * 必须是完整的 URL
+  * 当为 `file` 协议时仅允许访问存在且在 Warudo 数据目录中的目录和文件
+  * 禁止访问 Warudo 数据目录中的 `Binaries` `Clients` `Playground` `Plugins` 目录及其子目录
+  * 禁止访问 `.` 或 `..` 等上级目录
+
+### 在宽松模式下允许使用的成员
+由于当前版本引入了新 Mod 加载机制，现在允许在用户同意的情况下使用部分风险的 API。
+
+*暂时还没有*
 
 :::caution
 
