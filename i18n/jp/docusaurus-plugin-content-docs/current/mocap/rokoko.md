@@ -8,11 +8,11 @@ sidebar_position: 90
 
 ## 設定
 
-Rokoko Studioを開いて **Livestream → Activate streaming to Unity** をアクティブにします: 
+Rokoko Studioを開いて **Livestream → Activate streaming to Unity** をアクティブにします:
 
 ![](/doc-img/zh-rokoko-1.webp)
 
-次に、**Rokoko受信機** アセットの **Profile名** を、モーションキャプチャデータを受信するRokokoアクター名に設定します: 
+次に、**Rokoko受信機** アセットの **Profile名** を、モーションキャプチャデータを受信するRokokoアクター名に設定します:
 
 ![](/doc-img/jp-rokoko-2.png)
 
