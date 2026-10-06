@@ -9,7 +9,7 @@ Warudoのスクリプトシステムは、あなたのVTuber活動向けに独�
 以下は、Warudoコミュニティによって作成された素晴らしいプラグインの一部です。
 
 * [Feline's Headpat Node](https://steamcommunity.com/sharedfiles/filedetails/?id=3010238299&searchtext=)
-* [Input Receiver and Tools for Mouse/Pen/Gamepad](https://steamcommunity.com/sharedfiles/filedetails/?id=3221461980&searchtext=) 
+* [Input Receiver and Tools for Mouse/Pen/Gamepad](https://steamcommunity.com/sharedfiles/filedetails/?id=3221461980&searchtext=)
 * [Emotes From Twitch Message + Emote Dropper](https://steamcommunity.com/sharedfiles/filedetails/?id=3070622133&searchtext=)
 * [Rainbow Color Node](https://steamcommunity.com/sharedfiles/filedetails/?id=3016521495&searchtext=)
 * [Streamer.bot integration](https://steamcommunity.com/sharedfiles/filedetails/?id=3260939914&searchtext=)
@@ -47,13 +47,13 @@ public class CharacterPlayRandomExpressionNode : Node {
 
         var randomExpression = Character.Expressions[Random.Range(0, Character.Expressions.Length)];
         Character.EnterExpression(randomExpression.Name, transient: false); // Play a random expression
-        
+
         return Exit; // Continue the flow and trigger whatever connected to the "Exit" flow output
     }
-    
+
     [FlowOutput]
     public Continuation Exit;
-    
+
 }
 ```
 

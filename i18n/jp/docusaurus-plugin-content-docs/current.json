@@ -11,6 +11,10 @@
     "message": "モーションキャプチャ",
     "description": "The label for category Motion Capture in sidebar tutorialSidebar"
   },
+  "sidebar.tutorialSidebar.category.Advanced": {
+    "message": "高度な機能",
+    "description": "The label for category Advanced in sidebar tutorialSidebar"
+  },
   "sidebar.tutorialSidebar.category.Assets": {
     "message": "アセット",
     "description": "The label for category Assets in sidebar tutorialSidebar"
@@ -20,7 +24,7 @@
     "description": "The label for category Blueprints in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Ready-to-Use Blueprints": {
-    "message": "すぐに使用できるブループリント",
+    "message": "すぐに使えるブループリント",
     "description": "The label for category Ready-to-Use Blueprints in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Nodes": {
@@ -28,12 +32,16 @@
     "description": "The label for category Nodes in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Modding": {
-    "message": "MOD",
+    "message": "Mod制作",
     "description": "The label for category Modding in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Scripting": {
     "message": "カスタムスクリプト",
     "description": "The label for category Scripting in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Scripting API": {
+    "message": "スクリプト API",
+    "description": "The label for category Scripting API in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Miscellaneous": {
     "message": "その他",

@@ -1,6 +1,6 @@
 ---
 sidebar_position: 30
-translate_from_version: 2024-12-11
+translate_from_version: 2025-09-29
 ---
 
 # 3D VTuber入門
@@ -9,7 +9,7 @@ translate_from_version: 2024-12-11
 
 ## BlendShapeとは何ですか？ {#blendshape}
 
-BlendShapeとは、以下のように、ある位置から別の位置へ移動する頂点のセットで、3Dモデルのキャラクターアニメーション手法のひとつです。
+BlendShapeとは、以下のように、ある位置から別の位置へ移動する頂点のセットです。
 
 ![](/doc-img/zh-tutorials-18.gif)
 <p class="img-desc">参考: DevelopPaper</p>
@@ -17,9 +17,39 @@ BlendShapeとは、以下のように、ある位置から別の位置へ移動�
 BlendShapeの値は 0 から 1 の間です。値が 0 の場合、頂点は移動しません。値が 1 の場合、頂点は以下に示すようにターゲット位置に移動します。
 
 ![](/doc-img/zh-tutorials-19.gif)
-<p class="img-desc">UnityのBlendShapeは 0～100 の値を取りますが、Warudo (およびほとんどの 3Dツール) のBlendShapeは 0～1 の値を取ることに注意してください。参考: DevelopPaper</p>
+<p class="img-desc">UnityのBlendShapeは 0～100 の値を取りますが、Warudo（およびほとんどの 3Dツール) のBlendShapeは 0～1 の値を取ることに注意してください。参考: DevelopPaper</p>
 
-モデル上のBlendShapeのリストは、モデラー (およびモデリングツール) によってまったく異なります。以下に、一般的なBlendShapeのリストをいくつか示します 。モデルによってはBlendShapeの数がこれより多い場合や少ない場合がありますので、あくまでご参考まで。
+:::warning[フェイシャルキャプチャのBlendShapeについて]
+
+フェイシャルキャプチャを使用する際、Warudoは公式の命名規則を使ってキャラクターモデルのBlendShapeを識別します。
+
+モデルで*フェイシャルキャプチャが動作しない*場合、BlendShapeの命名が間違っている可能性があります。<br />
+以下の該当する表に従って、BlendShapeの命名規則を修正してください。<br />
+**大文字と小文字は命名規則と一致している必要があります**。
+
+- **ARKit** BlendShapeを持つモデルを使用している場合は、命名規則が以下のARKitの規則に従っていることを確認してください。
+たとえば、まばたきのBlendShapeは「eyeBlinkLeft」と「eyeBlinkRight」という名前にします。
+
+- **ARKit BlendShapeを持たないVRMモデル**を使用している場合は、命名規則が以下のVRM 0.Xの規則に従っていることを確認してください。
+たとえば、まばたきのBlendShapeは「Blink_L」と「Blink_R」という名前にします。
+
+:::
+
+モデル上のBlendShapeのリストは、モデラー (およびモデリングツール) によってまったく異なります。以下に、一般的なBlendShapeのリストをいくつか示します。モデルによってはBlendShapeの数がこれより多い場合や少ない場合がありますので、あくまでご参考まで。
+
+<details>
+
+<summary>VRM 0.xモデル</summary>
+
+- A
+- I
+- U
+- E
+- O
+- Blink_L
+- Blink_R
+
+</details>
 
 <details>
 
@@ -214,7 +244,7 @@ BlendShapeの値は 0 から 1 の間です。値が 0 の場合、頂点は移�
 
 :::caution
 
-BlendShapeを「表情」と呼ぶ人がいるかもしれません。しかし、Warudo (および[VSeeFace](https://www.vseeface.icu/)などの他のVTuberアプリ) では、表情は実際には複数のBlendShape値で構成されています。たとえば、以下に示す「泣いている」表情は、5 つのBlendShape値の特定の組み合わせです。
+BlendShapeを「表情」と呼ぶ人がいるかもしれません。しかし、Warudo（および[VSeeFace](https://www.vseeface.icu/)などの他のVTuberアプリ）では、表情は実際には複数のBlendShape値で構成されています。たとえば、以下に示す「泣いている」表情は、5つのBlendShape値の特定の組み合わせです。
 
 ![](/doc-img/zh-tutorials-20.webp)
 混乱を避けるために、ここではBlendShapeと表情をそれぞれの名前で呼ぶことにします。
@@ -224,9 +254,9 @@ BlendShapeを「表情」と呼ぶ人がいるかもしれません。しかし�
 
 ARKit BlendShapeとは、AppleのARKitフェイストラッキングでサポートされている52個のパラメータを指します。これらのBlendShapeのリストは、[こちら](https://arkit-face-blendshapes.com/)で確認できます。これらのBlendShapeは、まばたき、笑顔、しかめ面、冷笑など、様々な顔の表情をカバーします。
 
-2020年後半、日本の開発者[hinzka氏](https://hinzka.hatenablog.com/entry/2020/10/12/014540)は、[52個のARKit BlendShapeをあらゆるVRoidモデルに自動的に追加する](https://hinzka.hatenablog.com/entry/2020/08/15/145040)プロセスに「パーフェクトシンク」という用語を用いました。このプロセスは現在、VTuberコミュニティで広く使用されており、「パーフェクトシンク」は「ARKit BlendShape」と同じ意味で使用されていることが多いです。
+2020年後半、日本の開発者[hinzka](https://hinzka.hatenablog.com/entry/2020/10/12/014540)は、[52個のARKit BlendShapeをあらゆるVRoidモデルに自動的に追加する](https://hinzka.hatenablog.com/entry/2020/10/12/014540)プロセスに「パーフェクトシンク」という用語を用いました。このプロセスは現在、VTuberコミュニティで広く使用されており、「パーフェクトシンク」は「ARKit BlendShape」と同じ意味で使用されていることが多いです。
 
-モデルの表現力が大幅に向上するため、パーフェクトシンクをモデルに追加することを強くおすすめします。モデルがVRoid Studioで作成されている場合は、[HANA_Tool](https://booth.pm/en/items/2604269)を使用して パーフェクトシンクをモデルに自動的に追加できます。それ以外の場合は、BlenderやMayaなどのモデリングツールでBlendShapeを手動で追加する必要があります。
+モデルの表現力が大幅に向上するため、パーフェクトシンクをモデルに追加することを強くおすすめします。モデルがVRoid Studioで作成されている場合は、[HANA_Tool](https://booth.pm/en/items/2604269)を使用してパーフェクトシンクをモデルに自動的に追加できます。それ以外の場合は、BlenderやMayaなどのモデリングツールでBlendShapeを手動で追加する必要があります。
 
 3Dモデリングに慣れていない場合は、多くのモデラーがモデルにARKit BlendShapeを追加するサービスを提供しています。モデラーを見つけるには、[Discord](https://discord.gg/warudo)でお気軽にお問い合わせください！
 
@@ -254,6 +284,6 @@ Warudoでは、キャラクターアセットの**Body IK**および**Look At IK
   ],
   translators: [
     {name: '星影月夜', github: 'unsolublesugar'},
+    {name: 'そらみかん', github: 'soramikan'},
   ],
 }} />
-
