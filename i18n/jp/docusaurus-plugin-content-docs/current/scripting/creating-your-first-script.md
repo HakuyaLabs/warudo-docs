@@ -14,7 +14,7 @@ Warudoでスクリプトを書く方法は、**Playground**を使用する方法
 それでは、さっそく始めましょう！
 
 :::info
-質問があれば、[Discordサーバー](https://discord.gg/warudo)の専用**#plugins-scripting**チャンネルでサポートを受けられます！
+質問があれば、[Discordサーバー](https://discord.gg/warudo)の専用 **#plugins-scripting** チャンネルでサポートを受けられます！
 :::
 
 ## ステップ1: 環境設定
@@ -47,7 +47,7 @@ public class HelloWorldNode : Node {
 
 ## ステップ2: カスタムノード
 
-Warudoを開きます。起動時に、次のようなポップアップメッセージ（_トースト_と呼びます）が表示されます。
+Warudoを開きます。起動時に、次のようなポップアップメッセージ（*トースト*と呼びます）が表示されます。
 
 ![](/doc-img/en-getting-started-playground-1.png)
 

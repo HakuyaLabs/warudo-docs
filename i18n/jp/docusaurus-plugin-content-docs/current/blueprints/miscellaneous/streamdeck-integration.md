@@ -33,7 +33,7 @@ Warudoには、Stream Deckに関連する3つのノードがあります。
 
 ノードをアクションにリンクするには、次の手順に従ってください。
 
-1. Warudoで**On Stream Deck ...**ノードを追加します。
+1. Warudoで **On Stream Deck ...** ノードを追加します。
 2. ノードの**Receiver Name**ポートに名前を入力します。
 ![](/doc-img/streamdeck-integration-4.png)
 3. Stream Deck Appで、**ノードの種類と一致する**アクションを追加します。

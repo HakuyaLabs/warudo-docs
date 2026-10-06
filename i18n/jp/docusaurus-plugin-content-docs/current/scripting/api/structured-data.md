@@ -134,7 +134,7 @@ public MyTransformData[] MyTransforms;
 </div>
 </div>
 
-ユーザーが**+**ボタンをクリックすると、構造化データ要素が配列に追加されます。
+ユーザーが **+** ボタンをクリックすると、構造化データ要素が配列に追加されます。
 
 <div style={{display: 'flex', justifyContent: 'space-between', gap: '1rem'}}>
 <div style={{width: '50%'}}>
@@ -166,7 +166,7 @@ protected void InitializeTransform(MyTransformData transform) {
 }
 ```
 
-ユーザーが**+**ボタンをクリックすると、`InitializeTransform`メソッドが呼び出され、新しい構造化データ要素が初期化されます。
+ユーザーが **+** ボタンをクリックすると、`InitializeTransform`メソッドが呼び出され、新しい構造化データ要素が初期化されます。
 
 ## プログラムによる構造化データの作成
 

@@ -25,7 +25,7 @@ translate_from_version: 2024-06-16
 
 ## Discordに参加する
 
-まだ問題が解決しない場合は、[Discord](https://discord.gg/warudo)でお気軽に質問してください。スクリプティング関連専用の**#plugins-scripting**チャンネルがあり、経験豊富なメンバーが問題の診断を喜んでお手伝いします！
+まだ問題が解決しない場合は、[Discord](https://discord.gg/warudo)でお気軽に質問してください。スクリプティング関連専用の **#plugins-scripting** チャンネルがあり、経験豊富なメンバーが問題の診断を喜んでお手伝いします！
 
 <AuthorBar authors={{
   creators: [

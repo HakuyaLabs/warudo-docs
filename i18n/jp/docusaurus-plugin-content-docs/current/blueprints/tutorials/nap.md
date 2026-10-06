@@ -54,7 +54,7 @@ Get iFacialMocap Receiver Data、Empty BlendShape List、Switch BlendShape List 
 
 そのとおりです。Switch BlendShape List ノードは本質的に、その時点で顔がトラッキングされているかを確認します。顔がトラッキングされていれば、トラッキングの BlendShape を出力に渡してキャラクターに表情を反映します。そうでなければ、空の BlendShape リストを出力に渡すため、キャラクターの表情はまったくなくなります。
 
-このノードをさらに強力にしているのは、2つの BlendShape リストを_滑らかに遷移_させて切り替えられることです。**To True/False Transition Time**、**To True/False Transition Delay**、**To True/False Transition Easing** のオプションにより、顔がトラッキングされる、またはされなくなったときにキャラクターの表情がどう変わるかを細かく制御できます。たとえば、To False Transition Time を0.5秒、To False Transition Delay を1秒に設定すると、顔がトラッキングされなくなってから1秒後に、キャラクターの表情は0.5秒かけて空の BlendShape リスト（つまり自然な表情）へ滑らかに遷移します！
+このノードをさらに強力にしているのは、2つの BlendShape リストを*滑らかに遷移*させて切り替えられることです。**To True/False Transition Time**、**To True/False Transition Delay**、**To True/False Transition Easing** のオプションにより、顔がトラッキングされる、またはされなくなったときにキャラクターの表情がどう変わるかを細かく制御できます。たとえば、To False Transition Time を0.5秒、To False Transition Delay を1秒に設定すると、顔がトラッキングされなくなってから1秒後に、キャラクターの表情は0.5秒かけて空の BlendShape リスト（つまり自然な表情）へ滑らかに遷移します！
 
 とにかく、顔がトラッキングされなくなったときのキャラクターの表情を変えたい場合は、現在は単なる空の BlendShape リストである Switch BlendShape List → If False への入力を変更するだけです。その間に **BlendShape List Set BlendShape** ノードを追加して、リストに BlendShape を加えられます。
 

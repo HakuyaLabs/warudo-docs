@@ -85,7 +85,7 @@ protected void OnCharacterChanged() {
 
 ## 複数のデータ入力を監視する
 
-複数のデータ入力を監視し、それらのいずれかが変更されたときにのみコールバック関数を実行したい場合は、`WatchAll`メソッドを使用できます。
+複数のデータ入力を監視し、どの入力が変わったかは問わず、いずれかが変更されたときにコールバック関数を実行したい場合は、`WatchAll`メソッドを使用できます。
 
 ```csharp
 protected override void OnCreate() {
