@@ -1,5 +1,6 @@
 ---
 sidebar_position: 40
+translate_from_version: 2026-10-06
 ---
 
 # Assets
@@ -30,7 +31,18 @@ Aquí hay un resumen de los parámetros:
 - **`Singleton`**: Opcional. Si se establece en `true`, solo una instancia del asset puede existir en la escena. Por defecto es `false`.
 
 :::info
-Aquí hay algunas categorías de asset comunes que puedes usar: `CATEGORY_INPUT`, `CATEGORY_CHARACTERS`, `CATEGORY_PROP`, `CATEGORY_ACCESSORY`, `CATEGORY_ENVIRONMENT`, `CATEGORY_CINEMATOGRAPHY`, `CATEGORY_EXTERNAL_INTERACTION`, `CATEGORY_MOTION_CAPTURE`.
+
+Para usar una categoría predeterminada integrada, asigna al parámetro `Category` una de las claves de cadena que aparecen a continuación. La tabla muestra cada clave y su correspondiente nombre en inglés:
+
+| Clave de categoría              | Nombre mostrado en inglés |
+| ------------------------------- | ------------------------- |
+| `CATEGORY_CHARACTERS`           | Characters                |
+| `CATEGORY_PROP`                 | Props                     |
+| `CATEGORY_ENVIRONMENTS`         | Environment               |
+| `CATEGORY_CINEMATOGRAPHY`       | Cinematography            |
+| `CATEGORY_EXTERNAL_INTEGRATION` | External Integration      |
+| `CATEGORY_MOTION_CAPTURE`       | Motion Capture            |
+
 :::
 
 ## Componentes
@@ -81,7 +93,9 @@ protected void ResetConnection() {
 ```
 
 :::tip
+
 Determinar si tu asset está "listo para usar" depende completamente de ti. La convención que usan los assets internos de Warudo es que un asset está activo cuando todos los data inputs requeridos para que el asset funcione correctamente están establecidos.
+
 :::
 
 ## Creando GameObjects
@@ -126,7 +140,9 @@ El `GameObjectAsset` maneja la creación y destrucción del GameObject por ti, y
 ![](/doc-img/en-custom-asset-2.png)
 
 :::tip
+
 ¿Cuándo usar `GameObjectAsset`? Si tu asset es "algo que puede ser movido por el usuario en la escena (Unity)", entonces probablemente sea una buena idea heredar de `GameObjectAsset`.
+
 :::
 
 ## Eventos
@@ -165,10 +181,12 @@ Ejemplo de Attachable / GameObjectAsset.
 Asset personalizado para posar tu personaje con anchors IK.
 
 <AuthorBar authors={{
-creators: [
-{name: 'HakuyaTira', github: 'TigerHix'},
-],
-translators: [
-{name: 'かぐら', github: 'Arukaito'},
-],
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+    {name: 'Hane', github: 'hanekit'},
+  ],
+  translators: [
+    {name: 'かぐら', github: 'Arukaito'},
+  ],
 }} />
+

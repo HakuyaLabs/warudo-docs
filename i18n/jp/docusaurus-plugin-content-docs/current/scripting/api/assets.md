@@ -1,6 +1,6 @@
 ---
 sidebar_position: 40
-translate_from_version: 2024-06-16
+translate_from_version: 2026-10-06
 ---
 
 # アセット
@@ -31,7 +31,18 @@ public class HelloWorldAsset : Asset {
 - **`Singleton`**: 任意。`true`に設定すると、シーンにはアセットのインスタンスを1つだけ存在させることができます。デフォルトは`false`です。
 
 :::info
-使用できる一般的なアセットカテゴリー: `CATEGORY_INPUT`、`CATEGORY_CHARACTERS`、`CATEGORY_PROP`、`CATEGORY_ACCESSORY`、`CATEGORY_ENVIRONMENT`、`CATEGORY_CINEMATOGRAPHY`、`CATEGORY_EXTERNAL_INTERACTION`、`CATEGORY_MOTION_CAPTURE`。
+
+組み込みのデフォルトカテゴリーを使用するには、`Category`パラメーターに以下の文字列キーのいずれかを指定します。表には各キーと対応する英語の表示名を示しています。
+
+| カテゴリーキー                  | 英語の表示名         |
+| ------------------------------- | -------------------- |
+| `CATEGORY_CHARACTERS`           | Characters           |
+| `CATEGORY_PROP`                 | Props                |
+| `CATEGORY_ENVIRONMENTS`         | Environment          |
+| `CATEGORY_CINEMATOGRAPHY`       | Cinematography       |
+| `CATEGORY_EXTERNAL_INTEGRATION` | External Integration |
+| `CATEGORY_MOTION_CAPTURE`       | Motion Capture       |
+
 :::
 
 ## コンポーネント
@@ -82,7 +93,9 @@ protected void ResetConnection() {
 ```
 
 :::tip
+
 アセットが「使用可能な状態」であるかどうかの判断は、完全にあなた次第です。Warudoの内部アセットで使用されている慣例は、アセットが適切に機能するために必要なすべてのデータ入力が設定されているとき、そのアセットをアクティブにすることです。
+
 :::
 
 ## GameObjectの作成
@@ -127,7 +140,9 @@ public class MyAwesomeCubeAsset : GameObjectAsset {
 ![](/doc-img/en-custom-asset-2.png)
 
 :::tip
+
 `GameObjectAsset`を使用するのはいつでしょうか。アセットが「(Unity)シーン内でユーザーが移動できるもの」であれば、`GameObjectAsset`を継承するのがよいでしょう。
+
 :::
 
 ## イベント
@@ -157,19 +172,21 @@ public override void OnCreate() {
 
 ### 基本
 
-- [AnchorAsset.cs](https://gist.github.com/TigerHix/c549e984df0be34cfd6f8f50e741aab2)
+- [AnchorAsset.cs](https://gist.github.com/TigerHix/c549e984df0be34cfd6f8f50e741aab2)  
 Attachable / GameObjectAssetの例。
 
 ### 高度
 
-- [CharacterPoserAsset.cs](https://gist.github.com/TigerHix/8413f8e10e508f37bb946d8802ee4e0b)
+- [CharacterPoserAsset.cs](https://gist.github.com/TigerHix/8413f8e10e508f37bb946d8802ee4e0b)  
 IKアンカーでキャラクターにポーズを付けるカスタムアセット。
 
 <AuthorBar authors={{
   creators: [
     {name: 'HakuyaTira', github: 'TigerHix'},
+    {name: 'Hane', github: 'hanekit'},
   ],
   translators: [
     {name: 'そらみかん', github: 'soramikan'},
   ],
 }} />
+

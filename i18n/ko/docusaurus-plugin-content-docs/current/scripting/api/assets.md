@@ -1,5 +1,6 @@
 ---
 sidebar_position: 40
+translate_from_version: 2026-10-06
 ---
 
 # 에셋
@@ -24,13 +25,24 @@ public class HelloWorldAsset : Asset {
 
 파라미터 요약:
 
-- **`Id`**: 에셋 타입을 위한 고유 식별자;  각 새로운 에셋 타입에 대해 [새로운 GUID를 생성](https://www.guidgenerator.com/online-guid-generator.aspx)해야 해요. 이는 에셋 인스턴스의 UUID (`asset.Id`)와는 다르다는 점에 유의하세요..
-- **`Title`**: 추가 에셋 메뉴에 표시될 에셋 타입의 이름이에요.
+- **`Id`**: 에셋 타입을 위한 고유 식별자;  각 새로운 에셋 타입에 대해 [새로운 GUID를 생성](https://www.guidgenerator.com/online-guid-generator.aspx)해야 해요. 이는 에셋 인스턴스의 UUID (`asset.Id`)와는 다르다는 점에 유의하세요.
+- **`Title`**: *Add Asset* 메뉴에 표시될 에셋 타입의 이름이에요.
 - **`Category`**: 선택사항. *Add Asset* 메뉴에서 에셋이 속할 그룹이에요.
 - **`Singleton`**: 선택사항. `true`로 설정하면 장면에 해당 에셋 인스턴스가 하나만 존재할 수 있어요. 기본값은 `false`에요.
 
 :::info
-다음은 사용할 수 있는 일반적인 에셋 카테고리입니다: `CATEGORY_INPUT`, `CATEGORY_CHARACTERS`, `CATEGORY_PROP`, `CATEGORY_ACCESSORY`, `CATEGORY_ENVIRONMENT`, `CATEGORY_CINEMATOGRAPHY`, `CATEGORY_EXTERNAL_INTERACTION`, `CATEGORY_MOTION_CAPTURE`.
+
+내장된 기본 카테고리를 사용하려면 `Category` 파라미터를 아래 문자열 키 중 하나로 설정하세요. 표에는 각 키와 해당하는 영어 표시 이름이 나와 있어요:
+
+| 카테고리 키                     | 영어 표시 이름       |
+| ------------------------------- | -------------------- |
+| `CATEGORY_CHARACTERS`           | Characters           |
+| `CATEGORY_PROP`                 | Props                |
+| `CATEGORY_ENVIRONMENTS`         | Environment          |
+| `CATEGORY_CINEMATOGRAPHY`       | Cinematography       |
+| `CATEGORY_EXTERNAL_INTEGRATION` | External Integration |
+| `CATEGORY_MOTION_CAPTURE`       | Motion Capture       |
+
 :::
 
 ## 컴포넌트
@@ -81,7 +93,9 @@ protected void ResetConnection() {
 ```
 
 :::tip
+
 에셋이 "사용 준비 완료" 상태인지 여부를 결정하는 것은 전적으로 개발자의 판단에 달려 있어요. Warudo의 내부 에셋에서 사용되는 규칙은 에셋이 제대로 작동하기 위해 필요한 모든 데이터 인풋이 설정되었을 때 활성 상태가 된다는 것이에요.
+
 :::
 
 ## 게임오브젝트 생성
@@ -126,7 +140,9 @@ public class MyAwesomeCubeAsset : GameObjectAsset {
 ![](/doc-img/en-custom-asset-2.png)
 
 :::tip
+
 `GameObjectAsset`을 언제 사용해야 할까요? 에셋이 "(Unity) 씬에서 사용자가 움직일 수 있는 무언가"라면 `GameObjectAsset`을 상속받는 것이 좋은 선택이에요.
+
 :::
 
 ## 이벤트
@@ -165,10 +181,12 @@ Attachable / GameObjectAsset 예시
 IK 앵커로 캐릭터 포즈를 조절하는 커스텀 에셋.
 
 <AuthorBar authors={{
-creators: [
-{name: 'HakuyaTira', github: 'TigerHix'},
-],
-translators: [
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+    {name: 'Hane', github: 'hanekit'},
+  ],
+  translators: [
     {name: 'Willycho', github: 'Willycho'},
-],
+  ],
 }} />
+

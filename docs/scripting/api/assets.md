@@ -1,11 +1,11 @@
 ---
 sidebar_position: 40
-version: 2024-06-16
+version: 2026-10-06
 ---
 
 # Assets
 
-Assets are self-contained objects that implement a feature or a behavior in the scene. Different from nodes, an asset usually encapsulates a more complex logic. They can be thought of classes in a program and are more similar to Unity's `MonoBehaviour`.
+Assets are self-contained objects that implement a feature or a behavior in the scene. Different from nodes, an asset usually encapsulates a more complex logic. They can be thought of as classes in a program and are more similar to Unity's `MonoBehaviour`.
 
 ## Type Definition
 
@@ -31,7 +31,18 @@ Here's a summary of the parameters:
 - **`Singleton`**: Optional. If set to `true`, only one instance of the asset can exist in the scene. Default is `false`.
 
 :::info
-Here are some common asset categories you can use: `CATEGORY_INPUT`, `CATEGORY_CHARACTERS`, `CATEGORY_PROP`, `CATEGORY_ACCESSORY`, `CATEGORY_ENVIRONMENT`, `CATEGORY_CINEMATOGRAPHY`, `CATEGORY_EXTERNAL_INTERACTION`, `CATEGORY_MOTION_CAPTURE`.
+
+To use a built-in default category, set the `Category` parameter to one of the string keys below. The table shows each key and its corresponding English display name:
+
+| Category Key                    | English Display Name |
+| ------------------------------- | -------------------- |
+| `CATEGORY_CHARACTERS`           | Characters           |
+| `CATEGORY_PROP`                 | Props                |
+| `CATEGORY_ENVIRONMENTS`         | Environment          |
+| `CATEGORY_CINEMATOGRAPHY`       | Cinematography       |
+| `CATEGORY_EXTERNAL_INTEGRATION` | External Integration |
+| `CATEGORY_MOTION_CAPTURE`       | Motion Capture       |
+
 :::
 
 ## Components
@@ -46,7 +57,7 @@ Assets have the lifecycle stages listed on the [Entities](entities#lifecycle) pa
 
 ## Active State {#active-state}
 
-Different from nodes, assets have an active state that inform whether the asset is "active", or ready to use. For example, when a character asset does not have a `Source` selected, it is shown as inactive in the editor.
+Different from nodes, assets have an active state that indicates whether the asset is "active", or ready to use. For example, when a character asset does not have a `Source` selected, it is shown as inactive in the editor.
 
 ![](/doc-img/en-custom-asset-1.png)
 
@@ -82,7 +93,9 @@ protected void ResetConnection() {
 ```
 
 :::tip
+
 Determining whether your asset is "ready to use" is entirely up to you. The convention that Warudo's internal assets use is that an asset is active when all data inputs required for the asset to function properly are set.
+
 :::
 
 ## Creating GameObjects
@@ -127,7 +140,9 @@ The `GameObjectAsset` handles creating and destroying the GameObject for you, an
 ![](/doc-img/en-custom-asset-2.png)
 
 :::tip
+
 When to use `GameObjectAsset`? If your asset is "something that can be moved by the user in the (Unity) scene", then it's probably a good idea to inherit from `GameObjectAsset`.
+
 :::
 
 ## Events
@@ -166,9 +181,11 @@ Attachable / GameObjectAsset example.
 Custom asset to pose your character with IK anchors.
 
 <AuthorBar authors={{
-creators: [
-{name: 'HakuyaTira', github: 'TigerHix'},
-],
-translators: [
-],
+  creators: [
+    {name: 'HakuyaTira', github: 'TigerHix'},
+    {name: 'Hane', github: 'hanekit'},
+  ],
+  translators: [
+  ],
 }} />
+
